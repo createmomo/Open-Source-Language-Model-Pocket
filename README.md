@@ -1,9 +1,5 @@
 # Open-Source-Language-Model-Pocket
 # 开源语言模型百宝袋 (Ver. 1.1)
-Open-Source Language Model Pocket
-
-**目录** (Table of Contents)：
-[TOC]
 
 ## 
 
