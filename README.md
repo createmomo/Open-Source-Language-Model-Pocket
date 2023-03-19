@@ -1,4 +1,4 @@
-# 开源语言模型百宝袋 (Ver. 1.1)
+# 开源语言模型百宝袋 (Ver. 1.2)
 Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
@@ -11,7 +11,7 @@ Colossal-AI: Making large AI models cheaper, faster and more accessible
 
 Colossal-AI provides a collection of parallel components for you. We aim to support you to write your distributed deep learning models just like how you write your model on your laptop. We provide user-friendly tools to kickstart distributed training and inference in a few lines.
 
-### * ChatRWKV (⭐3.4k)
+### ChatRWKV (⭐3.4k)
 - https://github.com/BlinkDL/ChatRWKV
 
 ChatRWKV is like ChatGPT but powered by my RWKV (100% RNN) language model, which is the only RNN (as of now) that can match transformers in quality and scaling, while being faster and saves VRAM. Training sponsored by Stability EleutherAI :)
@@ -69,7 +69,7 @@ OpenChatKit uses a 20 billion parameter chat model trained on 43 million instruc
 
 OpenChatKit provides a powerful, open-source base to create both specialized and general purpose chatbots for various applications. The kit includes an instruction-tuned 20 billion parameter language model, a 6 billion parameter moderation model, and an extensible retrieval system for including up-to-date responses from custom repositories. It was trained on the OIG-43M training dataset, which was a collaboration between Together, LAION, and Ontocord.ai. Much more than a model release, this is the beginning of an open source project. We are releasing a set of tools and processes for ongoing improvement with community contributions.
 
-### * Open-Assistant (⭐18.9k)
+### Open-Assistant (⭐18.9k)
 - https://github.com/LAION-AI/Open-Assistant
 - https://open-assistant.io/zh
 
@@ -77,12 +77,12 @@ Open Assistant is a project meant to give everyone access to a great chat based 
 
 We believe that by doing this we will create a revolution in innovation in language. In the same way that stable-diffusion helped the world make art and images in new ways we hope Open Assistant can help improve the world by improving language itself.
 
-### * PaLM + RLHF (Pytorch)(⭐5.7k)
+### PaLM + RLHF (Pytorch)(⭐5.7k)
 - https://github.com/lucidrains/PaLM-rlhf-pytorch
 
 Implementation of RLHF (Reinforcement Learning with Human Feedback) on top of the PaLM architecture. Maybe I'll add retrieval functionality too, à la RETRO
 
-### * RL4LMs (⭐1.2k)
+### RL4LMs (⭐1.2k)
 - https://github.com/allenai/RL4LMs
 - https://rl4lms.apps.allenai.org/
 
@@ -90,7 +90,7 @@ A modular RL library to fine-tune language models to human preferences
 
 We provide easily customizable building blocks for training language models including implementations of on-policy algorithms, reward functions, metrics, datasets and LM based actor-critic policies
 
-### * Reinforcement Learning with Language Model
+### Reinforcement Learning with Language Model
 - https://github.com/HarderThenHarder/transformers_tasks/tree/main/RLHF
 
 在这个项目中，我们将通过开源项目 trl 搭建一个通过强化学习算法（PPO）来更新语言模型（GPT-2）的几个示例，包括：
@@ -108,12 +108,12 @@ Alpaca: A Strong, Replicable Instruction-Following ModelAl
 
 We introduce Alpaca 7B, a model fine-tuned from the LLaMA 7B model on 52K instruction-following demonstrations. On our preliminary evaluation of single-turn instruction following, Alpaca behaves qualitatively similarly to OpenAI’s text-davinci-003, while being surprisingly small and easy/cheap to reproduce (<600$).
 
-### * Transformer Reinforcement Learning (⭐2.2k)
+### Transformer Reinforcement Learning (⭐2.2k)
 - https://github.com/lvwerra/trl
 
 With trl you can train transformer language models with Proximal Policy Optimization (PPO). The library is built on top of the transformers library by 🤗 Hugging Face. Therefore, pre-trained language models can be directly loaded via transformers. At this point most of decoder architectures and encoder-decoder architectures are supported.
 
-### * Transformer Reinforcement Learning X (⭐2.5k)
+### Transformer Reinforcement Learning X (⭐2.5k)
 - https://github.com/CarperAI/trlx
 
 trlX is a distributed training framework designed from the ground up to focus on fine-tuning large language models with reinforcement learning using either a provided reward function or a reward-labeled dataset.
@@ -123,6 +123,7 @@ Training support for 🤗 Hugging Face models is provided by Accelerate-backed t
 ## 2 中文开源模型（Chinese Open Source Language Models）
 ### ChatYuan
 - https://github.com/clue-ai/ChatYuan
+- https://modelscope.cn/models/ClueAI/ChatYuan-large
 
 元语功能型对话大模型, 这个模型可以用于问答、结合上下文做对话、做各种生成任务，包括创意性写作，也能回答一些像法律、新冠等领域问题。它基于PromptCLUE-large结合数亿条功能对话多轮对话数据进一步训练得到。
 
@@ -138,6 +139,44 @@ PromptCLUE：大规模多任务Prompt预训练中文开源模型。
 支持几十个不同类型的任务，具有较好的零样本学习能力和少样本学习能力。针对理解类任务，如分类、情感分析、抽取等，可以自定义标签体系；针对生成任务，可以进行采样自由生成。
 
 千亿中文token上大规模预训练，累计学习1.5万亿中文token，亿级中文任务数据上完成训练，训练任务超过150+。比base版平均任务提升7个点+；具有更好的理解、生成和抽取能力，并且支持文本改写、纠错、知识图谱问答。
+
+### * ChatGLM-6B (⭐6k)
+- https://github.com/THUDM/ChatGLM-6B
+
+ChatGLM-6B 是一个开源的、支持中英双语的对话语言模型，基于 General Language Model (GLM) 架构，具有 62 亿参数。结合模型量化技术，用户可以在消费级的显卡上进行本地部署（INT4 量化级别下最低只需 6GB 显存）。 ChatGLM-6B 使用了和 ChatGPT 相似的技术，针对中文问答和对话进行了优化。经过约 1T 标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持，62 亿参数的 ChatGLM-6B 已经能生成相当符合人类偏好的回答。更多信息请参考我们的博客。
+
+### * Bloom
+- https://huggingface.co/blog/bloom
+- https://huggingface.co/bigscience/bloom
+
+BLOOM is an autoregressive Large Language Model (LLM), trained to continue text from a prompt on vast amounts of text data using industrial-scale computational resources. As such, it is able to output coherent text in 46 languages and 13 programming languages that is hardly distinguishable from text written by humans. BLOOM can also be instructed to perform text tasks it hasn't been explicitly trained for, by casting them as text generation tasks.
+
+### * SkyText-Chinese-GPT3
+- https://github.com/SkyWorkAIGC/SkyText-Chinese-GPT3
+
+SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊天、问答、中英互译等不同的任务。 应用这个模型，除了可以实现基本的聊天、对话、你问我答外，还能支持中英文互译、内容续写、对对联、写古诗、生成菜谱、第三人称转述、创建采访问题等多种功能。
+
+
+
+### * EVA: 大规模中文开放域对话系统
+- https://github.com/thu-coai/EVA
+
+EVA 是目前最大的开源中文预训练对话模型，拥有28亿参数，主要擅长开放域闲聊，目前有 1.0 和 2.0 两个版本。其中，1.0版本在 WudaoCorpus-Dialog 上训练而成，2.0 版本在从 WudaoCorpus-Dialog 中清洗出的更高质量的对话数据上训练而成，模型性能也明显好于 EVA1.0。
+
+### * Chinese-Transformer-XL
+- https://github.com/THUDM/Chinese-Transformer-XL
+
+本项目提供了智源研究院"文汇" 预训练模型Chinese-Transformer-XL的预训练和文本生成代码。
+
+### * GPT2 for Multiple Languages
+- https://github.com/imcaspar/gpt2-ml
+
+- 简化整理 GPT2 训练代码（based on Grover, supporting TPUs）
+- 移植 bert tokenizer，添加多语言支持
+- 15亿参数 GPT2 中文预训练模型( 15G 语料，训练 10w 步 )
+- 开箱即用的模型生成效果 demo #
+- 15亿参数 GPT2 中文预训练模型( 30G 语料，训练 22w 步 )
+
 
 > 持续更新中 (Continuously Updated)... 
 
