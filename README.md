@@ -4,6 +4,17 @@ Open-Source Language Model Pocket
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
 ## 1 工具箱（Tools）
+### * Alpaca-LoRA (⭐3.1k)
+- https://github.com/tloen/alpaca-lora
+
+Low-Rank LLaMA Instruct-Tuning
+
+This repository contains code for reproducing the Stanford Alpaca results using low-rank adaptation (LoRA). We provide an Instruct model of similar quality to text-davinci-003 that can run on a Raspberry Pi (for research), and the code can be easily extended to the 13b, 30b, and 65b models.
+
+In addition to the training code, which runs within five hours on a single RTX 4090, we publish a script for downloading and inference on the foundation model and LoRA, as well as the resulting LoRA weights themselves. To fine-tune cheaply and efficiently, we use Hugging Face's PEFT as well as Tim Dettmers' bitsandbytes.
+
+Without hyperparameter tuning or validation-based checkpointing, the LoRA model produces outputs comparable to the Stanford Alpaca model. (Please see the outputs included below.) Further tuning might be able to achieve better performance; I invite interested users to give it a try and report their results.
+
 ### ColossalAI (⭐18.9k)
 - https://github.com/hpcaitech/ColossalAI
 
@@ -157,7 +168,6 @@ BLOOM is an autoregressive Large Language Model (LLM), trained to continue text 
 SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊天、问答、中英互译等不同的任务。 应用这个模型，除了可以实现基本的聊天、对话、你问我答外，还能支持中英文互译、内容续写、对对联、写古诗、生成菜谱、第三人称转述、创建采访问题等多种功能。
 
 
-
 ### * EVA: 大规模中文开放域对话系统
 - https://github.com/thu-coai/EVA
 
@@ -168,7 +178,7 @@ EVA 是目前最大的开源中文预训练对话模型，拥有28亿参数，�
 
 本项目提供了智源研究院"文汇" 预训练模型Chinese-Transformer-XL的预训练和文本生成代码。
 
-### * GPT2 for Multiple Languages
+### * GPT2 for Multiple Language (⭐1.6k)
 - https://github.com/imcaspar/gpt2-ml
 
 - 简化整理 GPT2 训练代码（based on Grover, supporting TPUs）
@@ -177,6 +187,12 @@ EVA 是目前最大的开源中文预训练对话模型，拥有28亿参数，�
 - 开箱即用的模型生成效果 demo #
 - 15亿参数 GPT2 中文预训练模型( 30G 语料，训练 22w 步 )
 
+## 3 其他小伙伴的总结
+### * 总结开源可用的Instruct/Prompt Tuning数据
+- https://zhuanlan.zhihu.com/p/615277009
+
+### * 总结当下可用的大模型LLMs
+- https://zhuanlan.zhihu.com/p/611403556
 
 > 持续更新中 (Continuously Updated)... 
 
