@@ -187,12 +187,21 @@ EVA 是目前最大的开源中文预训练对话模型，拥有28亿参数，�
 - 开箱即用的模型生成效果 demo #
 - 15亿参数 GPT2 中文预训练模型( 30G 语料，训练 22w 步 )
 
-## 3 其他小伙伴的总结
+## 3 其他小伙伴的资料
 ### * 总结开源可用的Instruct/Prompt Tuning数据
 - https://zhuanlan.zhihu.com/p/615277009
 
 ### * 总结当下可用的大模型LLMs
 - https://zhuanlan.zhihu.com/p/611403556
+
+### * 针对聊天对话数据摘要生成任务微调 FLAN-T5
+- https://www.philschmid.de/fine-tune-flan-t5
+
+### * 使用 DeepSpeed 和 Hugging Face 🤗 Transformer 微调 FLAN-T5 XL/XXL
+- https://zhuanlan.zhihu.com/p/615528315
+
+### * ChatGPT等大模型高效调参大法——PEFT库的算法简介
+- https://zhuanlan.zhihu.com/p/613863520
 
 > 持续更新中 (Continuously Updated)... 
 
