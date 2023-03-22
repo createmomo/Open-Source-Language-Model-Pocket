@@ -211,5 +211,8 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 ### * ChatGPT等大模型高效调参大法——PEFT库的算法简介
 - https://zhuanlan.zhihu.com/p/613863520
 
+### * Fine-tuning 20B LLMs with RLHF on a 24GB consumer GPU
+- https://huggingface.co/blog/trl-peft
+
 > 持续更新中 (Continuously Updated)... 
 
