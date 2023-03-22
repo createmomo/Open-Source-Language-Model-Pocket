@@ -132,6 +132,21 @@ trlX is a distributed training framework designed from the ground up to focus on
 Training support for 🤗 Hugging Face models is provided by Accelerate-backed trainers, allowing users to fine-tune causal and T5-based language models of up to 20B parameters, such as facebook/opt-6.7b, EleutherAI/gpt-neox-20b, and google/flan-t5-xxl. For models beyond 20B parameters, trlX provides NVIDIA NeMo-backed trainers that leverage efficient parallelism techniques to scale effectively.
 
 ## 2 中文开源模型（Chinese Open Source Language Models）
+### * BELLE: Bloom-Enhanced Large Language model Engine
+- https://huggingface.co/BelleGroup
+- https://github.com/LianjiaTech/BELLE
+
+本项目基于 Stanford Alpaca ，Stanford Alpaca 的目标是构建和开源一个基于LLaMA的模型。 Stanford Alpaca 的种子任务都是英语，收集的数据也都是英文，因此训练出来的模型未对中文优化。
+
+
+本项目目标是促进中文对话大模型开源社区的发展。本项目针对中文做了优化，模型调优仅使用由ChatGPT生产的数据（不包含任何其他数据）。
+
+### * Bloom
+- https://huggingface.co/blog/bloom
+- https://huggingface.co/bigscience/bloom
+
+BLOOM is an autoregressive Large Language Model (LLM), trained to continue text from a prompt on vast amounts of text data using industrial-scale computational resources. As such, it is able to output coherent text in 46 languages and 13 programming languages that is hardly distinguishable from text written by humans. BLOOM can also be instructed to perform text tasks it hasn't been explicitly trained for, by casting them as text generation tasks.
+
 ### ChatYuan
 - https://github.com/clue-ai/ChatYuan
 - https://modelscope.cn/models/ClueAI/ChatYuan-large
@@ -139,6 +154,30 @@ Training support for 🤗 Hugging Face models is provided by Accelerate-backed t
 元语功能型对话大模型, 这个模型可以用于问答、结合上下文做对话、做各种生成任务，包括创意性写作，也能回答一些像法律、新冠等领域问题。它基于PromptCLUE-large结合数亿条功能对话多轮对话数据进一步训练得到。
 
 PromptCLUE-large在1000亿token中文语料上预训练，累计学习1.5万亿中文token，并且在数百种任务上进行Prompt任务式训练。针对理解类任务，如分类、情感分析、抽取等，可以自定义标签体系；针对多种生成任务，可以进行采样自由生成。
+
+### * ChatGLM-6B (⭐6k)
+- https://github.com/THUDM/ChatGLM-6B
+
+ChatGLM-6B 是一个开源的、支持中英双语的对话语言模型，基于 General Language Model (GLM) 架构，具有 62 亿参数。结合模型量化技术，用户可以在消费级的显卡上进行本地部署（INT4 量化级别下最低只需 6GB 显存）。 ChatGLM-6B 使用了和 ChatGPT 相似的技术，针对中文问答和对话进行了优化。经过约 1T 标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持，62 亿参数的 ChatGLM-6B 已经能生成相当符合人类偏好的回答。更多信息请参考我们的博客。
+
+### * Chinese-Transformer-XL
+- https://github.com/THUDM/Chinese-Transformer-XL
+
+本项目提供了智源研究院"文汇" 预训练模型Chinese-Transformer-XL的预训练和文本生成代码。
+
+### * EVA: 大规模中文开放域对话系统
+- https://github.com/thu-coai/EVA
+
+EVA 是目前最大的开源中文预训练对话模型，拥有28亿参数，主要擅长开放域闲聊，目前有 1.0 和 2.0 两个版本。其中，1.0版本在 WudaoCorpus-Dialog 上训练而成，2.0 版本在从 WudaoCorpus-Dialog 中清洗出的更高质量的对话数据上训练而成，模型性能也明显好于 EVA1.0。
+
+### * GPT2 for Multiple Language (⭐1.6k)
+- https://github.com/imcaspar/gpt2-ml
+
+- 简化整理 GPT2 训练代码（based on Grover, supporting TPUs）
+- 移植 bert tokenizer，添加多语言支持
+- 15亿参数 GPT2 中文预训练模型( 15G 语料，训练 10w 步 )
+- 开箱即用的模型生成效果 demo #
+- 15亿参数 GPT2 中文预训练模型( 30G 语料，训练 22w 步 )
 
 ### PromptCLUE
 - https://github.com/clue-ai/PromptCLUE
@@ -151,42 +190,10 @@ PromptCLUE：大规模多任务Prompt预训练中文开源模型。
 
 千亿中文token上大规模预训练，累计学习1.5万亿中文token，亿级中文任务数据上完成训练，训练任务超过150+。比base版平均任务提升7个点+；具有更好的理解、生成和抽取能力，并且支持文本改写、纠错、知识图谱问答。
 
-### * ChatGLM-6B (⭐6k)
-- https://github.com/THUDM/ChatGLM-6B
-- https://chatglm.cn/blog
-
-ChatGLM-6B 是一个开源的、支持中英双语的对话语言模型，基于 General Language Model (GLM) 架构，具有 62 亿参数。结合模型量化技术，用户可以在消费级的显卡上进行本地部署（INT4 量化级别下最低只需 6GB 显存）。 ChatGLM-6B 使用了和 ChatGPT 相似的技术，针对中文问答和对话进行了优化。经过约 1T 标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持，62 亿参数的 ChatGLM-6B 已经能生成相当符合人类偏好的回答。更多信息请参考我们的博客。
-
-### * Bloom
-- https://huggingface.co/blog/bloom
-- https://huggingface.co/bigscience/bloom
-
-BLOOM is an autoregressive Large Language Model (LLM), trained to continue text from a prompt on vast amounts of text data using industrial-scale computational resources. As such, it is able to output coherent text in 46 languages and 13 programming languages that is hardly distinguishable from text written by humans. BLOOM can also be instructed to perform text tasks it hasn't been explicitly trained for, by casting them as text generation tasks.
-
 ### * SkyText-Chinese-GPT3
 - https://github.com/SkyWorkAIGC/SkyText-Chinese-GPT3
 
 SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊天、问答、中英互译等不同的任务。 应用这个模型，除了可以实现基本的聊天、对话、你问我答外，还能支持中英文互译、内容续写、对对联、写古诗、生成菜谱、第三人称转述、创建采访问题等多种功能。
-
-
-### * EVA: 大规模中文开放域对话系统
-- https://github.com/thu-coai/EVA
-
-EVA 是目前最大的开源中文预训练对话模型，拥有28亿参数，主要擅长开放域闲聊，目前有 1.0 和 2.0 两个版本。其中，1.0版本在 WudaoCorpus-Dialog 上训练而成，2.0 版本在从 WudaoCorpus-Dialog 中清洗出的更高质量的对话数据上训练而成，模型性能也明显好于 EVA1.0。
-
-### * Chinese-Transformer-XL
-- https://github.com/THUDM/Chinese-Transformer-XL
-
-本项目提供了智源研究院"文汇" 预训练模型Chinese-Transformer-XL的预训练和文本生成代码。
-
-### * GPT2 for Multiple Language (⭐1.6k)
-- https://github.com/imcaspar/gpt2-ml
-
-- 简化整理 GPT2 训练代码（based on Grover, supporting TPUs）
-- 移植 bert tokenizer，添加多语言支持
-- 15亿参数 GPT2 中文预训练模型( 15G 语料，训练 10w 步 )
-- 开箱即用的模型生成效果 demo #
-- 15亿参数 GPT2 中文预训练模型( 30G 语料，训练 22w 步 )
 
 ## 3 其他小伙伴的资料
 ### * 总结开源可用的Instruct/Prompt Tuning数据
