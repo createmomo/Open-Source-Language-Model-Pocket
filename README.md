@@ -15,6 +15,12 @@ In addition to the training code, which runs within five hours on a single RTX 4
 
 Without hyperparameter tuning or validation-based checkpointing, the LoRA model produces outputs comparable to the Stanford Alpaca model. (Please see the outputs included below.) Further tuning might be able to achieve better performance; I invite interested users to give it a try and report their results.
 
+### * BELLE: Bloom-Enhanced Large Language model Engine (⭐1.1k)
+- https://github.com/LianjiaTech/BELLE
+- https://zhuanlan.zhihu.com/p/616079388
+
+本项目基于 Stanford Alpaca ，Stanford Alpaca 的目标是构建和开源一个基于LLaMA的模型。 Stanford Alpaca 的种子任务都是英语，收集的数据也都是英文，因此训练出来的模型未对中文优化。
+
 ### ColossalAI (⭐18.9k)
 - https://github.com/hpcaitech/ColossalAI
 
