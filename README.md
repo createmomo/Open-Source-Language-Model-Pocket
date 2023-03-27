@@ -3,6 +3,9 @@ Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
+**目录** (Table of Contents)：
+[TOC]
+
 ## 1 工具箱（Tools）
 ### * Alpaca-LoRA (⭐3.1k)
 - https://github.com/tloen/alpaca-lora
@@ -33,14 +36,20 @@ Colossal-AI provides a collection of parallel components for you. We aim to supp
 
 ChatRWKV is like ChatGPT but powered by my RWKV (100% RNN) language model, which is the only RNN (as of now) that can match transformers in quality and scaling, while being faster and saves VRAM. Training sponsored by Stability EleutherAI :)
 
-### ChatLLaMA (⭐6.7k)
+### ChatLLaMA (⭐7.2k)
 - https://github.com/nebuly-ai/nebullvm/tree/main/apps/accelerate/chatllama
 
 ChatLLaMA 🦙 has been designed to help developers with various use cases, all related to RLHF training and optimized inference.
 
 ChatLLaMA is a library that allows you to create hyper-personalized ChatGPT-like assistants using your own data and the least amount of compute possible. Instead of depending on one large assistant that “rules us all”, we envision a future where each of us can create our own personalized version of ChatGPT-like assistants. Imagine a future where many ChatLLaMAs at the "edge" will support a variety of human's needs. But creating a personalized assistant at the "edge" requires huge optimization efforts on many fronts: dataset creation, efficient training with RLHF, and inference optimization.
 
-### FlexGen (⭐6.8k)
+### * Dolly (⭐1.9k)
+- https://github.com/databrickslabs/dolly
+- https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html
+
+We show that anyone can take a dated off-the-shelf open source large language model (LLM) and give it magical ChatGPT-like instruction following ability by training it in 30 minutes on one machine, using high-quality training data. Surprisingly, instruction-following does not seem to require the latest or largest models: our model is only 6 billion parameters, compared to 175 billion for GPT-3. We open source the code for our model (Dolly) and show how it can be re-created on Databricks. We believe models like Dolly will help democratize LLMs, transforming them from something very few companies can afford into a commodity every company can own and customize to improve their products.
+
+### FlexGen (⭐7.4k)
 - https://github.com/FMInference/FlexGen
 
 FlexGen is a high-throughput generation engine for running large language models with limited GPU memory. FlexGen allows high-throughput generation by IO-efficient offloading, compression, and large effective batch sizes.
@@ -138,6 +147,12 @@ trlX is a distributed training framework designed from the ground up to focus on
 Training support for 🤗 Hugging Face models is provided by Accelerate-backed trainers, allowing users to fine-tune causal and T5-based language models of up to 20B parameters, such as facebook/opt-6.7b, EleutherAI/gpt-neox-20b, and google/flan-t5-xxl. For models beyond 20B parameters, trlX provides NVIDIA NeMo-backed trainers that leverage efficient parallelism techniques to scale effectively.
 
 ## 2 中文开源模型（Chinese Open Source Language Models）
+
+### * 中文Alpaca模型Luotuo
+- https://sota.jiqizhixin.com/project/luotuo
+
+Alpaca 是斯坦福团队基于 LLaMA 7B 在 52k 指令上微调得到的模型，能出色适应多种自然语言应用场景。近日来自商汤科技和华中科技大学开源中文语言模型 Luotuo，基于 ChatGPT API 翻译 Alpaca 微调指令数据，并使用 lora 进行微调得到。目前该项目已公开训练的语料和模型权重文件（两个型号），供开发者可使用自己各种大小的语料，训练自己的语言模型，并适用到对应的垂直领域。
+
 ### * BELLE: Bloom-Enhanced Large Language model Engine
 - https://huggingface.co/BelleGroup
 - https://github.com/LianjiaTech/BELLE
@@ -219,6 +234,15 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 
 ### * Fine-tuning 20B LLMs with RLHF on a 24GB consumer GPU
 - https://huggingface.co/blog/trl-peft
+
+### * 可以微调类ChatGPT模型啦！开源Alpaca-LoRA+RTX 4090就能搞定
+- https://mp.weixin.qq.com/s/vzIm-fOxxPEU69ArAowoIg
+
+### * 0门槛克隆ChatGPT！30分钟训完，60亿参数性能堪比GPT-3.5
+- https://mp.weixin.qq.com/s/RMrXIHGOy3cPu8ybQNWonA
+
+### * 训练个中文版ChatGPT没那么难：不用A100，开源Alpaca-LoRA+RTX 4090就能搞定
+- https://mp.weixin.qq.com/s/k7T-vfoH3xvxl6uqImP7DQ
 
 > 持续更新中 (Continuously Updated)... 
 
