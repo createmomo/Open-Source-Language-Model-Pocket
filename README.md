@@ -3,8 +3,6 @@ Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
-**目录** (Table of Contents)：
-[TOC]
 
 ## 1 工具箱（Tools）
 ### Alpaca-LoRA (⭐3.1k)
