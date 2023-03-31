@@ -3,6 +3,9 @@ Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
+**目录** (Table of Contents)：
+[TOC]
+
 ## 1 工具箱（Tools）
 ### Alpaca-LoRA (⭐3.1k)
 - https://github.com/tloen/alpaca-lora
@@ -96,6 +99,15 @@ This is the repo for the Llama-X, which aims to:
 - Conduct Llama-X as an open academic research which is long-term, systematic and rigorous.
 - Save the repetitive work of community and we work together to create more and faster increment.
 
+### * Lit-LLaMA ️
+- https://github.com/Lightning-AI/lit-llama
+
+Lit-LLaMA is:
+- Simple: Single-file implementation without boilerplate.
+- Correct: Numerically equivalent to the original model.
+- Optimized: Runs on consumer hardware or at scale.
+- Open-source: No strings attached.
+
 ### OpenChatKit (⭐5.2k)
 - https://www.together.xyz/blog/openchatkit 
 - https://huggingface.co/spaces/togethercomputer/OpenChatKit
@@ -165,8 +177,9 @@ An open platform for training, serving, and evaluating large language model base
 
 ## 2 中文开源模型（Chinese Open Source Language Models）
 
-### 中文Alpaca模型Luotuo
+### * 中文Alpaca模型Luotuo
 - https://sota.jiqizhixin.com/project/luotuo
+- https://github.com/LC1332/Luotuo-Chinese-LLM
 
 Alpaca 是斯坦福团队基于 LLaMA 7B 在 52k 指令上微调得到的模型，能出色适应多种自然语言应用场景。近日来自商汤科技和华中科技大学开源中文语言模型 Luotuo，基于 ChatGPT API 翻译 Alpaca 微调指令数据，并使用 lora 进行微调得到。目前该项目已公开训练的语料和模型权重文件（两个型号），供开发者可使用自己各种大小的语料，训练自己的语言模型，并适用到对应的垂直领域。
 
@@ -176,8 +189,6 @@ Alpaca 是斯坦福团队基于 LLaMA 7B 在 52k 指令上微调得到的模型�
 以ChatGPT、GPT-4等为代表的大语言模型（Large Language Model, LLM）掀起了新一轮自然语言处理领域的研究浪潮，展现出了类通用人工智能（AGI）的能力，受到业界广泛关注。然而，由于大语言模型的训练和部署都极为昂贵，为构建透明且开放的学术研究造成了一定的阻碍。
 
 为了促进大模型在中文NLP社区的开放研究，本项目开源了中文LLaMA模型和经过指令精调的Alpaca大模型。这些模型在原版LLaMA的基础上扩充了中文词表并使用了中文数据进行二次预训练，进一步提升了中文基础语义理解能力。同时，在中文LLaMA的基础上，本项目使用了中文指令数据进行指令精调，显著提升了模型对指令的理解和执行能力。
-
-### * 
 
 ### BELLE: Bloom-Enhanced Large Language model Engine
 - https://huggingface.co/BelleGroup
@@ -202,8 +213,9 @@ BLOOM is an autoregressive Large Language Model (LLM), trained to continue text 
 
 PromptCLUE-large在1000亿token中文语料上预训练，累计学习1.5万亿中文token，并且在数百种任务上进行Prompt任务式训练。针对理解类任务，如分类、情感分析、抽取等，可以自定义标签体系；针对多种生成任务，可以进行采样自由生成。
 
-### ChatGLM-6B (⭐6k)
+### * ChatGLM-6B (⭐11.4k)
 - https://github.com/THUDM/ChatGLM-6B
+- https://github.com/THUDM/ChatGLM-6B/tree/main/ptuning
 
 ChatGLM-6B 是一个开源的、支持中英双语的对话语言模型，基于 General Language Model (GLM) 架构，具有 62 亿参数。结合模型量化技术，用户可以在消费级的显卡上进行本地部署（INT4 量化级别下最低只需 6GB 显存）。 ChatGLM-6B 使用了和 ChatGPT 相似的技术，针对中文问答和对话进行了优化。经过约 1T 标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持，62 亿参数的 ChatGLM-6B 已经能生成相当符合人类偏好的回答。更多信息请参考我们的博客。
 
@@ -270,8 +282,14 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 ### 训练个中文版ChatGPT没那么难：不用A100，开源Alpaca-LoRA+RTX 4090就能搞定
 - https://mp.weixin.qq.com/s/k7T-vfoH3xvxl6uqImP7DQ
 
+### * GPT fine-tune实战： 训练我自己的 ChatGPT
+- https://zhuanlan.zhihu.com/p/616504594
+
 ### * 笔记本就能运行的ChatGPT平替来了，附完整版技术报告
 - https://mp.weixin.qq.com/s/crpG4dtfQFe3Q7hR3oeyxQ
+
+### * 【官方教程】ChatGLM-6B微调，最低只需7GB显存
+- https://mp.weixin.qq.com/s/miML4PXioK5iM8UI0cTSCQ
 
 > 持续更新中 (Continuously Updated)... 
 
