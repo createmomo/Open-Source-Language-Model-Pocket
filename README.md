@@ -3,7 +3,6 @@ Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
-
 ## 1 工具箱（Tools）
 ### Alpaca-LoRA (⭐3.1k)
 - https://github.com/tloen/alpaca-lora
@@ -15,6 +14,14 @@ This repository contains code for reproducing the Stanford Alpaca results using 
 In addition to the training code, which runs within five hours on a single RTX 4090, we publish a script for downloading and inference on the foundation model and LoRA, as well as the resulting LoRA weights themselves. To fine-tune cheaply and efficiently, we use Hugging Face's PEFT as well as Tim Dettmers' bitsandbytes.
 
 Without hyperparameter tuning or validation-based checkpointing, the LoRA model produces outputs comparable to the Stanford Alpaca model. (Please see the outputs included below.) Further tuning might be able to achieve better performance; I invite interested users to give it a try and report their results.
+
+### * Alpaca-CoT
+- https://github.com/PhoebusSi/Alpaca-CoT
+- https://mp.weixin.qq.com/s/Q5Q3RpQ80XmpbfhSxq2R1Q
+
+An Instruction Fine-Tuning Platform with Instruction Data Collection and Unified Large Language Models Interface
+
+Alpaca-CoT项目旨在探究如何更好地通过instruction-tuning的方式来诱导LLM具备类似ChatGPT的交互和instruction-following能力。为此，我们广泛收集了不同类型的instruction（尤其是Chain-of-Thought数据集），并基于LLaMA给出了深入细致的实证研究，以供未来工作参考。据我们所知，我们是首个将CoT拓展进Alpaca的工作，因此简称为"Alpaca-CoT"。
 
 ### BELLE: Bloom-Enhanced Large Language model Engine (⭐1.1k)
 - https://github.com/LianjiaTech/BELLE
@@ -288,6 +295,9 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 
 ### * 【官方教程】ChatGLM-6B微调，最低只需7GB显存
 - https://mp.weixin.qq.com/s/miML4PXioK5iM8UI0cTSCQ
+
+### * 特制自己的ChatGPT：多接口统一的轻量级LLM-IFT平台
+- https://mp.weixin.qq.com/s/Q5Q3RpQ80XmpbfhSxq2R1Q
 
 > 持续更新中 (Continuously Updated)... 
 
