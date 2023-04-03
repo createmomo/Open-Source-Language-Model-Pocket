@@ -36,6 +36,12 @@ Colossal-AI: Making large AI models cheaper, faster and more accessible
 
 Colossal-AI provides a collection of parallel components for you. We aim to support you to write your distributed deep learning models just like how you write your model on your laptop. We provide user-friendly tools to kickstart distributed training and inference in a few lines.
 
+### * Cerebras
+- https://www.cerebras.net/blog/cerebras-gpt-a-family-of-open-compute-efficient-large-language-models/
+- https://huggingface.co/cerebras
+
+开源7个可商用GPT模型，含数据集和可直接下载的预训练模型权重: Cerebras 开源 7 个 GPT 模型，均可商用，参数量分别达到 1.11 亿、2.56 亿、5.9 亿、13 亿、27 亿、67 亿和 130 亿。其中最大的模型参数量达到 130 亿，与 Meta 最近开源的 LLaMA-13B 相当。该项目开源数据集和预训练模型权重，其中预训练模型权重文件大小近50G可直接下载，并且可用于商业和研究用途。与此前的 GPT-3 模型相比，Cerebras 开源的模型具有更高的可用性和透明度，研究人员和开发者可以使用少量数据对其进行微调，构建出高质量的自然语言处理应用。
+
 ### ChatRWKV (⭐3.4k)
 - https://github.com/BlinkDL/ChatRWKV
 
@@ -82,6 +88,14 @@ We introduce LLaMA, a collection of foundation language models ranging from 7B t
 - https://github.com/nomic-ai/gpt4all
 
 Demo, data and code to train an assistant-style large language model with ~800k GPT-3.5-Turbo Generations based on LLaMa
+
+### * HuggingGPT
+- https://mp.weixin.qq.com/s/o51CmLt2JViJ4nsKfBJfwg
+- https://arxiv.org/pdf/2303.17580.pdf
+
+HuggingGPT利用ChatGPT作为控制器，连接HuggingFace社区中的各种AI模型，来完成多模态复杂任务。
+
+这意味着，你将拥有一种超魔法，通过HuggingGPT，便可拥有多模态能力，文生图、文生视频、语音全能拿捏了。
 
 ### llama.cpp (⭐8.6k)
 - https://github.com/ggerganov/llama.cpp
@@ -298,6 +312,13 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 
 ### * 特制自己的ChatGPT：多接口统一的轻量级LLM-IFT平台
 - https://mp.weixin.qq.com/s/Q5Q3RpQ80XmpbfhSxq2R1Q
+
+### * ChatDoctor：基于LLaMA在医学领域知识上微调的医学对话模型
+- https://mp.weixin.qq.com/s/-IqECOgCs4cS6Ya-EccXOA
+- https://github.com/Kent0n-Li/ChatDoctor
+
+### * 也谈ChatGPT的低成本“平替”当下实现路线：语言模型+指令微调数据+微调加速架构下的代表项目和开放数据
+- https://mp.weixin.qq.com/s/CJ4cCjti5jHOpDZqd42stw
 
 > 持续更新中 (Continuously Updated)... 
 
