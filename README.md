@@ -29,7 +29,7 @@ Alpaca-CoT项目旨在探究如何更好地通过instruction-tuning的方式来�
 
 本项目基于 Stanford Alpaca ，Stanford Alpaca 的目标是构建和开源一个基于LLaMA的模型。 Stanford Alpaca 的种子任务都是英语，收集的数据也都是英文，因此训练出来的模型未对中文优化。
 
-### ColossalAI (⭐18.9k)
+### ColossalAI (⭐26.6k)
 - https://github.com/hpcaitech/ColossalAI
 
 Colossal-AI: Making large AI models cheaper, faster and more accessible
@@ -54,7 +54,7 @@ ChatLLaMA 🦙 has been designed to help developers with various use cases, all 
 
 ChatLLaMA is a library that allows you to create hyper-personalized ChatGPT-like assistants using your own data and the least amount of compute possible. Instead of depending on one large assistant that “rules us all”, we envision a future where each of us can create our own personalized version of ChatGPT-like assistants. Imagine a future where many ChatLLaMAs at the "edge" will support a variety of human's needs. But creating a personalized assistant at the "edge" requires huge optimization efforts on many fronts: dataset creation, efficient training with RLHF, and inference optimization.
 
-### Dolly (⭐1.9k)
+### Dolly (⭐4.1k)
 - https://github.com/databrickslabs/dolly
 - https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html
 
@@ -320,5 +320,7 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 ### * 也谈ChatGPT的低成本“平替”当下实现路线：语言模型+指令微调数据+微调加速架构下的代表项目和开放数据
 - https://mp.weixin.qq.com/s/CJ4cCjti5jHOpDZqd42stw
 
-> 持续更新中 (Continuously Updated)... 
+### * StackLLaMA: A hands-on guide to train LLaMA with RLHF
+- https://huggingface.co/blog/stackllama
 
+> 持续更新中 (Continuously Updated)... 
