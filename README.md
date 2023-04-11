@@ -1,4 +1,4 @@
-# 开源语言模型百宝袋 (Ver. 1.3)
+# 开源语言模型百宝袋 (Ver. 1.4)
 Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
@@ -15,7 +15,7 @@ In addition to the training code, which runs within five hours on a single RTX 4
 
 Without hyperparameter tuning or validation-based checkpointing, the LoRA model produces outputs comparable to the Stanford Alpaca model. (Please see the outputs included below.) Further tuning might be able to achieve better performance; I invite interested users to give it a try and report their results.
 
-### * Alpaca-CoT
+### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
 - https://mp.weixin.qq.com/s/Q5Q3RpQ80XmpbfhSxq2R1Q
 
@@ -36,7 +36,7 @@ Colossal-AI: Making large AI models cheaper, faster and more accessible
 
 Colossal-AI provides a collection of parallel components for you. We aim to support you to write your distributed deep learning models just like how you write your model on your laptop. We provide user-friendly tools to kickstart distributed training and inference in a few lines.
 
-### * Cerebras
+### Cerebras
 - https://www.cerebras.net/blog/cerebras-gpt-a-family-of-open-compute-efficient-large-language-models/
 - https://huggingface.co/cerebras
 
@@ -84,18 +84,23 @@ LLaMA: Open and Efficient Foundation Language Models
 
 We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the research community.
 
-### * GPT4All
+### GPT4All
 - https://github.com/nomic-ai/gpt4all
 
 Demo, data and code to train an assistant-style large language model with ~800k GPT-3.5-Turbo Generations based on LLaMa
 
-### * HuggingGPT
+### HuggingGPT
 - https://mp.weixin.qq.com/s/o51CmLt2JViJ4nsKfBJfwg
 - https://arxiv.org/pdf/2303.17580.pdf
 
 HuggingGPT利用ChatGPT作为控制器，连接HuggingFace社区中的各种AI模型，来完成多模态复杂任务。
 
 这意味着，你将拥有一种超魔法，通过HuggingGPT，便可拥有多模态能力，文生图、文生视频、语音全能拿捏了。
+
+### * Koala: A Dialogue Model for Academic Research
+- https://bair.berkeley.edu/blog/2023/04/03/koala/
+
+In this post, we introduce Koala, a chatbot trained by fine-tuning Meta’s LLaMA on dialogue data gathered from the web. We describe the dataset curation and training process of our model, and also present the results of a user study that compares our model to ChatGPT and Stanford’s Alpaca. Our results show that Koala can effectively respond to a variety of user queries, generating responses that are often preferred over Alpaca, and at least tied with ChatGPT in over half of the cases.
 
 ### llama.cpp (⭐8.6k)
 - https://github.com/ggerganov/llama.cpp
@@ -110,7 +115,7 @@ The main goal is to run the model using 4-bit quantization on a MacBook
 - 4-bit quantization support
 - Runs on the CPU
 
-### * Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM
+### Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM
 - https://github.com/AetherCortex/Llama-X
 
 This is the repo for the Llama-X, which aims to:
@@ -118,7 +123,7 @@ This is the repo for the Llama-X, which aims to:
 - Conduct Llama-X as an open academic research which is long-term, systematic and rigorous.
 - Save the repetitive work of community and we work together to create more and faster increment.
 
-### * Lit-LLaMA ️
+### Lit-LLaMA ️
 - https://github.com/Lightning-AI/lit-llama
 
 Lit-LLaMA is:
@@ -187,7 +192,7 @@ trlX is a distributed training framework designed from the ground up to focus on
 
 Training support for 🤗 Hugging Face models is provided by Accelerate-backed trainers, allowing users to fine-tune causal and T5-based language models of up to 20B parameters, such as facebook/opt-6.7b, EleutherAI/gpt-neox-20b, and google/flan-t5-xxl. For models beyond 20B parameters, trlX provides NVIDIA NeMo-backed trainers that leverage efficient parallelism techniques to scale effectively.
 
-### * Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality
+### Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality
 - https://chat.lmsys.org/
 - https://vicuna.lmsys.org/
 - https://github.com/lm-sys/FastChat
@@ -196,13 +201,13 @@ An open platform for training, serving, and evaluating large language model base
 
 ## 2 中文开源模型（Chinese Open Source Language Models）
 
-### * 中文Alpaca模型Luotuo
+### 中文Alpaca模型Luotuo
 - https://sota.jiqizhixin.com/project/luotuo
 - https://github.com/LC1332/Luotuo-Chinese-LLM
 
 Alpaca 是斯坦福团队基于 LLaMA 7B 在 52k 指令上微调得到的模型，能出色适应多种自然语言应用场景。近日来自商汤科技和华中科技大学开源中文语言模型 Luotuo，基于 ChatGPT API 翻译 Alpaca 微调指令数据，并使用 lora 进行微调得到。目前该项目已公开训练的语料和模型权重文件（两个型号），供开发者可使用自己各种大小的语料，训练自己的语言模型，并适用到对应的垂直领域。
 
-### * 中文LLaMA&Alpaca大模型
+### 中文LLaMA&Alpaca大模型
 - https://github.com/ymcui/Chinese-LLaMA-Alpaca
 
 以ChatGPT、GPT-4等为代表的大语言模型（Large Language Model, LLM）掀起了新一轮自然语言处理领域的研究浪潮，展现出了类通用人工智能（AGI）的能力，受到业界广泛关注。然而，由于大语言模型的训练和部署都极为昂贵，为构建透明且开放的学术研究造成了一定的阻碍。
@@ -232,7 +237,7 @@ BLOOM is an autoregressive Large Language Model (LLM), trained to continue text 
 
 PromptCLUE-large在1000亿token中文语料上预训练，累计学习1.5万亿中文token，并且在数百种任务上进行Prompt任务式训练。针对理解类任务，如分类、情感分析、抽取等，可以自定义标签体系；针对多种生成任务，可以进行采样自由生成。
 
-### * ChatGLM-6B (⭐11.4k)
+### ChatGLM-6B (⭐11.4k)
 - https://github.com/THUDM/ChatGLM-6B
 - https://github.com/THUDM/ChatGLM-6B/tree/main/ptuning
 
@@ -301,27 +306,30 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 ### 训练个中文版ChatGPT没那么难：不用A100，开源Alpaca-LoRA+RTX 4090就能搞定
 - https://mp.weixin.qq.com/s/k7T-vfoH3xvxl6uqImP7DQ
 
-### * GPT fine-tune实战： 训练我自己的 ChatGPT
+### GPT fine-tune实战： 训练我自己的 ChatGPT
 - https://zhuanlan.zhihu.com/p/616504594
 
-### * 笔记本就能运行的ChatGPT平替来了，附完整版技术报告
+### 笔记本就能运行的ChatGPT平替来了，附完整版技术报告
 - https://mp.weixin.qq.com/s/crpG4dtfQFe3Q7hR3oeyxQ
 
-### * 【官方教程】ChatGLM-6B微调，最低只需7GB显存
+### 【官方教程】ChatGLM-6B微调，最低只需7GB显存
 - https://mp.weixin.qq.com/s/miML4PXioK5iM8UI0cTSCQ
 
-### * 特制自己的ChatGPT：多接口统一的轻量级LLM-IFT平台
+### 特制自己的ChatGPT：多接口统一的轻量级LLM-IFT平台
 - https://mp.weixin.qq.com/s/Q5Q3RpQ80XmpbfhSxq2R1Q
 
-### * ChatDoctor：基于LLaMA在医学领域知识上微调的医学对话模型
+### ChatDoctor：基于LLaMA在医学领域知识上微调的医学对话模型
 - https://mp.weixin.qq.com/s/-IqECOgCs4cS6Ya-EccXOA
 - https://github.com/Kent0n-Li/ChatDoctor
 
-### * 也谈ChatGPT的低成本“平替”当下实现路线：语言模型+指令微调数据+微调加速架构下的代表项目和开放数据
+### 也谈ChatGPT的低成本“平替”当下实现路线：语言模型+指令微调数据+微调加速架构下的代表项目和开放数据
 - https://mp.weixin.qq.com/s/CJ4cCjti5jHOpDZqd42stw
 
-### * StackLLaMA: A hands-on guide to train LLaMA with RLHF
+### StackLLaMA: A hands-on guide to train LLaMA with RLHF
 - https://huggingface.co/blog/stackllama
+
+### 成本不到100美元！UC伯克利再开源类ChatGPT模型「考拉」：数据量大没有用，高质量才是王道
+- https://zhuanlan.zhihu.com/p/621078208
 
 > 持续更新中 (Continuously Updated)... 
 
