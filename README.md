@@ -4,6 +4,13 @@ Open-Source Language Model Pocket
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
 ## 1 工具箱（Tools）
+### * 高效对齐算法RAFT「木筏」
+- https://github.com/OptimalScale/LMFlow
+- https://arxiv.org/abs/2304.06767
+- https://optimalscale.github.io/LMFlow/examples/raft.html
+
+An extensible, convenient, and efficient toolbox for finetuning large machine learning models, designed to be user-friendly, speedy and reliable, and accessible to the entire community.
+
 ### Alpaca-LoRA (⭐3.1k)
 - https://github.com/tloen/alpaca-lora
 
@@ -22,6 +29,11 @@ Without hyperparameter tuning or validation-based checkpointing, the LoRA model 
 An Instruction Fine-Tuning Platform with Instruction Data Collection and Unified Large Language Models Interface
 
 Alpaca-CoT项目旨在探究如何更好地通过instruction-tuning的方式来诱导LLM具备类似ChatGPT的交互和instruction-following能力。为此，我们广泛收集了不同类型的instruction（尤其是Chain-of-Thought数据集），并基于LLaMA给出了深入细致的实证研究，以供未来工作参考。据我们所知，我们是首个将CoT拓展进Alpaca的工作，因此简称为"Alpaca-CoT"。
+
+### * Auto-GPT
+- https://github.com/torantulino/auto-gpt
+
+Auto-GPT is an experimental open-source application showcasing the capabilities of the GPT-4 language model. This program, driven by GPT-4, chains together LLM "thoughts", to autonomously achieve whatever goal you set. As one of the first examples of GPT-4 running fully autonomously, Auto-GPT pushes the boundaries of what is possible with AI.
 
 ### BELLE: Bloom-Enhanced Large Language model Engine (⭐1.1k)
 - https://github.com/LianjiaTech/BELLE
@@ -54,8 +66,17 @@ ChatLLaMA 🦙 has been designed to help developers with various use cases, all 
 
 ChatLLaMA is a library that allows you to create hyper-personalized ChatGPT-like assistants using your own data and the least amount of compute possible. Instead of depending on one large assistant that “rules us all”, we envision a future where each of us can create our own personalized version of ChatGPT-like assistants. Imagine a future where many ChatLLaMAs at the "edge" will support a variety of human's needs. But creating a personalized assistant at the "edge" requires huge optimization efforts on many fronts: dataset creation, efficient training with RLHF, and inference optimization.
 
-### Dolly (⭐4.1k)
+### * DeepSpeed-Chat
+- https://mp.weixin.qq.com/s/t3HA4Hu61LLDC3h2Njmo_Q
+- https://github.com/microsoft/DeepSpeed
+
+微软宣布开源 DeepSpeed-Chat，帮助用户轻松训练类 ChatGPT 等大语言模型。
+
+据悉，Deep Speed Chat 是基于微软 Deep Speed 深度学习优化库开发而成，具备训练、强化推理等功能，还使用了 RLHF（基于人类反馈的强化学习）技术，可将训练速度提升 15 倍以上，而成本却大大降低。
+
+### * Dolly 1&2 (⭐4.1k)
 - https://github.com/databrickslabs/dolly
+- https://huggingface.co/databricks/dolly-v2-12b
 - https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html
 
 We show that anyone can take a dated off-the-shelf open source large language model (LLM) and give it magical ChatGPT-like instruction following ability by training it in 30 minutes on one machine, using high-quality training data. Surprisingly, instruction-following does not seem to require the latest or largest models: our model is only 6 billion parameters, compared to 175 billion for GPT-3. We open source the code for our model (Dolly) and show how it can be re-created on Databricks. We believe models like Dolly will help democratize LLMs, transforming them from something very few companies can afford into a commodity every company can own and customize to improve their products.
@@ -141,7 +162,7 @@ OpenChatKit uses a 20 billion parameter chat model trained on 43 million instruc
 
 OpenChatKit provides a powerful, open-source base to create both specialized and general purpose chatbots for various applications. The kit includes an instruction-tuned 20 billion parameter language model, a 6 billion parameter moderation model, and an extensible retrieval system for including up-to-date responses from custom repositories. It was trained on the OIG-43M training dataset, which was a collaboration between Together, LAION, and Ontocord.ai. Much more than a model release, this is the beginning of an open source project. We are releasing a set of tools and processes for ongoing improvement with community contributions.
 
-### Open-Assistant (⭐18.9k)
+### Open-Assistant (⭐25.2k)
 - https://github.com/LAION-AI/Open-Assistant
 - https://open-assistant.io/zh
 
@@ -199,6 +220,16 @@ Training support for 🤗 Hugging Face models is provided by Accelerate-backed t
 
 An open platform for training, serving, and evaluating large language model based chatbots.
 
+### * Wombat
+- https://mp.weixin.qq.com/s/xoPKmOzjlNZ2qGdcKeGARw
+- https://mp.weixin.qq.com/s/UI-ij5o43ct1efYoNVdQDg
+- https://arxiv.org/abs/2304.05302v1
+- https://github.com/GanjinZero/RRHF
+
+This is the repository for RRHF (Rank Response to align Human Feedback) and open-sourced language models Wombat. RRHF helps align large language models with human perference easier.
+
+Reinforcement Learning from Human Feedback (RLHF) enables the alignment of large language models with human preference, improving the quality of interactions between humans and language models. Recent practice of RLHF uses PPO to enable the large language model optimization of such alignment. However, implementing PPO is non-trivial (where the training procedure requires interactive between policy, behavior policy, reward, value model) and it is also tedious to tuning many hyper-parameters. Our motivation is to simplify the alignment between language models with human preference, and our proposed paradigm RRHF (Rank Response from Human Feedback) can achieve such alignment as easily as conventional fine-tuning. It is simpler than PPO from the aspects of coding, model counts, and hyperparameters.
+
 ## 2 中文开源模型（Chinese Open Source Language Models）
 
 ### 中文Alpaca模型Luotuo
@@ -213,6 +244,20 @@ Alpaca 是斯坦福团队基于 LLaMA 7B 在 52k 指令上微调得到的模型�
 以ChatGPT、GPT-4等为代表的大语言模型（Large Language Model, LLM）掀起了新一轮自然语言处理领域的研究浪潮，展现出了类通用人工智能（AGI）的能力，受到业界广泛关注。然而，由于大语言模型的训练和部署都极为昂贵，为构建透明且开放的学术研究造成了一定的阻碍。
 
 为了促进大模型在中文NLP社区的开放研究，本项目开源了中文LLaMA模型和经过指令精调的Alpaca大模型。这些模型在原版LLaMA的基础上扩充了中文词表并使用了中文数据进行二次预训练，进一步提升了中文基础语义理解能力。同时，在中文LLaMA的基础上，本项目使用了中文指令数据进行指令精调，显著提升了模型对指令的理解和执行能力。
+
+### * 中文对话式大语言模型Firefly
+- https://mp.weixin.qq.com/s/tyH9Ifcvw4DKqoIoYjT6Kg
+- https://github.com/yangjianxin1/Firefly
+
+Firefly（流萤） 是一个开源的中文对话式大语言模型，使用指令微调（Instruction Tuning）在中文数据集上进行调优。同时使用了词表裁剪、ZeRO、张量并行等技术，有效降低显存消耗和提高训练效率。 在训练中，我们使用了更小的模型参数量，以及更少的计算资源。
+
+我们构造了许多与中华文化相关的数据，以提升模型这方面的表现，如对联、作诗、文言文翻译、散文、金庸小说等。
+
+### * 凤凰
+- https://mp.weixin.qq.com/s/beAAh_MdqssV8bEKsccElg
+- https://github.com/FreedomIntelligence/LLMZoo
+
+LLM Zoo is a project that provides data, models, and evaluation benchmark for large language models.
 
 ### BELLE: Bloom-Enhanced Large Language model Engine
 - https://huggingface.co/BelleGroup
@@ -330,6 +375,9 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 
 ### 成本不到100美元！UC伯克利再开源类ChatGPT模型「考拉」：数据量大没有用，高质量才是王道
 - https://zhuanlan.zhihu.com/p/621078208
+
+### * NLP大模型必备-FudanNLP开源中文图书集合CBook-150K
+- https://mp.weixin.qq.com/s/X2SmjkALVVOE5hOrizcqqw
 
 > 持续更新中 (Continuously Updated)... 
 
