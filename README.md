@@ -378,6 +378,8 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 
 ### * NLP大模型必备-FudanNLP开源中文图书集合CBook-150K
 - https://mp.weixin.qq.com/s/X2SmjkALVVOE5hOrizcqqw
+- https://github.com/FudanNLPLAB/CBook-150K
+- http://www.doc-ai.cn/
 
 > 持续更新中 (Continuously Updated)... 
 
