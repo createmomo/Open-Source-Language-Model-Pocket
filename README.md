@@ -191,6 +191,10 @@ We provide easily customizable building blocks for training language models incl
 - 基于人工打分的正向评论生成机器人（With Human Reward）
 - 基于排序序列（Rank List）训练一个奖励模型（Reward Model）
 - 排序序列（Rank List）标注平台
+### * StableLM
+- https://zhuanlan.zhihu.com/p/623542189
+- https://github.com/Stability-AI/StableLM
+- 
 
 ### Stanford Alpaca (⭐7.9k)
 - https://crfm.stanford.edu/2023/03/13/alpaca.html
@@ -258,6 +262,12 @@ Firefly（流萤） 是一个开源的中文对话式大语言模型，使用指
 - https://github.com/FreedomIntelligence/LLMZoo
 
 LLM Zoo is a project that provides data, models, and evaluation benchmark for large language models.
+
+### * 复旦MOSS
+- https://github.com/OpenLMLab/MOSS
+- https://mp.weixin.qq.com/s/LjToZVWjQ-ot5KJFCFtA3g
+
+MOSS是一个支持中英双语和多种插件的开源对话语言模型，moss-moon系列模型具有160亿参数，在FP16精度下可在单张A100/A800或两张3090显卡运行，在INT4/8精度下可在单张3090显卡运行。MOSS基座语言模型在约七千亿中英文以及代码单词上预训练得到，后续经过对话指令微调、插件增强学习和人类偏好训练具备多轮对话能力及使用多种插件的能力。
 
 ### BELLE: Bloom-Enhanced Large Language model Engine
 - https://huggingface.co/BelleGroup
@@ -380,6 +390,10 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 - https://mp.weixin.qq.com/s/X2SmjkALVVOE5hOrizcqqw
 - https://github.com/FudanNLPLAB/CBook-150K
 - http://www.doc-ai.cn/
+
+### * COIG：首个大规模、可商用的中文开源指令数据！
+- https://mp.weixin.qq.com/s/1hSU5AROH0ZGuDo9oD0bFw
+- https://huggingface.co/datasets/BAAI/COIG
 
 > 持续更新中 (Continuously Updated)... 
 
