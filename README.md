@@ -110,6 +110,11 @@ We introduce LLaMA, a collection of foundation language models ranging from 7B t
 
 Demo, data and code to train an assistant-style large language model with ~800k GPT-3.5-Turbo Generations based on LLaMa
 
+### * HuggingChat
+- https://huggingface.co/chat/
+
+Making the community's best AI chat models available to everyone.
+
 ### HuggingGPT
 - https://mp.weixin.qq.com/s/o51CmLt2JViJ4nsKfBJfwg
 - https://arxiv.org/pdf/2303.17580.pdf
@@ -122,6 +127,14 @@ HuggingGPT利用ChatGPT作为控制器，连接HuggingFace社区中的各种AI�
 - https://bair.berkeley.edu/blog/2023/04/03/koala/
 
 In this post, we introduce Koala, a chatbot trained by fine-tuning Meta’s LLaMA on dialogue data gathered from the web. We describe the dataset curation and training process of our model, and also present the results of a user study that compares our model to ChatGPT and Stanford’s Alpaca. Our results show that Koala can effectively respond to a variety of user queries, generating responses that are often preferred over Alpaca, and at least tied with ChatGPT in over half of the cases.
+
+### * LLMPruner：大语言模型裁剪工具
+- https://mp.weixin.qq.com/s/u0UcCxzJOkF4fO_JI6ToQA
+- https://github.com/yangjianxin1/LLMPruner
+
+在许多下游任务中，我们往往只需要使用到一两种语言，例如在中文场景中，一般只会用到中英文。 所以我们可以对大语言模型的词表进行裁剪，只留下所需的部分词表，这样不仅能够充分保留模型的预训练知识，并且减少模型参数量，降低显存占用，提升训练速度，使用更少的显卡进行下游任务的finetune训练。
+
+基于上述原因，笔者开发了LLMPruner项目，目前主要包含裁剪后的各种参数规模的Bloom模型。对Bloom进行词表裁剪，保留常用的中英文token，词表由250880将至46145，缩减为原来的18.39%。
 
 ### llama.cpp (⭐8.6k)
 - https://github.com/ggerganov/llama.cpp
@@ -191,6 +204,7 @@ We provide easily customizable building blocks for training language models incl
 - 基于人工打分的正向评论生成机器人（With Human Reward）
 - 基于排序序列（Rank List）训练一个奖励模型（Reward Model）
 - 排序序列（Rank List）标注平台
+
 ### * StableLM
 - https://zhuanlan.zhihu.com/p/623542189
 - https://github.com/Stability-AI/StableLM
@@ -235,6 +249,23 @@ This is the repository for RRHF (Rank Response to align Human Feedback) and open
 Reinforcement Learning from Human Feedback (RLHF) enables the alignment of large language models with human preference, improving the quality of interactions between humans and language models. Recent practice of RLHF uses PPO to enable the large language model optimization of such alignment. However, implementing PPO is non-trivial (where the training procedure requires interactive between policy, behavior policy, reward, value model) and it is also tedious to tuning many hyper-parameters. Our motivation is to simplify the alignment between language models with human preference, and our proposed paradigm RRHF (Rank Response from Human Feedback) can achieve such alignment as easily as conventional fine-tuning. It is simpler than PPO from the aspects of coding, model counts, and hyperparameters.
 
 ## 2 中文开源模型（Chinese Open Source Language Models）
+
+### * Linly伶荔说
+- https://github.com/CVI-SZU/Linly
+- https://mp.weixin.qq.com/s/zSxsArP1pxYNubNDZua7iA
+
+“伶荔说”模型具有以下优势：1. 在32*A100 GPU上训练了不同量级和功能的中文模型，对模型充分训练并提供强大的baseline。据我们所知33B的Linly-Chinese-LLAMA是目前最大的中文LLaMA模型。2. 公开所有训练数据、代码、参数细节以及实验结果，确保项目的可复现性，用户可以选择合适的资源直接用于自己的流程中。3. 项目具有高兼容性和易用性，提供可用于CUDA和CPU的量化推理框架，并支持Huggingface格式。
+
+目前公开可用的模型有：
+
+Linly-Chinese-LLaMA：中文基础模型，基于LLaMA在高质量中文语料上增量训练强化中文语言能力，现已开放 7B、13B 和 33B 量级，65B正在训练中。
+
+Linly-ChatFlow：中文对话模型，在400万指令数据集合上对中文基础模型指令精调，现已开放7B、13B对话模型。
+
+Linly-ChatFlow-int4 ：ChatFlow 4-bit量化版本，用于在CPU上部署模型推理。
+
+进行中的项目：
+Linly-Chinese-BLOOM：基于BLOOM中文增量训练的中文基础模型，包含7B和175B模型量级，可用于商业场景。
 
 ### 中文Alpaca模型Luotuo
 - https://sota.jiqizhixin.com/project/luotuo
@@ -394,6 +425,12 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 ### * COIG：首个大规模、可商用的中文开源指令数据！
 - https://mp.weixin.qq.com/s/1hSU5AROH0ZGuDo9oD0bFw
 - https://huggingface.co/datasets/BAAI/COIG
+
+### * 以竞赛为例--GPT/BART/CPT的预训练和微调全流程
+- https://mp.weixin.qq.com/s/fNb9tmEXLUtDoWKibNFLEQ
+
+### * 生成式专利语言模型(PatentGPT)评估
+- https://mp.weixin.qq.com/s/hnmH8AzQupIZH1lWX2ZSNw
 
 > 持续更新中 (Continuously Updated)... 
 
