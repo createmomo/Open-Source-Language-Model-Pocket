@@ -128,7 +128,7 @@ HuggingGPT利用ChatGPT作为控制器，连接HuggingFace社区中的各种AI�
 
 In this post, we introduce Koala, a chatbot trained by fine-tuning Meta’s LLaMA on dialogue data gathered from the web. We describe the dataset curation and training process of our model, and also present the results of a user study that compares our model to ChatGPT and Stanford’s Alpaca. Our results show that Koala can effectively respond to a variety of user queries, generating responses that are often preferred over Alpaca, and at least tied with ChatGPT in over half of the cases.
 
-### * **LLaMA复刻版OpenLLaMA**
+### * LLaMA复刻版OpenLLaMA
 - https://github.com/openlm-research/open_llama
 
 In this repo, we release a permissively licensed open source reproduction of Meta AI's LLaMA large language model. In this release, we're releasing a public preview of the 7B OpenLLaMA model that has been trained with 200 billion tokens. We provide PyTorch and Jax weights of pre-trained OpenLLaMA models, as well as evaluation results and comparison against the original LLaMA models. Stay tuned for our updates.
@@ -171,7 +171,7 @@ Lit-LLaMA is:
 - Optimized: Runs on consumer hardware or at scale.
 - Open-source: No strings attached.
 
-### * **MLC LLM**
+### * MLC LLM
 - https://github.com/mlc-ai/mlc-llm
 
 MLC LLM is a universal solution that allows any language models to be deployed natively on a diverse set of hardware backends and native applications, plus a productive framework for everyone to further optimize model performance for their own use cases.
@@ -185,7 +185,7 @@ Everything runs locally with no server support and accelerated with local GPUs o
 - NVIDIA GPUs via CUDA on Windows and Linux;
 - WebGPU on browsers (through companion project WebLLM).
 
-### * **MPT-7B**
+### * MPT-7B
 - https://www.mosaicml.com/blog/mpt-7b
 - https://huggingface.co/mosaicml/mpt-7b
 
@@ -242,7 +242,7 @@ StableLM: Stability AI Language Models
 
 This repository contains Stability AI's ongoing development of the StableLM series of language models and will be continuously updated with new checkpoints. The following provides an overview of all currently available models. More coming soon.
 
-### * **StableVicuna**
+### * StableVicuna
 - https://github.com/Stability-AI/StableLM
 
 StableVicuna基于小羊驼Vicuna-13B的进一步指令微调和RLHF训练的版本。Vicuna-13B是LLaMA-13B的一个指令微调模型。
@@ -286,6 +286,55 @@ This is the repository for RRHF (Rank Response to align Human Feedback) and open
 Reinforcement Learning from Human Feedback (RLHF) enables the alignment of large language models with human preference, improving the quality of interactions between humans and language models. Recent practice of RLHF uses PPO to enable the large language model optimization of such alignment. However, implementing PPO is non-trivial (where the training procedure requires interactive between policy, behavior policy, reward, value model) and it is also tedious to tuning many hyper-parameters. Our motivation is to simplify the alignment between language models with human preference, and our proposed paradigm RRHF (Rank Response from Human Feedback) can achieve such alignment as easily as conventional fine-tuning. It is simpler than PPO from the aspects of coding, model counts, and hyperparameters.
 
 ## 2 中文开源模型（Chinese Open Source Language Models）
+
+### * 华佗
+- https://zhuanlan.zhihu.com/p/626536996
+- https://github.com/scir-hi/huatuo-llama-med-chinese
+
+华佗: 基于中文医学知识的LLaMa指令微调模型
+
+在生物医学领域，LLM模型（如LLaMa，ChatGLM）因为缺乏一定的医学专业知识语料而表现不佳。该项目通过医学知识图谱和GPT3.5API构建了中文医学指令数据集，并对LLaMa模型进行了指令微调得到了一个针对医学领域的智能问诊模型HuaTuo，相比于未经过医学数据指令微调的原LLaMa而言，HuaTuo模型在智能问诊层面表现出色，可生成一些更为可靠的医学知识回答；与此同时，基于相同医学数据，该项目还训练了医疗版本的ChatGLM模型: ChatGLM-6B-Med，
+
+除了华佗模型，该团队还即将发布扁鹊模型PienChueh(同为基于医学数据训练的大模型)，欢迎大家届时使用体验。
+
+### * BiLLa: A Bilingual LLaMA with Enhanced Reasoning Ability
+- https://zhuanlan.zhihu.com/p/628688680
+- https://github.com/Neutralzz/BiLLa
+
+BiLLa是开源的推理能力增强的中英双语LLaMA模型。模型的主要特性有：
+- 较大提升LLaMA的中文理解能力，并尽可能减少对原始LLaMA英文能力的损伤；
+- 训练过程增加较多的任务型数据，利用ChatGPT生成解析，强化模型理解任务求解逻辑；
+- 全量参数更新，追求更好的生成效果。
+
+### * ChatMed-TCM & ChatMed-Consult
+- https://github.com/michael-wzhu/ChatMed
+
+🚀 ChatMed-Consult : 基于中文医疗在线问诊数据集ChatMed_Consult_Dataset的50w+在线问诊+ChatGPT回复作为训练集。模型主干为LlaMA-7b,融合了Chinese-LlaMA-Alpaca的LoRA权重与中文扩展词表，然后再进行基于LoRA的参数高效微调。我们将全部代码都进行了公开。我们也将部署一个在线Gradio demo, 敬请关注。
+
+⏳ ChatMed-TCM : 大模型赋能中医药传承。这一模型的训练数据为中医药指令数据集ChatMed_TCM_Dataset。以我们开源的中医药知识图谱为基础，采用以实体为中心的自指令方法(entity-centric self-instruct)，调用ChatGPT得到2.6w+的围绕中医药的指令数据。ChatMed-TCM模型也是以LlaMA为底座，采用LoRA微调得到。
+
+### * ChatGLM-Med
+- https://github.com/SCIR-HI/Med-ChatGLM
+
+基于中文医学知识的ChatGLM模型微调，本项目开源了经过中文医学指令精调/指令微调(Instruct-tuning) 的ChatGLM-6B模型。我们通过医学知识图谱和GPT3.5 API构建了中文医学指令数据集，并在此基础上对ChatGLM-6B进行了指令微调，提高了ChatGLM在医疗领域的问答效果。
+
+### * DoctorGLM
+- https://github.com/xionghonglin/DoctorGLM
+
+DoctorGLM，基于 ChatGLM-6B的中文问诊模型。
+
+### * MedicalGPT-zh
+- github.com/MediaBrain-SJTU/MedicalGPT-zh
+
+该开源了基于ChatGLM-6B LoRA 16-bit指令微调的中文医疗通用模型。基于共计28科室的中文医疗共识与临床指南文本，我们生成医疗知识覆盖面更全，回答内容更加精准的高质量指令数据集。
+
+### * LawGPT_zh 中文法律大模型（獬豸）
+- https://mp.weixin.qq.com/s/Pk4NdFQq5G6iZ3QmcyyFUg
+- https://github.com/LiuHC0428/LAW-GPT
+
+我们的愿景是为让所有人在遇到法律问题时能第一时间获得专业可靠的回答。因为专业的律师服务只有真正触手可及，才会让人们习惯运用，一如二十年前的搜索引擎，十年前的快递业务。我们希望让法律走进日常生活，为构建法治社会贡献我们的力量。项目海报由Midjourney生成。
+
+本项目开源的中文法律通用模型由ChatGLM-6B LoRA 16-bit指令微调得到。数据集包括现有的法律问答数据集和基于法条和真实案例指导的self-Instruct构建的高质量法律文本问答，提高了通用语言大模型在法律领域的表现，提高了模型回答的可靠性和专业程度。
 
 ### Linly伶荔说
 - https://github.com/CVI-SZU/Linly
@@ -469,8 +518,21 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 ### 生成式专利语言模型(PatentGPT)评估
 - https://mp.weixin.qq.com/s/hnmH8AzQupIZH1lWX2ZSNw
 
-### * **极低资源微调大模型方法LoRA以及BLOOM-LORA实现代码**
+### * 极低资源微调大模型方法LoRA以及BLOOM-LORA实现代码
 - https://zhuanlan.zhihu.com/p/625488835
+
+### * “超越”(MMCU)中文通用大语言模型测试集--国内首个多领域多任务数据集
+- https://mp.weixin.qq.com/s/sZqqK51PamKHOz3DFcA_4A
+
+数据集的测试内容涵盖四大领域：医疗、法律、心理学和教育。通过综合评估模型在多个学科上的知识广度和深度，能够帮助研究者更精准地找出模型的缺陷，并对模型的能力进行打分。
+
+### * CCKS2023-PromptCBLUE中文医疗大模型评测比赛
+- https://mp.weixin.qq.com/s/LjOiZ_S7oLJBvqdKotA9zA
+
+为推动LLM在医疗领域的发展和落地，华东师范大学计算机学院王晓玲教授团队联合阿里巴巴天池平台、复旦大学、复旦大学附属华山医院、东北大学、哈尔滨工业大学（深圳）、鹏城实验室与同济大学推出PromptCBLUE评测基准(https://github.com/michael-wzhu/PromptCBLUE)，对CBLUE基准(https://tianchi.aliyun.com/dataset/95414)进行二次开发，将16种不同的医疗场景NLP任务全部转化为基于提示的语言生成任务，形成首个中文医疗场景的LLM评测基准。PromptCBLUE将作为CCKS-2023的评测任务之一，已在阿里巴巴天池大赛平台上线进行开放评测，欢迎各位师生报名参赛(刷榜)。
+
+### * 也看垂直领域大模型微调落地-以医疗领域为例：从PMC-LLaMA增量预训到MedicalGPT-zh指令微调项目概述
+- https://mp.weixin.qq.com/s/Pk4NdFQq5G6iZ3QmcyyFUg
 
 > 持续更新中 (Continuously Updated)... 
 
