@@ -1,6 +1,5 @@
 # 开源语言模型百宝袋 (Ver. 1.5)
 Open-Source Language Model Pocket
-
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
 ## 1 工具箱（Tools）
@@ -211,6 +210,21 @@ OpenChatKit provides a powerful, open-source base to create both specialized and
 Open Assistant is a project meant to give everyone access to a great chat based large language model.
 
 We believe that by doing this we will create a revolution in innovation in language. In the same way that stable-diffusion helped the world make art and images in new ways we hope Open Assistant can help improve the world by improving language itself.
+
+### * PandaLM
+- https://github.com/WeOpenML/PandaLM
+- https://zhuanlan.zhihu.com/p/630173415
+- https://mp.weixin.qq.com/s/HE6jez3G9aEO5qLkvwtKXg
+
+This is the official repository for PandaLM: ReProducible and Automated Language Model Assessment.
+
+PandaLM aims to provide reproducible and automated comparisons between different large language models (LLMs). By giving PandaLM the same context, it can compare the responses of different LLMs and provide a reason for the decision, along with a reference answer. The target audience for PandaLM may be organizations that have confidential data and research labs with limited funds that seek reproducibility. These organizations may not want to disclose their data to third parties or may not be able to afford the high costs of secret data leakage using third-party APIs or hiring human annotators. With PandaLM, they can perform evaluations without compromising data security or incurring high costs, and obtain reproducible results. To demonstrate the reliability and consistency of our tool, we have created a diverse human-annotated test dataset of approximately 1,000 samples, where the contexts and the labels are all created by humans. On our test dataset, PandaLM-7B has achieved 94% ChatGPT's evaluation ability in terms of accuracy. The papers and more features are coming soon.
+
+### * PKU-Beaver 河狸 (Safe RLHF)
+- https://github.com/PKU-Alignment/safe-rlhf
+- https://mp.weixin.qq.com/s/ZpkgszXbisl5xf63EfTNjQ
+
+北京大学团队开源了名为 PKU-Beaver（河狸）项目，其开源地址为：https://github.com/PKU-Alignment/safe-rlhf。该项目首次公开了 RLHF 所需的数据集、训练和验证代码，是目前首个开源的可复现的 RLHF 基准。同时，为解决人类标注产生的偏见和歧视等不安全因素，北京大学团队首次提出了带有约束的价值对齐技术 CVA（Constrained Value Alignment）。该技术通过对标注信息进行细粒度划分，并结合带约束的安全强化学习方法，显著降低了模型的偏见和歧视，提高了模型的安全性。Beaver使用GPT4进行Evaluation，结果表明，在原有性能保持不变的情况下，Beaver回复的安全性大幅度提升。
 
 ### PaLM + RLHF (Pytorch)
 - https://github.com/lucidrains/PaLM-rlhf-pytorch
@@ -533,6 +547,23 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 
 ### * 也看垂直领域大模型微调落地-以医疗领域为例：从PMC-LLaMA增量预训到MedicalGPT-zh指令微调项目概述
 - https://mp.weixin.qq.com/s/Pk4NdFQq5G6iZ3QmcyyFUg
+
+### * HuggingFace宣布在transformers库中引入首个RNN模型：RWKV，一个结合了RNN与Transformer双重优点的模型
+- https://zhuanlan.zhihu.com/p/629637598
+
+### * LLM评价模型PandaLM技术前瞻
+- https://zhuanlan.zhihu.com/p/630173415
+- https://github.com/WeOpenML/PandaLM
+
+### * 小数据也能助力大发现！CancerGPT成功预测药物组合，惊人数字证明其准确性！
+- https://mp.weixin.qq.com/s/xswnXhnLOkVOQwfKNFdPQA
+
+### * 逐步蒸馏！用更少的数据，训练更小的模型：性能却堪比大2000倍的模型
+- https://mp.weixin.qq.com/s/dtKaeSO4hZPGOuPcHRmBQw
+
+### * 国内首个可复现的 RLHF 基准，北大团队开源PKU-Beaver | 料见闭门交流
+- https://github.com/PKU-Alignment/safe-rlhf
+- https://mp.weixin.qq.com/s/ZpkgszXbisl5xf63EfTNjQ
 
 > 持续更新中 (Continuously Updated)... 
 
