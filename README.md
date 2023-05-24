@@ -3,6 +3,10 @@ Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
+相关文章：
+- [练习场：穷穷穷孩子如何体验ColossalAI SFT（Kaggle篇）](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)
+- [练习场：穷穷穷孩子如何体验ColossalAI SFT（Colab篇）](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)
+
 ## 1 工具箱（Tools）
 ### 高效对齐算法RAFT「木筏」
 - https://github.com/OptimalScale/LMFlow
