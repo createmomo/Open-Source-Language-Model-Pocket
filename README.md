@@ -3,7 +3,6 @@ Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
-
 ## 1 工具箱（Tools）
 ### 高效对齐算法RAFT「木筏」
 - https://github.com/OptimalScale/LMFlow
@@ -35,6 +34,15 @@ Alpaca-CoT项目旨在探究如何更好地通过instruction-tuning的方式来�
 - https://github.com/torantulino/auto-gpt
 
 Auto-GPT is an experimental open-source application showcasing the capabilities of the GPT-4 language model. This program, driven by GPT-4, chains together LLM "thoughts", to autonomously achieve whatever goal you set. As one of the first examples of GPT-4 running fully autonomously, Auto-GPT pushes the boundaries of what is possible with AI.
+
+### * AlpacaFarm
+- https://mp.weixin.qq.com/s/CIF2F5Vx_RSN1-LwU_ppOQ
+- https://tatsu-lab.github.io/alpaca_farm_paper.pdf
+- https://github.com/tatsu-lab/alpaca_farm
+
+主流的大型语言模型训练都离不开RLHF(人工反馈强化学习)，其主要思想是使用人类专家提供的反馈示例来指导模型的学习过程，它可以加速强化学习过程，提高大模型的性能，但「目前RLHF这个过程既复杂又昂贵」。
+
+ 针对RLHF这个问题，学术界目前主要有两种解决方法：「1）避开RLHF」，比如Meta最近研究的“Meta最新模型：LIMA-65B，没有RLHF，模型效果远胜Alpaca！！”，验证了精心制作的少量标注数据同样能达到不错的效果。2）「简化RLHF」，就是今天给大家分享的这篇文章：斯坦福发布了一个名为AlpacaFarm（羊驼农场）的模拟器，旨在降低训练语言模型的成本，且比人工成本低45倍，并表现出与人类反馈的高度一致性，同时也为RLHF的研究开辟了新的道路。
 
 ### BELLE: Bloom-Enhanced Large Language model Engine
 - https://github.com/LianjiaTech/BELLE
