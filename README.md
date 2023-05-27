@@ -1,4 +1,4 @@
-# 开源语言模型百宝袋 (Ver. 1.5)
+# 开源语言模型百宝袋 (Ver. 1.6)
 Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
@@ -39,7 +39,7 @@ Alpaca-CoT项目旨在探究如何更好地通过instruction-tuning的方式来�
 
 Auto-GPT is an experimental open-source application showcasing the capabilities of the GPT-4 language model. This program, driven by GPT-4, chains together LLM "thoughts", to autonomously achieve whatever goal you set. As one of the first examples of GPT-4 running fully autonomously, Auto-GPT pushes the boundaries of what is possible with AI.
 
-### * AlpacaFarm
+### AlpacaFarm
 - https://mp.weixin.qq.com/s/CIF2F5Vx_RSN1-LwU_ppOQ
 - https://tatsu-lab.github.io/alpaca_farm_paper.pdf
 - https://github.com/tatsu-lab/alpaca_farm
@@ -67,7 +67,7 @@ Colossal-AI provides a collection of parallel components for you. We aim to supp
 
 开源7个可商用GPT模型，含数据集和可直接下载的预训练模型权重: Cerebras 开源 7 个 GPT 模型，均可商用，参数量分别达到 1.11 亿、2.56 亿、5.9 亿、13 亿、27 亿、67 亿和 130 亿。其中最大的模型参数量达到 130 亿，与 Meta 最近开源的 LLaMA-13B 相当。该项目开源数据集和预训练模型权重，其中预训练模型权重文件大小近50G可直接下载，并且可用于商业和研究用途。与此前的 GPT-3 模型相比，Cerebras 开源的模型具有更高的可用性和透明度，研究人员和开发者可以使用少量数据对其进行微调，构建出高质量的自然语言处理应用。
 
-### * ChatPiXiu
+### ChatPiXiu
 - https://github.com/catqaq/ChatPiXiu
 
 我们是羡鱼智能【xianyu.ai】，主要成员是一群来自老和山下、西湖边上的咸鱼们，塘主叫作羡鱼，想在LLMs时代做点有意义的事！我们的口号是：做OpenNLP和OpenX！希望在CloseAI卷死我们之前退出江湖！
@@ -145,7 +145,7 @@ HuggingGPT利用ChatGPT作为控制器，连接HuggingFace社区中的各种AI�
 
 这意味着，你将拥有一种超魔法，通过HuggingGPT，便可拥有多模态能力，文生图、文生视频、语音全能拿捏了。
 
-### * HugNLP
+### HugNLP
 - https://mp.weixin.qq.com/s/IpgOQJ8vrIvnjdrmGCT2FA
 - https://github.com/HugAILab/HugNLP
 - https://arxiv.org/abs/2302.14286
@@ -163,7 +163,7 @@ HugNLP是一个分层式框架，遵循“高内聚低耦合”的开发模式�
 
 In this post, we introduce Koala, a chatbot trained by fine-tuning Meta’s LLaMA on dialogue data gathered from the web. We describe the dataset curation and training process of our model, and also present the results of a user study that compares our model to ChatGPT and Stanford’s Alpaca. Our results show that Koala can effectively respond to a variety of user queries, generating responses that are often preferred over Alpaca, and at least tied with ChatGPT in over half of the cases.
 
-### * LLaMA复刻版OpenLLaMA
+### LLaMA复刻版OpenLLaMA
 - https://github.com/openlm-research/open_llama
 
 In this repo, we release a permissively licensed open source reproduction of Meta AI's LLaMA large language model. In this release, we're releasing a public preview of the 7B OpenLLaMA model that has been trained with 200 billion tokens. We provide PyTorch and Jax weights of pre-trained OpenLLaMA models, as well as evaluation results and comparison against the original LLaMA models. Stay tuned for our updates.
@@ -206,7 +206,7 @@ Lit-LLaMA is:
 - Optimized: Runs on consumer hardware or at scale.
 - Open-source: No strings attached.
 
-### * MLC LLM
+### MLC LLM
 - https://github.com/mlc-ai/mlc-llm
 
 MLC LLM is a universal solution that allows any language models to be deployed natively on a diverse set of hardware backends and native applications, plus a productive framework for everyone to further optimize model performance for their own use cases.
@@ -220,7 +220,7 @@ Everything runs locally with no server support and accelerated with local GPUs o
 - NVIDIA GPUs via CUDA on Windows and Linux;
 - WebGPU on browsers (through companion project WebLLM).
 
-### * MPT-7B
+### MPT-7B
 - https://www.mosaicml.com/blog/mpt-7b
 - https://huggingface.co/mosaicml/mpt-7b
 
@@ -247,7 +247,7 @@ Open Assistant is a project meant to give everyone access to a great chat based 
 
 We believe that by doing this we will create a revolution in innovation in language. In the same way that stable-diffusion helped the world make art and images in new ways we hope Open Assistant can help improve the world by improving language itself.
 
-### * PandaLM
+### PandaLM
 - https://github.com/WeOpenML/PandaLM
 - https://zhuanlan.zhihu.com/p/630173415
 - https://mp.weixin.qq.com/s/HE6jez3G9aEO5qLkvwtKXg
@@ -256,7 +256,7 @@ This is the official repository for PandaLM: ReProducible and Automated Language
 
 PandaLM aims to provide reproducible and automated comparisons between different large language models (LLMs). By giving PandaLM the same context, it can compare the responses of different LLMs and provide a reason for the decision, along with a reference answer. The target audience for PandaLM may be organizations that have confidential data and research labs with limited funds that seek reproducibility. These organizations may not want to disclose their data to third parties or may not be able to afford the high costs of secret data leakage using third-party APIs or hiring human annotators. With PandaLM, they can perform evaluations without compromising data security or incurring high costs, and obtain reproducible results. To demonstrate the reliability and consistency of our tool, we have created a diverse human-annotated test dataset of approximately 1,000 samples, where the contexts and the labels are all created by humans. On our test dataset, PandaLM-7B has achieved 94% ChatGPT's evaluation ability in terms of accuracy. The papers and more features are coming soon.
 
-### * PKU-Beaver 河狸 (Safe RLHF)
+### PKU-Beaver 河狸 (Safe RLHF)
 - https://github.com/PKU-Alignment/safe-rlhf
 - https://mp.weixin.qq.com/s/ZpkgszXbisl5xf63EfTNjQ
 
@@ -266,6 +266,14 @@ PandaLM aims to provide reproducible and automated comparisons between different
 - https://github.com/lucidrains/PaLM-rlhf-pytorch
 
 Implementation of RLHF (Reinforcement Learning with Human Feedback) on top of the PaLM architecture. Maybe I'll add retrieval functionality too, à la RETRO
+
+### * Guanaco & QloRA
+- https://mp.weixin.qq.com/s/SGJQHsEJTNB6hiVqdc87sg
+- https://arxiv.org/abs/2305.14314
+- https://github.com/artidoro/qlora
+
+We present QLoRA, an efficient finetuning approach that reduces memory usage enough to finetune a 65B parameter model on a single 48GB GPU while preserving full 16-bit finetuning task performance. QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters (LoRA). Our best model family, which we name Guanaco, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU. QLoRA introduces a number of innovations to save memory without sacrificing performance: (a) 4-bit NormalFloat (NF4), a new data type that is information theoretically optimal for normally distributed weights (b) Double Quantization to reduce the average memory footprint by quantizing the quantization constants, and (c) Paged Optimizers to manage memory spikes. We use QLoRA to finetune more than 1,000 models, providing a detailed analysis of instruction following and chatbot performance across 8 instruction datasets, multiple model types (LLaMA, T5), and model scales that would be infeasible to run with regular finetuning (e.g. 33B and 65B parameter models). Our results show that QLoRA finetuning on a small high-quality dataset leads to state-of-the-art results, even when using smaller models than the previous SoTA. We provide a detailed analysis of chatbot performance based on both human and GPT-4 evaluations showing that GPT-4 evaluations are a cheap and reasonable alternative to human evaluation. Furthermore, we find that current chatbot benchmarks are not trustworthy to accurately evaluate the performance levels of chatbots. We release all of our models and code, including CUDA kernels for 4-bit training.
+
 
 ### RL4LMs
 - https://github.com/allenai/RL4LMs
@@ -292,7 +300,7 @@ StableLM: Stability AI Language Models
 
 This repository contains Stability AI's ongoing development of the StableLM series of language models and will be continuously updated with new checkpoints. The following provides an overview of all currently available models. More coming soon.
 
-### * StableVicuna
+### StableVicuna
 - https://github.com/Stability-AI/StableLM
 
 StableVicuna基于小羊驼Vicuna-13B的进一步指令微调和RLHF训练的版本。Vicuna-13B是LLaMA-13B的一个指令微调模型。
@@ -576,53 +584,59 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 ### 生成式专利语言模型(PatentGPT)评估
 - https://mp.weixin.qq.com/s/hnmH8AzQupIZH1lWX2ZSNw
 
-### * 极低资源微调大模型方法LoRA以及BLOOM-LORA实现代码
+### 极低资源微调大模型方法LoRA以及BLOOM-LORA实现代码
 - https://zhuanlan.zhihu.com/p/625488835
 
-### * “超越”(MMCU)中文通用大语言模型测试集--国内首个多领域多任务数据集
+### “超越”(MMCU)中文通用大语言模型测试集--国内首个多领域多任务数据集
 - https://mp.weixin.qq.com/s/sZqqK51PamKHOz3DFcA_4A
 
 数据集的测试内容涵盖四大领域：医疗、法律、心理学和教育。通过综合评估模型在多个学科上的知识广度和深度，能够帮助研究者更精准地找出模型的缺陷，并对模型的能力进行打分。
 
-### * CCKS2023-PromptCBLUE中文医疗大模型评测比赛
+### CCKS2023-PromptCBLUE中文医疗大模型评测比赛
 - https://mp.weixin.qq.com/s/LjOiZ_S7oLJBvqdKotA9zA
 
 为推动LLM在医疗领域的发展和落地，华东师范大学计算机学院王晓玲教授团队联合阿里巴巴天池平台、复旦大学、复旦大学附属华山医院、东北大学、哈尔滨工业大学（深圳）、鹏城实验室与同济大学推出PromptCBLUE评测基准(https://github.com/michael-wzhu/PromptCBLUE)，对CBLUE基准(https://tianchi.aliyun.com/dataset/95414)进行二次开发，将16种不同的医疗场景NLP任务全部转化为基于提示的语言生成任务，形成首个中文医疗场景的LLM评测基准。PromptCBLUE将作为CCKS-2023的评测任务之一，已在阿里巴巴天池大赛平台上线进行开放评测，欢迎各位师生报名参赛(刷榜)。
 
-### * 也看垂直领域大模型微调落地-以医疗领域为例：从PMC-LLaMA增量预训到MedicalGPT-zh指令微调项目概述
+### 也看垂直领域大模型微调落地-以医疗领域为例：从PMC-LLaMA增量预训到MedicalGPT-zh指令微调项目概述
 - https://mp.weixin.qq.com/s/Pk4NdFQq5G6iZ3QmcyyFUg
 
-### * HuggingFace宣布在transformers库中引入首个RNN模型：RWKV，一个结合了RNN与Transformer双重优点的模型
+### HuggingFace宣布在transformers库中引入首个RNN模型：RWKV，一个结合了RNN与Transformer双重优点的模型
 - https://zhuanlan.zhihu.com/p/629637598
 
-### * LLM评价模型PandaLM技术前瞻
+### LLM评价模型PandaLM技术前瞻
 - https://zhuanlan.zhihu.com/p/630173415
 - https://github.com/WeOpenML/PandaLM
 
-### * 小数据也能助力大发现！CancerGPT成功预测药物组合，惊人数字证明其准确性！
+### 小数据也能助力大发现！CancerGPT成功预测药物组合，惊人数字证明其准确性！
 - https://mp.weixin.qq.com/s/xswnXhnLOkVOQwfKNFdPQA
 
-### * 逐步蒸馏！用更少的数据，训练更小的模型：性能却堪比大2000倍的模型
+### 逐步蒸馏！用更少的数据，训练更小的模型：性能却堪比大2000倍的模型
 - https://mp.weixin.qq.com/s/dtKaeSO4hZPGOuPcHRmBQw
 
-### * 国内首个可复现的 RLHF 基准，北大团队开源PKU-Beaver | 料见闭门交流
+### 国内首个可复现的 RLHF 基准，北大团队开源PKU-Beaver | 料见闭门交流
 - https://github.com/PKU-Alignment/safe-rlhf
 - https://mp.weixin.qq.com/s/ZpkgszXbisl5xf63EfTNjQ
 
-### * Meta AI 重磅推出LIMA！媲美GPT-4、无需RLHF就能对齐！
+### Meta AI 重磅推出LIMA！媲美GPT-4、无需RLHF就能对齐！
 - https://zhuanlan.zhihu.com/p/631508237
 
-### * 逼近GPT-4！BLOOMChat: 开源可商用支持多语言的大语言模型
+### 逼近GPT-4！BLOOMChat: 开源可商用支持多语言的大语言模型
 - https://zhuanlan.zhihu.com/p/631036519
 
-### * 手把手复现一个ChatGPT
+### 手把手复现一个ChatGPT
 - https://zhuanlan.zhihu.com/p/631690198
 
-### * 关于hippocratic.ai和glass.health的产品讨论
+### 关于hippocratic.ai和glass.health的产品讨论
 - https://mp.weixin.qq.com/s/yl_aPKg74yHKNdfPhGss5g
 
-### * 越小越好: Q8-Chat，在英特尔至强 CPU 上体验高效的生成式 AI
+### 越小越好: Q8-Chat，在英特尔至强 CPU 上体验高效的生成式 AI
 - https://mp.weixin.qq.com/s/O55qgGeD5lDKl9tGVmBN3g
+
+### * 开源原驼（Guanaco）及背后的QLoRA技术，将微调65B模型的显存需求从780GB以上降低到48GB以下，效果直逼GPT-4，技术详解
+- https://zhuanlan.zhihu.com/p/632236718
+
+### * 使用LoRA对BELLE发布的BELLE-7B-2M进行微调
+- https://zhuanlan.zhihu.com/p/632317500
 
 > 持续更新中 (Continuously Updated)... 
 
