@@ -127,6 +127,16 @@ LLaMA: Open and Efficient Foundation Language Models
 
 We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the research community.
 
+### * 【Gorilla】
+- https://mp.weixin.qq.com/s/p9tx3q3Lpr4fNqdyxWhzyA
+- gorilla.cs.berkeley.edu
+- arxiv.org/abs/2305.15334
+- https://github.com/ShishirPatil/gorilla/
+
+大型语言模型性能强大，但为了更好地用于解决实际问题，各式各样的 API 是必不可少的。
+
+加利福尼亚大学伯克利分校和微软研究院造出了一只「大猩猩」Gorilla，该模型能根据用户输入的自然语言为用户选择合适的 API 来执行对应任务。理论上讲，这个模型可以根据用户需求调用其它各种 AI 模型，因此 Gorilla 有望成为一个统御其它 AI 的 AI 模型。该项目的代码、模型、数据和演示都已发布。
+
 ### GPT4All
 - https://github.com/nomic-ai/gpt4all
 
@@ -267,7 +277,7 @@ PandaLM aims to provide reproducible and automated comparisons between different
 
 Implementation of RLHF (Reinforcement Learning with Human Feedback) on top of the PaLM architecture. Maybe I'll add retrieval functionality too, à la RETRO
 
-### * Guanaco & QloRA
+### * 【Guanaco & QloRA】
 - https://mp.weixin.qq.com/s/SGJQHsEJTNB6hiVqdc87sg
 - https://arxiv.org/abs/2305.14314
 - https://github.com/artidoro/qlora
@@ -345,7 +355,7 @@ Reinforcement Learning from Human Feedback (RLHF) enables the alignment of large
 
 ## 2 中文开源模型（Chinese Open Source Language Models）
 
-### * 华佗
+### 华佗
 - https://zhuanlan.zhihu.com/p/626536996
 - https://github.com/scir-hi/huatuo-llama-med-chinese
 
@@ -403,7 +413,7 @@ MOSS是一个支持中英双语和多种插件的开源对话语言模型，moss
 
 BLOOM is an autoregressive Large Language Model (LLM), trained to continue text from a prompt on vast amounts of text data using industrial-scale computational resources. As such, it is able to output coherent text in 46 languages and 13 programming languages that is hardly distinguishable from text written by humans. BLOOM can also be instructed to perform text tasks it hasn't been explicitly trained for, by casting them as text generation tasks.
 
-### * BiLLa: A Bilingual LLaMA with Enhanced Reasoning Ability
+### BiLLa: A Bilingual LLaMA with Enhanced Reasoning Ability
 - https://zhuanlan.zhihu.com/p/628688680
 - https://github.com/Neutralzz/BiLLa
 
@@ -412,7 +422,7 @@ BiLLa是开源的推理能力增强的中英双语LLaMA模型。模型的主要�
 - 训练过程增加较多的任务型数据，利用ChatGPT生成解析，强化模型理解任务求解逻辑；
 - 全量参数更新，追求更好的生成效果。
 
-### * BLOOMChat176B
+### BLOOMChat176B
 - https://mp.weixin.qq.com/s/cY6ORD8CUyXRL0l20EjwqQ
 - https://sambanova.ai/blog/introducing-bloomchat-176b-the-multilingual-chat-based-llm/
 - https://huggingface.co/spaces/sambanovasystems/BLOOMChat
@@ -439,19 +449,19 @@ ChatGLM-6B 是一个开源的、支持中英双语的对话语言模型，基于
 
 本项目提供了智源研究院"文汇" 预训练模型Chinese-Transformer-XL的预训练和文本生成代码。
 
-### * ChatMed-TCM & ChatMed-Consult
+### ChatMed-TCM & ChatMed-Consult
 - https://github.com/michael-wzhu/ChatMed
 
 🚀 ChatMed-Consult : 基于中文医疗在线问诊数据集ChatMed_Consult_Dataset的50w+在线问诊+ChatGPT回复作为训练集。模型主干为LlaMA-7b,融合了Chinese-LlaMA-Alpaca的LoRA权重与中文扩展词表，然后再进行基于LoRA的参数高效微调。我们将全部代码都进行了公开。我们也将部署一个在线Gradio demo, 敬请关注。
 
 ⏳ ChatMed-TCM : 大模型赋能中医药传承。这一模型的训练数据为中医药指令数据集ChatMed_TCM_Dataset。以我们开源的中医药知识图谱为基础，采用以实体为中心的自指令方法(entity-centric self-instruct)，调用ChatGPT得到2.6w+的围绕中医药的指令数据。ChatMed-TCM模型也是以LlaMA为底座，采用LoRA微调得到。
 
-### * ChatGLM-Med
+### ChatGLM-Med
 - https://github.com/SCIR-HI/Med-ChatGLM
 
 基于中文医学知识的ChatGLM模型微调，本项目开源了经过中文医学指令精调/指令微调(Instruct-tuning) 的ChatGLM-6B模型。我们通过医学知识图谱和GPT3.5 API构建了中文医学指令数据集，并在此基础上对ChatGLM-6B进行了指令微调，提高了ChatGLM在医疗领域的问答效果。
 
-### * DoctorGLM
+### DoctorGLM
 - https://github.com/xionghonglin/DoctorGLM
 
 DoctorGLM，基于 ChatGLM-6B的中文问诊模型。
@@ -470,7 +480,7 @@ EVA 是目前最大的开源中文预训练对话模型，拥有28亿参数，�
 - 开箱即用的模型生成效果 demo #
 - 15亿参数 GPT2 中文预训练模型( 30G 语料，训练 22w 步 )
 
-### * LawGPT_zh 中文法律大模型（獬豸）
+### LawGPT_zh 中文法律大模型（獬豸）
 - https://mp.weixin.qq.com/s/Pk4NdFQq5G6iZ3QmcyyFUg
 - https://github.com/LiuHC0428/LAW-GPT
 
@@ -495,7 +505,7 @@ Linly-ChatFlow-int4 ：ChatFlow 4-bit量化版本，用于在CPU上部署模型�
 进行中的项目：
 Linly-Chinese-BLOOM：基于BLOOM中文增量训练的中文基础模型，包含7B和175B模型量级，可用于商业场景。
 
-### * MedicalGPT-zh
+### MedicalGPT-zh
 - github.com/MediaBrain-SJTU/MedicalGPT-zh
 
 该开源了基于ChatGLM-6B LoRA 16-bit指令微调的中文医疗通用模型。基于共计28科室的中文医疗共识与临床指南文本，我们生成医疗知识覆盖面更全，回答内容更加精准的高质量指令数据集。
@@ -637,6 +647,18 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 
 ### * 使用LoRA对BELLE发布的BELLE-7B-2M进行微调
 - https://zhuanlan.zhihu.com/p/632317500
+
+### * 【LLM系列之Tokenizer】如何科学地训练一个LLM分词器
+- https://mp.weixin.qq.com/s/z6wUY1p8_AVv8YEQ6FRYIA
+
+### * 金融领域大模型效果，低成本，Just-in-Time，场景落地
+- https://mp.weixin.qq.com/s/5Nm1I10eLi0xhNIxqyEOMA
+
+### * 首个大规模使用工具的大模型来了：伯克利发布Gorilla
+- https://mp.weixin.qq.com/s/p9tx3q3Lpr4fNqdyxWhzyA
+
+### * NBCE：使用朴素贝叶斯扩展LLM的Context处理长度
+- https://kexue.fm/archives/9617
 
 > 持续更新中 (Continuously Updated)... 
 
