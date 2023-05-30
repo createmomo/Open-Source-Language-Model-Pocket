@@ -88,6 +88,13 @@ ChatLLaMA 🦙 has been designed to help developers with various use cases, all 
 
 ChatLLaMA is a library that allows you to create hyper-personalized ChatGPT-like assistants using your own data and the least amount of compute possible. Instead of depending on one large assistant that “rules us all”, we envision a future where each of us can create our own personalized version of ChatGPT-like assistants. Imagine a future where many ChatLLaMAs at the "edge" will support a variety of human's needs. But creating a personalized assistant at the "edge" requires huge optimization efforts on many fronts: dataset creation, efficient training with RLHF, and inference optimization.
 
+### * 【Chinese-Guanaco】
+- https://github.com/jianzhnie/Chinese-Guanaco
+
+This is the repo for the Chinese-Guanaco project, which aims to build and share instruction-following Chinese LLaMA/Pythia/GLM model tuning methods which can be trained on a single Nvidia RTX-2080TI, multi-round chatbot which can be trained on a single Nvidia RTX-3090 with the context len 2048.
+
+Chinese-Guanaco uses bitsandbytes for quantization and is integrated with Huggingface's PEFT and transformers libraries.
+
 ### DeepSpeed-Chat
 - https://mp.weixin.qq.com/s/t3HA4Hu61LLDC3h2Njmo_Q
 - https://github.com/microsoft/DeepSpeed
@@ -102,6 +109,15 @@ ChatLLaMA is a library that allows you to create hyper-personalized ChatGPT-like
 - https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html
 
 We show that anyone can take a dated off-the-shelf open source large language model (LLM) and give it magical ChatGPT-like instruction following ability by training it in 30 minutes on one machine, using high-quality training data. Surprisingly, instruction-following does not seem to require the latest or largest models: our model is only 6 billion parameters, compared to 175 billion for GPT-3. We open source the code for our model (Dolly) and show how it can be re-created on Databricks. We believe models like Dolly will help democratize LLMs, transforming them from something very few companies can afford into a commodity every company can own and customize to improve their products.
+
+### * 【Falcon】
+- https://mp.weixin.qq.com/s/mKx0ZiTB28khj4U7EVJiVw
+- https://falconllm.tii.ae/
+- https://huggingface.co/tiiuae/falcon-40b
+
+Falcon LLM is a foundational large language model (LLM) with 40 billion parameters trained on one trillion tokens. TII has now released Falcon LLM – a 40B model.
+
+The model uses only 75 percent of GPT-3’s training compute, 40 percent of Chinchilla’s, and 80 percent of PaLM-62B’s.
 
 ### FlexGen
 - https://github.com/FMInference/FlexGen
@@ -136,6 +152,17 @@ We introduce LLaMA, a collection of foundation language models ranging from 7B t
 大型语言模型性能强大，但为了更好地用于解决实际问题，各式各样的 API 是必不可少的。
 
 加利福尼亚大学伯克利分校和微软研究院造出了一只「大猩猩」Gorilla，该模型能根据用户输入的自然语言为用户选择合适的 API 来执行对应任务。理论上讲，这个模型可以根据用户需求调用其它各种 AI 模型，因此 Gorilla 有望成为一个统御其它 AI 的 AI 模型。该项目的代码、模型、数据和演示都已发布。
+
+### * 【Guanaco & QloRA】
+- https://mp.weixin.qq.com/s/SGJQHsEJTNB6hiVqdc87sg
+- https://arxiv.org/abs/2305.14314
+- https://github.com/artidoro/qlora
+- https://huggingface.co/blog/hf-bitsandbytes-integration
+- Integration: https://colab.research.google.com/drive/1ge2F1QSK8Q7h0hn3YKuBCOAS0bK8E0wf?usp=sharing
+- Training: https://colab.research.google.com/drive/1VoYNfYDKcKRQRor98Zbf2-9VQTtGJ24k?usp=sharing
+
+We present QLoRA, an efficient finetuning approach that reduces memory usage enough to finetune a 65B parameter model on a single 48GB GPU while preserving full 16-bit finetuning task performance. QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters (LoRA). Our best model family, which we name Guanaco, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU. QLoRA introduces a number of innovations to save memory without sacrificing performance: (a) 4-bit NormalFloat (NF4), a new data type that is information theoretically optimal for normally distributed weights (b) Double Quantization to reduce the average memory footprint by quantizing the quantization constants, and (c) Paged Optimizers to manage memory spikes. We use QLoRA to finetune more than 1,000 models, providing a detailed analysis of instruction following and chatbot performance across 8 instruction datasets, multiple model types (LLaMA, T5), and model scales that would be infeasible to run with regular finetuning (e.g. 33B and 65B parameter models). Our results show that QLoRA finetuning on a small high-quality dataset leads to state-of-the-art results, even when using smaller models than the previous SoTA. We provide a detailed analysis of chatbot performance based on both human and GPT-4 evaluations showing that GPT-4 evaluations are a cheap and reasonable alternative to human evaluation. Furthermore, we find that current chatbot benchmarks are not trustworthy to accurately evaluate the performance levels of chatbots. We release all of our models and code, including CUDA kernels for 4-bit training.
+
 
 ### GPT4All
 - https://github.com/nomic-ai/gpt4all
@@ -277,14 +304,6 @@ PandaLM aims to provide reproducible and automated comparisons between different
 
 Implementation of RLHF (Reinforcement Learning with Human Feedback) on top of the PaLM architecture. Maybe I'll add retrieval functionality too, à la RETRO
 
-### * 【Guanaco & QloRA】
-- https://mp.weixin.qq.com/s/SGJQHsEJTNB6hiVqdc87sg
-- https://arxiv.org/abs/2305.14314
-- https://github.com/artidoro/qlora
-
-We present QLoRA, an efficient finetuning approach that reduces memory usage enough to finetune a 65B parameter model on a single 48GB GPU while preserving full 16-bit finetuning task performance. QLoRA backpropagates gradients through a frozen, 4-bit quantized pretrained language model into Low Rank Adapters (LoRA). Our best model family, which we name Guanaco, outperforms all previous openly released models on the Vicuna benchmark, reaching 99.3% of the performance level of ChatGPT while only requiring 24 hours of finetuning on a single GPU. QLoRA introduces a number of innovations to save memory without sacrificing performance: (a) 4-bit NormalFloat (NF4), a new data type that is information theoretically optimal for normally distributed weights (b) Double Quantization to reduce the average memory footprint by quantizing the quantization constants, and (c) Paged Optimizers to manage memory spikes. We use QLoRA to finetune more than 1,000 models, providing a detailed analysis of instruction following and chatbot performance across 8 instruction datasets, multiple model types (LLaMA, T5), and model scales that would be infeasible to run with regular finetuning (e.g. 33B and 65B parameter models). Our results show that QLoRA finetuning on a small high-quality dataset leads to state-of-the-art results, even when using smaller models than the previous SoTA. We provide a detailed analysis of chatbot performance based on both human and GPT-4 evaluations showing that GPT-4 evaluations are a cheap and reasonable alternative to human evaluation. Furthermore, we find that current chatbot benchmarks are not trustworthy to accurately evaluate the performance levels of chatbots. We release all of our models and code, including CUDA kernels for 4-bit training.
-
-
 ### RL4LMs
 - https://github.com/allenai/RL4LMs
 - https://rl4lms.apps.allenai.org/
@@ -301,6 +320,11 @@ We provide easily customizable building blocks for training language models incl
 - 基于人工打分的正向评论生成机器人（With Human Reward）
 - 基于排序序列（Rank List）训练一个奖励模型（Reward Model）
 - 排序序列（Rank List）标注平台
+
+### Scikit-LLM: Sklearn Meets Large Language Models
+- https://github.com/iryna-kondr/scikit-llm
+
+Seamlessly integrate powerful language models like ChatGPT into scikit-learn for enhanced text analysis tasks.
 
 ### StableLM
 - https://zhuanlan.zhihu.com/p/623542189
@@ -398,6 +422,15 @@ LLM Zoo is a project that provides data, models, and evaluation benchmark for la
 
 MOSS是一个支持中英双语和多种插件的开源对话语言模型，moss-moon系列模型具有160亿参数，在FP16精度下可在单张A100/A800或两张3090显卡运行，在INT4/8精度下可在单张3090显卡运行。MOSS基座语言模型在约七千亿中英文以及代码单词上预训练得到，后续经过对话指令微调、插件增强学习和人类偏好训练具备多轮对话能力及使用多种插件的能力。
 
+### * 【轩辕：首个千亿级中文金融对话模型】
+- https://arxiv.org/pdf/2305.12002.pdf
+- https://huggingface.co/xyz-nlp/XuanYuan2.0
+- https://github.com/Duxiaoman-DI/XuanYuan
+- https://huggingface.co/xyz-nlp/XuanYuan2.0
+- https://zhuanlan.zhihu.com/p/632780608
+
+轩辕是国内首个开源的千亿级中文对话大模型，同时也是首个针对中文金融领域优化的千亿级开源对话大模型。轩辕在BLOOM-176B的基础上针对中文通用领域和金融领域进行了针对性的预训练与微调，它不仅可以应对通用领域的问题，也可以解答与金融相关的各类问题，为用户提供准确、全面的金融信息和建议。
+
 ### BELLE: Bloom-Enhanced Large Language model Engine
 - https://huggingface.co/BelleGroup
 - https://github.com/LianjiaTech/BELLE
@@ -460,6 +493,23 @@ ChatGLM-6B 是一个开源的、支持中英双语的对话语言模型，基于
 - https://github.com/SCIR-HI/Med-ChatGLM
 
 基于中文医学知识的ChatGLM模型微调，本项目开源了经过中文医学指令精调/指令微调(Instruct-tuning) 的ChatGLM-6B模型。我们通过医学知识图谱和GPT3.5 API构建了中文医学指令数据集，并在此基础上对ChatGLM-6B进行了指令微调，提高了ChatGLM在医疗领域的问答效果。
+
+### * 【CPM-Bee】
+- https://mp.weixin.qq.com/s/UCW1BT60Lr9x24Rj0cLuxw
+- https://huggingface.co/openbmb/cpm-bee-10b
+- https://github.com/OpenBMB/CPM-Bee
+
+CPM-Bee 是一个 完全开源、允许商用 的百亿参数中英文基座模型。它采用 Transformer 自回归架构（auto-regressive），使用万亿级高质量语料进行预训练，拥有强大的基础能力。CPM-Bee 的特点可以总结如下：
+
+开源可商用：OpenBMB 始终秉承“让大模型飞入千家万户”的开源精神，CPM-Bee 基座模型将完全开源并且可商用，以推动大模型领域的发展。如需将模型用于商业用途，只需企业实名邮件申请并获得官方授权证书，即可商用使用。
+
+中英双语性能优异：CPM-Bee 基座模型在预训练语料上进行了严格的筛选和配比，同时在中英双语上具有亮眼表现，具体可参见评测任务和结果。
+
+超大规模高质量语料：CPM-Bee基座模型在万亿级语料上进行训练，是开源社区内经过语料最多的模型之一。同时，我们对预训练语料进行了严格的筛选、清洗和后处理以确保质量。
+
+OpenBMB大模型系统生态支持：OpenBMB 大模型系统在高性能预训练、适配、压缩、部署、工具开发了一系列工具，CPM-Bee 基座模型将配套所有的工具脚本，高效支持开发者进行进阶使用。 
+
+强大的对话和工具使用能力：结合OpenBMB 在指令微调和工具学习的探索，我们在 CPM-Bee 基座模型的基础上进行微调，训练出了具有强大对话和工具使用能力的实例模型，现已开放定向邀请内测，未来会逐步向公众开放。
 
 ### DoctorGLM
 - https://github.com/xionghonglin/DoctorGLM
@@ -645,6 +695,9 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 ### * 开源原驼（Guanaco）及背后的QLoRA技术，将微调65B模型的显存需求从780GB以上降低到48GB以下，效果直逼GPT-4，技术详解
 - https://zhuanlan.zhihu.com/p/632236718
 
+### * 使用qlora对中文大语言模型进行微调
+- https://github.com/taishan1994/qlora-chinese-LLM
+
 ### * 使用LoRA对BELLE发布的BELLE-7B-2M进行微调
 - https://zhuanlan.zhihu.com/p/632317500
 
@@ -659,6 +712,9 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 
 ### * NBCE：使用朴素贝叶斯扩展LLM的Context处理长度
 - https://kexue.fm/archives/9617
+
+### * 如何使用 Megatron-LM 训练语言模型
+- https://mp.weixin.qq.com/s/QPg6gOWGbQDezTl8OFZU3g
 
 > 持续更新中 (Continuously Updated)... 
 
