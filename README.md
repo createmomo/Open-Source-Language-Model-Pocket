@@ -379,15 +379,23 @@ Reinforcement Learning from Human Feedback (RLHF) enables the alignment of large
 
 ## 2 中文开源模型（Chinese Open Source Language Models）
 
-### 华佗
+### 本草
 - https://zhuanlan.zhihu.com/p/626536996
 - https://github.com/scir-hi/huatuo-llama-med-chinese
 
-华佗: 基于中文医学知识的LLaMa指令微调模型
+基于中文医学知识的LLaMa指令微调模型
 
 在生物医学领域，LLM模型（如LLaMa，ChatGLM）因为缺乏一定的医学专业知识语料而表现不佳。该项目通过医学知识图谱和GPT3.5API构建了中文医学指令数据集，并对LLaMa模型进行了指令微调得到了一个针对医学领域的智能问诊模型HuaTuo，相比于未经过医学数据指令微调的原LLaMa而言，HuaTuo模型在智能问诊层面表现出色，可生成一些更为可靠的医学知识回答；与此同时，基于相同医学数据，该项目还训练了医疗版本的ChatGLM模型: ChatGLM-6B-Med，
 
-除了华佗模型，该团队还即将发布扁鹊模型PienChueh(同为基于医学数据训练的大模型)，欢迎大家届时使用体验。
+该团队还即将发布扁鹊模型PienChueh(同为基于医学数据训练的大模型)，欢迎大家届时使用体验。
+
+### * 【华佗】
+- https://mp.weixin.qq.com/s/lwJb8N420xfMTvXJPM2gtg
+- https://arxiv.org/pdf/2305.15075.pdf
+- https://github.com/FreedomIntelligence/HuatuoGPT
+- https://www.huatuogpt.cn/ 
+
+该论文提出的语言模型训练方法可以结合医生和 ChatGPT 的数据，充分发挥它们的互补作用，既保留真实医疗数据的专业性和准确性，又借助 ChatGPT 的多样性和内容丰富性的特点。
 
 ### 中文Alpaca模型Luotuo
 - https://sota.jiqizhixin.com/project/luotuo
@@ -713,8 +721,17 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 ### * NBCE：使用朴素贝叶斯扩展LLM的Context处理长度
 - https://kexue.fm/archives/9617
 
+### * 关于NBCE方法的一些补充说明和分析
+- https://kexue.fm/archives/9632
+
 ### * 如何使用 Megatron-LM 训练语言模型
 - https://mp.weixin.qq.com/s/QPg6gOWGbQDezTl8OFZU3g
+
+### * 谷歌训了28个15亿参数模型，说明数据对大模型训练的影响
+- https://mp.weixin.qq.com/s/l78B9zsPnDo_pRZrPCiQsQ
+
+### * 一个通用的自适应prompt方法，突破了零样本学习的瓶颈
+- https://mp.weixin.qq.com/s/icc__WZZqdAd5r3oxm0vgA
 
 > 持续更新中 (Continuously Updated)... 
 
