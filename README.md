@@ -733,5 +733,8 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 ### * 一个通用的自适应prompt方法，突破了零样本学习的瓶颈
 - https://mp.weixin.qq.com/s/icc__WZZqdAd5r3oxm0vgA
 
+### * ChatGPT能解决信息抽取吗？一份关于性能、评估标准、鲁棒性和错误的分析
+- https://mp.weixin.qq.com/s/TeFxseHyqZ96aL6eN6X64g
+
 > 持续更新中 (Continuously Updated)... 
 
