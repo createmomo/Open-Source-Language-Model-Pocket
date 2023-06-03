@@ -267,6 +267,14 @@ MPT-7B is part of the family of MosaicPretrainedTransformer (MPT) models, which 
 
 Introducing MPT-7B, the latest entry in our MosaicML Foundation Series. MPT-7B is a transformer trained from scratch on 1T tokens of text and code. It is open source, available for commercial use, and matches the quality of LLaMA-7B. MPT-7B was trained on the MosaicML platform in 9.5 days with zero human intervention at a cost of ~$200k. Starting today, you can train, finetune, and deploy your own private MPT models, either starting from one of our checkpoints or training from scratch. For inspiration, we are also releasing three finetuned models in addition to the base MPT-7B: MPT-7B-Instruct, MPT-7B-Chat, and MPT-7B-StoryWriter-65k+, the last of which uses a context length of 65k tokens!
 
+### * 【Multiscale Positive-Unlabeled Detection of AI-Generated Texts】
+- https://mp.weixin.qq.com/s/KBN8TMwXD1bcE2X_dImXVg
+- https://arxiv.org/abs/2305.18149
+- https://github.com/mindspore-lab/mindone/tree/master/examples/detect_chatgpt
+- https://github.com/YuchuanTian/AIGC_text_detector
+
+Recent releases of Large Language Models (LLMs), e.g. ChatGPT, are astonishing at generating human-like texts, but they may get misused for fake scholarly texts, fake news, fake tweets, et cetera. Previous works have proposed methods to detect these multiscale AI-generated texts, including simple ML classifiers, pretrained-model-based training-agnostic methods, and finetuned language classification models. However, mainstream detectors are formulated without considering the factor of corpus length: shorter corpuses are harder to detect compared with longer ones for shortage of informative features. In this paper, a Multiscale Positive-Unlabeled (MPU) training framework is proposed to address the challenge of multiscale text detection. Firstly, we acknowledge the human-resemblance property of short machine texts, and rephrase text classification as a Positive-Unlabeled (PU) problem by marking these short machine texts as "unlabeled" during training. In this PU context, we propose the length-sensitive Multiscale PU Loss, where we use a recurrent model in abstraction to estimate positive priors of scale-variant corpuses. Additionally, we introduce a Text Multiscaling module to enrich training corpuses. Experiments show that our MPU method augments detection performance on long AI-generated text, and significantly improves short-corpus detection of language model detectors. Language Models trained with MPU could outcompete existing detectors by large margins on multiscale AI-generated texts. 
+
 ### OpenChatKit
 - https://www.together.xyz/blog/openchatkit 
 - https://huggingface.co/spaces/togethercomputer/OpenChatKit
@@ -538,6 +546,32 @@ EVA 是目前最大的开源中文预训练对话模型，拥有28亿参数，�
 - 开箱即用的模型生成效果 demo #
 - 15亿参数 GPT2 中文预训练模型( 30G 语料，训练 22w 步 )
 
+### * 【LaWGPT】
+- https://github.com/pengxiao-song/LaWGPT
+
+LaWGPT 是一系列基于中文法律知识的开源大语言模型。
+
+该系列模型在通用中文基座模型（如 Chinese-LLaMA、ChatGLM 等）的基础上扩充法律领域专有词表、大规模中文法律语料预训练，增强了大模型在法律领域的基础语义理解能力。在此基础上，构造法律领域对话问答数据集、中国司法考试数据集进行指令精调，提升了模型对法律内容的理解和执行能力。
+
+### * 【Lawyer LLaMA】
+- https://github.com/AndrewZhe/lawyer-llama
+
+Lawyer LLaMA 首先在大规模法律语料上进行了continual pretraining，让它系统的学习中国的法律知识体系。 在此基础上，我们借助ChatGPT收集了一批对中国国家统一法律职业资格考试客观题（以下简称法考）的分析和对法律咨询的回答，利用收集到的数据对模型进行指令微调，让模型习得将法律知识应用到具体场景中的能力。
+
+我们的模型能够：
+- 掌握中国法律知识： 能够正确的理解民法、刑法、行政法、诉讼法等常见领域的法律概念。例如，掌握了刑法中的犯罪构成理论，能够从刑事案件的事实描述中识别犯罪主体、犯罪客体、犯罪行为、主观心理状态等犯罪构成要件。模型利用学到的法律概念与理论，能够较好回答法考中的大部分题目。
+- 应用于中国法律实务：能够以通俗易懂的语言解释法律概念，并且进行基础的法律咨询，涵盖婚姻、借贷、海商、刑事等法律领域。
+- 为了给中文法律大模型的开放研究添砖加瓦，本项目将开源一系列法律领域的指令微调数据和基于LLaMA训练的中文法律大模型的参数 。
+
+### * 【LexiLaw】
+- https://github.com/CSHaitao/LexiLaw
+
+LexiLaw 是一个经过微调的中文法律大模型，它基于 ChatGLM-6B 架构，通过在法律领域的数据集上进行微调，使其在提供法律咨询和支持方面具备更高的性能和专业性。
+
+该模型旨在为法律从业者、学生和普通用户提供准确、可靠的法律咨询服务。无论您是需要针对具体法律问题的咨询，还是对法律条款、案例解析、法规解读等方面的查询，LexiLaw 都能够为您提供有益的建议和指导。
+
+同时，我们将分享在大模型基础上微调的经验和最佳实践，以帮助社区开发更多优秀的中文法律大模型，推动中文法律智能化的发展。
+
 ### LawGPT_zh 中文法律大模型（獬豸）
 - https://mp.weixin.qq.com/s/Pk4NdFQq5G6iZ3QmcyyFUg
 - https://github.com/LiuHC0428/LAW-GPT
@@ -735,6 +769,20 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 
 ### * ChatGPT能解决信息抽取吗？一份关于性能、评估标准、鲁棒性和错误的分析
 - https://mp.weixin.qq.com/s/TeFxseHyqZ96aL6eN6X64g
+
+### * 刘知远团队提出：如何通过扩大高质量指导性对话数据集，来提高模型的性能和效率
+- https://mp.weixin.qq.com/s/dUZHB8OC8l1oxbUX0FBG5Q
+
+### * Large Language Models are not Fair Evaluators
+- https://mp.weixin.qq.com/s/LmtO2-YiSD2n3ccH1DJAkw
+- https://https://arxiv.org/pdf/2305.17926v1.pdf
+- https://https://github.com/i-Eval/FairEval
+
+### * 驯服大型语言模型（LLMs）的五种方法，及具体方法选择思路
+- https://mp.weixin.qq.com/s/93xk_x7LBFLOZlmnM96IMw
+
+### * 再看基于LLaMA的最新微调模型变体：CaMA、ExpertLLaMA以及第四个中文法律微调模型LexiLaw
+- https://mp.weixin.qq.com/s/CrAkraUCl28Lr1-hAT-RWw
 
 > 持续更新中 (Continuously Updated)... 
 
