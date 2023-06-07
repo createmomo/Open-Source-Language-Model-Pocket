@@ -252,6 +252,22 @@ Lit-LLaMA is:
 - Optimized: Runs on consumer hardware or at scale.
 - Open-source: No strings attached.
 
+### * 【LLM for Recommendation Systems】
+- https://github.com/WLiK/LLM4Rec
+- https://arxiv.org/abs/2305.19860
+- https://mp.weixin.qq.com/s/WCUjCahiak4STbb0QjJInQ
+
+Large Language Models (LLMs) have emerged as powerful tools in the field of Natural Language Processing (NLP) and have recently gained significant attention in the domain of Recommendation Systems (RS). These models, trained on massive amounts of data using self-supervised learning, have demonstrated remarkable success in learning universal representations and have the potential to enhance various aspects of recommendation systems by some effective transfer techniques such as fine-tuning and prompt tuning, and so on. The crucial aspect of harnessing the power of language models in enhancing recommendation quality is the utilization of their high-quality representations of textual features and their extensive coverage of external knowledge to establish correlations between items and users. To provide a comprehensive understanding of the existing LLM-based recommendation systems, this survey presents a taxonomy that categorizes these models into two major paradigms, respectively Discriminative LLM for Recommendation (DLLM4Rec) and Generative LLM for Recommendation (GLLM4Rec), with the latter being systematically sorted out for the first time. Furthermore, we systematically review and analyze existing LLM-based recommendation systems within each paradigm, providing insights into their methodologies, techniques, and performance. Additionally, we identify key challenges and several valuable findings to provide researchers and practitioners with inspiration.
+
+### * 【LLM-Pruner: On the Structural Pruning of Large Language Models】
+- https://github.com/horseee/LLM-Pruner
+- https://arxiv.org/abs/2305.11627
+- https://mp.weixin.qq.com/s/feqFfy4n31eztoZfodMieQ
+
+在本文中，我们提出了 LLM-Pruner，一种用于大型语言模型的结构化剪枝方法。LLM-Pruner 旨在以任务无关的方式压缩庞大的语言模型，同时尽量减少对原始训练语料库的依赖，并保留 LLM 的语言能力。LLM-Pruner 通过迭代地检查模型中的每个神经元作为识别依赖组的触发器，从而构建 LLM 的依赖图。随后，LLM-Pruner 使用参数级和权重级估计来评估这些组的重要性。
+
+最后，我们利用 LoRA 对被剪枝模型进行快速恢复和调整。我们使用多个 zero-shot 数据集评估了 LLM-Pruner 在三个不同模型（LLaMA，Vicuna 和 ChatGLM）上的有效性。我们的实验结果表明，LLM-Pruner 成功地剪枝了模型，在保留 zero-shot 能力的同时减轻了计算负担。
+
 ### MLC LLM
 - https://github.com/mlc-ai/mlc-llm
 
@@ -364,6 +380,13 @@ StableVicuna基于小羊驼Vicuna-13B的进一步指令微调和RLHF训练的版
 Alpaca: A Strong, Replicable Instruction-Following ModelAl
 
 We introduce Alpaca 7B, a model fine-tuned from the LLaMA 7B model on 52K instruction-following demonstrations. On our preliminary evaluation of single-turn instruction following, Alpaca behaves qualitatively similarly to OpenAI’s text-davinci-003, while being surprisingly small and easy/cheap to reproduce (<600$).
+
+### * 【ToolBench】
+- https://github.com/OpenBMB/ToolBench
+- https://arxiv.org/pdf/2304.08354.pdf
+- https://mp.weixin.qq.com/s/DuoQJj1OBl5iFPvjidDiCg
+
+This project aims to construct open-source, large-scale, high-quality instruction tuning SFT data to facilitate the construction of powerful LLMs with general tool-use capability. We provide the dataset, the corresponding training and evaluation scripts, and a capable model ToolLLaMA fine-tuned on ToolBench.
 
 ### Transformer Reinforcement Learning
 - https://github.com/lvwerra/trl
