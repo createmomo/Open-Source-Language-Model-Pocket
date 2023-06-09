@@ -1,4 +1,4 @@
-# 开源语言模型百宝袋 (Ver. 2.0)
+# 开源语言模型百宝袋 (Ver. 2.1)
 Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
@@ -414,7 +414,7 @@ PandaLM aims to provide reproducible and automated comparisons between different
 
 This project aims to construct open-source, large-scale, high-quality instruction tuning SFT data to facilitate the construction of powerful LLMs with general tool-use capability. We provide the dataset, the corresponding training and evaluation scripts, and a capable model ToolLLaMA fine-tuned on ToolBench.
 
-## 2 中文开源模型（Chinese Open Source Language Models）
+## 4 中文开源模型（Chinese Open Source Language Models）
 
 ### 本草
 - https://zhuanlan.zhihu.com/p/626536996
@@ -654,7 +654,33 @@ PromptCLUE：大规模多任务Prompt预训练中文开源模型。
 
 SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊天、问答、中英互译等不同的任务。 应用这个模型，除了可以实现基本的聊天、对话、你问我答外，还能支持中英文互译、内容续写、对对联、写古诗、生成菜谱、第三人称转述、创建采访问题等多种功能。
 
-## 3 其他小伙伴的资料
+### * 【TigerBot】
+- https://github.com/TigerResearch/TigerBot
+
+TigerBot 是一个多语言多任务的大规模语言模型(LLM)。根据 OpenAI InstructGPT 论文在公开 NLP 数据集上的自动评测，TigerBot-7B 达到 OpenAI 同样大小模型的综合表现的 96%，并且这只是我们的 MVP，在此我们将如下探索成果开源：
+
+- 模型：TigerBot-7B, TigerBot-7B-base，TigerBot-180B (research version)，
+- 代码：基本训练和推理代码，包括双卡推理 180B 模型的量化和推理代码，
+- 数据：预训练 100G，从 2TB 过滤后的数据中经过去噪去重清洗而得；监督微调 1G 或 100 万条数据，按比例涵盖用户指令常见的 10 大类 120 小类任务，
+- API: chat, plugin, finetune, 让用户能在半小时内无代码的训练和使用专属于自己的大模型和数据，
+- 领域数据：涵盖金融，法律，百科，广邀大模型应用开发者，一起打造中国的世界级的应用。
+
+我们在 BLOOM 基础上，在模型架构和算法上做了如下优化：
+
+- 指令完成监督微调的创新算法以获得更好的可学习型(learnability)，
+- 运用 ensemble 和 probabilistic modeling 的方法实现更可控的事实性(factuality)和创造性(generativeness)，
+- 在并行训练上，我们突破了 deep-speed 等主流框架中若干内存和通信问题，使得在千卡环境下数月无间断，
+- 对中文语言的更不规则的分布，从 tokenizer 到训练算法上做了更适合的算法优化。
+
+### * 【YuLan-Chat】
+- https://github.com/RUC-GSAI/YuLan-Chat
+- https://mp.weixin.qq.com/s/nPS4N3stAAG_51fnZANbMA
+
+中国人民大学高瓴人工智能学院相关研究团队（由多位学院老师联合指导）展开了一系列关于指令微调技术的研究，并发布了学院初版大语言对话模型——YuLan-Chat，旨在探索和提升大语言模型的中英文双语对话能力。
+
+我们分别开源了13B和65B的YuLan-Chat模型文件及相关代码，并采用量化技术使其分别可以在单张RTX3090-24G和A800-80G显卡上部署。YuLan-Chat模型基于LLaMA底座模型，采用精心优化的高质量中英文混合指令进行微调，其中YuLan-Chat-65B模型目前能够在中英文相关评测数据集上显著超越已有开源模型效果。后续我们会继续优化指令微调方法与底座模型，持续更新YuLan-Chat模型。
+
+## 5 其他小伙伴的资料
 ### 总结开源可用的Instruct/Prompt Tuning数据
 - https://zhuanlan.zhihu.com/p/615277009
 
