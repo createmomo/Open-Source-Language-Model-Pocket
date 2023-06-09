@@ -109,6 +109,15 @@ HugAILab团队还研发了一系列的应用，例如CLUE&GLUE刷榜工具，可
 
 HugNLP是一个分层式框架，遵循“高内聚低耦合”的开发模式，其核心包括模型层（Models）、处理器层（Processors）、评估器层（Evaluators）和应用层（Applications）四部分。
 
+### * 【MeZO: Fine-Tuning Language Models with Just Forward Passes】
+- https://github.com/princeton-nlp/MeZO
+- https://arxiv.org/abs/2305.17333
+- https://mp.weixin.qq.com/s/3RLCVQg2QJGSiDUtx9DgPg
+
+This is the implementation for the paper Fine-Tuning Language Models with Just Forward Passes. In this paper we propose a memory-efficient zeroth-order optimizer (MeZO), adapting the classical zeroth-order SGD method to operate in-place, thereby fine-tuning language models (LMs) with the same memory footprint as inference.
+
+With a single A100 80GB GPU, MeZO can train a 30-billion parameter OPT model, whereas fine-tuning with Adam can train only a 2.7B LM. MeZO demonstrates comparable performance to fine-tuning with backpropagation across multiple tasks, with up to 12× memory reduction. MeZO is also compatible with both full-parameter and parameter-efficient tuning techniques such as LoRA and prefix tuning. We also show that MeZO can effectively optimize non-differentiable objectives (e.g., maximizing accuracy or F1).
+
 ### PKU-Beaver 河狸 (Safe RLHF)
 - https://github.com/PKU-Alignment/safe-rlhf
 - https://mp.weixin.qq.com/s/ZpkgszXbisl5xf63EfTNjQ
