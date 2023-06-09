@@ -49,7 +49,7 @@ ChatLLaMA 🦙 has been designed to help developers with various use cases, all 
 
 ChatLLaMA is a library that allows you to create hyper-personalized ChatGPT-like assistants using your own data and the least amount of compute possible. Instead of depending on one large assistant that “rules us all”, we envision a future where each of us can create our own personalized version of ChatGPT-like assistants. Imagine a future where many ChatLLaMAs at the "edge" will support a variety of human's needs. But creating a personalized assistant at the "edge" requires huge optimization efforts on many fronts: dataset creation, efficient training with RLHF, and inference optimization.
 
-### * 【Chinese-Guanaco】
+### Chinese-Guanaco
 - https://github.com/jianzhnie/Chinese-Guanaco
 
 This is the repo for the Chinese-Guanaco project, which aims to build and share instruction-following Chinese LLaMA/Pythia/GLM model tuning methods which can be trained on a single Nvidia RTX-2080TI, multi-round chatbot which can be trained on a single Nvidia RTX-3090 with the context len 2048.
@@ -81,7 +81,7 @@ FlagAI (Fast LArge-scale General AI models) is a fast, easy-to-use and extensibl
 
 FlagData, a data processing toolkit that is easy to use and expand. FlagData integrates the tools and algorithms of multi-step data processing, including cleaning, condensation, annotation and analysis, providing powerful data processing support for model training and deployment in multiple fields, including natural language processing and computer vision. 
 
-### * 【Guanaco & QloRA】
+### Guanaco & QloRA
 - https://mp.weixin.qq.com/s/SGJQHsEJTNB6hiVqdc87sg
 - https://arxiv.org/abs/2305.14314
 - https://github.com/artidoro/qlora
@@ -137,7 +137,7 @@ We provide easily customizable building blocks for training language models incl
 - 基于排序序列（Rank List）训练一个奖励模型（Reward Model）
 - 排序序列（Rank List）标注平台
 
-### * 【SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression】
+### SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression
 - https://github.com/Vahe1994/SpQR
 - https://arxiv.org/pdf/2306.03078.pdf
 - https://mp.weixin.qq.com/s/819L-dY54BaVM1vub9OSpQ
@@ -175,7 +175,7 @@ Training support for 🤗 Hugging Face models is provided by Accelerate-backed t
 
 We show that anyone can take a dated off-the-shelf open source large language model (LLM) and give it magical ChatGPT-like instruction following ability by training it in 30 minutes on one machine, using high-quality training data. Surprisingly, instruction-following does not seem to require the latest or largest models: our model is only 6 billion parameters, compared to 175 billion for GPT-3. We open source the code for our model (Dolly) and show how it can be re-created on Databricks. We believe models like Dolly will help democratize LLMs, transforming them from something very few companies can afford into a commodity every company can own and customize to improve their products.
 
-### * 【Falcon】（可商用）
+### Falcon（可商用）
 - https://mp.weixin.qq.com/s/mKx0ZiTB28khj4U7EVJiVw
 - https://falconllm.tii.ae/
 - https://huggingface.co/tiiuae/falcon-40b
@@ -191,7 +191,7 @@ LLaMA: Open and Efficient Foundation Language Models
 
 We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the research community.
 
-### * 【Goar-7B for Arithmetic Tasks】
+### Goar-7B for Arithmetic Tasks
 - https://mp.weixin.qq.com/s/_haINkHNV4bMszm9F41yXA
 - https://arxiv.org/pdf/2305.14201.pdf
 - https://github.com/liutiedong/goat
@@ -321,7 +321,7 @@ Auto-GPT is an experimental open-source application showcasing the capabilities 
 
 ChatPiXiu项目为OpenNLP计划的第2个正式的开源项目，旨在Open ChatGPT for everyone！在以ChatGPT/GPT4为代表的LLMs时代，在被OpenAI卷死之前，做一点有意义的事情！未来有一天，等到GPT-X发布的时候，或许有人会说NLP不存在了，但是我们想证明有人曾来过！
 
-### * 【Gorilla】
+### Gorilla
 - https://mp.weixin.qq.com/s/p9tx3q3Lpr4fNqdyxWhzyA
 - gorilla.cs.berkeley.edu
 - arxiv.org/abs/2305.15334
@@ -347,7 +347,7 @@ HuggingGPT利用ChatGPT作为控制器，连接HuggingFace社区中的各种AI�
 
 基于上述原因，笔者开发了LLMPruner项目，目前主要包含裁剪后的各种参数规模的Bloom模型。对Bloom进行词表裁剪，保留常用的中英文token，词表由250880将至46145，缩减为原来的18.39%。
 
-### * 【LLM-Pruner: On the Structural Pruning of Large Language Models】
+### LLM-Pruner: On the Structural Pruning of Large Language Models
 - https://github.com/horseee/LLM-Pruner
 - https://arxiv.org/abs/2305.11627
 - https://mp.weixin.qq.com/s/feqFfy4n31eztoZfodMieQ
@@ -369,7 +369,7 @@ The main goal is to run the model using 4-bit quantization on a MacBook
 - 4-bit quantization support
 - Runs on the CPU
 
-### * 【LLM for Recommendation Systems】
+### LLM for Recommendation Systems
 - https://github.com/WLiK/LLM4Rec
 - https://arxiv.org/abs/2305.19860
 - https://mp.weixin.qq.com/s/WCUjCahiak4STbb0QjJInQ
@@ -390,7 +390,7 @@ Everything runs locally with no server support and accelerated with local GPUs o
 - NVIDIA GPUs via CUDA on Windows and Linux;
 - WebGPU on browsers (through companion project WebLLM).
 
-### * 【Multiscale Positive-Unlabeled Detection of AI-Generated Texts】
+### Multiscale Positive-Unlabeled Detection of AI-Generated Texts
 - https://mp.weixin.qq.com/s/KBN8TMwXD1bcE2X_dImXVg
 - https://arxiv.org/abs/2305.18149
 - https://github.com/mindspore-lab/mindone/tree/master/examples/detect_chatgpt
@@ -426,13 +426,27 @@ This project aims to construct open-source, large-scale, high-quality instructio
 
 该团队还即将发布扁鹊模型PienChueh(同为基于医学数据训练的大模型)，欢迎大家届时使用体验。
 
-### * 【华佗】
+### 华佗
 - https://mp.weixin.qq.com/s/lwJb8N420xfMTvXJPM2gtg
 - https://arxiv.org/pdf/2305.15075.pdf
 - https://github.com/FreedomIntelligence/HuatuoGPT
 - https://www.huatuogpt.cn/ 
 
 该论文提出的语言模型训练方法可以结合医生和 ChatGPT 的数据，充分发挥它们的互补作用，既保留真实医疗数据的专业性和准确性，又借助 ChatGPT 的多样性和内容丰富性的特点。
+
+### * 【扁鹊】
+- https://github.com/scutcyr/BianQue
+
+基于主动健康的主动性、预防性、精确性、个性化、共建共享、自律性六大特征，华南理工大学未来技术学院-广东省数字孪生人重点实验室开源了中文领域生活空间主动健康大模型基座ProactiveHealthGPT，包括：
+- 经过千万规模中文健康对话数据指令微调的生活空间健康大模型扁鹊（BianQue）
+- 经过百万规模心理咨询领域中文长文本指令与多轮共情对话数据联合指令微调的心理健康大模型灵心（SoulChat）
+
+我们期望，生活空间主动健康大模型基座ProactiveHealthGPT 可以帮助学术界加速大模型在慢性病、心理咨询等主动健康领域的研究与应用。本项目为 生活空间健康大模型扁鹊（BianQue） 。
+
+### * 【启真医学大模型】
+- https://github.com/CMKRG/QiZhenGPT
+
+本项目利用启真医学知识库构建的中文医学指令数据集，并基于此在Chinese-LLaMA-Plus-7B、CaMA-13B、ChatGLM-6B模型上进行指令精调，大幅提高了模型在中文医疗场景下效果，首先针对药品知识问答发布了评测数据集，后续计划优化疾病、手术、检验等方面的问答效果，并针对医患问答、病历自动生成等应用展开拓展。
 
 ### 中文Alpaca模型Luotuo
 - https://sota.jiqizhixin.com/project/luotuo
@@ -461,13 +475,13 @@ Firefly（流萤） 是一个开源的中文对话式大语言模型，使用指
 
 LLM Zoo is a project that provides data, models, and evaluation benchmark for large language models.
 
-### 复旦MOSS
+### 【复旦】MOSS
 - https://github.com/OpenLMLab/MOSS
 - https://mp.weixin.qq.com/s/LjToZVWjQ-ot5KJFCFtA3g
 
 MOSS是一个支持中英双语和多种插件的开源对话语言模型，moss-moon系列模型具有160亿参数，在FP16精度下可在单张A100/A800或两张3090显卡运行，在INT4/8精度下可在单张3090显卡运行。MOSS基座语言模型在约七千亿中英文以及代码单词上预训练得到，后续经过对话指令微调、插件增强学习和人类偏好训练具备多轮对话能力及使用多种插件的能力。
 
-### * 【轩辕：首个千亿级中文金融对话模型】
+### 【度小满】轩辕-首个千亿级中文金融对话模型
 - https://arxiv.org/pdf/2305.12002.pdf
 - https://huggingface.co/xyz-nlp/XuanYuan2.0
 - https://github.com/Duxiaoman-DI/XuanYuan
@@ -546,7 +560,7 @@ ChatGLM-6B 是一个开源的、支持中英双语的对话语言模型，基于
 
 基于中文医学知识的ChatGLM模型微调，本项目开源了经过中文医学指令精调/指令微调(Instruct-tuning) 的ChatGLM-6B模型。我们通过医学知识图谱和GPT3.5 API构建了中文医学指令数据集，并在此基础上对ChatGLM-6B进行了指令微调，提高了ChatGLM在医疗领域的问答效果。
 
-### * 【CPM-Bee】
+### CPM-Bee
 - https://mp.weixin.qq.com/s/UCW1BT60Lr9x24Rj0cLuxw
 - https://huggingface.co/openbmb/cpm-bee-10b
 - https://github.com/OpenBMB/CPM-Bee
@@ -582,14 +596,14 @@ EVA 是目前最大的开源中文预训练对话模型，拥有28亿参数，�
 - 开箱即用的模型生成效果 demo #
 - 15亿参数 GPT2 中文预训练模型( 30G 语料，训练 22w 步 )
 
-### * 【LaWGPT】
+### LaWGPT
 - https://github.com/pengxiao-song/LaWGPT
 
 LaWGPT 是一系列基于中文法律知识的开源大语言模型。
 
 该系列模型在通用中文基座模型（如 Chinese-LLaMA、ChatGLM 等）的基础上扩充法律领域专有词表、大规模中文法律语料预训练，增强了大模型在法律领域的基础语义理解能力。在此基础上，构造法律领域对话问答数据集、中国司法考试数据集进行指令精调，提升了模型对法律内容的理解和执行能力。
 
-### * 【Lawyer LLaMA】
+### Lawyer LLaMA
 - https://github.com/AndrewZhe/lawyer-llama
 
 Lawyer LLaMA 首先在大规模法律语料上进行了continual pretraining，让它系统的学习中国的法律知识体系。 在此基础上，我们借助ChatGPT收集了一批对中国国家统一法律职业资格考试客观题（以下简称法考）的分析和对法律咨询的回答，利用收集到的数据对模型进行指令微调，让模型习得将法律知识应用到具体场景中的能力。
@@ -599,7 +613,7 @@ Lawyer LLaMA 首先在大规模法律语料上进行了continual pretraining，�
 - 应用于中国法律实务：能够以通俗易懂的语言解释法律概念，并且进行基础的法律咨询，涵盖婚姻、借贷、海商、刑事等法律领域。
 - 为了给中文法律大模型的开放研究添砖加瓦，本项目将开源一系列法律领域的指令微调数据和基于LLaMA训练的中文法律大模型的参数 。
 
-### * 【LexiLaw】
+### LexiLaw
 - https://github.com/CSHaitao/LexiLaw
 
 LexiLaw 是一个经过微调的中文法律大模型，它基于 ChatGLM-6B 架构，通过在法律领域的数据集上进行微调，使其在提供法律咨询和支持方面具备更高的性能和专业性。
@@ -796,61 +810,61 @@ TigerBot 是一个多语言多任务的大规模语言模型(LLM)。根据 OpenA
 ### 越小越好: Q8-Chat，在英特尔至强 CPU 上体验高效的生成式 AI
 - https://mp.weixin.qq.com/s/O55qgGeD5lDKl9tGVmBN3g
 
-### * 开源原驼（Guanaco）及背后的QLoRA技术，将微调65B模型的显存需求从780GB以上降低到48GB以下，效果直逼GPT-4，技术详解
+### 开源原驼（Guanaco）及背后的QLoRA技术，将微调65B模型的显存需求从780GB以上降低到48GB以下，效果直逼GPT-4，技术详解
 - https://zhuanlan.zhihu.com/p/632236718
 
-### * 使用qlora对中文大语言模型进行微调
+### 使用qlora对中文大语言模型进行微调
 - https://github.com/taishan1994/qlora-chinese-LLM
 
-### * 使用LoRA对BELLE发布的BELLE-7B-2M进行微调
+### 使用LoRA对BELLE发布的BELLE-7B-2M进行微调
 - https://zhuanlan.zhihu.com/p/632317500
 
-### * 【LLM系列之Tokenizer】如何科学地训练一个LLM分词器
+### 【LLM系列之Tokenizer】如何科学地训练一个LLM分词器
 - https://mp.weixin.qq.com/s/z6wUY1p8_AVv8YEQ6FRYIA
 
-### * 金融领域大模型效果，低成本，Just-in-Time，场景落地
+### 金融领域大模型效果，低成本，Just-in-Time，场景落地
 - https://mp.weixin.qq.com/s/5Nm1I10eLi0xhNIxqyEOMA
 
-### * 首个大规模使用工具的大模型来了：伯克利发布Gorilla
+### 首个大规模使用工具的大模型来了：伯克利发布Gorilla
 - https://mp.weixin.qq.com/s/p9tx3q3Lpr4fNqdyxWhzyA
 
-### * NBCE：使用朴素贝叶斯扩展LLM的Context处理长度
+### NBCE：使用朴素贝叶斯扩展LLM的Context处理长度
 - https://kexue.fm/archives/9617
 
-### * 关于NBCE方法的一些补充说明和分析
+### 关于NBCE方法的一些补充说明和分析
 - https://kexue.fm/archives/9632
 
-### * 如何使用 Megatron-LM 训练语言模型
+### 如何使用 Megatron-LM 训练语言模型
 - https://mp.weixin.qq.com/s/QPg6gOWGbQDezTl8OFZU3g
 
-### * 谷歌训了28个15亿参数模型，说明数据对大模型训练的影响
+### 谷歌训了28个15亿参数模型，说明数据对大模型训练的影响
 - https://mp.weixin.qq.com/s/l78B9zsPnDo_pRZrPCiQsQ
 
-### * 一个通用的自适应prompt方法，突破了零样本学习的瓶颈
+### 一个通用的自适应prompt方法，突破了零样本学习的瓶颈
 - https://mp.weixin.qq.com/s/icc__WZZqdAd5r3oxm0vgA
 
-### * ChatGPT能解决信息抽取吗？一份关于性能、评估标准、鲁棒性和错误的分析
+### ChatGPT能解决信息抽取吗？一份关于性能、评估标准、鲁棒性和错误的分析
 - https://mp.weixin.qq.com/s/TeFxseHyqZ96aL6eN6X64g
 
 ### * 刘知远团队提出：如何通过扩大高质量指导性对话数据集，来提高模型的性能和效率
 - https://mp.weixin.qq.com/s/dUZHB8OC8l1oxbUX0FBG5Q
 
-### * Large Language Models are not Fair Evaluators
+### Large Language Models are not Fair Evaluators
 - https://mp.weixin.qq.com/s/LmtO2-YiSD2n3ccH1DJAkw
 - https://https://arxiv.org/pdf/2305.17926v1.pdf
 - https://https://github.com/i-Eval/FairEval
 
-### * 驯服大型语言模型（LLMs）的五种方法，及具体方法选择思路
+### 驯服大型语言模型（LLMs）的五种方法，及具体方法选择思路
 - https://mp.weixin.qq.com/s/93xk_x7LBFLOZlmnM96IMw
 
-### * 再看基于LLaMA的最新微调模型变体：CaMA、ExpertLLaMA以及第四个中文法律微调模型LexiLaw
+### 再看基于LLaMA的最新微调模型变体：CaMA、ExpertLLaMA以及第四个中文法律微调模型LexiLaw
 - https://mp.weixin.qq.com/s/CrAkraUCl28Lr1-hAT-RWw
 
-### * 中文大语言模型赶考：商汤与上海AI Lab等新发布「书生·浦语」
+### 中文大语言模型赶考：商汤与上海AI Lab等新发布「书生·浦语」
 - https://github.com/InternLM/InternLM-techreport
 - https://mp.weixin.qq.com/s/lAdXtVfzziTRxz7SKWJauA
 
-### * 将330亿参数大模型「塞进」单个消费级GPU，加速15%、性能不减
+### 将330亿参数大模型「塞进」单个消费级GPU，加速15%、性能不减
 - https://mp.weixin.qq.com/s/819L-dY54BaVM1vub9OSpQ
 
 > 持续更新中 (Continuously Updated)... 
