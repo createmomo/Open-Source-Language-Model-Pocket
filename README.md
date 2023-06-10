@@ -330,6 +330,11 @@ Auto-GPT is an experimental open-source application showcasing the capabilities 
 
 ChatPiXiu项目为OpenNLP计划的第2个正式的开源项目，旨在Open ChatGPT for everyone！在以ChatGPT/GPT4为代表的LLMs时代，在被OpenAI卷死之前，做一点有意义的事情！未来有一天，等到GPT-X发布的时候，或许有人会说NLP不存在了，但是我们想证明有人曾来过！
 
+### * 【天秤（FlagEval）】
+- https://flageval.baai.ac.cn/#/home
+
+大语言评测体系及开放平台：构建“能力-任务-指标”三维评测框架，细粒度刻画模型的认知能力边界。
+
 ### Gorilla
 - https://mp.weixin.qq.com/s/p9tx3q3Lpr4fNqdyxWhzyA
 - gorilla.cs.berkeley.edu
@@ -498,6 +503,11 @@ MOSS是一个支持中英双语和多种插件的开源对话语言模型，moss
 - https://zhuanlan.zhihu.com/p/632780608
 
 轩辕是国内首个开源的千亿级中文对话大模型，同时也是首个针对中文金融领域优化的千亿级开源对话大模型。轩辕在BLOOM-176B的基础上针对中文通用领域和金融领域进行了针对性的预训练与微调，它不仅可以应对通用领域的问题，也可以解答与金融相关的各类问题，为用户提供准确、全面的金融信息和建议。
+
+### * 【悟道·天鹰（Aquila）】
+- https://github.com/FlagAI-Open/FlagAI/tree/master/examples/Aquila
+
+这是首个具备中英双语知识、支持商用许可协议、支持国内数据合规要求的开源语言大模型。悟道·天鹰（Aquila）系列模型包括 Aquila基础模型（7B、33B），AquilaChat对话模型（7B、33B）以及 AquilaCode “文本-代码”生成模型。 
 
 ### BELLE: Bloom-Enhanced Large Language model Engine
 - https://huggingface.co/BelleGroup
