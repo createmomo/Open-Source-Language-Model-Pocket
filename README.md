@@ -7,6 +7,7 @@ Open-Source Language Model Pocket
 - [练习场：穷穷穷孩子如何体验ColossalAI SFT（Kaggle篇）](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)
 - [练习场：穷穷穷孩子如何体验ColossalAI SFT（Colab篇）](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)
 
+
 ## 1 工具箱（训练/推理）
 ### 高效对齐算法RAFT「木筏」
 - https://github.com/OptimalScale/LMFlow
@@ -508,6 +509,17 @@ MOSS是一个支持中英双语和多种插件的开源对话语言模型，moss
 - https://github.com/FlagAI-Open/FlagAI/tree/master/examples/Aquila
 
 这是首个具备中英双语知识、支持商用许可协议、支持国内数据合规要求的开源语言大模型。悟道·天鹰（Aquila）系列模型包括 Aquila基础模型（7B、33B），AquilaChat对话模型（7B、33B）以及 AquilaCode “文本-代码”生成模型。 
+
+### * 【桃李：国际中文教育大模型】
+- https://github.com/blcuicall/taoli
+
+随着ChatGPT引起全社会的关注，及各类大语言模型（Large Language Model）争相亮相，通用领域自然语言处理任务已获得巨大成功，引起了国际中文教育领域的普遍关注。
+
+国际中文教育人士纷纷展开了对大模型的探讨： 大模型是否可以根据学习者的水平，提供合适的语言表达，或根据学习者的问题给出详细的解答，从而在一定程度上辅助甚至充当学习伙伴、语言教师？ 然而，目前通用领域的大模型在垂直领域的效果仍有限。
+
+为解决上述问题，我们全面推出适用于国际中文教育领域的大模型 “桃李”（Taoli）1.0 ，一个在国际中文教育领域数据上进行了额外训练的模型。
+
+我们基于目前国际中文教育领域流通的500余册国际中文教育教材与教辅书、汉语水平考试试题以及汉语学习者词典等，构建了国际中文教育资源库。 我们设置了多种形式的指令来充分利用知识，构造了共计 88000 条的高质量国际中文教育问答数据集，并利用收集到的数据对模型进行指令微调，让模型习得将法律知识应用到具体场景中的能力。
 
 ### BELLE: Bloom-Enhanced Large Language model Engine
 - https://huggingface.co/BelleGroup
