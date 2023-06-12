@@ -6,7 +6,8 @@ Open-Source Language Model Pocket
 相关文章：
 - [练习场：穷穷穷孩子如何体验ColossalAI SFT（Kaggle篇）](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)
 - [练习场：穷穷穷孩子如何体验ColossalAI SFT（Colab篇）](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)
-
+- [通俗理解文本生成的常用解码策略](https://mp.weixin.qq.com/s/sVZuEkYXQ9ZZYXJCQz7F4A)
+- [千“垂”百炼：垂直领域与语言模型（1）](https://mp.weixin.qq.com/s/G24skuUbyrSatxWczVxEAg)
 
 ## 1 工具箱（训练/推理）
 ### 高效对齐算法RAFT「木筏」
@@ -177,6 +178,13 @@ Training support for 🤗 Hugging Face models is provided by Accelerate-backed t
 - https://huggingface.co/cerebras
 
 开源7个可商用GPT模型，含数据集和可直接下载的预训练模型权重: Cerebras 开源 7 个 GPT 模型，均可商用，参数量分别达到 1.11 亿、2.56 亿、5.9 亿、13 亿、27 亿、67 亿和 130 亿。其中最大的模型参数量达到 130 亿，与 Meta 最近开源的 LLaMA-13B 相当。该项目开源数据集和预训练模型权重，其中预训练模型权重文件大小近50G可直接下载，并且可用于商业和研究用途。与此前的 GPT-3 模型相比，Cerebras 开源的模型具有更高的可用性和透明度，研究人员和开发者可以使用少量数据对其进行微调，构建出高质量的自然语言处理应用。
+
+### * 【ChatDoctor】
+- https://github.com/Kent0n-Li/ChatDoctor
+- https://arxiv.org/abs/2303.14070
+
+Recent large language models (LLMs) in the general domain, such as ChatGPT, have shown remarkable success in following instructions and producing human-like responses. However, such language models have yet to be adapted for the medical domain, resulting in poor accuracy of responses and an inability to provide sound advice on medical diagnoses, medications, etc. To address this problem, we fine-tuned our ChatDoctor model based on 100k real-world patient-physician conversations from an online medical consultation site. Besides, we add autonomous knowledge retrieval capabilities to our ChatDoctor, for example, Wikipedia or a disease database as a knowledge brain. By fine-tuning the LLMs using these 100k patient-physician conversations, our model showed significant improvements in understanding patients' needs and providing informed advice. The autonomous ChatDoctor model based on Wikipedia and Database Brain can access real-time and authoritative information and answer patient questions based on this information, significantly improving the accuracy of the model's responses, which shows extraordinary potential for the medical field with a low tolerance for error.
+
 
 ### Dolly 1&2（可商用）
 - https://github.com/databrickslabs/dolly
@@ -457,6 +465,15 @@ This project aims to construct open-source, large-scale, high-quality instructio
 - 经过百万规模心理咨询领域中文长文本指令与多轮共情对话数据联合指令微调的心理健康大模型灵心（SoulChat）
 
 我们期望，生活空间主动健康大模型基座ProactiveHealthGPT 可以帮助学术界加速大模型在慢性病、心理咨询等主动健康领域的研究与应用。本项目为 生活空间健康大模型扁鹊（BianQue） 。
+
+### * 【灵心（SoulChat）】
+- https://github.com/scutcyr/SoulChat
+
+我们调研了当前常见的心理咨询平台，发现，用户寻求在线心理帮助时，通常需要进行较长篇幅地进行自我描述，然后提供帮助的心理咨询师同样地提供长篇幅的回复，缺失了一个渐进式的倾诉过程。但是，在实际的心理咨询过程当中，用户和心理咨询师之间会存在多轮次的沟通过程，在该过程当中，心理咨询师会引导用户进行倾诉，并且提供共情，例如：“非常棒”、“我理解你的感受”、“当然可以”等等。
+
+考虑到当前十分欠缺多轮共情对话数据集，我们一方面，构建了超过15万规模的 单轮长文本心理咨询指令与答案（SoulChatCorpus-single_turn） ，回答数量超过50万（指令数是当前的常见的心理咨询数据集 PsyQA 的6.7倍），并利用ChatGPT与GPT4，生成总共约100万轮次的 多轮回答数据（SoulChatCorpus-multi_turn） 。特别地，我们在预实验中发现，纯单轮长本文驱动的心理咨询模型会产生让用户感到厌烦的文本长度，而且不具备引导用户倾诉的能力，纯多轮心理咨询对话数据驱动的心理咨询模型则弱化了模型的建议能力，因此，我们混合SoulChatCorpus-single_turn和SoulChatCorpus-multi_turn构造成超过120万个样本的 单轮与多轮混合的共情对话数据集SoulChatCorpus 。所有数据采用“用户：xxx\n心理咨询师：xxx\n用户：xxx\n心理咨询师：”的形式统一为一种指令格式。
+
+我们选择了 ChatGLM-6B 作为初始化模型，进行了全量参数的指令微调，旨在提升模型的共情能力、引导用户倾诉能力以及提供合理建议的能力。更多训练细节请留意我们后续发布的论文。
 
 ### * 【启真医学大模型】
 - https://github.com/CMKRG/QiZhenGPT
