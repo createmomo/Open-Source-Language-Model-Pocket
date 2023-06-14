@@ -58,6 +58,15 @@ This is the repo for the Chinese-Guanaco project, which aims to build and share 
 
 Chinese-Guanaco uses bitsandbytes for quantization and is integrated with Huggingface's PEFT and transformers libraries.
 
+### * 【DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality】
+- https://github.com/misonsky/DialogADV
+- https://mp.weixin.qq.com/s/Ga0a6a1L6CmCXgk6WDz0Xg
+- https://arxiv.org/abs/2305.14658
+
+我们构建了两个具有挑战的元验证对话数据集，通过实验分析表明
+
+大型语言模型作为评估器评估对话文本生成质量仍然存在很多问题：1）LLMs无法识别与事实不一致的、虚构的回复，对不合理的回复仍然给出较高的评价；2） LLMs自身的知识有限，对于依赖知识的样例大语言模型无法依靠自身的知识给出合理的判断；3）LLMs利用外部知识的能力有待提高。在给定外部知识的情况下，LLMs仍然会对不合理的回复给出较高的评价。
+
 ### DeepSpeed-Chat
 - https://mp.weixin.qq.com/s/t3HA4Hu61LLDC3h2Njmo_Q
 - https://github.com/microsoft/DeepSpeed
@@ -110,6 +119,13 @@ HugNLP还集成了大量最新的Prompt技术，例如Prompt-Tuning、In-Context
 HugAILab团队还研发了一系列的应用，例如CLUE&GLUE刷榜工具，可支持ChatGPT类模型训练和部署产品HugChat，以及统一信息抽取产品HugIE等。
 
 HugNLP是一个分层式框架，遵循“高内聚低耦合”的开发模式，其核心包括模型层（Models）、处理器层（Processors）、评估器层（Evaluators）和应用层（Applications）四部分。
+
+### * 【INSTRUCTEVAL】
+- https://mp.weixin.qq.com/s/E6hq0AUy_hItA5HGo2tCAQ
+- https://github.com/declare-lab/instruct-eval
+- https://arxiv.org/abs/2306.04757
+
+本文引入了一个名为INSTRUCTEVAL的新型评估套件。该套件专用于对指令调优大型语言模型的全面评估，相比之前对LLMs的评估方法，该评估策略不仅详细评估了模型解决问题的能力、文字写作能力，而且还严格评估了模型与人类价值的对齐能力。
 
 ### * 【MeZO: Fine-Tuning Language Models with Just Forward Passes】
 - https://github.com/princeton-nlp/MeZO
@@ -208,6 +224,13 @@ The model uses only 75 percent of GPT-3’s training compute, 40 percent of Chin
 LLaMA: Open and Efficient Foundation Language Models
 
 We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the research community.
+
+### * 【GALACTICA】
+- https://github.com/paperswithcode/galai
+- https://arxiv.org/pdf/2211.09085.pdf
+- https://galactica.org/
+
+GALACTICA is a general-purpose scientific language model. It is trained on a large corpus of scientific text and data. It can perform scientific NLP tasks at a high level, as well as tasks such as citation prediction, mathematical reasoning, molecular property prediction and protein annotation. More information is available at galactica.org.
 
 ### Goar-7B for Arithmetic Tasks
 - https://mp.weixin.qq.com/s/_haINkHNV4bMszm9F41yXA
@@ -914,6 +937,22 @@ TigerBot 是一个多语言多任务的大规模语言模型(LLM)。根据 OpenA
 
 ### 将330亿参数大模型「塞进」单个消费级GPU，加速15%、性能不减
 - https://mp.weixin.qq.com/s/819L-dY54BaVM1vub9OSpQ
+
+### * 也看OpenAI-embedding的平替方案：从text2vec、SGPT生成式emebdding到M3E近期新秀
+- https://mp.weixin.qq.com/s/OoRYddUXBGWMhPSQYIFs-g
+
+### * Large Language Models Encode Clinical Knowledge
+- http://arxiv.org/abs/2212.13138
+
+### * Towards Expert-Level Medical Question Answering with Large Language Models
+- https://mp.weixin.qq.com/s/zVqcw-tZmP4pQmPd5dwfiA
+- https://arxiv.org/abs/2305.09617
+
+### * Are Large Language Models Ready for Healthcare? A Comparative Study on Clinical Language Understanding
+- http://arxiv.org/abs/2304.05368
+
+### * CAN LARGE LANGUAGE MODELS REASON ABOUT MEDICAL QUESTIONS?
+- http://arxiv.org/abs/2207.08143
 
 > 持续更新中 (Continuously Updated)... 
 
