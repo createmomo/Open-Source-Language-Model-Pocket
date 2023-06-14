@@ -718,6 +718,21 @@ Linly-ChatFlow-int4 ：ChatFlow 4-bit量化版本，用于在CPU上部署模型�
 进行中的项目：
 Linly-Chinese-BLOOM：基于BLOOM中文增量训练的中文基础模型，包含7B和175B模型量级，可用于商业场景。
 
+### * 【MedicalGPT】
+- https://github.com/shibing624/MedicalGPT
+
+MedicalGPT 训练医疗大模型，实现包括二次预训练、有监督微调、奖励建模、强化学习训练。
+
+基于ChatGPT Training Pipeline，本项目实现了领域模型--医疗模型的四阶段训练：
+
+第一阶段：PT(Continue PreTraining)增量预训练，在海量领域文档数据上二次预训练GPT模型，以注入领域知识
+
+第二阶段：SFT(Supervised Fine-tuning)有监督微调，构造指令微调数据集，在预训练模型基础上做指令精调，以对齐指令意图
+
+第三阶段：RM(Reward Model)奖励模型建模，构造人类偏好排序数据集，训练奖励模型，用来对齐人类偏好，主要是"HHH"原则，具体是"helpful, honest, harmless"
+
+第四阶段：RL(Reinforcement Learning)基于人类反馈的强化学习(RLHF)，用奖励模型来训练SFT模型，生成模型使用奖励或惩罚来更新其策略，以便生成更高质量、更符合人类偏好的文本
+
 ### MedicalGPT-zh
 - github.com/MediaBrain-SJTU/MedicalGPT-zh
 
