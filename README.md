@@ -353,6 +353,13 @@ Alpaca-CoT项目旨在探究如何更好地通过instruction-tuning的方式来�
 
 Auto-GPT is an experimental open-source application showcasing the capabilities of the GPT-4 language model. This program, driven by GPT-4, chains together LLM "thoughts", to autonomously achieve whatever goal you set. As one of the first examples of GPT-4 running fully autonomously, Auto-GPT pushes the boundaries of what is possible with AI.
 
+### * 【C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models】
+- https://arxiv.org/abs/2305.08322
+- https://cevalbenchmark.com/
+- https://github.com/SJTU-LIT/ceval
+
+C-Eval is a comprehensive Chinese evaluation suite for foundation models. It consists of 13948 multi-choice questions spanning 52 diverse disciplines and four difficulty levels.
+
 ### ChatPiXiu
 - https://github.com/catqaq/ChatPiXiu
 
@@ -471,6 +478,16 @@ This project aims to construct open-source, large-scale, high-quality instructio
 在生物医学领域，LLM模型（如LLaMa，ChatGLM）因为缺乏一定的医学专业知识语料而表现不佳。该项目通过医学知识图谱和GPT3.5API构建了中文医学指令数据集，并对LLaMa模型进行了指令微调得到了一个针对医学领域的智能问诊模型HuaTuo，相比于未经过医学数据指令微调的原LLaMa而言，HuaTuo模型在智能问诊层面表现出色，可生成一些更为可靠的医学知识回答；与此同时，基于相同医学数据，该项目还训练了医疗版本的ChatGLM模型: ChatGLM-6B-Med，
 
 该团队还即将发布扁鹊模型PienChueh(同为基于医学数据训练的大模型)，欢迎大家届时使用体验。
+
+### * 【百川 Baichuan-7B】
+- https://github.com/baichuan-inc/baichuan-7B
+- https://huggingface.co/baichuan-inc/baichuan-7B
+
+baichuan-7B 是由百川智能开发的一个开源可商用的大规模预训练语言模型。基于 Transformer 结构，在大约1.2万亿 tokens 上训练的70亿参数模型，支持中英双语，上下文窗口长度为4096。在标准的中文和英文权威 benchmark（C-EVAL/MMLU）上均取得同尺寸最好的效果。
+
+原始数据包括开源的中英文数据和自行抓取的中文互联网数据，以及部分高质量知识性数据。
+
+参考相关数据工作，频率和质量是数据处理环节重点考虑的两个维度。 我们基于启发式规则和质量模型打分，对原始数据集进行篇章和句子粒度的过滤。在全量数据上，利用局部敏感哈希方法，对篇章和句子粒度做滤重。
 
 ### 华佗
 - https://mp.weixin.qq.com/s/lwJb8N420xfMTvXJPM2gtg
