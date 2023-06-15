@@ -738,6 +738,13 @@ MedicalGPT 训练医疗大模型，实现包括二次预训练、有监督微调
 
 该开源了基于ChatGLM-6B LoRA 16-bit指令微调的中文医疗通用模型。基于共计28科室的中文医疗共识与临床指南文本，我们生成医疗知识覆盖面更全，回答内容更加精准的高质量指令数据集。
 
+### * 【OpenKG-KnowLLM】
+- https://github.com/zjunlp/KnowLLM
+
+Knowledgable Large Language Model Series.
+
+With the rapid development of deep learning technology, large language models such as ChatGPT have achieved significant success in the field of natural language processing. However, these large models still face some challenges and issues in learning and understanding knowledge, including the difficulty of knowledge updating, and issues with potential errors and biases within the model, known as knowledge fallacies. The Deep Model series aims to release a series of open-source large models to mitigate these knowledge fallacy issues. The first phase of this project released a knowledge extraction large model based on LLaMA, named Zhishi. To provide Chinese capabilities without disrupting the original model's distribution, we firstly (1) use Chinese corpora for the full-scale pre-training of LLaMA (13B), in order to improve the model's understanding of Chinese and knowledge reserve as much as possible while retaining its original English and code capabilities; Then (2) we fine-tune the model from the first step using an instruction dataset, to enhance the language model's understanding of human extraction instructions.
+
 ### PromptCLUE
 - https://github.com/clue-ai/PromptCLUE
 
