@@ -810,6 +810,15 @@ TigerBot 是一个多语言多任务的大规模语言模型(LLM)。根据 OpenA
 
 我们分别开源了13B和65B的YuLan-Chat模型文件及相关代码，并采用量化技术使其分别可以在单张RTX3090-24G和A800-80G显卡上部署。YuLan-Chat模型基于LLaMA底座模型，采用精心优化的高质量中英文混合指令进行微调，其中YuLan-Chat-65B模型目前能够在中英文相关评测数据集上显著超越已有开源模型效果。后续我们会继续优化指令微调方法与底座模型，持续更新YuLan-Chat模型。
 
+### * 【Ziya-LLaMA】
+- https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1
+- https://github.com/IDEA-CCNL/Fengshenbang-LM
+- https://mp.weixin.qq.com/s/IeXgq8blGoeVbpIlAUCAjA
+
+姜子牙通用大模型V1是基于LLaMa的130亿参数的大规模预训练模型，具备翻译，编程，文本分类，信息抽取，摘要，文案生成，常识问答和数学计算等能力。目前姜子牙通用大模型已完成大规模预训练、多任务有监督微调和人类反馈学习三阶段的训练过程。
+
+The Ziya-LLaMA-13B-v1 is a large-scale pre-trained model based on LLaMA with 13 billion parameters. It has the ability to perform tasks such as translation, programming, text classification, information extraction, summarization, copywriting, common sense Q&A, and mathematical calculation. The Ziya-LLaMA-13B-v1 has undergone three stages of training: large-scale continual pre-training (PT), multi-task supervised fine-tuning (SFT), and human feedback learning (RM, PPO).
+
 ## 5 其他小伙伴的资料
 ### 总结开源可用的Instruct/Prompt Tuning数据
 - https://zhuanlan.zhihu.com/p/615277009
