@@ -7,7 +7,8 @@ Open-Source Language Model Pocket
 - [练习场：穷穷穷孩子如何体验ColossalAI SFT（Kaggle篇）](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)
 - [练习场：穷穷穷孩子如何体验ColossalAI SFT（Colab篇）](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)
 - [通俗理解文本生成的常用解码策略](https://mp.weixin.qq.com/s/sVZuEkYXQ9ZZYXJCQz7F4A)
-- [千“垂”百炼：垂直领域与语言模型（1）](https://mp.weixin.qq.com/s/G24skuUbyrSatxWczVxEAg)
+- [千“垂”百炼：垂直领域与语言模型（1）导语](https://mp.weixin.qq.com/s/G24skuUbyrSatxWczVxEAg)
+- [千“垂”百炼：垂直领域与语言模型（2）【医疗/健康】 ChatDoctor（上）](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg)([解读](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg)，[PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf))
 
 ## 1 工具箱（训练/推理）
 ### 高效对齐算法RAFT「木筏」
