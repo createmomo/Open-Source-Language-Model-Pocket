@@ -310,6 +310,12 @@ Open Assistant is a project meant to give everyone access to a great chat based 
 
 We believe that by doing this we will create a revolution in innovation in language. In the same way that stable-diffusion helped the world make art and images in new ways we hope Open Assistant can help improve the world by improving language itself.
 
+### * 【RedPajama】（可商用）
+- https://www.together.xyz/blog/redpajama
+- https://github.com/togethercomputer/RedPajama-Data
+
+RedPajama, a project to create leading open-source models, starts by reproducing LLaMA training dataset of over 1.2 trillion tokens.
+
 ### StableLM
 - https://zhuanlan.zhihu.com/p/623542189
 - https://github.com/Stability-AI/StableLM
