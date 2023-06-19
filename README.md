@@ -594,6 +594,17 @@ MOSS是一个支持中英双语和多种插件的开源对话语言模型，moss
 
 我们基于目前国际中文教育领域流通的500余册国际中文教育教材与教辅书、汉语水平考试试题以及汉语学习者词典等，构建了国际中文教育资源库。 我们设置了多种形式的指令来充分利用知识，构造了共计 88000 条的高质量国际中文教育问答数据集，并利用收集到的数据对模型进行指令微调，让模型习得将法律知识应用到具体场景中的能力。
 
+### * 【Anima：基于QLoRA的33B中文大语言模型】
+- https://github.com/lyogavin/Anima
+
+AI Community从来都是非常开放的，AI发展到今天，离不开很多以前的重要开源工作，开放共享的Paper，或者的开源数据和代码。我们相信AI的未来也一定是开放的。希望能为开源社区做一些贡献。
+
+为什么33B模型很重要？QLoRA是个Game Changer？
+
+之前大部分开源可finetune的模型大都是比较小的模型7B或者13B，虽然可以在一些简单的chatbot评测集上，通过finetune训练有不错的表现。但是由于这些模型规模还是有限，LLM核心的reasoning的能力还是相对比较弱。这就是为什么很多这种小规模的模型在实际应用的场景表现像是个玩具。如这个工作中的论述：chatbot评测集比较简单，真正比较考验模型能力的复杂逻辑推理及数学问题上小模型和大模型差距还是很明显的。
+
+因此我们认为QLoRA 的工作很重要，重要到可能是个Game Changer。通过QLoRA的优化方法，第一次让33B规模的模型可以比较民主化的，比较低成本的finetune训练，并且普及使用。我们认为33B模型既可以发挥大规模模型的比较强的reasoning能力，又可以针对私有业务领域数据进行灵活的finetune训练提升对于LLM的控制力。
+
 ### BELLE: Bloom-Enhanced Large Language model Engine
 - https://huggingface.co/BelleGroup
 - https://github.com/LianjiaTech/BELLE
