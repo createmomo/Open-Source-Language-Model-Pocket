@@ -664,6 +664,12 @@ AI Community从来都是非常开放的，AI发展到今天，离不开很多以
 
 因此我们认为QLoRA 的工作很重要，重要到可能是个Game Changer。通过QLoRA的优化方法，第一次让33B规模的模型可以比较民主化的，比较低成本的finetune训练，并且普及使用。我们认为33B模型既可以发挥大规模模型的比较强的reasoning能力，又可以针对私有业务领域数据进行灵活的finetune训练提升对于LLM的控制力。
 
+### * 【BayLing: Bridging Cross-lingual Alignment and Instruction Following through Interactive Translation for Large Language Models】
+- https://github.com/ictnlp/BayLing
+- https://arxiv.org/abs/2306.10968
+
+BayLing (百聆, bǎi líng) is an instruction-following large language model equipped with advanced language alignment, showing superior capability in English/Chinese generation, instruction following and multi-turn interaction. BayLing can be effortlessly deployed on a consumer-grade GPU with 16GB of memory, and assists users with tasks such as translation, writing, creation, suggestion...
+
 ### * 【BBT-FinCUGE-Applications】
 - https://github.com/ssymmetry/BBT-FinCUGE-Applications
 - https://arxiv.org/abs/2302.09432
@@ -867,6 +873,13 @@ Linly-ChatFlow-int4 ：ChatFlow 4-bit量化版本，用于在CPU上部署模型�
 
 进行中的项目：
 Linly-Chinese-BLOOM：基于BLOOM中文增量训练的中文基础模型，包含7B和175B模型量级，可用于商业场景。
+
+### * 【MeChat (Mental Health Support Chatbot)】
+- https://github.com/qiuhuachuan/smile
+- https://huggingface.co/qiuhuachuan/MeChat
+- https://mechat.fly.dev/
+
+我们的愿景是为让所有人在遇到心理健康问题时能够获得及时、有效的倾听和支持。我们相信，心理健康是每个人的权利，而不是奢侈品。我们的使命是为人们提供平等、全面、易于访问的心理健康服务，无论他们身在何处、面临何种挑战。我们的愿景还包括推动社会对心理健康问题的认识和理解，打破心理健康问题带来的污名和歧视，为创建一个更加健康、包容和平等的社会做出贡献。项目海报取自 flaticon 。
 
 ### * 【MedicalGPT】
 - https://github.com/shibing624/MedicalGPT
