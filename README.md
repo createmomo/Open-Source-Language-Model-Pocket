@@ -924,6 +924,19 @@ PromptCLUE：大规模多任务Prompt预训练中文开源模型。
 
 SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊天、问答、中英互译等不同的任务。 应用这个模型，除了可以实现基本的聊天、对话、你问我答外，还能支持中英文互译、内容续写、对对联、写古诗、生成菜谱、第三人称转述、创建采访问题等多种功能。
 
+### * 【TechGPT】
+- https://mp.weixin.qq.com/s/nF1He7jhAHfh7PzhjqHoZg
+- https://huggingface.co/neukg/TechGPT-7B
+- https://github.com/neukg/TechGPT
+
+2023年6月26日，“东北大学知识图谱研究组”正式发布大语言模型TechGPT。
+
+TechGPT的名字主要来源于小组在2018年推出的TechKG大规模中文学术多领域的知识库。
+
+与当前其他各类大模型相比，TechGPT主要强化了以“知识图谱构建”为核心的关系三元组抽取等各类信息抽取任务、以“逻辑推理”为核心的机器阅读理解等各类智能问答任务、以“文本理解”为核心的关键词生成等各类序列生成任务。
+
+在这三大自然语言处理核心能力之内，TechGPT还具备了对计算机科学、材料、机械、冶金、金融和航空航天等十余种垂直专业领域自然语言文本的处理能力。
+
 ### * 【TigerBot】
 - https://github.com/TigerResearch/TigerBot
 
