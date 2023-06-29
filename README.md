@@ -15,6 +15,30 @@ Open-Source Language Model Pocket
 
 ## 1 中文开源模型（Chinese Open Source Language Models）
 
+
+|                   |                              |                            |
+|-------------------|------------------------------|----------------------------|
+| 本草              | Anima                        | EVA                        |
+| 百川              | BayLing                      | GPT2 for Multiple Language |
+| 华佗              | BBT-FinCUGE-Aapplications    | LaWGPT                     |
+| 扁鹊              | BELLE                        | Lawyer LLaMA               |
+| 灵心              | Bloom                        | LexiLaw                    |
+| 启真              | BiLLa                        | LawGPT_zh                  |
+| 中文Alpaca Luotuo | BLOOMChat176B                | Linly伶荔说                |
+| 中文LLaMA&Alpaca  | Chinese-Vicuna-medical       | MeChat                     |
+| 流萤Firefly       | Cornucopia-LLaMA-Fin-Chinese | MedicalGPT                 |
+| 凤凰              | chatglm-maths                | MedicalGPT-zh              |
+| 复旦MOSS          | ChatRWKV                     | OpenKG-KnowLLM             |
+| 轩辕              | ChatYuan                     | PromptCLUE                 |
+| 悟道·天鹰Aquila   | ChatGLM-6B                   | SkyText-Chinese-GPT3       |
+| 桃李              | ChatGLM2-6B                  | TechGPT                    |
+|                   | Chinese-Transformer-XL       | TigerBot                   |
+|                   | ChatMed-TCM&ChatMed-Consult  | YuLan-Chat                 |
+|                   | ChatGLM-Med                  | Ziya-LLaMA                 |
+|                   | CPM-Bee                      |                            |
+|                   | DoctorGLM                    |                            |
+
+
 ### 本草
 - https://zhuanlan.zhihu.com/p/626536996
 - https://github.com/scir-hi/huatuo-llama-med-chinese
