@@ -16,28 +16,27 @@ Open-Source Language Model Pocket
 ## 1 中文开源模型（Chinese Open Source Language Models）
 
 
-|                   |                              |                            |
-|-------------------|------------------------------|----------------------------|
-| 本草              | Anima                        | EVA                        |
-| 百川              | BayLing                      | GPT2 for Multiple Language |
-| 华佗              | BBT-FinCUGE-Aapplications    | LaWGPT                     |
-| 扁鹊              | BELLE                        | Lawyer LLaMA               |
-| 灵心              | Bloom                        | LexiLaw                    |
-| 启真              | BiLLa                        | LawGPT_zh                  |
-| 中文Alpaca Luotuo | BLOOMChat176B                | Linly伶荔说                |
-| 中文LLaMA&Alpaca  | Chinese-Vicuna-medical       | MeChat                     |
-| 流萤Firefly       | Cornucopia-LLaMA-Fin-Chinese | MedicalGPT                 |
-| 凤凰              | chatglm-maths                | MedicalGPT-zh              |
-| 复旦MOSS          | ChatRWKV                     | OpenKG-KnowLLM             |
-| 轩辕              | ChatYuan                     | PromptCLUE                 |
-| 悟道·天鹰Aquila   | ChatGLM-6B                   | SkyText-Chinese-GPT3       |
-| 桃李              | ChatGLM2-6B                  | TechGPT                    |
-|                   | Chinese-Transformer-XL       | TigerBot                   |
-|                   | ChatMed-TCM&ChatMed-Consult  | YuLan-Chat                 |
-|                   | ChatGLM-Med                  | Ziya-LLaMA                 |
-|                   | CPM-Bee                      |                            |
-|                   | DoctorGLM                    |                            |
-
+|  |  |  |
+|---|---|---|
+| 本草 | Anima | EVA |
+| 百川 | BayLing | GPT2 for Multiple Language |
+| 华佗 | BBT-FinCUGE-Aapplications | LaWGPT |
+| 扁鹊 | BELLE | Lawyer LLaMA |
+| 灵心 | Bloom | LexiLaw |
+| 启真 | BiLLa | LawGPT_zh |
+| 中文Alpaca Luotuo | BLOOMChat176B | Linly伶荔说 |
+| 中文LLaMA&Alpaca | Chinese-Vicuna-medical | MeChat |
+| 流萤Firefly | Cornucopia-LLaMA-Fin-Chinese | MedicalGPT |
+| 凤凰 | chatglm-maths | MedicalGPT-zh |
+| 复旦MOSS | ChatRWKV | OpenKG-KnowLLM |
+| 轩辕 | ChatYuan | OpenMEDLab 浦医 |
+| 悟道·天鹰Aquila | ChatGLM-6B | PromptCLUE |
+| 桃李 | ChatGLM2-6B | SkyText-Chinese-GPT3 |
+|  | Chinese-Transformer-XL | TechGPT |
+|  | ChatMed-TCM&ChatMed-Consult | TigerBot |
+|  | ChatGLM-Med | YuLan-Chat |
+|  | CPM-Bee | Ziya-LLaMA |
+|  | DoctorGLM |  |
 
 ### 本草
 - https://zhuanlan.zhihu.com/p/626536996
@@ -402,6 +401,18 @@ MedicalGPT 训练医疗大模型，实现包括二次预训练、有监督微调
 Knowledgable Large Language Model Series.
 
 With the rapid development of deep learning technology, large language models such as ChatGPT have achieved significant success in the field of natural language processing. However, these large models still face some challenges and issues in learning and understanding knowledge, including the difficulty of knowledge updating, and issues with potential errors and biases within the model, known as knowledge fallacies. The Deep Model series aims to release a series of open-source large models to mitigate these knowledge fallacy issues. The first phase of this project released a knowledge extraction large model based on LLaMA, named Zhishi. To provide Chinese capabilities without disrupting the original model's distribution, we firstly (1) use Chinese corpora for the full-scale pre-training of LLaMA (13B), in order to improve the model's understanding of Chinese and knowledge reserve as much as possible while retaining its original English and code capabilities; Then (2) we fine-tune the model from the first step using an instruction dataset, to enhance the language model's understanding of human extraction instructions.
+
+### * 【OpenMEDLab 浦医】
+- https://github.com/OpenMEDLab
+- https://github.com/openmedlab/PULSE
+- https://stcsm.sh.gov.cn/xwzx/kjzl/20230630/c783c30d8e62494e83073535f841675f.html
+
+OpenMEDLab is an open-source platform to share medical foundation models in multi-modalities, e.g., medical imaging, medical NLP, bioinformatics, protein, etc. It targets promoting novel approaches to long-tail problems in medicine, and meanwhile, it seeks solutions to achieve lower cost, higher efficiency, and better generalizability in training medical AI models. The new learning paradigm of adapting foundation models to downstream applications makes it possible to develop innovative solutions for cross-domain and cross-modality diagnostic tasks efficiently. OpenMEDLab is distinguished by several features:
+- World's first open-source platform for medical foundation models.
+- 10+ medical data modalities targeting a variety of clinical and research problems.
+- Pioneering works of the new learning paradigm using foundation models, including pre-trained models, code, and data.
+- Releasing multiple sets of medical data for pre-training and downstream applications.
+- Collaboration with top medical institutes and facilities.
 
 ### PromptCLUE
 - https://github.com/clue-ai/PromptCLUE
