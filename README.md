@@ -656,6 +656,13 @@ Seamlessly integrate powerful language models like ChatGPT into scikit-learn for
 
 With trl you can train transformer language models with Proximal Policy Optimization (PPO). The library is built on top of the transformers library by 🤗 Hugging Face. Therefore, pre-trained language models can be directly loaded via transformers. At this point most of decoder architectures and encoder-decoder architectures are supported.
 
+### * 【Train_Transformers_with_INT4】
+- https://mp.weixin.qq.com/s/pyEJJ5AvQqfyncO7CA8eNA
+- https://arxiv.org/abs/2306.11987
+- https://github.com/xijiu9/Train_Transformers_with_INT4
+
+Quantizing the activation, weight, and gradient to 4-bit is promising to accelerate neural network training. However, existing 4-bit training methods require custom numerical formats which are not supported by contemporary hardware. In this work, we propose a training method for transformers with all matrix multiplications implemented with the INT4 arithmetic. Training with an ultra-low INT4 precision is challenging. To achieve this, we carefully analyze the specific structures of activation and gradients in transformers to propose dedicated quantizers for them. For forward propagation, we identify the challenge of outliers and propose a Hadamard quantizer to suppress the outliers. For backpropagation, we leverage the structural sparsity of gradients by proposing bit splitting and leverage score sampling techniques to quantize gradients accurately. Our algorithm achieves competitive accuracy on a wide range of tasks including natural language understanding, machine translation, and image classification. Unlike previous 4-bit training methods, our algorithm can be implemented on the current generation of GPUs. Our prototypical linear operator implementation is up to 2.2 times faster than the FP16 counterparts and speeds up the training by up to 35.1%.
+
 ### Transformer Reinforcement Learning X
 - https://github.com/CarperAI/trlx
 
@@ -681,7 +688,7 @@ vLLM is flexible and easy to use with:
 - Streaming outputs
 - OpenAI-compatible API server
 
-## 3 工具箱（可参考的国外开源模型）
+## 3 工具箱（可参考的其他开源模型）
 ### Cerebras（可商用）
 - https://www.cerebras.net/blog/cerebras-gpt-a-family-of-open-compute-efficient-large-language-models/
 - https://huggingface.co/cerebras
@@ -851,6 +858,13 @@ Alpaca: A Strong, Replicable Instruction-Following ModelAl
 
 We introduce Alpaca 7B, a model fine-tuned from the LLaMA 7B model on 52K instruction-following demonstrations. On our preliminary evaluation of single-turn instruction following, Alpaca behaves qualitatively similarly to OpenAI’s text-davinci-003, while being surprisingly small and easy/cheap to reproduce (<600$).
 
+### * 【UltraLM-13B】
+- https://github.com/thunlp/UltraChat
+
+UltraLM is a series of chat language models trained on UltraChat. Currently, we have released the 13B version, which ranks #1 among open-source models and ranks #4 among all models on AlpacaEval Leaderboard. UltraLM-13B is based upon LLaMA-13B.
+
+This project aims to construct open-source, large-scale, and multi-round dialogue data powered by Turbo APIs to facilitate the construction of powerful language models with general conversational capability. In consideration of factors such as safeguarding privacy, we do not directly use any data available on the Internet as prompts. To ensure generation quality, two separate ChatGPT Turbo APIs are adopted in generation, where one plays the role of the user to generate queries and the other generates the response. We instruct the user model with carefully designed prompts to mimic human user behavior and call the two APIs iteratively. The generated dialogues undergo further post-processing and filtering.
+
 ### Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality
 - https://chat.lmsys.org/
 - https://vicuna.lmsys.org/
@@ -867,6 +881,16 @@ An open platform for training, serving, and evaluating large language model base
 This is the repository for RRHF (Rank Response to align Human Feedback) and open-sourced language models Wombat. RRHF helps align large language models with human perference easier.
 
 Reinforcement Learning from Human Feedback (RLHF) enables the alignment of large language models with human preference, improving the quality of interactions between humans and language models. Recent practice of RLHF uses PPO to enable the large language model optimization of such alignment. However, implementing PPO is non-trivial (where the training procedure requires interactive between policy, behavior policy, reward, value model) and it is also tedious to tuning many hyper-parameters. Our motivation is to simplify the alignment between language models with human preference, and our proposed paradigm RRHF (Rank Response from Human Feedback) can achieve such alignment as easily as conventional fine-tuning. It is simpler than PPO from the aspects of coding, model counts, and hyperparameters.
+
+### * 【XGen-7B】
+- https://blog.salesforceairesearch.com/xgen/
+- https://github.com/salesforce/xgen
+
+We trained a series of 7B LLMs named XGen-7B with standard dense attention on up to 8K sequence length for up to 1.5T tokens. We also fine tune the models on public-domain instructional data. The main take-aways are:
+- On standard NLP benchmarks, XGen achieves comparable or better results when compared with state-of-the-art open-source LLMs (e.g. MPT, Falcon, LLaMA, Redpajama, OpenLLaMA) of similar model size.
+- Our targeted evaluation on long sequence modeling benchmarks show benefits of our 8K-seq models over 2K- and 4K-seq models.
+- XGen-7B archives equally strong results both in text (e.g., MMLU, QA) and code (HumanEval) tasks.
+- Training cost of $150K on 1T tokens under Google Cloud pricing for TPU-v4.
 
 ## 4 工具箱（其它）
 ### Alpaca-CoT
@@ -1008,8 +1032,6 @@ Self-Instruct is a framework that helps language models improve their ability to
 - https://mp.weixin.qq.com/s/DuoQJj1OBl5iFPvjidDiCg
 
 This project aims to construct open-source, large-scale, high-quality instruction tuning SFT data to facilitate the construction of powerful LLMs with general tool-use capability. We provide the dataset, the corresponding training and evaluation scripts, and a capable model ToolLLaMA fine-tuned on ToolBench.
-
-## 4 
 
 ## 5 其他小伙伴的资料
 ### 总结开源可用的Instruct/Prompt Tuning数据
