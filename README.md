@@ -13,29 +13,85 @@ Open-Source Language Model Pocket
   - [2 【医疗/健康】 ChatDoctor（上）](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg)([解读](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg)，[PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf))
   - [3 【医疗/健康】 ChatDoctor（中）](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw)([解读](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw)，[PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%AD%EF%BC%89.pdf))
 
-## 1 中文开源模型（Chinese Open Source Language Models）
+**内容一览** (Table of Contents)：
+
+*中文开源模型（Chinese Open Source Language Models）*
 
 |  |  |  |
 |---|---|---|
-| 本草 | Anima | EVA |
-| 百川 | BayLing | GPT2 for Multiple Language |
-| 华佗 | BBT-FinCUGE-Aapplications | LaWGPT |
-| 扁鹊 | BELLE | Lawyer LLaMA |
-| 灵心 | Bloom | LexiLaw |
-| 启真 | BiLLa | LawGPT_zh |
-| 中文Alpaca Luotuo | BLOOMChat176B | Linly伶荔说 |
-| 中文LLaMA&Alpaca | Chinese-Vicuna-medical | Linly伶荔说-Chinese-Falcon |
-| 流萤Firefly | Cornucopia-LLaMA-Fin-Chinese | MeChat |
-| 凤凰 | chatglm-maths | MedicalGPT |
-| 复旦MOSS | ChatRWKV | MedicalGPT-zh |
-| 轩辕 | ChatYuan | OpenKG-KnowLLM |
-| 悟道·天鹰Aquila | ChatGLM-6B | OpenMEDLab 浦医 |
-| 桃李 | ChatGLM2-6B | PromptCLUE |
-|  | Chinese-Transformer-XL | SkyText-Chinese-GPT3 |
-|  | ChatMed-TCM&ChatMed-Consult | TechGPT |
-|  | ChatGLM-Med | TigerBot |
-|  | CPM-Bee | YuLan-Chat |
-|  | DoctorGLM | Ziya-LLaMA |
+| 本草 | Anima | DoctorGLM |
+| 百川 | BayLing | EVA |
+| 华佗 | BBT-FinCUGE-Aapplications | GPT2 for Multiple Language |
+| 扁鹊 | BELLE | LaWGPT |
+| 灵心 | Bloom | Lawyer LLaMA |
+| 启真 | BiLLa | LexiLaw |
+| 中文Alpaca Luotuo | BLOOMChat176B | LawGPT_zh |
+| 中文LLaMA&Alpaca | Chinese-Vicuna-medical | Linly伶荔说 |
+| 流萤Firefly | Cornucopia-LLaMA-Fin-Chinese | Linly伶荔说-Chinese-Falcon |
+| 凤凰 | chatglm-maths | MeChat |
+| 复旦MOSS | ChatRWKV | MedicalGPT |
+| 轩辕 | ChatYuan | MedicalGPT-zh |
+| 悟道·天鹰Aquila | ChatGLM-6B | OpenKG-KnowLLM |
+| 桃李 | ChatGLM2-6B | OpenMEDLab 浦医 |
+|  | Chinese-Transformer-XL | PromptCLUE |
+|  | ChatMed-TCM&ChatMed-Consult | SkyText-Chinese-GPT3 |
+|  | ChatGLM-Med | TechGPT |
+|  | CPM-Bee | TigerBot |
+|  |  | YuLan-Chat |
+|  |  | Ziya-LLaMA |
+
+*训练/推理*
+|  |  |
+|---|---|
+| Alpaca-LoRA | MeZO: Fine-Tuning Language Models with Just Forward Passes |
+| AlpacaFarm | PKU-Beaver 河狸 (Safe RLHF) |
+| ColossalAI | PaLM + RLHF (Pytorch) |
+| ChatLLaMA | RL4LMs |
+| Chinese-Guanaco | Reinforcement Learning with Language Model |
+| DPO (Direct Preference Optimization) | SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression |
+| DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | Scikit-LLM: Sklearn Meets Large Language Models |
+| DeepSpeed-Chat | Transformer Reinforcement Learning |
+| FlexGen | Train_Transformers_with_INT4 |
+| FlagAI and FlagData | Transformer Reinforcement Learning X |
+| Guanaco & QloRA | vLLM |
+| GPT4All |  |
+| HugNLP |  |
+| INSTRUCTEVAL |  |
+| LOw-Memory Optimization (LOMO) |  |
+
+*可参考的其它开源模型*
+|  |  |
+|---|---|
+| Cerebras | MPT-7B |
+| ChatDoctor | OpenGPT |
+| Dolly 1&2 | Orca |
+| FinGPT | OpenChatKit |
+| Falcon | Open-Assistant |
+| Facebook LLaMA | MedLLaMA-13B & PMC-LLaMA: Continue Training LLaMA on Medical Papers |
+| GALACTICA | RedPajama |
+| Goar-7B for Arithmetic Tasks | StableLM |
+| HuggingChat | StableVicuna |
+| Koala: A Dialogue Model for Academic Research | Stanford Alpaca |
+| LLaMA复刻版OpenLLaMA | UltraLM-13B |
+| Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM | Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality |
+| Lit-LLaMA ️ | Wombat |
+|  | XGen-7B |
+
+*其它*
+|  |  |
+|---|---|
+| Alpaca-CoT | LLMPruner：大语言模型裁剪工具 |
+| Auto-GPT | LLM-Pruner: On the Structural Pruning of Large Language Models |
+| C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models | llama.cpp |
+| ChatPiXiu | LLM for Recommendation Systems |
+| 天秤（FlagEval） | MLC LLM |
+| Gorilla | Multiscale Positive-Unlabeled Detection of AI-Generated Texts |
+| HuggingGPT | PandaLM |
+| KoLA: Carefully Benchmarking World Knowledge of Large Language Models | Self-Instruct |
+|  | ToolBench |
+
+
+## 1 中文开源模型（Chinese Open Source Language Models）
 
 ### 本草
 - https://zhuanlan.zhihu.com/p/626536996
@@ -487,7 +543,7 @@ TigerBot 是一个多语言多任务的大规模语言模型(LLM)。根据 OpenA
 
 The Ziya-LLaMA-13B-v1 is a large-scale pre-trained model based on LLaMA with 13 billion parameters. It has the ability to perform tasks such as translation, programming, text classification, information extraction, summarization, copywriting, common sense Q&A, and mathematical calculation. The Ziya-LLaMA-13B-v1 has undergone three stages of training: large-scale continual pre-training (PT), multi-task supervised fine-tuning (SFT), and human feedback learning (RM, PPO).
 
-## 2 工具箱（训练/推理）
+## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
 - https://github.com/OptimalScale/LMFlow
 - https://arxiv.org/abs/2304.06767
@@ -536,7 +592,7 @@ This is the repo for the Chinese-Guanaco project, which aims to build and share 
 
 Chinese-Guanaco uses bitsandbytes for quantization and is integrated with Huggingface's PEFT and transformers libraries.
 
-### * 【DPO（Direct Preference Optimization】
+### * 【DPO (Direct Preference Optimization)】
 - https://arxiv.org/abs/2305.18290
 - https://zhuanlan.zhihu.com/p/641045324
 - https://huggingface.co/lyogavin/Anima33B-DPO-Belle-1k-merged
@@ -709,7 +765,7 @@ vLLM is flexible and easy to use with:
 - Streaming outputs
 - OpenAI-compatible API server
 
-## 3 工具箱（可参考的其他开源模型）
+## 3 可参考的其它开源模型
 ### Cerebras（可商用）
 - https://www.cerebras.net/blog/cerebras-gpt-a-family-of-open-compute-efficient-large-language-models/
 - https://huggingface.co/cerebras
@@ -913,7 +969,7 @@ We trained a series of 7B LLMs named XGen-7B with standard dense attention on up
 - XGen-7B archives equally strong results both in text (e.g., MMLU, QA) and code (HumanEval) tasks.
 - Training cost of $150K on 1T tokens under Google Cloud pricing for TPU-v4.
 
-## 4 工具箱（其它）
+## 4 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
 - https://mp.weixin.qq.com/s/Q5Q3RpQ80XmpbfhSxq2R1Q
@@ -1054,7 +1110,7 @@ Self-Instruct is a framework that helps language models improve their ability to
 
 This project aims to construct open-source, large-scale, high-quality instruction tuning SFT data to facilitate the construction of powerful LLMs with general tool-use capability. We provide the dataset, the corresponding training and evaluation scripts, and a capable model ToolLLaMA fine-tuned on ToolBench.
 
-## 5 其他小伙伴的资料
+## 5 部分阅读资料
 ### 总结开源可用的Instruct/Prompt Tuning数据
 - https://zhuanlan.zhihu.com/p/615277009
 
