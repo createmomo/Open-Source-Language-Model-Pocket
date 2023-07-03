@@ -15,7 +15,6 @@ Open-Source Language Model Pocket
 
 ## 1 中文开源模型（Chinese Open Source Language Models）
 
-
 |  |  |  |
 |---|---|---|
 | 本草 | Anima | EVA |
@@ -25,18 +24,18 @@ Open-Source Language Model Pocket
 | 灵心 | Bloom | LexiLaw |
 | 启真 | BiLLa | LawGPT_zh |
 | 中文Alpaca Luotuo | BLOOMChat176B | Linly伶荔说 |
-| 中文LLaMA&Alpaca | Chinese-Vicuna-medical | MeChat |
-| 流萤Firefly | Cornucopia-LLaMA-Fin-Chinese | MedicalGPT |
-| 凤凰 | chatglm-maths | MedicalGPT-zh |
-| 复旦MOSS | ChatRWKV | OpenKG-KnowLLM |
-| 轩辕 | ChatYuan | OpenMEDLab 浦医 |
-| 悟道·天鹰Aquila | ChatGLM-6B | PromptCLUE |
-| 桃李 | ChatGLM2-6B | SkyText-Chinese-GPT3 |
-|  | Chinese-Transformer-XL | TechGPT |
-|  | ChatMed-TCM&ChatMed-Consult | TigerBot |
-|  | ChatGLM-Med | YuLan-Chat |
-|  | CPM-Bee | Ziya-LLaMA |
-|  | DoctorGLM |  |
+| 中文LLaMA&Alpaca | Chinese-Vicuna-medical | Linly伶荔说-Chinese-Falcon |
+| 流萤Firefly | Cornucopia-LLaMA-Fin-Chinese | MeChat |
+| 凤凰 | chatglm-maths | MedicalGPT |
+| 复旦MOSS | ChatRWKV | MedicalGPT-zh |
+| 轩辕 | ChatYuan | OpenKG-KnowLLM |
+| 悟道·天鹰Aquila | ChatGLM-6B | OpenMEDLab 浦医 |
+| 桃李 | ChatGLM2-6B | PromptCLUE |
+|  | Chinese-Transformer-XL | SkyText-Chinese-GPT3 |
+|  | ChatMed-TCM&ChatMed-Consult | TechGPT |
+|  | ChatGLM-Med | TigerBot |
+|  | CPM-Bee | YuLan-Chat |
+|  | DoctorGLM | Ziya-LLaMA |
 
 ### 本草
 - https://zhuanlan.zhihu.com/p/626536996
@@ -367,6 +366,16 @@ Linly-ChatFlow-int4 ：ChatFlow 4-bit量化版本，用于在CPU上部署模型�
 
 进行中的项目：
 Linly-Chinese-BLOOM：基于BLOOM中文增量训练的中文基础模型，包含7B和175B模型量级，可用于商业场景。
+
+### * 【Linly伶荔说-Chinese-Falcon】
+- https://mp.weixin.qq.com/s/AuAG3tw4JI8lHyLkSdM18g
+- https://github.com/CVI-SZU/Linly
+
+近期，阿联酋阿布扎比的技术创新研究所（TII）开源了 Falcon 系列模型，使用经过筛选的 1 万亿 tokens 进行预训练，并以 Apache 2.0 协议开源，可能是目前效果最好且许可协议最宽松（允许商用）的开源模型。
+
+然而，Falcon 模型在使用上面临和 LLaMA 模型类似的问题：由于模型主要在英文数据集上训练，因此它理解和生成中文的能力偏弱。此外，Falcon 在构建词表时没有加入中文字/词，中文字会被拆分成多个 token 的组合，这导致中文文本会被拆分成更长的 tokens 序列，降低了编码和生成效率。
+
+针对以上问题，“伶荔（Linly）”项目团队以 Falcon 模型为底座扩充中文词表，利用中文和中英平行增量预训练将模型的语言能力迁移学习到中文，实现 Chinese-Falcon。本文从模型结构上分析 Falcon、LLaMA 与传统 GPT 的异同，代码实现细节。并介绍我们的中文 Falcon 训练方案，包括中文字词扩充、数据集构建和训练参数等。
 
 ### * 【MeChat (Mental Health Support Chatbot)】
 - https://github.com/qiuhuachuan/smile
