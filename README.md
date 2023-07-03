@@ -1,9 +1,9 @@
-# 开源语言模型百宝袋 (Ver. 2.1)
+# 开源语言模型百宝袋 (Ver. 2.2)
 Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
-相关文章：
+**相关文章**：
 - [练习场：穷穷穷孩子如何体验ColossalAI SFT（Kaggle篇）](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)
 - [练习场：穷穷穷孩子如何体验ColossalAI SFT（Colab篇）](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)
 - [通俗理解文本生成的常用解码策略](https://mp.weixin.qq.com/s/sVZuEkYXQ9ZZYXJCQz7F4A)
@@ -26,18 +26,18 @@ Open-Source Language Model Pocket
 | 灵心 | Bloom | Lawyer LLaMA |
 | 启真 | BiLLa | LexiLaw |
 | 中文Alpaca Luotuo | BLOOMChat176B | LawGPT_zh |
-| 中文LLaMA&Alpaca | Chinese-Vicuna-medical | Linly伶荔说 |
-| 流萤Firefly | Cornucopia-LLaMA-Fin-Chinese | Linly伶荔说-Chinese-Falcon |
-| 凤凰 | chatglm-maths | MeChat |
-| 复旦MOSS | ChatRWKV | MedicalGPT |
-| 轩辕 | ChatYuan | MedicalGPT-zh |
-| 悟道·天鹰Aquila | ChatGLM-6B | OpenKG-KnowLLM |
-| 桃李 | ChatGLM2-6B | OpenMEDLab 浦医 |
-|  | Chinese-Transformer-XL | PromptCLUE |
-|  | ChatMed-TCM&ChatMed-Consult | SkyText-Chinese-GPT3 |
-|  | ChatGLM-Med | TechGPT |
-|  | CPM-Bee | TigerBot |
-|  |  | YuLan-Chat |
+| 中文LLaMA&Alpaca | * 【ChatLaw 法律大模型】 | Linly伶荔说 |
+| 流萤Firefly | Chinese-Vicuna-medical | Linly伶荔说-Chinese-Falcon |
+| 凤凰 | Cornucopia-LLaMA-Fin-Chinese | MeChat |
+| 复旦MOSS | chatglm-maths | MedicalGPT |
+| 轩辕 | ChatRWKV | MedicalGPT-zh |
+| 悟道·天鹰Aquila | ChatYuan | OpenKG-KnowLLM |
+| 桃李 | ChatGLM-6B | OpenMEDLab 浦医 |
+|  | ChatGLM2-6B | PromptCLUE |
+|  | Chinese-Transformer-XL | SkyText-Chinese-GPT3 |
+|  | ChatMed-TCM&ChatMed-Consult | TechGPT |
+|  | ChatGLM-Med | TigerBot |
+|  | CPM-Bee | YuLan-Chat |
 |  |  | Ziya-LLaMA |
 
 *训练/推理*
@@ -103,7 +103,7 @@ Open-Source Language Model Pocket
 
 该团队还即将发布扁鹊模型PienChueh(同为基于医学数据训练的大模型)，欢迎大家届时使用体验。
 
-### * 【百川 Baichuan-7B】
+### 百川 Baichuan-7B
 - https://github.com/baichuan-inc/baichuan-7B
 - https://huggingface.co/baichuan-inc/baichuan-7B
 
@@ -121,7 +121,7 @@ baichuan-7B 是由百川智能开发的一个开源可商用的大规模预训�
 
 该论文提出的语言模型训练方法可以结合医生和 ChatGPT 的数据，充分发挥它们的互补作用，既保留真实医疗数据的专业性和准确性，又借助 ChatGPT 的多样性和内容丰富性的特点。
 
-### * 【扁鹊】
+### 扁鹊
 - https://github.com/scutcyr/BianQue
 
 基于主动健康的主动性、预防性、精确性、个性化、共建共享、自律性六大特征，华南理工大学未来技术学院-广东省数字孪生人重点实验室开源了中文领域生活空间主动健康大模型基座ProactiveHealthGPT，包括：
@@ -130,7 +130,7 @@ baichuan-7B 是由百川智能开发的一个开源可商用的大规模预训�
 
 我们期望，生活空间主动健康大模型基座ProactiveHealthGPT 可以帮助学术界加速大模型在慢性病、心理咨询等主动健康领域的研究与应用。本项目为 生活空间健康大模型扁鹊（BianQue） 。
 
-### * 【灵心（SoulChat）】
+### 灵心（SoulChat）
 - https://github.com/scutcyr/SoulChat
 
 我们调研了当前常见的心理咨询平台，发现，用户寻求在线心理帮助时，通常需要进行较长篇幅地进行自我描述，然后提供帮助的心理咨询师同样地提供长篇幅的回复，缺失了一个渐进式的倾诉过程。但是，在实际的心理咨询过程当中，用户和心理咨询师之间会存在多轮次的沟通过程，在该过程当中，心理咨询师会引导用户进行倾诉，并且提供共情，例如：“非常棒”、“我理解你的感受”、“当然可以”等等。
@@ -139,7 +139,7 @@ baichuan-7B 是由百川智能开发的一个开源可商用的大规模预训�
 
 我们选择了 ChatGLM-6B 作为初始化模型，进行了全量参数的指令微调，旨在提升模型的共情能力、引导用户倾诉能力以及提供合理建议的能力。更多训练细节请留意我们后续发布的论文。
 
-### * 【启真医学大模型】
+### 启真医学大模型
 - https://github.com/CMKRG/QiZhenGPT
 
 本项目利用启真医学知识库构建的中文医学指令数据集，并基于此在Chinese-LLaMA-Plus-7B、CaMA-13B、ChatGLM-6B模型上进行指令精调，大幅提高了模型在中文医疗场景下效果，首先针对药品知识问答发布了评测数据集，后续计划优化疾病、手术、检验等方面的问答效果，并针对医患问答、病历自动生成等应用展开拓展。
@@ -186,12 +186,12 @@ MOSS是一个支持中英双语和多种插件的开源对话语言模型，moss
 
 轩辕是国内首个开源的千亿级中文对话大模型，同时也是首个针对中文金融领域优化的千亿级开源对话大模型。轩辕在BLOOM-176B的基础上针对中文通用领域和金融领域进行了针对性的预训练与微调，它不仅可以应对通用领域的问题，也可以解答与金融相关的各类问题，为用户提供准确、全面的金融信息和建议。
 
-### * 【悟道·天鹰（Aquila）】
+### 悟道·天鹰（Aquila）
 - https://github.com/FlagAI-Open/FlagAI/tree/master/examples/Aquila
 
 这是首个具备中英双语知识、支持商用许可协议、支持国内数据合规要求的开源语言大模型。悟道·天鹰（Aquila）系列模型包括 Aquila基础模型（7B、33B），AquilaChat对话模型（7B、33B）以及 AquilaCode “文本-代码”生成模型。 
 
-### * 【桃李：国际中文教育大模型】
+### 桃李：国际中文教育大模型
 - https://github.com/blcuicall/taoli
 
 随着ChatGPT引起全社会的关注，及各类大语言模型（Large Language Model）争相亮相，通用领域自然语言处理任务已获得巨大成功，引起了国际中文教育领域的普遍关注。
@@ -202,7 +202,7 @@ MOSS是一个支持中英双语和多种插件的开源对话语言模型，moss
 
 我们基于目前国际中文教育领域流通的500余册国际中文教育教材与教辅书、汉语水平考试试题以及汉语学习者词典等，构建了国际中文教育资源库。 我们设置了多种形式的指令来充分利用知识，构造了共计 88000 条的高质量国际中文教育问答数据集，并利用收集到的数据对模型进行指令微调，让模型习得将法律知识应用到具体场景中的能力。
 
-### * 【Anima：基于QLoRA的33B中文大语言模型】
+### Anima：基于QLoRA的33B中文大语言模型
 - https://github.com/lyogavin/Anima
 
 AI Community从来都是非常开放的，AI发展到今天，离不开很多以前的重要开源工作，开放共享的Paper，或者的开源数据和代码。我们相信AI的未来也一定是开放的。希望能为开源社区做一些贡献。
@@ -213,13 +213,13 @@ AI Community从来都是非常开放的，AI发展到今天，离不开很多以
 
 因此我们认为QLoRA 的工作很重要，重要到可能是个Game Changer。通过QLoRA的优化方法，第一次让33B规模的模型可以比较民主化的，比较低成本的finetune训练，并且普及使用。我们认为33B模型既可以发挥大规模模型的比较强的reasoning能力，又可以针对私有业务领域数据进行灵活的finetune训练提升对于LLM的控制力。
 
-### * 【BayLing: Bridging Cross-lingual Alignment and Instruction Following through Interactive Translation for Large Language Models】
+### BayLing: Bridging Cross-lingual Alignment and Instruction Following through Interactive Translation for Large Language Models
 - https://github.com/ictnlp/BayLing
 - https://arxiv.org/abs/2306.10968
 
 BayLing (百聆, bǎi líng) is an instruction-following large language model equipped with advanced language alignment, showing superior capability in English/Chinese generation, instruction following and multi-turn interaction. BayLing can be effortlessly deployed on a consumer-grade GPU with 16GB of memory, and assists users with tasks such as translation, writing, creation, suggestion...
 
-### * 【BBT-FinCUGE-Applications】
+### BBT-FinCUGE-Applications
 - https://github.com/ssymmetry/BBT-FinCUGE-Applications
 - https://arxiv.org/abs/2302.09432
 - https://bbt.ssymmetry.com/index.html
@@ -265,7 +265,28 @@ BiLLa是开源的推理能力增强的中英双语LLaMA模型。模型的主要�
 
 开源对话模型一直跟闭源模型在多语言能力上存在差距。SambaNova 和斯坦福 Together Computer 开源可商用的多语言聊天模型 BLOOMChat 176B，支持中文。BLOOMChat 在SambaNova 自研芯片 RDU 上完成训练，借助 SambaNova 的独特可重构数据流架构，利用 BLOOM 开源模型的核心能力，通过在 OpenChatKit、Dolly 2.0 和 OASST1 的 OIG 上进行微调。在基于六种语言的早期双盲测试中，BLOOMChat 在 66%的测评数据上产生的对话表现优于近期的开源对话模型。同时在与 GPT4 的基于六种语言的人工测评对比中，BLOOMChat 得到 45%对 55%的胜率，大大缩小开源和闭源模型的多语言对话能力差距。当前 BLOOMChat 开源模型文件，支持在 huggingface 在线推理试用。
 
-### * 【Chinese-Vicuna-medical】
+### ChatLaw 法律大模型
+- https://www.chatlaw.cloud/
+- https://github.com/PKU-YuanGroup/ChatLaw
+- https://arxiv.org/pdf/2306.16092.pdf
+
+但愿世间不纷争，何惜法典卷生尘
+
+ChatGPT浪潮下，人工智能的不断扩展和发展为LLM的扩散提供了肥沃的土壤，目前医疗、教育、金融领域已逐渐有了各自的模型，但法律领域迟迟没有明显进展。
+
+为了促进LLM在法律甚至其他垂直应用落地的开放研究，本项目开源了中文法律大模型，并针对LLM和知识库的结合问题给出了法律场景下合理的解决方案。
+
+ChatLaw法律大模型目前开源的仅供学术参考的版本底座为姜子牙-13B、Anima-33B，我们使用大量法律新闻、法律论坛、法条、司法解释、法律咨询、法考题、判决文书等原始文本来构造对话数据。
+
+基于姜子牙-13B的模型是第一版模型，得益于姜子牙的优秀中文能力和我们对数据清洗、数据增强过程的严格要求，我们在逻辑简单的法律任务上表现优异，但涉及到复杂逻辑的法律推理任务时往往表现不佳。
+
+随后基于Anima-33B，我们增加了训练数据，做成了ChatLaw-33B，发现逻辑推理能力大幅提升，由此可见，大参数的中文LLM是至关重要的。
+
+我们的技术报告在这里: arXiv: ChatLaw
+
+基于可商用的模型训练而成的版本会作为我们后续产品内部接入的版本，对外不开源，可以在这里进行开源版本模型的试用
+
+### Chinese-Vicuna-medical
 - https://github.com/Facico/Chinese-Vicuna/blob/master/docs/performance-medical.md
 
 在cMedQA2上使用我们的checkpoint-11600 continue finetune
@@ -275,7 +296,7 @@ BiLLa是开源的推理能力增强的中英双语LLaMA模型。模型的主要�
 - 同时验证了指令微调的有效性
 - 使用单指令continue-finetune能保留原来更多的性能
 
-### * 【Cornucopia-LLaMA-Fin-Chinese】
+### Cornucopia-LLaMA-Fin-Chinese
 - https://github.com/jerry1993-tech/Cornucopia-LLaMA-Fin-Chinese
 
 聚宝盆(Cornucopia): 基于中文金融知识的LLaMA微调模型
@@ -285,7 +306,7 @@ BiLLa是开源的推理能力增强的中英双语LLaMA模型。模型的主要�
 
 陆续会发布研发的新模型（next-pretrain、multi-task SFT、RLHF Optimize），欢迎大家届时使用体验。
 
-### * 【chatglm-maths】
+### chatglm-maths
 - https://github.com/yongzhuo/chatglm-maths
 
 chatglm-6b微调/LORA/PPO/推理, 样本为自动生成的整数/小数加减乘除运算, 可gpu/cpu。
@@ -309,7 +330,7 @@ PromptCLUE-large在1000亿token中文语料上预训练，累计学习1.5万亿�
 
 ChatGLM-6B 是一个开源的、支持中英双语的对话语言模型，基于 General Language Model (GLM) 架构，具有 62 亿参数。结合模型量化技术，用户可以在消费级的显卡上进行本地部署（INT4 量化级别下最低只需 6GB 显存）。 ChatGLM-6B 使用了和 ChatGPT 相似的技术，针对中文问答和对话进行了优化。经过约 1T 标识符的中英双语训练，辅以监督微调、反馈自助、人类反馈强化学习等技术的加持，62 亿参数的 ChatGLM-6B 已经能生成相当符合人类偏好的回答。更多信息请参考我们的博客。
 
-### * 【ChatGLM2-6B】
+### ChatGLM2-6B
 - https://github.com/THUDM/ChatGLM2-6B
 
 ChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第二代版本，在保留了初代模型对话流畅、部署门槛较低等众多优秀特性的基础之上，ChatGLM2-6B 引入了如下新特性：
@@ -423,7 +444,7 @@ Linly-ChatFlow-int4 ：ChatFlow 4-bit量化版本，用于在CPU上部署模型�
 进行中的项目：
 Linly-Chinese-BLOOM：基于BLOOM中文增量训练的中文基础模型，包含7B和175B模型量级，可用于商业场景。
 
-### * 【Linly伶荔说-Chinese-Falcon】
+### Linly伶荔说-Chinese-Falcon
 - https://mp.weixin.qq.com/s/AuAG3tw4JI8lHyLkSdM18g
 - https://github.com/CVI-SZU/Linly
 
@@ -433,14 +454,14 @@ Linly-Chinese-BLOOM：基于BLOOM中文增量训练的中文基础模型，包�
 
 针对以上问题，“伶荔（Linly）”项目团队以 Falcon 模型为底座扩充中文词表，利用中文和中英平行增量预训练将模型的语言能力迁移学习到中文，实现 Chinese-Falcon。本文从模型结构上分析 Falcon、LLaMA 与传统 GPT 的异同，代码实现细节。并介绍我们的中文 Falcon 训练方案，包括中文字词扩充、数据集构建和训练参数等。
 
-### * 【MeChat (Mental Health Support Chatbot)】
+### MeChat (Mental Health Support Chatbot)
 - https://github.com/qiuhuachuan/smile
 - https://huggingface.co/qiuhuachuan/MeChat
 - https://mechat.fly.dev/
 
 我们的愿景是为让所有人在遇到心理健康问题时能够获得及时、有效的倾听和支持。我们相信，心理健康是每个人的权利，而不是奢侈品。我们的使命是为人们提供平等、全面、易于访问的心理健康服务，无论他们身在何处、面临何种挑战。我们的愿景还包括推动社会对心理健康问题的认识和理解，打破心理健康问题带来的污名和歧视，为创建一个更加健康、包容和平等的社会做出贡献。项目海报取自 flaticon 。
 
-### * 【MedicalGPT】
+### MedicalGPT
 - https://github.com/shibing624/MedicalGPT
 
 MedicalGPT 训练医疗大模型，实现包括二次预训练、有监督微调、奖励建模、强化学习训练。
@@ -460,14 +481,14 @@ MedicalGPT 训练医疗大模型，实现包括二次预训练、有监督微调
 
 该开源了基于ChatGLM-6B LoRA 16-bit指令微调的中文医疗通用模型。基于共计28科室的中文医疗共识与临床指南文本，我们生成医疗知识覆盖面更全，回答内容更加精准的高质量指令数据集。
 
-### * 【OpenKG-KnowLLM】
+### OpenKG-KnowLLM
 - https://github.com/zjunlp/KnowLLM
 
 Knowledgable Large Language Model Series.
 
 With the rapid development of deep learning technology, large language models such as ChatGPT have achieved significant success in the field of natural language processing. However, these large models still face some challenges and issues in learning and understanding knowledge, including the difficulty of knowledge updating, and issues with potential errors and biases within the model, known as knowledge fallacies. The Deep Model series aims to release a series of open-source large models to mitigate these knowledge fallacy issues. The first phase of this project released a knowledge extraction large model based on LLaMA, named Zhishi. To provide Chinese capabilities without disrupting the original model's distribution, we firstly (1) use Chinese corpora for the full-scale pre-training of LLaMA (13B), in order to improve the model's understanding of Chinese and knowledge reserve as much as possible while retaining its original English and code capabilities; Then (2) we fine-tune the model from the first step using an instruction dataset, to enhance the language model's understanding of human extraction instructions.
 
-### * 【OpenMEDLab 浦医】
+### OpenMEDLab 浦医
 - https://github.com/OpenMEDLab
 - https://github.com/openmedlab/PULSE
 - https://stcsm.sh.gov.cn/xwzx/kjzl/20230630/c783c30d8e62494e83073535f841675f.html
@@ -495,7 +516,7 @@ PromptCLUE：大规模多任务Prompt预训练中文开源模型。
 
 SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊天、问答、中英互译等不同的任务。 应用这个模型，除了可以实现基本的聊天、对话、你问我答外，还能支持中英文互译、内容续写、对对联、写古诗、生成菜谱、第三人称转述、创建采访问题等多种功能。
 
-### * 【TechGPT】
+### TechGPT
 - https://mp.weixin.qq.com/s/nF1He7jhAHfh7PzhjqHoZg
 - https://huggingface.co/neukg/TechGPT-7B
 - https://github.com/neukg/TechGPT
@@ -508,7 +529,7 @@ TechGPT的名字主要来源于小组在2018年推出的TechKG大规模中文学
 
 在这三大自然语言处理核心能力之内，TechGPT还具备了对计算机科学、材料、机械、冶金、金融和航空航天等十余种垂直专业领域自然语言文本的处理能力。
 
-### * 【TigerBot】
+### TigerBot
 - https://github.com/TigerResearch/TigerBot
 
 TigerBot 是一个多语言多任务的大规模语言模型(LLM)。根据 OpenAI InstructGPT 论文在公开 NLP 数据集上的自动评测，TigerBot-7B 达到 OpenAI 同样大小模型的综合表现的 96%，并且这只是我们的 MVP，在此我们将如下探索成果开源：
@@ -526,7 +547,7 @@ TigerBot 是一个多语言多任务的大规模语言模型(LLM)。根据 OpenA
 - 在并行训练上，我们突破了 deep-speed 等主流框架中若干内存和通信问题，使得在千卡环境下数月无间断，
 - 对中文语言的更不规则的分布，从 tokenizer 到训练算法上做了更适合的算法优化。
 
-### * 【YuLan-Chat】
+### YuLan-Chat
 - https://github.com/RUC-GSAI/YuLan-Chat
 - https://mp.weixin.qq.com/s/nPS4N3stAAG_51fnZANbMA
 
@@ -534,7 +555,7 @@ TigerBot 是一个多语言多任务的大规模语言模型(LLM)。根据 OpenA
 
 我们分别开源了13B和65B的YuLan-Chat模型文件及相关代码，并采用量化技术使其分别可以在单张RTX3090-24G和A800-80G显卡上部署。YuLan-Chat模型基于LLaMA底座模型，采用精心优化的高质量中英文混合指令进行微调，其中YuLan-Chat-65B模型目前能够在中英文相关评测数据集上显著超越已有开源模型效果。后续我们会继续优化指令微调方法与底座模型，持续更新YuLan-Chat模型。
 
-### * 【Ziya-LLaMA】
+### Ziya-LLaMA
 - https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1
 - https://github.com/IDEA-CCNL/Fengshenbang-LM
 - https://mp.weixin.qq.com/s/IeXgq8blGoeVbpIlAUCAjA
@@ -592,7 +613,7 @@ This is the repo for the Chinese-Guanaco project, which aims to build and share 
 
 Chinese-Guanaco uses bitsandbytes for quantization and is integrated with Huggingface's PEFT and transformers libraries.
 
-### * 【DPO (Direct Preference Optimization)】
+### DPO (Direct Preference Optimization)
 - https://arxiv.org/abs/2305.18290
 - https://zhuanlan.zhihu.com/p/641045324
 - https://huggingface.co/lyogavin/Anima33B-DPO-Belle-1k-merged
@@ -604,7 +625,7 @@ DPO的核心原理是：PPO训练难度核心是因为需要通过reward model�
 
 While large-scale unsupervised language models (LMs) learn broad world knowledge and some reasoning skills, achieving precise control of their behavior is difficult due to the completely unsupervised nature of their training. Existing methods for gaining such steerability collect human labels of the relative quality of model generations and fine-tune the unsupervised LM to align with these preferences, often with reinforcement learning from human feedback (RLHF). However, RLHF is a complex and often unstable procedure, first fitting a reward model that reflects the human preferences, and then fine-tuning the large unsupervised LM using reinforcement learning to maximize this estimated reward without drifting too far from the original model. In this paper, we leverage a mapping between reward functions and optimal policies to show that this constrained reward maximization problem can be optimized exactly with a single stage of policy training, essentially solving a classification problem on the human preference data. The resulting algorithm, which we call Direct Preference Optimization (DPO), is stable, performant and computationally lightweight, eliminating the need for fitting a reward model, sampling from the LM during fine-tuning, or performing significant hyperparameter tuning. Our experiments show that DPO can fine-tune LMs to align with human preferences as well as or better than existing methods. Notably, fine-tuning with DPO exceeds RLHF's ability to control sentiment of generations and improves response quality in summarization and single-turn dialogue while being substantially simpler to implement and train.
 
-### * 【DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality】
+### DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality
 - https://github.com/misonsky/DialogADV
 - https://mp.weixin.qq.com/s/Ga0a6a1L6CmCXgk6WDz0Xg
 - https://arxiv.org/abs/2305.14658
@@ -666,20 +687,20 @@ HugAILab团队还研发了一系列的应用，例如CLUE&GLUE刷榜工具，可
 
 HugNLP是一个分层式框架，遵循“高内聚低耦合”的开发模式，其核心包括模型层（Models）、处理器层（Processors）、评估器层（Evaluators）和应用层（Applications）四部分。
 
-### * 【INSTRUCTEVAL】
+### INSTRUCTEVAL
 - https://mp.weixin.qq.com/s/E6hq0AUy_hItA5HGo2tCAQ
 - https://github.com/declare-lab/instruct-eval
 - https://arxiv.org/abs/2306.04757
 
 本文引入了一个名为INSTRUCTEVAL的新型评估套件。该套件专用于对指令调优大型语言模型的全面评估，相比之前对LLMs的评估方法，该评估策略不仅详细评估了模型解决问题的能力、文字写作能力，而且还严格评估了模型与人类价值的对齐能力。
 
-### * 【LOw-Memory Optimization (LOMO)】
+### LOw-Memory Optimization (LOMO)
 - https://arxiv.org/abs/2306.09782
 - https://github.com/OpenLMLab/LOMO
 
 Large Language Models (LLMs) have revolutionized Natural Language Processing (NLP) but demand massive GPU resources for training. Lowering the threshold for LLMs training would encourage greater participation from researchers, benefiting both academia and society. While existing approaches have focused on parameter-efficient fine-tuning, which tunes or adds a small number of parameters, few have addressed the challenge of tuning the full parameters of LLMs with limited resources. In this work, we propose a new optimizer, LOw-Memory Optimization (LOMO), which fuses the gradient computation and the parameter update in one step to reduce memory usage. By integrating LOMO with existing memory saving techniques, we reduce memory usage to 10.8% compared to the standard approach (DeepSpeed solution). Consequently, our approach enables the full parameter fine-tuning of a 65B model on a single machine with 8 RTX 3090, each with 24GB memory.
 
-### * 【MeZO: Fine-Tuning Language Models with Just Forward Passes】
+### MeZO: Fine-Tuning Language Models with Just Forward Passes
 - https://github.com/princeton-nlp/MeZO
 - https://arxiv.org/abs/2305.17333
 - https://mp.weixin.qq.com/s/3RLCVQg2QJGSiDUtx9DgPg
@@ -733,7 +754,7 @@ Seamlessly integrate powerful language models like ChatGPT into scikit-learn for
 
 With trl you can train transformer language models with Proximal Policy Optimization (PPO). The library is built on top of the transformers library by 🤗 Hugging Face. Therefore, pre-trained language models can be directly loaded via transformers. At this point most of decoder architectures and encoder-decoder architectures are supported.
 
-### * 【Train_Transformers_with_INT4】
+### Train_Transformers_with_INT4
 - https://mp.weixin.qq.com/s/pyEJJ5AvQqfyncO7CA8eNA
 - https://arxiv.org/abs/2306.11987
 - https://github.com/xijiu9/Train_Transformers_with_INT4
@@ -747,7 +768,7 @@ trlX is a distributed training framework designed from the ground up to focus on
 
 Training support for 🤗 Hugging Face models is provided by Accelerate-backed trainers, allowing users to fine-tune causal and T5-based language models of up to 20B parameters, such as facebook/opt-6.7b, EleutherAI/gpt-neox-20b, and google/flan-t5-xxl. For models beyond 20B parameters, trlX provides NVIDIA NeMo-backed trainers that leverage efficient parallelism techniques to scale effectively.
 
-### * 【vLLM】
+### vLLM
 - https://github.com/vllm-project/vllm
 
 vLLM is a fast and easy-to-use library for LLM inference and serving.
@@ -772,7 +793,7 @@ vLLM is flexible and easy to use with:
 
 开源7个可商用GPT模型，含数据集和可直接下载的预训练模型权重: Cerebras 开源 7 个 GPT 模型，均可商用，参数量分别达到 1.11 亿、2.56 亿、5.9 亿、13 亿、27 亿、67 亿和 130 亿。其中最大的模型参数量达到 130 亿，与 Meta 最近开源的 LLaMA-13B 相当。该项目开源数据集和预训练模型权重，其中预训练模型权重文件大小近50G可直接下载，并且可用于商业和研究用途。与此前的 GPT-3 模型相比，Cerebras 开源的模型具有更高的可用性和透明度，研究人员和开发者可以使用少量数据对其进行微调，构建出高质量的自然语言处理应用。
 
-### * 【ChatDoctor】
+### ChatDoctor
 - https://github.com/Kent0n-Li/ChatDoctor
 - https://arxiv.org/abs/2303.14070
 
@@ -786,7 +807,7 @@ Recent large language models (LLMs) in the general domain, such as ChatGPT, have
 
 We show that anyone can take a dated off-the-shelf open source large language model (LLM) and give it magical ChatGPT-like instruction following ability by training it in 30 minutes on one machine, using high-quality training data. Surprisingly, instruction-following does not seem to require the latest or largest models: our model is only 6 billion parameters, compared to 175 billion for GPT-3. We open source the code for our model (Dolly) and show how it can be re-created on Databricks. We believe models like Dolly will help democratize LLMs, transforming them from something very few companies can afford into a commodity every company can own and customize to improve their products.
 
-### * 【FinGPT】
+### FinGPT
 - https://github.com/ai4finance-foundation/fingpt
 - https://arxiv.org/pdf/2306.06031v1.pdf
 - https://mp.weixin.qq.com/s/A9euFin675nxGGciiX6rJQ
@@ -811,7 +832,7 @@ LLaMA: Open and Efficient Foundation Language Models
 
 We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the research community.
 
-### * 【GALACTICA】
+### GALACTICA
 - https://github.com/paperswithcode/galai
 - https://arxiv.org/pdf/2211.09085.pdf
 - https://galactica.org/
@@ -869,14 +890,14 @@ MPT-7B is part of the family of MosaicPretrainedTransformer (MPT) models, which 
 
 Introducing MPT-7B, the latest entry in our MosaicML Foundation Series. MPT-7B is a transformer trained from scratch on 1T tokens of text and code. It is open source, available for commercial use, and matches the quality of LLaMA-7B. MPT-7B was trained on the MosaicML platform in 9.5 days with zero human intervention at a cost of ~$200k. Starting today, you can train, finetune, and deploy your own private MPT models, either starting from one of our checkpoints or training from scratch. For inspiration, we are also releasing three finetuned models in addition to the base MPT-7B: MPT-7B-Instruct, MPT-7B-Chat, and MPT-7B-StoryWriter-65k+, the last of which uses a context length of 65k tokens!
 
-### * 【OpenGPT】
+### OpenGPT
 - https://github.com/CogStack/OpenGPT
 
 A framework for creating grounded instruction based datasets and training conversational domain expert Large Language Models (LLMs).
 
 NHS-LLM：A conversational model for healthcare trained using OpenGPT. All the medical datasets used to train this model were created using OpenGPT and are available below.
 
-### * 【Orca】
+### Orca
 - https://aka.ms/orca-lm
 - https://arxiv.org/pdf/2306.02707.pdf
 - https://mp.weixin.qq.com/s/RRdrSeI2ux5QE6MqJ8opSg
@@ -900,14 +921,14 @@ Open Assistant is a project meant to give everyone access to a great chat based 
 
 We believe that by doing this we will create a revolution in innovation in language. In the same way that stable-diffusion helped the world make art and images in new ways we hope Open Assistant can help improve the world by improving language itself.
 
-### * 【MedLLaMA-13B & PMC-LLaMA: Continue Training LLaMA on Medical Papers】
+### MedLLaMA-13B & PMC-LLaMA: Continue Training LLaMA on Medical Papers
 - https://github.com/chaoyi-wu/PMC-LLaMA
 - https://huggingface.co/chaoyi-wu/PMC_LLAMA_7B
 - https://arxiv.org/abs/2304.14454
 
 We have release a new model MedLLaMA-13B finetuned with LLaMA-13B on some medical corpus, termed as MedLLaMA-13B. It have been proved to be more powerful than both LLaMA-13B and PMC-LLaMA, refering to our benchmark for detail comparison.
 
-### * 【RedPajama】（可商用）
+### RedPajama（可商用）
 - https://www.together.xyz/blog/redpajama
 - https://github.com/togethercomputer/RedPajama-Data
 
@@ -935,7 +956,7 @@ Alpaca: A Strong, Replicable Instruction-Following ModelAl
 
 We introduce Alpaca 7B, a model fine-tuned from the LLaMA 7B model on 52K instruction-following demonstrations. On our preliminary evaluation of single-turn instruction following, Alpaca behaves qualitatively similarly to OpenAI’s text-davinci-003, while being surprisingly small and easy/cheap to reproduce (<600$).
 
-### * 【UltraLM-13B】
+### UltraLM-13B
 - https://github.com/thunlp/UltraChat
 
 UltraLM is a series of chat language models trained on UltraChat. Currently, we have released the 13B version, which ranks #1 among open-source models and ranks #4 among all models on AlpacaEval Leaderboard. UltraLM-13B is based upon LLaMA-13B.
@@ -959,7 +980,7 @@ This is the repository for RRHF (Rank Response to align Human Feedback) and open
 
 Reinforcement Learning from Human Feedback (RLHF) enables the alignment of large language models with human preference, improving the quality of interactions between humans and language models. Recent practice of RLHF uses PPO to enable the large language model optimization of such alignment. However, implementing PPO is non-trivial (where the training procedure requires interactive between policy, behavior policy, reward, value model) and it is also tedious to tuning many hyper-parameters. Our motivation is to simplify the alignment between language models with human preference, and our proposed paradigm RRHF (Rank Response from Human Feedback) can achieve such alignment as easily as conventional fine-tuning. It is simpler than PPO from the aspects of coding, model counts, and hyperparameters.
 
-### * 【XGen-7B】
+### XGen-7B
 - https://blog.salesforceairesearch.com/xgen/
 - https://github.com/salesforce/xgen
 
@@ -983,7 +1004,7 @@ Alpaca-CoT项目旨在探究如何更好地通过instruction-tuning的方式来�
 
 Auto-GPT is an experimental open-source application showcasing the capabilities of the GPT-4 language model. This program, driven by GPT-4, chains together LLM "thoughts", to autonomously achieve whatever goal you set. As one of the first examples of GPT-4 running fully autonomously, Auto-GPT pushes the boundaries of what is possible with AI.
 
-### * 【C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models】
+### C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models
 - https://arxiv.org/abs/2305.08322
 - https://cevalbenchmark.com/
 - https://github.com/SJTU-LIT/ceval
@@ -999,7 +1020,7 @@ C-Eval is a comprehensive Chinese evaluation suite for foundation models. It con
 
 ChatPiXiu项目为OpenNLP计划的第2个正式的开源项目，旨在Open ChatGPT for everyone！在以ChatGPT/GPT4为代表的LLMs时代，在被OpenAI卷死之前，做一点有意义的事情！未来有一天，等到GPT-X发布的时候，或许有人会说NLP不存在了，但是我们想证明有人曾来过！
 
-### * 【天秤（FlagEval）】
+### 天秤（FlagEval）
 - https://flageval.baai.ac.cn/#/home
 
 大语言评测体系及开放平台：构建“能力-任务-指标”三维评测框架，细粒度刻画模型的认知能力边界。
@@ -1022,7 +1043,7 @@ HuggingGPT利用ChatGPT作为控制器，连接HuggingFace社区中的各种AI�
 
 这意味着，你将拥有一种超魔法，通过HuggingGPT，便可拥有多模态能力，文生图、文生视频、语音全能拿捏了。
 
-### * 【KoLA: Carefully Benchmarking World Knowledge of Large Language Models】
+### KoLA: Carefully Benchmarking World Knowledge of Large Language Models
 - https://mp.weixin.qq.com/s/xVj1blhRtpO-Y1HgQ8Wl-A
 - https://arxiv.org/pdf/2306.09296.pdf
 - https://kola.xlore.cn
@@ -1097,13 +1118,13 @@ This is the official repository for PandaLM: ReProducible and Automated Language
 
 PandaLM aims to provide reproducible and automated comparisons between different large language models (LLMs). By giving PandaLM the same context, it can compare the responses of different LLMs and provide a reason for the decision, along with a reference answer. The target audience for PandaLM may be organizations that have confidential data and research labs with limited funds that seek reproducibility. These organizations may not want to disclose their data to third parties or may not be able to afford the high costs of secret data leakage using third-party APIs or hiring human annotators. With PandaLM, they can perform evaluations without compromising data security or incurring high costs, and obtain reproducible results. To demonstrate the reliability and consistency of our tool, we have created a diverse human-annotated test dataset of approximately 1,000 samples, where the contexts and the labels are all created by humans. On our test dataset, PandaLM-7B has achieved 94% ChatGPT's evaluation ability in terms of accuracy. The papers and more features are coming soon.
 
-### * 【Self-Instruct】
+### Self-Instruct
 - https://github.com/yizhongw/self-instruct
 - https://arxiv.org/abs/2212.10560
 
 Self-Instruct is a framework that helps language models improve their ability to follow natural language instructions. It does this by using the model's own generations to create a large collection of instructional data. With Self-Instruct, it is possible to improve the instruction-following capabilities of language models without relying on extensive manual annotation.
 
-### * 【ToolBench】
+### ToolBench
 - https://github.com/OpenBMB/ToolBench
 - https://arxiv.org/pdf/2304.08354.pdf
 - https://mp.weixin.qq.com/s/DuoQJj1OBl5iFPvjidDiCg
@@ -1283,23 +1304,23 @@ This project aims to construct open-source, large-scale, high-quality instructio
 ### 将330亿参数大模型「塞进」单个消费级GPU，加速15%、性能不减
 - https://mp.weixin.qq.com/s/819L-dY54BaVM1vub9OSpQ
 
-### * 也看OpenAI-embedding的平替方案：从text2vec、SGPT生成式emebdding到M3E近期新秀
+### 也看OpenAI-embedding的平替方案：从text2vec、SGPT生成式emebdding到M3E近期新秀
 - https://mp.weixin.qq.com/s/OoRYddUXBGWMhPSQYIFs-g
 
-### * Large Language Models Encode Clinical Knowledge
+### Large Language Models Encode Clinical Knowledge
 - http://arxiv.org/abs/2212.13138
 
-### * Towards Expert-Level Medical Question Answering with Large Language Models
+### Towards Expert-Level Medical Question Answering with Large Language Models
 - https://mp.weixin.qq.com/s/zVqcw-tZmP4pQmPd5dwfiA
 - https://arxiv.org/abs/2305.09617
 
-### * Are Large Language Models Ready for Healthcare? A Comparative Study on Clinical Language Understanding
+### Are Large Language Models Ready for Healthcare? A Comparative Study on Clinical Language Understanding
 - http://arxiv.org/abs/2304.05368
 
-### * CAN LARGE LANGUAGE MODELS REASON ABOUT MEDICAL QUESTIONS?
+### CAN LARGE LANGUAGE MODELS REASON ABOUT MEDICAL QUESTIONS?
 - http://arxiv.org/abs/2207.08143
 
-### * Anima基于QLoRA+DPO的低成本RLHF训练
+### Anima基于QLoRA+DPO的低成本RLHF训练
 - https://github.com/lyogavin/Anima/tree/main/rlhf
 
 > 持续更新中 (Continuously Updated)... 
