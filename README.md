@@ -536,6 +536,18 @@ This is the repo for the Chinese-Guanaco project, which aims to build and share 
 
 Chinese-Guanaco uses bitsandbytes for quantization and is integrated with Huggingface's PEFT and transformers libraries.
 
+### * 【DPO（Direct Preference Optimization】
+- https://arxiv.org/abs/2305.18290
+- https://zhuanlan.zhihu.com/p/641045324
+- https://huggingface.co/lyogavin/Anima33B-DPO-Belle-1k-merged
+- https://github.com/lyogavin/Anima/tree/main/rlhf
+
+DPO的核心原理是：PPO训练难度核心是因为需要通过reward model来表达偏好，进行强化学习。
+
+为了不再依赖于reward model进行强化学习，他进行了一系列的数学变换，直接推导出了基于Policy Language Model的标注偏好的概率表达形式，从而可以直接求解一个Language Model的最大似然估计。不再需要复杂繁琐的reward model和强化学习。
+
+While large-scale unsupervised language models (LMs) learn broad world knowledge and some reasoning skills, achieving precise control of their behavior is difficult due to the completely unsupervised nature of their training. Existing methods for gaining such steerability collect human labels of the relative quality of model generations and fine-tune the unsupervised LM to align with these preferences, often with reinforcement learning from human feedback (RLHF). However, RLHF is a complex and often unstable procedure, first fitting a reward model that reflects the human preferences, and then fine-tuning the large unsupervised LM using reinforcement learning to maximize this estimated reward without drifting too far from the original model. In this paper, we leverage a mapping between reward functions and optimal policies to show that this constrained reward maximization problem can be optimized exactly with a single stage of policy training, essentially solving a classification problem on the human preference data. The resulting algorithm, which we call Direct Preference Optimization (DPO), is stable, performant and computationally lightweight, eliminating the need for fitting a reward model, sampling from the LM during fine-tuning, or performing significant hyperparameter tuning. Our experiments show that DPO can fine-tune LMs to align with human preferences as well as or better than existing methods. Notably, fine-tuning with DPO exceeds RLHF's ability to control sentiment of generations and improves response quality in summarization and single-turn dialogue while being substantially simpler to implement and train.
+
 ### * 【DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality】
 - https://github.com/misonsky/DialogADV
 - https://mp.weixin.qq.com/s/Ga0a6a1L6CmCXgk6WDz0Xg
@@ -1230,6 +1242,9 @@ This project aims to construct open-source, large-scale, high-quality instructio
 
 ### * CAN LARGE LANGUAGE MODELS REASON ABOUT MEDICAL QUESTIONS?
 - http://arxiv.org/abs/2207.08143
+
+### * Anima基于QLoRA+DPO的低成本RLHF训练
+- https://github.com/lyogavin/Anima/tree/main/rlhf
 
 > 持续更新中 (Continuously Updated)... 
 
