@@ -1343,5 +1343,8 @@ This project aims to construct open-source, large-scale, high-quality instructio
 ### Anima基于QLoRA+DPO的低成本RLHF训练
 - https://github.com/lyogavin/Anima/tree/main/rlhf
 
+### * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance
+- https://github.com/chancefocus/PIXIU
+
 > 持续更新中 (Continuously Updated)... 
 
