@@ -4,8 +4,8 @@ Open-Source Language Model Pocket
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
 **相关文章**：
-- [练习场：穷穷穷孩子如何体验ColossalAI SFT（Kaggle篇）](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)
-- [练习场：穷穷穷孩子如何体验ColossalAI SFT（Colab篇）](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)
+- [穷穷穷孩子如何体验ColossalAI SFT（Kaggle篇）](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)
+- [穷穷穷孩子如何体验ColossalAI SFT（Colab篇）](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)
 - [通俗理解文本生成的常用解码策略](https://mp.weixin.qq.com/s/sVZuEkYXQ9ZZYXJCQz7F4A)
 - [通俗理解Gradient Checkpoint（附代码）](https://mp.weixin.qq.com/s/IwcfUP_j6JYFXH_xhnWWJQ)
 - 千“垂”百炼：垂直领域与语言模型
@@ -15,7 +15,7 @@ Open-Source Language Model Pocket
 
 **内容一览** (Table of Contents)：
 
-*中文开源模型（Chinese Open Source Language Models）*
+*中文友好或国内主创的开源模型（Chinese Open Source Language Models）*
 
 |  |  |  |
 |---|---|---|
