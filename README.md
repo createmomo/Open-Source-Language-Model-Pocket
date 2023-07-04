@@ -25,15 +25,15 @@ Open-Source Language Model Pocket
 | 扁鹊 | BELLE | LaWGPT |
 | 灵心 | Bloom | Lawyer LLaMA |
 | 启真 | BiLLa | LexiLaw |
-| 中文Alpaca Luotuo | BLOOMChat176B | LawGPT_zh |
-| 中文LLaMA&Alpaca | * 【ChatLaw 法律大模型】 | Linly伶荔说 |
-| 流萤Firefly | Chinese-Vicuna-medical | Linly伶荔说-Chinese-Falcon |
-| 凤凰 | Cornucopia-LLaMA-Fin-Chinese | MeChat |
-| 复旦MOSS | chatglm-maths | MedicalGPT |
-| 轩辕 | ChatRWKV | MedicalGPT-zh |
-| 悟道·天鹰Aquila | ChatYuan | OpenKG-KnowLLM |
-| 桃李 | ChatGLM-6B | OpenMEDLab 浦医 |
-|  | ChatGLM2-6B | PromptCLUE |
+| * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | BLOOMChat176B | LawGPT_zh |
+| 中文Alpaca Luotuo | * 【ChatLaw 法律大模型】 | Linly伶荔说 |
+| 中文LLaMA&Alpaca | Chinese-Vicuna-medical | Linly伶荔说-Chinese-Falcon |
+| 流萤Firefly | Cornucopia-LLaMA-Fin-Chinese | MeChat |
+| 凤凰 | chatglm-maths | MedicalGPT |
+| 复旦MOSS | ChatRWKV | MedicalGPT-zh |
+| 轩辕 | ChatYuan | OpenKG-KnowLLM |
+| 悟道·天鹰Aquila | ChatGLM-6B | OpenMEDLab 浦医 |
+| 桃李 | ChatGLM2-6B | PromptCLUE |
 |  | Chinese-Transformer-XL | SkyText-Chinese-GPT3 |
 |  | ChatMed-TCM&ChatMed-Consult | TechGPT |
 |  | ChatGLM-Med | TigerBot |
@@ -143,6 +143,26 @@ baichuan-7B 是由百川智能开发的一个开源可商用的大规模预训�
 - https://github.com/CMKRG/QiZhenGPT
 
 本项目利用启真医学知识库构建的中文医学指令数据集，并基于此在Chinese-LLaMA-Plus-7B、CaMA-13B、ChatGLM-6B模型上进行指令精调，大幅提高了模型在中文医疗场景下效果，首先针对药品知识问答发布了评测数据集，后续计划优化疾病、手术、检验等方面的问答效果，并针对医患问答、病历自动生成等应用展开拓展。
+
+### 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance
+- https://github.com/chancefocus/PIXIU
+- https://arxiv.org/abs/2306.05443
+- https://huggingface.co/spaces/ChanceFocus/FLARE
+
+The advancement of Natural Language Processing (NLP) and machine learning (ML) techniques in financial technology (FinTech) has enabled a diverse set of capabilities from predicting stock price movements to advanced financial analytics. However, to effectively understand the complex financial language and concepts, domain-specific LLMs are necessary.
+
+Despite prior efforts, there is a lack of open-source financial LLMs and benchmarks to evaluate them. Additionally, these models are not fine-tuned to follow natural language instructions, limiting their performance in downstream financial tasks.
+
+To address these gaps, we introduce PIXIU, providing:
+- Open-source LLMs tailored for finance called FinMA, by fine-tuning LLaMA with the dataset constructed in PIXIU.
+- Large-scale, high-quality multi-task and multi-modal financial instruction tuning data FIT.
+- Holistic financial evaluation benchmarks FLARE for assessing financial LLMs.
+
+Key Features
+- Open resources: PIXIU openly provides the financial LLM, instruction tuning data, and datasets included in the evaluation benchmark to encourage open research and transparency.
+- Multi-task: The instruction tuning data in PIXIU cover a diverse set of financial tasks, including four financial NLP tasks and one financial prediction task.
+- Multi-modality: PIXIU's instruction tuning data consist of multi-modality financial data, including time series data from the stock movement prediction task. It covers various types of financial texts, including reports, news articles, tweets, and regulatory filings.
+- Diversity: Unlike previous benchmarks focusing mainly on financial NLP tasks, PIXIU's evaluation benchmark includes critical financial prediction tasks aligned with real-world scenarios, making it more challenging.
 
 ### 中文Alpaca模型Luotuo
 - https://sota.jiqizhixin.com/project/luotuo
