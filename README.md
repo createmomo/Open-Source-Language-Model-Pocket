@@ -39,7 +39,7 @@ Open-Source Language Model Pocket
 |  | ChatMed-TCM&ChatMed-Consult | TechGPT |
 |  | ChatGLM-Med | TigerBot |
 |  | CPM-Bee | YuLan-Chat |
-|  |  | Ziya-LLaMA |
+|  | * 【Data-Copilot】 | Ziya-LLaMA |
 
 *训练/推理*
 |  |  |
@@ -394,6 +394,13 @@ CPM-Bee 是一个 完全开源、允许商用 的百亿参数中英文基座模�
 OpenBMB大模型系统生态支持：OpenBMB 大模型系统在高性能预训练、适配、压缩、部署、工具开发了一系列工具，CPM-Bee 基座模型将配套所有的工具脚本，高效支持开发者进行进阶使用。 
 
 强大的对话和工具使用能力：结合OpenBMB 在指令微调和工具学习的探索，我们在 CPM-Bee 基座模型的基础上进行微调，训练出了具有强大对话和工具使用能力的实例模型，现已开放定向邀请内测，未来会逐步向公众开放。
+
+### * 【Data-Copilot】
+- https://github.com/zwq2018/Data-Copilot
+- https://arxiv.org/abs/2306.07209
+- https://huggingface.co/spaces/zwq2018/Data-Copilot
+
+Data-Copilot 是一个基于 LLM 的系统，用于处理与数据相关的任务，连接了数十亿条数据和多样化的用户需求。它独立设计接口工具，以高效地管理、调用、处理和可视化数据。在接收到复杂请求时，Data-Copilot 会自主调用这些自设计的接口，构建一个工作流程来满足用户的意图。在没有人类协助的情况下，它能够熟练地将来自不同来源、不同格式的原始数据转化为人性化的输出，如图形、表格和文本。
 
 ### DoctorGLM
 - https://github.com/xionghonglin/DoctorGLM
