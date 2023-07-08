@@ -4,16 +4,16 @@ Open-Source Language Model Pocket
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
 **相关文章**：
-- [穷穷穷孩子如何体验ColossalAI SFT（Kaggle篇）](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)
-- [穷穷穷孩子如何体验ColossalAI SFT（Colab篇）](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)
+- 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
 - [通俗理解文本生成的常用解码策略](https://mp.weixin.qq.com/s/sVZuEkYXQ9ZZYXJCQz7F4A)
 - [通俗理解P-tuning (GPT Understands)](https://mp.weixin.qq.com/s/EvD9OW115XMnrxOcC2BKDA)
 - [通俗理解Gradient Checkpoint（附代码）](https://mp.weixin.qq.com/s/IwcfUP_j6JYFXH_xhnWWJQ)
 - 千“垂”百炼：垂直领域与语言模型
-  - [1 导语](https://mp.weixin.qq.com/s/G24skuUbyrSatxWczVxEAg)
-  - [2 【医疗/健康】 ChatDoctor（上）](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg)([解读](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg)，[PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf))
-  - [3 【医疗/健康】 ChatDoctor（中）](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw)([解读](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw)，[PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%AD%EF%BC%89.pdf))
-  - [4 【医疗/健康】 ChatDoctor（下）](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg)([解读](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg)，[PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8B%EF%BC%89.pdf))
+  - [导语](https://mp.weixin.qq.com/s/G24skuUbyrSatxWczVxEAg)
+  - 医疗/健康
+    - ChatDoctor
+      - 解读：[上](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg) [中](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw) [下](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg)
+      - PDF版PPT：[上](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf) [中](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%AD%EF%BC%89.pdf) [下](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8B%EF%BC%89.pdf)
 
 **内容一览** (Table of Contents)：
 
@@ -91,7 +91,7 @@ Open-Source Language Model Pocket
 | HuggingGPT | PandaLM |
 | KoLA: Carefully Benchmarking World Knowledge of Large Language Models | Self-Instruct |
 |  | ToolBench |
-
+|  | * 【Wanda (Pruning by Weights and activations)】|
 
 ## 1 中文开源模型（Chinese Open Source Language Models）
 
@@ -1159,6 +1159,16 @@ Self-Instruct is a framework that helps language models improve their ability to
 - https://mp.weixin.qq.com/s/DuoQJj1OBl5iFPvjidDiCg
 
 This project aims to construct open-source, large-scale, high-quality instruction tuning SFT data to facilitate the construction of powerful LLMs with general tool-use capability. We provide the dataset, the corresponding training and evaluation scripts, and a capable model ToolLLaMA fine-tuned on ToolBench.
+
+### Wanda (Pruning by Weights and activations)
+- https://github.com/locuslab/wanda
+- https://mp.weixin.qq.com/s/UoQLCQiFnKZUQPedDM_MCQ
+- https://arxiv.org/pdf/2306.11695.pdf
+
+A Simple and Effective Pruning Approach for Large Language Models
+
+As their size increases, Large Languages Models (LLMs) are natural candidates for network pruning methods: approaches that drop a subset of network weights while striving to preserve performance. Existing methods, however, require either retraining, which is rarely affordable for billion-scale LLMs, or solving a weight reconstruction problem reliant on second-order information, which may also be computationally expensive. In this paper, we introduce a novel, straightforward yet effective pruning method, termed Wanda (Pruning by Weights and activations), designed to induce sparsity in pretrained LLMs. Motivated by the recent observation of emergent large magnitude features in LLMs, our approach prune weights with the smallest magnitudes multiplied by the corresponding input activations, on a per-output basis. Notably, Wanda requires no retraining or weight update, and the pruned LLM can be used as is. We conduct a thorough evaluation of our method on LLaMA across various language benchmarks. Wanda significantly outperforms the established baseline of magnitude pruning and competes favorably against recent methods involving intensive weight update.
+
 
 ## 5 部分阅读资料
 ### 总结开源可用的Instruct/Prompt Tuning数据
