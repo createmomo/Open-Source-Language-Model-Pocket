@@ -13,6 +13,7 @@ Open-Source Language Model Pocket
   - [1 导语](https://mp.weixin.qq.com/s/G24skuUbyrSatxWczVxEAg)
   - [2 【医疗/健康】 ChatDoctor（上）](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg)([解读](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg)，[PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf))
   - [3 【医疗/健康】 ChatDoctor（中）](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw)([解读](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw)，[PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%AD%EF%BC%89.pdf))
+  - [4 【医疗/健康】 ChatDoctor（下）](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg)([解读](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg)，[PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8B%EF%BC%89.pdf))
 
 **内容一览** (Table of Contents)：
 
@@ -1350,6 +1351,9 @@ This project aims to construct open-source, large-scale, high-quality instructio
 
 ### Anima基于QLoRA+DPO的低成本RLHF训练
 - https://github.com/lyogavin/Anima/tree/main/rlhf
+
+### * A Survey on Evaluation of Large Language Models
+- https://arxiv.org/abs/2307.03109
 
 ### * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance
 - https://github.com/chancefocus/PIXIU
