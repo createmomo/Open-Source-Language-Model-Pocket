@@ -19,26 +19,26 @@ Open-Source Language Model Pocket
 
 |  |  |  |
 |---|---|---|
-| 本草 | Anima | DoctorGLM |
-| 百川 | BayLing | EVA |
-| 华佗 | BBT-FinCUGE-Aapplications | GPT2 for Multiple Language |
-| 扁鹊 | BELLE | LaWGPT |
-| 灵心 | Bloom | Lawyer LLaMA |
-| 启真 | BiLLa | LexiLaw |
-| * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | BLOOMChat176B | LawGPT_zh |
-| 中文Alpaca Luotuo | * 【ChatLaw 法律大模型】 | Linly伶荔说 |
-| 中文LLaMA&Alpaca | Chinese-Vicuna-medical | Linly伶荔说-Chinese-Falcon |
-| 流萤Firefly | Cornucopia-LLaMA-Fin-Chinese | MeChat |
-| 凤凰 | chatglm-maths | MedicalGPT |
-| 复旦MOSS | ChatRWKV | MedicalGPT-zh |
-| 轩辕 | ChatYuan | OpenKG-KnowLLM |
-| 悟道·天鹰Aquila | ChatGLM-6B | OpenMEDLab 浦医 |
-| 桃李 | ChatGLM2-6B | PromptCLUE |
-|  | Chinese-Transformer-XL | SkyText-Chinese-GPT3 |
-|  | ChatMed-TCM&ChatMed-Consult | TechGPT |
-|  | ChatGLM-Med | TigerBot |
-|  | CPM-Bee | YuLan-Chat |
-|  | * 【Data-Copilot】 | Ziya-LLaMA |
+| 本草 | Bloom | LaWGPT |
+| 百川 | BiLLa | Lawyer LLaMA |
+| 华佗 | BLOOMChat176B | LexiLaw |
+| 扁鹊 | * 【ChatLaw 法律大模型】 | LawGPT_zh |
+| 灵心 | Chinese-Vicuna-medical | Linly伶荔说 |
+| 启真 | Cornucopia-LLaMA-Fin-Chinese | Linly伶荔说-Chinese-Falcon |
+| * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | chatglm-maths | MeChat |
+| 中文Alpaca Luotuo | ChatRWKV | MedicalGPT |
+| 中文LLaMA&Alpaca | ChatYuan | MedicalGPT-zh |
+| 流萤Firefly | ChatGLM-6B | OpenKG-KnowLLM |
+| 凤凰 | ChatGLM2-6B | OpenMEDLab 浦医 |
+| 复旦MOSS | Chinese-Transformer-XL | PromptCLUE |
+| * 【复旦MOSS-RLHF】 | ChatMed-TCM&ChatMed-Consult | SkyText-Chinese-GPT3 |
+| 轩辕 | ChatGLM-Med | * 【ShenNong-TCM-LLM】 |
+| 悟道·天鹰Aquila | CPM-Bee | TechGPT |
+| 桃李 | * 【Data-Copilot】 | TigerBot |
+| Anima | DoctorGLM | YuLan-Chat |
+| BayLing | * 【EduChat】 | Ziya-LLaMA |
+| BBT-FinCUGE-Aapplications | EVA |  |
+| BELLE | GPT2 for Multiple Language |  |
 
 *训练/推理*
 |  |  |
@@ -207,6 +207,17 @@ LLM Zoo is a project that provides data, models, and evaluation benchmark for la
 - https://mp.weixin.qq.com/s/LjToZVWjQ-ot5KJFCFtA3g
 
 MOSS是一个支持中英双语和多种插件的开源对话语言模型，moss-moon系列模型具有160亿参数，在FP16精度下可在单张A100/A800或两张3090显卡运行，在INT4/8精度下可在单张3090显卡运行。MOSS基座语言模型在约七千亿中英文以及代码单词上预训练得到，后续经过对话指令微调、插件增强学习和人类偏好训练具备多轮对话能力及使用多种插件的能力。
+
+### 【复旦】MOSS-RLHF
+- https://mp.weixin.qq.com/s/BjXtnEEVCQiPOy-_qCNM4g
+- https://openlmlab.github.io/MOSS-RLHF/paper/SecretsOfRLHFPart1.pdf
+- https://openlmlab.github.io/MOSS-RLHF/
+
+FudanNLP 团队通过大量、详实工作，设计实验充分探索了大模型 RLHF 的完整工作流程，仔细剖析了 RLHF 中的强化学习 PPO 算法的内部工作原理以及它在整个 RLHF 中的作用，并研究各种优化方法如何影响训练过程。通过这些努力，确定了使得 PPO 算法在大模型人类对齐方面行之有效的关键因素。
+
+综合上述发现，该团队进一步总结出在大模型上训练更稳定的 PPO 算法版本：PPO-max。并使用 Helpful 和 Harmless 数据集全面评估，结果显示经过 PPO-max 算法训练的模型展现出了出色的人类对齐性能！
+
+综合上述发现，该团队进一步总结出在大模型上训练更稳定的 PPO 算法版本：PPO-max。并使用 Helpful 和 Harmless 数据集全面评估，结果显示经过 PPO-max 算法训练的模型展现出了出色的人类对齐性能！
 
 ### 【度小满】轩辕-首个千亿级中文金融对话模型
 - https://arxiv.org/pdf/2305.12002.pdf
@@ -417,6 +428,11 @@ Data-Copilot 是一个基于 LLM 的系统，用于处理与数据相关的任�
 
 DoctorGLM，基于 ChatGLM-6B的中文问诊模型。
 
+### EduChat
+- https://github.com/icalk-nlp/EduChat
+
+教育是影响人的身心发展的社会实践活动，旨在把人所固有的或潜在的素质自内而外激发出来。因此，必须贯彻“以人为本”的教育理念，重点关注人的个性化、引导式、身心全面发展。为了更好地助力”以人为本“的教育，华东师范大学计算机科学与技术学院的EduNLP团队探索了针对教育垂直领域的对话大模型EduChat相关项目研发。该项目主要研究以预训练大模型为基底的教育对话大模型相关技术，融合多样化的教育垂直领域数据，辅以指令微调、价值观对齐等方法，提供教育场景下自动出题、作业批改、情感支持、课程辅导、高考咨询等丰富功能，服务于广大老师、学生和家长群体，助力实现因材施教、公平公正、富有温度的智能教育。
+
 ### EVA: 大规模中文开放域对话系统
 - https://github.com/thu-coai/EVA
 
@@ -553,6 +569,17 @@ PromptCLUE：大规模多任务Prompt预训练中文开源模型。
 - https://github.com/SkyWorkAIGC/SkyText-Chinese-GPT3
 
 SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊天、问答、中英互译等不同的任务。 应用这个模型，除了可以实现基本的聊天、对话、你问我答外，还能支持中英文互译、内容续写、对对联、写古诗、生成菜谱、第三人称转述、创建采访问题等多种功能。
+
+### ShenNong-TCM-LLM
+- https://github.com/michael-wzhu/ShenNong-TCM-LLM
+
+为推动LLM在中医药领域的发展和落地，提升LLM的在中医药方面的知识与回答医学咨询的能力，同时推动大模型赋能中医药传承，我们现推出ShenNong中医药大规模语言模型:
+
+🚀 ShenNong-TCM :
+- 这一模型的训练数据为中医药指令数据集ShenNong_TCM_Dataset。
+- ChatMed_TCM_Dataset以我们开源的中医药知识图谱为基础；
+- 采用以实体为中心的自指令方法entity-centric self-instruct，调用ChatGPT得到11w+的围绕中医药的指令数据；
+- ShenNong-TCM模型也是以LlaMA为底座，采用LoRA (rank=16)微调得到。微调代码与ChatMed代码库相同
 
 ### TechGPT
 - https://mp.weixin.qq.com/s/nF1He7jhAHfh7PzhjqHoZg
