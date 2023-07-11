@@ -44,20 +44,21 @@ Open-Source Language Model Pocket
 |  |  |
 |---|---|
 | Alpaca-LoRA | MeZO: Fine-Tuning Language Models with Just Forward Passes |
-| AlpacaFarm | PKU-Beaver 河狸 (Safe RLHF) |
-| ColossalAI | PaLM + RLHF (Pytorch) |
-| ChatLLaMA | RL4LMs |
-| Chinese-Guanaco | Reinforcement Learning with Language Model |
-| DPO (Direct Preference Optimization) | SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression |
-| DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | Scikit-LLM: Sklearn Meets Large Language Models |
-| DeepSpeed-Chat | Transformer Reinforcement Learning |
-| FlexGen | Train_Transformers_with_INT4 |
-| FlagAI and FlagData | Transformer Reinforcement Learning X |
-| Guanaco & QloRA | vLLM |
-| GPT4All |  |
+| AlpacaFarm | MLC LLM |
+| ColossalAI | PKU-Beaver 河狸 (Safe RLHF) |
+| ChatLLaMA | PaLM + RLHF (Pytorch) |
+| Chinese-Guanaco | RL4LMs |
+| DPO (Direct Preference Optimization) | Reinforcement Learning with Language Model |
+| DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression |
+| DeepSpeed-Chat | Scikit-LLM: Sklearn Meets Large Language Models |
+| FlexGen | Transformer Reinforcement Learning |
+| FlagAI and FlagData | Train_Transformers_with_INT4 |
+| Guanaco & QloRA | Transformer Reinforcement Learning X |
+| GPT4All | vLLM |
 | HugNLP |  |
 | INSTRUCTEVAL |  |
 | LOw-Memory Optimization (LOMO) |  |
+| llama.cpp |  |
 
 *可参考的其它开源模型*
 |  |  |
@@ -72,24 +73,34 @@ Open-Source Language Model Pocket
 | Goar-7B for Arithmetic Tasks | StableLM |
 | HuggingChat | StableVicuna |
 | Koala: A Dialogue Model for Academic Research | Stanford Alpaca |
-| LLaMA复刻版OpenLLaMA | UltraLM-13B |
-| Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM | Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality |
-| Lit-LLaMA ️ | Wombat |
-|  | XGen-7B |
+| * 【LongLLaMA】 | UltraLM-13B |
+| LLaMA复刻版OpenLLaMA | Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality |
+| Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM | Wombat |
+| Lit-LLaMA ️ | XGen-7B |
+
+*评价*
+|  |
+|---|
+| C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models |
+| 天秤（FlagEval） |
+| KoLA: Carefully Benchmarking World Knowledge of Large Language Models |
+| Multiscale Positive-Unlabeled Detection of AI-Generated Texts |
+| PandaLM |
+| * 【獬豸（Xiezhi）Benchmark】 |
 
 *其它*
 |  |  |
 |---|---|
-| Alpaca-CoT | LLMPruner：大语言模型裁剪工具 |
-| Auto-GPT | LLM-Pruner: On the Structural Pruning of Large Language Models |
-| C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models | llama.cpp |
-| ChatPiXiu | LLM for Recommendation Systems |
-| 天秤（FlagEval） | MLC LLM |
-| Gorilla | Multiscale Positive-Unlabeled Detection of AI-Generated Texts |
-| HuggingGPT | PandaLM |
-| KoLA: Carefully Benchmarking World Knowledge of Large Language Models | Self-Instruct |
-|  | ToolBench |
-|  | * 【Wanda (Pruning by Weights and activations)】|
+| Alpaca-CoT | Self-Instruct |
+| Auto-GPT | ToolBench |
+| ChatPiXiu | * 【Wanda (Pruning by Weights and activations)】 |
+| Gorilla |  |
+| HuggingGPT |  |
+| LLMPruner：大语言模型裁剪工具 |  |
+| LLM-Pruner: On the Structural Pruning of Large Language Models |  |
+| LLM for Recommendation Systems |  |
+
+---
 
 ## 1 Chinese Open Source Language Models
 
@@ -727,6 +738,19 @@ HugNLP是一个分层式框架，遵循“高内聚低耦合”的开发模式�
 
 Large Language Models (LLMs) have revolutionized Natural Language Processing (NLP) but demand massive GPU resources for training. Lowering the threshold for LLMs training would encourage greater participation from researchers, benefiting both academia and society. While existing approaches have focused on parameter-efficient fine-tuning, which tunes or adds a small number of parameters, few have addressed the challenge of tuning the full parameters of LLMs with limited resources. In this work, we propose a new optimizer, LOw-Memory Optimization (LOMO), which fuses the gradient computation and the parameter update in one step to reduce memory usage. By integrating LOMO with existing memory saving techniques, we reduce memory usage to 10.8% compared to the standard approach (DeepSpeed solution). Consequently, our approach enables the full parameter fine-tuning of a 65B model on a single machine with 8 RTX 3090, each with 24GB memory.
 
+### llama.cpp
+- https://github.com/ggerganov/llama.cpp
+
+Inference of LLaMA model in pure C/C++
+
+The main goal is to run the model using 4-bit quantization on a MacBook
+- Plain C/C++ implementation without dependencies
+- Apple silicon first-class citizen - optimized via ARM NEON
+- AVX2 support for x86 architectures
+- Mixed F16 / F32 precision
+- 4-bit quantization support
+- Runs on the CPU
+
 ### MeZO: Fine-Tuning Language Models with Just Forward Passes
 - https://github.com/princeton-nlp/MeZO
 - https://arxiv.org/abs/2305.17333
@@ -735,6 +759,20 @@ Large Language Models (LLMs) have revolutionized Natural Language Processing (NL
 This is the implementation for the paper Fine-Tuning Language Models with Just Forward Passes. In this paper we propose a memory-efficient zeroth-order optimizer (MeZO), adapting the classical zeroth-order SGD method to operate in-place, thereby fine-tuning language models (LMs) with the same memory footprint as inference.
 
 With a single A100 80GB GPU, MeZO can train a 30-billion parameter OPT model, whereas fine-tuning with Adam can train only a 2.7B LM. MeZO demonstrates comparable performance to fine-tuning with backpropagation across multiple tasks, with up to 12× memory reduction. MeZO is also compatible with both full-parameter and parameter-efficient tuning techniques such as LoRA and prefix tuning. We also show that MeZO can effectively optimize non-differentiable objectives (e.g., maximizing accuracy or F1).
+
+### MLC LLM
+- https://github.com/mlc-ai/mlc-llm
+
+MLC LLM is a universal solution that allows any language models to be deployed natively on a diverse set of hardware backends and native applications, plus a productive framework for everyone to further optimize model performance for their own use cases.
+
+Our mission is to enable everyone to develop, optimize and deploy AI models natively on everyone's devices.
+
+Everything runs locally with no server support and accelerated with local GPUs on your phone and laptops. Supported platforms include:
+- iPhone, iPad
+- Metal GPUs and Intel/ARM MacBooks;
+- AMD, Intel and NVIDIA GPUs via Vulkan on Windows and Linux;
+- NVIDIA GPUs via CUDA on Windows and Linux;
+- WebGPU on browsers (through companion project WebLLM).
 
 ### PKU-Beaver 河狸 (Safe RLHF)
 - https://github.com/PKU-Alignment/safe-rlhf
@@ -885,6 +923,16 @@ Making the community's best AI chat models available to everyone.
 
 In this post, we introduce Koala, a chatbot trained by fine-tuning Meta’s LLaMA on dialogue data gathered from the web. We describe the dataset curation and training process of our model, and also present the results of a user study that compares our model to ChatGPT and Stanford’s Alpaca. Our results show that Koala can effectively respond to a variety of user queries, generating responses that are often preferred over Alpaca, and at least tied with ChatGPT in over half of the cases.
 
+### LongLLaMA
+- https://mp.weixin.qq.com/s/XzaET7WfrNpOf-zdiSxrig
+- https://arxiv.org/pdf/2307.03170.pdf
+- https://github.com/CStanKonrad/long_llama
+- https://huggingface.co/syzymon/long_llama_3b
+
+This repository contains the research preview of LongLLaMA, a large language model capable of handling long contexts of 256k tokens or even more.
+
+LongLLaMA is built upon the foundation of OpenLLaMA and fine-tuned using the Focused Transformer (FoT) method. We release a smaller 3B variant of the LongLLaMA model on a permissive license (Apache 2.0) and inference code supporting longer contexts on Hugging Face. Our model weights can serve as the drop-in replacement of LLaMA in existing implementations (for short context up to 2048 tokens). Additionally, we provide evaluation results and comparisons against the original OpenLLaMA models. Stay tuned for further updates.
+
 ### LLaMA复刻版OpenLLaMA
 - https://github.com/openlm-research/open_llama
 
@@ -1017,7 +1065,53 @@ We trained a series of 7B LLMs named XGen-7B with standard dense attention on up
 - XGen-7B archives equally strong results both in text (e.g., MMLU, QA) and code (HumanEval) tasks.
 - Training cost of $150K on 1T tokens under Google Cloud pricing for TPU-v4.
 
-## 4 其它
+## 4 评价
+
+### C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models
+- https://arxiv.org/abs/2305.08322
+- https://cevalbenchmark.com/
+- https://github.com/SJTU-LIT/ceval
+
+C-Eval is a comprehensive Chinese evaluation suite for foundation models. It consists of 13948 multi-choice questions spanning 52 diverse disciplines and four difficulty levels.
+
+### 天秤（FlagEval）
+- https://flageval.baai.ac.cn/#/home
+
+大语言评测体系及开放平台：构建“能力-任务-指标”三维评测框架，细粒度刻画模型的认知能力边界。
+
+### KoLA: Carefully Benchmarking World Knowledge of Large Language Models
+- https://mp.weixin.qq.com/s/xVj1blhRtpO-Y1HgQ8Wl-A
+- https://arxiv.org/pdf/2306.09296.pdf
+- https://kola.xlore.cn
+
+KoLA基于19个关注实体、概念和事件的任务。参考了Bloom认知体系，KoLA从知识的记忆、理解、应用和创造4个层级，从深度而非广度去衡量大语言模型处理世界知识的能力。实验结果表明，GPT-4虽然很强，但依然未能霸榜，在知识创造层次的测试中仅排第三名。
+
+### Multiscale Positive-Unlabeled Detection of AI-Generated Texts
+- https://mp.weixin.qq.com/s/KBN8TMwXD1bcE2X_dImXVg
+- https://arxiv.org/abs/2305.18149
+- https://github.com/mindspore-lab/mindone/tree/master/examples/detect_chatgpt
+- https://github.com/YuchuanTian/AIGC_text_detector
+
+Recent releases of Large Language Models (LLMs), e.g. ChatGPT, are astonishing at generating human-like texts, but they may get misused for fake scholarly texts, fake news, fake tweets, et cetera. Previous works have proposed methods to detect these multiscale AI-generated texts, including simple ML classifiers, pretrained-model-based training-agnostic methods, and finetuned language classification models. However, mainstream detectors are formulated without considering the factor of corpus length: shorter corpuses are harder to detect compared with longer ones for shortage of informative features. In this paper, a Multiscale Positive-Unlabeled (MPU) training framework is proposed to address the challenge of multiscale text detection. Firstly, we acknowledge the human-resemblance property of short machine texts, and rephrase text classification as a Positive-Unlabeled (PU) problem by marking these short machine texts as "unlabeled" during training. In this PU context, we propose the length-sensitive Multiscale PU Loss, where we use a recurrent model in abstraction to estimate positive priors of scale-variant corpuses. Additionally, we introduce a Text Multiscaling module to enrich training corpuses. Experiments show that our MPU method augments detection performance on long AI-generated text, and significantly improves short-corpus detection of language model detectors. Language Models trained with MPU could outcompete existing detectors by large margins on multiscale AI-generated texts. 
+
+### PandaLM
+- https://github.com/WeOpenML/PandaLM
+- https://zhuanlan.zhihu.com/p/630173415
+- https://mp.weixin.qq.com/s/HE6jez3G9aEO5qLkvwtKXg
+
+This is the official repository for PandaLM: ReProducible and Automated Language Model Assessment.
+
+PandaLM aims to provide reproducible and automated comparisons between different large language models (LLMs). By giving PandaLM the same context, it can compare the responses of different LLMs and provide a reason for the decision, along with a reference answer. The target audience for PandaLM may be organizations that have confidential data and research labs with limited funds that seek reproducibility. These organizations may not want to disclose their data to third parties or may not be able to afford the high costs of secret data leakage using third-party APIs or hiring human annotators. With PandaLM, they can perform evaluations without compromising data security or incurring high costs, and obtain reproducible results. To demonstrate the reliability and consistency of our tool, we have created a diverse human-annotated test dataset of approximately 1,000 samples, where the contexts and the labels are all created by humans. On our test dataset, PandaLM-7B has achieved 94% ChatGPT's evaluation ability in terms of accuracy. The papers and more features are coming soon.
+
+### 獬豸（Xiezhi）Benchmark
+- https://arxiv.org/abs/2306.05783
+- https://github.com/MikeGu721/XiezhiBenchmark
+
+Xiezhi是一个综合的、多学科的、能够自动更新的领域知识评估Benchmark。Xiezhi包含了哲学、经济学、法学、教育学、文学、历史学、自然科学、工学、农学、医学、军事学、管理学、艺术学这13个学科门类，24万道学科题目，516个具体学科，249587道题目。这 516 个学科以及分类方式源自中国教育部颁布的学科分类法。作者从中国研究生入学考试中手动选择并注释了 20,000 道多选题，涵盖了这 516 个标签，以形成Xiezhi-Meta数据集。Xiezhi-Meta被用来训练一个能够计算题目和学科标签之间相关性的标注模型。作者们随后收集了来自不同考试的 150,000 个多项选择题，以及来自学术Survey的 70,000 个多项选择题，并使用标注模型对所有这些问题进行了注释。
+
+为了方便进行实验，并能够有效地评估LLM对于跨学科知识的处理能力，作者们提出了Xiezhi-Specialty和Xiezhi-Interdiscipline，这两个数据集都提供了中英文的版本，并由 15,000 个更平衡、更不敏感、更不以中国为中心的多选题组成。 Xiezhi-Specialty 包含可以使用单一领域的知识解决的问题，而 Xiezhi-Interdiscipline 包含需要来自多个领域的知识才能解决的问题。
+
+## 5 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
 - https://mp.weixin.qq.com/s/Q5Q3RpQ80XmpbfhSxq2R1Q
@@ -1031,13 +1125,6 @@ Alpaca-CoT项目旨在探究如何更好地通过instruction-tuning的方式来�
 
 Auto-GPT is an experimental open-source application showcasing the capabilities of the GPT-4 language model. This program, driven by GPT-4, chains together LLM "thoughts", to autonomously achieve whatever goal you set. As one of the first examples of GPT-4 running fully autonomously, Auto-GPT pushes the boundaries of what is possible with AI.
 
-### C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models
-- https://arxiv.org/abs/2305.08322
-- https://cevalbenchmark.com/
-- https://github.com/SJTU-LIT/ceval
-
-C-Eval is a comprehensive Chinese evaluation suite for foundation models. It consists of 13948 multi-choice questions spanning 52 diverse disciplines and four difficulty levels.
-
 ### ChatPiXiu
 - https://github.com/catqaq/ChatPiXiu
 
@@ -1046,11 +1133,6 @@ C-Eval is a comprehensive Chinese evaluation suite for foundation models. It con
 也许有一天，等到GPT-X发布的时候，有人会说NLP不存在了，但是我们想证明有人曾经来过、热爱过！在以ChatGPT/GPT4为代表的LLMs时代，在被CloseAI卷死之前，我们发起了OpenNLP计划，宗旨是OpenNLP for everyone!
 
 ChatPiXiu项目为OpenNLP计划的第2个正式的开源项目，旨在Open ChatGPT for everyone！在以ChatGPT/GPT4为代表的LLMs时代，在被OpenAI卷死之前，做一点有意义的事情！未来有一天，等到GPT-X发布的时候，或许有人会说NLP不存在了，但是我们想证明有人曾来过！
-
-### 天秤（FlagEval）
-- https://flageval.baai.ac.cn/#/home
-
-大语言评测体系及开放平台：构建“能力-任务-指标”三维评测框架，细粒度刻画模型的认知能力边界。
 
 ### Gorilla
 - https://mp.weixin.qq.com/s/p9tx3q3Lpr4fNqdyxWhzyA
@@ -1070,13 +1152,6 @@ HuggingGPT利用ChatGPT作为控制器，连接HuggingFace社区中的各种AI�
 
 这意味着，你将拥有一种超魔法，通过HuggingGPT，便可拥有多模态能力，文生图、文生视频、语音全能拿捏了。
 
-### KoLA: Carefully Benchmarking World Knowledge of Large Language Models
-- https://mp.weixin.qq.com/s/xVj1blhRtpO-Y1HgQ8Wl-A
-- https://arxiv.org/pdf/2306.09296.pdf
-- https://kola.xlore.cn
-
-KoLA基于19个关注实体、概念和事件的任务。参考了Bloom认知体系，KoLA从知识的记忆、理解、应用和创造4个层级，从深度而非广度去衡量大语言模型处理世界知识的能力。实验结果表明，GPT-4虽然很强，但依然未能霸榜，在知识创造层次的测试中仅排第三名。
-
 ### LLMPruner：大语言模型裁剪工具
 - https://mp.weixin.qq.com/s/u0UcCxzJOkF4fO_JI6ToQA
 - https://github.com/yangjianxin1/LLMPruner
@@ -1094,56 +1169,12 @@ KoLA基于19个关注实体、概念和事件的任务。参考了Bloom认知体
 
 最后，我们利用 LoRA 对被剪枝模型进行快速恢复和调整。我们使用多个 zero-shot 数据集评估了 LLM-Pruner 在三个不同模型（LLaMA，Vicuna 和 ChatGLM）上的有效性。我们的实验结果表明，LLM-Pruner 成功地剪枝了模型，在保留 zero-shot 能力的同时减轻了计算负担。
 
-### llama.cpp
-- https://github.com/ggerganov/llama.cpp
-
-Inference of LLaMA model in pure C/C++
-
-The main goal is to run the model using 4-bit quantization on a MacBook
-- Plain C/C++ implementation without dependencies
-- Apple silicon first-class citizen - optimized via ARM NEON
-- AVX2 support for x86 architectures
-- Mixed F16 / F32 precision
-- 4-bit quantization support
-- Runs on the CPU
-
 ### LLM for Recommendation Systems
 - https://github.com/WLiK/LLM4Rec
 - https://arxiv.org/abs/2305.19860
 - https://mp.weixin.qq.com/s/WCUjCahiak4STbb0QjJInQ
 
 Large Language Models (LLMs) have emerged as powerful tools in the field of Natural Language Processing (NLP) and have recently gained significant attention in the domain of Recommendation Systems (RS). These models, trained on massive amounts of data using self-supervised learning, have demonstrated remarkable success in learning universal representations and have the potential to enhance various aspects of recommendation systems by some effective transfer techniques such as fine-tuning and prompt tuning, and so on. The crucial aspect of harnessing the power of language models in enhancing recommendation quality is the utilization of their high-quality representations of textual features and their extensive coverage of external knowledge to establish correlations between items and users. To provide a comprehensive understanding of the existing LLM-based recommendation systems, this survey presents a taxonomy that categorizes these models into two major paradigms, respectively Discriminative LLM for Recommendation (DLLM4Rec) and Generative LLM for Recommendation (GLLM4Rec), with the latter being systematically sorted out for the first time. Furthermore, we systematically review and analyze existing LLM-based recommendation systems within each paradigm, providing insights into their methodologies, techniques, and performance. Additionally, we identify key challenges and several valuable findings to provide researchers and practitioners with inspiration.
-
-### MLC LLM
-- https://github.com/mlc-ai/mlc-llm
-
-MLC LLM is a universal solution that allows any language models to be deployed natively on a diverse set of hardware backends and native applications, plus a productive framework for everyone to further optimize model performance for their own use cases.
-
-Our mission is to enable everyone to develop, optimize and deploy AI models natively on everyone's devices.
-
-Everything runs locally with no server support and accelerated with local GPUs on your phone and laptops. Supported platforms include:
-- iPhone, iPad
-- Metal GPUs and Intel/ARM MacBooks;
-- AMD, Intel and NVIDIA GPUs via Vulkan on Windows and Linux;
-- NVIDIA GPUs via CUDA on Windows and Linux;
-- WebGPU on browsers (through companion project WebLLM).
-
-### Multiscale Positive-Unlabeled Detection of AI-Generated Texts
-- https://mp.weixin.qq.com/s/KBN8TMwXD1bcE2X_dImXVg
-- https://arxiv.org/abs/2305.18149
-- https://github.com/mindspore-lab/mindone/tree/master/examples/detect_chatgpt
-- https://github.com/YuchuanTian/AIGC_text_detector
-
-Recent releases of Large Language Models (LLMs), e.g. ChatGPT, are astonishing at generating human-like texts, but they may get misused for fake scholarly texts, fake news, fake tweets, et cetera. Previous works have proposed methods to detect these multiscale AI-generated texts, including simple ML classifiers, pretrained-model-based training-agnostic methods, and finetuned language classification models. However, mainstream detectors are formulated without considering the factor of corpus length: shorter corpuses are harder to detect compared with longer ones for shortage of informative features. In this paper, a Multiscale Positive-Unlabeled (MPU) training framework is proposed to address the challenge of multiscale text detection. Firstly, we acknowledge the human-resemblance property of short machine texts, and rephrase text classification as a Positive-Unlabeled (PU) problem by marking these short machine texts as "unlabeled" during training. In this PU context, we propose the length-sensitive Multiscale PU Loss, where we use a recurrent model in abstraction to estimate positive priors of scale-variant corpuses. Additionally, we introduce a Text Multiscaling module to enrich training corpuses. Experiments show that our MPU method augments detection performance on long AI-generated text, and significantly improves short-corpus detection of language model detectors. Language Models trained with MPU could outcompete existing detectors by large margins on multiscale AI-generated texts. 
-
-### PandaLM
-- https://github.com/WeOpenML/PandaLM
-- https://zhuanlan.zhihu.com/p/630173415
-- https://mp.weixin.qq.com/s/HE6jez3G9aEO5qLkvwtKXg
-
-This is the official repository for PandaLM: ReProducible and Automated Language Model Assessment.
-
-PandaLM aims to provide reproducible and automated comparisons between different large language models (LLMs). By giving PandaLM the same context, it can compare the responses of different LLMs and provide a reason for the decision, along with a reference answer. The target audience for PandaLM may be organizations that have confidential data and research labs with limited funds that seek reproducibility. These organizations may not want to disclose their data to third parties or may not be able to afford the high costs of secret data leakage using third-party APIs or hiring human annotators. With PandaLM, they can perform evaluations without compromising data security or incurring high costs, and obtain reproducible results. To demonstrate the reliability and consistency of our tool, we have created a diverse human-annotated test dataset of approximately 1,000 samples, where the contexts and the labels are all created by humans. On our test dataset, PandaLM-7B has achieved 94% ChatGPT's evaluation ability in terms of accuracy. The papers and more features are coming soon.
 
 ### Self-Instruct
 - https://github.com/yizhongw/self-instruct
@@ -1168,7 +1199,7 @@ A Simple and Effective Pruning Approach for Large Language Models
 As their size increases, Large Languages Models (LLMs) are natural candidates for network pruning methods: approaches that drop a subset of network weights while striving to preserve performance. Existing methods, however, require either retraining, which is rarely affordable for billion-scale LLMs, or solving a weight reconstruction problem reliant on second-order information, which may also be computationally expensive. In this paper, we introduce a novel, straightforward yet effective pruning method, termed Wanda (Pruning by Weights and activations), designed to induce sparsity in pretrained LLMs. Motivated by the recent observation of emergent large magnitude features in LLMs, our approach prune weights with the smallest magnitudes multiplied by the corresponding input activations, on a per-output basis. Notably, Wanda requires no retraining or weight update, and the pruned LLM can be used as is. We conduct a thorough evaluation of our method on LLaMA across various language benchmarks. Wanda significantly outperforms the established baseline of magnitude pruning and competes favorably against recent methods involving intensive weight update.
 
 
-## 5 部分阅读资料
+## 6 部分阅读资料
 ### 总结开源可用的Instruct/Prompt Tuning数据
 - https://zhuanlan.zhihu.com/p/615277009
 
