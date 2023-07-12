@@ -81,12 +81,14 @@ Open-Source Language Model Pocket
 *评价*
 |  |
 |---|
-| C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models |
 | 天秤（FlagEval） |
+| * 【獬豸（Xiezhi）Benchmark】 |
+| C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models |
+| * 【HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models】|
 | KoLA: Carefully Benchmarking World Knowledge of Large Language Models |
 | Multiscale Positive-Unlabeled Detection of AI-Generated Texts |
 | PandaLM |
-| * 【獬豸（Xiezhi）Benchmark】 |
+
 
 *其它*
 |  |  |
@@ -1094,6 +1096,19 @@ We trained a series of 7B LLMs named XGen-7B with standard dense attention on up
 
 ## 4 评价
 
+### 天秤（FlagEval）
+- https://flageval.baai.ac.cn/#/home
+
+大语言评测体系及开放平台：构建“能力-任务-指标”三维评测框架，细粒度刻画模型的认知能力边界。
+
+### 獬豸（Xiezhi）Benchmark
+- https://arxiv.org/abs/2306.05783
+- https://github.com/MikeGu721/XiezhiBenchmark
+
+Xiezhi是一个综合的、多学科的、能够自动更新的领域知识评估Benchmark。Xiezhi包含了哲学、经济学、法学、教育学、文学、历史学、自然科学、工学、农学、医学、军事学、管理学、艺术学这13个学科门类，24万道学科题目，516个具体学科，249587道题目。这 516 个学科以及分类方式源自中国教育部颁布的学科分类法。作者从中国研究生入学考试中手动选择并注释了 20,000 道多选题，涵盖了这 516 个标签，以形成Xiezhi-Meta数据集。Xiezhi-Meta被用来训练一个能够计算题目和学科标签之间相关性的标注模型。作者们随后收集了来自不同考试的 150,000 个多项选择题，以及来自学术Survey的 70,000 个多项选择题，并使用标注模型对所有这些问题进行了注释。
+
+为了方便进行实验，并能够有效地评估LLM对于跨学科知识的处理能力，作者们提出了Xiezhi-Specialty和Xiezhi-Interdiscipline，这两个数据集都提供了中英文的版本，并由 15,000 个更平衡、更不敏感、更不以中国为中心的多选题组成。 Xiezhi-Specialty 包含可以使用单一领域的知识解决的问题，而 Xiezhi-Interdiscipline 包含需要来自多个领域的知识才能解决的问题。
+
 ### C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models
 - https://arxiv.org/abs/2305.08322
 - https://cevalbenchmark.com/
@@ -1101,10 +1116,12 @@ We trained a series of 7B LLMs named XGen-7B with standard dense attention on up
 
 C-Eval is a comprehensive Chinese evaluation suite for foundation models. It consists of 13948 multi-choice questions spanning 52 diverse disciplines and four difficulty levels.
 
-### 天秤（FlagEval）
-- https://flageval.baai.ac.cn/#/home
+### HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models
+- https://mp.weixin.qq.com/s/cuoO2V4X-GQOuWyA-e9BeQ
+- https://arxiv.org/abs/2305.11747
+- https://github.com/RUCAIBox/HaluEval
 
-大语言评测体系及开放平台：构建“能力-任务-指标”三维评测框架，细粒度刻画模型的认知能力边界。
+为了进一步研究大模型幻象的内容类型和大模型生成幻象的原因，本文提出了用于大语言模型幻象评估的基准——HaluEval。我们基于现有的数据集，通过自动生成和手动标注的方式构建了大量的幻象数据组成HaluEval的数据集，其中包含特定于问答、对话、文本摘要任务的30000条样本以及普通用户查询的5000条样本。在本文中，我们详细介绍了HaluEval数据集的构建过程，对构建的数据集进行了内容分析，并初步探索了大模型识别和减少幻象的策略。
 
 ### KoLA: Carefully Benchmarking World Knowledge of Large Language Models
 - https://mp.weixin.qq.com/s/xVj1blhRtpO-Y1HgQ8Wl-A
@@ -1129,14 +1146,6 @@ Recent releases of Large Language Models (LLMs), e.g. ChatGPT, are astonishing a
 This is the official repository for PandaLM: ReProducible and Automated Language Model Assessment.
 
 PandaLM aims to provide reproducible and automated comparisons between different large language models (LLMs). By giving PandaLM the same context, it can compare the responses of different LLMs and provide a reason for the decision, along with a reference answer. The target audience for PandaLM may be organizations that have confidential data and research labs with limited funds that seek reproducibility. These organizations may not want to disclose their data to third parties or may not be able to afford the high costs of secret data leakage using third-party APIs or hiring human annotators. With PandaLM, they can perform evaluations without compromising data security or incurring high costs, and obtain reproducible results. To demonstrate the reliability and consistency of our tool, we have created a diverse human-annotated test dataset of approximately 1,000 samples, where the contexts and the labels are all created by humans. On our test dataset, PandaLM-7B has achieved 94% ChatGPT's evaluation ability in terms of accuracy. The papers and more features are coming soon.
-
-### 獬豸（Xiezhi）Benchmark
-- https://arxiv.org/abs/2306.05783
-- https://github.com/MikeGu721/XiezhiBenchmark
-
-Xiezhi是一个综合的、多学科的、能够自动更新的领域知识评估Benchmark。Xiezhi包含了哲学、经济学、法学、教育学、文学、历史学、自然科学、工学、农学、医学、军事学、管理学、艺术学这13个学科门类，24万道学科题目，516个具体学科，249587道题目。这 516 个学科以及分类方式源自中国教育部颁布的学科分类法。作者从中国研究生入学考试中手动选择并注释了 20,000 道多选题，涵盖了这 516 个标签，以形成Xiezhi-Meta数据集。Xiezhi-Meta被用来训练一个能够计算题目和学科标签之间相关性的标注模型。作者们随后收集了来自不同考试的 150,000 个多项选择题，以及来自学术Survey的 70,000 个多项选择题，并使用标注模型对所有这些问题进行了注释。
-
-为了方便进行实验，并能够有效地评估LLM对于跨学科知识的处理能力，作者们提出了Xiezhi-Specialty和Xiezhi-Interdiscipline，这两个数据集都提供了中英文的版本，并由 15,000 个更平衡、更不敏感、更不以中国为中心的多选题组成。 Xiezhi-Specialty 包含可以使用单一领域的知识解决的问题，而 Xiezhi-Interdiscipline 包含需要来自多个领域的知识才能解决的问题。
 
 ## 5 其它
 ### Alpaca-CoT
