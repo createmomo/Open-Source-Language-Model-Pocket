@@ -19,7 +19,7 @@ Open-Source Language Model Pocket
 
 |  |  |  |
 |---|---|---|
-| 本草 | Bloom | InternLM 书生・浦语 |
+| 本草 | Bloom | * 【InternLM 书生・浦语】 |
 | 百川 | BiLLa | LaWGPT |
 | 华佗 | BLOOMChat176B | Lawyer LLaMA |
 | 扁鹊 | * 【ChatLaw 法律大模型】 | LexiLaw |
