@@ -19,25 +19,25 @@ Open-Source Language Model Pocket
 
 |  |  |  |
 |---|---|---|
-| 本草 | Bloom | LaWGPT |
-| 百川 | BiLLa | Lawyer LLaMA |
-| 华佗 | BLOOMChat176B | LexiLaw |
-| 扁鹊 | * 【ChatLaw 法律大模型】 | LawGPT_zh |
-| 灵心 | Chinese-Vicuna-medical | Linly伶荔说 |
-| 启真 | Cornucopia-LLaMA-Fin-Chinese | Linly伶荔说-Chinese-Falcon |
-| * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | chatglm-maths | MeChat |
-| 中文Alpaca Luotuo | ChatRWKV | MedicalGPT |
-| 中文LLaMA&Alpaca | ChatYuan | MedicalGPT-zh |
-| 流萤Firefly | ChatGLM-6B | OpenKG-KnowLLM |
-| 凤凰 | ChatGLM2-6B | OpenMEDLab 浦医 |
-| 复旦MOSS | Chinese-Transformer-XL | PromptCLUE |
-| * 【复旦MOSS-RLHF】 | ChatMed-TCM&ChatMed-Consult | SkyText-Chinese-GPT3 |
-| 轩辕 | ChatGLM-Med | * 【ShenNong-TCM-LLM】 |
-| 悟道·天鹰Aquila | CPM-Bee | TechGPT |
-| 桃李 | * 【Data-Copilot】 | TigerBot |
-| Anima | DoctorGLM | YuLan-Chat |
-| BayLing | * 【EduChat】 | Ziya-LLaMA |
-| BBT-FinCUGE-Aapplications | EVA |  |
+| 本草 | Bloom | InternLM 书生・浦语 |
+| 百川 | BiLLa | LaWGPT |
+| 华佗 | BLOOMChat176B | Lawyer LLaMA |
+| 扁鹊 | * 【ChatLaw 法律大模型】 | LexiLaw |
+| 灵心 | Chinese-Vicuna-medical | LawGPT_zh |
+| 启真 | Cornucopia-LLaMA-Fin-Chinese | Linly伶荔说 |
+| * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | chatglm-maths | Linly伶荔说-Chinese-Falcon |
+| 中文Alpaca Luotuo | ChatRWKV | MeChat |
+| 中文LLaMA&Alpaca | ChatYuan | MedicalGPT |
+| 流萤Firefly | ChatGLM-6B | MedicalGPT-zh |
+| 凤凰 | ChatGLM2-6B | OpenKG-KnowLLM |
+| 复旦MOSS | Chinese-Transformer-XL | OpenMEDLab 浦医 |
+| * 【复旦MOSS-RLHF】 | ChatMed-TCM&ChatMed-Consult | PromptCLUE |
+| 轩辕 | ChatGLM-Med | SkyText-Chinese-GPT3 |
+| 悟道·天鹰Aquila | CPM-Bee | * 【ShenNong-TCM-LLM】 |
+| 桃李 | * 【Data-Copilot】 | TechGPT |
+| Anima | DoctorGLM | TigerBot |
+| BayLing | * 【EduChat】 | YuLan-Chat |
+| BBT-FinCUGE-Aapplications | EVA | Ziya-LLaMA |
 | BELLE | GPT2 for Multiple Language |  |
 
 *训练/推理*
@@ -448,6 +448,19 @@ EVA 是目前最大的开源中文预训练对话模型，拥有28亿参数，�
 - 15亿参数 GPT2 中文预训练模型( 15G 语料，训练 10w 步 )
 - 开箱即用的模型生成效果 demo #
 - 15亿参数 GPT2 中文预训练模型( 30G 语料，训练 22w 步 )
+
+### InternLM 书生・浦语
+- https://github.com/InternLM
+- https://mp.weixin.qq.com/s/oTXnvWZJVdoOpFLHngbTYQ
+- https://intern-ai.org.cn/home
+
+InternLM has open-sourced a 7 billion parameter base model and a chat model tailored for practical scenarios. The model has the following characteristics:
+
+It leverages trillions of high-quality tokens for training to establish a powerful knowledge base.
+It supports an 8k context window length, enabling longer input sequences and stronger reasoning capabilities.
+
+It provides a versatile toolset for users to flexibly build their own workflows.
+Additionally, a lightweight training framework is offered to support model pre-training without the need for extensive dependencies. With a single codebase, it supports pre-training on large-scale clusters with thousands of GPUs, and fine-tuning on a single GPU while achieving remarkable performance optimizations. InternLM achieves nearly 90% acceleration efficiency during training on 1024 GPUs.
 
 ### LaWGPT
 - https://github.com/pengxiao-song/LaWGPT
