@@ -35,10 +35,11 @@ Open-Source Language Model Pocket
 | 轩辕 | ChatGLM-Med | SkyText-Chinese-GPT3 |
 | 悟道·天鹰Aquila | CPM-Bee | * 【ShenNong-TCM-LLM】 |
 | 桃李 | * 【Data-Copilot】 | TechGPT |
-| Anima | DoctorGLM | TigerBot |
-| BayLing | * 【EduChat】 | YuLan-Chat |
-| BBT-FinCUGE-Aapplications | EVA | Ziya-LLaMA |
-| BELLE | GPT2 for Multiple Language |  |
+| * 【情感大模型PICA】 | DoctorGLM | TigerBot |
+| Anima | * 【EduChat】 | YuLan-Chat |
+| BayLing | EVA | Ziya-LLaMA |
+| BBT-FinCUGE-Aapplications | GPT2 for Multiple Language |  |
+| BELLE |  |  |
 
 *训练/推理*
 |  |  |
@@ -245,6 +246,13 @@ FudanNLP 团队通过大量、详实工作，设计实验充分探索了大模�
 为解决上述问题，我们全面推出适用于国际中文教育领域的大模型 “桃李”（Taoli）1.0 ，一个在国际中文教育领域数据上进行了额外训练的模型。
 
 我们基于目前国际中文教育领域流通的500余册国际中文教育教材与教辅书、汉语水平考试试题以及汉语学习者词典等，构建了国际中文教育资源库。 我们设置了多种形式的指令来充分利用知识，构造了共计 88000 条的高质量国际中文教育问答数据集，并利用收集到的数据对模型进行指令微调，让模型习得将法律知识应用到具体场景中的能力。
+
+### 情感大模型PICA
+- https://mp.weixin.qq.com/s/E37EFe10185THHa3pSqBig
+- https://github.com/NEU-DataMining/PICA
+- https://huggingface.co/NEUDM/PICA-V1
+
+PICA 以清华大学开源的ChatGLM2-6B为基础，采用Prompt tuning技术在4 卡 A6000 训练大约15个小时得到。我们和SoulChat 进行了对比（最后部分），我们的模型在体验和安全上更有优势。我们只使用了2K的数据进行了p-tuning 微调，这充分说明了我们构造的数据质量比较高。模型权重可以在 HuggingFace 访问，欢迎各位使用并提出宝贵的意见。
 
 ### Anima：基于QLoRA的33B中文大语言模型
 - https://github.com/lyogavin/Anima
