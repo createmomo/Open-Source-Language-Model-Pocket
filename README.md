@@ -34,11 +34,11 @@ Open-Source Language Model Pocket
 | * 【复旦MOSS-RLHF】 | ChatMed-TCM&ChatMed-Consult | PromptCLUE |
 | 轩辕 | ChatGLM-Med | SkyText-Chinese-GPT3 |
 | 悟道·天鹰Aquila | CPM-Bee | * 【ShenNong-TCM-LLM】 |
-| 桃李 | * 【Data-Copilot】 | TechGPT |
-| * 【情感大模型PICA】 | DoctorGLM | TigerBot |
-| Anima | * 【EduChat】 | YuLan-Chat |
-| BayLing | EVA | Ziya-LLaMA |
-| BBT-FinCUGE-Aapplications | GPT2 for Multiple Language |  |
+| 桃李 | * 【Data-Copilot】 | * 【TableGPT】 |
+| * 【情感大模型PICA】 | DoctorGLM | TechGPT |
+| Anima | * 【EduChat】 | TigerBot |
+| BayLing | EVA | YuLan-Chat |
+| BBT-FinCUGE-Aapplications | GPT2 for Multiple Language | Ziya-LLaMA |
 | BELLE |  |  |
 
 *训练/推理*
@@ -603,6 +603,11 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 - ChatMed_TCM_Dataset以我们开源的中医药知识图谱为基础；
 - 采用以实体为中心的自指令方法entity-centric self-instruct，调用ChatGPT得到11w+的围绕中医药的指令数据；
 - ShenNong-TCM模型也是以LlaMA为底座，采用LoRA (rank=16)微调得到。微调代码与ChatMed代码库相同
+
+### TableGPT
+- https://github.com/ZJU-M3/TableGPT-techreport
+
+TableGPT is a specifically designed for table analysis. By unifying tables, natural language, and commands into one model, TableGPT comprehends tabular data, understands user intent through natural language, dissects the desired actions, and executes external commands on the table. It subsequently returns the processed results in both tabular and textual explanations to the user. This novel approach simplifies the way users engage with table data, bringing an intuitive feel to data analysis.
 
 ### TechGPT
 - https://mp.weixin.qq.com/s/nF1He7jhAHfh7PzhjqHoZg
