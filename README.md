@@ -69,7 +69,7 @@ Open-Source Language Model Pocket
 | Dolly 1&2 | Orca |
 | FinGPT | OpenChatKit |
 | Falcon | Open-Assistant |
-| Facebook LLaMA | MedLLaMA-13B & PMC-LLaMA: Continue Training LLaMA on Medical Papers |
+| * 【Facebook/Meta LLaMA/LLaMA2】 | MedLLaMA-13B & PMC-LLaMA: Continue Training LLaMA on Medical Papers |
 | GALACTICA | RedPajama |
 | Goar-7B for Arithmetic Tasks | StableLM |
 | HuggingChat | StableVicuna |
@@ -945,12 +945,23 @@ Falcon LLM is a foundational large language model (LLM) with 40 billion paramete
 
 The model uses only 75 percent of GPT-3’s training compute, 40 percent of Chinchilla’s, and 80 percent of PaLM-62B’s.
 
-### Facebook LLaMA
+### Facebook/Meta LLaMA/LLaMA2
 - https://github.com/facebookresearch/llama
+- https://ai.meta.com/research/publications/llama-2-open-foundation-and-fine-tuned-chat-models/
+
+**LLaMA1**
 
 LLaMA: Open and Efficient Foundation Language Models
 
 We introduce LLaMA, a collection of foundation language models ranging from 7B to 65B parameters. We train our models on trillions of tokens, and show that it is possible to train state-of-the-art models using publicly available datasets exclusively, without resorting to proprietary and inaccessible datasets. In particular, LLaMA-13B outperforms GPT-3 (175B) on most benchmarks, and LLaMA-65B is competitive with the best models, Chinchilla-70B and PaLM-540B. We release all our models to the research community.
+
+**LLaMA2**
+
+We are unlocking the power of large language models. Our latest version of Llama is now accessible to individuals, creators, researchers and businesses of all sizes so that they can experiment, innovate and scale their ideas responsibly.
+
+This release includes model weights and starting code for pretrained and fine-tuned Llama language models — ranging from 7B to 70B parameters.
+
+This repository is intended as a minimal example to load Llama 2 models and run inference. For more detailed examples leveraging HuggingFace, see llama-recipes.
 
 ### GALACTICA
 - https://github.com/paperswithcode/galai
