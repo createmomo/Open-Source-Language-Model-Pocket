@@ -27,7 +27,7 @@ Open-Source Language Model Pocket
 | 启真 | Cornucopia-LLaMA-Fin-Chinese | Linly伶荔说 |
 | * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | chatglm-maths | Linly伶荔说-Chinese-Falcon |
 | 中文Alpaca Luotuo | ChatRWKV | MeChat |
-| 中文LLaMA&Alpaca | ChatYuan | MedicalGPT |
+| * 【中文LLaMA&Alpaca v5.0】 | ChatYuan | MedicalGPT |
 | 流萤Firefly | ChatGLM-6B | MedicalGPT-zh |
 | 凤凰 | ChatGLM2-6B | OpenKG-KnowLLM |
 | 复旦MOSS | Chinese-Transformer-XL | OpenMEDLab 浦医 |
