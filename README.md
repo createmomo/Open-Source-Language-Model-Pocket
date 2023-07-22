@@ -19,7 +19,7 @@ Open-Source Language Model Pocket
 
 |  |  |  |
 |---|---|---|
-| 本草 | Bloom | * 【InternLM 书生・浦语】 |
+| 本草 | Bloom | * 【Llama2-chat-Chinese-50W】 |
 | 百川 | BiLLa | LaWGPT |
 | 华佗 | BLOOMChat176B | Lawyer LLaMA |
 | 扁鹊 | * 【ChatLaw 法律大模型】 | LexiLaw |
@@ -39,7 +39,7 @@ Open-Source Language Model Pocket
 | Anima | * 【EduChat】 | TigerBot |
 | BayLing | EVA | YuLan-Chat |
 | BBT-FinCUGE-Aapplications | GPT2 for Multiple Language | Ziya-LLaMA |
-| BELLE |  |  |
+| BELLE | * 【InternLM 书生・浦语】 |  |
 
 *训练/推理*
 |  |  |
@@ -469,6 +469,17 @@ It supports an 8k context window length, enabling longer input sequences and str
 
 It provides a versatile toolset for users to flexibly build their own workflows.
 Additionally, a lightweight training framework is offered to support model pre-training without the need for extensive dependencies. With a single codebase, it supports pre-training on large-scale clusters with thousands of GPUs, and fine-tuning on a single GPU while achieving remarkable performance optimizations. InternLM achieves nearly 90% acceleration efficiency during training on 1024 GPUs.
+
+### Llama2-chat-Chinese-50W
+- https://mp.weixin.qq.com/s/r_hKK5_cYm8ClqYVApkUYQ
+- https://huggingface.co/RicardoLee/Llama2-chat-Chinese-50W
+
+由于目前的LLama2-chat模型很难约束其以中文进行问题回复，因此该模型旨在提供一个能以中文进行问答的LLama2-chat 7B 模型。
+
+该模型使用LLama2-chat 7B 作为基底模型，使用带embedding 和 LM head 的Lora训练方式训练。模型已完成参数合并，可直接使用。也可以手动将sft_lora_model同Llama2-chat进行合并。
+
+训练数据使用BELLE项目中采样的50万SFT数据进行SFT训练。
+
 
 ### LaWGPT
 - https://github.com/pengxiao-song/LaWGPT
