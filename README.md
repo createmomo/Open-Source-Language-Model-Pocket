@@ -24,21 +24,21 @@ Open-Source Language Model Pocket
 | 华佗 | BLOOMChat176B | Lawyer LLaMA |
 | 扁鹊 | * 【ChatLaw 法律大模型】 | LexiLaw |
 | 灵心 | Chinese-Vicuna-medical | LawGPT_zh |
-| 启真 | Cornucopia-LLaMA-Fin-Chinese | Linly伶荔说 |
-| * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | chatglm-maths | Linly伶荔说-Chinese-Falcon |
-| 中文Alpaca Luotuo | ChatRWKV | MeChat |
-| * 【中文LLaMA&Alpaca v5.0】 | ChatYuan | MedicalGPT |
-| 流萤Firefly | ChatGLM-6B | MedicalGPT-zh |
-| 凤凰 | ChatGLM2-6B | OpenKG-KnowLLM |
-| 复旦MOSS | Chinese-Transformer-XL | OpenMEDLab 浦医 |
-| * 【复旦MOSS-RLHF】 | ChatMed-TCM&ChatMed-Consult | PromptCLUE |
-| 轩辕 | ChatGLM-Med | SkyText-Chinese-GPT3 |
-| 悟道·天鹰Aquila | CPM-Bee | * 【ShenNong-TCM-LLM】 |
-| 桃李 | * 【Data-Copilot】 | * 【TableGPT】 |
-| * 【情感大模型PICA】 | DoctorGLM | TechGPT |
-| Anima | * 【EduChat】 | TigerBot |
-| BayLing | EVA | YuLan-Chat |
-| BBT-FinCUGE-Aapplications | GPT2 for Multiple Language | Ziya-LLaMA |
+| 启真 | Cornucopia-LLaMA-Fin-Chinese | * 【Linly伶荔说 中文 LLaMA1-2 & OpenLLaMA & Falcon 大模型】 |
+| * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | chatglm-maths | MeChat |
+| 中文Alpaca Luotuo | ChatRWKV | MedicalGPT |
+| * 【中文LLaMA&Alpaca v5.0】 | ChatYuan | MedicalGPT-zh |
+| 流萤Firefly | ChatGLM-6B | OpenKG-KnowLLM |
+| 凤凰 | ChatGLM2-6B | OpenMEDLab 浦医 |
+| 复旦MOSS | Chinese-Transformer-XL | PromptCLUE |
+| * 【复旦MOSS-RLHF】 | ChatMed-TCM&ChatMed-Consult | SkyText-Chinese-GPT3 |
+| 轩辕 | ChatGLM-Med | * 【ShenNong-TCM-LLM】 |
+| 悟道·天鹰Aquila | CPM-Bee | * 【TableGPT】 |
+| 桃李 | * 【Data-Copilot】 | TechGPT |
+| * 【情感大模型PICA】 | DoctorGLM | TigerBot |
+| Anima | * 【EduChat】 | YuLan-Chat |
+| BayLing | EVA | Ziya-LLaMA |
+| BBT-FinCUGE-Aapplications | GPT2 for Multiple Language |  |
 | BELLE | * 【InternLM 书生・浦语】 |  |
 
 *训练/推理*
@@ -515,32 +515,14 @@ LexiLaw 是一个经过微调的中文法律大模型，它基于 ChatGLM-6B 架
 
 本项目开源的中文法律通用模型由ChatGLM-6B LoRA 16-bit指令微调得到。数据集包括现有的法律问答数据集和基于法条和真实案例指导的self-Instruct构建的高质量法律文本问答，提高了通用语言大模型在法律领域的表现，提高了模型回答的可靠性和专业程度。
 
-### Linly伶荔说
+### Linly伶荔说 中文 LLaMA1-2 & OpenLLaMA & Falcon 大模型
 - https://github.com/CVI-SZU/Linly
 - https://mp.weixin.qq.com/s/zSxsArP1pxYNubNDZua7iA
-
-“伶荔说”模型具有以下优势：1. 在32*A100 GPU上训练了不同量级和功能的中文模型，对模型充分训练并提供强大的baseline。据我们所知33B的Linly-Chinese-LLAMA是目前最大的中文LLaMA模型。2. 公开所有训练数据、代码、参数细节以及实验结果，确保项目的可复现性，用户可以选择合适的资源直接用于自己的流程中。3. 项目具有高兼容性和易用性，提供可用于CUDA和CPU的量化推理框架，并支持Huggingface格式。
-
-目前公开可用的模型有：
-
-Linly-Chinese-LLaMA：中文基础模型，基于LLaMA在高质量中文语料上增量训练强化中文语言能力，现已开放 7B、13B 和 33B 量级，65B正在训练中。
-
-Linly-ChatFlow：中文对话模型，在400万指令数据集合上对中文基础模型指令精调，现已开放7B、13B对话模型。
-
-Linly-ChatFlow-int4 ：ChatFlow 4-bit量化版本，用于在CPU上部署模型推理。
-
-进行中的项目：
-Linly-Chinese-BLOOM：基于BLOOM中文增量训练的中文基础模型，包含7B和175B模型量级，可用于商业场景。
-
-### Linly伶荔说-Chinese-Falcon
 - https://mp.weixin.qq.com/s/AuAG3tw4JI8lHyLkSdM18g
-- https://github.com/CVI-SZU/Linly
 
-近期，阿联酋阿布扎比的技术创新研究所（TII）开源了 Falcon 系列模型，使用经过筛选的 1 万亿 tokens 进行预训练，并以 Apache 2.0 协议开源，可能是目前效果最好且许可协议最宽松（允许商用）的开源模型。
+本项目向社区提供中文对话模型 Linly-ChatFlow 、中文基础模型 Chinese-LLaMA (1-2)、Chinese-Falcon 及其训练数据。 模型基于 TencentPretrain 预训练框架全参数训练（Full-tuning）。 中文基础模型以 LLaMA 和 Falcon 为底座，利用中文和中英平行增量预训练，将它在英文上语言能力迁移到中文上。进一步，项目汇总了目前公开的多语言指令数据，对中文模型进行了大规模指令跟随训练，实现了 Linly-ChatFlow 对话模型。
 
-然而，Falcon 模型在使用上面临和 LLaMA 模型类似的问题：由于模型主要在英文数据集上训练，因此它理解和生成中文的能力偏弱。此外，Falcon 在构建词表时没有加入中文字/词，中文字会被拆分成多个 token 的组合，这导致中文文本会被拆分成更长的 tokens 序列，降低了编码和生成效率。
-
-针对以上问题，“伶荔（Linly）”项目团队以 Falcon 模型为底座扩充中文词表，利用中文和中英平行增量预训练将模型的语言能力迁移学习到中文，实现 Chinese-Falcon。本文从模型结构上分析 Falcon、LLaMA 与传统 GPT 的异同，代码实现细节。并介绍我们的中文 Falcon 训练方案，包括中文字词扩充、数据集构建和训练参数等。
+此外，本项目还公开从头训练的 Linly-OpenLLaMA 模型，包含 3B、7B、13B 规模，在 1TB 中英文语料预训练，针对中文优化字词结合tokenizer，模型以 Apache 2.0 协议公开。
 
 ### MeChat (Mental Health Support Chatbot)
 - https://github.com/qiuhuachuan/smile
