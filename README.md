@@ -34,11 +34,11 @@ Open-Source Language Model Pocket
 | * 【复旦MOSS-RLHF】 | ChatMed-TCM&ChatMed-Consult | SkyText-Chinese-GPT3 |
 | 轩辕 | ChatGLM-Med | * 【ShenNong-TCM-LLM】 |
 | 悟道·天鹰Aquila | CPM-Bee | * 【TableGPT】 |
-| 桃李 | * 【Data-Copilot】 | TechGPT |
-| * 【情感大模型PICA】 | DoctorGLM | TigerBot |
-| Anima | * 【EduChat】 | YuLan-Chat |
-| BayLing | EVA | Ziya-LLaMA |
-| BBT-FinCUGE-Aapplications | GPT2 for Multiple Language |  |
+| 桃李 | * 【Data-Copilot】 | * 【TransGPT · 致远】 |
+| * 【情感大模型PICA】 | DoctorGLM | TechGPT |
+| Anima | * 【EduChat】 | TigerBot |
+| BayLing | EVA | YuLan-Chat |
+| BBT-FinCUGE-Applications | GPT2 for Multiple Language | Ziya-LLaMA |
 | BELLE | * 【InternLM 书生・浦语】 |  |
 
 *训练/推理*
@@ -601,6 +601,14 @@ SkyText是由奇点智源发布的中文GPT3预训练大模型，可以进行聊
 - https://github.com/ZJU-M3/TableGPT-techreport
 
 TableGPT is a specifically designed for table analysis. By unifying tables, natural language, and commands into one model, TableGPT comprehends tabular data, understands user intent through natural language, dissects the desired actions, and executes external commands on the table. It subsequently returns the processed results in both tabular and textual explanations to the user. This novel approach simplifies the way users engage with table data, bringing an intuitive feel to data analysis.
+
+### TransGPT · 致远
+- https://mp.weixin.qq.com/s/WvzyjHqI0lOGIyPlCIFNQg
+- https://github.com/DUOMO/TransGPT
+
+TransGPT・致远的训练基于约 34.6 万条交通领域文本数据（用于领域内预训练）和 5.8 万条交通领域对话数据（用于微调），可支持实时类 APP 接入（地图、公交等应用）。目前，TransGPT・致远已开源，相关资源不仅对学术研究完全开放，仅需邮件申请并获得官方商用许可后，即可以免费商用。
+
+与通用型的多模态交通大模型产品不同，TransGPT 主要致力于在真实交通场景中发挥实际价值，包括交通情况预测、智能咨询助手、公共交通服务、交通规划设计、交通安全教育、协助管理、交通事故报告和分析、自动驾驶辅助系统等能力。
 
 ### TechGPT
 - https://mp.weixin.qq.com/s/nF1He7jhAHfh7PzhjqHoZg
