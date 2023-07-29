@@ -44,19 +44,19 @@ Open-Source Language Model Pocket
 *训练/推理*
 |  |  |
 |---|---|
-| Alpaca-LoRA | MeZO: Fine-Tuning Language Models with Just Forward Passes |
-| AlpacaFarm | MLC LLM |
-| ColossalAI | PKU-Beaver 河狸 (Safe RLHF) |
-| ChatLLaMA | PaLM + RLHF (Pytorch) |
-| Chinese-Guanaco | RL4LMs |
-| DPO (Direct Preference Optimization) | Reinforcement Learning with Language Model |
-| DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression |
-| DeepSpeed-Chat | Scikit-LLM: Sklearn Meets Large Language Models |
-| FlexGen | Transformer Reinforcement Learning |
-| FlagAI and FlagData | Train_Transformers_with_INT4 |
-| Guanaco & QloRA | Transformer Reinforcement Learning X |
-| GPT4All | vLLM |
-| HugNLP |  |
+| Alpaca-LoRA | * 【llama2.c】 |
+| AlpacaFarm | MeZO: Fine-Tuning Language Models with Just Forward Passes |
+| ColossalAI | MLC LLM |
+| ChatLLaMA | PKU-Beaver 河狸 (Safe RLHF) |
+| Chinese-Guanaco | PaLM + RLHF (Pytorch) |
+| DPO (Direct Preference Optimization) | RL4LMs |
+| DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | Reinforcement Learning with Language Model |
+| DeepSpeed-Chat | SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression |
+| FlexGen | Scikit-LLM: Sklearn Meets Large Language Models |
+| FlagAI and FlagData | Transformer Reinforcement Learning |
+| Guanaco & QloRA | Train_Transformers_with_INT4 |
+| GPT4All | Transformer Reinforcement Learning X |
+| HugNLP | vLLM |
 | INSTRUCTEVAL |  |
 | LOw-Memory Optimization (LOMO) |  |
 | llama.cpp |  |
@@ -806,6 +806,14 @@ The main goal is to run the model using 4-bit quantization on a MacBook
 - Mixed F16 / F32 precision
 - 4-bit quantization support
 - Runs on the CPU
+
+### llama2.c
+- https://github.com/karpathy/llama2.c
+- https://mp.weixin.qq.com/s/RFo6B5yfEhv4mihkBiOH4Q
+
+With the code in this repo you can train the Llama 2 LLM architecture from scratch in PyTorch, then export the weights to a binary file, and load that into one ~simple 500-line C file (run.c) that inferences the model. Alternatively, you can load, finetune, and inference Meta's Llama 2 (but this is still being actively fleshed out). Hence, this repo is a "fullstack" train + inference solution for Llama 2 LLM, with a focus on minimalism and simplicity. You might think that you need many billion parameter LLMs to do anything useful, but in fact very small LLMs can have surprisingly strong performance if you make the domain narrow enough. I recommend looking at the TinyStories paper for inspiration.
+
+Please note that this started recently as just a fun weekend project: I took my earlier nanoGPT, tuned it to implement the Llama-2 architecture instead of GPT-2, and the meat of it was writing the C inference engine in run.c. So the project is young and moving quickly. Hat tip to the awesome llama.cpp for inspiring this project. I wanted something super minimal so I chose to hard-code the Llama 2 architecture, stick to fp32, and just roll one inference file of pure C with no dependencies.
 
 ### MeZO: Fine-Tuning Language Models with Just Forward Passes
 - https://github.com/princeton-nlp/MeZO
