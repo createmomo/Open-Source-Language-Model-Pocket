@@ -19,15 +19,16 @@ Open-Source Language Model Pocket
 
 |  |  |  |
 |---|---|---|
-| 本草 | Bloom | * 【Llama2-chat-Chinese-50W】 |
-| 百川 | BiLLa | LaWGPT |
-| 华佗 | BLOOMChat176B | Lawyer LLaMA |
-| 扁鹊 | * 【ChatLaw 法律大模型】 | LexiLaw |
-| 灵心 | Chinese-Vicuna-medical | LawGPT_zh |
-| 启真 | Cornucopia-LLaMA-Fin-Chinese | * 【Linly伶荔说 中文 LLaMA1-2 & OpenLLaMA & Falcon 大模型】 |
-| * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | chatglm-maths | MeChat |
-| 中文Alpaca Luotuo | ChatRWKV | MedicalGPT |
-| * 【中文LLaMA&Alpaca v5.0】 | ChatYuan | MedicalGPT-zh |
+| 本草 | BELLE | * 【InternLM 书生・浦语】 |
+| 百川 | Bloom | * 【Llama2-chat-Chinese-50W】 |
+| 华佗 | BiLLa | LaWGPT |
+| 扁鹊 | BLOOMChat176B | Lawyer LLaMA |
+| 灵心 | * 【ChatLaw 法律大模型】 | LexiLaw |
+| 启真 | Chinese-Vicuna-medical | LawGPT_zh |
+| * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | Cornucopia-LLaMA-Fin-Chinese | * 【Linly伶荔说 中文 LLaMA1-2 & OpenLLaMA & Falcon 大模型】 |
+| 中文Alpaca Luotuo | chatglm-maths | MeChat |
+| * 【中文LLaMA&Alpaca大模型 v5.0】 | ChatRWKV | MedicalGPT |
+| * 【中文LLaMA&Alpaca大模型2 v1.0】 | ChatYuan | MedicalGPT-zh |
 | 流萤Firefly | ChatGLM-6B | OpenKG-KnowLLM |
 | 凤凰 | ChatGLM2-6B | OpenMEDLab 浦医 |
 | 复旦MOSS | Chinese-Transformer-XL | PromptCLUE |
@@ -39,7 +40,6 @@ Open-Source Language Model Pocket
 | Anima | * 【EduChat】 | TigerBot |
 | BayLing | EVA | YuLan-Chat |
 | BBT-FinCUGE-Applications | GPT2 for Multiple Language | Ziya-LLaMA |
-| BELLE | * 【InternLM 书生・浦语】 |  |
 
 *训练/推理*
 |  |  |
@@ -190,6 +190,13 @@ Alpaca 是斯坦福团队基于 LLaMA 7B 在 52k 指令上微调得到的模型�
 以ChatGPT、GPT-4等为代表的大语言模型（Large Language Model, LLM）掀起了新一轮自然语言处理领域的研究浪潮，展现出了类通用人工智能（AGI）的能力，受到业界广泛关注。然而，由于大语言模型的训练和部署都极为昂贵，为构建透明且开放的学术研究造成了一定的阻碍。
 
 为了促进大模型在中文NLP社区的开放研究，本项目开源了中文LLaMA模型和经过指令精调的Alpaca大模型。这些模型在原版LLaMA的基础上扩充了中文词表并使用了中文数据进行二次预训练，进一步提升了中文基础语义理解能力。同时，在中文LLaMA的基础上，本项目使用了中文指令数据进行指令精调，显著提升了模型对指令的理解和执行能力。
+
+### 中文LLaMA&Alpaca大模型2
+- https://github.com/ymcui/Chinese-LLaMA-Alpaca-2
+- https://mp.weixin.qq.com/s/s8bOcwRYiRA88kPlJKeAKA
+- https://arxiv.org/abs/2304.08177v2
+
+Chinese-LLaMA-Alpaca-2大模型项目正式发布v1.0版本，开源Chinese-LLaMA-2-7B（基座模型）和Chinese-Alpaca-2-7B（指令/chat模型）。这些模型在原版Llama-2的基础上扩充并优化了中文词表，使用了大规模中文数据进行增量预训练，进一步提升了中文基础语义和指令理解能力，相比一代相关模型获得了显著性能提升。相关模型支持4K上下文并可通过NTK方法最高扩展至18K+。
 
 ### 中文对话式大语言模型Firefly
 - https://mp.weixin.qq.com/s/tyH9Ifcvw4DKqoIoYjT6Kg
