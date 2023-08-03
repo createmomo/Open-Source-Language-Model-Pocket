@@ -1,4 +1,4 @@
-# 开源语言模型百宝袋 (Ver. 2.3)
+# 开源语言模型百宝袋 (Ver. 2.2)
 Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
