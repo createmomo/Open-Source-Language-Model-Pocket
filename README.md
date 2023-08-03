@@ -21,25 +21,27 @@ Open-Source Language Model Pocket
 |---|---|---|
 | 本草 | BELLE | * 【InternLM 书生・浦语】 |
 | 百川 | Bloom | * 【Llama2-chat-Chinese-50W】 |
-| 华佗 | BiLLa | LaWGPT |
-| 扁鹊 | BLOOMChat176B | Lawyer LLaMA |
-| 灵心 | * 【ChatLaw 法律大模型】 | LexiLaw |
-| 启真 | Chinese-Vicuna-medical | LawGPT_zh |
-| * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | Cornucopia-LLaMA-Fin-Chinese | * 【Linly伶荔说 中文 LLaMA1-2 & OpenLLaMA & Falcon 大模型】 |
-| 中文Alpaca Luotuo | chatglm-maths | MeChat |
-| * 【中文LLaMA&Alpaca大模型 v5.0】 | ChatRWKV | MedicalGPT |
-| * 【中文LLaMA&Alpaca大模型2 v1.0】 | ChatYuan | MedicalGPT-zh |
-| 流萤Firefly | ChatGLM-6B | OpenKG-KnowLLM |
-| 凤凰 | ChatGLM2-6B | OpenMEDLab 浦医 |
-| 复旦MOSS | Chinese-Transformer-XL | PromptCLUE |
-| * 【复旦MOSS-RLHF】 | ChatMed-TCM&ChatMed-Consult | SkyText-Chinese-GPT3 |
-| 轩辕 | ChatGLM-Med | * 【ShenNong-TCM-LLM】 |
-| 悟道·天鹰Aquila | CPM-Bee | * 【TableGPT】 |
-| 桃李 | * 【Data-Copilot】 | * 【TransGPT · 致远】 |
-| * 【情感大模型PICA】 | DoctorGLM | TechGPT |
-| Anima | * 【EduChat】 | TigerBot |
-| BayLing | EVA | YuLan-Chat |
-| BBT-FinCUGE-Applications | GPT2 for Multiple Language | Ziya-LLaMA |
+| 华佗 | BiLLa | * 【Llama2-Chinese (FlagAlpha)】 |
+| 扁鹊 | BLOOMChat176B | LaWGPT |
+| 灵心 | * 【ChatLaw 法律大模型】 | Lawyer LLaMA |
+| 启真 | * 【Chinese-Llama-2-7b (LinkSoul-AI)】 | LexiLaw |
+| * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | Chinese-Vicuna-medical | LawGPT_zh |
+| 中文Alpaca Luotuo | Cornucopia-LLaMA-Fin-Chinese | * 【Linly伶荔说 中文 LLaMA1-2 & OpenLLaMA & Falcon 大模型】 |
+| * 【中文LLaMA&Alpaca大模型】 | chatglm-maths | MeChat |
+| * 【中文LLaMA&Alpaca大模型2】 | ChatRWKV | MedicalGPT |
+| 流萤Firefly | ChatYuan | MedicalGPT-zh |
+| 凤凰 | ChatGLM-6B | OpenKG-KnowLLM |
+| 复旦MOSS | ChatGLM2-6B | OpenMEDLab 浦医 |
+| * 【复旦MOSS-RLHF】 | Chinese-Transformer-XL | PromptCLUE |
+| 轩辕 | ChatMed-TCM&ChatMed-Consult | SkyText-Chinese-GPT3 |
+| 悟道·天鹰Aquila | ChatGLM-Med | * 【ShenNong-TCM-LLM】 |
+| 桃李 | CPM-Bee | * 【TableGPT】 |
+| * 【情感大模型PICA】 | * 【Data-Copilot】 | * 【TransGPT · 致远】 |
+| * 【雅意大模型】 | DoctorGLM | TechGPT |
+| * 【儿童情感陪伴大模型“巧板”】 | * 【EduChat】 | TigerBot |
+| Anima | EVA | YuLan-Chat |
+| BayLing | GPT2 for Multiple Language | Ziya-LLaMA |
+| BBT-FinCUGE-Applications |  |  |
 
 *训练/推理*
 |  |  |
@@ -261,6 +263,26 @@ FudanNLP 团队通过大量、详实工作，设计实验充分探索了大模�
 
 PICA 以清华大学开源的ChatGLM2-6B为基础，采用Prompt tuning技术在4 卡 A6000 训练大约15个小时得到。我们和SoulChat 进行了对比（最后部分），我们的模型在体验和安全上更有优势。我们只使用了2K的数据进行了p-tuning 微调，这充分说明了我们构造的数据质量比较高。模型权重可以在 HuggingFace 访问，欢迎各位使用并提出宝贵的意见。
 
+### 雅意大模型
+- https://github.com/wenge-research/YaYi
+- https://yayi.wenge.com/
+
+雅意大模型在百万级人工构造的高质量领域数据上进行指令微调得到，训练数据覆盖媒体宣传、舆情分析、公共安全、金融风控、城市治理等五大领域，上百种自然语言指令任务。雅意大模型从预训练初始化权重到领域模型的迭代过程中，我们逐步增强了它的中文基础能力和领域分析能力，并增加了多轮对话和部分插件能力。同时，经过数百名用户内测过程中持续不断的人工反馈优化，我们进一步提升了模型性能和安全性。
+
+通过雅意大模型的开源为促进中文预训练大模型开源社区的发展，贡献自己的一份力量，通过开源，与每一位合作伙伴共建雅意大模型生态。
+
+### 儿童情感陪伴大模型“巧板”
+- https://github.com/HIT-SCIR-SC/QiaoBan
+
+巧板大模型是一个7B规模的大语言模型。巧板”指七巧板，是一款承载着中国传统智慧的益智拼图玩具，更是一款教育益智工具。这次发布的儿童大模型正是希望通过陪伴、益智和教育功能，与儿童们建立更深厚的情感纽带。此外，为符合SCIR实验室发布大模型命名规范，故命名为“巧板”大模型。而这个特别的名称也蕴含着我们对儿童成长的悉心呵护，就像巧板一样，为他们拼出美好未来提供帮助。
+
+巧板大模型独具三大特点：
+1. 儿童心理学理论指导。基于情绪辅导理论的儿童情感陪伴对话数据构建，更有效地守护孩子的心理健康。
+
+2. 高质量的儿童对话数据构建。高质量对话数据由具有儿童心理学背景的志愿者与专家参与完成，确保数据的真实性与有效性。
+
+3. 温暖的儿童陪伴体验。与儿童的交互方式更加贴心，能够真正与他们建立深入的情感连接，让儿童感受到温暖和认同，成为他们坚实成长道路上的得力伙伴。
+
 ### Anima：基于QLoRA的33B中文大语言模型
 - https://github.com/lyogavin/Anima
 
@@ -344,6 +366,12 @@ ChatLaw法律大模型目前开源的仅供学术参考的版本底座为姜子�
 我们的技术报告在这里: arXiv: ChatLaw
 
 基于可商用的模型训练而成的版本会作为我们后续产品内部接入的版本，对外不开源，可以在这里进行开源版本模型的试用
+
+### Chinese-Llama-2-7b (LinkSoul-AI)
+- https://github.com/LinkSoul-AI/Chinese-Llama-2-7b
+- https://huggingface.co/spaces/LinkSoul/Chinese-Llama-2-7b
+
+全部开源，完全可商用的中文版 Llama2 模型及中英文 SFT 数据集，输入格式严格遵循 llama-2-chat 格式，兼容适配所有针对原版 llama-2-chat 模型的优化。
 
 ### Chinese-Vicuna-medical
 - https://github.com/Facico/Chinese-Vicuna/blob/master/docs/performance-medical.md
@@ -487,6 +515,11 @@ Additionally, a lightweight training framework is offered to support model pre-t
 
 训练数据使用BELLE项目中采样的50万SFT数据进行SFT训练。
 
+### Llama2-Chinese (FlagAlpha)
+- https://github.com/FlagAlpha/Llama2-Chinese
+- https://llama.family/
+
+我们是一个专注于Llama2模型在中文方面的优化和上层建设的高级技术社区。 *基于大规模中文数据，从预训练开始对Llama2模型进行中文能力的持续迭代升级*。 我们热忱欢迎对大模型LLM充满热情的开发者和研究者加入我们的行列。
 
 ### LaWGPT
 - https://github.com/pengxiao-song/LaWGPT
