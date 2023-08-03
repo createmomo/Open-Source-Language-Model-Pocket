@@ -1,4 +1,4 @@
-# 开源语言模型百宝袋 (Ver. 2.2)
+# 开源语言模型百宝袋 (Ver. 2.3)
 Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
@@ -27,39 +27,39 @@ Open-Source Language Model Pocket
 | 启真 | * 【Chinese-Llama-2-7b (LinkSoul-AI)】 | LexiLaw |
 | * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | Chinese-Vicuna-medical | LawGPT_zh |
 | 中文Alpaca Luotuo | Cornucopia-LLaMA-Fin-Chinese | * 【Linly伶荔说 中文 LLaMA1-2 & OpenLLaMA & Falcon 大模型】 |
-| * 【中文LLaMA&Alpaca大模型】 | chatglm-maths | MeChat |
-| * 【中文LLaMA&Alpaca大模型2】 | ChatRWKV | MedicalGPT |
-| 流萤Firefly | ChatYuan | MedicalGPT-zh |
-| 凤凰 | ChatGLM-6B | OpenKG-KnowLLM |
-| 复旦MOSS | ChatGLM2-6B | OpenMEDLab 浦医 |
-| * 【复旦MOSS-RLHF】 | Chinese-Transformer-XL | PromptCLUE |
-| 轩辕 | ChatMed-TCM&ChatMed-Consult | SkyText-Chinese-GPT3 |
-| 悟道·天鹰Aquila | ChatGLM-Med | * 【ShenNong-TCM-LLM】 |
-| 桃李 | CPM-Bee | * 【TableGPT】 |
-| * 【情感大模型PICA】 | * 【Data-Copilot】 | * 【TransGPT · 致远】 |
-| * 【雅意大模型】 | DoctorGLM | TechGPT |
-| * 【儿童情感陪伴大模型“巧板”】 | * 【EduChat】 | TigerBot |
-| Anima | EVA | YuLan-Chat |
-| BayLing | GPT2 for Multiple Language | Ziya-LLaMA |
-| BBT-FinCUGE-Applications |  |  |
+| * 【中文LLaMA&Alpaca大模型】 | chatglm-maths | * 【MediaGPT】 |
+| * 【中文LLaMA&Alpaca大模型2】 | ChatRWKV | MeChat |
+| 流萤Firefly | ChatYuan | MedicalGPT |
+| 凤凰 | ChatGLM-6B | MedicalGPT-zh |
+| 复旦MOSS | ChatGLM2-6B | OpenKG-KnowLLM |
+| * 【复旦MOSS-RLHF】 | Chinese-Transformer-XL | OpenMEDLab 浦医 |
+| 轩辕 | ChatMed-TCM&ChatMed-Consult | PromptCLUE |
+| 悟道·天鹰Aquila | ChatGLM-Med | SkyText-Chinese-GPT3 |
+| 桃李 | CPM-Bee | * 【ShenNong-TCM-LLM】 |
+| * 【情感大模型PICA】 | * 【Data-Copilot】 | * 【TableGPT】 |
+| * 【雅意大模型】 | DoctorGLM | * 【TransGPT · 致远】 |
+| * 【儿童情感陪伴大模型“巧板”】 | * 【EduChat】 | TechGPT |
+| Anima | EVA | TigerBot |
+| BayLing | GPT2 for Multiple Language | YuLan-Chat |
+| BBT-FinCUGE-Applications |  | Ziya-LLaMA |
 
 *训练/推理*
 |  |  |
 |---|---|
 | Alpaca-LoRA | * 【llama2.c】 |
-| AlpacaFarm | MeZO: Fine-Tuning Language Models with Just Forward Passes |
-| ColossalAI | MLC LLM |
-| ChatLLaMA | PKU-Beaver 河狸 (Safe RLHF) |
-| Chinese-Guanaco | PaLM + RLHF (Pytorch) |
-| DPO (Direct Preference Optimization) | RL4LMs |
-| DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | Reinforcement Learning with Language Model |
-| DeepSpeed-Chat | SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression |
-| FlexGen | Scikit-LLM: Sklearn Meets Large Language Models |
-| FlagAI and FlagData | Transformer Reinforcement Learning |
-| Guanaco & QloRA | Train_Transformers_with_INT4 |
-| GPT4All | Transformer Reinforcement Learning X |
-| HugNLP | vLLM |
-| INSTRUCTEVAL |  |
+| AlpacaFarm | * 【LightLLM】 |
+| ColossalAI | MeZO: Fine-Tuning Language Models with Just Forward Passes |
+| ChatLLaMA | MLC LLM |
+| Chinese-Guanaco | PKU-Beaver 河狸 (Safe RLHF) |
+| DPO (Direct Preference Optimization) | PaLM + RLHF (Pytorch) |
+| DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | RL4LMs |
+| DeepSpeed-Chat | Reinforcement Learning with Language Model |
+| FlexGen | SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression |
+| FlagAI and FlagData | Scikit-LLM: Sklearn Meets Large Language Models |
+| Guanaco & QloRA | Transformer Reinforcement Learning |
+| GPT4All | Train_Transformers_with_INT4 |
+| HugNLP | Transformer Reinforcement Learning X |
+| INSTRUCTEVAL | vLLM |
 | LOw-Memory Optimization (LOMO) |  |
 | llama.cpp |  |
 
@@ -97,7 +97,7 @@ Open-Source Language Model Pocket
 |  |  |
 |---|---|
 | Alpaca-CoT | Self-Instruct |
-| Auto-GPT | ToolBench |
+| Auto-GPT | * 【ToolBench&ToolLLM】 |
 | ChatPiXiu | * 【Wanda (Pruning by Weights and activations)】 |
 | Gorilla |  |
 | HuggingGPT |  |
@@ -564,6 +564,20 @@ LexiLaw 是一个经过微调的中文法律大模型，它基于 ChatGLM-6B 架
 
 此外，本项目还公开从头训练的 Linly-OpenLLaMA 模型，包含 3B、7B、13B 规模，在 1TB 中英文语料预训练，针对中文优化字词结合tokenizer，模型以 Apache 2.0 协议公开。
 
+### MediaGPT
+- https://github.com/IMOSR/MediaGPT
+
+虽然LLaMA模型在通用领域通过指令微调已经展示出了令人印象深刻的性能，但对于自媒体创作、直播和运营等领域，由于缺乏专业的训练数据，其能力仍有待提高。为了解决这个问题，我们提出了MediaGPT，一个针对自媒体领域进行特殊训练的模型。
+
+MediaGPT（曾用名Media LLaMA）首先在大规模自媒体语料上进行连续预训练，系统地学习自媒体的知识体系。然后，我们借助ChatGPT收集了一批关于抖音运营、短视频创作、巨量千川投放、直播运营和直播话术技巧等领域知识问题的分析和回答，并利用这些数据对模型进行指令微调，使模型习得如何将自媒体知识应用到实际场景中。
+
+我们的模型具有以下能力：
+1. 掌握自媒体知识： 能够理解抖音运营、短视频创作、巨量千川投放、直播运营等领域的核心概念和策略。
+
+2. 适用于实际操作： 能够以通俗易懂的语言解释自媒体概念，并进行基础的自媒体运营咨询，涵盖内容创作、平台运营、广告投放等领域。
+
+为了推动中文自媒体大模型的开放研究，我们将开源一系列自媒体领域的指令微调数据和基于LLaMA训练的中文自媒体大模型的参数。
+
 ### MeChat (Mental Health Support Chatbot)
 - https://github.com/qiuhuachuan/smile
 - https://huggingface.co/qiuhuachuan/MeChat
@@ -854,6 +868,20 @@ The main goal is to run the model using 4-bit quantization on a MacBook
 With the code in this repo you can train the Llama 2 LLM architecture from scratch in PyTorch, then export the weights to a binary file, and load that into one ~simple 500-line C file (run.c) that inferences the model. Alternatively, you can load, finetune, and inference Meta's Llama 2 (but this is still being actively fleshed out). Hence, this repo is a "fullstack" train + inference solution for Llama 2 LLM, with a focus on minimalism and simplicity. You might think that you need many billion parameter LLMs to do anything useful, but in fact very small LLMs can have surprisingly strong performance if you make the domain narrow enough. I recommend looking at the TinyStories paper for inspiration.
 
 Please note that this started recently as just a fun weekend project: I took my earlier nanoGPT, tuned it to implement the Llama-2 architecture instead of GPT-2, and the meat of it was writing the C inference engine in run.c. So the project is young and moving quickly. Hat tip to the awesome llama.cpp for inspiring this project. I wanted something super minimal so I chose to hard-code the Llama 2 architecture, stick to fp32, and just roll one inference file of pure C with no dependencies.
+
+### LightLLM
+- https://github.com/ModelTC/lightllm
+
+LightLLM is a Python-based LLM (Large Language Model) inference and serving framework, notable for its lightweight design, easy scalability, and high-speed performance. LightLLM harnesses the strengths of numerous well-regarded open-source implementations, including but not limited to FasterTransformer, TGI, vLLM, and FlashAttention.
+
+**Features**
+- Tri-process asynchronous collaboration: tokenization, model inference, and detokenization are performed asynchronously, leading to a considerable improvement in GPU utilization.
+- Nopad (Unpad): offers support for nopad attention operations across multiple models to efficiently handle requests with large length disparities.
+- Dynamic Batch: enables dynamic batch scheduling of requests
+- FlashAttention: incorporates FlashAttention to improve speed and reduce GPU memory footprint during inference.
+- Tensor Parallelism: utilizes tensor parallelism over multiple GPUs for faster inference.
+- Token Attention: implements token-wise's KV cache memory management mechanism, allowing for zero memory waste during inference.
+- High-performance Router: collaborates with Token Attention to meticulously manage the GPU memory of each token, thereby optimizing system throughput.
 
 ### MeZO: Fine-Tuning Language Models with Just Forward Passes
 - https://github.com/princeton-nlp/MeZO
@@ -1304,12 +1332,15 @@ Large Language Models (LLMs) have emerged as powerful tools in the field of Natu
 
 Self-Instruct is a framework that helps language models improve their ability to follow natural language instructions. It does this by using the model's own generations to create a large collection of instructional data. With Self-Instruct, it is possible to improve the instruction-following capabilities of language models without relying on extensive manual annotation.
 
-### ToolBench
+### ToolBench&ToolLLM
 - https://github.com/OpenBMB/ToolBench
 - https://arxiv.org/pdf/2304.08354.pdf
+- https://arxiv.org/pdf/2307.16789.pdf
 - https://mp.weixin.qq.com/s/DuoQJj1OBl5iFPvjidDiCg
 
-This project aims to construct open-source, large-scale, high-quality instruction tuning SFT data to facilitate the construction of powerful LLMs with general tool-use capability. We provide the dataset, the corresponding training and evaluation scripts, and a capable model ToolLLaMA fine-tuned on ToolBench.
+This project (ToolBench)  aims to construct open-source, large-scale, high-quality instruction tuning SFT data to facilitate the construction of powerful LLMs with general tool-use capability. We provide the dataset, the corresponding training and evaluation scripts, and a capable model ToolLLaMA fine-tuned on ToolBench.
+
+🔨This project (ToolLLM) aims to construct open-source, large-scale, high-quality instruction tuning SFT data to facilitate the construction of powerful LLMs with general tool-use capability. We aim to empower open-source LLMs to master thousands of diverse real-world APIs. We achieve this by collecting a high-quality instruction-tuning dataset. It is constructed automatically using the latest ChatGPT (gpt-3.5-turbo-16k), which is upgraded with enhanced function call capabilities. We provide the dataset, the corresponding training and evaluation scripts, and a capable model ToolLLaMA fine-tuned on ToolBench.
 
 ### Wanda (Pruning by Weights and activations)
 - https://github.com/locuslab/wanda
