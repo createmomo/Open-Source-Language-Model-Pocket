@@ -1,4 +1,4 @@
-# 开源语言模型百宝袋 (Ver. 2.2)
+# 开源语言模型百宝袋 (Ver. 2.3)
 Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
@@ -19,35 +19,35 @@ Open-Source Language Model Pocket
 
 |  |  |  |
 |---|---|---|
-| 本草 | BELLE | * 【InternLM 书生・浦语】 |
-| 百川 | Bloom | * 【Llama2-chat-Chinese-50W】 |
-| 华佗 | BiLLa | * 【Llama2-Chinese (FlagAlpha)】 |
-| 扁鹊 | BLOOMChat176B | LaWGPT |
-| 灵心 | * 【ChatLaw 法律大模型】 | Lawyer LLaMA |
-| 启真 | * 【Chinese-Llama-2-7b (LinkSoul-AI)】 | LexiLaw |
-| * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | Chinese-Vicuna-medical | LawGPT_zh |
-| 中文Alpaca Luotuo | Cornucopia-LLaMA-Fin-Chinese | * 【Linly伶荔说 中文 LLaMA1-2 & OpenLLaMA & Falcon 大模型】 |
-| * 【中文LLaMA&Alpaca大模型】 | chatglm-maths | * 【MediaGPT】 |
-| * 【中文LLaMA&Alpaca大模型2】 | ChatRWKV | MeChat |
-| 流萤Firefly | ChatYuan | MedicalGPT |
-| 凤凰 | ChatGLM-6B | MedicalGPT-zh |
-| 复旦MOSS | ChatGLM2-6B | OpenKG-KnowLLM |
-| * 【复旦MOSS-RLHF】 | Chinese-Transformer-XL | OpenMEDLab 浦医 |
-| 轩辕 | ChatMed-TCM&ChatMed-Consult | PromptCLUE |
-| 悟道·天鹰Aquila | ChatGLM-Med | SkyText-Chinese-GPT3 |
-| 桃李 | CPM-Bee | * 【ShenNong-TCM-LLM】 |
-| * 【情感大模型PICA】 | * 【Data-Copilot】 | * 【TableGPT】 |
-| * 【雅意大模型】 | DoctorGLM | * 【TransGPT · 致远】 |
-| * 【儿童情感陪伴大模型“巧板”】 | * 【EduChat】 | TechGPT |
-| Anima | EVA | TigerBot |
-| BayLing | GPT2 for Multiple Language | YuLan-Chat |
-| BBT-FinCUGE-Applications |  | Ziya-LLaMA |
+| 本草 | BBT-FinCUGE-Applications | InternLM 书生・浦语 |
+| 百川 | BELLE | Llama2-chat-Chinese-50W |
+| 华佗 | Bloom | Llama2-Chinese (FlagAlpha) |
+| 扁鹊 | BiLLa | LaWGPT |
+| 灵心 | BLOOMChat176B | Lawyer LLaMA |
+| 启真 | ChatLaw 法律大模型 | LexiLaw |
+| 【貔貅】 FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | Chinese-Llama-2-7b (LinkSoul-AI) | LawGPT_zh |
+| 中文Alpaca Luotuo | Chinese-Vicuna-medical | Linly伶荔说 中文 LLaMA1-2 & OpenLLaMA & Falcon 大模型 |
+| 中文LLaMA&Alpaca大模型 | Cornucopia-LLaMA-Fin-Chinese | MediaGPT |
+| 中文LLaMA&Alpaca大模型2 | chatglm-maths | MeChat |
+| 流萤Firefly | ChatRWKV | MedicalGPT |
+| 凤凰 | ChatYuan | MedicalGPT-zh |
+| 复旦MOSS | ChatGLM-6B | OpenKG-KnowLLM |
+| 复旦MOSS-RLHF | ChatGLM2-6B | OpenMEDLab 浦医 |
+| 轩辕 | Chinese-Transformer-XL | PromptCLUE |
+| 悟道·天鹰Aquila | ChatMed-TCM&ChatMed-Consult | SkyText-Chinese-GPT3 |
+| 桃李 | ChatGLM-Med | ShenNong-TCM-LLM |
+| 情感大模型PICA | CPM-Bee | TableGPT |
+| 雅意大模型 | Data-Copilot | TransGPT · 致远 |
+| 儿童情感陪伴大模型“巧板” | DoctorGLM | TechGPT |
+| * 【通义千问Qwen】 | EduChat | TigerBot |
+| Anima | EVA | YuLan-Chat |
+| BayLing | GPT2 for Multiple Language | Ziya-LLaMA |
 
 *训练/推理*
 |  |  |
 |---|---|
-| Alpaca-LoRA | * 【llama2.c】 |
-| AlpacaFarm | * 【LightLLM】 |
+| Alpaca-LoRA | llama2.c |
+| AlpacaFarm | LightLLM |
 | ColossalAI | MeZO: Fine-Tuning Language Models with Just Forward Passes |
 | ChatLLaMA | MLC LLM |
 | Chinese-Guanaco | PKU-Beaver 河狸 (Safe RLHF) |
@@ -71,12 +71,12 @@ Open-Source Language Model Pocket
 | Dolly 1&2 | Orca |
 | FinGPT | OpenChatKit |
 | Falcon | Open-Assistant |
-| * 【Facebook/Meta LLaMA/LLaMA2】 | MedLLaMA-13B & PMC-LLaMA: Continue Training LLaMA on Medical Papers |
+| Facebook/Meta LLaMA/LLaMA2 | MedLLaMA-13B & PMC-LLaMA: Continue Training LLaMA on Medical Papers |
 | GALACTICA | RedPajama |
 | Goar-7B for Arithmetic Tasks | StableLM |
 | HuggingChat | StableVicuna |
 | Koala: A Dialogue Model for Academic Research | Stanford Alpaca |
-| * 【LongLLaMA】 | UltraLM-13B |
+| LongLLaMA | UltraLM-13B |
 | LLaMA复刻版OpenLLaMA | Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality |
 | Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM | Wombat |
 | Lit-LLaMA ️ | XGen-7B |
@@ -85,9 +85,9 @@ Open-Source Language Model Pocket
 |  |
 |---|
 | 天秤（FlagEval） |
-| * 【獬豸（Xiezhi）Benchmark】 |
+| 獬豸（Xiezhi）Benchmark |
 | C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models |
-| * 【HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models】|
+| HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models|
 | KoLA: Carefully Benchmarking World Knowledge of Large Language Models |
 | Multiscale Positive-Unlabeled Detection of AI-Generated Texts |
 | PandaLM |
@@ -97,8 +97,8 @@ Open-Source Language Model Pocket
 |  |  |
 |---|---|
 | Alpaca-CoT | Self-Instruct |
-| Auto-GPT | * 【ToolBench&ToolLLM】 |
-| ChatPiXiu | * 【Wanda (Pruning by Weights and activations)】 |
+| Auto-GPT | ToolBench&ToolLLM |
+| ChatPiXiu | Wanda (Pruning by Weights and activations) |
 | Gorilla |  |
 | HuggingGPT |  |
 | LLMPruner：大语言模型裁剪工具 |  |
@@ -282,6 +282,18 @@ PICA 以清华大学开源的ChatGLM2-6B为基础，采用Prompt tuning技术在
 2. 高质量的儿童对话数据构建。高质量对话数据由具有儿童心理学背景的志愿者与专家参与完成，确保数据的真实性与有效性。
 
 3. 温暖的儿童陪伴体验。与儿童的交互方式更加贴心，能够真正与他们建立深入的情感连接，让儿童感受到温暖和认同，成为他们坚实成长道路上的得力伙伴。
+
+### 通义千问Qwen
+- https://github.com/QwenLM/Qwen-7B
+
+我们在🤖 ModelScope以及🤗 Hugging Face均开源了Qwen-7B系列模型。请在本文档顶部点击相关链接查看仓库信息。本仓库主要包括Qwen-7B的简介、使用指南、技术备忘等内容。想了解更多关于模型的信息，请点击链接查看我们的技术备忘录。
+
+通义千问-7B（Qwen-7B） 是阿里云研发的通义千问大模型系列的70亿参数规模的模型。Qwen-7B是基于Transformer的大语言模型, 在超大规模的预训练数据上进行训练得到。预训练数据类型多样，覆盖广泛，包括大量网络文本、专业书籍、代码等。同时，在Qwen-7B的基础上，我们使用对齐机制打造了基于大语言模型的AI助手Qwen-7B-Chat。Qwen-7B系列模型的特点包括：
+1. 大规模高质量预训练数据：我们使用了超过2.2万亿token的自建大规模预训练数据集进行语言模型的预训练。数据集包括文本和代码等多种数据类型，覆盖通用领域和专业领域。
+2. 优秀的模型性能：相比同规模的开源模型，Qwen-7B在多个评测数据集上具有显著优势，甚至超出12-13B等更大规模的模型。评测评估的能力范围包括自然语言理解与生成、数学运算解题、代码生成等。
+3. 更好地支持多语言：基于更大词表的分词器在分词上更高效，同时它对其他语言表现更加友好。用户可以在Qwen-7B的基础上更方便地训练特定语言的7B语言模型。
+4. 8K的上下文长度：Qwen-7B及Qwen-7B-Chat均能支持8K的上下文长度, 允许用户输入更长的prompt。
+5. 支持插件调用：Qwen-7B-Chat针对插件调用相关的对齐数据做了特定优化，当前模型能有效调用插件以及升级为Agent。
 
 ### Anima：基于QLoRA的33B中文大语言模型
 - https://github.com/lyogavin/Anima
