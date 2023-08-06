@@ -41,8 +41,9 @@ Open-Source Language Model Pocket
 | 雅意大模型 | Data-Copilot | TransGPT · 致远 |
 | 儿童情感陪伴大模型“巧板” | DoctorGLM | TechGPT |
 | * 【通义千问Qwen】 | EduChat | TigerBot |
-| Anima | EVA | YuLan-Chat |
-| BayLing | GPT2 for Multiple Language | Ziya-LLaMA |
+| * 【活字】 | EVA | YuLan-Chat |
+| Anima | GPT2 for Multiple Language | Ziya-LLaMA |
+| BayLing |  |  |
 
 *训练/推理*
 |  |  |
@@ -295,6 +296,12 @@ PICA 以清华大学开源的ChatGLM2-6B为基础，采用Prompt tuning技术在
 3. 更好地支持多语言：基于更大词表的分词器在分词上更高效，同时它对其他语言表现更加友好。用户可以在Qwen-7B的基础上更方便地训练特定语言的7B语言模型。
 4. 8K的上下文长度：Qwen-7B及Qwen-7B-Chat均能支持8K的上下文长度, 允许用户输入更长的prompt。
 5. 支持插件调用：Qwen-7B-Chat针对插件调用相关的对齐数据做了特定优化，当前模型能有效调用插件以及升级为Agent。
+
+### 活字
+- https://mp.weixin.qq.com/s/WEitgZjOxZpp7KIbRU0ewg
+- https://github.com/HIT-SCIR/huozi
+
+大规模语言模型（LLM）在自然语言处理的通用领域已取得了令人瞩目的成功。对于广泛的应用场景，这种技术展示了强大的潜力，学术界和工业界的兴趣也持续升温。哈工大自然语言处理研究所30余位老师和学生参与开发了通用对话大模型活字1.0，哈工大社会计算与信息检索研究中心(哈工大-SCIR)研发了活字2.0，致力于为自然语言处理的研究和实际应用提供更多可能性和选择。
 
 ### Anima：基于QLoRA的33B中文大语言模型
 - https://github.com/lyogavin/Anima
