@@ -41,7 +41,7 @@ Open-Source Language Model Pocket
 | 雅意大模型 | Data-Copilot | TransGPT · 致远 |
 | 儿童情感陪伴大模型“巧板” | DoctorGLM | TechGPT |
 | * 【通义千问Qwen】 | EduChat | TigerBot |
-| * 【活字】 | EVA | YuLan-Chat |
+| * 【活字】 | EVA | * 【YuLan-Chat & YuLan-Chat-2】 |
 | Anima | GPT2 for Multiple Language | Ziya-LLaMA |
 | BayLing |  |  |
 
@@ -715,13 +715,18 @@ TigerBot 是一个多语言多任务的大规模语言模型(LLM)。根据 OpenA
 - 在并行训练上，我们突破了 deep-speed 等主流框架中若干内存和通信问题，使得在千卡环境下数月无间断，
 - 对中文语言的更不规则的分布，从 tokenizer 到训练算法上做了更适合的算法优化。
 
-### YuLan-Chat
+### YuLan-Chat & YuLan-Chat-2
 - https://github.com/RUC-GSAI/YuLan-Chat
+- https://huggingface.co/yulan-team
 - https://mp.weixin.qq.com/s/nPS4N3stAAG_51fnZANbMA
 
+**YuLan-Chat**
 中国人民大学高瓴人工智能学院相关研究团队（由多位学院老师联合指导）展开了一系列关于指令微调技术的研究，并发布了学院初版大语言对话模型——YuLan-Chat，旨在探索和提升大语言模型的中英文双语对话能力。
 
 我们分别开源了13B和65B的YuLan-Chat模型文件及相关代码，并采用量化技术使其分别可以在单张RTX3090-24G和A800-80G显卡上部署。YuLan-Chat模型基于LLaMA底座模型，采用精心优化的高质量中英文混合指令进行微调，其中YuLan-Chat-65B模型目前能够在中英文相关评测数据集上显著超越已有开源模型效果。后续我们会继续优化指令微调方法与底座模型，持续更新YuLan-Chat模型。
+
+**YuLan-Chat-2**
+在2023年6月发布YuLan-Chat第一版模型后，高瓴人工智能学院研究团队继续探索大语言模型预训练与指令微调等技术，并在LLaMA-2的基础上训练得到了新版基石模型YuLan-LLaMA-2-13B和对话模型YuLan-Chat-2-13B。这些模型在原版LLaMA-2的基础上扩充中文词表与上下文长度（达到8k），使用了大规模中英文数据进行增量预训练和指令微调，同时提升了模型的中英文基础语义和理解能力，相比前一代模型效果获得了显著提升，与同期其他基于LLaMA-2得到的模型相比，也具有显著性能优势。经过量化，模型可以在单张RTX-3090 24G显卡中部署。
 
 ### Ziya-LLaMA
 - https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1
