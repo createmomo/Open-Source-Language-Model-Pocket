@@ -31,7 +31,7 @@ Open-Source Language Model Pocket
 | 中文LLaMA&Alpaca大模型 | Cornucopia-LLaMA-Fin-Chinese | MediaGPT |
 | 中文LLaMA&Alpaca大模型2 | chatglm-maths | MeChat |
 | 流萤Firefly | ChatRWKV | MedicalGPT |
-| 凤凰 | ChatYuan | MedicalGPT-zh |
+| 凤凰 | ChatYuan | * 【明医 (MING)：中文医疗问诊大模型 (原名：MedicalGPT-zh)】 |
 | 复旦MOSS | ChatGLM-6B | OpenKG-KnowLLM |
 | 复旦MOSS-RLHF | ChatGLM2-6B | OpenMEDLab 浦医 |
 | 轩辕 | Chinese-Transformer-XL | PromptCLUE |
@@ -620,10 +620,14 @@ MedicalGPT 训练医疗大模型，实现包括二次预训练、有监督微调
 
 第四阶段：RL(Reinforcement Learning)基于人类反馈的强化学习(RLHF)，用奖励模型来训练SFT模型，生成模型使用奖励或惩罚来更新其策略，以便生成更高质量、更符合人类偏好的文本
 
-### MedicalGPT-zh
+### 明医 (MING)：中文医疗问诊大模型（原名：MedicalGPT-zh）
 - github.com/MediaBrain-SJTU/MedicalGPT-zh
 
+**MedicalGPT-zh**
 该开源了基于ChatGLM-6B LoRA 16-bit指令微调的中文医疗通用模型。基于共计28科室的中文医疗共识与临床指南文本，我们生成医疗知识覆盖面更全，回答内容更加精准的高质量指令数据集。
+
+**明医（MING）**
+本项目开源了基于医疗指令微调的中文医疗问诊模型：明医 (MING)。
 
 ### OpenKG-KnowLLM
 - https://github.com/zjunlp/KnowLLM
