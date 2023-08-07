@@ -10,7 +10,7 @@ Open-Source Language Model Pocket
 - [通俗理解Gradient Checkpoint（附代码）](https://mp.weixin.qq.com/s/IwcfUP_j6JYFXH_xhnWWJQ)
 - 千“垂”百炼：垂直领域与语言模型
   - [导语](https://mp.weixin.qq.com/s/G24skuUbyrSatxWczVxEAg)
-  - 医疗/健康
+  - 【医疗/健康】训练数据的获得
     - ChatDoctor （解读 [上](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg) [中](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw) [下](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg) / PDF版PPT [上](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf) [中](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%AD%EF%BC%89.pdf) [下](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8B%EF%BC%89.pdf)）
     - MedicalGPT-zh ([解读](https://mp.weixin.qq.com/s/QJKZYKh16fqLTC367WhzdA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MedicalGPT-zh.pdf))
 
@@ -41,9 +41,9 @@ Open-Source Language Model Pocket
 | 雅意大模型 | Data-Copilot | TransGPT · 致远 |
 | 儿童情感陪伴大模型“巧板” | DoctorGLM | TechGPT |
 | * 【通义千问Qwen】 | EduChat | TigerBot |
-| * 【活字】 | EVA | * 【YuLan-Chat & YuLan-Chat-2】 |
-| Anima | GPT2 for Multiple Language | Ziya-LLaMA |
-| BayLing |  |  |
+| * 【活字】 | EVA | * 【XVERSE-13B】 |
+| Anima | GPT2 for Multiple Language | * 【YuLan-Chat & YuLan-Chat-2】 |
+| BayLing |  | Ziya-LLaMA |
 
 *训练/推理*
 |  |  |
@@ -620,8 +620,8 @@ MedicalGPT 训练医疗大模型，实现包括二次预训练、有监督微调
 
 第四阶段：RL(Reinforcement Learning)基于人类反馈的强化学习(RLHF)，用奖励模型来训练SFT模型，生成模型使用奖励或惩罚来更新其策略，以便生成更高质量、更符合人类偏好的文本
 
-### 明医 (MING)：中文医疗问诊大模型（原名：MedicalGPT-zh）
-- github.com/MediaBrain-SJTU/MedicalGPT-zh
+### 明医 (MING)：中文医疗问诊大模型 （原名：MedicalGPT-zh）
+- https://github.com/MediaBrain-SJTU/MING
 
 **MedicalGPT-zh**
 该开源了基于ChatGLM-6B LoRA 16-bit指令微调的中文医疗通用模型。基于共计28科室的中文医疗共识与临床指南文本，我们生成医疗知识覆盖面更全，回答内容更加精准的高质量指令数据集。
@@ -718,6 +718,15 @@ TigerBot 是一个多语言多任务的大规模语言模型(LLM)。根据 OpenA
 - 运用 ensemble 和 probabilistic modeling 的方法实现更可控的事实性(factuality)和创造性(generativeness)，
 - 在并行训练上，我们突破了 deep-speed 等主流框架中若干内存和通信问题，使得在千卡环境下数月无间断，
 - 对中文语言的更不规则的分布，从 tokenizer 到训练算法上做了更适合的算法优化。
+
+### XVERSE-13B
+- https://github.com/xverse-ai/XVERSE-13B
+
+XVERSE-13B 是由深圳元象科技自主研发的支持多语言的大语言模型（Large Language Model），主要特点如下：
+- 模型结构：XVERSE-13B 使用主流 Decoder-only 的标准 Transformer 网络结构，支持 8K 的上下文长度（Context Length），为同尺寸模型中最长，能满足更长的多轮对话、知识问答与摘要等需求，模型应用场景更广泛。
+- 训练数据：构建了 1.4 万亿 token 的高质量、多样化的数据对模型进行充分训练，包含中、英、俄、西等 40 多种语言，通过精细化设置不同类型数据的采样比例，使得中英两种语言表现优异，也能兼顾其他语言效果。
+- 分词：基于 BPE（Byte-Pair Encoding）算法，使用上百 GB 语料训练了一个词表大小为 100,278 的分词器，能够同时支持多语言，而无需额外扩展词表。
+- 训练框架：自主研发多项关键技术，包括高效算子、显存优化、并行调度策略、数据-计算-通信重叠、平台和框架协同等，让训练效率更高，模型稳定性强，在千卡集群上的峰值算力利用率可达到 58.5%，位居业界前列。
 
 ### YuLan-Chat & YuLan-Chat-2
 - https://github.com/RUC-GSAI/YuLan-Chat
