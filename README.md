@@ -81,7 +81,8 @@ Open-Source Language Model Pocket
 | LongLLaMA | UltraLM-13B |
 | LLaMA复刻版OpenLLaMA | Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality |
 | Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM | Wombat |
-| Lit-LLaMA ️ | XGen-7B |
+| Lit-LLaMA ️ | * 【WizardMath】 |
+||XGen-7B|
 
 *评价*
 |  |
@@ -1235,6 +1236,12 @@ An open platform for training, serving, and evaluating large language model base
 This is the repository for RRHF (Rank Response to align Human Feedback) and open-sourced language models Wombat. RRHF helps align large language models with human perference easier.
 
 Reinforcement Learning from Human Feedback (RLHF) enables the alignment of large language models with human preference, improving the quality of interactions between humans and language models. Recent practice of RLHF uses PPO to enable the large language model optimization of such alignment. However, implementing PPO is non-trivial (where the training procedure requires interactive between policy, behavior policy, reward, value model) and it is also tedious to tuning many hyper-parameters. Our motivation is to simplify the alignment between language models with human preference, and our proposed paradigm RRHF (Rank Response from Human Feedback) can achieve such alignment as easily as conventional fine-tuning. It is simpler than PPO from the aspects of coding, model counts, and hyperparameters.
+
+### WizardMath
+- https://github.com/nlpxucan/WizardLM/tree/main/WizardMath
+- https://huggingface.co/WizardLM/WizardMath-70B-V1.0
+
+To develop our WizardMath model, we begin with adapting the Evol-Instruct and Reinforcement Learning methods specifically for math tasks, like GSM8k and MATH. This involves tailoring the prompt to the domain of math-related instructions. Subsequently, we fine-tune the LLaMA 2, utilizing the newly created instruction-following math training set.
 
 ### XGen-7B
 - https://blog.salesforceairesearch.com/xgen/
