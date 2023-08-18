@@ -10,9 +10,12 @@ Open-Source Language Model Pocket
 - [通俗理解Gradient Checkpoint（附代码）](https://mp.weixin.qq.com/s/IwcfUP_j6JYFXH_xhnWWJQ)
 - 千“垂”百炼：垂直领域与语言模型
   - [导语](https://mp.weixin.qq.com/s/G24skuUbyrSatxWczVxEAg)
-  - 【医疗/健康】训练数据的获得
-    - ChatDoctor （解读 [上](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg) [中](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw) [下](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg) / PDF版PPT [上](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf) [中](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%AD%EF%BC%89.pdf) [下](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8B%EF%BC%89.pdf)）
-    - MedicalGPT-zh ([解读](https://mp.weixin.qq.com/s/QJKZYKh16fqLTC367WhzdA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MedicalGPT-zh.pdf))
+  - 获得可用的垂直领域数据
+    - 【医疗/健康】ChatDoctor （解读 [上](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg) [中](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw) [下](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg) / PDF版PPT [上](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf) [中](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%AD%EF%BC%89.pdf) [下](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8B%EF%BC%89.pdf)）
+    - 【医疗/健康】MedicalGPT-zh ([解读](https://mp.weixin.qq.com/s/QJKZYKh16fqLTC367WhzdA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MedicalGPT-zh.pdf))
+    - 【医疗/健康】明医(MING) ([解读](https://mp.weixin.qq.com/s/uM4FZeDhAc6JuMlW7NCvUA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MING.pdf))
+  - 自动评估模型
+    - 【医疗/健康】[使用BERT-Score比较ChatDoctor与ChatGPT3.5](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg)
 
 **内容一览** (Table of Contents)：
 
@@ -73,16 +76,17 @@ Open-Source Language Model Pocket
 | Dolly 1&2 | Orca |
 | FinGPT | OpenChatKit |
 | Falcon | Open-Assistant |
-| Facebook/Meta LLaMA/LLaMA2 | MedLLaMA-13B & PMC-LLaMA: Continue Training LLaMA on Medical Papers |
-| GALACTICA | RedPajama |
-| Goar-7B for Arithmetic Tasks | StableLM |
-| HuggingChat | StableVicuna |
-| Koala: A Dialogue Model for Academic Research | Stanford Alpaca |
-| LongLLaMA | UltraLM-13B |
-| LLaMA复刻版OpenLLaMA | Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality |
-| Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM | Wombat |
-| Lit-LLaMA ️ | * 【WizardMath】 |
-||XGen-7B|
+| Facebook/Meta LLaMA/LLaMA2 | * 【Platypus】 |
+| GALACTICA | MedLLaMA-13B & PMC-LLaMA: Continue Training LLaMA on Medical Papers |
+| Goar-7B for Arithmetic Tasks | RedPajama |
+| HuggingChat | StableLM |
+| Koala: A Dialogue Model for Academic Research | StableVicuna |
+| LongLLaMA | Stanford Alpaca |
+| LLaMA复刻版OpenLLaMA | UltraLM-13B |
+| Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM | Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality |
+| Lit-LLaMA ️ | Wombat |
+|  | * 【WizardMath】 |
+|  | XGen-7B |
 
 *评价*
 |  |
@@ -1178,6 +1182,12 @@ Open Assistant is a project meant to give everyone access to a great chat based 
 
 We believe that by doing this we will create a revolution in innovation in language. In the same way that stable-diffusion helped the world make art and images in new ways we hope Open Assistant can help improve the world by improving language itself.
 
+### Platypus
+- https://platypus-llm.github.io/
+- https://github.com/arielnlee/Platypus
+
+We present Platypus a family of fine-tuned and merged Large Language Models (LLMs) that achieves the strongest performance and currently stands at first place in HuggingFace's Open LLM Leaderboard as of the release date of this work. In this work we describe (1) our curated dataset Open-Platypus, that is a subset of other open datasets and which we release to the public (2) our process of fine-tuning and merging LoRA modules in order to conserve the strong prior of pretrained LLMs, while bringing specific domain knowledge to the surface (3) our efforts in checking for test data leaks and contamination in the training data, which can inform future research. Specifically, the Platypus family achieves strong performance in quantitative LLM metrics across model sizes, topping the global Open LLM leaderboard while using just a fraction of the fine-tuning data and overall compute that are required for other state-of-the-art fine-tuned LLMs. In particular, a 13B Platypus model can be trained on a single A100 GPU using 25k questions in 5 hours. This is a testament of the quality of our Open-Platypus dataset, and opens opportunities for more improvements in the field.
+
 ### MedLLaMA-13B & PMC-LLaMA: Continue Training LLaMA on Medical Papers
 - https://github.com/chaoyi-wu/PMC-LLaMA
 - https://huggingface.co/chaoyi-wu/PMC_LLAMA_7B
@@ -1241,7 +1251,7 @@ Reinforcement Learning from Human Feedback (RLHF) enables the alignment of large
 - https://github.com/nlpxucan/WizardLM/tree/main/WizardMath
 - https://huggingface.co/WizardLM/WizardMath-70B-V1.0
 
-To develop our WizardMath model, we begin with adapting the Evol-Instruct and Reinforcement Learning methods specifically for math tasks, like GSM8k and MATH. This involves tailoring the prompt to the domain of math-related instructions. Subsequently, we fine-tune the LLaMA 2, utilizing the newly created instruction-following math training set.
+
 
 ### XGen-7B
 - https://blog.salesforceairesearch.com/xgen/
@@ -1396,204 +1406,4 @@ A Simple and Effective Pruning Approach for Large Language Models
 
 As their size increases, Large Languages Models (LLMs) are natural candidates for network pruning methods: approaches that drop a subset of network weights while striving to preserve performance. Existing methods, however, require either retraining, which is rarely affordable for billion-scale LLMs, or solving a weight reconstruction problem reliant on second-order information, which may also be computationally expensive. In this paper, we introduce a novel, straightforward yet effective pruning method, termed Wanda (Pruning by Weights and activations), designed to induce sparsity in pretrained LLMs. Motivated by the recent observation of emergent large magnitude features in LLMs, our approach prune weights with the smallest magnitudes multiplied by the corresponding input activations, on a per-output basis. Notably, Wanda requires no retraining or weight update, and the pruned LLM can be used as is. We conduct a thorough evaluation of our method on LLaMA across various language benchmarks. Wanda significantly outperforms the established baseline of magnitude pruning and competes favorably against recent methods involving intensive weight update.
 
-
-## 6 部分阅读资料
-### 总结开源可用的Instruct/Prompt Tuning数据
-- https://zhuanlan.zhihu.com/p/615277009
-
-### 总结当下可用的大模型LLMs
-- https://zhuanlan.zhihu.com/p/611403556
-
-### 针对聊天对话数据摘要生成任务微调 FLAN-T5
-- https://www.philschmid.de/fine-tune-flan-t5
-
-### 使用 DeepSpeed 和 Hugging Face 🤗 Transformer 微调 FLAN-T5 XL/XXL
-- https://zhuanlan.zhihu.com/p/615528315
-
-### ChatGPT等大模型高效调参大法——PEFT库的算法简介
-- https://zhuanlan.zhihu.com/p/613863520
-
-### Fine-tuning 20B LLMs with RLHF on a 24GB consumer GPU
-- https://huggingface.co/blog/trl-peft
-
-### 可以微调类ChatGPT模型啦！开源Alpaca-LoRA+RTX 4090就能搞定
-- https://mp.weixin.qq.com/s/vzIm-fOxxPEU69ArAowoIg
-
-### 0门槛克隆ChatGPT！30分钟训完，60亿参数性能堪比GPT-3.5
-- https://mp.weixin.qq.com/s/RMrXIHGOy3cPu8ybQNWonA
-
-### 训练个中文版ChatGPT没那么难：不用A100，开源Alpaca-LoRA+RTX 4090就能搞定
-- https://mp.weixin.qq.com/s/k7T-vfoH3xvxl6uqImP7DQ
-
-### GPT fine-tune实战： 训练我自己的 ChatGPT
-- https://zhuanlan.zhihu.com/p/616504594
-
-### 笔记本就能运行的ChatGPT平替来了，附完整版技术报告
-- https://mp.weixin.qq.com/s/crpG4dtfQFe3Q7hR3oeyxQ
-
-### 【官方教程】ChatGLM-6B微调，最低只需7GB显存
-- https://mp.weixin.qq.com/s/miML4PXioK5iM8UI0cTSCQ
-
-### 特制自己的ChatGPT：多接口统一的轻量级LLM-IFT平台
-- https://mp.weixin.qq.com/s/Q5Q3RpQ80XmpbfhSxq2R1Q
-
-### ChatDoctor：基于LLaMA在医学领域知识上微调的医学对话模型
-- https://mp.weixin.qq.com/s/-IqECOgCs4cS6Ya-EccXOA
-- https://github.com/Kent0n-Li/ChatDoctor
-
-### 也谈ChatGPT的低成本“平替”当下实现路线：语言模型+指令微调数据+微调加速架构下的代表项目和开放数据
-- https://mp.weixin.qq.com/s/CJ4cCjti5jHOpDZqd42stw
-
-### StackLLaMA: A hands-on guide to train LLaMA with RLHF
-- https://huggingface.co/blog/stackllama
-
-### 成本不到100美元！UC伯克利再开源类ChatGPT模型「考拉」：数据量大没有用，高质量才是王道
-- https://zhuanlan.zhihu.com/p/621078208
-
-### NLP大模型必备-FudanNLP开源中文图书集合CBook-150K
-- https://mp.weixin.qq.com/s/X2SmjkALVVOE5hOrizcqqw
-- https://github.com/FudanNLPLAB/CBook-150K
-- http://www.doc-ai.cn/
-
-### COIG：首个大规模、可商用的中文开源指令数据！
-- https://mp.weixin.qq.com/s/1hSU5AROH0ZGuDo9oD0bFw
-- https://huggingface.co/datasets/BAAI/COIG
-
-### 以竞赛为例--GPT/BART/CPT的预训练和微调全流程
-- https://mp.weixin.qq.com/s/fNb9tmEXLUtDoWKibNFLEQ
-
-### 生成式专利语言模型(PatentGPT)评估
-- https://mp.weixin.qq.com/s/hnmH8AzQupIZH1lWX2ZSNw
-
-### 极低资源微调大模型方法LoRA以及BLOOM-LORA实现代码
-- https://zhuanlan.zhihu.com/p/625488835
-
-### “超越”(MMCU)中文通用大语言模型测试集--国内首个多领域多任务数据集
-- https://mp.weixin.qq.com/s/sZqqK51PamKHOz3DFcA_4A
-
-数据集的测试内容涵盖四大领域：医疗、法律、心理学和教育。通过综合评估模型在多个学科上的知识广度和深度，能够帮助研究者更精准地找出模型的缺陷，并对模型的能力进行打分。
-
-### CCKS2023-PromptCBLUE中文医疗大模型评测比赛
-- https://mp.weixin.qq.com/s/LjOiZ_S7oLJBvqdKotA9zA
-
-为推动LLM在医疗领域的发展和落地，华东师范大学计算机学院王晓玲教授团队联合阿里巴巴天池平台、复旦大学、复旦大学附属华山医院、东北大学、哈尔滨工业大学（深圳）、鹏城实验室与同济大学推出PromptCBLUE评测基准(https://github.com/michael-wzhu/PromptCBLUE)，对CBLUE基准(https://tianchi.aliyun.com/dataset/95414)进行二次开发，将16种不同的医疗场景NLP任务全部转化为基于提示的语言生成任务，形成首个中文医疗场景的LLM评测基准。PromptCBLUE将作为CCKS-2023的评测任务之一，已在阿里巴巴天池大赛平台上线进行开放评测，欢迎各位师生报名参赛(刷榜)。
-
-### 也看垂直领域大模型微调落地-以医疗领域为例：从PMC-LLaMA增量预训到MedicalGPT-zh指令微调项目概述
-- https://mp.weixin.qq.com/s/Pk4NdFQq5G6iZ3QmcyyFUg
-
-### HuggingFace宣布在transformers库中引入首个RNN模型：RWKV，一个结合了RNN与Transformer双重优点的模型
-- https://zhuanlan.zhihu.com/p/629637598
-
-### LLM评价模型PandaLM技术前瞻
-- https://zhuanlan.zhihu.com/p/630173415
-- https://github.com/WeOpenML/PandaLM
-
-### 小数据也能助力大发现！CancerGPT成功预测药物组合，惊人数字证明其准确性！
-- https://mp.weixin.qq.com/s/xswnXhnLOkVOQwfKNFdPQA
-
-### 逐步蒸馏！用更少的数据，训练更小的模型：性能却堪比大2000倍的模型
-- https://mp.weixin.qq.com/s/dtKaeSO4hZPGOuPcHRmBQw
-
-### 国内首个可复现的 RLHF 基准，北大团队开源PKU-Beaver | 料见闭门交流
-- https://github.com/PKU-Alignment/safe-rlhf
-- https://mp.weixin.qq.com/s/ZpkgszXbisl5xf63EfTNjQ
-
-### Meta AI 重磅推出LIMA！媲美GPT-4、无需RLHF就能对齐！
-- https://zhuanlan.zhihu.com/p/631508237
-
-### 逼近GPT-4！BLOOMChat: 开源可商用支持多语言的大语言模型
-- https://zhuanlan.zhihu.com/p/631036519
-
-### 手把手复现一个ChatGPT
-- https://zhuanlan.zhihu.com/p/631690198
-
-### 关于hippocratic.ai和glass.health的产品讨论
-- https://mp.weixin.qq.com/s/yl_aPKg74yHKNdfPhGss5g
-
-### 越小越好: Q8-Chat，在英特尔至强 CPU 上体验高效的生成式 AI
-- https://mp.weixin.qq.com/s/O55qgGeD5lDKl9tGVmBN3g
-
-### 开源原驼（Guanaco）及背后的QLoRA技术，将微调65B模型的显存需求从780GB以上降低到48GB以下，效果直逼GPT-4，技术详解
-- https://zhuanlan.zhihu.com/p/632236718
-
-### 使用qlora对中文大语言模型进行微调
-- https://github.com/taishan1994/qlora-chinese-LLM
-
-### 使用LoRA对BELLE发布的BELLE-7B-2M进行微调
-- https://zhuanlan.zhihu.com/p/632317500
-
-### 【LLM系列之Tokenizer】如何科学地训练一个LLM分词器
-- https://mp.weixin.qq.com/s/z6wUY1p8_AVv8YEQ6FRYIA
-
-### 金融领域大模型效果，低成本，Just-in-Time，场景落地
-- https://mp.weixin.qq.com/s/5Nm1I10eLi0xhNIxqyEOMA
-
-### 首个大规模使用工具的大模型来了：伯克利发布Gorilla
-- https://mp.weixin.qq.com/s/p9tx3q3Lpr4fNqdyxWhzyA
-
-### NBCE：使用朴素贝叶斯扩展LLM的Context处理长度
-- https://kexue.fm/archives/9617
-
-### 关于NBCE方法的一些补充说明和分析
-- https://kexue.fm/archives/9632
-
-### 如何使用 Megatron-LM 训练语言模型
-- https://mp.weixin.qq.com/s/QPg6gOWGbQDezTl8OFZU3g
-
-### 谷歌训了28个15亿参数模型，说明数据对大模型训练的影响
-- https://mp.weixin.qq.com/s/l78B9zsPnDo_pRZrPCiQsQ
-
-### 一个通用的自适应prompt方法，突破了零样本学习的瓶颈
-- https://mp.weixin.qq.com/s/icc__WZZqdAd5r3oxm0vgA
-
-### ChatGPT能解决信息抽取吗？一份关于性能、评估标准、鲁棒性和错误的分析
-- https://mp.weixin.qq.com/s/TeFxseHyqZ96aL6eN6X64g
-
-### * 刘知远团队提出：如何通过扩大高质量指导性对话数据集，来提高模型的性能和效率
-- https://mp.weixin.qq.com/s/dUZHB8OC8l1oxbUX0FBG5Q
-
-### Large Language Models are not Fair Evaluators
-- https://mp.weixin.qq.com/s/LmtO2-YiSD2n3ccH1DJAkw
-- https://https://arxiv.org/pdf/2305.17926v1.pdf
-- https://https://github.com/i-Eval/FairEval
-
-### 驯服大型语言模型（LLMs）的五种方法，及具体方法选择思路
-- https://mp.weixin.qq.com/s/93xk_x7LBFLOZlmnM96IMw
-
-### 再看基于LLaMA的最新微调模型变体：CaMA、ExpertLLaMA以及第四个中文法律微调模型LexiLaw
-- https://mp.weixin.qq.com/s/CrAkraUCl28Lr1-hAT-RWw
-
-### 中文大语言模型赶考：商汤与上海AI Lab等新发布「书生·浦语」
-- https://github.com/InternLM/InternLM-techreport
-- https://mp.weixin.qq.com/s/lAdXtVfzziTRxz7SKWJauA
-
-### 将330亿参数大模型「塞进」单个消费级GPU，加速15%、性能不减
-- https://mp.weixin.qq.com/s/819L-dY54BaVM1vub9OSpQ
-
-### 也看OpenAI-embedding的平替方案：从text2vec、SGPT生成式emebdding到M3E近期新秀
-- https://mp.weixin.qq.com/s/OoRYddUXBGWMhPSQYIFs-g
-
-### Large Language Models Encode Clinical Knowledge
-- http://arxiv.org/abs/2212.13138
-
-### Towards Expert-Level Medical Question Answering with Large Language Models
-- https://mp.weixin.qq.com/s/zVqcw-tZmP4pQmPd5dwfiA
-- https://arxiv.org/abs/2305.09617
-
-### Are Large Language Models Ready for Healthcare? A Comparative Study on Clinical Language Understanding
-- http://arxiv.org/abs/2304.05368
-
-### CAN LARGE LANGUAGE MODELS REASON ABOUT MEDICAL QUESTIONS?
-- http://arxiv.org/abs/2207.08143
-
-### Anima基于QLoRA+DPO的低成本RLHF训练
-- https://github.com/lyogavin/Anima/tree/main/rlhf
-
-### * A Survey on Evaluation of Large Language Models
-- https://arxiv.org/abs/2307.03109
-
-### * 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance
-- https://github.com/chancefocus/PIXIU
-
 > 持续更新中 (Continuously Updated)... 
-
