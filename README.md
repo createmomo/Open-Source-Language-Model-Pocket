@@ -15,6 +15,7 @@ Open-Source Language Model Pocket
     - 【医疗/健康】MedicalGPT-zh ([解读](https://mp.weixin.qq.com/s/QJKZYKh16fqLTC367WhzdA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MedicalGPT-zh.pdf))
     - 【医疗/健康】明医(MING) ([解读](https://mp.weixin.qq.com/s/uM4FZeDhAc6JuMlW7NCvUA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MING.pdf))
   - 自动评估模型
+    - 【通用】[用语言模型评估语言模型（1）导语](https://mp.weixin.qq.com/s/SUN_ywkI8ld1edXY7uq_1Q)
     - 【医疗/健康】[使用BERT-Score比较ChatDoctor与ChatGPT3.5](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg)
 
 **开源模型一览** (Table of Contents)：
@@ -23,30 +24,31 @@ Open-Source Language Model Pocket
 
 |  |  |  |
 |---|---|---|
-| 本草 | BBT-FinCUGE-Applications | InternLM 书生・浦语 |
-| 百川 | BELLE | Llama2-chat-Chinese-50W |
-| 华佗 | Bloom | Llama2-Chinese (FlagAlpha) |
-| 扁鹊 | BiLLa | LaWGPT |
-| 灵心 | BLOOMChat176B | Lawyer LLaMA |
-| 启真 | ChatLaw 法律大模型 | LexiLaw |
-| 【貔貅】 FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | Chinese-Llama-2-7b (LinkSoul-AI) | LawGPT_zh |
-| 中文Alpaca Luotuo | Chinese-Vicuna-medical | Linly伶荔说 中文 LLaMA1-2 & OpenLLaMA & Falcon 大模型 |
-| 中文LLaMA&Alpaca大模型 | Cornucopia-LLaMA-Fin-Chinese | MediaGPT |
-| 中文LLaMA&Alpaca大模型2 | chatglm-maths | MeChat |
-| 流萤Firefly | ChatRWKV | MedicalGPT |
-| 凤凰 | ChatYuan | * 【明医 (MING)：中文医疗问诊大模型 (原名：MedicalGPT-zh)】 |
-| 复旦MOSS | ChatGLM-6B | OpenKG-KnowLLM |
-| 复旦MOSS-RLHF | ChatGLM2-6B | OpenMEDLab 浦医 |
-| 轩辕 | Chinese-Transformer-XL | PromptCLUE |
-| 悟道·天鹰Aquila | ChatMed-TCM&ChatMed-Consult | SkyText-Chinese-GPT3 |
-| 桃李 | ChatGLM-Med | ShenNong-TCM-LLM |
-| 情感大模型PICA | CPM-Bee | TableGPT |
-| 雅意大模型 | Data-Copilot | TransGPT · 致远 |
-| 儿童情感陪伴大模型“巧板” | DoctorGLM | TechGPT |
-| * 【通义千问Qwen】 | EduChat | TigerBot |
-| * 【活字】 | EVA | * 【XVERSE-13B】 |
-| Anima | GPT2 for Multiple Language | * 【YuLan-Chat & YuLan-Chat-2】 |
-| BayLing |  | Ziya-LLaMA |
+| 本草 | BayLing | InternLM 书生・浦语 |
+| 百川 | BBT-FinCUGE-Applications | Llama2-chat-Chinese-50W |
+| 华佗 | BELLE | Llama2-Chinese (FlagAlpha) |
+| 扁鹊 | Bloom | LaWGPT |
+| 灵心 | BiLLa | Lawyer LLaMA |
+| 启真 | BLOOMChat176B | LexiLaw |
+| 【貔貅】 FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | ChatLaw 法律大模型 | LawGPT_zh |
+| 中文Alpaca Luotuo | Chinese-Llama-2-7b (LinkSoul-AI) | Linly伶荔说 中文 LLaMA1-2 & OpenLLaMA & Falcon 大模型 |
+| 中文LLaMA&Alpaca大模型 | Chinese-Vicuna-medical | MediaGPT |
+| 中文LLaMA&Alpaca大模型2 | Cornucopia-LLaMA-Fin-Chinese | MeChat |
+| 流萤Firefly | chatglm-maths | MedicalGPT |
+| 凤凰 | ChatRWKV | * 【明医 (MING)：中文医疗问诊大模型 (原名：MedicalGPT-zh)】 |
+| 复旦MOSS | ChatYuan | OpenKG-KnowLLM |
+| 复旦MOSS-RLHF | ChatGLM-6B | OpenMEDLab 浦医 |
+| 轩辕 | ChatGLM2-6B | PromptCLUE |
+| 悟道·天鹰Aquila | Chinese-Transformer-XL | SkyText-Chinese-GPT3 |
+| 桃李 | ChatMed-TCM&ChatMed-Consult | ShenNong-TCM-LLM |
+| 情感大模型PICA | ChatGLM-Med | TableGPT |
+| 雅意大模型 | CPM-Bee | TransGPT · 致远 |
+| 儿童情感陪伴大模型“巧板” | Data-Copilot | TechGPT |
+| * 【通义千问Qwen】 | DoctorGLM | TigerBot |
+| * 【活字】 | EduChat | * 【XVERSE-13B】 |
+| * 【韩非 HanFei】 | EVA | * 【YuLan-Chat & YuLan-Chat-2】 |
+| * 【智海 录问】 | GPT2 for Multiple Language | Ziya-LLaMA |
+| Anima |  |  |
 
 *训练/推理*
 |  |  |
@@ -308,6 +310,16 @@ PICA 以清华大学开源的ChatGLM2-6B为基础，采用Prompt tuning技术在
 - https://github.com/HIT-SCIR/huozi
 
 大规模语言模型（LLM）在自然语言处理的通用领域已取得了令人瞩目的成功。对于广泛的应用场景，这种技术展示了强大的潜力，学术界和工业界的兴趣也持续升温。哈工大自然语言处理研究所30余位老师和学生参与开发了通用对话大模型活字1.0，哈工大社会计算与信息检索研究中心(哈工大-SCIR)研发了活字2.0，致力于为自然语言处理的研究和实际应用提供更多可能性和选择。
+
+### 韩非 HanFei
+- https://github.com/siat-nlp/HanFei
+
+HanFei-1.0(韩非)是国内首个全参数训练的法律大模型，参数量7b，主要功能包括：法律问答、多轮对话、撰写文章、检索（敬请期待）等。
+
+### 智海 录问
+- https://github.com/zhihaiLLM/wisdomInterrogatory
+
+智海-录问(wisdomInterrogatory)是由浙江大学、阿里巴巴达摩院以及华院计算三家单位共同设计研发的法律大模型。核心思想：以“普法共享和司法效能提升”为目标，从推动法律智能化体系入司法实践、数字化案例建设、虚拟法律咨询服务赋能等方面提供支持，形成数字化和智能化的司法基座能力。
 
 ### Anima：基于QLoRA的33B中文大语言模型
 - https://github.com/lyogavin/Anima
