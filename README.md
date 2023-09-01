@@ -43,12 +43,12 @@ Open-Source Language Model Pocket
 | 桃李 | ChatMed-TCM&ChatMed-Consult | ShenNong-TCM-LLM |
 | 情感大模型PICA | ChatGLM-Med | TableGPT |
 | 雅意大模型 | CPM-Bee | TransGPT · 致远 |
-| 儿童情感陪伴大模型“巧板” | Data-Copilot | TechGPT |
-| * 【通义千问Qwen】 | DoctorGLM | TigerBot |
-| * 【活字】 | EduChat | * 【XVERSE-13B】 |
-| * 【韩非 HanFei】 | EVA | * 【YuLan-Chat & YuLan-Chat-2】 |
-| * 【智海 录问】 | GPT2 for Multiple Language | Ziya-LLaMA |
-| Anima |  |  |
+| 儿童情感陪伴大模型“巧板” | * 【DISC-MedLLM （复旦）】 | TechGPT |
+| * 【通义千问Qwen】 | Data-Copilot | TigerBot |
+| * 【活字】 | DoctorGLM | * 【XVERSE-13B】 |
+| * 【韩非 HanFei】 | EduChat | * 【YuLan-Chat & YuLan-Chat-2】 |
+| * 【智海 录问】 | EVA | Ziya-LLaMA |
+| Anima | GPT2 for Multiple Language |  |
 
 *训练/推理*
 |  |  |
@@ -100,6 +100,7 @@ Open-Source Language Model Pocket
 | HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models|
 | KoLA: Carefully Benchmarking World Knowledge of Large Language Models |
 |* 【LucyEval—中文大语言模型成熟度评测】|
+|* 【CMB: A Comprehensive Medical Benchmark in Chinese】|
 | Multiscale Positive-Unlabeled Detection of AI-Generated Texts |
 | PandaLM |
 
@@ -500,7 +501,20 @@ OpenBMB大模型系统生态支持：OpenBMB 大模型系统在高性能预训�
 
 强大的对话和工具使用能力：结合OpenBMB 在指令微调和工具学习的探索，我们在 CPM-Bee 基座模型的基础上进行微调，训练出了具有强大对话和工具使用能力的实例模型，现已开放定向邀请内测，未来会逐步向公众开放。
 
-### * 【Data-Copilot】
+### DISC-MedLLM（复旦）
+- https://med.fudan-disc.com
+- https://github.com/FudanDISC/DISC-MedLLM
+- https://arxiv.org/abs/2308.14346
+
+DISC-MedLLM 是基于我们构建的高质量数据集 DISC-Med-SFT 在通用领域中文大模型 Baichuan-13B 上训练得到的医疗大模型。值得注意的是，我们的训练数据和训练方法可以被适配到任何基座大模型之上。
+
+DISC-MedLLM 具有三个关键特点：
+
+- 可靠丰富的专业知识。我们以医学知识图谱作为信息源，通过采样三元组，并使用通用大模型的语言能力进行对话样本的构造。
+- 多轮对话的问询能力。我们以真实咨询对话纪录作为信息源，使用大模型进行对话重建，构建过程中要求模型完全对齐对话中的医学信息。
+- 对齐人类偏好的回复。病人希望在咨询的过程中获得更丰富的支撑信息和背景知识，但人类医生的回答往往简练；我们通过人工筛选，构建高质量的小规模指令样本，对齐病人的需求。
+
+### Data-Copilot
 - https://github.com/zwq2018/Data-Copilot
 - https://arxiv.org/abs/2306.07209
 - https://huggingface.co/spaces/zwq2018/Data-Copilot
@@ -1344,6 +1358,14 @@ KoLA基于19个关注实体、概念和事件的任务。参考了Bloom认知体
 - https://arxiv.org/abs/2308.04823
 
 本评测基准包含11000道不同类型的题目，涵盖科技工程、人文与社会科学、数学计算、医师资格考试、司法考试、注册会计师考试等科目下的55个子科目，由甲骨易AI研究院人工整理标注。题目分为名词解释、简答题和计算题三种类型。同时，甲骨易AI研究院还设计了一套复合打分方式，使评分过程更加合理、科学。
+
+### CMB: A Comprehensive Medical Benchmark in Chinese
+- https://mp.weixin.qq.com/s/M8V-XaCRuk-UkAhqBkPgGg
+- https://arxiv.org/abs/2308.08833
+- https://github.com/FreedomIntelligence/CMB
+- https://cmedbenchmark.llmzoo.com/
+
+我们提出了中文医疗模型评估基准 CMB，其包括了不同临床职业、不同职业阶段考试中的多项选择题（CMB-Exam）和基于真实病例的复杂临床诊断问题（CMB-Clin）。通过测评实验,我们发现：（1）GPT-4 在医学领域表现出显著优越性，于此同时中文通用大模型也表现得相当出色；（2）医疗大模型在性能方面仍然落后于通用模型，还有很大的提升空间（3）有参考答案和评分标准的问诊自动评估与专家评估高度对齐，提供了一个医学领域超级对齐的初步尝试。
 
 ### Multiscale Positive-Unlabeled Detection of AI-Generated Texts
 - https://mp.weixin.qq.com/s/KBN8TMwXD1bcE2X_dImXVg
