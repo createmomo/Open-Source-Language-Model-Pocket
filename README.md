@@ -24,31 +24,31 @@ Open-Source Language Model Pocket
 
 |  |  |  |
 |---|---|---|
-| 本草 | BayLing | InternLM 书生・浦语 |
-| 百川 | BBT-FinCUGE-Applications | Llama2-chat-Chinese-50W |
-| 华佗 | BELLE | Llama2-Chinese (FlagAlpha) |
-| 扁鹊 | Bloom | LaWGPT |
-| 灵心 | BiLLa | Lawyer LLaMA |
-| 启真 | BLOOMChat176B | LexiLaw |
-| 【貔貅】 FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | ChatLaw 法律大模型 | LawGPT_zh |
-| 中文Alpaca Luotuo | Chinese-Llama-2-7b (LinkSoul-AI) | Linly伶荔说 中文 LLaMA1-2 & OpenLLaMA & Falcon 大模型 |
-| 中文LLaMA&Alpaca大模型 | Chinese-Vicuna-medical | MediaGPT |
-| 中文LLaMA&Alpaca大模型2 | Cornucopia-LLaMA-Fin-Chinese | MeChat |
-| 流萤Firefly | chatglm-maths | MedicalGPT |
-| 凤凰 | ChatRWKV | * 【明医 (MING)：中文医疗问诊大模型 (原名：MedicalGPT-zh)】 |
-| 复旦MOSS | ChatYuan | OpenKG-KnowLLM |
-| 复旦MOSS-RLHF | ChatGLM-6B | OpenMEDLab 浦医 |
-| 轩辕 | ChatGLM2-6B | PromptCLUE |
-| 悟道·天鹰Aquila | Chinese-Transformer-XL | SkyText-Chinese-GPT3 |
-| 桃李 | ChatMed-TCM&ChatMed-Consult | ShenNong-TCM-LLM |
-| 情感大模型PICA | ChatGLM-Med | TableGPT |
-| 雅意大模型 | CPM-Bee | TransGPT · 致远 |
-| 儿童情感陪伴大模型“巧板” | * 【DISC-MedLLM （复旦）】 | TechGPT |
-| * 【通义千问Qwen】 | Data-Copilot | TigerBot |
-| * 【活字】 | DoctorGLM | * 【XVERSE-13B】 |
-| * 【韩非 HanFei】 | EduChat | * 【YuLan-Chat & YuLan-Chat-2】 |
-| * 【智海 录问】 | EVA | Ziya-LLaMA |
-| Anima | GPT2 for Multiple Language |  |
+| 本草 | BayLing | GPT2 for Multiple Language |
+| 百川 | BBT-FinCUGE-Applications | InternLM 书生・浦语 |
+| 华佗 | BELLE | Llama2-chat-Chinese-50W |
+| 扁鹊 | Bloom | Llama2-Chinese (FlagAlpha) |
+| 灵心 | BiLLa | LaWGPT |
+| 启真 | BLOOMChat176B | Lawyer LLaMA |
+| 【貔貅】 FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | ChatLaw 法律大模型 | LexiLaw |
+| 中文Alpaca Luotuo | Chinese-Llama-2-7b (LinkSoul-AI) | LawGPT_zh |
+| 中文LLaMA&Alpaca大模型 | Chinese-Vicuna-medical | Linly伶荔说 中文 LLaMA1-2 & OpenLLaMA & Falcon 大模型 |
+| 中文LLaMA&Alpaca大模型2 | Cornucopia-LLaMA-Fin-Chinese | MediaGPT |
+| 流萤Firefly | chatglm-maths | MeChat |
+| 凤凰 | ChatRWKV | MedicalGPT |
+| 复旦MOSS | ChatYuan | * 【明医 (MING)：中文医疗问诊大模型 (原名：MedicalGPT-zh)】 |
+| 复旦MOSS-RLHF | ChatGLM-6B | OpenKG-KnowLLM |
+| 轩辕 | ChatGLM2-6B | OpenMEDLab 浦医 |
+| 悟道·天鹰Aquila | Chinese-Transformer-XL | PromptCLUE |
+| 桃李 | ChatMed-TCM&ChatMed-Consult | SkyText-Chinese-GPT3 |
+| 情感大模型PICA | ChatGLM-Med | ShenNong-TCM-LLM |
+| 雅意大模型 | CPM-Bee | TableGPT |
+| 儿童情感陪伴大模型“巧板” | * 【DISC-MedLLM （复旦）】 | TransGPT · 致远 |
+| * 【通义千问Qwen】 | Data-Copilot | TechGPT |
+| * 【活字】 | DoctorGLM | TigerBot |
+| * 【韩非 HanFei】 | EduChat | * 【XVERSE-13B】 |
+| * 【智海 录问】 | EVA | * 【YuLan-Chat & YuLan-Chat-2】 |
+| Anima | * 【EcomGPT】 | Ziya-LLaMA |
 
 *训练/推理*
 |  |  |
@@ -535,6 +535,14 @@ DoctorGLM，基于 ChatGLM-6B的中文问诊模型。
 - https://github.com/thu-coai/EVA
 
 EVA 是目前最大的开源中文预训练对话模型，拥有28亿参数，主要擅长开放域闲聊，目前有 1.0 和 2.0 两个版本。其中，1.0版本在 WudaoCorpus-Dialog 上训练而成，2.0 版本在从 WudaoCorpus-Dialog 中清洗出的更高质量的对话数据上训练而成，模型性能也明显好于 EVA1.0。
+
+### EcomGPT
+- https://arxiv.org/abs/2308.06966
+- https://github.com/Alibaba-NLP/EcomGPT
+
+- we proposed the first E-commerce instruction dataset EcomInstruct, with a total of 2.5 million instruction data.
+- EcomInstruct scales up the data size and task diversity by constructing atomic tasks with E-commerce basic data types, such as product information, user reviews. Atomic tasks are defined as intermediate tasks implicitly involved in solving a final task, which we also call Chain-of-Task tasks.
+- We developed EcomGPT by training the backbone model BLOOMZ with the EcomInstruct. Benefiting from the fundamental semantic understanding capabilities acquired from the Chain-of-Task tasks, EcomGPT exhibits excellent zero-shot generalization capabilities.
 
 ### GPT2 for Multiple Language
 - https://github.com/imcaspar/gpt2-ml
@@ -1471,8 +1479,6 @@ This project (ToolBench)  aims to construct open-source, large-scale, high-quali
 - https://arxiv.org/pdf/2306.11695.pdf
 
 A Simple and Effective Pruning Approach for Large Language Models
-
-As their size increases, Large Languages Models (LLMs) are natural candidates for network pruning methods: approaches that drop a subset of network weights while striving to preserve performance. Existing methods, however, require either retraining, which is rarely affordable for billion-scale LLMs, or solving a weight reconstruction problem reliant on second-order information, which may also be computationally expensive. In this paper, we introduce a novel, straightforward yet effective pruning method, termed Wanda (Pruning by Weights and activations), designed to induce sparsity in pretrained LLMs. Motivated by the recent observation of emergent large magnitude features in LLMs, our approach prune weights with the smallest magnitudes multiplied by the corresponding input activations, on a per-output basis. Notably, Wanda requires no retraining or weight update, and the pruned LLM can be used as is. We conduct a thorough evaluation of our method on LLaMA across various language benchmarks. Wanda significantly outperforms the established baseline of magnitude pruning and competes favorably against recent methods involving intensive weight update.
 
 
 > 持续更新中 (Continuously Updated)... 
