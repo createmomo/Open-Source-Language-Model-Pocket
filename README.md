@@ -15,7 +15,7 @@ Open-Source Language Model Pocket
     - 【医疗/健康】MedicalGPT-zh ([解读](https://mp.weixin.qq.com/s/QJKZYKh16fqLTC367WhzdA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MedicalGPT-zh.pdf))
     - 【医疗/健康】明医(MING) ([解读](https://mp.weixin.qq.com/s/uM4FZeDhAc6JuMlW7NCvUA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MING.pdf))
   - 自动评估模型
-    - 【通用】[用语言模型评估语言模型（1）导语](https://mp.weixin.qq.com/s/SUN_ywkI8ld1edXY7uq_1Q)
+    - 【通用】用语言模型评估语言模型（1）导语
     - 【医疗/健康】[使用BERT-Score比较ChatDoctor与ChatGPT3.5](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg)
 
 **开源模型一览** (Table of Contents)：
@@ -99,6 +99,7 @@ Open-Source Language Model Pocket
 | C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models |
 | HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models|
 | KoLA: Carefully Benchmarking World Knowledge of Large Language Models |
+|* 【LucyEval—中文大语言模型成熟度评测】|
 | Multiscale Positive-Unlabeled Detection of AI-Generated Texts |
 | PandaLM |
 
@@ -1336,6 +1337,13 @@ C-Eval is a comprehensive Chinese evaluation suite for foundation models. It con
 - https://kola.xlore.cn
 
 KoLA基于19个关注实体、概念和事件的任务。参考了Bloom认知体系，KoLA从知识的记忆、理解、应用和创造4个层级，从深度而非广度去衡量大语言模型处理世界知识的能力。实验结果表明，GPT-4虽然很强，但依然未能霸榜，在知识创造层次的测试中仅排第三名。
+
+### LucyEval—中文大语言模型成熟度评测
+- https://mp.weixin.qq.com/s/-K7wmnaTdEexlAoTB47mFw
+- http://lucyeval.besteasy.com/
+- https://arxiv.org/abs/2308.04823
+
+本评测基准包含11000道不同类型的题目，涵盖科技工程、人文与社会科学、数学计算、医师资格考试、司法考试、注册会计师考试等科目下的55个子科目，由甲骨易AI研究院人工整理标注。题目分为名词解释、简答题和计算题三种类型。同时，甲骨易AI研究院还设计了一套复合打分方式，使评分过程更加合理、科学。
 
 ### Multiscale Positive-Unlabeled Detection of AI-Generated Texts
 - https://mp.weixin.qq.com/s/KBN8TMwXD1bcE2X_dImXVg
