@@ -1,4 +1,4 @@
-# 开源语言模型百宝袋 (Ver. 2.3)
+# 开源语言模型百宝袋 (Ver. 3.0)
 Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
@@ -24,53 +24,82 @@ Open-Source Language Model Pocket
 
 *中文友好或国内主创的开源模型（Chinese Open Source Language Models）*
 
-|  |  |  |
+|多个领域/通用|||
 |---|---|---|
-| 本草 | BayLing | GPT2 for Multiple Language |
-| 百川 | BBT-FinCUGE-Applications | InternLM 书生・浦语 |
-| 华佗 | BELLE | Llama2-chat-Chinese-50W |
-| 扁鹊 | Bloom | Llama2-Chinese (FlagAlpha) |
-| 灵心 | BiLLa | LaWGPT |
-| 启真 | BLOOMChat176B | Lawyer LLaMA |
-| 【貔貅】 FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance | ChatLaw 法律大模型 | LexiLaw |
-| 中文Alpaca Luotuo | Chinese-Llama-2-7b (LinkSoul-AI) | LawGPT_zh |
-| 中文LLaMA&Alpaca大模型 | Chinese-Vicuna-medical | Linly伶荔说 中文 LLaMA1-2 & OpenLLaMA & Falcon 大模型 |
-| 中文LLaMA&Alpaca大模型2 | Cornucopia-LLaMA-Fin-Chinese | MediaGPT |
-| 流萤Firefly | chatglm-maths | MeChat |
-| 凤凰 | ChatRWKV | MedicalGPT |
-| 复旦MOSS | ChatYuan | * 【明医 (MING)：中文医疗问诊大模型 (原名：MedicalGPT-zh)】 |
-| 复旦MOSS-RLHF | ChatGLM-6B | OpenKG-KnowLLM |
-| 轩辕 | ChatGLM2-6B | OpenMEDLab 浦医 |
-| 悟道·天鹰Aquila | Chinese-Transformer-XL | PromptCLUE |
-| 桃李 | ChatMed-TCM&ChatMed-Consult | SkyText-Chinese-GPT3 |
-| 情感大模型PICA | ChatGLM-Med | ShenNong-TCM-LLM |
-| 雅意大模型 | CPM-Bee | TableGPT |
-| 儿童情感陪伴大模型“巧板” | * 【DISC-MedLLM （复旦）】 | TransGPT · 致远 |
-| * 【通义千问Qwen】 | Data-Copilot | TechGPT |
-| * 【活字】 | DoctorGLM | TigerBot |
-| * 【韩非 HanFei】 | EduChat | * 【XVERSE-13B】 |
-| * 【智海 录问】 | EVA | * 【YuLan-Chat & YuLan-Chat-2】 |
-| Anima | * 【EcomGPT】 | Ziya-LLaMA |
+|百川|中文Alpaca Luotuo|中文LLaMA&Alpaca大模型|
+|中文LLaMA&Alpaca大模型2|流萤Firefly|凤凰|
+|复旦MOSS|复旦MOSS-RLHF|悟道·天鹰Aquila|
+|雅意大模型| * 【通义千问Qwen】| * 【活字】 |
+| Anima |BayLing|BELLE|
+|Bloom|BiLLa |BLOOMChat176B|
+|Chinese-Llama-2-7b (LinkSoul-AI) |GPT2 for Multiple Language |InternLM 书生・浦语|
+|Llama2-chat-Chinese-50W|Llama2-Chinese (FlagAlpha) |Linly伶荔说 中文 LLaMA1-2 & OpenLLaMA & Falcon 大模型 |
+|ChatRWKV|ChatYuan|ChatGLM-6B|
+|ChatGLM2-6B|Chinese-Transformer-XL|OpenKG-KnowLLM |
+|PromptCLUE|SkyText-Chinese-GPT3|CPM-Bee|
+|TigerBot|* 【XVERSE-13B】|* 【YuLan-Chat & YuLan-Chat-2】 |
+|Ziya-LLaMA |TechGPT|EVA|
+
+| 医疗健康 |  |  |
+|---|---|---|
+| 本草 |华佗  |扁鹊  |
+| 灵心 | 启真 | 儿童情感陪伴大模型“巧板” |
+| OpenMEDLab 浦医|* 【明医 (MING)：中文医疗问诊大模型 (原名：MedicalGPT-zh)】 |情感大模型PICA|
+|Chinese-Vicuna-medical|MedicalGPT| * 【DISC-MedLLM （复旦）】 |
+|DoctorGLM|ChatMed-TCM&ChatMed-Consult|ChatGLM-Med|
+|MeChat|ShenNong-TCM-LLM||
+
+|经济/金融|||
+|---|---|---|
+|【貔貅】 FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance|轩辕|BBT-FinCUGE-Applications|
+|Cornucopia-LLaMA-Fin-Chinese|* 【EcomGPT】||
+
+|法律|||
+|---|---|---|
+| * 【韩非 HanFei】 | * 【智海 录问】 |ChatLaw 法律大模型|
+|LaWGPT|Lawyer LLaMA|LexiLaw|
+|LawGPT_zh|||
+
+|交通|
+|---|
+|TransGPT · 致远|
+
+|教育||
+|---|---|
+|桃李|EduChat|
+
+|数学|
+|---|
+|chatglm-maths|
+
+|表格/数据 分析||
+|---|---|
+|TableGPT|Data-Copilot|
+
+|自媒体|
+|---|
+|MediaGPT|
+
 
 *训练/推理*
-|  |  |
-|---|---|
-| Alpaca-LoRA | llama2.c |
-| AlpacaFarm | LightLLM |
-| ColossalAI | MeZO: Fine-Tuning Language Models with Just Forward Passes |
-| ChatLLaMA | MLC LLM |
-| Chinese-Guanaco | PKU-Beaver 河狸 (Safe RLHF) |
-| DPO (Direct Preference Optimization) | PaLM + RLHF (Pytorch) |
-| DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | RL4LMs |
-| DeepSpeed-Chat | Reinforcement Learning with Language Model |
-| FlexGen | SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression |
-| FlagAI and FlagData | Scikit-LLM: Sklearn Meets Large Language Models |
-| Guanaco & QloRA | Transformer Reinforcement Learning |
-| GPT4All | Train_Transformers_with_INT4 |
-| HugNLP | Transformer Reinforcement Learning X |
-| INSTRUCTEVAL | vLLM |
-| LOw-Memory Optimization (LOMO) |  |
-| llama.cpp |  |
+|  |  |  |
+|---|---|---|
+| Alpaca-LoRA | llama2.c |  |
+| AlpacaFarm | * 【llama2.mojo】 |  |
+| ColossalAI | LightLLM |  |
+| ChatLLaMA | * 【Megatron-LLaMA】 |  |
+| Chinese-Guanaco | MeZO: Fine-Tuning Language Models with Just Forward Passes |  |
+| DPO (Direct Preference Optimization) | MLC LLM |  |
+| DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | PKU-Beaver 河狸 (Safe RLHF) |  |
+| DeepSpeed-Chat | PaLM + RLHF (Pytorch) |  |
+| FlexGen | RL4LMs |  |
+| FlagAI and FlagData | Reinforcement Learning with Language Model |  |
+| Guanaco & QloRA | SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression |  |
+| GPT4All | Scikit-LLM: Sklearn Meets Large Language Models |  |
+| HugNLP | Transformer Reinforcement Learning |  |
+| INSTRUCTEVAL | Train_Transformers_with_INT4 |  |
+| LOw-Memory Optimization (LOMO) | Transformer Reinforcement Learning X |  |
+| llama.cpp | vLLM |  |
 
 *可参考的其它开源模型*
 |  |  |
@@ -950,6 +979,14 @@ With the code in this repo you can train the Llama 2 LLM architecture from scrat
 
 Please note that this started recently as just a fun weekend project: I took my earlier nanoGPT, tuned it to implement the Llama-2 architecture instead of GPT-2, and the meat of it was writing the C inference engine in run.c. So the project is young and moving quickly. Hat tip to the awesome llama.cpp for inspiring this project. I wanted something super minimal so I chose to hard-code the Llama 2 architecture, stick to fp32, and just roll one inference file of pure C with no dependencies.
 
+### llama2.mojo
+- https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
+- https://github.com/tairov/llama2.mojo
+
+This repository serves as a port that provides a Mojo-based implementation of llama2.c.
+
+With the release of Mojo, I was inspired to take my Python port of llama2.py and transition it to Mojo. The result? A version that leverages Mojo's SIMD & vectorization primitives, boosting the Python performance by nearly 250x. Impressively, the Mojo version now outperforms the original llama2.c, even in runfast mode, by 15-20%. This showcases the potential of hardware-level optimizations through Mojo's advanced features. I think this also can help us to see how far can we go with the original llama2.c hardware optimizations.
+
 ### LightLLM
 - https://github.com/ModelTC/lightllm
 
@@ -963,6 +1000,18 @@ LightLLM is a Python-based LLM (Large Language Model) inference and serving fram
 - Tensor Parallelism: utilizes tensor parallelism over multiple GPUs for faster inference.
 - Token Attention: implements token-wise's KV cache memory management mechanism, allowing for zero memory waste during inference.
 - High-performance Router: collaborates with Token Attention to meticulously manage the GPU memory of each token, thereby optimizing system throughput.
+
+### Megatron-LLaMA
+- https://mp.weixin.qq.com/s/9yEWvqR5QtCPQVxJHw-wCA
+- https://github.com/alibaba/Megatron-LLaMA
+
+To facilitate the training of LLaMA-based models and reduce the cost on occupying hardware resources, Alibaba decides to release the internal optimized Megatron-LLaMA training framework to the community. Megatron-LLaMA makes the following contributions:
+
+(i) A standard implementation of LLaMA in Megatron-LLaMA: It is easy to obtain the LLaMA code from Huggingface, which does not involve the various parallel methods provided by Megatron-LM. Megatron-LLaMA offers a standard implementation of LLaMA in Megatron-LM, allowing developers to configure the optimization techniques on demand. We will continue to release features such as Alibi and FlashAttention2 in the future.
+
+(ii) Efficient communication-computation parallelism: Similar to DeepSpeed ZeRO Stage 2, Megatron-LM implements DistributedOptimizer that partitions the gradient and optimizer state, significantly reducing GPU memory usage. However, the solution provided by Megatron-LM does not fully overlap GPU computation with communication, resulting in underutilization of hardware resources. Building upon the original DistributedOptimizer and ZeRO-Stage-2, Megatron-LLaMA proposes a novel approach for gradient and optimizer state sharding, achieving the following benefits without compromising precision: a) extremely high parallelism between communication and computation; b) highly efficient utilization of communication bandwidth; c) lower GPU memory usage. Consequently, Megatron-LLaMA enables higher training throughput on the same hardware configuration than the vanilla Megatron-LM.
+
+(iii) Utilities: Megatron-LLaMA supplements several utilities and improves the checkpoint mechanism in Megatron-LM, including: a) Distributed checkpoint saving/restoring to speedup. This also provides abstract filesystem interfaces for easily integrating distributed file systems such as HDFS; b) Convenient interface for weight conversion from/to the HuggingFace format, facilitating the delivery to the downstream tasks after pretraining; c) Support for Tokenizers in HuggingFace transformers library.
 
 ### MeZO: Fine-Tuning Language Models with Just Forward Passes
 - https://github.com/princeton-nlp/MeZO
