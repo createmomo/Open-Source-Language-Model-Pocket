@@ -39,6 +39,7 @@ Open-Source Language Model Pocket
 |PromptCLUE|SkyText-Chinese-GPT3|CPM-Bee|
 |TigerBot|* 【XVERSE-13B】|* 【YuLan-Chat & YuLan-Chat-2】 |
 |Ziya-LLaMA |TechGPT|EVA|
+|* 【FLM-101B】||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -82,24 +83,24 @@ Open-Source Language Model Pocket
 
 
 *训练/推理*
-|  |  |  |
-|---|---|---|
-| Alpaca-LoRA | llama2.c |  |
-| AlpacaFarm | * 【llama2.mojo】 |  |
-| ColossalAI | LightLLM |  |
-| ChatLLaMA | * 【Megatron-LLaMA】 |  |
-| Chinese-Guanaco | MeZO: Fine-Tuning Language Models with Just Forward Passes |  |
-| DPO (Direct Preference Optimization) | MLC LLM |  |
-| DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | PKU-Beaver 河狸 (Safe RLHF) |  |
-| DeepSpeed-Chat | PaLM + RLHF (Pytorch) |  |
-| FlexGen | RL4LMs |  |
-| FlagAI and FlagData | Reinforcement Learning with Language Model |  |
-| Guanaco & QloRA | SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression |  |
-| GPT4All | Scikit-LLM: Sklearn Meets Large Language Models |  |
-| HugNLP | Transformer Reinforcement Learning |  |
-| INSTRUCTEVAL | Train_Transformers_with_INT4 |  |
-| LOw-Memory Optimization (LOMO) | Transformer Reinforcement Learning X |  |
-| llama.cpp | vLLM |  |
+|  |  |  
+|---|---|
+| Alpaca-LoRA | llama2.c |  
+| AlpacaFarm | * 【llama2.mojo】 |  
+| ColossalAI | LightLLM |  
+| ChatLLaMA | * 【Megatron-LLaMA】 |  
+| Chinese-Guanaco | MeZO: Fine-Tuning Language Models with Just Forward Passes |  
+| DPO (Direct Preference Optimization) | MLC LLM |  
+| DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | PKU-Beaver 河狸 (Safe RLHF) |  
+| DeepSpeed-Chat | PaLM + RLHF (Pytorch) |  
+| FlexGen | RL4LMs |  
+| FlagAI and FlagData | Reinforcement Learning with Language Model |  
+| Guanaco & QloRA | SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression |  
+| GPT4All | Scikit-LLM: Sklearn Meets Large Language Models |  
+| HugNLP | Transformer Reinforcement Learning |  
+| INSTRUCTEVAL | Train_Transformers_with_INT4 |  
+| LOw-Memory Optimization (LOMO) | Transformer Reinforcement Learning X |  
+| llama.cpp | vLLM |  
 
 *可参考的其它开源模型*
 |  |  |
@@ -821,6 +822,14 @@ XVERSE-13B 是由深圳元象科技自主研发的支持多语言的大语言模
 姜子牙通用大模型V1是基于LLaMa的130亿参数的大规模预训练模型，具备翻译，编程，文本分类，信息抽取，摘要，文案生成，常识问答和数学计算等能力。目前姜子牙通用大模型已完成大规模预训练、多任务有监督微调和人类反馈学习三阶段的训练过程。
 
 The Ziya-LLaMA-13B-v1 is a large-scale pre-trained model based on LLaMA with 13 billion parameters. It has the ability to perform tasks such as translation, programming, text classification, information extraction, summarization, copywriting, common sense Q&A, and mathematical calculation. The Ziya-LLaMA-13B-v1 has undergone three stages of training: large-scale continual pre-training (PT), multi-task supervised fine-tuning (SFT), and human feedback learning (RM, PPO).
+
+### FLM-101B
+- https://arxiv.org/pdf/2309.03852.pdf
+- https://huggingface.co/CofeAI/FLM-101B
+
+FLM-101B is an open-source decoder-only LLM with 101 billion parameters. During the training process, model growth technique was employed. The model rapidly acquires knowledge on a small-scale model(16B) in the early stages of training and gradually scales up to 101B, resulting in a cost-effective 100B-scale LLM training(costing approximately $100,000). FLM-101B supports both Chinese and English languages. It has a context window length of 2048 in training. Thanks to the use of xPos rotary position embedding, it allows for efficient expansion of the window size during inference.
+
+To advance the development of 100B-scale Large Language Models (LLMs), FLM-101B has now been fully open-sourced.
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
