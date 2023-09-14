@@ -59,7 +59,7 @@ Open-Source Language Model Pocket
 |---|---|---|
 | 韩非 HanFei| 智海 录问|ChatLaw 法律大模型|
 |LaWGPT|Lawyer LLaMA|LexiLaw|
-|LawGPT_zh|||
+|LawGPT_zh|*【夫子•明察司法大模型】||
 
 |交通|
 |---|
@@ -620,6 +620,11 @@ Additionally, a lightweight training framework is offered to support model pre-t
 LaWGPT 是一系列基于中文法律知识的开源大语言模型。
 
 该系列模型在通用中文基座模型（如 Chinese-LLaMA、ChatGLM 等）的基础上扩充法律领域专有词表、大规模中文法律语料预训练，增强了大模型在法律领域的基础语义理解能力。在此基础上，构造法律领域对话问答数据集、中国司法考试数据集进行指令精调，提升了模型对法律内容的理解和执行能力。
+
+### 夫子•明察司法大模型
+- https://github.com/irlab-sdu/fuzi.mingcha
+
+夫子•明察司法大模型是由山东大学、浪潮云、中国政法大学联合研发，以 ChatGLM 为大模型底座，基于海量中文无监督司法语料（包括各类判决文书、法律法规等）与有监督司法微调数据（包括法律问答、类案检索）训练的中文司法大模型。该模型支持法条检索、案例分析、三段论推理判决以及司法对话等功能，旨在为用户提供全方位、高精准的法律咨询与解答服务。
 
 ### Lawyer LLaMA
 - https://github.com/AndrewZhe/lawyer-llama
