@@ -1,4 +1,4 @@
-# 开源语言模型百宝袋 (Ver. 3.0)
+# 开源语言模型百宝袋 (Ver. 3.1)
 Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
@@ -29,7 +29,7 @@ Open-Source Language Model Pocket
 |百川|中文Alpaca Luotuo|中文LLaMA&Alpaca大模型|
 |中文LLaMA&Alpaca大模型2|流萤Firefly|凤凰|
 |复旦MOSS|复旦MOSS-RLHF|悟道·天鹰Aquila|
-|雅意大模型| * 【通义千问Qwen】| * 【活字】 |
+|雅意大模型| 通义千问Qwen| 活字|
 | Anima |BayLing|BELLE|
 |Bloom|BiLLa |BLOOMChat176B|
 |Chinese-Llama-2-7b (LinkSoul-AI) |GPT2 for Multiple Language |InternLM 书生・浦语|
@@ -37,27 +37,27 @@ Open-Source Language Model Pocket
 |ChatRWKV|ChatYuan|ChatGLM-6B|
 |ChatGLM2-6B|Chinese-Transformer-XL|OpenKG-KnowLLM |
 |PromptCLUE|SkyText-Chinese-GPT3|CPM-Bee|
-|TigerBot|* 【XVERSE-13B】|* 【YuLan-Chat & YuLan-Chat-2】 |
+|TigerBot|XVERSE-13B|YuLan-Chat & YuLan-Chat-2|
 |Ziya-LLaMA |TechGPT|EVA|
-|* 【FLM-101B】||
+|FLM-101B||
 
 | 医疗健康 |  |  |
 |---|---|---|
 | 本草 |华佗  |扁鹊  |
 | 灵心 | 启真 | 儿童情感陪伴大模型“巧板” |
-| OpenMEDLab 浦医|* 【明医 (MING)：中文医疗问诊大模型 (原名：MedicalGPT-zh)】 |情感大模型PICA|
-|Chinese-Vicuna-medical|MedicalGPT| * 【DISC-MedLLM （复旦）】 |
+| OpenMEDLab 浦医|明医 (MING)：中文医疗问诊大模型 (原名：MedicalGPT-zh) |情感大模型PICA|
+|Chinese-Vicuna-medical|MedicalGPT| DISC-MedLLM （复旦）|
 |DoctorGLM|ChatMed-TCM&ChatMed-Consult|ChatGLM-Med|
-|MeChat|ShenNong-TCM-LLM||
+|MeChat|ShenNong-TCM-LLM|*【MindChat(漫谈): 心理大模型】|
 
 |经济/金融|||
 |---|---|---|
 |【貔貅】 FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance|轩辕|BBT-FinCUGE-Applications|
-|Cornucopia-LLaMA-Fin-Chinese|* 【EcomGPT】||
+|Cornucopia-LLaMA-Fin-Chinese|EcomGPT||
 
 |法律|||
 |---|---|---|
-| * 【韩非 HanFei】 | * 【智海 录问】 |ChatLaw 法律大模型|
+| 韩非 HanFei| 智海 录问|ChatLaw 法律大模型|
 |LaWGPT|Lawyer LLaMA|LexiLaw|
 |LawGPT_zh|||
 
@@ -86,9 +86,9 @@ Open-Source Language Model Pocket
 |  |  |  
 |---|---|
 | Alpaca-LoRA | llama2.c |  
-| AlpacaFarm | * 【llama2.mojo】 |  
+| AlpacaFarm | llama2.mojo |  
 | ColossalAI | LightLLM |  
-| ChatLLaMA | * 【Megatron-LLaMA】 |  
+| ChatLLaMA | Megatron-LLaMA|  
 | Chinese-Guanaco | MeZO: Fine-Tuning Language Models with Just Forward Passes |  
 | DPO (Direct Preference Optimization) | MLC LLM |  
 | DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | PKU-Beaver 河狸 (Safe RLHF) |  
@@ -107,20 +107,20 @@ Open-Source Language Model Pocket
 |---|---|
 | Cerebras | MPT-7B |
 | ChatDoctor | OpenGPT |
-| * 【Code Llama (Meta AI)】 | Orca |
+| Code Llama (Meta AI)| Orca |
 | Dolly 1&2 | OpenChatKit |
 | FinGPT | Open-Assistant |
-| Falcon | * 【Platypus】 |
+| Falcon | Platypus|
 | Facebook/Meta LLaMA/LLaMA2 | MedLLaMA-13B & PMC-LLaMA: Continue Training LLaMA on Medical Papers |
-| * 【Giraffe】 | RedPajama |
-| GALACTICA | * 【SQLCoder (Defog)】 |
+| Giraffe| RedPajama |
+| GALACTICA | SQLCoder (Defog)|
 | Goar-7B for Arithmetic Tasks | StableLM |
 | HuggingChat | StableVicuna |
 | Koala: A Dialogue Model for Academic Research | Stanford Alpaca |
 | LongLLaMA | UltraLM-13B |
 | LLaMA复刻版OpenLLaMA | Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality |
 | Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM | Wombat |
-| Lit-LLaMA ️ | * 【WizardMath】 |
+| Lit-LLaMA ️ | WizardMath|
 |  | XGen-7B |
 
 *评价*
@@ -131,8 +131,8 @@ Open-Source Language Model Pocket
 | C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models |
 | HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models|
 | KoLA: Carefully Benchmarking World Knowledge of Large Language Models |
-|* 【LucyEval—中文大语言模型成熟度评测】|
-|* 【CMB: A Comprehensive Medical Benchmark in Chinese】|
+|LucyEval—中文大语言模型成熟度评测|
+|CMB: A Comprehensive Medical Benchmark in Chinese|
 | Multiscale Positive-Unlabeled Detection of AI-Generated Texts |
 | PandaLM |
 
@@ -830,6 +830,13 @@ The Ziya-LLaMA-13B-v1 is a large-scale pre-trained model based on LLaMA with 13 
 FLM-101B is an open-source decoder-only LLM with 101 billion parameters. During the training process, model growth technique was employed. The model rapidly acquires knowledge on a small-scale model(16B) in the early stages of training and gradually scales up to 101B, resulting in a cost-effective 100B-scale LLM training(costing approximately $100,000). FLM-101B supports both Chinese and English languages. It has a context window length of 2048 in training. Thanks to the use of xPos rotary position embedding, it allows for efficient expansion of the window size during inference.
 
 To advance the development of 100B-scale Large Language Models (LLMs), FLM-101B has now been fully open-sourced.
+
+### MindChat(漫谈): 心理大模型
+- https://github.com/X-D-Lab/MindChat
+
+心理大模型——漫谈(MindChat)期望从心理咨询、心理评估、心理诊断、心理治疗四个维度帮助人们纾解心理压力与解决心理困惑, 提高心理健康水平. 作为一个心理大模型, MindChat通过营造轻松、开放的交谈环境, 以放松身心、交流感受或分享经验的方式, 与用户建立信任和理解的关系. MindChat希望为用户提供隐私、温暖、安全、及时、方便的对话环境, 从而帮助用户克服各种困难和挑战, 实现自我成长和发展.
+
+无论是在工作场景还是在个人生活中, MindChat期望通过心理学专业知识和人工智能大模型技术, 在严格保护用户隐私的前提下, 全时段全天候为用户提供全面的心理支持和诊疗帮助, 同时实现自我成长和发展, 以期为建设一个更加健康、包容和平等的社会贡献力量。
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
