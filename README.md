@@ -39,7 +39,7 @@ Open-Source Language Model Pocket
 |PromptCLUE|SkyText-Chinese-GPT3|CPM-Bee|
 |TigerBot|XVERSE-13B|YuLan-Chat & YuLan-Chat-2|
 |Ziya-LLaMA |TechGPT|EVA|
-|FLM-101B||
+|FLM-101B|*【TinyLlama】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -837,6 +837,13 @@ To advance the development of 100B-scale Large Language Models (LLMs), FLM-101B 
 心理大模型——漫谈(MindChat)期望从心理咨询、心理评估、心理诊断、心理治疗四个维度帮助人们纾解心理压力与解决心理困惑, 提高心理健康水平. 作为一个心理大模型, MindChat通过营造轻松、开放的交谈环境, 以放松身心、交流感受或分享经验的方式, 与用户建立信任和理解的关系. MindChat希望为用户提供隐私、温暖、安全、及时、方便的对话环境, 从而帮助用户克服各种困难和挑战, 实现自我成长和发展.
 
 无论是在工作场景还是在个人生活中, MindChat期望通过心理学专业知识和人工智能大模型技术, 在严格保护用户隐私的前提下, 全时段全天候为用户提供全面的心理支持和诊疗帮助, 同时实现自我成长和发展, 以期为建设一个更加健康、包容和平等的社会贡献力量。
+
+### TinyLlama
+- https://github.com/jzhang38/TinyLlama
+
+TinyLlama项目旨在在3万亿tokens上进行预训练，构建一个拥有11亿参数的Llama模型。经过精心优化，我们"仅"需16块A100-40G的GPU，便可在90天内完成这个任务🚀🚀。训练已于2023-09-01开始。
+
+我们采用了与Llama 2完全相同的架构和分词器。这意味着TinyLlama可以在许多基于Llama的开源项目中即插即用。此外，TinyLlama只有1.1B的参数，体积小巧，适用于需要限制计算和内存占用的多种应用。
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
