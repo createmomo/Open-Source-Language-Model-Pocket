@@ -83,24 +83,25 @@ Open-Source Language Model Pocket
 
 
 *训练/推理*
-|  |  |  
+|  |  |
 |---|---|
-| Alpaca-LoRA | llama2.c |  
-| AlpacaFarm | llama2.mojo |  
-| ColossalAI | LightLLM |  
-| ChatLLaMA | Megatron-LLaMA|  
-| Chinese-Guanaco | MeZO: Fine-Tuning Language Models with Just Forward Passes |  
-| DPO (Direct Preference Optimization) | MLC LLM |  
-| DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | PKU-Beaver 河狸 (Safe RLHF) |  
-| DeepSpeed-Chat | PaLM + RLHF (Pytorch) |  
-| FlexGen | RL4LMs |  
-| FlagAI and FlagData | Reinforcement Learning with Language Model |  
-| Guanaco & QloRA | SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression |  
-| GPT4All | Scikit-LLM: Sklearn Meets Large Language Models |  
-| HugNLP | Transformer Reinforcement Learning |  
-| INSTRUCTEVAL | Train_Transformers_with_INT4 |  
-| LOw-Memory Optimization (LOMO) | Transformer Reinforcement Learning X |  
-| llama.cpp | vLLM |  
+| Alpaca-LoRA | llama2.mojo |
+| AlpacaFarm | LightLLM |
+| ColossalAI | *【Medusa】 |
+| ChatLLaMA | Megatron-LLaMA |
+| Chinese-Guanaco | MeZO: Fine-Tuning Language Models with Just Forward Passes |
+| DPO (Direct Preference Optimization) | MLC LLM |
+| DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | PKU-Beaver 河狸 (Safe RLHF) |
+| DeepSpeed-Chat | PaLM + RLHF (Pytorch) |
+| FlexGen | RL4LMs |
+| FlagAI and FlagData | Reinforcement Learning with Language Model |
+| Guanaco & QloRA | SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression |
+| GPT4All | Scikit-LLM: Sklearn Meets Large Language Models |
+| HugNLP | Transformer Reinforcement Learning |
+| INSTRUCTEVAL | Train_Transformers_with_INT4 |
+| LOw-Memory Optimization (LOMO) | Transformer Reinforcement Learning X |
+| llama.cpp | vLLM |
+| llama2.c |  |
 
 *可参考的其它开源模型*
 |  |  |
@@ -121,7 +122,7 @@ Open-Source Language Model Pocket
 | LLaMA复刻版OpenLLaMA | Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality |
 | Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM | Wombat |
 | Lit-LLaMA ️ | WizardMath|
-|  | XGen-7B |
+| *【MammoTH】 | XGen-7B |
 
 *评价*
 |  |
@@ -1272,6 +1273,11 @@ Lit-LLaMA is:
 - Correct: Numerically equivalent to the original model.
 - Optimized: Runs on consumer hardware or at scale.
 - Open-source: No strings attached.
+
+### MammoTH
+- https://github.com/TIGER-AI-Lab/MAmmoTH
+
+We introduce MAmmoTH 🦣, a series of open-source large language models (LLMs) specifically tailored for general math problem-solving. The MAmmoTH models are trained on MathInstruct, a meticulously curated instruction tuning dataset that is lightweight yet generalizable. MathInstruct is compiled from 13 math rationale datasets, six of which are newly curated by this work. It uniquely focuses on the hybrid use of chain-of-thought (CoT) and program-of-thought (PoT) rationales, and ensures extensive coverage of diverse mathematical fields.
 
 ### MPT-7B（可商用）
 - https://www.mosaicml.com/blog/mpt-7b
