@@ -40,7 +40,8 @@ Open-Source Language Model Pocket
 |PromptCLUE|SkyText-Chinese-GPT3|CPM-Bee|
 |TigerBot|XVERSE-13B|YuLan-Chat & YuLan-Chat-2|
 |Ziya-LLaMA |TechGPT|EVA|
-|FLM-101B|*【TinyLlama】|
+|FLM-101B|*【TinyLlama】|*【Colossal-LLaMA-2】|
+|*【OpenBA (Encoder-Decoder)】|||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -124,6 +125,7 @@ Open-Source Language Model Pocket
 | Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM | Wombat |
 | Lit-LLaMA ️ | WizardMath|
 | *【MammoTH】 | XGen-7B |
+||*【Xwin-LM】|
 
 *评价*
 |  |
@@ -852,6 +854,22 @@ TinyLlama项目旨在在3万亿tokens上进行预训练，构建一个拥有11�
 
 我们采用了与Llama 2完全相同的架构和分词器。这意味着TinyLlama可以在许多基于Llama的开源项目中即插即用。此外，TinyLlama只有1.1B的参数，体积小巧，适用于需要限制计算和内存占用的多种应用。
 
+### Colossal-LLaMA-2
+- https://github.com/hpcaitech/ColossalAI/tree/main/applications/Colossal-LLaMA-2
+
+The Colossal-AI team has introduced the open-source model Colossal-LLaMA-2-7B-base. This model, a derivation of LLaMA-2, has undergone continual pre-training involving approximately 8.5 billion tokens over a duration of 15 hours with 64 A800 GPUs. At a cost of less than $1,000, you can achieve results similar to those that cost millions of dollars to pretrain from scratch. It is licensed under the LLaMA-2 license and Apache 2.0 License without any additional commercial use restrictions. This solution can also be used to build models of specific domain knowledge or tasks.
+
+Colossal-LLaMA-2-7B-base is designed to accommodate both the Chinese and English languages, featuring an expansive context window spanning 4096 tokens. Remarkably, it has exhibited exceptional performance when benchmarked against models of equivalent scale in standard Chinese and English evaluation metrics, including C-Eval and MMLU, among others.
+
+### OpenBA (Encoder-Decoder)
+- https://github.com/OpenNLG/OpenBA
+
+We are excited to unveil two distinguished versions of our model, with another on the horizon:
+
+- OpenBA-LM: The backbone language models was pre-trained on 340B English, Chinese, and code tokens.
+- OpenBA-Flan: We continually perform supervised fine-tuning with 40B tokens of constructed BiFlan Dataset.
+- OpenBA-Chat: We will release the Chat model soon
+
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
 - https://github.com/OptimalScale/LMFlow
@@ -1409,6 +1427,11 @@ We trained a series of 7B LLMs named XGen-7B with standard dense attention on up
 - Our targeted evaluation on long sequence modeling benchmarks show benefits of our 8K-seq models over 2K- and 4K-seq models.
 - XGen-7B archives equally strong results both in text (e.g., MMLU, QA) and code (HumanEval) tasks.
 - Training cost of $150K on 1T tokens under Google Cloud pricing for TPU-v4.
+
+### Xwin-LM
+- https://github.com/Xwin-LM/Xwin-LM
+
+Xwin-LM aims to develop and open-source alignment technologies for large language models, including supervised fine-tuning (SFT), reward models (RM), reject sampling, reinforcement learning from human feedback (RLHF), etc. Our first release, built-upon on the Llama2 base models, ranked TOP-1 on AlpacaEval. Notably, it's the first to surpass GPT-4 on this benchmark. The project will be continuously updated.
 
 ## 4 评价
 
