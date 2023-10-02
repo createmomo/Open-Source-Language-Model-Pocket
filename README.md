@@ -61,7 +61,7 @@ Open-Source Language Model Pocket
 |---|---|---|
 | 韩非 HanFei| 智海 录问|ChatLaw 法律大模型|
 |LaWGPT|Lawyer LLaMA|LexiLaw|
-|LawGPT_zh|*【夫子•明察司法大模型】||
+|LawGPT_zh|*【夫子•明察司法大模型】|*【DISC-LawLLM】|
 
 |交通|
 |---|
@@ -74,6 +74,7 @@ Open-Source Language Model Pocket
 |数学|
 |---|
 |chatglm-maths|
+|*【Abel】|
 
 |表格/数据 分析||
 |---|---|
@@ -103,7 +104,7 @@ Open-Source Language Model Pocket
 | INSTRUCTEVAL | Train_Transformers_with_INT4 |
 | LOw-Memory Optimization (LOMO) | Transformer Reinforcement Learning X |
 | llama.cpp | vLLM |
-| llama2.c |  |
+| llama2.c | *【LongLoRA】 |
 
 *可参考的其它开源模型*
 |  |  |
@@ -125,7 +126,7 @@ Open-Source Language Model Pocket
 | Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM | Wombat |
 | Lit-LLaMA ️ | WizardMath|
 | *【MammoTH】 | XGen-7B |
-||*【Xwin-LM】|
+|*【Mistral 7B】|*【Xwin-LM】|
 
 *评价*
 |  |
@@ -474,6 +475,20 @@ ChatLaw法律大模型目前开源的仅供学术参考的版本底座为姜子�
 
 chatglm-6b微调/LORA/PPO/推理, 样本为自动生成的整数/小数加减乘除运算, 可gpu/cpu。
 
+### Abel
+- https://github.com/GAIR-NLP/abel
+
+Abel is created as a tribute to Niels Henrik Abel for his groundbreaking work in algebra and analysis, at which our model is relatively better as well. There is still a long way for us to go, though 🏃‍♂️🏃‍♀️🏁🏃‍♂️🏃‍♀️.
+
+We show that:
+- without tools
+- without continuing pretraining
+- without reward model
+- without RLHF
+- ONLY using SFT
+
+We have established a new state-of-the-art performance across open-source LLMs (that do not use external tools) on the GSM8k (83.62) and MATH (28.26) benchmarks. Specifically
+
 ### ChatRWKV
 - https://github.com/BlinkDL/ChatRWKV
 
@@ -629,6 +644,15 @@ LaWGPT 是一系列基于中文法律知识的开源大语言模型。
 - https://github.com/irlab-sdu/fuzi.mingcha
 
 夫子•明察司法大模型是由山东大学、浪潮云、中国政法大学联合研发，以 ChatGLM 为大模型底座，基于海量中文无监督司法语料（包括各类判决文书、法律法规等）与有监督司法微调数据（包括法律问答、类案检索）训练的中文司法大模型。该模型支持法条检索、案例分析、三段论推理判决以及司法对话等功能，旨在为用户提供全方位、高精准的法律咨询与解答服务。
+
+### DISC-LawLLM
+- https://law.fudan-disc.com
+- https://github.com/FudanDISC/DISC-LawLLM
+- https://arxiv.org/abs/2309.11325
+
+复旦大学数据智能与社会计算实验室（FudanDISC）发布大语言模型驱动的中文智慧法律系统——DISC-LawLLM。该系统可以面向不同用户群体，提供多样的法律服务。此外，构建了评测基准DISC-Law-Eval，从客观和主观两个方面来评测法律大语言模型，模型在评测中的表现相较现有的法律大模型有明显优势。
+
+课题组同时公开包含30万高质量的监督微调（SFT）数据集——DISC-Law-SFT，模型参数和技术报告也一并开源。
 
 ### Lawyer LLaMA
 - https://github.com/AndrewZhe/lawyer-llama
@@ -1026,6 +1050,12 @@ The main goal is to run the model using 4-bit quantization on a MacBook
 With the code in this repo you can train the Llama 2 LLM architecture from scratch in PyTorch, then export the weights to a binary file, and load that into one ~simple 500-line C file (run.c) that inferences the model. Alternatively, you can load, finetune, and inference Meta's Llama 2 (but this is still being actively fleshed out). Hence, this repo is a "fullstack" train + inference solution for Llama 2 LLM, with a focus on minimalism and simplicity. You might think that you need many billion parameter LLMs to do anything useful, but in fact very small LLMs can have surprisingly strong performance if you make the domain narrow enough. I recommend looking at the TinyStories paper for inspiration.
 
 Please note that this started recently as just a fun weekend project: I took my earlier nanoGPT, tuned it to implement the Llama-2 architecture instead of GPT-2, and the meat of it was writing the C inference engine in run.c. So the project is young and moving quickly. Hat tip to the awesome llama.cpp for inspiring this project. I wanted something super minimal so I chose to hard-code the Llama 2 architecture, stick to fp32, and just roll one inference file of pure C with no dependencies.
+
+### LongLoRA
+- https://github.com/dvlab-research/longlora
+- https://arxiv.org/pdf/2309.12307v1.pdf
+
+We present LongLoRA, an efficient fine-tuning approach that extends the context sizes of pre-trained large language models (LLMs), with limited computation cost. Typically, training LLMs with long context sizes is computationally expensive, requiring extensive training hours and GPU resources. In this paper, we speed up the context extension of LLMs in two aspects. On the one hand, although dense global attention is needed during inference, fine-tuning the model can be effectively and efficiently done by sparse local attention. The proposed shift short attention effectively enables context extension, leading to non-trivial computation saving with similar performance to fine-tuning with vanilla attention. On the other hand, we find that LoRA for context extension works well under the premise of trainable embedding and normalization. LongLoRA demonstrates strong empirical results on various tasks on LLaMA2 models from 7B/13B to 70B. LongLoRA adopts LLaMA2 7B from 4k context to 100k, or LLaMA2 70B to 32k on a single 8x A100 machine. LongLoRA extends models' context while retaining their original architectures, and is compatible with most existing techniques, like FlashAttention-2. In addition, to make LongLoRA practical, we collect a dataset, LongQA, for supervised fine-tuning. It contains more than 3k long context question-answer pairs. 
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -1432,6 +1462,16 @@ We trained a series of 7B LLMs named XGen-7B with standard dense attention on up
 - https://github.com/Xwin-LM/Xwin-LM
 
 Xwin-LM aims to develop and open-source alignment technologies for large language models, including supervised fine-tuning (SFT), reward models (RM), reject sampling, reinforcement learning from human feedback (RLHF), etc. Our first release, built-upon on the Llama2 base models, ranked TOP-1 on AlpacaEval. Notably, it's the first to surpass GPT-4 on this benchmark. The project will be continuously updated.
+
+### Mistral 7B
+- https://mistral.ai/news/announcing-mistral-7b/
+
+Mistral 7B is a 7.3B parameter model that:
+- Outperforms Llama 2 13B on all benchmarks
+- Outperforms Llama 1 34B on many benchmarks
+- Approaches CodeLlama 7B performance on code, while remaining good at English tasks
+- Uses Grouped-query attention (GQA) for faster inference
+- Uses Sliding Window Attention (SWA) to handle longer sequences at smaller cost
 
 ## 4 评价
 
