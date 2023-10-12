@@ -55,7 +55,7 @@ Open-Source Language Model Pocket
 |经济/金融|||
 |---|---|---|
 |【貔貅】 FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance|轩辕|BBT-FinCUGE-Applications|
-|Cornucopia-LLaMA-Fin-Chinese|EcomGPT||
+|Cornucopia-LLaMA-Fin-Chinese|EcomGPT|*【FinGLM】|
 
 |法律|||
 |---|---|---|
@@ -84,6 +84,10 @@ Open-Source Language Model Pocket
 |---|
 |MediaGPT|
 
+|古汉语|
+|---|
+|* 【尔雅 Erya】|
+
 
 *训练/推理*
 |  |  |
@@ -105,6 +109,7 @@ Open-Source Language Model Pocket
 | LOw-Memory Optimization (LOMO) | Transformer Reinforcement Learning X |
 | llama.cpp | vLLM |
 | llama2.c | *【LongLoRA】 |
+|*【RLLTE: Long-Term Evolution Project of Reinforcement Learning】||
 
 *可参考的其它开源模型*
 |  |  |
@@ -127,6 +132,7 @@ Open-Source Language Model Pocket
 | Lit-LLaMA ️ | WizardMath|
 | *【MammoTH】 | XGen-7B |
 |*【Mistral 7B】|*【Xwin-LM】|
+|*【LLaMA 2 Long】||
 
 *评价*
 |  |
@@ -148,9 +154,9 @@ Open-Source Language Model Pocket
 | Alpaca-CoT | Self-Instruct |
 | Auto-GPT | ToolBench&ToolLLM |
 | ChatPiXiu | Wanda (Pruning by Weights and activations) |
-| Gorilla |  |
-| HuggingGPT |  |
-| LLMPruner：大语言模型裁剪工具 |  |
+| Gorilla | *【Streaming LLM】 |
+| HuggingGPT | *【Sheared LLAMA (Structured Pruning)】 |
+| LLMPruner：大语言模型裁剪工具 | * 【QA-LoRA】 |
 | LLM-Pruner: On the Structural Pruning of Large Language Models |  |
 | LLM for Recommendation Systems |  |
 
@@ -595,6 +601,15 @@ EVA 是目前最大的开源中文预训练对话模型，拥有28亿参数，�
 - EcomInstruct scales up the data size and task diversity by constructing atomic tasks with E-commerce basic data types, such as product information, user reviews. Atomic tasks are defined as intermediate tasks implicitly involved in solving a final task, which we also call Chain-of-Task tasks.
 - We developed EcomGPT by training the backbone model BLOOMZ with the EcomInstruct. Benefiting from the fundamental semantic understanding capabilities acquired from the Chain-of-Task tasks, EcomGPT exhibits excellent zero-shot generalization capabilities.
 
+### FinGLM
+- https://github.com/MetaGLM/FinGLM/
+
+📈 一个旨在深度解析上市公司年报的对话交互智能系统。面对金融文本中的专业术语与暗含信息，我们致力于用AI实现专家级别的金融分析。
+
+🚀 在AI领域，虽然已在文本对话取得进展，但真正的金融交互场景仍然是一个巨大挑战。多方机构联手举办此次竞赛，探索金融领域AI的边界。
+
+📘 上市公司年报为投资者呈现了公司的经营状况、财务状况和未来规划。专业知识是解读的关键，而我们的目标是通过AI技术让这一过程变得更简单、更准确。
+
 ### GPT2 for Multiple Language
 - https://github.com/imcaspar/gpt2-ml
 
@@ -894,6 +909,12 @@ We are excited to unveil two distinguished versions of our model, with another o
 - OpenBA-Flan: We continually perform supervised fine-tuning with 40B tokens of constructed BiFlan Dataset.
 - OpenBA-Chat: We will release the Chat model soon
 
+### 尔雅 Erya
+- https://huggingface.co/RUCAIBox/Erya
+- https://github.com/RUCAIBox/Erya
+
+翻译、理解古汉语对于通会上下五千年的中华典籍与文明至关重要。为了实现高效的古汉语翻译，我们在此提出工具集“尔雅”，它包含：（1）一个经过清洗与分类的，截至目前体量最大的古汉语翻译数据集。（2）面向古汉语翻译的训练方法，它包含双音节对齐替换法(DAS)与双向掩码语言模型(DMLM)，以及基于此方法训练的模型。（3）一个覆盖各汉语世代与文体的古汉语翻译测试基准。“尔雅”模型的零样本能力超出GPT-3.5系列+12.0BLEU，并在人工评分上表现优于文心一言。继续微调则更进一步地以+6.2BLEU提升了模型表现。所有资源请见https://github.com/RUCAIBox/Erya
+
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
 - https://github.com/OptimalScale/LMFlow
@@ -1056,6 +1077,11 @@ Please note that this started recently as just a fun weekend project: I took my 
 - https://arxiv.org/pdf/2309.12307v1.pdf
 
 We present LongLoRA, an efficient fine-tuning approach that extends the context sizes of pre-trained large language models (LLMs), with limited computation cost. Typically, training LLMs with long context sizes is computationally expensive, requiring extensive training hours and GPU resources. In this paper, we speed up the context extension of LLMs in two aspects. On the one hand, although dense global attention is needed during inference, fine-tuning the model can be effectively and efficiently done by sparse local attention. The proposed shift short attention effectively enables context extension, leading to non-trivial computation saving with similar performance to fine-tuning with vanilla attention. On the other hand, we find that LoRA for context extension works well under the premise of trainable embedding and normalization. LongLoRA demonstrates strong empirical results on various tasks on LLaMA2 models from 7B/13B to 70B. LongLoRA adopts LLaMA2 7B from 4k context to 100k, or LLaMA2 70B to 32k on a single 8x A100 machine. LongLoRA extends models' context while retaining their original architectures, and is compatible with most existing techniques, like FlashAttention-2. In addition, to make LongLoRA practical, we collect a dataset, LongQA, for supervised fine-tuning. It contains more than 3k long context question-answer pairs. 
+
+### RLLTE: Long-Term Evolution Project of Reinforcement Learning
+- https://github.com/RLE-Foundation/rllte
+
+受通信领域长期演进（LTE）标准项目的启发，RLLTE旨在提供用于推进RL研究和应用的开发组件和工程标准。除了提供一流的算法实现外，RLLTE还能够充当开发算法的工具包。
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -1463,6 +1489,11 @@ We trained a series of 7B LLMs named XGen-7B with standard dense attention on up
 
 Xwin-LM aims to develop and open-source alignment technologies for large language models, including supervised fine-tuning (SFT), reward models (RM), reject sampling, reinforcement learning from human feedback (RLHF), etc. Our first release, built-upon on the Llama2 base models, ranked TOP-1 on AlpacaEval. Notably, it's the first to surpass GPT-4 on this benchmark. The project will be continuously updated.
 
+### LLaMA 2 Long
+- https://arxiv.org/pdf/2309.16039.pdf
+
+We present a series of long-context LLMs that support effective context windows of up to 32,768 tokens. Our model series are built through continual pretraining from Llama 2 with longer training sequences and on a dataset where long texts are upsampled. We perform extensive evaluation on language modeling, synthetic context probing tasks, and a wide range of research benchmarks. On research benchmarks, our models achieve consistent improvements on most regular tasks and significant improvements on long-context tasks over Llama 2. Notably, with a cost-effective instruction tuning procedure that does not require human-annotated long instruction data, the 70B variant can already surpass gpt-3.5-turbo-16k's overall performance on a suite of long-context tasks. Alongside these results, we provide an in-depth analysis on the individual components of our method. We delve into Llama's position encodings and discuss its limitation in modeling long dependencies. We also examine the impact of various design choices in the pretraining process, including the data mix and the training curriculum of sequence lengths -- our ablation experiments suggest that having abundant long texts in the pretrain dataset is not the key to achieving strong performance, and we empirically verify that long context continual pretraining is more efficient and similarly effective compared to pretraining from scratch with long sequences.
+
 ### Mistral 7B
 - https://mistral.ai/news/announcing-mistral-7b/
 
@@ -1629,5 +1660,20 @@ This project (ToolBench)  aims to construct open-source, large-scale, high-quali
 
 A Simple and Effective Pruning Approach for Large Language Models
 
+### Streaming LLM
+- https://github.com/mit-han-lab/streaming-llm
+
+Deploying Large Language Models (LLMs) in streaming applications such as multi-round dialogue, where long interactions are expected, is urgently needed but poses two major challenges. Firstly, during the decoding stage, caching previous tokens' Key and Value states (KV) consumes extensive memory. Secondly, popular LLMs cannot generalize to longer texts than the training sequence length. Window attention, where only the most recent KVs are cached, is a natural approach --- but we show that it fails when the text length surpasses the cache size. We observe an interesting phenomenon, namely attention sink, that keeping the KV of initial tokens will largely recover the performance of window attention. In this paper, we first demonstrate that the emergence of attention sink is due to the strong attention scores towards initial tokens as a ``sink'' even if they are not semantically important. Based on the above analysis, we introduce StreamingLLM, an efficient framework that enables LLMs trained with a finite length attention window to generalize to infinite sequence length without any fine-tuning. We show that StreamingLLM can enable Llama-2, MPT, Falcon, and Pythia to perform stable and efficient language modeling with up to 4 million tokens and more. In addition, we discover that adding a placeholder token as a dedicated attention sink during pre-training can further improve streaming deployment. In streaming settings, StreamingLLM outperforms the sliding window recomputation baseline by up to 22.2x speedup.
+
+### Sheared LLAMA (Structured Pruning)
+- https://xiamengzhou.github.io/sheared-llama/
+
+We introduce the Sheared-LLaMA models, the strongest 1.3B and 2.7B public base large language models (LLMs). Our models are produced by LLM-Shearing, an efficient method of constructing LLMs by first pruning a larger existing model and then continually pre-training it. Sheared-LLaMA models are first pruned from the LLaMA2-7B model, and then trained on only 50B tokens, 5% budget of the previous strongest public 3B model.
+
+### QA-LoRA
+- https://arxiv.org/abs/2309.14717
+- https://github.com/yuhuixu1993/qa-lora
+
+Recently years have witnessed a rapid development of large language models (LLMs). Despite the strong ability in many language-understanding tasks, the heavy computational burden largely restricts the application of LLMs especially when one needs to deploy them onto edge devices. In this paper, we propose a quantization-aware low-rank adaptation (QA-LoRA) algorithm. The motivation lies in the imbalanced degrees of freedom of quantization and adaptation, and the solution is to use group-wise operators which increase the degree of freedom of quantization meanwhile decreasing that of adaptation. QA-LoRA is easily implemented with a few lines of code, and it equips the original LoRA with two-fold abilities: (i) during fine-tuning, the LLM's weights are quantized (e.g., into INT4) to reduce time and memory usage; (ii) after fine-tuning, the LLM and auxiliary weights are naturally integrated into a quantized model without loss of accuracy. We apply QA-LoRA to the LLaMA and LLaMA2 model families and validate its effectiveness in different fine-tuning datasets and downstream scenarios. 
 
 > 持续更新中 (Continuously Updated)... 
