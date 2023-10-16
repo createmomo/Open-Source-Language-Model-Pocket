@@ -132,7 +132,7 @@ Open-Source Language Model Pocket
 | Lit-LLaMA ️ | WizardMath|
 | *【MammoTH】 | XGen-7B |
 |*【Mistral 7B】|*【Xwin-LM】|
-|*【LLaMA 2 Long】||
+|*【LLaMA 2 Long】|*【UltraLM-13B (UltraFeedback)】|
 
 *评价*
 |  |
@@ -1503,6 +1503,15 @@ Mistral 7B is a 7.3B parameter model that:
 - Approaches CodeLlama 7B performance on code, while remaining good at English tasks
 - Uses Grouped-query attention (GQA) for faster inference
 - Uses Sliding Window Attention (SWA) to handle longer sequences at smaller cost
+
+### UltraLM-13B (UltraFeedback)
+- https://github.com/OpenBMB/UltraFeedback
+
+UltraRM unleashes the power of UltraLM-13B-v2.0 and UltraLM-13B! A simple best-of-16 sampling achieves 92.30% (UltraLM2, 🥇 in 13B results) and 91.54% (UltraLM, 🥇 in LLaMA-1 results) win rates against text-davinci-003 on AlpacaEval benchmark!
+
+UltraFeedback is a large-scale, fine-grained, diverse preference dataset, used for training powerful reward models and critic models. We collect about 64k prompts from diverse resources (including UltraChat, ShareGPT, Evol-Instruct, TruthfulQA, FalseQA, and FLAN, see here for dataset statistics). We then use these prompts to query multiple LLMs (see here for model lists) and generate 4 different responses for each prompt, resulting in a total of 256k samples.
+
+To collect high-quality preference and textual feedback, we design a fine-grained annotation instruction, which contains 4 different aspects, namely instruction-following, truthfulness, honesty and helpfulness. We then ask GPT-4 to annotate the collected samples based on the instruction.
 
 ## 4 评价
 
