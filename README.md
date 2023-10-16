@@ -41,7 +41,7 @@ Open-Source Language Model Pocket
 |TigerBot|XVERSE-13B|YuLan-Chat & YuLan-Chat-2|
 |Ziya-LLaMA |TechGPT|EVA|
 |FLM-101B|*【TinyLlama】|*【Colossal-LLaMA-2】|
-|*【OpenBA (Encoder-Decoder)】|||
+|*【OpenBA (Encoder-Decoder)】|*【Ziya-Reader-13B】||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -914,6 +914,15 @@ We are excited to unveil two distinguished versions of our model, with another o
 - https://github.com/RUCAIBox/Erya
 
 翻译、理解古汉语对于通会上下五千年的中华典籍与文明至关重要。为了实现高效的古汉语翻译，我们在此提出工具集“尔雅”，它包含：（1）一个经过清洗与分类的，截至目前体量最大的古汉语翻译数据集。（2）面向古汉语翻译的训练方法，它包含双音节对齐替换法(DAS)与双向掩码语言模型(DMLM)，以及基于此方法训练的模型。（3）一个覆盖各汉语世代与文体的古汉语翻译测试基准。“尔雅”模型的零样本能力超出GPT-3.5系列+12.0BLEU，并在人工评分上表现优于文心一言。继续微调则更进一步地以+6.2BLEU提升了模型表现。所有资源请见https://github.com/RUCAIBox/Erya
+
+### Ziya-Reader-13B
+- https://huggingface.co/IDEA-CCNL/Ziya-Reader-13B-v1.0
+
+Ziya-Reader-13B-v1.0是一个知识问答模型，给定问题和知识文档可以准确回答问题，用于多文档或单文档问答。该模型具有8k的上下文窗口，相比其他具有更长窗口的模型，我们在多个长文本任务的评测中胜出。包括多文档问答、合成任务（文档检索）长文本摘要。
+
+该模型主要面向知识库问答、检索问答、电商客服等场景，在私域知识问答中有着不错的效果，能广泛应用于法律、金融、医疗等垂直领域。因为它解决了多文档问答中当正确信息不在首个或末尾文档中时，回答准确率大幅降低的问题。
+
+另外，模型的通用能力同样出众，可以进行通用问答。它在我们的通用能力评估集上的效果超过了Ziya-Llama-13B-v1.1.
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
