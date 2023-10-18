@@ -41,7 +41,7 @@ Open-Source Language Model Pocket
 |TigerBot|XVERSE-13B|YuLan-Chat & YuLan-Chat-2|
 |Ziya-LLaMA |TechGPT|EVA|
 |FLM-101B|*【TinyLlama】|*【Colossal-LLaMA-2】|
-|*【OpenBA (Encoder-Decoder)】|*【Ziya-Reader-13B】||
+|*【OpenBA (Encoder-Decoder)】|*【Ziya-Reader-13B】|*【Firefly-LLaMA2-Chinese】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -109,7 +109,8 @@ Open-Source Language Model Pocket
 | LOw-Memory Optimization (LOMO) | Transformer Reinforcement Learning X |
 | llama.cpp | vLLM |
 | llama2.c | *【LongLoRA】 |
-|*【RLLTE: Long-Term Evolution Project of Reinforcement Learning】||
+|*【RLLTE: Long-Term Evolution Project of Reinforcement Learning】|*【FlashAttention】|
+|*【ExecuTorch】||
 
 *可参考的其它开源模型*
 |  |  |
@@ -133,6 +134,7 @@ Open-Source Language Model Pocket
 | *【MammoTH】 | XGen-7B |
 |*【Mistral 7B】|*【Xwin-LM】|
 |*【LLaMA 2 Long】|*【UltraLM-13B (UltraFeedback)】|
+|*【Llemma: An Open Language Model For Mathematics】||
 
 *评价*
 |  |
@@ -924,6 +926,19 @@ Ziya-Reader-13B-v1.0是一个知识问答模型，给定问题和知识文档可
 
 另外，模型的通用能力同样出众，可以进行通用问答。它在我们的通用能力评估集上的效果超过了Ziya-Llama-13B-v1.1.
 
+### Firefly-LLaMA2-Chinese
+- https://github.com/yangjianxin1/Firefly-LLaMA2-Chinese
+
+本项目与Firefly一脉相承，专注于低资源增量预训练，既支持对Baichuan2、Qwen、InternLM等原生中文模型进行增量预训练，也可对LLaMA2、Falcon等英文模型进行中文词表扩充，然后进行增量预训练。
+
+我们开源了Firefly-LLaMA2-Chinese模型，这是中英双语系列模型。我们以LLaMA2🦙为基座模型，对LLaMA2进行中文词表扩充，使用22GB中英文预训练语料对其进行增量预训练。 最后使用大规模中英文多轮对话指令对模型进行训练。我们对模型进行了榜单评测和人工评测，与现有的开源工作相比，具有不错的竞争力。
+
+在Open LLM Leaderboard和CMMLU上，我们的模型超越了Linly、Yayi、FlagAlpha等模型； 在Open LLM Leaderboard上超越Ziya，在CMMLU上比Ziya略低0.43分。在人工测评中，我们的模型以33.08%获胜、60.77%平局、6.15%失败的成绩，超越Linly。 我们还开源了firelfy-baichuan2-13b模型，在OpenCompass的CMMLU榜单上以56.83的分数，位列第8，比百川官方模型略低1.57分。
+
+更重要的是，在整个增量预训练和指令微调阶段，我们最多仅使用了4*V100的GPU，训练更加低资源高效。相较于Ziya的160*A100，Linly的32*A100，Chinese-LLaMA-Alpaca的48*A40，我们所使用的训练资源少得多。
+
+授人以鱼🐟，不如授人以渔🎣，我们不仅开源了模型权重，也开源了项目全流程的训练代码、训练数据，以及训练细节。
+
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
 - https://github.com/OptimalScale/LMFlow
@@ -1091,6 +1106,24 @@ We present LongLoRA, an efficient fine-tuning approach that extends the context 
 - https://github.com/RLE-Foundation/rllte
 
 受通信领域长期演进（LTE）标准项目的启发，RLLTE旨在提供用于推进RL研究和应用的开发组件和工程标准。除了提供一流的算法实现外，RLLTE还能够充当开发算法的工具包。
+
+### FlashAttention
+- https://github.com/Dao-AILab/flash-attention
+
+This repository provides the official implementation of FlashAttention and FlashAttention-2.
+
+### ExecuTorch
+- https://github.com/pytorch/executorch
+- https://pytorch.org/executorch/stable/index.html
+
+ExecuTorch 是一个端到端的解决方案，可以在移动和边缘设备（包括可穿戴设备、手机等）上实现推理功能。
+
+ExecuTorch is an end-to-end solution for enabling on-device inference capabilities across mobile and edge devices including wearables, embedded devices and microcontrollers. It is part of the PyTorch Edge ecosystem and enables efficient deployment of PyTorch models to edge devices.
+
+Key value propositions of ExecuTorch are:
+- Portability: Compatibility with a wide variety of computing platforms, from high-end mobile phones to highly constrained embedded systems and microcontrollers.
+- Productivity: Enabling developers to use the same toolchains and SDK from PyTorch model authoring and conversion, to debugging and deployment to a wide variety of platforms.
+- Performance: Providing end users with a seamless and high-performance experience due to a lightweight runtime and utilizing full hardware capabilities such as CPUs, NPUs, and DSPs.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -1521,6 +1554,12 @@ UltraRM unleashes the power of UltraLM-13B-v2.0 and UltraLM-13B! A simple best-o
 UltraFeedback is a large-scale, fine-grained, diverse preference dataset, used for training powerful reward models and critic models. We collect about 64k prompts from diverse resources (including UltraChat, ShareGPT, Evol-Instruct, TruthfulQA, FalseQA, and FLAN, see here for dataset statistics). We then use these prompts to query multiple LLMs (see here for model lists) and generate 4 different responses for each prompt, resulting in a total of 256k samples.
 
 To collect high-quality preference and textual feedback, we design a fine-grained annotation instruction, which contains 4 different aspects, namely instruction-following, truthfulness, honesty and helpfulness. We then ask GPT-4 to annotate the collected samples based on the instruction.
+
+### Llemma: An Open Language Model For Mathematics
+- https://arxiv.org/abs/2310.10631
+- https://github.com/EleutherAI/math-lm
+
+We present Llemma, a large language model for mathematics. We continue pretraining Code Llama on the Proof-Pile-2, a mixture of scientific papers, web data containing mathematics, and mathematical code, yielding Llemma. On the MATH benchmark Llemma outperforms all known open base models, as well as the unreleased Minerva model suite on an equi-parameter basis. Moreover, Llemma is capable of tool use and formal theorem proving without any further finetuning. We openly release all artifacts, including 7 billion and 34 billion parameter models, the Proof-Pile-2, and code to replicate our experiments.
 
 ## 4 评价
 
