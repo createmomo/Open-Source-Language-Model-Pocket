@@ -51,6 +51,7 @@ Open-Source Language Model Pocket
 |Chinese-Vicuna-medical|MedicalGPT| DISC-MedLLM （复旦）|
 |DoctorGLM|ChatMed-TCM&ChatMed-Consult|ChatGLM-Med|
 |MeChat|ShenNong-TCM-LLM|*【MindChat(漫谈): 心理大模型】|
+|*【WiNGPT】|||
 
 |经济/金融|||
 |---|---|---|
@@ -887,6 +888,11 @@ To advance the development of 100B-scale Large Language Models (LLMs), FLM-101B 
 心理大模型——漫谈(MindChat)期望从心理咨询、心理评估、心理诊断、心理治疗四个维度帮助人们纾解心理压力与解决心理困惑, 提高心理健康水平. 作为一个心理大模型, MindChat通过营造轻松、开放的交谈环境, 以放松身心、交流感受或分享经验的方式, 与用户建立信任和理解的关系. MindChat希望为用户提供隐私、温暖、安全、及时、方便的对话环境, 从而帮助用户克服各种困难和挑战, 实现自我成长和发展.
 
 无论是在工作场景还是在个人生活中, MindChat期望通过心理学专业知识和人工智能大模型技术, 在严格保护用户隐私的前提下, 全时段全天候为用户提供全面的心理支持和诊疗帮助, 同时实现自我成长和发展, 以期为建设一个更加健康、包容和平等的社会贡献力量。
+
+### WiNGPT
+- https://github.com/winninghealth/WiNGPT2
+
+WiNGPT是一个基于GPT的医疗垂直领域大模型，旨在将专业的医学知识、医疗信息、数据融会贯通，为医疗行业提供智能化的医疗问答、诊断支持和医学知识等信息服务，提高诊疗效率和医疗服务质量。
 
 ### TinyLlama
 - https://github.com/jzhang38/TinyLlama
