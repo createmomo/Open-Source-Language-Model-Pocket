@@ -89,6 +89,10 @@ Open-Source Language Model Pocket
 |---|
 |* 【尔雅 Erya】|
 
+|编程/代码|
+|---|
+|* 【CodeShell】|
+
 
 *训练/推理*
 |  |  |
@@ -135,7 +139,7 @@ Open-Source Language Model Pocket
 | *【MammoTH】 | XGen-7B |
 |*【Mistral 7B】|*【Xwin-LM】|
 |*【LLaMA 2 Long】|*【UltraLM-13B (UltraFeedback)】|
-|*【Llemma: An Open Language Model For Mathematics】||
+|*【Llemma: An Open Language Model For Mathematics】|*【Mistral-Trismegistus-7B （神秘学/玄学/灵性）】|
 
 *评价*
 |  |
@@ -149,6 +153,7 @@ Open-Source Language Model Pocket
 |CMB: A Comprehensive Medical Benchmark in Chinese|
 | Multiscale Positive-Unlabeled Detection of AI-Generated Texts |
 | PandaLM |
+|*【CLEVA: Chinese Language Models EVAluation Platform】|
 
 
 *其它*
@@ -923,6 +928,11 @@ We are excited to unveil two distinguished versions of our model, with another o
 
 翻译、理解古汉语对于通会上下五千年的中华典籍与文明至关重要。为了实现高效的古汉语翻译，我们在此提出工具集“尔雅”，它包含：（1）一个经过清洗与分类的，截至目前体量最大的古汉语翻译数据集。（2）面向古汉语翻译的训练方法，它包含双音节对齐替换法(DAS)与双向掩码语言模型(DMLM)，以及基于此方法训练的模型。（3）一个覆盖各汉语世代与文体的古汉语翻译测试基准。“尔雅”模型的零样本能力超出GPT-3.5系列+12.0BLEU，并在人工评分上表现优于文心一言。继续微调则更进一步地以+6.2BLEU提升了模型表现。所有资源请见https://github.com/RUCAIBox/Erya
 
+## CodeShell
+- https://github.com/WisdomShell/codeshell
+
+CodeShell是北京大学知识计算实验室联合四川天府银行AI团队研发的多语言代码大模型基座。CodeShell具有70亿参数，在五千亿Tokens进行了训练，上下文窗口长度为8192。在权威的代码评估Benchmark（HumanEval与MBPP）上，CodeShell取得同等规模最好的性能。与此同时，我们提供了与CodeShell配套的部署方案与IDE插件，请参考代码库CodeShell。
+
 ### Ziya-Reader-13B
 - https://huggingface.co/IDEA-CCNL/Ziya-Reader-13B-v1.0
 
@@ -1567,6 +1577,11 @@ To collect high-quality preference and textual feedback, we design a fine-graine
 
 We present Llemma, a large language model for mathematics. We continue pretraining Code Llama on the Proof-Pile-2, a mixture of scientific papers, web data containing mathematics, and mathematical code, yielding Llemma. On the MATH benchmark Llemma outperforms all known open base models, as well as the unreleased Minerva model suite on an equi-parameter basis. Moreover, Llemma is capable of tool use and formal theorem proving without any further finetuning. We openly release all artifacts, including 7 billion and 34 billion parameter models, the Proof-Pile-2, and code to replicate our experiments.
 
+### Mistral-Trismegistus-7B （神秘学/玄学/灵性）
+- https://huggingface.co/teknium/Mistral-Trismegistus-7B
+
+Transcendence is All You Need! Mistral Trismegistus is a model made for people interested in the esoteric, occult, and spiritual.
+
 ## 4 评价
 
 ### 天秤（FlagEval）
@@ -1634,6 +1649,18 @@ Recent releases of Large Language Models (LLMs), e.g. ChatGPT, are astonishing a
 This is the official repository for PandaLM: ReProducible and Automated Language Model Assessment.
 
 PandaLM aims to provide reproducible and automated comparisons between different large language models (LLMs). By giving PandaLM the same context, it can compare the responses of different LLMs and provide a reason for the decision, along with a reference answer. The target audience for PandaLM may be organizations that have confidential data and research labs with limited funds that seek reproducibility. These organizations may not want to disclose their data to third parties or may not be able to afford the high costs of secret data leakage using third-party APIs or hiring human annotators. With PandaLM, they can perform evaluations without compromising data security or incurring high costs, and obtain reproducible results. To demonstrate the reliability and consistency of our tool, we have created a diverse human-annotated test dataset of approximately 1,000 samples, where the contexts and the labels are all created by humans. On our test dataset, PandaLM-7B has achieved 94% ChatGPT's evaluation ability in terms of accuracy. The papers and more features are coming soon.
+
+### CLEVA: Chinese Language Models EVAluation Platform
+- https://arxiv.org/abs/2308.04813
+- https://github.com/LaVi-Lab/CLEVA
+
+CLEVA is a Chinese Language Models EVAluation Platform developed by CUHK LaVi Lab. CLEVA would like to thank Shanghai AI Lab for the great collaboration in the process. The main features of CLEVA include:
+
+- A comprehensive Chinese Benchmark, featuring 31 tasks (11 application assessments + 20 ability evaluation tasks), with a total of 370K Chinese test samples (33.98% are newly collected, mitigating data contamination issues);
+- A standardized Prompt-Based Evaluation Methodology, incorporating unified pre-processing for all data and using a consistent set of Chinese prompt templates for evaluation.
+- A trustworthy Leaderboard, as CLEVA uses a significant amount of new data to minimize data contamination and regularly organizes evaluations.
+
+The leaderboard is evaluated and maintained by CLEVA using new test data. Past leaderboard data (processed test samples, annotated prompt templates, etc.) are made available to users for local evaluation runs.
 
 ## 5 其它
 ### Alpaca-CoT
