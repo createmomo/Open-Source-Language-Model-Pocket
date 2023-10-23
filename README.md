@@ -51,7 +51,7 @@ Open-Source Language Model Pocket
 |Chinese-Vicuna-medical|MedicalGPT| DISC-MedLLM （复旦）|
 |DoctorGLM|ChatMed-TCM&ChatMed-Consult|ChatGLM-Med|
 |MeChat|ShenNong-TCM-LLM|*【MindChat(漫谈): 心理大模型】|
-|*【WiNGPT】|||
+|*【WiNGPT】|*【CareGPT】||
 
 |经济/金融|||
 |---|---|---|
@@ -93,6 +93,9 @@ Open-Source Language Model Pocket
 |---|
 |* 【CodeShell】|
 
+|天文|
+|---|
+|* 【星语StarWhisper】|
 
 *训练/推理*
 |  |  |
@@ -115,7 +118,7 @@ Open-Source Language Model Pocket
 | llama.cpp | vLLM |
 | llama2.c | *【LongLoRA】 |
 |*【RLLTE: Long-Term Evolution Project of Reinforcement Learning】|*【FlashAttention】|
-|*【ExecuTorch】||
+|*【ExecuTorch】|*【TensorRT-LLM】|
 
 *可参考的其它开源模型*
 |  |  |
@@ -140,6 +143,7 @@ Open-Source Language Model Pocket
 |*【Mistral 7B】|*【Xwin-LM】|
 |*【LLaMA 2 Long】|*【UltraLM-13B (UltraFeedback)】|
 |*【Llemma: An Open Language Model For Mathematics】|*【Mistral-Trismegistus-7B （神秘学/玄学/灵性）】|
+|*【Memory-GPT(MemGPT)】||
 
 *评价*
 |  |
@@ -153,8 +157,8 @@ Open-Source Language Model Pocket
 |CMB: A Comprehensive Medical Benchmark in Chinese|
 | Multiscale Positive-Unlabeled Detection of AI-Generated Texts |
 | PandaLM |
+|*【Auto-J】|
 |*【CLEVA: Chinese Language Models EVAluation Platform】|
-
 
 *其它*
 |  |  |
@@ -165,8 +169,9 @@ Open-Source Language Model Pocket
 | Gorilla | *【Streaming LLM】 |
 | HuggingGPT | *【Sheared LLAMA (Structured Pruning)】 |
 | LLMPruner：大语言模型裁剪工具 | * 【QA-LoRA】 |
-| LLM-Pruner: On the Structural Pruning of Large Language Models |  |
-| LLM for Recommendation Systems |  |
+| LLM-Pruner: On the Structural Pruning of Large Language Models | *【AgentLM (AgentTuning, AgentInstruct)】 |
+| LLM for Recommendation Systems | *【XAgent】 |
+|*【OpenAgents】|*【gpu_poor】|
 
 ---
 
@@ -899,6 +904,11 @@ To advance the development of 100B-scale Large Language Models (LLMs), FLM-101B 
 
 WiNGPT是一个基于GPT的医疗垂直领域大模型，旨在将专业的医学知识、医疗信息、数据融会贯通，为医疗行业提供智能化的医疗问答、诊断支持和医学知识等信息服务，提高诊疗效率和医疗服务质量。
 
+### CareGPT
+- https://github.com/WangRongsheng/CareGPT
+
+CareGPT (关怀GPT)是一个医疗大语言模型，同时它集合了数十个公开可用的医疗微调数据集和开放可用的医疗大语言模型，包含LLM的训练、测评、部署等以促进医疗LLM快速发展。
+
 ### TinyLlama
 - https://github.com/jzhang38/TinyLlama
 
@@ -932,6 +942,13 @@ We are excited to unveil two distinguished versions of our model, with another o
 - https://github.com/WisdomShell/codeshell
 
 CodeShell是北京大学知识计算实验室联合四川天府银行AI团队研发的多语言代码大模型基座。CodeShell具有70亿参数，在五千亿Tokens进行了训练，上下文窗口长度为8192。在权威的代码评估Benchmark（HumanEval与MBPP）上，CodeShell取得同等规模最好的性能。与此同时，我们提供了与CodeShell配套的部署方案与IDE插件，请参考代码库CodeShell。
+
+### 星语StarWhisper
+- https://github.com/Yu-Yang-Li/StarWhisper
+
+在天文科学教育联盟、集思谱文献平台、司天工程的支持下，基于天文大模型StarGLM开发经验，我们进一步训练了星语StarWhisper系列模型(包括6B,7B,13B,14B,20B)。
+
+以进一步缓解大模型在天文通用知识的幻觉现象，为接下来可处理天文多模态任务、部署于望远镜阵列的科学具身智能——司天大脑打下基础。
 
 ### Ziya-Reader-13B
 - https://huggingface.co/IDEA-CCNL/Ziya-Reader-13B-v1.0
@@ -1140,6 +1157,17 @@ Key value propositions of ExecuTorch are:
 - Portability: Compatibility with a wide variety of computing platforms, from high-end mobile phones to highly constrained embedded systems and microcontrollers.
 - Productivity: Enabling developers to use the same toolchains and SDK from PyTorch model authoring and conversion, to debugging and deployment to a wide variety of platforms.
 - Performance: Providing end users with a seamless and high-performance experience due to a lightweight runtime and utilizing full hardware capabilities such as CPUs, NPUs, and DSPs.
+
+### TensorRT-LLM
+- https://github.com/NVIDIA/TensorRT-LLM
+
+TensorRT-LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and build TensorRT engines that contain state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs. TensorRT-LLM also contains components to create Python and C++ runtimes that execute those TensorRT engines. It also includes a backend for integration with the NVIDIA Triton Inference Server; a production-quality system to serve LLMs. Models built with TensorRT-LLM can be executed on a wide range of configurations going from a single GPU to multiple nodes with multiple GPUs (using Tensor Parallelism and/or Pipeline Parallelism).
+
+The Python API of TensorRT-LLM is architectured to look similar to the PyTorch API. It provides users with a functional module containing functions like einsum, softmax, matmul or view. The layers module bundles useful building blocks to assemble LLMs; like an Attention block, a MLP or the entire Transformer layer. Model-specific components, like GPTAttention or BertAttention, can be found in the models module.
+
+TensorRT-LLM comes with several popular models pre-defined. They can easily be modified and extended to fit custom needs. See below for a list of supported models.
+
+To maximize performance and reduce memory footprint, TensorRT-LLM allows the models to be executed using different quantization modes (see examples/gpt for concrete examples). TensorRT-LLM supports INT4 or INT8 weights (and FP16 activations; a.k.a. INT4/INT8 weight-only) as well as a complete implementation of the SmoothQuant technique.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -1582,6 +1610,12 @@ We present Llemma, a large language model for mathematics. We continue pretraini
 
 Transcendence is All You Need! Mistral Trismegistus is a model made for people interested in the esoteric, occult, and spiritual.
 
+### Memory-GPT(MemGPT)
+- https://github.com/cpacker/MemGPT
+- https://arxiv.org/abs/2310.08560
+
+Large language models (LLMs) have revolutionized AI, but are constrained by limited context windows, hindering their utility in tasks like extended conversations and document analysis. To enable using context beyond limited context windows, we propose virtual context management, a technique drawing inspiration from hierarchical memory systems in traditional operating systems that provide the appearance of large memory resources through data movement between fast and slow memory. Using this technique, we introduce MemGPT (Memory-GPT), a system that intelligently manages different memory tiers in order to effectively provide extended context within the LLM's limited context window, and utilizes interrupts to manage control flow between itself and the user. We evaluate our OS-inspired design in two domains where the limited context windows of modern LLMs severely handicaps their performance: document analysis, where MemGPT is able to analyze large documents that far exceed the underlying LLM's context window, and multi-session chat, where MemGPT can create conversational agents that remember, reflect, and evolve dynamically through long-term interactions with their users. 
+
 ## 4 评价
 
 ### 天秤（FlagEval）
@@ -1649,6 +1683,16 @@ Recent releases of Large Language Models (LLMs), e.g. ChatGPT, are astonishing a
 This is the official repository for PandaLM: ReProducible and Automated Language Model Assessment.
 
 PandaLM aims to provide reproducible and automated comparisons between different large language models (LLMs). By giving PandaLM the same context, it can compare the responses of different LLMs and provide a reason for the decision, along with a reference answer. The target audience for PandaLM may be organizations that have confidential data and research labs with limited funds that seek reproducibility. These organizations may not want to disclose their data to third parties or may not be able to afford the high costs of secret data leakage using third-party APIs or hiring human annotators. With PandaLM, they can perform evaluations without compromising data security or incurring high costs, and obtain reproducible results. To demonstrate the reliability and consistency of our tool, we have created a diverse human-annotated test dataset of approximately 1,000 samples, where the contexts and the labels are all created by humans. On our test dataset, PandaLM-7B has achieved 94% ChatGPT's evaluation ability in terms of accuracy. The papers and more features are coming soon.
+
+### Auto-J
+- https://gair-nlp.github.io/auto-j/
+- https://github.com/GAIR-NLP/auto-j
+- https://arxiv.org/abs/2310.05470
+
+We develop Auto-J, a new open-source generative judge that can effectively evaluate different LLMs on how they align to human preference. It is featured with:
+- Generality: Auto-J is trained on data from real-world user queries and responses from various LLMs, covering a wide range of 58 real-world scenarios.
+- Flexibility: Auto-J supports both pairwise response comparison and single-response evaluation by just switching to corresponding prompts.
+- Interpretability: Auto-J provides detailed critiques that enhance the reliability of its evaluation outcomes and facilitate humans' involvement in the evaluation loop.
 
 ### CLEVA: Chinese Language Models EVAluation Platform
 - https://arxiv.org/abs/2308.04813
@@ -1765,5 +1809,27 @@ We introduce the Sheared-LLaMA models, the strongest 1.3B and 2.7B public base l
 - https://github.com/yuhuixu1993/qa-lora
 
 Recently years have witnessed a rapid development of large language models (LLMs). Despite the strong ability in many language-understanding tasks, the heavy computational burden largely restricts the application of LLMs especially when one needs to deploy them onto edge devices. In this paper, we propose a quantization-aware low-rank adaptation (QA-LoRA) algorithm. The motivation lies in the imbalanced degrees of freedom of quantization and adaptation, and the solution is to use group-wise operators which increase the degree of freedom of quantization meanwhile decreasing that of adaptation. QA-LoRA is easily implemented with a few lines of code, and it equips the original LoRA with two-fold abilities: (i) during fine-tuning, the LLM's weights are quantized (e.g., into INT4) to reduce time and memory usage; (ii) after fine-tuning, the LLM and auxiliary weights are naturally integrated into a quantized model without loss of accuracy. We apply QA-LoRA to the LLaMA and LLaMA2 model families and validate its effectiveness in different fine-tuning datasets and downstream scenarios. 
+
+### AgentLM (AgentTuning, AgentInstruct)
+- https://github.com/THUDM/AgentTuning
+
+AgentTuning represents the very first attempt to instruction-tune LLMs using interaction trajectories across multiple agent tasks. Evaluation results indicate that AgentTuning enables the agent capabilities of LLMs with robust generalization on unseen agent tasks while remaining good on general language abilities. We have open-sourced the AgentInstruct dataset and AgentLM.
+
+### XAgent
+- https://github.com/OpenBMB/XAgent
+
+XAgent is an open-source experimental Large Language Model (LLM) driven autonomous agent that can automatically solve various tasks. It is designed to be a general-purpose agent that can be applied to a wide range of tasks. XAgent is still in its early stages, and we are working hard to improve it.
+
+🏆 Our goal is to create a super-intelligent agent that can solve any given task!
+
+### OpenAgents
+- https://github.com/xlang-ai/OpenAgents
+
+Current language agent frameworks aim to facilitate the construction of proof-of-concept language agents while neglecting the non-expert user access to agents and paying little attention to application-level designs. We built OpenAgents, an open platform for using and hosting language agents in the wild of everyday life.
+
+### gpu_poor
+- https://github.com/RahulSChand/gpu_poor
+
+Calculate how much GPU memory you need & breakdown of where it goes for training/inference of any LLM model with quantization (GGML/bitsandbytes), inference frameworks (vLLM/llama.cpp/HF) & QLoRA.
 
 > 持续更新中 (Continuously Updated)... 
