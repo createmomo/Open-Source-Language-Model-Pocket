@@ -29,7 +29,7 @@ Open-Source Language Model Pocket
 |---|---|---|
 |百川|中文Alpaca Luotuo|中文LLaMA&Alpaca大模型|
 |中文LLaMA&Alpaca大模型2|流萤Firefly|凤凰|
-|复旦MOSS|复旦MOSS-RLHF|悟道·天鹰Aquila|
+|复旦MOSS|复旦MOSS-RLHF|悟道·天鹰Aquila&*【Aquila2】|
 |雅意大模型| 通义千问Qwen| 活字|
 | Anima |BayLing|BELLE|
 |Bloom|BiLLa |BLOOMChat176B|
@@ -42,6 +42,7 @@ Open-Source Language Model Pocket
 |Ziya-LLaMA |TechGPT|EVA|
 |FLM-101B|*【TinyLlama】|*【Colossal-LLaMA-2】|
 |*【OpenBA (Encoder-Decoder)】|*【Ziya-Reader-13B】|*【Firefly-LLaMA2-Chinese】|
+|*【MindLLM】|*【ChatGLM3】||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -51,12 +52,14 @@ Open-Source Language Model Pocket
 |Chinese-Vicuna-medical|MedicalGPT| DISC-MedLLM （复旦）|
 |DoctorGLM|ChatMed-TCM&ChatMed-Consult|ChatGLM-Med|
 |MeChat|ShenNong-TCM-LLM|*【MindChat(漫谈): 心理大模型】|
-|*【WiNGPT】|*【CareGPT】||
+|*【WiNGPT】|*【CareGPT】|*【孙思邈】|
+|*【MolGen】（药物研发）|||
 
 |经济/金融|||
 |---|---|---|
 |【貔貅】 FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance|轩辕|BBT-FinCUGE-Applications|
 |Cornucopia-LLaMA-Fin-Chinese|EcomGPT|*【FinGLM】|
+|*【DISC-FinLLM】|||
 
 |法律|||
 |---|---|---|
@@ -92,10 +95,12 @@ Open-Source Language Model Pocket
 |编程/代码|
 |---|
 |* 【CodeShell】|
+|*【CODEFUSION-75M】|
 
-|天文|
+|天文/海洋|
 |---|
 |* 【星语StarWhisper】|
+|*【OceanGPT】|
 
 *训练/推理*
 |  |  |
@@ -143,7 +148,7 @@ Open-Source Language Model Pocket
 |*【Mistral 7B】|*【Xwin-LM】|
 |*【LLaMA 2 Long】|*【UltraLM-13B (UltraFeedback)】|
 |*【Llemma: An Open Language Model For Mathematics】|*【Mistral-Trismegistus-7B （神秘学/玄学/灵性）】|
-|*【Memory-GPT(MemGPT)】||
+|*【Memory-GPT(MemGPT)】|*【MetaMath】|
 
 *评价*
 |  |
@@ -159,6 +164,9 @@ Open-Source Language Model Pocket
 | PandaLM |
 |*【Auto-J】|
 |*【CLEVA: Chinese Language Models EVAluation Platform】|
+|*【ALCUNA: Large Language Models Meet New Knowledge】|
+|*【HalluQA：Evaluating Hallucinations in Chinese Large Language Models】|
+|*【GLoRE: Evaluating Logical Reasoning of Large Language Models】|
 
 *其它*
 |  |  |
@@ -312,6 +320,10 @@ FudanNLP 团队通过大量、详实工作，设计实验充分探索了大模�
 - https://github.com/FlagAI-Open/FlagAI/tree/master/examples/Aquila
 
 这是首个具备中英双语知识、支持商用许可协议、支持国内数据合规要求的开源语言大模型。悟道·天鹰（Aquila）系列模型包括 Aquila基础模型（7B、33B），AquilaChat对话模型（7B、33B）以及 AquilaCode “文本-代码”生成模型。 
+
+- https://github.com/FlagAI-Open/Aquila2
+
+We announce that our Aquila2 series is now open source, comprising Aquila2 (the base language models: Aquila2-7B and Aquila2-34B) and AquilaChat2 (the chat models, namely AquilaChat2-7B and AquilaChat2-34B, as well as the long-text chat models, namely AquilaChat2-7B-16k and AquilaChat2-34B-16k). You can find the links in the following table. Kindly click on them to access the model cards.
 
 ### 桃李：国际中文教育大模型
 - https://github.com/blcuicall/taoli
@@ -623,6 +635,12 @@ EVA 是目前最大的开源中文预训练对话模型，拥有28亿参数，�
 
 📘 上市公司年报为投资者呈现了公司的经营状况、财务状况和未来规划。专业知识是解读的关键，而我们的目标是通过AI技术让这一过程变得更简单、更准确。
 
+### DISC-FinLLM
+- https://fin.fudan-disc.com
+- https://github.com/FudanDISC/DISC-FinLLM
+
+DISC-FinLLM 是一个专门针对金融场景下为用户提供专业、智能、全面的金融咨询服务的金融领域大模型，由复旦大学数据智能与社会计算实验室 (Fudan-DISC) 开发并开源。
+
 ### GPT2 for Multiple Language
 - https://github.com/imcaspar/gpt2-ml
 
@@ -909,6 +927,24 @@ WiNGPT是一个基于GPT的医疗垂直领域大模型，旨在将专业的医�
 
 CareGPT (关怀GPT)是一个医疗大语言模型，同时它集合了数十个公开可用的医疗微调数据集和开放可用的医疗大语言模型，包含LLM的训练、测评、部署等以促进医疗LLM快速发展。
 
+### 孙思邈
+- https://github.com/thomas-yanxin/Sunsimiao
+
+孙思邈中文医疗大模型(简称: Sunsimiao)希望能够遵循孙思邈的生平轨迹, 重视民间医疗经验, 不断累积中文医疗数据, 并将数据附加给模型, 致力于提供安全、可靠、普惠的中文医疗大模型.
+
+目前, Sunsimiao是由baichuan-7B和ChatGLM-6B系列在十万级高质量的中文医疗数据中微调而得, 后续将收集更多数据, 扩充模型能力, 不断迭代更新. 相关细节工作正在整理, 敬请期待.
+
+### MolGen（药物研发）
+- https://github.com/zjunlp/Mol-Instructions
+
+Mol-Instructions comprises three cardinal components:
+
+🔬 Molecule-oriented instructions: This component delves into the world of small molecules, emphasizing their inherent properties and behaviors. It sheds light on the fundamental challenges of diverse chemical reactions and molecular design, with 148,4K instructions across six tasks.
+
+🧬 Protein-oriented instructions: Rooted in the biosciences, this component presents 505K instructions across five distinct categories of tasks. These tasks aim to predict the structure, function, and activity of proteins, and facilitate protein design based on textual directives.
+
+🥼 Biomolecular text instructions: Predominantly designed to cater to NLP tasks within the fields of bioinformatics and chemoinformatics, this part encapsulates six information extraction and Q&A tasks represented through 53K instructions.
+
 ### TinyLlama
 - https://github.com/jzhang38/TinyLlama
 
@@ -943,12 +979,24 @@ We are excited to unveil two distinguished versions of our model, with another o
 
 CodeShell是北京大学知识计算实验室联合四川天府银行AI团队研发的多语言代码大模型基座。CodeShell具有70亿参数，在五千亿Tokens进行了训练，上下文窗口长度为8192。在权威的代码评估Benchmark（HumanEval与MBPP）上，CodeShell取得同等规模最好的性能。与此同时，我们提供了与CodeShell配套的部署方案与IDE插件，请参考代码库CodeShell。
 
+### CODEFUSION-75M
+- https://arxiv.org/pdf/2310.14820.pdf
+- https://github.com/microsoft/prose-benchmarks/tree/main/CodeFusion
+
+Imagine a developer who can only change their last line of code, how often would they have to start writing a function from scratch before it is correct? Auto-regressive models for code generation from natural language have a similar limitation: they do not easily allow reconsidering earlier tokens generated. We introduce CodeFusion, a pre-trained diffusion code generation model that addresses this limitation by iteratively denoising a complete program conditioned on the encoded natural language. We evaluate CodeFusion on the task of natural language to code generation for Bash, Python, and Microsoft Excel conditional formatting (CF) rules. Experiments show that CodeFusion (75M parameters) performs on par with state-of-the-art auto-regressive systems (350M-175B parameters) in top-1 accuracy and outperforms them in top-3 and top-5 accuracy due to its better balance in diversity versus quality.
+
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
 
 在天文科学教育联盟、集思谱文献平台、司天工程的支持下，基于天文大模型StarGLM开发经验，我们进一步训练了星语StarWhisper系列模型(包括6B,7B,13B,14B,20B)。
 
 以进一步缓解大模型在天文通用知识的幻觉现象，为接下来可处理天文多模态任务、部署于望远镜阵列的科学具身智能——司天大脑打下基础。
+
+### OceanGPT
+- https://www.zjukg.org/project/OceanGPT
+- https://huggingface.co/zjunlp/oceangpt-7b
+
+(Warning: The model in this paper might produce hallucinations and reader discretion is recommended) Ocean science, which delves into the oceans that are reservoirs of life and biodiversity, is of great significance given that oceans cover over 70% of our planet's surface. Recently, advances in Large Language Models (LLMs) have transformed the paradigm in science. Despite the success in other domains, current LLMs often fall short in catering to the needs of domain experts like oceanographers, and the potential of LLMs for ocean science is under-explored. The intrinsic reason may be the immense and intricate nature of ocean data as well as the necessity for higher granularity and richness in knowledge. To alleviate these issues, we introduce OceanGPT, the first-ever LLM in the ocean domain, which is expert in various ocean science tasks. We propose DoInstruct, a novel framework to automatically obtain a large volume of ocean domain instruction data, which generates instructions based on multi-agent collaboration. Additionally, we construct the first oceanography benchmark, OceanBench, to evaluate the capabilities of LLMs in the ocean domain. Though comprehensive experiments, OceanGPT not only shows a higher level of knowledge expertise for oceans science tasks but also gains preliminary embodied intelligence capabilities in ocean technology.
 
 ### Ziya-Reader-13B
 - https://huggingface.co/IDEA-CCNL/Ziya-Reader-13B-v1.0
@@ -971,6 +1019,20 @@ Ziya-Reader-13B-v1.0是一个知识问答模型，给定问题和知识文档可
 更重要的是，在整个增量预训练和指令微调阶段，我们最多仅使用了4*V100的GPU，训练更加低资源高效。相较于Ziya的160*A100，Linly的32*A100，Chinese-LLaMA-Alpaca的48*A40，我们所使用的训练资源少得多。
 
 授人以鱼🐟，不如授人以渔🎣，我们不仅开源了模型权重，也开源了项目全流程的训练代码、训练数据，以及训练细节。
+
+### MindLLM
+- https://arxiv.org/abs/2310.15777
+
+Large Language Models (LLMs) have demonstrated remarkable performance across various natural language tasks, marking significant strides towards general artificial intelligence. While general artificial intelligence is leveraged by developing increasingly large-scale models, there could be another branch to develop lightweight custom models that better serve certain domains, taking into account the high cost of training and deploying LLMs and the scarcity of resources. In this paper, we present MindLLM, a novel series of bilingual lightweight large language models, trained from scratch, alleviating such burdens by offering models with 1.3 billion and 3 billion parameters. A thorough account of experiences accrued during large model development is given, covering every step of the process, including data construction, model architecture, evaluation, and applications. Such insights are hopefully valuable for fellow academics and developers. MindLLM consistently matches or surpasses the performance of other open-source larger models on some public benchmarks. We also introduce an innovative instruction tuning framework tailored for smaller models to enhance their capabilities efficiently. Moreover, we explore the application of MindLLM in specific vertical domains such as law and finance, underscoring the agility and adaptability of our lightweight models.
+
+### ChatGLM3
+- https://github.com/THUDM/ChatGLM3
+
+ChatGLM3 是智谱AI和清华大学 KEG 实验室联合发布的新一代对话预训练模型。ChatGLM3-6B 是 ChatGLM3 系列中的开源模型，在保留了前两代模型对话流畅、部署门槛低等众多优秀特性的基础上，ChatGLM3-6B 引入了如下特性：
+
+- 更强大的基础模型： ChatGLM3-6B 的基础模型 ChatGLM3-6B-Base 采用了更多样的训练数据、更充分的训练步数和更合理的训练策略。在语义、数学、推理、代码、知识等不同角度的数据集上测评显示，ChatGLM3-6B-Base 具有在 10B 以下的基础模型中最强的性能。
+- 更完整的功能支持： ChatGLM3-6B 采用了全新设计的 Prompt 格式，除正常的多轮对话外。同时原生支持工具调用（Function Call）、代码执行（Code Interpreter）和 Agent 任务等复杂场景。
+- 更全面的开源序列： 除了对话模型 ChatGLM3-6B 外，还开源了基础模型 ChatGLM3-6B-Base、长文本对话模型 ChatGLM3-6B-32K。以上所有权重对学术研究完全开放，在填写问卷进行登记后亦允许免费商业使用。
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
@@ -1616,6 +1678,11 @@ Transcendence is All You Need! Mistral Trismegistus is a model made for people i
 
 Large language models (LLMs) have revolutionized AI, but are constrained by limited context windows, hindering their utility in tasks like extended conversations and document analysis. To enable using context beyond limited context windows, we propose virtual context management, a technique drawing inspiration from hierarchical memory systems in traditional operating systems that provide the appearance of large memory resources through data movement between fast and slow memory. Using this technique, we introduce MemGPT (Memory-GPT), a system that intelligently manages different memory tiers in order to effectively provide extended context within the LLM's limited context window, and utilizes interrupts to manage control flow between itself and the user. We evaluate our OS-inspired design in two domains where the limited context windows of modern LLMs severely handicaps their performance: document analysis, where MemGPT is able to analyze large documents that far exceed the underlying LLM's context window, and multi-session chat, where MemGPT can create conversational agents that remember, reflect, and evolve dynamically through long-term interactions with their users. 
 
+### MetaMath
+- https://github.com/meta-math/MetaMath
+
+Large language models (LLMs) have pushed the limits of natural language understanding and exhibited excellent problem-solving ability. Despite the great success, most existing open-source LLMs (e.g., LLaMA-2) are still far away from satisfactory for solving mathematical problem due to the complex reasoning procedures. To bridge this gap, we propose MetaMath, a fine-tuned language model that specializes in mathematical reasoning. Specifically, we start by bootstrapping mathematical questions by rewriting the question from multiple perspectives without extra knowledge, which results in a new dataset called MetaMathQA. Then we fine-tune the LLaMA-2 models on MetaMathQA. Experimental results on two popular benchmarks (i.e., GSM8K and MATH) for mathematical reasoning demonstrate that MetaMath outperforms a suite of open-source LLMs by a significant margin. Our MetaMath-7B model achieves 66.4% on GSM8K and 19.4% on MATH, exceeding the state-of-the-art models of the same size by 11.5% and 8.7%. Particularly, MetaMath-70B achieves an accuracy of 82.3% on GSM8K, slightly better than GPT-3.5-Turbo. We release all the MetaMathQA dataset, the MetaMath models with different model sizes and the training code for public use.
+
 ## 4 评价
 
 ### 天秤（FlagEval）
@@ -1705,6 +1772,23 @@ CLEVA is a Chinese Language Models EVAluation Platform developed by CUHK LaVi La
 - A trustworthy Leaderboard, as CLEVA uses a significant amount of new data to minimize data contamination and regularly organizes evaluations.
 
 The leaderboard is evaluated and maintained by CLEVA using new test data. Past leaderboard data (processed test samples, annotated prompt templates, etc.) are made available to users for local evaluation runs.
+
+### ALCUNA: Large Language Models Meet New Knowledge
+- https://github.com/arvid-pku/alcuna
+
+With the rapid development of NLP, large-scale language models (LLMs) excel in various tasks across multiple domains now. However, existing benchmarks may not adequately measure these models' capabilities, especially when faced with new knowledge. In this paper, we address the lack of benchmarks to evaluate LLMs' ability to handle new knowledge, an important and challenging aspect in the rapidly evolving world. We propose an approach called KnowGen that generates new knowledge by altering existing entity attributes and relationships, resulting in artificial entities that are distinct from real-world entities. With KnowGen, we introduce a benchmark named ALCUNA to assess LLMs' abilities in knowledge understanding, differentiation, and association. We benchmark several LLMs, reveals that their performance in face of new knowledge is not satisfactory, particularly in reasoning between new and internal knowledge. We also explore the impact of entity similarity on the model's understanding of entity knowledge and the influence of contextual entities. We appeal to the need for caution when using LLMs in new scenarios or with new knowledge, and hope that our benchmarks can help drive the development of LLMs in face of new knowledge.
+
+### HalluQA：Evaluating Hallucinations in Chinese Large Language Models
+- https://github.com/xiami2019/HalluQA/
+
+Evaluating Hallucinations in Chinese Large Language Models
+
+HalluQA contains 450 meticulously designed adversarial questions, spanning multiple domains, and takes into account Chinese historical culture, customs, and social phenomena. The pipeline of data collection is shown above. At step 1, we write questions which we think may induce model hallucinations. At step 2, we use ChatGPT3.5/Puyu/GLM-130B to generate answers and collect adversarial questions. At step 3, we write multiple correct and wrong answers for each adversarial question and add support evidence. At step 4, we check all annotated question-answer pairs and remove low quality samples.
+
+### GLoRE: Evaluating Logical Reasoning of Large Language Models  
+- https://arxiv.org/abs/2310.09107
+
+Recently, large language models (LLMs), including notable models such as GPT-4 and burgeoning community models, have showcased significant general language understanding abilities. However, there has been a scarcity of attempts to assess the logical reasoning capacities of these LLMs, an essential facet of natural language understanding. To encourage further investigation in this area, we introduce GLoRE, a meticulously assembled General Logical Reasoning Evaluation benchmark comprised of 12 datasets that span three different types of tasks. Our experimental results show that compared to the performance of human and supervised fine-tuning, the logical reasoning capabilities of open LLM models necessitate additional improvement; ChatGPT and GPT-4 show a strong capability of logical reasoning, with GPT-4 surpassing ChatGPT by a large margin. We propose a self-consistency probing method to enhance the accuracy of ChatGPT and a fine-tuned method to boost the performance of an open LLM. We release the datasets and evaluation programs to facilitate future research.
 
 ## 5 其它
 ### Alpaca-CoT
