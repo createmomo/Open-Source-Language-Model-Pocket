@@ -42,7 +42,7 @@ Open-Source Language Model Pocket
 |Ziya-LLaMA |TechGPT|EVA|
 |FLM-101B|*【TinyLlama】|*【Colossal-LLaMA-2】|
 |*【OpenBA (Encoder-Decoder)】|*【Ziya-Reader-13B】|*【Firefly-LLaMA2-Chinese】|
-|*【MindLLM】|*【ChatGLM3】||
+|*【MindLLM】|*【ChatGLM3】|*【Skywork大模型】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -96,6 +96,7 @@ Open-Source Language Model Pocket
 |---|
 |* 【CodeShell】|
 |*【CODEFUSION-75M】|
+|*【DeepSeek Coder】|
 
 |天文/海洋|
 |---|
@@ -149,6 +150,7 @@ Open-Source Language Model Pocket
 |*【LLaMA 2 Long】|*【UltraLM-13B (UltraFeedback)】|
 |*【Llemma: An Open Language Model For Mathematics】|*【Mistral-Trismegistus-7B （神秘学/玄学/灵性）】|
 |*【Memory-GPT(MemGPT)】|*【MetaMath】|
+|*【ChipNeMo (芯片设计)】|
 
 *评价*
 |  |
@@ -985,6 +987,11 @@ CodeShell是北京大学知识计算实验室联合四川天府银行AI团队研
 
 Imagine a developer who can only change their last line of code, how often would they have to start writing a function from scratch before it is correct? Auto-regressive models for code generation from natural language have a similar limitation: they do not easily allow reconsidering earlier tokens generated. We introduce CodeFusion, a pre-trained diffusion code generation model that addresses this limitation by iteratively denoising a complete program conditioned on the encoded natural language. We evaluate CodeFusion on the task of natural language to code generation for Bash, Python, and Microsoft Excel conditional formatting (CF) rules. Experiments show that CodeFusion (75M parameters) performs on par with state-of-the-art auto-regressive systems (350M-175B parameters) in top-1 accuracy and outperforms them in top-3 and top-5 accuracy due to its better balance in diversity versus quality.
 
+### DeepSeek Coder
+- https://github.com/deepseek-ai/DeepSeek-Coder
+
+Deepseek Coder comprises a series of code language models trained on both 87% code and 13% natural language in English and Chinese, with each model pre-trained on 2T tokens. We provide various sizes of the code model, ranging from 1B to 33B versions. Each model is pre-trained on project-level code corpus by employing a window size of 16K and a extra fill-in-the-blank task, to support project-level code completion and infilling. For coding capabilities, Deepseek Coder achieves state-of-the-art performance among open-source code models on multiple programming languages and various benchmarks.
+
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
 
@@ -1033,6 +1040,13 @@ ChatGLM3 是智谱AI和清华大学 KEG 实验室联合发布的新一代对话�
 - 更强大的基础模型： ChatGLM3-6B 的基础模型 ChatGLM3-6B-Base 采用了更多样的训练数据、更充分的训练步数和更合理的训练策略。在语义、数学、推理、代码、知识等不同角度的数据集上测评显示，ChatGLM3-6B-Base 具有在 10B 以下的基础模型中最强的性能。
 - 更完整的功能支持： ChatGLM3-6B 采用了全新设计的 Prompt 格式，除正常的多轮对话外。同时原生支持工具调用（Function Call）、代码执行（Code Interpreter）和 Agent 任务等复杂场景。
 - 更全面的开源序列： 除了对话模型 ChatGLM3-6B 外，还开源了基础模型 ChatGLM3-6B-Base、长文本对话模型 ChatGLM3-6B-32K。以上所有权重对学术研究完全开放，在填写问卷进行登记后亦允许免费商业使用。
+
+### Skywork大模型
+- https://github.com/SkyworkAI/Skywork
+
+Skywork是由昆仑万维集团·天工团队开发的一系列大型模型，本次开源的模型有Skywork-13B-Base模型、Skywork-13B-Chat模型、Skywork-13B-Math模型和Skywork-13B-MM模型，以及每个模型的量化版模型，以支持用户在消费级显卡进行部署和推理。
+
+我们开源的Skywork系列模型可以用于商业用途，但需要遵循我们的协议，不进行有害活动。
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
@@ -1682,6 +1696,11 @@ Large language models (LLMs) have revolutionized AI, but are constrained by limi
 - https://github.com/meta-math/MetaMath
 
 Large language models (LLMs) have pushed the limits of natural language understanding and exhibited excellent problem-solving ability. Despite the great success, most existing open-source LLMs (e.g., LLaMA-2) are still far away from satisfactory for solving mathematical problem due to the complex reasoning procedures. To bridge this gap, we propose MetaMath, a fine-tuned language model that specializes in mathematical reasoning. Specifically, we start by bootstrapping mathematical questions by rewriting the question from multiple perspectives without extra knowledge, which results in a new dataset called MetaMathQA. Then we fine-tune the LLaMA-2 models on MetaMathQA. Experimental results on two popular benchmarks (i.e., GSM8K and MATH) for mathematical reasoning demonstrate that MetaMath outperforms a suite of open-source LLMs by a significant margin. Our MetaMath-7B model achieves 66.4% on GSM8K and 19.4% on MATH, exceeding the state-of-the-art models of the same size by 11.5% and 8.7%. Particularly, MetaMath-70B achieves an accuracy of 82.3% on GSM8K, slightly better than GPT-3.5-Turbo. We release all the MetaMathQA dataset, the MetaMath models with different model sizes and the training code for public use.
+
+### ChipNeMo (芯片设计)
+- https://arxiv.org/abs/2311.00176
+
+ChipNeMo aims to explore the applications of large language models (LLMs) for industrial chip design. Instead of directly deploying off-the-shelf commercial or open-source LLMs, we instead adopt the following domain adaptation techniques: custom tokenizers, domain-adaptive continued pretraining, supervised fine-tuning (SFT) with domain-specific instructions, and domain-adapted retrieval models. We evaluate these methods on three selected LLM applications for chip design: an engineering assistant chatbot, EDA script generation, and bug summarization and analysis. Our results show that these domain adaptation techniques enable significant LLM performance improvements over general-purpose base models across the three evaluated applications, enabling up to 5x model size reduction with similar or better performance on a range of design tasks. Our findings also indicate that there's still room for improvement between our current results and ideal outcomes. We believe that further investigation of domain-adapted LLM approaches will help close this gap in the future.
 
 ## 4 评价
 
