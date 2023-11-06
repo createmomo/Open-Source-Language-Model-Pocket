@@ -1,4 +1,4 @@
-# 开源语言模型百宝袋 (Ver. 3.1)
+# 开源语言模型百宝袋 (Ver. 3.2)
 Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
@@ -29,7 +29,7 @@ Open-Source Language Model Pocket
 |---|---|---|
 |百川|中文Alpaca Luotuo|中文LLaMA&Alpaca大模型|
 |中文LLaMA&Alpaca大模型2|流萤Firefly|凤凰|
-|复旦MOSS|复旦MOSS-RLHF|悟道·天鹰Aquila&*【Aquila2】|
+|复旦MOSS|复旦MOSS-RLHF|悟道·天鹰Aquila&Aquila2|
 |雅意大模型| 通义千问Qwen| 活字|
 | Anima |BayLing|BELLE|
 |Bloom|BiLLa |BLOOMChat176B|
@@ -40,9 +40,11 @@ Open-Source Language Model Pocket
 |PromptCLUE|SkyText-Chinese-GPT3|CPM-Bee|
 |TigerBot|XVERSE-13B|YuLan-Chat & YuLan-Chat-2|
 |Ziya-LLaMA |TechGPT|EVA|
-|FLM-101B|*【TinyLlama】|*【Colossal-LLaMA-2】|
-|*【OpenBA (Encoder-Decoder)】|*【Ziya-Reader-13B】|*【Firefly-LLaMA2-Chinese】|
-|*【MindLLM】|*【ChatGLM3】|*【Skywork大模型】|
+|FLM-101B|TinyLlama|Colossal-LLaMA-2|
+|OpenBA (Encoder-Decoder)|Ziya-Reader-13B|Firefly-LLaMA2-Chinese|
+|MindLLM|ChatGLM3|Skywork大模型|
+|*【Yi-6B/34B（零一万物）】|||
+
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -51,21 +53,22 @@ Open-Source Language Model Pocket
 | OpenMEDLab 浦医|明医 (MING)：中文医疗问诊大模型 (原名：MedicalGPT-zh) |情感大模型PICA|
 |Chinese-Vicuna-medical|MedicalGPT| DISC-MedLLM （复旦）|
 |DoctorGLM|ChatMed-TCM&ChatMed-Consult|ChatGLM-Med|
-|MeChat|ShenNong-TCM-LLM|*【MindChat(漫谈): 心理大模型】|
-|*【WiNGPT】|*【CareGPT】|*【孙思邈】|
-|*【MolGen】（药物研发）|||
+|MeChat|ShenNong-TCM-LLM|MindChat(漫谈): 心理大模型|
+|WiNGPT|CareGPT|孙思邈|
+|MolGen（药物研发）|||
 
 |经济/金融|||
 |---|---|---|
 |【貔貅】 FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance|轩辕|BBT-FinCUGE-Applications|
-|Cornucopia-LLaMA-Fin-Chinese|EcomGPT|*【FinGLM】|
-|*【DISC-FinLLM】|||
+|Cornucopia-LLaMA-Fin-Chinese|EcomGPT|FinGLM|
+|DISC-FinLLM|||
 
 |法律|||
 |---|---|---|
 | 韩非 HanFei| 智海 录问|ChatLaw 法律大模型|
 |LaWGPT|Lawyer LLaMA|LexiLaw|
-|LawGPT_zh|*【夫子•明察司法大模型】|*【DISC-LawLLM】|
+|LawGPT_zh|夫子•明察司法大模型|DISC-LawLLM|
+|*【LawBench】|||
 
 |交通|
 |---|
@@ -78,7 +81,7 @@ Open-Source Language Model Pocket
 |数学|
 |---|
 |chatglm-maths|
-|*【Abel】|
+|Abel|
 
 |表格/数据 分析||
 |---|---|
@@ -90,25 +93,25 @@ Open-Source Language Model Pocket
 
 |古汉语|
 |---|
-|* 【尔雅 Erya】|
+|尔雅 Erya|
 
 |编程/代码|
 |---|
-|* 【CodeShell】|
-|*【CODEFUSION-75M】|
-|*【DeepSeek Coder】|
+|CodeShell|
+|CODEFUSION-75M|
+|DeepSeek Coder|
 
 |天文/海洋|
 |---|
-|* 【星语StarWhisper】|
-|*【OceanGPT】|
+|星语StarWhisper|
+|OceanGPT|
 
 *训练/推理*
 |  |  |
 |---|---|
 | Alpaca-LoRA | llama2.mojo |
 | AlpacaFarm | LightLLM |
-| ColossalAI | *【Medusa】 |
+| ColossalAI | Medusa |
 | ChatLLaMA | Megatron-LLaMA |
 | Chinese-Guanaco | MeZO: Fine-Tuning Language Models with Just Forward Passes |
 | DPO (Direct Preference Optimization) | MLC LLM |
@@ -122,9 +125,9 @@ Open-Source Language Model Pocket
 | INSTRUCTEVAL | Train_Transformers_with_INT4 |
 | LOw-Memory Optimization (LOMO) | Transformer Reinforcement Learning X |
 | llama.cpp | vLLM |
-| llama2.c | *【LongLoRA】 |
-|*【RLLTE: Long-Term Evolution Project of Reinforcement Learning】|*【FlashAttention】|
-|*【ExecuTorch】|*【TensorRT-LLM】|
+| llama2.c | LongLoRA |
+|RLLTE: Long-Term Evolution Project of Reinforcement Learning|FlashAttention|
+|ExecuTorch|TensorRT-LLM|
 
 *可参考的其它开源模型*
 |  |  |
@@ -145,12 +148,12 @@ Open-Source Language Model Pocket
 | LLaMA复刻版OpenLLaMA | Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality |
 | Llama-X: Open Academic Research on Improving LLaMA to SOTA LLM | Wombat |
 | Lit-LLaMA ️ | WizardMath|
-| *【MammoTH】 | XGen-7B |
-|*【Mistral 7B】|*【Xwin-LM】|
-|*【LLaMA 2 Long】|*【UltraLM-13B (UltraFeedback)】|
-|*【Llemma: An Open Language Model For Mathematics】|*【Mistral-Trismegistus-7B （神秘学/玄学/灵性）】|
-|*【Memory-GPT(MemGPT)】|*【MetaMath】|
-|*【ChipNeMo (芯片设计)】|
+| MammoTH | XGen-7B |
+|Mistral 7B|Xwin-LM|
+|LLaMA 2 Long|UltraLM-13B (UltraFeedback)|
+|Llemma: An Open Language Model For Mathematics|Mistral-Trismegistus-7B （神秘学/玄学/灵性）|
+|Memory-GPT(MemGPT)|MetaMath|
+|ChipNeMo (芯片设计)|
 
 *评价*
 |  |
@@ -164,11 +167,11 @@ Open-Source Language Model Pocket
 |CMB: A Comprehensive Medical Benchmark in Chinese|
 | Multiscale Positive-Unlabeled Detection of AI-Generated Texts |
 | PandaLM |
-|*【Auto-J】|
-|*【CLEVA: Chinese Language Models EVAluation Platform】|
-|*【ALCUNA: Large Language Models Meet New Knowledge】|
-|*【HalluQA：Evaluating Hallucinations in Chinese Large Language Models】|
-|*【GLoRE: Evaluating Logical Reasoning of Large Language Models】|
+|Auto-J|
+|CLEVA: Chinese Language Models EVAluation Platform|
+|ALCUNA: Large Language Models Meet New Knowledge|
+|HalluQA：Evaluating Hallucinations in Chinese Large Language Models|
+|GLoRE: Evaluating Logical Reasoning of Large Language Models|
 
 *其它*
 |  |  |
@@ -176,12 +179,12 @@ Open-Source Language Model Pocket
 | Alpaca-CoT | Self-Instruct |
 | Auto-GPT | ToolBench&ToolLLM |
 | ChatPiXiu | Wanda (Pruning by Weights and activations) |
-| Gorilla | *【Streaming LLM】 |
-| HuggingGPT | *【Sheared LLAMA (Structured Pruning)】 |
-| LLMPruner：大语言模型裁剪工具 | * 【QA-LoRA】 |
-| LLM-Pruner: On the Structural Pruning of Large Language Models | *【AgentLM (AgentTuning, AgentInstruct)】 |
-| LLM for Recommendation Systems | *【XAgent】 |
-|*【OpenAgents】|*【gpu_poor】|
+| Gorilla | Streaming LLM |
+| HuggingGPT | Sheared LLAMA (Structured Pruning) |
+| LLMPruner：大语言模型裁剪工具 | QA-LoRA |
+| LLM-Pruner: On the Structural Pruning of Large Language Models | AgentLM (AgentTuning, AgentInstruct) |
+| LLM for Recommendation Systems | XAgent |
+|OpenAgents|gpu_poor|
 
 ---
 
@@ -702,6 +705,12 @@ LaWGPT 是一系列基于中文法律知识的开源大语言模型。
 
 课题组同时公开包含30万高质量的监督微调（SFT）数据集——DISC-Law-SFT，模型参数和技术报告也一并开源。
 
+### LawBench
+- https://github.com/open-compass/LawBench
+- https://arxiv.org/abs/2309.16289
+
+LawBench经过精心设计，可对大语言模型的法律能力进行精确评估。 在设计测试任务时，我们模拟了司法认知的三个维度，并选择了20个任务来评估大模型的能力。与一些仅有多项选择题的现有基准相比，我们包含了更多与现实世界应用密切相关的任务类型，如法律实体识别、阅读理解、犯罪金额计算和咨询等。 我们认识到当前大模型的安全性策略可能会拒绝回应某些法律询问，或在理解指令方面遇到困难，从而导致缺乏回应。因此，我们开发了一个单独的评估指标 "弃权率"，以衡量模型拒绝提供答案或未能正确理解指令的频率。 我们汇报了51种大语言模型在LawBench上的表现，包括20种多语言模型、22种中文模型和9种法律专用大语言模型。
+
 ### Lawyer LLaMA
 - https://github.com/AndrewZhe/lawyer-llama
 
@@ -1047,6 +1056,11 @@ ChatGLM3 是智谱AI和清华大学 KEG 实验室联合发布的新一代对话�
 Skywork是由昆仑万维集团·天工团队开发的一系列大型模型，本次开源的模型有Skywork-13B-Base模型、Skywork-13B-Chat模型、Skywork-13B-Math模型和Skywork-13B-MM模型，以及每个模型的量化版模型，以支持用户在消费级显卡进行部署和推理。
 
 我们开源的Skywork系列模型可以用于商业用途，但需要遵循我们的协议，不进行有害活动。
+
+### Yi-6B/34B（零一万物）
+- https://github.com/01-ai/Yi
+
+The Yi series models are large language models trained from scratch by developers at 01.AI. The first public release contains two bilingual (English/Chinese) base models with the parameter sizes of 6B and 34B. Both of them are trained with 4K sequence length and can be extended to 32K during inference time.
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
