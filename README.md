@@ -19,6 +19,7 @@ Open-Source Language Model Pocket
   - 自动评估模型
     - 【不限领域】[用语言模型评估语言模型（1）导语](https://mp.weixin.qq.com/s/SUN_ywkI8ld1edXY7uq_1Q)
     - 【不限领域】[用语言模型评估语言模型（2）PandaLM](https://mp.weixin.qq.com/s/NTFu53MdVD9NusFJaORHcw)
+    - 【不限领域】[用语言模型评估语言模型（3）Shepherd](https://mp.weixin.qq.com/s/NTFu53MdVD9NusFJaORHcw)（[上](https://mp.weixin.qq.com/s/NTFu53MdVD9NusFJaORHcw)）
     - 【医疗/健康】[使用BERT-Score比较ChatDoctor与ChatGPT3.5](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg)
 
 **开源模型一览** (Table of Contents)：
