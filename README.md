@@ -106,29 +106,6 @@ Open-Source Language Model Pocket
 |星语StarWhisper|
 |OceanGPT|
 
-*训练/推理*
-|  |  |
-|---|---|
-| Alpaca-LoRA | llama2.mojo |
-| AlpacaFarm | LightLLM |
-| ColossalAI | Medusa |
-| ChatLLaMA | Megatron-LLaMA |
-| Chinese-Guanaco | MeZO: Fine-Tuning Language Models with Just Forward Passes |
-| DPO (Direct Preference Optimization) | MLC LLM |
-| DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | PKU-Beaver 河狸 (Safe RLHF) |
-| DeepSpeed-Chat | PaLM + RLHF (Pytorch) |
-| FlexGen | RL4LMs |
-| FlagAI and FlagData | Reinforcement Learning with Language Model |
-| Guanaco & QloRA | SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression |
-| GPT4All | Scikit-LLM: Sklearn Meets Large Language Models |
-| HugNLP | Transformer Reinforcement Learning |
-| INSTRUCTEVAL | Train_Transformers_with_INT4 |
-| LOw-Memory Optimization (LOMO) | Transformer Reinforcement Learning X |
-| llama.cpp | vLLM |
-| llama2.c | LongLoRA |
-|RLLTE: Long-Term Evolution Project of Reinforcement Learning|FlashAttention|
-|ExecuTorch|TensorRT-LLM|
-
 *可参考的其它开源模型*
 |  |  |
 |---|---|
@@ -153,7 +130,30 @@ Open-Source Language Model Pocket
 |LLaMA 2 Long|UltraLM-13B (UltraFeedback)|
 |Llemma: An Open Language Model For Mathematics|Mistral-Trismegistus-7B （神秘学/玄学/灵性）|
 |Memory-GPT(MemGPT)|MetaMath|
-|ChipNeMo (芯片设计)|
+|ChipNeMo (芯片设计)|*【Zephyr】|
+
+*训练/推理*
+|  |  |
+|---|---|
+| Alpaca-LoRA | llama2.mojo |
+| AlpacaFarm | LightLLM |
+| ColossalAI | Medusa |
+| ChatLLaMA | Megatron-LLaMA |
+| Chinese-Guanaco | MeZO: Fine-Tuning Language Models with Just Forward Passes |
+| DPO (Direct Preference Optimization) | MLC LLM |
+| DialogADV：Evaluate What You Can't Evaluate: Unassessable Generated Responses Quality | PKU-Beaver 河狸 (Safe RLHF) |
+| DeepSpeed-Chat | PaLM + RLHF (Pytorch) |
+| FlexGen | RL4LMs |
+| FlagAI and FlagData | Reinforcement Learning with Language Model |
+| Guanaco & QloRA | SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression |
+| GPT4All | Scikit-LLM: Sklearn Meets Large Language Models |
+| HugNLP | Transformer Reinforcement Learning |
+| INSTRUCTEVAL | Train_Transformers_with_INT4 |
+| LOw-Memory Optimization (LOMO) | Transformer Reinforcement Learning X |
+| llama.cpp | vLLM |
+| llama2.c | LongLoRA |
+|RLLTE: Long-Term Evolution Project of Reinforcement Learning|FlashAttention|
+|ExecuTorch|TensorRT-LLM|
 
 *评价*
 |  |
@@ -1715,6 +1715,16 @@ Large language models (LLMs) have pushed the limits of natural language understa
 - https://arxiv.org/abs/2311.00176
 
 ChipNeMo aims to explore the applications of large language models (LLMs) for industrial chip design. Instead of directly deploying off-the-shelf commercial or open-source LLMs, we instead adopt the following domain adaptation techniques: custom tokenizers, domain-adaptive continued pretraining, supervised fine-tuning (SFT) with domain-specific instructions, and domain-adapted retrieval models. We evaluate these methods on three selected LLM applications for chip design: an engineering assistant chatbot, EDA script generation, and bug summarization and analysis. Our results show that these domain adaptation techniques enable significant LLM performance improvements over general-purpose base models across the three evaluated applications, enabling up to 5x model size reduction with similar or better performance on a range of design tasks. Our findings also indicate that there's still room for improvement between our current results and ideal outcomes. We believe that further investigation of domain-adapted LLM approaches will help close this gap in the future.
+
+### Zephyr
+- https://github.com/huggingface/alignment-handbook
+- https://huggingface.co/collections/HuggingFaceH4/zephyr-7b-6538c6d6d5ddd1cbb1744a66
+
+Just one year ago, chatbots were out of fashion and most people hadn't heard about techniques like Reinforcement Learning from Human Feedback (RLHF) to align language models with human preferences. Then, OpenAI broke the internet with ChatGPT and Meta followed suit by releasing the Llama series of language models which enabled the ML community to build their very own capable chatbots. This has led to a rich ecosystem of datasets and models that have mostly focused on teaching language models to follow instructions through supervised fine-tuning (SFT).
+
+However, we know from the InstructGPT and Llama2 papers that significant gains in helpfulness and safety can be had by augmenting SFT with human (or AI) preferences. At the same time, aligning language models to a set of preferences is a fairly novel idea and there are few public resources available on how to train these models, what data to collect, and what metrics to measure for best downstream performance.
+
+The Alignment Handbook aims to fill that gap by providing the community with a series of robust training recipes that span the whole pipeline.
 
 ## 4 评价
 
