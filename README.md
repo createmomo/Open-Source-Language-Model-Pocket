@@ -101,6 +101,7 @@ Open-Source Language Model Pocket
 |CodeShell|
 |CODEFUSION-75M|
 |DeepSeek Coder|
+|*【DevOps-Model（运维）】|
 
 |天文/海洋|
 |---|
@@ -1001,6 +1002,14 @@ Imagine a developer who can only change their last line of code, how often would
 - https://github.com/deepseek-ai/DeepSeek-Coder
 
 Deepseek Coder comprises a series of code language models trained on both 87% code and 13% natural language in English and Chinese, with each model pre-trained on 2T tokens. We provide various sizes of the code model, ranging from 1B to 33B versions. Each model is pre-trained on project-level code corpus by employing a window size of 16K and a extra fill-in-the-blank task, to support project-level code completion and infilling. For coding capabilities, Deepseek Coder achieves state-of-the-art performance among open-source code models on multiple programming languages and various benchmarks.
+
+### DevOps-Model（运维）
+- https://github.com/codefuse-ai/CodeFuse-DevOps-Model
+
+DevOps-Model 是一系列业界首个开源的中文开发运维大模型，主要致力于在 DevOps 领域发挥实际价值。目前，DevOps-Model 能够帮助工程师回答在 DevOps 生命周期中遇到的问题。
+
+我们基于 Qwen 系列模型，经过高质量中文 DevOps 语料加训后产出 Base 模型，然后经过 DevOps QA 数据对齐后产出 Chat 模型。我们的 Base 模型和 Chat 模型在开源和 DevOps 领域相关的评测数据上可以取得同规模模型中的最佳效果。
+同时我们也在搭建 DevOps 领域专属的评测基准 DevOpsEval，用来更好评测 DevOps 领域模型的效果。
 
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
