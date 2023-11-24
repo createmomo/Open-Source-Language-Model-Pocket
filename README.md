@@ -44,7 +44,7 @@ Open-Source Language Model Pocket
 |FLM-101B|TinyLlama|Colossal-LLaMA-2|
 |OpenBA (Encoder-Decoder)|Ziya-Reader-13B|Firefly-LLaMA2-Chinese|
 |MindLLM|ChatGLM3|Skywork大模型|
-|*【Yi-6B/34B（零一万物）】|||
+|*【Yi-6B/34B（零一万物）】|*【Nanbeige-16B（南北阁-16B）】|*【OrionStar-Yi-34B-Chat】|
 
 
 | 医疗健康 |  |  |
@@ -133,6 +133,7 @@ Open-Source Language Model Pocket
 |Llemma: An Open Language Model For Mathematics|Mistral-Trismegistus-7B （神秘学/玄学/灵性）|
 |Memory-GPT(MemGPT)|MetaMath|
 |ChipNeMo (芯片设计)|*【Zephyr】|
+|*【neural-chat-7b-v3-1（Intel）】|*【SteerLM】|
 
 *训练/推理*
 |  |  |
@@ -156,6 +157,7 @@ Open-Source Language Model Pocket
 | llama2.c | LongLoRA |
 |RLLTE: Long-Term Evolution Project of Reinforcement Learning|FlashAttention|
 |ExecuTorch|TensorRT-LLM|
+|*【BPO（Black-Box Prompt Optimization）】|*【S-LoRA】|
 
 *评价*
 |  |
@@ -174,6 +176,7 @@ Open-Source Language Model Pocket
 |ALCUNA: Large Language Models Meet New Knowledge|
 |HalluQA：Evaluating Hallucinations in Chinese Large Language Models|
 |GLoRE: Evaluating Logical Reasoning of Large Language Models|
+|*【HelpSteer】|
 
 *其它*
 |  |  |
@@ -187,6 +190,9 @@ Open-Source Language Model Pocket
 | LLM-Pruner: On the Structural Pruning of Large Language Models | AgentLM (AgentTuning, AgentInstruct) |
 | LLM for Recommendation Systems | XAgent |
 |OpenAgents|gpu_poor|
+|*【CAMEL:Communicative Agents for “Mind” Exploration of Large Scale Language Model Society】|*【Transformer Index for GEnerative Recommenders (TIGER)】|
+|*【KnowPAT】||
+
 
 ---
 
@@ -1072,6 +1078,22 @@ Skywork是由昆仑万维集团·天工团队开发的一系列大型模型，�
 
 The Yi series models are large language models trained from scratch by developers at 01.AI. The first public release contains two bilingual (English/Chinese) base models with the parameter sizes of 6B and 34B. Both of them are trained with 4K sequence length and can be extended to 32K during inference time.
 
+### Nanbeige-16B（南北阁-16B）
+- https://github.com/Nanbeige/Nanbeige
+
+Nanbeige-16B（南北阁-16B）是南北阁大模型实验室研发的160亿参数规模的大语言模型，采用了2.5T Tokens进行预训练，数据包含大量互联网高质量语料、各类书籍、代码等领域脱敏文本，在各个权威测评数据集上都取得了不错的效果。本次发布包含有 Base、Chat 以及扩展上下文长度的 Base-32k、Chat-32k 版本。
+
+Base-32k 版本基于Nanbeige-16B-Base模型，采用YaRN插值方法对位置编码进行修改，并以32k为最大长度进行了20B Tokens的中文、英文、代码语料的全参数增量预训练。
+
+Chat 版本和 Chat-32k 版本分别基于Nanbeige-16B-Base模型和Nanbeige-16B-Base-32k模型，经过了大量人类对齐训练，能够更好、更安全地回复用户的问题。
+
+### OrionStar-Yi-34B-Chat
+- https://modelscope.cn/studios/OrionStarAI/OrionStar-Yi-34B-Chat/summary
+- https://github.com/OrionStarAI/OrionStar-Yi-34B-Chat
+
+OrionStar-Yi-34B-Chat 是猎户星空基于零一万物开源的Yi-34B模型，使用 15W+ 的高质量语料训练而来微调大模型，旨在为大模型社区用户提供卓越的交互体验。
+
+
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
 - https://github.com/OptimalScale/LMFlow
@@ -1268,6 +1290,18 @@ The Python API of TensorRT-LLM is architectured to look similar to the PyTorch A
 TensorRT-LLM comes with several popular models pre-defined. They can easily be modified and extended to fit custom needs. See below for a list of supported models.
 
 To maximize performance and reduce memory footprint, TensorRT-LLM allows the models to be executed using different quantization modes (see examples/gpt for concrete examples). TensorRT-LLM supports INT4 or INT8 weights (and FP16 activations; a.k.a. INT4/INT8 weight-only) as well as a complete implementation of the SmoothQuant technique.
+
+### BPO（Black-Box Prompt Optimization）
+- https://github.com/thu-coai/BPO
+- https://arxiv.org/abs/2311.04155
+
+Black-box Prompt Optimization (BPO) offers a conceptually new perspective to bridge the gap between humans and LLMs. (Lower) On Vicuna Eval’s pairwise evaluation, we show that BPO further aligns gpt-3.5-turbo and claude-2 without training. It also outperforms both PPO & DPO and presents orthogonal improvements.
+
+### S-LoRA
+- https://arxiv.org/pdf/2311.03285.pdf
+- https://github.com/S-LoRA/S-LoRA
+
+The "pretrain-then-finetune" paradigm is commonly adopted in the deployment of large language models. Low-Rank Adaptation (LoRA), a parameter-efficient fine-tuning method, is often employed to adapt a base model to a multitude of tasks, resulting in a substantial collection of LoRA adapters derived from one base model. We observe that this paradigm presents significant opportunities for batched inference during serving. To capitalize on these opportunities, we present S-LoRA, a system designed for the scalable serving of many LoRA adapters. S-LoRA stores all adapters in the main memory and fetches the adapters used by the currently running queries to the GPU memory. To efficiently use the GPU memory and reduce fragmentation, S-LoRA proposes Unified Paging. Unified Paging uses a unified memory pool to manage dynamic adapter weights with different ranks and KV cache tensors with varying sequence lengths. Additionally, S-LoRA employs a novel tensor parallelism strategy and highly optimized custom CUDA kernels for heterogeneous batching of LoRA computation. Collectively, these features enable S-LoRA to serve thousands of LoRA adapters on a single GPU or across multiple GPUs with a small overhead. Compared to state-of-the-art libraries such as HuggingFace PEFT and vLLM (with naive support of LoRA serving), S-LoRA can improve the throughput by up to 4 times and increase the number of served adapters by several orders of magnitude. As a result, S-LoRA enables scalable serving of many task-specific fine-tuned models and offers the potential for large-scale customized fine-tuning services.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -1736,6 +1770,20 @@ However, we know from the InstructGPT and Llama2 papers that significant gains i
 
 The Alignment Handbook aims to fill that gap by providing the community with a series of robust training recipes that span the whole pipeline.
 
+### neural-chat-7b-v3-1（Intel）
+- https://huggingface.co/Intel/neural-chat-7b-v3-1
+
+This model is a fine-tuned model based on mistralai/Mistral-7B-v0.1 on the open source dataset Open-Orca/SlimOrca. Then we align it with DPO algorithm. For more details, you can refer our blog: The Practice of Supervised Fine-tuning and Direct Preference Optimization on Habana Gaudi2.
+
+### SteerLM
+- https://huggingface.co/datasets/nvidia/HelpSteer
+- http://arxiv.org/abs/2311.09528
+- https://arxiv.org/abs/2310.05344
+
+HelpSteer is an open-source Helpfulness Dataset (CC-BY-4.0) that supports aligning models to become more helpful, factually correct and coherent, while being adjustable in terms of the complexity and verbosity of its responses.
+
+Leveraging this dataset and SteerLM, we train a Llama 2 70B to reach 7.54 on MT Bench, the highest among models trained on open-source datasets based on MT Bench Leaderboard as of 15 Nov 2023.
+
 ## 4 评价
 
 ### 天秤（FlagEval）
@@ -1842,6 +1890,13 @@ HalluQA contains 450 meticulously designed adversarial questions, spanning multi
 - https://arxiv.org/abs/2310.09107
 
 Recently, large language models (LLMs), including notable models such as GPT-4 and burgeoning community models, have showcased significant general language understanding abilities. However, there has been a scarcity of attempts to assess the logical reasoning capacities of these LLMs, an essential facet of natural language understanding. To encourage further investigation in this area, we introduce GLoRE, a meticulously assembled General Logical Reasoning Evaluation benchmark comprised of 12 datasets that span three different types of tasks. Our experimental results show that compared to the performance of human and supervised fine-tuning, the logical reasoning capabilities of open LLM models necessitate additional improvement; ChatGPT and GPT-4 show a strong capability of logical reasoning, with GPT-4 surpassing ChatGPT by a large margin. We propose a self-consistency probing method to enhance the accuracy of ChatGPT and a fine-tuned method to boost the performance of an open LLM. We release the datasets and evaluation programs to facilitate future research.
+
+### HelpSteer
+- https://huggingface.co/datasets/nvidia/HelpSteer
+
+HelpSteer is an open-source Helpfulness Dataset (CC-BY-4.0) that supports aligning models to become more helpful, factually correct and coherent, while being adjustable in terms of the complexity and verbosity of its responses.
+
+Leveraging this dataset and SteerLM, we train a Llama 2 70B to reach 7.54 on MT Bench, the highest among models trained on open-source datasets based on MT Bench Leaderboard as of 15 Nov 2023.
 
 ## 5 其它
 ### Alpaca-CoT
@@ -1968,5 +2023,25 @@ Current language agent frameworks aim to facilitate the construction of proof-of
 - https://github.com/RahulSChand/gpu_poor
 
 Calculate how much GPU memory you need & breakdown of where it goes for training/inference of any LLM model with quantization (GGML/bitsandbytes), inference frameworks (vLLM/llama.cpp/HF) & QLoRA.
+
+### CAMEL:Communicative Agents for “Mind” Exploration of Large Scale Language Model Society 
+- https://ghli.org/camel.pdf 
+- https://github.com/camel-ai/camel 
+- https://www.camel-ai.org/
+
+CAMEL-AI.org is an open-source community dedicated to the study of autonomous and communicative agents. We believe that studying these agents on a large scale offers valuable insights into their behaviors, capabilities, and potential risks. To facilitate research in this field, we provide, implement, and support various types of agents, tasks, prompts, models, datasets, and simulated environments.
+
+### Transformer Index for GEnerative Recommenders (TIGER)
+- https://arxiv.org/pdf/2305.05065.pdf
+
+Modern recommender systems perform large-scale retrieval by first embedding queries and item candidates in the same unified space, followed by approximate nearest neighbor search to select top candidates given a query embedding. In this paper, we propose a novel generative retrieval approach, where the retrieval model autoregressively decodes the identifiers of the target candidates. To that end, we create semantically meaningful tuple of codewords to serve as a Semantic ID for each item. Given Semantic IDs for items in a user session, a Transformer-based sequence-to-sequence model is trained to predict the Semantic ID of the next item that the user will interact with. To the best of our knowledge, this is the first Semantic ID-based generative model for recommendation tasks. We show that recommender systems trained with the proposed paradigm significantly outperform the current SOTA models on various datasets. In addition, we show that incorporating Semantic IDs into the sequence-to-sequence model enhances its ability to generalize, as evidenced by the improved retrieval performance observed for items with no prior interaction history.
+
+### KnowPAT
+- https://github.com/zjukg/KnowPAT
+- https://arxiv.org/abs/2311.06503
+
+Knowledgeable Preference Alignment for LLMs in Domain-specific Question Answering
+
+For domain-specific application of large language models (LLMs), external knowledge and LLMs should work together to achieve best user experience. LLMs should acquire an ability to make the right choices about retrieved external knowledge to meet the human needs. Knowledgeable Preference AlignmenT (KnowPAT) is a new pipeline to align LLMs with human's knowledge preference. KnowPAT incorporates domain knowledge graphs to construct preference set and design new alignment objective to fine-tune the LLMs.
 
 > 持续更新中 (Continuously Updated)... 
