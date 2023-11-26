@@ -56,7 +56,7 @@ Open-Source Language Model Pocket
 |DoctorGLM|ChatMed-TCM&ChatMed-Consult|ChatGLM-Med|
 |MeChat|ShenNong-TCM-LLM|MindChat(漫谈): 心理大模型|
 |WiNGPT|CareGPT|孙思邈|
-|MolGen（药物研发）|||
+|MolGen（药物研发）|*【Taiyi（太一）】||
 
 |经济/金融|||
 |---|---|---|
@@ -158,6 +158,7 @@ Open-Source Language Model Pocket
 |RLLTE: Long-Term Evolution Project of Reinforcement Learning|FlashAttention|
 |ExecuTorch|TensorRT-LLM|
 |*【BPO（Black-Box Prompt Optimization）】|*【S-LoRA】|
+|*【SoRA】||
 
 *评价*
 |  |
@@ -964,6 +965,12 @@ Mol-Instructions comprises three cardinal components:
 
 🥼 Biomolecular text instructions: Predominantly designed to cater to NLP tasks within the fields of bioinformatics and chemoinformatics, this part encapsulates six information extraction and Q&A tasks represented through 53K instructions.
 
+### Taiyi（太一）
+- https://github.com/DUTIR-BioNLP/Taiyi-LLM
+- https://arxiv.org/abs/2311.11608
+
+随着深度学习技术的迅速发展，类ChatGPT这样的大语言模型在自然语言处理领域已经取得了显著的进展。面向生物医学领域，大语言模型有助于医生与患者之间的沟通，提供有用的医学信息，并在辅助诊疗、生物医学知识发现、药物研发、个性化医疗方案等方面具有巨大潜力。然而，在人工智能社区中，已有的开源生物医学大模型相对较少，且大多主要专注于单语（中文或英语）的医疗问答对话。因此，本项目开展了面向生物医学领域大模型的研究，并发布初版中英双语生物医学大模型——太一（Taiyi），旨在探索大模型在生物医学领域中双语自然语言处理多任务的能力。
+
 ### TinyLlama
 - https://github.com/jzhang38/TinyLlama
 
@@ -1302,6 +1309,14 @@ Black-box Prompt Optimization (BPO) offers a conceptually new perspective to bri
 - https://github.com/S-LoRA/S-LoRA
 
 The "pretrain-then-finetune" paradigm is commonly adopted in the deployment of large language models. Low-Rank Adaptation (LoRA), a parameter-efficient fine-tuning method, is often employed to adapt a base model to a multitude of tasks, resulting in a substantial collection of LoRA adapters derived from one base model. We observe that this paradigm presents significant opportunities for batched inference during serving. To capitalize on these opportunities, we present S-LoRA, a system designed for the scalable serving of many LoRA adapters. S-LoRA stores all adapters in the main memory and fetches the adapters used by the currently running queries to the GPU memory. To efficiently use the GPU memory and reduce fragmentation, S-LoRA proposes Unified Paging. Unified Paging uses a unified memory pool to manage dynamic adapter weights with different ranks and KV cache tensors with varying sequence lengths. Additionally, S-LoRA employs a novel tensor parallelism strategy and highly optimized custom CUDA kernels for heterogeneous batching of LoRA computation. Collectively, these features enable S-LoRA to serve thousands of LoRA adapters on a single GPU or across multiple GPUs with a small overhead. Compared to state-of-the-art libraries such as HuggingFace PEFT and vLLM (with naive support of LoRA serving), S-LoRA can improve the throughput by up to 4 times and increase the number of served adapters by several orders of magnitude. As a result, S-LoRA enables scalable serving of many task-specific fine-tuned models and offers the potential for large-scale customized fine-tuning services.
+
+### SoRA
+- https://github.com/TsinghuaC3I/SoRA
+- https://arxiv.org/abs/2311.11696
+
+Sparse Low-rank Adaptation of Pre-trained Language Models
+
+Fine-tuning pre-trained large language models in a parameter-efficient manner is widely studied for its effectiveness and efficiency. The popular method of low-rank adaptation (LoRA) offers a notable approach, hypothesizing that the adaptation process is intrinsically low-dimensional. Although LoRA has demonstrated commendable performance, it is implemented with a fixed and unalterable intrinsic rank that might not always be the ideal choice. Recognizing the need for more flexible adaptation, we extend the methodology of LoRA to an innovative approach we call sparse low-rank adaptation (SoRA) that enables dynamic adjustments to the intrinsic rank during the adaptation process. We achieve this through the incorporation of a gate unit optimized with proximal gradient method in the training stage, controlling the cardinality of rank under the sparsity of the gate. In the subsequent inference stage, we eliminate the parameter blocks corresponding to the zeroed-out ranks, to reduce each SoRA module back to a concise yet rank-optimal LoRA. Our approach strengthens the representation power of LoRA by initializing it with a higher rank, while efficiently taming a temporarily increased number of parameters via updating in a sparse way. We further introduce a sparsifying scheduler for SoRA, aiming to examine the impact of the number of non-zero parameters on the model's memorization and generalization. Our experimental results demonstrate that SoRA can outperform other baselines even with 70% retained parameters and 70% training time.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
