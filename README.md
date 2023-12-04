@@ -134,6 +134,7 @@ Open-Source Language Model Pocket
 |Memory-GPT(MemGPT)|MetaMath|
 |ChipNeMo (芯片设计)|*【Zephyr】|
 |*【neural-chat-7b-v3-1（Intel）】|*【SteerLM】|
+|*【Llama Coder】||
 
 *训练/推理*
 |  |  |
@@ -158,7 +159,8 @@ Open-Source Language Model Pocket
 |RLLTE: Long-Term Evolution Project of Reinforcement Learning|FlashAttention|
 |ExecuTorch|TensorRT-LLM|
 |*【BPO（Black-Box Prompt Optimization）】|*【S-LoRA】|
-|*【SoRA】||
+|*【SoRA】|*【XuanCe(玄策): 开源的深度强化学习(DRL)库】|
+|*【EasyLM（JAX/Flax）】||
 
 *评价*
 |  |
@@ -178,6 +180,7 @@ Open-Source Language Model Pocket
 |HalluQA：Evaluating Hallucinations in Chinese Large Language Models|
 |GLoRE: Evaluating Logical Reasoning of Large Language Models|
 |*【HelpSteer】|
+|*【AlignBench: 多维度中文对齐评测基准】|
 
 *其它*
 |  |  |
@@ -1318,6 +1321,26 @@ Sparse Low-rank Adaptation of Pre-trained Language Models
 
 Fine-tuning pre-trained large language models in a parameter-efficient manner is widely studied for its effectiveness and efficiency. The popular method of low-rank adaptation (LoRA) offers a notable approach, hypothesizing that the adaptation process is intrinsically low-dimensional. Although LoRA has demonstrated commendable performance, it is implemented with a fixed and unalterable intrinsic rank that might not always be the ideal choice. Recognizing the need for more flexible adaptation, we extend the methodology of LoRA to an innovative approach we call sparse low-rank adaptation (SoRA) that enables dynamic adjustments to the intrinsic rank during the adaptation process. We achieve this through the incorporation of a gate unit optimized with proximal gradient method in the training stage, controlling the cardinality of rank under the sparsity of the gate. In the subsequent inference stage, we eliminate the parameter blocks corresponding to the zeroed-out ranks, to reduce each SoRA module back to a concise yet rank-optimal LoRA. Our approach strengthens the representation power of LoRA by initializing it with a higher rank, while efficiently taming a temporarily increased number of parameters via updating in a sparse way. We further introduce a sparsifying scheduler for SoRA, aiming to examine the impact of the number of non-zero parameters on the model's memorization and generalization. Our experimental results demonstrate that SoRA can outperform other baselines even with 70% retained parameters and 70% training time.
 
+### XuanCe(玄策): 开源的深度强化学习(DRL)库
+- https://github.com/agi-brain/xuance
+
+XuanCe is an open-source ensemble of Deep Reinforcement Learning (DRL) algorithm implementations.
+
+We call it as Xuan-Ce (玄策) in Chinese. "Xuan (玄)" means incredible and magic box, "Ce (策)" means policy.
+
+DRL algorithms are sensitive to hyper-parameters tuning, varying in performance with different tricks, and suffering from unstable training processes, therefore, sometimes DRL algorithms seems elusive and "Xuan". This project gives a thorough, high-quality and easy-to-understand implementation of DRL algorithms, and hope this implementation can give a hint on the magics of reinforcement learning.
+
+We expect it to be compatible with multiple deep learning toolboxes( PyTorch, TensorFlow, and MindSpore), and hope it can really become a zoo full of DRL algorithms.
+
+### EasyLM（JAX/Flax）
+- https://github.com/hamishivi/EasyLM
+
+Large language models (LLMs) made easy, EasyLM is a one stop solution for pre-training, finetuning, evaluating and serving LLMs in JAX/Flax. EasyLM can scale up LLM training to hundreds of TPU/GPU accelerators by leveraging JAX's pjit functionality.
+
+Building on top of Hugginface's transformers and datasets, this repo provides an easy to use and easy to customize codebase for training large language models without the complexity in many other frameworks.
+
+EasyLM is built with JAX/Flax. By leveraging JAX's pjit utility, EasyLM is able to train large models that don't fit on a single accelerator by sharding the model weights and training data across multiple accelerators. Currently, EasyLM supports multiple TPU/GPU training in a single host as well as multi-host training on Google Cloud TPU Pods.
+
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
 - https://github.com/tairov/llama2.mojo
@@ -1799,6 +1822,12 @@ HelpSteer is an open-source Helpfulness Dataset (CC-BY-4.0) that supports aligni
 
 Leveraging this dataset and SteerLM, we train a Llama 2 70B to reach 7.54 on MT Bench, the highest among models trained on open-source datasets based on MT Bench Leaderboard as of 15 Nov 2023.
 
+### Llama Coder
+- https://github.com/ex3ndr/llama-coder
+- https://marketplace.visualstudio.com/items?itemName=ex3ndr.llama-coder
+
+Llama Coder is a better and self-hosted Github Copilot replacement for VS Studio Code. Llama Coder uses Ollama and codellama to provide autocomplete that runs on your hardware. Works best with Mac M1/M2/M3 or with RTX 4090.
+
 ## 4 评价
 
 ### 天秤（FlagEval）
@@ -1912,6 +1941,11 @@ Recently, large language models (LLMs), including notable models such as GPT-4 a
 HelpSteer is an open-source Helpfulness Dataset (CC-BY-4.0) that supports aligning models to become more helpful, factually correct and coherent, while being adjustable in terms of the complexity and verbosity of its responses.
 
 Leveraging this dataset and SteerLM, we train a Llama 2 70B to reach 7.54 on MT Bench, the highest among models trained on open-source datasets based on MT Bench Leaderboard as of 15 Nov 2023.
+
+### AlignBench: 多维度中文对齐评测基准
+- https://github.com/THUDM/AlignBench
+
+AlignBench 是第一个多维度全面评估中文大模型对齐水平的评测基准。此仓库包含了 AlignBench 的介绍信息、数据和代码。
 
 ## 5 其它
 ### Alpaca-CoT
