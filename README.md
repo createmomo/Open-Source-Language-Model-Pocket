@@ -45,6 +45,7 @@ Open-Source Language Model Pocket
 |OpenBA (Encoder-Decoder)|Ziya-Reader-13B|Firefly-LLaMA2-Chinese|
 |MindLLM|ChatGLM3|Skywork大模型|
 |*【Yi-6B/34B（零一万物）】|*【Nanbeige-16B（南北阁-16B）】|*【OrionStar-Yi-34B-Chat】|
+|*【源2.0】|*【TechGPT2.0】||
 
 
 | 医疗健康 |  |  |
@@ -134,7 +135,7 @@ Open-Source Language Model Pocket
 |Memory-GPT(MemGPT)|MetaMath|
 |ChipNeMo (芯片设计)|*【Zephyr】|
 |*【neural-chat-7b-v3-1（Intel）】|*【SteerLM】|
-|*【Llama Coder】||
+|*【Llama Coder】|*【Meditron】|
 
 *训练/推理*
 |  |  |
@@ -160,7 +161,8 @@ Open-Source Language Model Pocket
 |ExecuTorch|TensorRT-LLM|
 |*【BPO（Black-Box Prompt Optimization）】|*【S-LoRA】|
 |*【SoRA】|*【XuanCe(玄策): 开源的深度强化学习(DRL)库】|
-|*【EasyLM（JAX/Flax）】||
+|*【EasyLM（JAX/Flax）】|*【FATE-LLM - Federated Learning for LLMs】|
+|*【DeepSpeed-FastGen】||
 
 *评价*
 |  |
@@ -181,6 +183,7 @@ Open-Source Language Model Pocket
 |GLoRE: Evaluating Logical Reasoning of Large Language Models|
 |*【HelpSteer】|
 |*【AlignBench: 多维度中文对齐评测基准】|
+|*【UHGEval】|
 
 *其它*
 |  |  |
@@ -195,8 +198,8 @@ Open-Source Language Model Pocket
 | LLM for Recommendation Systems | XAgent |
 |OpenAgents|gpu_poor|
 |*【CAMEL:Communicative Agents for “Mind” Exploration of Large Scale Language Model Society】|*【Transformer Index for GEnerative Recommenders (TIGER)】|
-|*【KnowPAT】||
-
+|*【KnowPAT】|*【AuthentiGPT: Detecting Machine-Generated Text】|
+|*【Curiosity-driven Red-teaming for Large Language Models】|*【Language Models are Super Mario（DARE, Drop And REscale）】|
 
 ---
 
@@ -1103,6 +1106,15 @@ Chat 版本和 Chat-32k 版本分别基于Nanbeige-16B-Base模型和Nanbeige-16B
 
 OrionStar-Yi-34B-Chat 是猎户星空基于零一万物开源的Yi-34B模型，使用 15W+ 的高质量语料训练而来微调大模型，旨在为大模型社区用户提供卓越的交互体验。
 
+### 源2.0
+- https://github.com/IEIT-Yuan/Yuan-2.0
+
+源2.0 是浪潮信息发布的新一代基础语言大模型。我们开源了全部的3个模型源2.0-102B，源2.0-51B和源2.0-2B。并且我们提供了预训练，微调，推理服务的相关脚本，以供研发人员做进一步的开发。源2.0是在源1.0的基础上，利用更多样的高质量预训练数据和指令微调数据集，令模型在语义、数学、推理、代码、知识等不同方面具备更强的理解能力。
+
+### TechGPT2.0
+- https://github.com/neukg/TechGPT-2.0
+
+TechGPT-2.0 较TechGPT-1.0 新加了许多领域知识。除了TechGPT-1.0 所具备的计算机科学、材料、机械、冶金、金融和航空航天等十余种垂直专业领域能力，TechGPT-2.0 还在医学、法律等领域文本处理上展现出优秀的能力，并扩充了对地理地区、运输、组织、作品、生物、自然科学、天文对象、建筑等领域文本的处理能力。TechGPT-2.0还对幻觉、不可回答、长文本处理等问题进行了能力增强。同时，TechGPT-2.0对部署的硬件要求更低，使用NVIDIA 4090单机单卡、或昇腾910A单机单卡就可完成TechGPT-2.0模型部署。
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
@@ -1340,6 +1352,20 @@ Large language models (LLMs) made easy, EasyLM is a one stop solution for pre-tr
 Building on top of Hugginface's transformers and datasets, this repo provides an easy to use and easy to customize codebase for training large language models without the complexity in many other frameworks.
 
 EasyLM is built with JAX/Flax. By leveraging JAX's pjit utility, EasyLM is able to train large models that don't fit on a single accelerator by sharding the model weights and training data across multiple accelerators. Currently, EasyLM supports multiple TPU/GPU training in a single host as well as multi-host training on Google Cloud TPU Pods.
+
+### FATE-LLM - Federated Learning for LLMs
+- https://github.com/FederatedAI/FATE-LLM
+
+ATE-LLM is a framework to support federated learning for large language models(LLMs).
+
+### DeepSpeed-FastGen
+- https://github.com/microsoft/DeepSpeed/blob/master/blogs/deepspeed-fastgen/README.md
+
+Large language models (LLMs) like GPT-4 and LLaMA have emerged as a dominant workload in serving a wide range of applications infused with AI at every level. From general chat models to document summarization, and from autonomous driving to copilots at every layer of the software stack, the demand to deploy and serve these models at scale has skyrocketed. While frameworks like DeepSpeed, PyTorch, and several others can regularly achieve good hardware utilization during LLM training, the interactive nature of these applications and the poor arithmetic intensity of tasks like open-ended text generation have become the bottleneck for inference throughput in existing systems.
+
+To this end, frameworks like vLLM powered by PagedAttention and research systems like Orca have significantly improved the performance of inference for LLMs. However, these systems still struggle to provide consistent quality of service, particularly for workloads with longer prompts. These long prompt workloads are becoming increasingly important as more and more models, like MPT-StoryWriter, and systems, such as DeepSpeed Ulysses, support context windows stretching to tens of thousands of tokens. To better understand the problem space, we provide detailed examples of how text generation works for LLMs in two distinct phases called prompt processing and generation. When systems treat them as distinct phases, generation will be preempted by prompt processing that risks breaking the service level agreements (SLAs).
+
+Today, we are glad to present DeepSpeed-FastGen, a system that overcomes these limitations by leveraging the proposed Dynamic SplitFuse technique and offers up to 2.3x higher effective throughput compared to state-of-the-art systems like vLLM. DeepSpeed-FastGen leverages the combination of DeepSpeed-MII and DeepSpeed-Inference to provide an easy-to-use serving system.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -1828,6 +1854,16 @@ Leveraging this dataset and SteerLM, we train a Llama 2 70B to reach 7.54 on MT 
 
 Llama Coder is a better and self-hosted Github Copilot replacement for VS Studio Code. Llama Coder uses Ollama and codellama to provide autocomplete that runs on your hardware. Works best with Mac M1/M2/M3 or with RTX 4090.
 
+### Meditron
+- https://github.com/epfLLM/meditron
+- https://arxiv.org/abs/2311.16079
+
+Meditron is a suite of open-source medical Large Language Models (LLMs).
+
+We release Meditron-7B and Meditron-70B, which are adapted to the medical domain from Llama-2 through continued pretraining on a comprehensively curated medical corpus, including selected PubMed papers and abstracts, a new dataset of internationally-recognized medical guidelines, and a general domain corpus.
+
+Meditron-70B, finetuned on relevant data, outperforms Llama-2-70B, GPT-3.5 and Flan-PaLM on multiple medical reasoning tasks.
+
 ## 4 评价
 
 ### 天秤（FlagEval）
@@ -1946,6 +1982,15 @@ Leveraging this dataset and SteerLM, we train a Llama 2 70B to reach 7.54 on MT 
 - https://github.com/THUDM/AlignBench
 
 AlignBench 是第一个多维度全面评估中文大模型对齐水平的评测基准。此仓库包含了 AlignBench 的介绍信息、数据和代码。
+
+### UHGEval
+- https://github.com/IAAR-Shanghai/UHGEval
+- https://arxiv.org/abs/2311.15296
+
+Benchmarking the Hallucination of Chinese Large Language Models via Unconstrained Generation
+
+- Safety: Ensuring the security of experimental data is of utmost importance.
+- Flexibility: Easily expandable, with all modules replaceable.
 
 ## 5 其它
 ### Alpaca-CoT
@@ -2092,5 +2137,24 @@ Modern recommender systems perform large-scale retrieval by first embedding quer
 Knowledgeable Preference Alignment for LLMs in Domain-specific Question Answering
 
 For domain-specific application of large language models (LLMs), external knowledge and LLMs should work together to achieve best user experience. LLMs should acquire an ability to make the right choices about retrieved external knowledge to meet the human needs. Knowledgeable Preference AlignmenT (KnowPAT) is a new pipeline to align LLMs with human's knowledge preference. KnowPAT incorporates domain knowledge graphs to construct preference set and design new alignment objective to fine-tune the LLMs.
+
+### AuthentiGPT: Detecting Machine-Generated Text
+- https://arxiv.org/abs/2311.07700
+
+Large language models (LLMs) have opened up enormous opportunities while simultaneously posing ethical dilemmas. One of the major concerns is their ability to create text that closely mimics human writing, which can lead to potential misuse, such as academic misconduct, disinformation, and fraud. To address this problem, we present AuthentiGPT, an efficient classifier that distinguishes between machine-generated and human-written texts. Under the assumption that human-written text resides outside the distribution of machine-generated text, AuthentiGPT leverages a black-box LLM to denoise input text with artificially added noise, and then semantically compares the denoised text with the original to determine if the content is machine-generated. With only one trainable parameter, AuthentiGPT eliminates the need for a large training dataset, watermarking the LLM's output, or computing the log-likelihood. Importantly, the detection capability of AuthentiGPT can be easily adapted to any generative language model. With a 0.918 AUROC score on a domain-specific dataset, AuthentiGPT demonstrates its effectiveness over other commercial algorithms, highlighting its potential for detecting machine-generated text in academic settings.
+
+### Curiosity-driven Red-teaming for Large Language Models
+- https://openreview.net/forum?id=4KqkizXgXU
+
+Large language models (LLMs) hold great potential for various natural language applications but risk generating incorrect or toxic content. In order to probe when an LLM generates unwanted content, the current paradigm is to recruit human testers to create input prompts (i.e., test cases) designed to elicit unfavorable responses from LLMs. This procedure is called red teaming. However, relying solely on human testers can be both expensive and time-consuming. Recent works automate red teaming by training LLMs (i.e., red team LLMs) with reinforcement learning (RL) to maximize the chance of eliciting undesirable responses (i.e., successful test cases) from the target LLMs being evaluated. However, while effective at provoking undesired responses, current RL methods lack test case diversity as RL-based methods tend to consistently generate the same few successful test cases once found. To overcome this limitation, we introduce curiosity-driven exploration to train red team models. This approach jointly maximizes the test case effectiveness and novelty. Maximizing novelty motivates the red-team model to search for new and diverse test cases. We evaluate our method by performing red teaming against LLMs in text continuation and instruction following tasks. Our experiments show that curiosity-driven exploration achieves greater diversity in all the experiments compared to existing RL-based red team methods while maintaining effectiveness. Remarkably, curiosity-driven exploration also enhances the effectiveness when performing red teaming in instruction following test cases, generating a higher number of successful test cases. We even demonstrate that curiosity-driven exploration successfully provokes toxic responses from the LLaMA2 model that has undergone finetuning based on human preferences.
+
+### Language Models are Super Mario（DARE, Drop And REscale）
+- https://arxiv.org/pdf/2311.03099.pdf
+- https://github.com/yule-BUAA/MergeLM
+
+In this work, we uncover that Language Models (LMs), either encoder- or decoder-based, can obtain new capabilities by assimilating the parameters of homologous models without the need for retraining or GPUs.
+
+- We introduce a novel operation called DARE to directly set most of (90% or even 99%) the delta parameters to zeros without affecting the capabilities of SFT LMs.
+- We sparsify delta parameters of multiple SFT homologous models with DARE as a general preprocessing technique and subsequently merge them into a single model by parameter averaging.
 
 > 持续更新中 (Continuously Updated)... 
