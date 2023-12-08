@@ -76,22 +76,19 @@ Open-Source Language Model Pocket
 |---|
 |TransGPT · 致远|
 
-|教育||
+|教育&数学||
 |---|---|
 |桃李|EduChat|
-
-|数学|
-|---|
-|chatglm-maths|
-|Abel|
+|chatglm-maths|Abel|
 
 |表格/数据 分析||
 |---|---|
 |TableGPT|Data-Copilot|
 
-|自媒体|
+|自媒体&角色扮演|
 |---|
 |MediaGPT|
+|*【CharacterGLM-6B】|
 
 |古汉语|
 |---|
@@ -136,6 +133,8 @@ Open-Source Language Model Pocket
 |ChipNeMo (芯片设计)|*【Zephyr】|
 |*【neural-chat-7b-v3-1（Intel）】|*【SteerLM】|
 |*【Llama Coder】|*【Meditron】|
+|*【RankZephyr】|*【StableLM Zephyr 3B】|
+|*【Orca 2】||
 
 *训练/推理*
 |  |  |
@@ -162,7 +161,8 @@ Open-Source Language Model Pocket
 |*【BPO（Black-Box Prompt Optimization）】|*【S-LoRA】|
 |*【SoRA】|*【XuanCe(玄策): 开源的深度强化学习(DRL)库】|
 |*【EasyLM（JAX/Flax）】|*【FATE-LLM - Federated Learning for LLMs】|
-|*【DeepSpeed-FastGen】||
+|*【DeepSpeed-FastGen】|*【NVIDIA NeMo-Aligner】|
+|*【RLAIF: Scaling Reinforcement Learning from Human Feedback with AI Feedback】|*【MLX】|
 
 *评价*
 |  |
@@ -184,6 +184,8 @@ Open-Source Language Model Pocket
 |*【HelpSteer】|
 |*【AlignBench: 多维度中文对齐评测基准】|
 |*【UHGEval】|
+|*【Purple Llama (Meta)】|
+|*【OMGEval】|
 
 *其它*
 |  |  |
@@ -776,6 +778,12 @@ MediaGPT（曾用名Media LLaMA）首先在大规模自媒体语料上进行连�
 
 为了推动中文自媒体大模型的开放研究，我们将开源一系列自媒体领域的指令微调数据和基于LLaMA训练的中文自媒体大模型的参数。
 
+### CharacterGLM-6B
+- https://github.com/thu-coai/CharacterGLM-6B
+- https://arxiv.org/pdf/2311.16832.pdf
+
+In this paper, we present CharacterGLM, a series of models built upon ChatGLM, with model sizes ranging from 6B to 66B parameters. Our CharacterGLM is designed for generating Character-based Dialogues (CharacterDial), which aims to equip a conversational AI system with character customization for satisfying people's inherent social desires and emotional needs. On top of CharacterGLM, we can customize various AI characters or social agents by configuring their attributes (identities, interests, viewpoints, experiences, achievements, social relationships, etc.) and behaviors (linguistic features, emotional expressions, interaction patterns, etc.). Our model outperforms most mainstream close-source large langauge models, including the GPT series, especially in terms of consistency, human-likeness, and engagement according to manual evaluations. We will release our 6B version of CharacterGLM and a subset of training data to facilitate further research development in the direction of character-based dialogue generation.
+
 ### MeChat (Mental Health Support Chatbot)
 - https://github.com/qiuhuachuan/smile
 - https://huggingface.co/qiuhuachuan/MeChat
@@ -1367,6 +1375,25 @@ To this end, frameworks like vLLM powered by PagedAttention and research systems
 
 Today, we are glad to present DeepSpeed-FastGen, a system that overcomes these limitations by leveraging the proposed Dynamic SplitFuse technique and offers up to 2.3x higher effective throughput compared to state-of-the-art systems like vLLM. DeepSpeed-FastGen leverages the combination of DeepSpeed-MII and DeepSpeed-Inference to provide an easy-to-use serving system.
 
+### NVIDIA NeMo-Aligner
+- https://github.com/NVIDIA/NeMo-Aligner
+
+NeMo-Aligner is a scalable toolkit for efficient model alignment. The toolkit has support for state of the art model alignment algorithms such as SteerLM, DPO and Reinforcement Learning from Human Feedback (RLHF). These algorithms enable users to align language models to be more safe, harmless and helpful. Users can do end-to-end model alignment on a wide range of model sizes and take advantage of all the parallelism techniques to ensure their model alignment is done in a performant and resource efficient manner.
+
+NeMo-Aligner toolkit is built using the NeMo Toolkit which allows for scaling training up to 1000s of GPUs using tensor, data and pipeline parallelism for all components of alignment. All of our checkpoints are cross compatible with the NeMo ecosystem; allowing for inference deployment and further customization.
+
+The toolkit is currently in it's early stages, and we are committed to improving the toolkit to make it easier for developers to pick and choose different alignment algorithms to build safe, helpful and reliable models.
+
+### RLAIF: Scaling Reinforcement Learning from Human Feedback with AI Feedback
+- https://arxiv.org/abs/2309.00267
+
+Reinforcement learning from human feedback (RLHF) has proven effective in aligning large language models (LLMs) with human preferences. However, gathering high-quality human preference labels can be a time-consuming and expensive endeavor. RL from AI Feedback (RLAIF), introduced by Bai et al., offers a promising alternative that leverages a powerful off-the-shelf LLM to generate preferences in lieu of human annotators. Across the tasks of summarization, helpful dialogue generation, and harmless dialogue generation, RLAIF achieves comparable or superior performance to RLHF, as rated by human evaluators. Furthermore, RLAIF demonstrates the ability to outperform a supervised fine-tuned baseline even when the LLM preference labeler is the same size as the policy. In another experiment, directly prompting the LLM for reward scores achieves superior performance to the canonical RLAIF setup, where LLM preference labels are first distilled into a reward model. Finally, we conduct extensive studies on techniques for generating aligned AI preferences. Our results suggest that RLAIF can achieve human-level performance, offering a potential solution to the scalability limitations of RLHF.
+
+### MLX
+- https://github.com/ml-explore/mlx
+
+MLX is designed by machine learning researchers for machine learning researchers. The framework is intended to be user-friendly, but still efficient to train and deploy models. The design of the framework itself is also conceptually simple. We intend to make it easy for researchers to extend and improve MLX with the goal of quickly exploring new ideas.
+
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
 - https://github.com/tairov/llama2.mojo
@@ -1864,6 +1891,25 @@ We release Meditron-7B and Meditron-70B, which are adapted to the medical domain
 
 Meditron-70B, finetuned on relevant data, outperforms Llama-2-70B, GPT-3.5 and Flan-PaLM on multiple medical reasoning tasks.
 
+### RankZephyr
+- https://arxiv.org/abs/2312.02724
+- https://github.com/castorini/rank_llm
+
+In information retrieval, proprietary large language models (LLMs) such as GPT-4 and open-source counterparts such as LLaMA and Vicuna have played a vital role in reranking. However, the gap between open-source and closed models persists, with reliance on proprietary, non-transparent models constraining reproducibility. Addressing this gap, we introduce RankZephyr, a state-of-the-art, open-source LLM for listwise zero-shot reranking. RankZephyr not only bridges the effectiveness gap with GPT-4 but in some cases surpasses the proprietary model. Our comprehensive evaluations across several datasets (TREC Deep Learning Tracks; NEWS and COVID from BEIR) showcase this ability. RankZephyr benefits from strategic training choices and is resilient against variations in initial document ordering and the number of documents reranked. Additionally, our model outperforms GPT-4 on the NovelEval test set, comprising queries and passages past its training period, which addresses concerns about data contamination.
+
+### StableLM Zephyr 3B
+- https://huggingface.co/stabilityai/stablelm-zephyr-3b
+- https://huggingface.co/stabilityai/stable-zephyr-3b-dpo
+- https://github.com/eaidova/openvino_notebooks/blob/ea/stateful_chatbot/notebooks/273-stable-zephyr-3b-chatbot/273-stable-zephyr-3b-chatbot.ipynb
+
+StableLM Zephyr 3B is a 3 billion parameter Large Language Model (LLM), 60% smaller than 7B models, allowing accurate, and responsive output on a variety of devices without requiring high-end hardware. 
+
+### Orca 2
+- https://arxiv.org/pdf/2311.11045.pdf
+- https://huggingface.co/microsoft/Orca-2-13b
+
+Orca 2 is built for research purposes only and provides a single turn response in tasks such as reasoning over user given data, reading comprehension, math problem solving and text summarization. The model is designed to excel particularly in reasoning.
+
 ## 4 评价
 
 ### 天秤（FlagEval）
@@ -1991,6 +2037,22 @@ Benchmarking the Hallucination of Chinese Large Language Models via Unconstraine
 
 - Safety: Ensuring the security of experimental data is of utmost importance.
 - Flexibility: Easily expandable, with all modules replaceable.
+
+### Purple Llama (Meta)
+- https://ai.meta.com/blog/purple-llama-open-trust-safety-generative-ai/
+
+We’re announcing Purple Llama, an umbrella project featuring open trust and safety tools and evaluations meant to level the playing field for developers to responsibly deploy generative AI models and experiences in accordance with best practices shared in our Responsible Use Guide.
+
+### OMGEval
+- https://github.com/blcuicall/OMGEval
+
+近一年，大模型发展迅速，带动了⼀系列通用人工智能技术的迅速发展，对大模型性能的评测随之涌现。
+
+从评测能力上来看，由于目前的评测数据集主要是利用人类试题及其标准答案进行评测，这种评价方式更偏向对推理能力的评估，存在评估结果和模型真实能力有⼀定偏差。例如，英文数据集中，HELM1使用16个NLP数据集，MMLU2用57项人类考试科目来评测大模型。中文数据集中，GAOKAO3、C-Eval4等也采用人类试题，他们在自动化评测流程中都只包含有标准答案的问题，无法全面衡量生成式大模型的综合能力。
+
+此外，目前也有一些工作关注到了模型的开放式问答，由斯坦福大学提出的的AlpacaEval5被广泛认可，但仅由英文问题组成，决定了只能评估模型在英文上的表现。包含中文开放式问答的SuperCLUE6数据集是首个提出开放式问答的中文数据集，但其数据集闭源，且也仅由中文问题组成。可以看到，目前已有的开放式问题数据集都是在单一语言上进行评测的，用来衡量模型的多语言能力的开源的开放式问答数据集仍然空缺。
+
+综上所述，构建一个多语言的开放式问答数据集用以全面评测大模型的综合能力是有必要的。我们将从中文入手，逐渐迁移至其他语言。
 
 ## 5 其它
 ### Alpaca-CoT
