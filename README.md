@@ -45,7 +45,8 @@ Open-Source Language Model Pocket
 |OpenBA (Encoder-Decoder)|Ziya-Reader-13B|Firefly-LLaMA2-Chinese|
 |MindLLM|ChatGLM3|Skywork大模型|
 |*【Yi-6B/34B（零一万物）】|*【Nanbeige-16B（南北阁-16B）】|*【OrionStar-Yi-34B-Chat】|
-|*【源2.0】|*【TechGPT2.0】||
+|*【源2.0】|*【TechGPT2.0】|*【SUS-Chat-34B】|
+|*【Alaya 元识】|||
 
 
 | 医疗健康 |  |  |
@@ -100,6 +101,7 @@ Open-Source Language Model Pocket
 |CODEFUSION-75M|
 |DeepSeek Coder|
 |*【DevOps-Model（运维）】|
+|*【Magicoder】|
 
 |天文/海洋|
 |---|
@@ -134,7 +136,9 @@ Open-Source Language Model Pocket
 |*【neural-chat-7b-v3-1（Intel）】|*【SteerLM】|
 |*【Llama Coder】|*【Meditron】|
 |*【RankZephyr】|*【StableLM Zephyr 3B】|
-|*【Orca 2】||
+|*【Orca 2】|*【Mixtral 7b 8 Expert】|
+|*【Phi】|*【LLM360（Amber,CrystalCoder,Diamond）】|
+|*【Mamba】||
 
 *训练/推理*
 |  |  |
@@ -163,6 +167,9 @@ Open-Source Language Model Pocket
 |*【EasyLM（JAX/Flax）】|*【FATE-LLM - Federated Learning for LLMs】|
 |*【DeepSpeed-FastGen】|*【NVIDIA NeMo-Aligner】|
 |*【RLAIF: Scaling Reinforcement Learning from Human Feedback with AI Feedback】|*【MLX】|
+|*【OpenRLHF】|*【CoLLiE: Collaborative Training of Large Language Models in an Efficient Way】|
+|*【Superalignment】|*【LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models】|
+|*【Large Language Model Unlearning】||
 
 *评价*
 |  |
@@ -1038,6 +1045,14 @@ DevOps-Model 是一系列业界首个开源的中文开发运维大模型，主�
 我们基于 Qwen 系列模型，经过高质量中文 DevOps 语料加训后产出 Base 模型，然后经过 DevOps QA 数据对齐后产出 Chat 模型。我们的 Base 模型和 Chat 模型在开源和 DevOps 领域相关的评测数据上可以取得同规模模型中的最佳效果。
 同时我们也在搭建 DevOps 领域专属的评测基准 DevOpsEval，用来更好评测 DevOps 领域模型的效果。
 
+### Magicoder
+- https://github.com/ise-uiuc/magicoder
+- https://arxiv.org/pdf/2312.02120.pdf
+
+🎩Magicoder is a model family empowered by 🪄OSS-Instruct, a novel approach to enlightening LLMs with open-source code snippets for generating low-bias and high-quality instruction data for code.
+
+🪄OSS-Instruct mitigates the inherent bias of the LLM-synthesized instruction data by empowering them with a wealth of open-source references to produce more diverse, realistic, and controllable data.
+
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
 
@@ -1123,6 +1138,21 @@ OrionStar-Yi-34B-Chat 是猎户星空基于零一万物开源的Yi-34B模型，�
 - https://github.com/neukg/TechGPT-2.0
 
 TechGPT-2.0 较TechGPT-1.0 新加了许多领域知识。除了TechGPT-1.0 所具备的计算机科学、材料、机械、冶金、金融和航空航天等十余种垂直专业领域能力，TechGPT-2.0 还在医学、法律等领域文本处理上展现出优秀的能力，并扩充了对地理地区、运输、组织、作品、生物、自然科学、天文对象、建筑等领域文本的处理能力。TechGPT-2.0还对幻觉、不可回答、长文本处理等问题进行了能力增强。同时，TechGPT-2.0对部署的硬件要求更低，使用NVIDIA 4090单机单卡、或昇腾910A单机单卡就可完成TechGPT-2.0模型部署。
+
+### SUS-Chat-34B
+- https://hf.co/SUSTech/SUS-Chat-34B
+- https://github.com/SUSTech-IDEA/SUS-Chat
+
+SUS-Chat-34B模型是南方科技大学联合IDEA研究院CCNL团队开源的通用大模型， 2023-12-05在Huggingface的权威榜单上open_llm_leaderboard取得了同级别模型最好成绩。
+
+SUS-Chat-34B是一个340亿参数规模的双语模型，基于01-ai/Yi-34B预训练模型通过数百万高质量、多语言的指令数据进行了微调。 在保持基础模型强大的语言能力的同时，SUS-Chat-34B模型通过高质量指令微调改善了模型对人类指令的响应方式，并擅长通过思维链的方式模仿人类思考过程。 与Yi-34B和Yi-34B-chat相比，它不仅在几乎所有基准测试中提升了性能，而且能够更好地满足了复杂多语言任务的实际需求。 在指令微调阶段，我们加入了大量高质量长文本和多轮对话指令数据，将文本窗口从基础模型的4K扩展到8K。 这种扩展有助于模型更有效地遵循多轮对话中的指令，显著减少在扩展对话和长文本理解中上下文丢失的问题。为此我们也开发了更高效的训练框架，不久也将进行开源，敬请期待。
+
+### Alaya 元识
+- https://github.com/DataCanvasIO/Alaya
+
+九章云极DataCanvas重磅发布的元识大模型Alaya，在自主整理的高品质多语言数据集上训练了1.5T+ tokens。
+
+首先在Hugging Face开源了7B-Base和7B-Chat版本，模型表现业内领先，知识丰富且富有时效性，最新数据覆盖2023年10月的内容。Alaya-7B-Chat具备多轮对话、自我认知和偏见拒答的能力，能够完成知识问答、代码编写、信息提取、阅读理解、创意写作等多项语言任务。
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
@@ -1393,6 +1423,41 @@ Reinforcement learning from human feedback (RLHF) has proven effective in aligni
 - https://github.com/ml-explore/mlx
 
 MLX is designed by machine learning researchers for machine learning researchers. The framework is intended to be user-friendly, but still efficient to train and deploy models. The design of the framework itself is also conceptually simple. We intend to make it easy for researchers to extend and improve MLX with the goal of quickly exploring new ideas.
+
+### OpenRLHF
+- https://github.com/OpenLLMAI/OpenRLHF
+
+OpenRLHF is a high-performance RLHF framework built on Ray, DeepSpeed and HuggingFace Transformers:
+- Simple and easy to use: OpenRLHF is one of the simplest high-performance RLHF libraries currently available, enabling 34B model RLHF training with just a single DGXA100 node (see the training script).
+- Distributed RLHF: The key idea behind OpenRLHF is to distribute the Actor, Reward, Reference, and Critic models onto separate GPUs using Ray, while placing the Adam optimizer on the CPU. This enables full-scale fine-tuning of 7B models across multiple 24GB RTX 4090 GPUs (or 34B models with multiple A100 80G GPUs).
+- High performance: Thanks to the ability to use a large inference batch size with Ray and DeepSpeed's CPUAdam, the performance of OpenRLHF with the 13B LLaMA2 model is 4x that of DeepSpeedChat.
+
+### CoLLiE: Collaborative Training of Large Language Models in an Efficient Way
+- https://github.com/OpenLMLab/collie
+- https://arxiv.org/abs/2312.00407
+
+CoLLiE是一个可以帮助您从零开始训练大模型的完整工具箱，它提供了数据预处理、模型微调、模型保存以及训练过程各项指标监测等功能。CoLLiE集成了现有的并行策略、高效参数微调方法和高效优化器，以加快训练的速度，提高训练的质量，降低训练的开销。CoLLiE支持主流的多种模型（如MOSS, InternLM, LLaMA, ChatGLM等），您可以轻松在不同的模型之间切换。此外，CoLLiE提供了丰富的文档，使初学者可以快速入门。同时，CoLLiE还提供了高度可定制化的功能和灵活的配置选项，使有经验的用户能够根据自己的需求进行个性化定制。无论您是初学者还是有经验的专业人士，CoLLiE都可以为您提供满足需求的解决方案。
+
+### Superalignment
+- https://github.com/openai/weak-to-strong
+- https://cdn.openai.com/papers/weak-to-strong-generalization.pdf
+- https://openai.com/research/weak-to-strong-generalization
+
+A core challenge for aligning future superhuman AI systems (superalignment) is that humans will need to supervise AI systems much smarter than them. We study a simple analogy: can small models supervise large models? We show that we can use a GPT-2-level model to elicit most of GPT-4’s capabilities—close to GPT-3.5-level performance—generalizing correctly even to hard problems where the small model failed. This opens up a new research direction that allows us to directly tackle a central challenge of aligning future superhuman models while making iterative empirical progress today.
+
+### LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models
+- https://aka.ms/LLMLingua
+- https://github.com/microsoft/LLMLingua
+- https://huggingface.co/spaces/microsoft/LLMLingua
+- https://arxiv.org/abs/2310.05736
+
+Large language models (LLMs) have been applied in various applications due to their astonishing capabilities. With advancements in technologies such as chain-of-thought (CoT) prompting and in-context learning (ICL), the prompts fed to LLMs are becoming increasingly lengthy, even exceeding tens of thousands of tokens. To accelerate model inference and reduce cost, this paper presents LLMLingua, a coarse-to-fine prompt compression method that involves a budget controller to maintain semantic integrity under high compression ratios, a token-level iterative compression algorithm to better model the interdependence between compressed contents, and an instruction tuning based method for distribution alignment between language models. We conduct experiments and analysis over four datasets from different scenarios, i.e., GSM8K, BBH, ShareGPT, and Arxiv-March23; showing that the proposed approach yields state-of-the-art performance and allows for up to 20x compression with little performance loss. 
+
+### Large Language Model Unlearning
+- https://arxiv.org/abs/2310.10683
+- https://github.com/kevinyaobytedance/llm_unlearn
+
+We study how to perform unlearning, i.e. forgetting undesirable (mis)behaviors, on large language models (LLMs). We show at least three scenarios of aligning LLMs with human preferences can benefit from unlearning: (1) removing harmful responses, (2) erasing copyright-protected content as requested, and (3) eliminating hallucinations. Unlearning, as an alignment technique, has three advantages. (1) It only requires negative (e.g. harmful) examples, which are much easier and cheaper to collect (e.g. via red teaming or user reporting) than positive (e.g. helpful and often human-written) examples required in RLHF (RL from human feedback). (2) It is computationally efficient. (3) It is especially effective when we know which training samples cause the misbehavior. To the best of our knowledge, our work is among the first to explore LLM unlearning. We are also among the first to formulate the settings, goals, and evaluations in LLM unlearning. We show that if practitioners only have limited resources, and therefore the priority is to stop generating undesirable outputs rather than to try to generate desirable outputs, unlearning is particularly appealing. Despite only having negative samples, our ablation study shows that unlearning can still achieve better alignment performance than RLHF with just 2% of its computational time.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -1909,6 +1974,44 @@ StableLM Zephyr 3B is a 3 billion parameter Large Language Model (LLM), 60% smal
 - https://huggingface.co/microsoft/Orca-2-13b
 
 Orca 2 is built for research purposes only and provides a single turn response in tasks such as reasoning over user given data, reading comprehension, math problem solving and text summarization. The model is designed to excel particularly in reasoning.
+
+### Mixtral 7b 8 Expert
+- https://huggingface.co/DiscoResearch/mixtral-7b-8expert
+- https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1
+- https://replicate.com/nateraw/mixtral-8x7b-32kseqlen
+- https://mistral.ai/news/mixtral-of-experts/
+
+
+Mistral AI continues its mission to deliver the best open models to the developer community. Moving forward in AI requires taking new technological turns beyond reusing well-known architectures and training paradigms. Most importantly, it requires making the community benefit from original models to foster new inventions and usages.
+
+Today, the team is proud to release Mixtral 8x7B, a high-quality sparse mixture of experts model (SMoE) with open weights. Licensed under Apache 2.0. Mixtral outperforms Llama 2 70B on most benchmarks with 6x faster inference. It is the strongest open-weight model with a permissive license and the best model overall regarding cost/performance trade-offs. In particular, it matches or outperforms GPT3.5 on most standard benchmarks.
+
+Mixtral has the following capabilities.
+- It gracefully handles a context of 32k tokens.
+- It handles English, French, Italian, German and Spanish.
+- It shows strong performance in code generation.
+- It can be finetuned into an instruction-following model that achieves a score of 8.3 on MT-Bench.
+
+### Phi
+- https://huggingface.co/microsoft/phi-1_5
+- https://arxiv.org/abs/2309.05463
+- https://huggingface.co/microsoft/phi-1
+- https://huggingface.co/microsoft/phi-2
+- https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/
+
+We are now releasing Phi-2(opens in new tab), a 2.7 billion-parameter language model that demonstrates outstanding reasoning and language understanding capabilities, showcasing state-of-the-art performance among base language models with less than 13 billion parameters. On complex benchmarks Phi-2 matches or outperforms models up to 25x larger, thanks to new innovations in model scaling and training data curation.
+
+### LLM360（Amber,CrystalCoder,Diamond）
+- https://www.llm360.ai/
+- https://arxiv.org/pdf/2312.06550.pdf
+
+The recent surge in open-source Large Language Models (LLMs), such as LLaMA, Falcon, and Mistral, provides diverse options for AI practitioners and researchers. However, most LLMs have only released partial artifacts, such as the final model weights or inference code, and technical reports increasingly limit their scope to high-level design choices and surface statistics. These choices hinder progress in the field by degrading transparency into the training of LLMs and forcing teams to rediscover many details in the training process. We present LLM360, an initiative to fully open-source LLMs, which advocates for all training code and data, model checkpoints, and intermediate results to be made available to the community. The goal of LLM360 is to support open and collaborative AI research by making the end-to-end LLM training process transparent and reproducible by everyone. As a first step of LLM360, we release two 7B parameter LLMs pre-trained from scratch, Amber and CrystalCoder, including their training code, data, intermediate checkpoints, and analyses (at this https URL). We are committed to continually pushing the boundaries of LLMs through this open-source effort. More large-scale and stronger models are underway and will be released in the future.
+
+### Mamba
+- https://github.com/state-spaces/mamba
+- https://arxiv.org/abs/2312.00752
+
+Mamba is a new state space model architecture showing promising performance on information-dense data such as language modeling, where previous subquadratic models fall short of Transformers. It is based on the line of progress on structured state space models, with an efficient hardware-aware design and implementation in the spirit of FlashAttention.
 
 ## 4 评价
 
