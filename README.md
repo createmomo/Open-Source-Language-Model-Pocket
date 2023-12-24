@@ -46,7 +46,7 @@ Open-Source Language Model Pocket
 |MindLLM|ChatGLM3|Skywork大模型|
 |*【Yi-6B/34B（零一万物）】|*【Nanbeige-16B（南北阁-16B）】|*【OrionStar-Yi-34B-Chat】|
 |*【源2.0】|*【TechGPT2.0】|*【SUS-Chat-34B】|
-|*【Alaya 元识】|||
+|*【Alaya 元识】|*【OpenBuddy】||
 
 
 | 医疗健康 |  |  |
@@ -95,13 +95,14 @@ Open-Source Language Model Pocket
 |---|
 |尔雅 Erya|
 
-|编程/代码|
+|编程/代码/Agent|
 |---|
 |CodeShell|
 |CODEFUSION-75M|
 |DeepSeek Coder|
 |*【DevOps-Model（运维）】|
 |*【Magicoder】|
+|*【KwaiAgents】|
 
 |天文/海洋|
 |---|
@@ -138,7 +139,8 @@ Open-Source Language Model Pocket
 |*【RankZephyr】|*【StableLM Zephyr 3B】|
 |*【Orca 2】|*【Mixtral 7b 8 Expert】|
 |*【Phi】|*【LLM360（Amber,CrystalCoder,Diamond）】|
-|*【Mamba】||
+|*【Mamba】|*【SOLAR】|
+|*【NexusRaven（function calling LLM）】||
 
 *训练/推理*
 |  |  |
@@ -169,7 +171,7 @@ Open-Source Language Model Pocket
 |*【RLAIF: Scaling Reinforcement Learning from Human Feedback with AI Feedback】|*【MLX】|
 |*【OpenRLHF】|*【CoLLiE: Collaborative Training of Large Language Models in an Efficient Way】|
 |*【Superalignment】|*【LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models】|
-|*【Large Language Model Unlearning】||
+|*【Large Language Model Unlearning】|*【PowerInfer】|
 
 *评价*
 |  |
@@ -193,6 +195,7 @@ Open-Source Language Model Pocket
 |*【UHGEval】|
 |*【Purple Llama (Meta)】|
 |*【OMGEval】|
+|*【SciGuard&SciMT-Safety】|
 
 *其它*
 |  |  |
@@ -1053,6 +1056,16 @@ DevOps-Model 是一系列业界首个开源的中文开发运维大模型，主�
 
 🪄OSS-Instruct mitigates the inherent bias of the LLM-synthesized instruction data by empowering them with a wealth of open-source references to produce more diverse, realistic, and controllable data.
 
+### KwaiAgents
+- https://github.com/KwaiKEG/KwaiAgents
+
+KwaiAgents is a series of Agent-related works open-sourced by the KwaiKEG from Kuaishou Technology. The open-sourced content includes:
+
+- KAgentSys-Lite: a lite version of the KAgentSys in the paper. While retaining some of the original system's functionality, KAgentSys-Lite has certain differences and limitations when compared to its full-featured counterpart, such as: (1) a more limited set of tools; (2) a lack of memory mechanisms; (3) slightly reduced performance capabilities; and (4) a different codebase, as it evolves from open-source projects like BabyAGI and Auto-GPT. Despite these modifications, KAgentSys-Lite still delivers comparable performance among numerous open-source Agent systems available.
+- KAgentLMs: a series of large language models with agent capabilities such as planning, reflection, and tool-use, acquired through the Meta-agent tuning proposed in the paper.
+- KAgentInstruct: over 200k Agent-related instructions finetuning data (partially human-edited) proposed in the paper.
+- KAgentBench: over 3,000 human-edited, automated evaluation data for testing Agent capabilities, with evaluation dimensions including planning, tool-use, reflection, concluding, and profiling.
+
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
 
@@ -1153,6 +1166,17 @@ SUS-Chat-34B是一个340亿参数规模的双语模型，基于01-ai/Yi-34B预�
 九章云极DataCanvas重磅发布的元识大模型Alaya，在自主整理的高品质多语言数据集上训练了1.5T+ tokens。
 
 首先在Hugging Face开源了7B-Base和7B-Chat版本，模型表现业内领先，知识丰富且富有时效性，最新数据覆盖2023年10月的内容。Alaya-7B-Chat具备多轮对话、自我认知和偏见拒答的能力，能够完成知识问答、代码编写、信息提取、阅读理解、创意写作等多项语言任务。
+
+### OpenBuddy
+- https://github.com/OpenBuddy/OpenBuddy
+- https://huggingface.co/OpenBuddy
+- https://openbuddy.ai
+
+OpenBuddy is a powerful open multilingual chatbot model aimed at global users, emphasizing conversational AI and seamless multilingual support for English, Chinese, and other languages.
+
+Built upon Tii's Falcon model and Facebook's LLaMA model, OpenBuddy is fine-tuned to include an extended vocabulary, additional common characters, and enhanced token embeddings. By leveraging these improvements and multi-turn dialogue datasets, OpenBuddy offers a robust model capable of answering questions and performing translation tasks across various languages.
+
+Our mission with OpenBuddy is to provide a free, open, and offline-capable AI model that operates on users' devices, irrespective of their language or cultural background. We strive to empower individuals worldwide to access and benefit from AI technology.
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
@@ -1458,6 +1482,18 @@ Large language models (LLMs) have been applied in various applications due to th
 - https://github.com/kevinyaobytedance/llm_unlearn
 
 We study how to perform unlearning, i.e. forgetting undesirable (mis)behaviors, on large language models (LLMs). We show at least three scenarios of aligning LLMs with human preferences can benefit from unlearning: (1) removing harmful responses, (2) erasing copyright-protected content as requested, and (3) eliminating hallucinations. Unlearning, as an alignment technique, has three advantages. (1) It only requires negative (e.g. harmful) examples, which are much easier and cheaper to collect (e.g. via red teaming or user reporting) than positive (e.g. helpful and often human-written) examples required in RLHF (RL from human feedback). (2) It is computationally efficient. (3) It is especially effective when we know which training samples cause the misbehavior. To the best of our knowledge, our work is among the first to explore LLM unlearning. We are also among the first to formulate the settings, goals, and evaluations in LLM unlearning. We show that if practitioners only have limited resources, and therefore the priority is to stop generating undesirable outputs rather than to try to generate desirable outputs, unlearning is particularly appealing. Despite only having negative samples, our ablation study shows that unlearning can still achieve better alignment performance than RLHF with just 2% of its computational time.
+
+### PowerInfer
+- https://github.com/SJTU-IPADS/PowerInfer
+- https://ipads.se.sjtu.edu.cn/_media/publications/powerinfer-20231219.pdf
+
+PowerInfer is a CPU/GPU LLM inference engine leveraging activation locality for your device.
+
+We introduce PowerInfer, a high-speed Large Language Model (LLM) inference engine on a personal computer (PC) equipped with a single consumer-grade GPU. The key underlying the design of PowerInfer is exploiting the high locality inherent in LLM inference, characterized by a power-law distribution in neuron activation.
+
+This distribution indicates that a small subset of neurons, termed hot neurons, are consistently activated across inputs, while the majority, cold neurons, vary based on specific inputs. PowerInfer exploits such an insight to design a GPU-CPU hybrid inference engine: hot-activated neurons are preloaded onto the GPU for fast access, while cold-activated neurons are computed on the CPU, thus significantly reducing GPU memory demands and CPU-GPU data transfers. PowerInfer further integrates adaptive predictors and neuron-aware sparse operators, optimizing the efficiency of neuron activation and computational sparsity.
+
+Evaluation shows that PowerInfer attains an average token generation rate of 13.20 tokens/s, with a peak of 29.08 tokens/s, across various LLMs (including OPT-175B) on a single NVIDIA RTX 4090 GPU, only 18% lower than that achieved by a top-tier server-grade A100 GPU. This significantly outperforms llama.cpp by up to 11.69x while retaining model accuracy.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -2013,6 +2049,20 @@ The recent surge in open-source Large Language Models (LLMs), such as LLaMA, Fal
 
 Mamba is a new state space model architecture showing promising performance on information-dense data such as language modeling, where previous subquadratic models fall short of Transformers. It is based on the line of progress on structured state space models, with an efficient hardware-aware design and implementation in the spirit of FlashAttention.
 
+### SOLAR
+- https://huggingface.co/upstage/SOLAR-10.7B-Instruct-v1.0
+
+We introduce the first 10.7 billion (B) parameter model, SOLAR-10.7B. It's compact, yet remarkably powerful, and demonstrates unparalleled state-of-the-art performance in models with parameters under 30B.
+
+We developed the Depth Up-Scaling technique. Built on the Llama2 architecture, SOLAR-10.7B incorporates the innovative Upstage Depth Up-Scaling. We then integrated Mistral 7B weights into the upscaled layers, and finally, continued pre-training for the entire model.
+
+Depth-Upscaled SOLAR-10.7B has remarkable performance. It outperforms models with up to 30B parameters, even surpassing the recent Mixtral 8X7B model. For detailed information, please refer to the experimental table. Solar 10.7B is an ideal choice for fine-tuning. SOLAR-10.7B offers robustness and adaptability for your fine-tuning needs. Our simple instruction fine-tuning using the SOLAR-10.7B pre-trained model yields significant performance improvements.
+
+### NexusRaven（function calling LLM）
+- https://huggingface.co/Nexusflow/NexusRaven-V2-13B
+
+NexusRaven is an open-source and commercially viable function calling LLM that surpasses the state-of-the-art in function calling capabilities.
+
 ## 4 评价
 
 ### 天秤（FlagEval）
@@ -2156,6 +2206,12 @@ We’re announcing Purple Llama, an umbrella project featuring open trust and sa
 此外，目前也有一些工作关注到了模型的开放式问答，由斯坦福大学提出的的AlpacaEval5被广泛认可，但仅由英文问题组成，决定了只能评估模型在英文上的表现。包含中文开放式问答的SuperCLUE6数据集是首个提出开放式问答的中文数据集，但其数据集闭源，且也仅由中文问题组成。可以看到，目前已有的开放式问题数据集都是在单一语言上进行评测的，用来衡量模型的多语言能力的开源的开放式问答数据集仍然空缺。
 
 综上所述，构建一个多语言的开放式问答数据集用以全面评测大模型的综合能力是有必要的。我们将从中文入手，逐渐迁移至其他语言。
+
+### SciGuard&SciMT-Safety
+- https://arxiv.org/abs/2312.06632
+- https://github.com/SciMT/SciMT-benchmark
+
+The expanding application of Artificial Intelligence (AI) in scientific fields presents unprecedented opportunities for discovery and innovation. However, this growth is not without risks. AI models in science, if misused, can amplify risks like creation of harmful substances, or circumvention of established regulations. In this study, we aim to raise awareness of the dangers of AI misuse in science, and call for responsible AI development and use in this domain. We first itemize the risks posed by AI in scientific contexts, then demonstrate the risks by highlighting real-world examples of misuse in chemical science. These instances underscore the need for effective risk management strategies. In response, we propose a system called SciGuard to control misuse risks for AI models in science. We also propose a red-teaming benchmark SciMT-Safety to assess the safety of different systems. Our proposed SciGuard shows the least harmful impact in the assessment without compromising performance in benign tests. Finally, we highlight the need for a multidisciplinary and collaborative effort to ensure the safe and ethical use of AI models in science. We hope that our study can spark productive discussions on using AI ethically in science among researchers, practitioners, policymakers, and the public, to maximize benefits and minimize the risks of misuse.
 
 ## 5 其它
 ### Alpaca-CoT
