@@ -140,7 +140,7 @@ Open-Source Language Model Pocket
 |*【Orca 2】|*【Mixtral 7b 8 Expert】|
 |*【Phi】|*【LLM360（Amber,CrystalCoder,Diamond）】|
 |*【Mamba】|*【SOLAR】|
-|*【NexusRaven（function calling LLM）】||
+|*【NexusRaven（function calling LLM）】|*【LLaMA-MoE】|
 
 *训练/推理*
 |  |  |
@@ -172,6 +172,7 @@ Open-Source Language Model Pocket
 |*【OpenRLHF】|*【CoLLiE: Collaborative Training of Large Language Models in an Efficient Way】|
 |*【Superalignment】|*【LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models】|
 |*【Large Language Model Unlearning】|*【PowerInfer】|
+|*【m-LoRA】||
 
 *评价*
 |  |
@@ -995,6 +996,7 @@ Mol-Instructions comprises three cardinal components:
 
 随着深度学习技术的迅速发展，类ChatGPT这样的大语言模型在自然语言处理领域已经取得了显著的进展。面向生物医学领域，大语言模型有助于医生与患者之间的沟通，提供有用的医学信息，并在辅助诊疗、生物医学知识发现、药物研发、个性化医疗方案等方面具有巨大潜力。然而，在人工智能社区中，已有的开源生物医学大模型相对较少，且大多主要专注于单语（中文或英语）的医疗问答对话。因此，本项目开展了面向生物医学领域大模型的研究，并发布初版中英双语生物医学大模型——太一（Taiyi），旨在探索大模型在生物医学领域中双语自然语言处理多任务的能力。
 
+
 ### TinyLlama
 - https://github.com/jzhang38/TinyLlama
 
@@ -1494,6 +1496,14 @@ We introduce PowerInfer, a high-speed Large Language Model (LLM) inference engin
 This distribution indicates that a small subset of neurons, termed hot neurons, are consistently activated across inputs, while the majority, cold neurons, vary based on specific inputs. PowerInfer exploits such an insight to design a GPU-CPU hybrid inference engine: hot-activated neurons are preloaded onto the GPU for fast access, while cold-activated neurons are computed on the CPU, thus significantly reducing GPU memory demands and CPU-GPU data transfers. PowerInfer further integrates adaptive predictors and neuron-aware sparse operators, optimizing the efficiency of neuron activation and computational sparsity.
 
 Evaluation shows that PowerInfer attains an average token generation rate of 13.20 tokens/s, with a peak of 29.08 tokens/s, across various LLMs (including OPT-175B) on a single NVIDIA RTX 4090 GPU, only 18% lower than that achieved by a top-tier server-grade A100 GPU. This significantly outperforms llama.cpp by up to 11.69x while retaining model accuracy.
+
+### m-LoRA
+- https://arxiv.org/abs/2312.02515
+- https://github.com/TUDB-Labs/multi-lora-fine-tune
+
+m-LoRA (a.k.a Multi-Lora Fine-Tune) is an open-source framework for fine-tuning Large Language Models (LLMs) using the efficient multiple LoRA/QLoRA methods. Key features of m-LoRA include:
+- Efficient LoRA/QLoRA: Optimizes the fine-tuning process, significantly reducing GPU memory usage by leveraging a shared frozen-based model.
+- Multiple LoRA Adapters: Support for concurrent fine-tuning of multiple LoRA/QLoRA adapters.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -2062,6 +2072,13 @@ Depth-Upscaled SOLAR-10.7B has remarkable performance. It outperforms models wit
 - https://huggingface.co/Nexusflow/NexusRaven-V2-13B
 
 NexusRaven is an open-source and commercially viable function calling LLM that surpasses the state-of-the-art in function calling capabilities.
+
+### LLaMA-MoE
+- https://github.com/pjlab-sys4nlp/llama-moe
+
+LLaMA-MoE is a series of open-sourced Mixture-of-Expert (MoE) models based on LLaMA and SlimPajama. We build LLaMA-MoE with the following two steps:
+- Partition LLaMA's FFNs into sparse experts and insert top-K gate for each layer of experts.
+- Continually pre-train the initialized MoE model with an optimized data sampling weights from Sheared LLaMA and filtered datasets from SlimPajama.
 
 ## 4 评价
 
