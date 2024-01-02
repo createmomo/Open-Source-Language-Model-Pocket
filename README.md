@@ -46,7 +46,8 @@ Open-Source Language Model Pocket
 |MindLLM|ChatGLM3|Skywork大模型|
 |Yi-6B/34B（零一万物）|Nanbeige-16B（南北阁-16B）|OrionStar-Yi-34B-Chat|
 |源2.0|TechGPT2.0|SUS-Chat-34B|
-|Alaya 元识|OpenBuddy||
+|Alaya 元识|OpenBuddy|*【MiniGPT4Qwen】|
+|*【ChatLM-Chinese-0.2B】|||
 
 
 | 医疗健康 |  |  |
@@ -173,6 +174,7 @@ Open-Source Language Model Pocket
 |Superalignment|LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models|
 |Large Language Model Unlearning|PowerInfer|
 |m-LoRA|*【LASER】|
+|*【StripedHyena-7B】||
 
 *评价*
 |  |
@@ -1181,6 +1183,18 @@ Built upon Tii's Falcon model and Facebook's LLaMA model, OpenBuddy is fine-tune
 
 Our mission with OpenBuddy is to provide a free, open, and offline-capable AI model that operates on users' devices, irrespective of their language or cultural background. We strive to empower individuals worldwide to access and benefit from AI technology.
 
+### MiniGPT4Qwen
+- https://github.com/Coobiw/MiniGPT4Qwen
+
+Cleaned Lavis + DeepSpeed Support! Align MiniGPT4 with Qwen-Chat LLM. I just use 18.8k high-quality instruction-tuning data(Bi-lingual, from minigpt4 and llava). Just fine-tune the projection layer.
+
+### ChatLM-Chinese-0.2B
+- https://github.com/charent/ChatLM-mini-Chinese
+
+现在的大语言模型的参数往往较大，消费级电脑单纯做推理都比较慢，更别说想自己从头开始训练一个模型了。本项目的目标是整理生成式语言模型的训练流程，包括数据清洗、tokenizer训练、模型预训练、SFT指令微调、RLHF优化等。
+
+ChatLM-mini-Chinese为中文对话小模型，模型参数只有0.2B（算共享权重约210M），可以在最低4GB显存的机器进行预训练（batch_size=1，fp16或者 bf16），float16加载、推理最少只需要512MB显存。
+
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
 - https://github.com/OptimalScale/LMFlow
@@ -1512,6 +1526,16 @@ m-LoRA (a.k.a Multi-Lora Fine-Tune) is an open-source framework for fine-tuning 
 - https://arxiv.org/pdf/2312.13558.pdf
 
 LASER stands for LAyer SElective Rank-Reduction, and is an intervention where we replace a selected weight matrix in the transformer architecture of an LLM with its low-rank approximation. A single LASER transformation consists of 3 hyperparameters: the layer number to modify (ℓ) such as 16th layer, the parameter type (τ) such as the first MLP layer, and the fraction of the maximum rank to retain (ρ) such as 0.01 fraction of the rank. We can write this transformation as (ℓ, τ, ρ) and we can stack these transformations and apply them in parallel. The low-rank approximation is performed using SVD. Figure below from our paper shows an illustration.
+
+### StripedHyena-7B
+- https://github.com/togethercomputer/stripedhyena
+- https://www.together.ai/blog/stripedhyena-7b
+
+One of the focus areas at Together Research is new architectures for long context, improved training, and inference performance over the Transformer architecture. Spinning out of a research program from our team and academic collaborators, with roots in signal processing-inspired sequence models, we are excited to introduce the StripedHyena models.
+
+StripedHyena is the first alternative model competitive with the best open-source Transformers of similar sizes in short and long-context evaluations.
+
+StripedHyena-Nous-7B (SH-N 7B) is our chat model for this release, and was developed with our collaborators at Nous Research.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
