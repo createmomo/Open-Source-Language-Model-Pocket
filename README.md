@@ -1,4 +1,4 @@
-# 开源语言模型百宝袋 (Ver. 3.2)
+# 开源语言模型百宝袋 (Ver. 3.3)
 Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
@@ -44,9 +44,9 @@ Open-Source Language Model Pocket
 |FLM-101B|TinyLlama|Colossal-LLaMA-2|
 |OpenBA (Encoder-Decoder)|Ziya-Reader-13B|Firefly-LLaMA2-Chinese|
 |MindLLM|ChatGLM3|Skywork大模型|
-|*【Yi-6B/34B（零一万物）】|*【Nanbeige-16B（南北阁-16B）】|*【OrionStar-Yi-34B-Chat】|
-|*【源2.0】|*【TechGPT2.0】|*【SUS-Chat-34B】|
-|*【Alaya 元识】|*【OpenBuddy】||
+|Yi-6B/34B（零一万物）|Nanbeige-16B（南北阁-16B）|OrionStar-Yi-34B-Chat|
+|源2.0|TechGPT2.0|SUS-Chat-34B|
+|Alaya 元识|OpenBuddy||
 
 
 | 医疗健康 |  |  |
@@ -58,11 +58,11 @@ Open-Source Language Model Pocket
 |DoctorGLM|ChatMed-TCM&ChatMed-Consult|ChatGLM-Med|
 |MeChat|ShenNong-TCM-LLM|MindChat(漫谈): 心理大模型|
 |WiNGPT|CareGPT|孙思邈|
-|MolGen（药物研发）|*【Taiyi（太一）】||
+|MolGen（药物研发）|Taiyi（太一）||
 
 |经济/金融|||
 |---|---|---|
-|【貔貅】 FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance|轩辕|BBT-FinCUGE-Applications|
+|貔貅FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance|轩辕|BBT-FinCUGE-Applications|
 |Cornucopia-LLaMA-Fin-Chinese|EcomGPT|FinGLM|
 |DISC-FinLLM|||
 
@@ -71,7 +71,7 @@ Open-Source Language Model Pocket
 | 韩非 HanFei| 智海 录问|ChatLaw 法律大模型|
 |LaWGPT|Lawyer LLaMA|LexiLaw|
 |LawGPT_zh|夫子•明察司法大模型|DISC-LawLLM|
-|*【LawBench】|||
+|LawBench|||
 
 |交通|
 |---|
@@ -89,7 +89,7 @@ Open-Source Language Model Pocket
 |自媒体&角色扮演|
 |---|
 |MediaGPT|
-|*【CharacterGLM-6B】|
+|CharacterGLM-6B|
 
 |古汉语|
 |---|
@@ -100,9 +100,9 @@ Open-Source Language Model Pocket
 |CodeShell|
 |CODEFUSION-75M|
 |DeepSeek Coder|
-|*【DevOps-Model（运维）】|
-|*【Magicoder】|
-|*【KwaiAgents】|
+|DevOps-Model（运维）|
+|Magicoder|
+|KwaiAgents|
 
 |天文/海洋|
 |---|
@@ -133,14 +133,14 @@ Open-Source Language Model Pocket
 |LLaMA 2 Long|UltraLM-13B (UltraFeedback)|
 |Llemma: An Open Language Model For Mathematics|Mistral-Trismegistus-7B （神秘学/玄学/灵性）|
 |Memory-GPT(MemGPT)|MetaMath|
-|ChipNeMo (芯片设计)|*【Zephyr】|
-|*【neural-chat-7b-v3-1（Intel）】|*【SteerLM】|
-|*【Llama Coder】|*【Meditron】|
-|*【RankZephyr】|*【StableLM Zephyr 3B】|
-|*【Orca 2】|*【Mixtral 7b 8 Expert】|
-|*【Phi】|*【LLM360（Amber,CrystalCoder,Diamond）】|
-|*【Mamba】|*【SOLAR】|
-|*【NexusRaven（function calling LLM）】|*【LLaMA-MoE】|
+|ChipNeMo (芯片设计)|Zephyr|
+|neural-chat-7b-v3-1（Intel）|SteerLM|
+|Llama Coder|Meditron|
+|RankZephyr|StableLM Zephyr 3B|
+|Orca 2|Mixtral 7b 8 Expert|
+|Phi|LLM360（Amber,CrystalCoder,Diamond）|
+|Mamba|SOLAR|
+|NexusRaven（function calling LLM）|LLaMA-MoE|
 
 *训练/推理*
 |  |  |
@@ -164,15 +164,15 @@ Open-Source Language Model Pocket
 | llama2.c | LongLoRA |
 |RLLTE: Long-Term Evolution Project of Reinforcement Learning|FlashAttention|
 |ExecuTorch|TensorRT-LLM|
-|*【BPO（Black-Box Prompt Optimization）】|*【S-LoRA】|
-|*【SoRA】|*【XuanCe(玄策): 开源的深度强化学习(DRL)库】|
-|*【EasyLM（JAX/Flax）】|*【FATE-LLM - Federated Learning for LLMs】|
-|*【DeepSpeed-FastGen】|*【NVIDIA NeMo-Aligner】|
-|*【RLAIF: Scaling Reinforcement Learning from Human Feedback with AI Feedback】|*【MLX】|
-|*【OpenRLHF】|*【CoLLiE: Collaborative Training of Large Language Models in an Efficient Way】|
-|*【Superalignment】|*【LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models】|
-|*【Large Language Model Unlearning】|*【PowerInfer】|
-|*【m-LoRA】||
+|BPO（Black-Box Prompt Optimization）|S-LoRA|
+|SoRA|XuanCe(玄策): 开源的深度强化学习(DRL)库|
+|EasyLM（JAX/Flax）|FATE-LLM - Federated Learning for LLMs|
+|DeepSpeed-FastGen|NVIDIA NeMo-Aligner|
+|RLAIF: Scaling Reinforcement Learning from Human Feedback with AI Feedback|MLX|
+|OpenRLHF|CoLLiE: Collaborative Training of Large Language Models in an Efficient Way|
+|Superalignment|LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models|
+|Large Language Model Unlearning|PowerInfer|
+|m-LoRA|*【LASER】|
 
 *评价*
 |  |
@@ -191,12 +191,12 @@ Open-Source Language Model Pocket
 |ALCUNA: Large Language Models Meet New Knowledge|
 |HalluQA：Evaluating Hallucinations in Chinese Large Language Models|
 |GLoRE: Evaluating Logical Reasoning of Large Language Models|
-|*【HelpSteer】|
-|*【AlignBench: 多维度中文对齐评测基准】|
-|*【UHGEval】|
-|*【Purple Llama (Meta)】|
-|*【OMGEval】|
-|*【SciGuard&SciMT-Safety】|
+|HelpSteer|
+|AlignBench: 多维度中文对齐评测基准|
+|UHGEval|
+|Purple Llama (Meta)|
+|OMGEval|
+|SciGuard&SciMT-Safety|
 
 *其它*
 |  |  |
@@ -210,9 +210,10 @@ Open-Source Language Model Pocket
 | LLM-Pruner: On the Structural Pruning of Large Language Models | AgentLM (AgentTuning, AgentInstruct) |
 | LLM for Recommendation Systems | XAgent |
 |OpenAgents|gpu_poor|
-|*【CAMEL:Communicative Agents for “Mind” Exploration of Large Scale Language Model Society】|*【Transformer Index for GEnerative Recommenders (TIGER)】|
-|*【KnowPAT】|*【AuthentiGPT: Detecting Machine-Generated Text】|
-|*【Curiosity-driven Red-teaming for Large Language Models】|*【Language Models are Super Mario（DARE, Drop And REscale）】|
+|CAMEL:Communicative Agents for “Mind” Exploration of Large Scale Language Model Society|Transformer Index for GEnerative Recommenders (TIGER)|
+|KnowPAT|AuthentiGPT: Detecting Machine-Generated Text|
+|Curiosity-driven Red-teaming for Large Language Models|Language Models are Super Mario（DARE, Drop And REscale）|
+|*【TinyGSM】||
 
 ---
 
@@ -269,7 +270,7 @@ baichuan-7B 是由百川智能开发的一个开源可商用的大规模预训�
 
 本项目利用启真医学知识库构建的中文医学指令数据集，并基于此在Chinese-LLaMA-Plus-7B、CaMA-13B、ChatGLM-6B模型上进行指令精调，大幅提高了模型在中文医疗场景下效果，首先针对药品知识问答发布了评测数据集，后续计划优化疾病、手术、检验等方面的问答效果，并针对医患问答、病历自动生成等应用展开拓展。
 
-### 【貔貅】FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance
+### 貔貅FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance
 - https://github.com/chancefocus/PIXIU
 - https://arxiv.org/abs/2306.05443
 - https://huggingface.co/spaces/ChanceFocus/FLARE
@@ -1505,6 +1506,13 @@ m-LoRA (a.k.a Multi-Lora Fine-Tune) is an open-source framework for fine-tuning 
 - Efficient LoRA/QLoRA: Optimizes the fine-tuning process, significantly reducing GPU memory usage by leveraging a shared frozen-based model.
 - Multiple LoRA Adapters: Support for concurrent fine-tuning of multiple LoRA/QLoRA adapters.
 
+### LASER
+- https://github.com/pratyushasharma/laser
+- https://pratyushasharma.github.io/laser/
+- https://arxiv.org/pdf/2312.13558.pdf
+
+LASER stands for LAyer SElective Rank-Reduction, and is an intervention where we replace a selected weight matrix in the transformer architecture of an LLM with its low-rank approximation. A single LASER transformation consists of 3 hyperparameters: the layer number to modify (ℓ) such as 16th layer, the parameter type (τ) such as the first MLP layer, and the fraction of the maximum rank to retain (ρ) such as 0.01 fraction of the rank. We can write this transformation as (ℓ, τ, ρ) and we can stack these transformations and apply them in parallel. The low-rank approximation is performed using SVD. Figure below from our paper shows an illustration.
+
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
 - https://github.com/tairov/llama2.mojo
@@ -2394,5 +2402,10 @@ In this work, we uncover that Language Models (LMs), either encoder- or decoder-
 
 - We introduce a novel operation called DARE to directly set most of (90% or even 99%) the delta parameters to zeros without affecting the capabilities of SFT LMs.
 - We sparsify delta parameters of multiple SFT homologous models with DARE as a general preprocessing technique and subsequently merge them into a single model by parameter averaging.
+
+### TinyGSM
+- https://arxiv.org/abs/2312.09241
+
+Small-scale models offer various computational advantages, and yet to which extent size is critical for problem-solving abilities remains an open question. Specifically for solving grade school math, the smallest model size so far required to break the 80% barrier on the GSM8K benchmark remains to be 34B. Our work studies how high-quality datasets may be the key for small language models to acquire mathematical reasoning. We introduce TinyGSM, a synthetic dataset of 12.3M grade school math problems paired with Python solutions, generated fully by GPT-3.5. After finetuning on TinyGSM, we find that a duo of a 1.3B generation model and a 1.3B verifier model can achieve 81.5% accuracy, outperforming existing models that are orders of magnitude larger. This also rivals the performance of the GPT-3.5 teacher model (77.4%), from which our model's training data is generated. Our approach is simple and has two key components: 1) the high-quality dataset TinyGSM, 2) the use of a verifier, which selects the final outputs from multiple candidate generations.
 
 > 持续更新中 (Continuously Updated)... 
