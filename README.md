@@ -47,7 +47,7 @@ Open-Source Language Model Pocket
 |Yi-6B/34B（零一万物）|Nanbeige-16B（南北阁-16B）|OrionStar-Yi-34B-Chat|
 |源2.0|TechGPT2.0|SUS-Chat-34B|
 |Alaya 元识|OpenBuddy|*【MiniGPT4Qwen】|
-|*【ChatLM-Chinese-0.2B】|||
+|*【ChatLM-Chinese-0.2B】|*【YAYI 2】||
 
 
 | 医疗健康 |  |  |
@@ -95,6 +95,7 @@ Open-Source Language Model Pocket
 |古汉语|
 |---|
 |尔雅 Erya|
+|*【荀子】|
 
 |编程/代码/Agent|
 |---|
@@ -1029,6 +1030,13 @@ We are excited to unveil two distinguished versions of our model, with another o
 
 翻译、理解古汉语对于通会上下五千年的中华典籍与文明至关重要。为了实现高效的古汉语翻译，我们在此提出工具集“尔雅”，它包含：（1）一个经过清洗与分类的，截至目前体量最大的古汉语翻译数据集。（2）面向古汉语翻译的训练方法，它包含双音节对齐替换法(DAS)与双向掩码语言模型(DMLM)，以及基于此方法训练的模型。（3）一个覆盖各汉语世代与文体的古汉语翻译测试基准。“尔雅”模型的零样本能力超出GPT-3.5系列+12.0BLEU，并在人工评分上表现优于文心一言。继续微调则更进一步地以+6.2BLEU提升了模型表现。所有资源请见https://github.com/RUCAIBox/Erya
 
+### 荀子
+- https://github.com/Xunzi-LLM-of-Chinese-classics/XunziALLM
+
+随着科技的飞速发展，人工智能已深入到各个领域。为响应古籍活化利用号召，推动大语言模型与古籍处理深度融合，以古籍智能化的研究为目的，南京农业大学国家社科基金重大项目“中国古代典籍跨语言知识库构建及应用研究”课题组与中华书局古联公司推出了一系列古籍处理领域大语言模型：荀子古籍大语言模型。荀子不仅是我国先秦时期伟大的朴素唯物主义的思想家，也是一位散文大家。他在语言学理论的阐述上又是一位开拓者、奠基人。荀子系列专为古籍智能处理而设计，这一系列模型的推出将推动古籍研究与保护工作的新发展，提高中华传统文化传承的效率与质量。
+
+本次荀子系列模型开源包括两个部分：基座模型XunziALLM，作为本次模型开源的重点，本项目推出了完全开放使用的古籍领域大模型，与此同时，为方便非人工智能领域人员更好地了解本次开源模型，我们使用一部分数据构建了对话模型XunziChat，模型的调用方式与阿里云的Qwen系列大模型一致。
+
 ## CodeShell
 - https://github.com/WisdomShell/codeshell
 
@@ -1194,6 +1202,15 @@ Cleaned Lavis + DeepSpeed Support! Align MiniGPT4 with Qwen-Chat LLM. I just use
 现在的大语言模型的参数往往较大，消费级电脑单纯做推理都比较慢，更别说想自己从头开始训练一个模型了。本项目的目标是整理生成式语言模型的训练流程，包括数据清洗、tokenizer训练、模型预训练、SFT指令微调、RLHF优化等。
 
 ChatLM-mini-Chinese为中文对话小模型，模型参数只有0.2B（算共享权重约210M），可以在最低4GB显存的机器进行预训练（batch_size=1，fp16或者 bf16），float16加载、推理最少只需要512MB显存。
+
+### YAYI 2
+- https://github.com/wenge-research/YAYI2/tree/main
+- https://arxiv.org/abs/2312.14862
+- https://yayi.wenge.com/
+
+YAYI 2 是中科闻歌研发的新一代开源大语言模型，包括 Base 和 Chat 版本，参数规模为 30B。YAYI2-30B 是基于 Transformer 的大语言模型，采用了超过 2 万亿 Tokens 的高质量、多语言语料进行预训练。针对通用和特定领域的应用场景，我们采用了百万级指令进行微调，同时借助人类反馈强化学习方法，以更好地使模型与人类价值观对齐。
+
+本次开源的模型为 YAYI2-30B Base 模型。我们希望通过雅意大模型的开源来促进中文预训练大模型开源社区的发展，并积极为此做出贡献。通过开源，我们与每一位合作伙伴共同构建雅意大模型生态。
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
