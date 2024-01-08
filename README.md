@@ -105,6 +105,7 @@ Open-Source Language Model Pocket
 |DevOps-Model（运维）|
 |Magicoder|
 |KwaiAgents|
+|*【LLaMA-Pro】|
 
 |天文/海洋|
 |---|
@@ -143,6 +144,7 @@ Open-Source Language Model Pocket
 |Phi|LLM360（Amber,CrystalCoder,Diamond）|
 |Mamba|SOLAR|
 |NexusRaven（function calling LLM）|LLaMA-MoE|
+|*【TinyLlama】||
 
 *训练/推理*
 |  |  |
@@ -175,7 +177,7 @@ Open-Source Language Model Pocket
 |Superalignment|LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models|
 |Large Language Model Unlearning|PowerInfer|
 |m-LoRA|*【LASER】|
-|*【StripedHyena-7B】||
+|*【StripedHyena-7B】|*【SwiftInfer】|
 
 *评价*
 |  |
@@ -1079,6 +1081,11 @@ KwaiAgents is a series of Agent-related works open-sourced by the KwaiKEG from K
 - KAgentInstruct: over 200k Agent-related instructions finetuning data (partially human-edited) proposed in the paper.
 - KAgentBench: over 3,000 human-edited, automated evaluation data for testing Agent capabilities, with evaluation dimensions including planning, tool-use, reflection, concluding, and profiling.
 
+### LLaMA-Pro
+- https://huggingface.co/TencentARC/LLaMA-Pro-8B
+
+LLaMA-Pro is a progressive version of the original LLaMA model, enhanced by the addition of Transformer blocks. It specializes in integrating both general language understanding and domain-specific knowledge, particularly in programming and mathematics.
+
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
 
@@ -1553,6 +1560,11 @@ One of the focus areas at Together Research is new architectures for long contex
 StripedHyena is the first alternative model competitive with the best open-source Transformers of similar sizes in short and long-context evaluations.
 
 StripedHyena-Nous-7B (SH-N 7B) is our chat model for this release, and was developed with our collaborators at Nous Research.
+
+### SwiftInfer
+- https://github.com/hpcaitech/SwiftInfer
+
+Colossal-AI 团队开源了 SwiftInfer，基于 TensorRT 实现了 StreamingLLM，可以进一步提升大模型推理性能 46%，为多轮对话推理提供了高效可靠的落地方案。
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -2128,6 +2140,14 @@ NexusRaven is an open-source and commercially viable function calling LLM that s
 LLaMA-MoE is a series of open-sourced Mixture-of-Expert (MoE) models based on LLaMA and SlimPajama. We build LLaMA-MoE with the following two steps:
 - Partition LLaMA's FFNs into sparse experts and insert top-K gate for each layer of experts.
 - Continually pre-train the initialized MoE model with an optimized data sampling weights from Sheared LLaMA and filtered datasets from SlimPajama.
+
+### TinyLlama
+- https://github.com/jzhang38/TinyLlama/
+- https://arxiv.org/pdf/2401.02385.pdf
+
+TinyLlama项目旨在在3万亿tokens上进行预训练，构建一个拥有11亿参数的Llama模型。经过精心优化，我们"仅"需16块A100-40G的GPU，便可在90天内完成这个任务🚀🚀。训练已于2023-09-01开始。
+
+我们采用了与Llama 2完全相同的架构和分词器。这意味着TinyLlama可以在许多基于Llama的开源项目中即插即用。此外，TinyLlama只有1.1B的参数，体积小巧，适用于需要限制计算和内存占用的多种应用。
 
 ## 4 评价
 
