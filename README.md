@@ -47,7 +47,7 @@ Open-Source Language Model Pocket
 |Yi-6B/34B（零一万物）|Nanbeige-16B（南北阁-16B）|OrionStar-Yi-34B-Chat|
 |源2.0|TechGPT2.0|SUS-Chat-34B|
 |Alaya 元识|OpenBuddy|*【MiniGPT4Qwen】|
-|*【ChatLM-Chinese-0.2B】|*【YAYI 2】||
+|*【ChatLM-Chinese-0.2B】|*【YAYI 2】|*【DeepSeek LLM&MoE】|
 
 
 | 医疗健康 |  |  |
@@ -107,10 +107,11 @@ Open-Source Language Model Pocket
 |KwaiAgents|
 |*【LLaMA-Pro】|
 
-|天文/海洋|
+|天文/海洋/地球科学|
 |---|
 |星语StarWhisper|
 |OceanGPT|
+|*【K2&GeoGalactica】|
 
 *可参考的其它开源模型*
 |  |  |
@@ -202,6 +203,7 @@ Open-Source Language Model Pocket
 |Purple Llama (Meta)|
 |OMGEval|
 |SciGuard&SciMT-Safety|
+|*【HaluEval 2.0, The Dawn After the Dark: An Empirical Study on Factuality Hallucination in Large Language Models】|
 
 *其它*
 |  |  |
@@ -218,7 +220,7 @@ Open-Source Language Model Pocket
 |CAMEL:Communicative Agents for “Mind” Exploration of Large Scale Language Model Society|Transformer Index for GEnerative Recommenders (TIGER)|
 |KnowPAT|AuthentiGPT: Detecting Machine-Generated Text|
 |Curiosity-driven Red-teaming for Large Language Models|Language Models are Super Mario（DARE, Drop And REscale）|
-|*【TinyGSM】||
+|*【TinyGSM】|*【MathPile】|
 
 ---
 
@@ -1099,6 +1101,15 @@ LLaMA-Pro is a progressive version of the original LLaMA model, enhanced by the 
 
 (Warning: The model in this paper might produce hallucinations and reader discretion is recommended) Ocean science, which delves into the oceans that are reservoirs of life and biodiversity, is of great significance given that oceans cover over 70% of our planet's surface. Recently, advances in Large Language Models (LLMs) have transformed the paradigm in science. Despite the success in other domains, current LLMs often fall short in catering to the needs of domain experts like oceanographers, and the potential of LLMs for ocean science is under-explored. The intrinsic reason may be the immense and intricate nature of ocean data as well as the necessity for higher granularity and richness in knowledge. To alleviate these issues, we introduce OceanGPT, the first-ever LLM in the ocean domain, which is expert in various ocean science tasks. We propose DoInstruct, a novel framework to automatically obtain a large volume of ocean domain instruction data, which generates instructions based on multi-agent collaboration. Additionally, we construct the first oceanography benchmark, OceanBench, to evaluate the capabilities of LLMs in the ocean domain. Though comprehensive experiments, OceanGPT not only shows a higher level of knowledge expertise for oceans science tasks but also gains preliminary embodied intelligence capabilities in ocean technology.
 
+### K2&GeoGalactica
+- https://github.com/davendw49/k2
+- https://arxiv.org/abs/2401.00434
+- https://github.com/geobrain-ai/geogalactica
+
+K2: We introduce K2 (7B), an open-source language model trained by firstly further pretraining LLaMA on collected and cleaned geoscience literature, including geoscience open-access papers and Wikipedia pages, and secondly fine-tuning with knowledge-intensive instruction tuning data (GeoSignal). As for preliminary evaluation, we use GeoBench (consisting of NPEE and AP Test on Geology, Geography, and Environmental Science) as the benchmark. K2 outperforms the baselines on objectiv e and subjective tasks compared to several baseline models with similar parameters. In this repository, we will share the following code and data.
+
+GeoGalactica: GeoGalactica is from further pre-training of Galactica -- a top-performing LLM trained with a large number of scientific documents. In this work, we take the initial step to leverage LLM for science, through a rather straightforward approach. We try to specialize an open-sourced LLM into geoscience, by further pre-training the model with a vast amount of texts in geoscience, as well as supervised fine-tuning (SFT) the resulting model with our custom collected instruction tuning dataset. These efforts result in a model GeoGalactica consisting of 30 billion parameters. To our best knowledge, it is the largest language model for the geoscience domain.
+
 ### Ziya-Reader-13B
 - https://huggingface.co/IDEA-CCNL/Ziya-Reader-13B-v1.0
 
@@ -1218,6 +1229,14 @@ ChatLM-mini-Chinese为中文对话小模型，模型参数只有0.2B（算共享
 YAYI 2 是中科闻歌研发的新一代开源大语言模型，包括 Base 和 Chat 版本，参数规模为 30B。YAYI2-30B 是基于 Transformer 的大语言模型，采用了超过 2 万亿 Tokens 的高质量、多语言语料进行预训练。针对通用和特定领域的应用场景，我们采用了百万级指令进行微调，同时借助人类反馈强化学习方法，以更好地使模型与人类价值观对齐。
 
 本次开源的模型为 YAYI2-30B Base 模型。我们希望通过雅意大模型的开源来促进中文预训练大模型开源社区的发展，并积极为此做出贡献。通过开源，我们与每一位合作伙伴共同构建雅意大模型生态。
+
+### DeepSeek LLM&MoE
+- https://huggingface.co/deepseek-ai
+- https://arxiv.org/abs/2401.02954
+- https://github.com/deepseek-ai/DeepSeek-LLM
+- https://github.com/deepseek-ai/DeepSeek-MoE
+
+Introducing DeepSeek LLM, an advanced language model comprising 67 billion parameters. It has been trained from scratch on a vast dataset of 2 trillion tokens in both English and Chinese. In order to foster research, we have made DeepSeek LLM 7B/67B Base and DeepSeek LLM 7B/67B Chat open source for the research community.
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
@@ -2299,6 +2318,12 @@ We’re announcing Purple Llama, an umbrella project featuring open trust and sa
 
 The expanding application of Artificial Intelligence (AI) in scientific fields presents unprecedented opportunities for discovery and innovation. However, this growth is not without risks. AI models in science, if misused, can amplify risks like creation of harmful substances, or circumvention of established regulations. In this study, we aim to raise awareness of the dangers of AI misuse in science, and call for responsible AI development and use in this domain. We first itemize the risks posed by AI in scientific contexts, then demonstrate the risks by highlighting real-world examples of misuse in chemical science. These instances underscore the need for effective risk management strategies. In response, we propose a system called SciGuard to control misuse risks for AI models in science. We also propose a red-teaming benchmark SciMT-Safety to assess the safety of different systems. Our proposed SciGuard shows the least harmful impact in the assessment without compromising performance in benign tests. Finally, we highlight the need for a multidisciplinary and collaborative effort to ensure the safe and ethical use of AI models in science. We hope that our study can spark productive discussions on using AI ethically in science among researchers, practitioners, policymakers, and the public, to maximize benefits and minimize the risks of misuse.
 
+### HaluEval 2.0, The Dawn After the Dark: An Empirical Study on Factuality Hallucination in Large Language Models
+- https://github.com/RUCAIBox/HaluEval-2.0
+- https://arxiv.org/abs/2401.03205
+
+In the era of large language models (LLMs), hallucination (i.e., the tendency to generate factually incorrect content) poses great challenge to trustworthy and reliable deployment of LLMs in real-world applications. To tackle the LLM hallucination, three key questions should be well studied: how to detect hallucinations (detection), why do LLMs hallucinate (source), and what can be done to mitigate them (mitigation). To address these challenges, this work presents a systematic empirical study on LLM hallucination, focused on the the three aspects of hallucination detection, source and mitigation. Specially, we construct a new hallucination benchmark HaluEval 2.0, and designs a simple yet effective detection method for LLM hallucination. Furthermore, we zoom into the different training or utilization stages of LLMs and extensively analyze the potential factors that lead to the LLM hallucination. Finally, we implement and examine a series of widely used techniques to mitigate the hallucinations in LLMs. Our work has led to several important findings to understand the hallucination origin and mitigate the hallucinations in LLMs. 
+
 ## 5 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -2468,5 +2493,14 @@ In this work, we uncover that Language Models (LMs), either encoder- or decoder-
 - https://arxiv.org/abs/2312.09241
 
 Small-scale models offer various computational advantages, and yet to which extent size is critical for problem-solving abilities remains an open question. Specifically for solving grade school math, the smallest model size so far required to break the 80% barrier on the GSM8K benchmark remains to be 34B. Our work studies how high-quality datasets may be the key for small language models to acquire mathematical reasoning. We introduce TinyGSM, a synthetic dataset of 12.3M grade school math problems paired with Python solutions, generated fully by GPT-3.5. After finetuning on TinyGSM, we find that a duo of a 1.3B generation model and a 1.3B verifier model can achieve 81.5% accuracy, outperforming existing models that are orders of magnitude larger. This also rivals the performance of the GPT-3.5 teacher model (77.4%), from which our model's training data is generated. Our approach is simple and has two key components: 1) the high-quality dataset TinyGSM, 2) the use of a verifier, which selects the final outputs from multiple candidate generations.
+
+### MathPile
+- https://huggingface.co/papers/2312.17120
+- https://gair-nlp.github.io/MathPile/
+- https://github.com/GAIR-NLP/MathPile
+- https://huggingface.co/datasets/GAIR/MathPile
+- https://huggingface.co/datasets/GAIR/MathPile_Commercial
+
+High-quality, large-scale corpora are the cornerstone of building powerful foundation models. In this work, we introduce MathPile a diverse and high-quality math-centric corpus comprising about 9.5 billion tokens. 
 
 > 持续更新中 (Continuously Updated)... 
