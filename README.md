@@ -48,6 +48,7 @@ Open-Source Language Model Pocket
 |源2.0|TechGPT2.0|SUS-Chat-34B|
 |Alaya 元识|OpenBuddy|*【MiniGPT4Qwen】|
 |*【ChatLM-Chinese-0.2B】|*【YAYI 2】|*【DeepSeek LLM&MoE】|
+|*【MachineMindset(MBTI)】|*【星辰语义（电信）】||
 
 
 | 医疗健康 |  |  |
@@ -59,7 +60,7 @@ Open-Source Language Model Pocket
 |DoctorGLM|ChatMed-TCM&ChatMed-Consult|ChatGLM-Med|
 |MeChat|ShenNong-TCM-LLM|MindChat(漫谈): 心理大模型|
 |WiNGPT|CareGPT|孙思邈|
-|MolGen（药物研发）|Taiyi（太一）||
+|MolGen（药物研发）|Taiyi（太一）|*【MedAgents】|
 
 |经济/金融|||
 |---|---|---|
@@ -179,6 +180,7 @@ Open-Source Language Model Pocket
 |Large Language Model Unlearning|PowerInfer|
 |m-LoRA|*【LASER】|
 |*【StripedHyena-7B】|*【SwiftInfer】|
+|*【SPIN（Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models）】||
 
 *评价*
 |  |
@@ -1004,6 +1006,11 @@ Mol-Instructions comprises three cardinal components:
 
 随着深度学习技术的迅速发展，类ChatGPT这样的大语言模型在自然语言处理领域已经取得了显著的进展。面向生物医学领域，大语言模型有助于医生与患者之间的沟通，提供有用的医学信息，并在辅助诊疗、生物医学知识发现、药物研发、个性化医疗方案等方面具有巨大潜力。然而，在人工智能社区中，已有的开源生物医学大模型相对较少，且大多主要专注于单语（中文或英语）的医疗问答对话。因此，本项目开展了面向生物医学领域大模型的研究，并发布初版中英双语生物医学大模型——太一（Taiyi），旨在探索大模型在生物医学领域中双语自然语言处理多任务的能力。
 
+### MedAgents
+- https://github.com/gersteinlab/MedAgents
+- https://arxiv.org/pdf/2311.10537.pdf
+
+We propose a Multi-disciplinary Collaboration (MC) framework. The framework works in five stages: (i) expert gathering: gather experts from distinct disciplines according to the clinical question; (ii) analysis proposition: domain experts put forward their own analysis with their expertise; (iii) report summarization: compose a summarized report on the basis of a previous series of analyses; (iv) collaborative consultation: engage the experts in discussions over the summarized report. The report will be revised iteratively until an agreement from all the experts is reached; (v) decision making: derive a final decision from the unanimous report.
 
 ### TinyLlama
 - https://github.com/jzhang38/TinyLlama
@@ -1237,6 +1244,27 @@ YAYI 2 是中科闻歌研发的新一代开源大语言模型，包括 Base 和 
 - https://github.com/deepseek-ai/DeepSeek-MoE
 
 Introducing DeepSeek LLM, an advanced language model comprising 67 billion parameters. It has been trained from scratch on a vast dataset of 2 trillion tokens in both English and Chinese. In order to foster research, we have made DeepSeek LLM 7B/67B Base and DeepSeek LLM 7B/67B Chat open source for the research community.
+
+### MachineMindset(MBTI)
+- https://github.com/PKU-YuanGroup/Machine-Mindset
+
+MM (Machine_Mindset) series models are developed through a collaboration between FarReel AI Lab(formerly known as the ChatLaw project) and Peking University's Deep Research Institute. These models are large-scale language models for various MBTI types in both Chinese and English, built on the Baichuan and LLaMA2 platforms. 🤖🌐
+
+Our core asset is a self-constructed extensive MBTI dataset consisting of hundreds of thousands of entries. Our models are crafted through multiple stages of pre-training, fine-tuning, and DPO training. We are committed to continuously updating the models to offer superior performance and will consistently supplement them with experimental test results. 📊📈
+
+In contrast to merely using prompts to alter a model's personality, we have found that this method is highly unstable. It's akin to a controlling parent's dissatisfaction with their introverted child, attempting to force them to become outgoing through simple and coercive commands – a rather ludicrous approach. 🙅‍♂️😄
+
+We have successfully achieved personality alignment for various MBTI types using models such as Baichuan, Qwen, LLaMA, and Mistral. This means we can obtain 16 different versions of MBTI personality models by combining different base models with our dataset and training methods, tailoring each model for specific tasks. 🛠🧩
+
+Due to resource constraints, we are initially releasing 16 Chinese models based on Baichuan-7b-chat and several English models based on LLaMA2-7b. However, rest assured that we can quickly add different versions of models if needed. 🌍📦
+
+### 星辰语义（电信）
+- https://gitee.com/Tele-AI/tele-chat 
+- https://github.com/Tele-AI/Telechat 
+
+星辰语义大模型-TeleChat
+- 星辰语义大模型TeleChat是由中电信人工智能科技有限公司研发训练的大语言模型，采用1.5万亿 Tokens中英文高质量语料进行训练。
+- 本次开源了对话模型TeleChat-7B-bot，以及其huggingface格式的权重文件。此外，我们还开源了7B模型的int8和int4量化版本。
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
@@ -1584,6 +1612,11 @@ StripedHyena-Nous-7B (SH-N 7B) is our chat model for this release, and was devel
 - https://github.com/hpcaitech/SwiftInfer
 
 Colossal-AI 团队开源了 SwiftInfer，基于 TensorRT 实现了 StreamingLLM，可以进一步提升大模型推理性能 46%，为多轮对话推理提供了高效可靠的落地方案。
+
+### SPIN（Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models）
+- hhttps://arxiv.org/abs/2401.01335
+
+Harnessing the power of human-annotated data through Supervised Fine-Tuning (SFT) is pivotal for advancing Large Language Models (LLMs). In this paper, we delve into the prospect of growing a strong LLM out of a weak one without the need for acquiring additional human-annotated data. We propose a new fine-tuning method called Self-Play fIne-tuNing (SPIN), which starts from a supervised fine-tuned model. At the heart of SPIN lies a self-play mechanism, where the LLM refines its capability by playing against instances of itself. More specifically, the LLM generates its own training data from its previous iterations, refining its policy by discerning these self-generated responses from those obtained from human-annotated data. Our method progressively elevates the LLM from a nascent model to a formidable one, unlocking the full potential of human-annotated demonstration data for SFT. Theoretically, we prove that the global optimum to the training objective function of our method is achieved only when the LLM policy aligns with the target data distribution. Empirically, we evaluate our method on several benchmark datasets including the HuggingFace Open LLM Leaderboard, MT-Bench, and datasets from Big-Bench. Our results show that SPIN can significantly improve the LLM's performance across a variety of benchmarks and even outperform models trained through direct preference optimization (DPO) supplemented with extra GPT-4 preference data. This sheds light on the promise of self-play, enabling the achievement of human-level performance in LLMs without the need for expert opponents.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
