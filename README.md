@@ -146,7 +146,7 @@ Open-Source Language Model Pocket
 |Phi|LLM360（Amber,CrystalCoder,Diamond）|
 |Mamba|SOLAR|
 |NexusRaven（function calling LLM）|LLaMA-MoE|
-|*【TinyLlama】||
+|*【TinyLlama】|*【Nous-Hermes-2 Mixtral 8x7B】|
 
 *训练/推理*
 |  |  |
@@ -1018,6 +1018,17 @@ We propose a Multi-disciplinary Collaboration (MC) framework. The framework work
 TinyLlama项目旨在在3万亿tokens上进行预训练，构建一个拥有11亿参数的Llama模型。经过精心优化，我们"仅"需16块A100-40G的GPU，便可在90天内完成这个任务🚀🚀。训练已于2023-09-01开始。
 
 我们采用了与Llama 2完全相同的架构和分词器。这意味着TinyLlama可以在许多基于Llama的开源项目中即插即用。此外，TinyLlama只有1.1B的参数，体积小巧，适用于需要限制计算和内存占用的多种应用。
+
+### Nous-Hermes-2 Mixtral 8x7B
+- https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-SFT
+- https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO
+- https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO-adapter
+
+Nous Hermes 2 Mixtral 8x7B SFT is the supervised finetune only version of our new flagship Nous Research model trained over the Mixtral 8x7B MoE LLM.
+
+Nous Hermes 2 Mixtral 8x7B DPO is the new flagship Nous Research model trained over the Mixtral 8x7B MoE LLM.
+
+QLoRA Adapter for the DPO Phase of Nous-Hermes-2 Mixtral 8x7B Model.
 
 ### Colossal-LLaMA-2
 - https://github.com/hpcaitech/ColossalAI/tree/main/applications/Colossal-LLaMA-2
