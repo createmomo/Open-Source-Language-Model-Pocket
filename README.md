@@ -48,8 +48,7 @@ Open-Source Language Model Pocket
 |源2.0|TechGPT2.0|SUS-Chat-34B|
 |Alaya 元识|OpenBuddy|*【MiniGPT4Qwen】|
 |*【ChatLM-Chinese-0.2B】|*【YAYI 2】|*【DeepSeek LLM&MoE】|
-|*【MachineMindset(MBTI)】|*【星辰语义（电信）】||
-
+|*【MachineMindset(MBTI)】|*【星辰语义（电信）】|*【Chinese-Mixtral-8x7B】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -84,7 +83,7 @@ Open-Source Language Model Pocket
 |桃李|EduChat|
 |chatglm-maths|Abel|
 
-|表格/数据 分析||
+|表格/数据分析||
 |---|---|
 |TableGPT|Data-Copilot|
 
@@ -108,11 +107,12 @@ Open-Source Language Model Pocket
 |KwaiAgents|
 |*【LLaMA-Pro】|
 
-|天文/海洋/地球科学|
+|天文/海洋/地球科学/科学|
 |---|
 |星语StarWhisper|
 |OceanGPT|
 |*【K2&GeoGalactica】|
+|*【SciGLM】|
 
 *可参考的其它开源模型*
 |  |  |
@@ -147,6 +147,7 @@ Open-Source Language Model Pocket
 |Mamba|SOLAR|
 |NexusRaven（function calling LLM）|LLaMA-MoE|
 |*【TinyLlama】|*【Nous-Hermes-2 Mixtral 8x7B】|
+|*【AlphaGeometry】||
 
 *训练/推理*
 |  |  |
@@ -223,6 +224,7 @@ Open-Source Language Model Pocket
 |KnowPAT|AuthentiGPT: Detecting Machine-Generated Text|
 |Curiosity-driven Red-teaming for Large Language Models|Language Models are Super Mario（DARE, Drop And REscale）|
 |*【TinyGSM】|*【MathPile】|
+|*【Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM】||
 
 ---
 
@@ -1030,6 +1032,12 @@ Nous Hermes 2 Mixtral 8x7B DPO is the new flagship Nous Research model trained o
 
 QLoRA Adapter for the DPO Phase of Nous-Hermes-2 Mixtral 8x7B Model.
 
+### AlphaGeometry
+- https://www.nature.com/articles/s41586-023-06747-5
+- https://github.com/google-deepmind/alphageometry
+
+Proving mathematical theorems at the olympiad level represents a notable milestone in human-level automated reasoning, owing to their reputed difficulty among the world’s best talents in pre-university mathematics. Current machine-learning approaches, however, are not applicable to most mathematical domains owing to the high cost of translating human proofs into machine-verifiable format. The problem is even worse for geometry because of its unique translation challenges1,5, resulting in severe scarcity of training data. We propose AlphaGeometry, a theorem prover for Euclidean plane geometry that sidesteps the need for human demonstrations by synthesizing millions of theorems and proofs across different levels of complexity. AlphaGeometry is a neuro-symbolic system that uses a neural language model, trained from scratch on our large-scale synthetic data, to guide a symbolic deduction engine through infinite branching points in challenging problems. On a test set of 30 latest olympiad-level problems, AlphaGeometry solves 25, outperforming the previous best method that only solves ten problems and approaching the performance of an average International Mathematical Olympiad (IMO) gold medallist. Notably, AlphaGeometry produces human-readable proofs, solves all geometry problems in the IMO 2000 and 2015 under human expert evaluation and discovers a generalized version of a translated IMO theorem in 2004.
+
 ### Colossal-LLaMA-2
 - https://github.com/hpcaitech/ColossalAI/tree/main/applications/Colossal-LLaMA-2
 
@@ -1128,6 +1136,12 @@ K2: We introduce K2 (7B), an open-source language model trained by firstly furth
 
 GeoGalactica: GeoGalactica is from further pre-training of Galactica -- a top-performing LLM trained with a large number of scientific documents. In this work, we take the initial step to leverage LLM for science, through a rather straightforward approach. We try to specialize an open-sourced LLM into geoscience, by further pre-training the model with a vast amount of texts in geoscience, as well as supervised fine-tuning (SFT) the resulting model with our custom collected instruction tuning dataset. These efforts result in a model GeoGalactica consisting of 30 billion parameters. To our best knowledge, it is the largest language model for the geoscience domain.
 
+### SciGLM
+- https://arxiv.org/abs/2401.07950
+- https://github.com/THUDM/SciGLM
+
+Large Language Models (LLMs) have shown promise in assisting scientific discovery. However, such applications are currently limited by LLMs' deficiencies in understanding intricate scientific concepts, deriving symbolic equations, and solving advanced numerical calculations. To bridge these gaps, we introduce SciGLM, a suite of scientific language models able to conduct college-level scientific reasoning. Central to our approach is a novel self-reflective instruction annotation framework to address the data scarcity challenge in the science domain. This framework leverages existing LLMs to generate step-by-step reasoning for unlabelled scientific questions, followed by a process of self-reflective critic-and-revise. Applying this framework, we curated SciInstruct, a diverse and high-quality dataset encompassing mathematics, physics, chemistry, and formal proofs. We fine-tuned the ChatGLM family of language models with SciInstruct, enhancing their capabilities in scientific and mathematical reasoning. Remarkably, SciGLM consistently improves both the base model (ChatGLM3-6B-Base) and larger-scale models (12B and 32B), without sacrificing the language understanding capabilities of the base model. This makes SciGLM a suitable foundational model to facilitate diverse scientific discovery tasks.
+
 ### Ziya-Reader-13B
 - https://huggingface.co/IDEA-CCNL/Ziya-Reader-13B-v1.0
 
@@ -1193,6 +1207,7 @@ OrionStar-Yi-34B-Chat 是猎户星空基于零一万物开源的Yi-34B模型，�
 
 ### 源2.0
 - https://github.com/IEIT-Yuan/Yuan-2.0
+- https://github.com/IEIT-Yuan/Yuan-2.0/blob/main/docs/Yuan2_llama-factory.md
 
 源2.0 是浪潮信息发布的新一代基础语言大模型。我们开源了全部的3个模型源2.0-102B，源2.0-51B和源2.0-2B。并且我们提供了预训练，微调，推理服务的相关脚本，以供研发人员做进一步的开发。源2.0是在源1.0的基础上，利用更多样的高质量预训练数据和指令微调数据集，令模型在语义、数学、推理、代码、知识等不同方面具备更强的理解能力。
 
@@ -1276,6 +1291,11 @@ Due to resource constraints, we are initially releasing 16 Chinese models based 
 星辰语义大模型-TeleChat
 - 星辰语义大模型TeleChat是由中电信人工智能科技有限公司研发训练的大语言模型，采用1.5万亿 Tokens中英文高质量语料进行训练。
 - 本次开源了对话模型TeleChat-7B-bot，以及其huggingface格式的权重文件。此外，我们还开源了7B模型的int8和int4量化版本。
+
+### Chinese-Mixtral-8x7B
+- https://github.com/HIT-SCIR/Chinese-Mixtral-8x7B
+
+本项目基于Mistral发布的模型Mixtral-8x7B进行了中文扩词表增量预训练，希望进一步促进中文自然语言处理社区对MoE模型的研究。我们扩充后的词表显著提高了模型对中文的编解码效率，并通过大规模开源语料对扩词表模型进行增量预训练，使模型具备了强大的中文生成和理解能力。
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
@@ -2546,5 +2566,11 @@ Small-scale models offer various computational advantages, and yet to which exte
 - https://huggingface.co/datasets/GAIR/MathPile_Commercial
 
 High-quality, large-scale corpora are the cornerstone of building powerful foundation models. In this work, we introduce MathPile a diverse and high-quality math-centric corpus comprising about 9.5 billion tokens. 
+
+### Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM
+- https://huggingface.co/ChaiML
+- https://arxiv.org/pdf/2401.02994.pdf
+
+In conversational AI research, there's a noticeable trend towards developing models with a larger number of parameters, exemplified by models like ChatGPT. While these expansive models tend to generate increasingly better chat responses, they demand significant computational resources and memory. This study explores a pertinent question: Can a combination of smaller models collaboratively achieve comparable or enhanced performance relative to a singular large model? We introduce an approach termed "blending", a straightforward yet effective method of integrating multiple chat AIs. Our empirical evidence suggests that when specific smaller models are synergistically blended, they can potentially outperform or match the capabilities of much larger counterparts. For instance, integrating just three models of moderate size (6B/13B paramaeters) can rival or even surpass the performance metrics of a substantially larger model like ChatGPT (175B+ paramaters). This hypothesis is rigorously tested using A/B testing methodologies with a large user base on the Chai research platform over a span of thirty days. The findings underscore the potential of the "blending" strategy as a viable approach for enhancing chat AI efficacy without a corresponding surge in computational demands.
 
 > 持续更新中 (Continuously Updated)... 
