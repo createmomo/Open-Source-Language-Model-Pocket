@@ -181,7 +181,7 @@ Open-Source Language Model Pocket
 |Large Language Model Unlearning|PowerInfer|
 |m-LoRA|*【LASER】|
 |*【StripedHyena-7B】|*【SwiftInfer】|
-|*【SPIN（Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models）】||
+|*【SPIN（Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models）】|*【Self-Rewarding Language Models】|
 
 *评价*
 |  |
@@ -207,6 +207,7 @@ Open-Source Language Model Pocket
 |OMGEval|
 |SciGuard&SciMT-Safety|
 |*【HaluEval 2.0, The Dawn After the Dark: An Empirical Study on Factuality Hallucination in Large Language Models】|
+|*【DebugBench: Evaluating Debugging Capability of Large Language Models】|
 
 *其它*
 |  |  |
@@ -1649,6 +1650,11 @@ Colossal-AI 团队开源了 SwiftInfer，基于 TensorRT 实现了 StreamingLLM�
 
 Harnessing the power of human-annotated data through Supervised Fine-Tuning (SFT) is pivotal for advancing Large Language Models (LLMs). In this paper, we delve into the prospect of growing a strong LLM out of a weak one without the need for acquiring additional human-annotated data. We propose a new fine-tuning method called Self-Play fIne-tuNing (SPIN), which starts from a supervised fine-tuned model. At the heart of SPIN lies a self-play mechanism, where the LLM refines its capability by playing against instances of itself. More specifically, the LLM generates its own training data from its previous iterations, refining its policy by discerning these self-generated responses from those obtained from human-annotated data. Our method progressively elevates the LLM from a nascent model to a formidable one, unlocking the full potential of human-annotated demonstration data for SFT. Theoretically, we prove that the global optimum to the training objective function of our method is achieved only when the LLM policy aligns with the target data distribution. Empirically, we evaluate our method on several benchmark datasets including the HuggingFace Open LLM Leaderboard, MT-Bench, and datasets from Big-Bench. Our results show that SPIN can significantly improve the LLM's performance across a variety of benchmarks and even outperform models trained through direct preference optimization (DPO) supplemented with extra GPT-4 preference data. This sheds light on the promise of self-play, enabling the achievement of human-level performance in LLMs without the need for expert opponents.
 
+### Self-Rewarding Language Models
+- https://arxiv.org/pdf/2401.10020.pdf
+
+We posit that to achieve superhuman agents, future models require superhuman feedback in order to provide an adequate training signal. Current approaches commonly train reward models from human preferences, which may then be bottlenecked by human performance level, and secondly these separate frozen reward models cannot then learn to improve during LLM training. In this work, we study Self-Rewarding Language Models, where the language model itself is used via LLM-as-a-Judge prompting to provide its own rewards during training. We show that during Iterative DPO training that not only does instruction following ability improve, but also the ability to provide high-quality rewards to itself. Fine-tuning Llama 2 70B on three iterations of our approach yields a model that outperforms many existing systems on the AlpacaEval 2.0 leaderboard, including Claude 2, Gemini Pro, and GPT-4 0613. While only a preliminary study, this work opens the door to the possibility of models that can continually improve in both axes.
+
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
 - https://github.com/tairov/llama2.mojo
@@ -2387,6 +2393,12 @@ The expanding application of Artificial Intelligence (AI) in scientific fields p
 - https://arxiv.org/abs/2401.03205
 
 In the era of large language models (LLMs), hallucination (i.e., the tendency to generate factually incorrect content) poses great challenge to trustworthy and reliable deployment of LLMs in real-world applications. To tackle the LLM hallucination, three key questions should be well studied: how to detect hallucinations (detection), why do LLMs hallucinate (source), and what can be done to mitigate them (mitigation). To address these challenges, this work presents a systematic empirical study on LLM hallucination, focused on the the three aspects of hallucination detection, source and mitigation. Specially, we construct a new hallucination benchmark HaluEval 2.0, and designs a simple yet effective detection method for LLM hallucination. Furthermore, we zoom into the different training or utilization stages of LLMs and extensively analyze the potential factors that lead to the LLM hallucination. Finally, we implement and examine a series of widely used techniques to mitigate the hallucinations in LLMs. Our work has led to several important findings to understand the hallucination origin and mitigate the hallucinations in LLMs. 
+
+### DebugBench: Evaluating Debugging Capability of Large Language Models
+- https://github.com/thunlp/DebugBench
+- https://arxiv.org/abs/2401.04621
+
+Large Language Models (LLMs) have demonstrated exceptional coding capability. However, as another critical component of programming proficiency, the debugging capability of LLMs remains relatively unexplored. Previous evaluations of LLMs' debugging ability are significantly limited by the risk of data leakage, the scale of the dataset, and the variety of tested bugs. To overcome these deficiencies, we introduce `DebugBench', an LLM debugging benchmark consisting of 4,253 instances. It covers four major bug categories and 18 minor types in C++, Java, and Python. To construct DebugBench, we collect code snippets from the LeetCode community, implant bugs into source data with GPT-4, and assure rigorous quality checks. We evaluate two commercial and three open-source models in a zero-shot scenario. We find that (1) while closed-source models like GPT-4 exhibit inferior debugging performance compared to humans, open-source models such as Code Llama fail to attain any pass rate scores; (2) the complexity of debugging notably fluctuates depending on the bug category; (3) incorporating runtime feedback has a clear impact on debugging performance which is not always helpful. As an extension, we also compare LLM debugging and code generation, revealing a strong correlation between them for closed-source models. These findings will benefit the development of LLMs in debugging.
 
 ## 5 其它
 ### Alpaca-CoT
