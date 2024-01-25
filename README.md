@@ -49,6 +49,7 @@ Open-Source Language Model Pocket
 |Alaya 元识|OpenBuddy|*【MiniGPT4Qwen】|
 |*【ChatLM-Chinese-0.2B】|*【YAYI 2】|*【DeepSeek LLM&MoE】|
 |*【MachineMindset(MBTI)】|*【星辰语义（电信）】|*【Chinese-Mixtral-8x7B】|
+|*【Baby-Llama2-Chinese】|*【XVERSE-13B-256K】||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -60,6 +61,7 @@ Open-Source Language Model Pocket
 |MeChat|ShenNong-TCM-LLM|MindChat(漫谈): 心理大模型|
 |WiNGPT|CareGPT|孙思邈|
 |MolGen（药物研发）|Taiyi（太一）|*【MedAgents】|
+|*【Molecule Optimization】|||
 
 |经济/金融|||
 |---|---|---|
@@ -147,7 +149,7 @@ Open-Source Language Model Pocket
 |Mamba|SOLAR|
 |NexusRaven（function calling LLM）|LLaMA-MoE|
 |*【TinyLlama】|*【Nous-Hermes-2 Mixtral 8x7B】|
-|*【AlphaGeometry】||
+|*【AlphaGeometry】|*【MoE-Mamba】|
 
 *训练/推理*
 |  |  |
@@ -182,6 +184,8 @@ Open-Source Language Model Pocket
 |m-LoRA|*【LASER】|
 |*【StripedHyena-7B】|*【SwiftInfer】|
 |*【SPIN（Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models）】|*【Self-Rewarding Language Models】|
+|*【OPO（On-the-fly Preference Optimization）】|*【ASPIRE】|
+|*【The Impact of Reasoning Step Length on Large Language Models】||
 
 *评价*
 |  |
@@ -208,6 +212,8 @@ Open-Source Language Model Pocket
 |SciGuard&SciMT-Safety|
 |*【HaluEval 2.0, The Dawn After the Dark: An Empirical Study on Factuality Hallucination in Large Language Models】|
 |*【DebugBench: Evaluating Debugging Capability of Large Language Models】|
+|*【GenMedicalEval】|
+|*【R-Judge】|
 
 *其它*
 |  |  |
@@ -225,7 +231,8 @@ Open-Source Language Model Pocket
 |KnowPAT|AuthentiGPT: Detecting Machine-Generated Text|
 |Curiosity-driven Red-teaming for Large Language Models|Language Models are Super Mario（DARE, Drop And REscale）|
 |*【TinyGSM】|*【MathPile】|
-|*【Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM】||
+|*【Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM】|*【Personal LLM Agents - Survey】|
+|*【Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding】|*【QAnything】|
 
 ---
 
@@ -1015,6 +1022,12 @@ Mol-Instructions comprises three cardinal components:
 
 We propose a Multi-disciplinary Collaboration (MC) framework. The framework works in five stages: (i) expert gathering: gather experts from distinct disciplines according to the clinical question; (ii) analysis proposition: domain experts put forward their own analysis with their expertise; (iii) report summarization: compose a summarized report on the basis of a previous series of analyses; (iv) collaborative consultation: engage the experts in discussions over the summarized report. The report will be revised iteratively until an agreement from all the experts is reached; (v) decision making: derive a final decision from the unanimous report.
 
+### Molecule Optimization
+- https://github.com/blazerye/DrugAssist
+- https://arxiv.org/abs/2401.10334
+
+Recently, the impressive performance of large language models (LLMs) on a wide range of tasks has attracted an increasing number of attempts to apply LLMs in drug discovery. However, molecule optimization, a critical task in the drug discovery pipeline, is currently an area that has seen little involvement from LLMs. Most of existing approaches focus solely on capturing the underlying patterns in chemical structures provided by the data, without taking advantage of expert feedback. These non-interactive approaches overlook the fact that the drug discovery process is actually one that requires the integration of expert experience and iterative refinement. To address this gap, we propose DrugAssist, an interactive molecule optimization model which performs optimization through human-machine dialogue by leveraging LLM's strong interactivity and generalizability. DrugAssist has achieved leading results in both single and multiple property optimization, simultaneously showcasing immense potential in transferability and iterative optimization. In addition, we publicly release a large instruction-based dataset called MolOpt-Instructions for fine-tuning language models on molecule optimization tasks. 
+
 ### TinyLlama
 - https://github.com/jzhang38/TinyLlama
 
@@ -1038,6 +1051,11 @@ QLoRA Adapter for the DPO Phase of Nous-Hermes-2 Mixtral 8x7B Model.
 - https://github.com/google-deepmind/alphageometry
 
 Proving mathematical theorems at the olympiad level represents a notable milestone in human-level automated reasoning, owing to their reputed difficulty among the world’s best talents in pre-university mathematics. Current machine-learning approaches, however, are not applicable to most mathematical domains owing to the high cost of translating human proofs into machine-verifiable format. The problem is even worse for geometry because of its unique translation challenges1,5, resulting in severe scarcity of training data. We propose AlphaGeometry, a theorem prover for Euclidean plane geometry that sidesteps the need for human demonstrations by synthesizing millions of theorems and proofs across different levels of complexity. AlphaGeometry is a neuro-symbolic system that uses a neural language model, trained from scratch on our large-scale synthetic data, to guide a symbolic deduction engine through infinite branching points in challenging problems. On a test set of 30 latest olympiad-level problems, AlphaGeometry solves 25, outperforming the previous best method that only solves ten problems and approaching the performance of an average International Mathematical Olympiad (IMO) gold medallist. Notably, AlphaGeometry produces human-readable proofs, solves all geometry problems in the IMO 2000 and 2015 under human expert evaluation and discovers a generalized version of a translated IMO theorem in 2004.
+
+### MoE-Mamba
+- https://arxiv.org/abs/2401.04081
+
+State Space Models (SSMs) have become serious contenders in the field of sequential modeling, challenging the dominance of Transformers. At the same time, Mixture of Experts (MoE) has significantly improved Transformer-based LLMs, including recent state-of-the-art open-source models. We propose that to unlock the potential of SSMs for scaling, they should be combined with MoE. We showcase this on Mamba, a recent SSM-based model that achieves remarkable, Transformer-like performance. Our model, MoE-Mamba, outperforms both Mamba and Transformer-MoE. In particular, MoE-Mamba reaches the same performance as Mamba in 2.2x less training steps while preserving the inference performance gains of Mamba against the Transformer.
 
 ### Colossal-LLaMA-2
 - https://github.com/hpcaitech/ColossalAI/tree/main/applications/Colossal-LLaMA-2
@@ -1297,6 +1315,22 @@ Due to resource constraints, we are initially releasing 16 Chinese models based 
 - https://github.com/HIT-SCIR/Chinese-Mixtral-8x7B
 
 本项目基于Mistral发布的模型Mixtral-8x7B进行了中文扩词表增量预训练，希望进一步促进中文自然语言处理社区对MoE模型的研究。我们扩充后的词表显著提高了模型对中文的编解码效率，并通过大规模开源语料对扩词表模型进行增量预训练，使模型具备了强大的中文生成和理解能力。
+
+### Baby-Llama2-Chinese
+- https://github.com/DLLXW/baby-llama2-chinese
+
+本项目致力于构建一个小参数量的中文Llama2仓库。
+
+包含：预训练、SFT指令微调、奖励模型以及强化学习（待做）完整流程。
+
+除此之外，本项目还会梳理一套完整的LLM学习资料（正在进行中）。
+
+希望该开源项目可以帮助LLM初学者以最快速度入门！
+
+### XVERSE-13B-256K
+- https://huggingface.co/xverse/XVERSE-13B-256K
+
+XVERSE-13B-256K是XVERSE-13B-2模型经过ABF+继续预训练、NTK+SFT 微调后的版本。
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
@@ -1654,6 +1688,24 @@ Harnessing the power of human-annotated data through Supervised Fine-Tuning (SFT
 - https://arxiv.org/pdf/2401.10020.pdf
 
 We posit that to achieve superhuman agents, future models require superhuman feedback in order to provide an adequate training signal. Current approaches commonly train reward models from human preferences, which may then be bottlenecked by human performance level, and secondly these separate frozen reward models cannot then learn to improve during LLM training. In this work, we study Self-Rewarding Language Models, where the language model itself is used via LLM-as-a-Judge prompting to provide its own rewards during training. We show that during Iterative DPO training that not only does instruction following ability improve, but also the ability to provide high-quality rewards to itself. Fine-tuning Llama 2 70B on three iterations of our approach yields a model that outperforms many existing systems on the AlpacaEval 2.0 leaderboard, including Claude 2, Gemini Pro, and GPT-4 0613. While only a preliminary study, this work opens the door to the possibility of models that can continually improve in both axes.
+
+### OPO（On-the-fly Preference Optimization）
+- https://arxiv.org/abs/2312.15907
+- https://gair-nlp.github.io/OPO/
+- https://github.com/GAIR-NLP/OPO
+
+In this paper, we aim to align large language models with the ever-changing, complex, and diverse human values (e.g., social norms) across time and locations. This presents a challenge to existing alignment techniques, such as supervised fine-tuning, which internalize values within model parameters. To overcome this, we propose an On-the-fly Preference Optimization (OPO) method, which is a real-time alignment that works in a streaming way. It employs an external memory to store established rules for alignment, which can constrain LLMs' behaviors without further training, allowing for convenient updates and customization of human values. We also introduce a scalable evaluation to assess the proposed method more effectively. Experimental results on both human-annotated and auto-generated questions from legal and moral domains indicate the effectiveness of the proposed OPO method. 
+
+### ASPIRE
+- https://aclanthology.org/2023.findings-emnlp.345.pdf
+
+Large language models (LLMs) have recently shown great advances in a variety of tasks, including natural language understanding and generation. However, their use in high-stakes decision-making scenarios is still limited due to the potential for errors. Selective prediction is a technique that can be used to improve the reliability of the LLMs by allowing them to abstain from making predictions when they are unsure of the answer. In this work, we propose a novel framework for adaptation with self-evaluation to improve the selective prediction performance of LLMs. Our framework is based on the idea of using parameter-efficient tuning to adapt the LLM to the specific task at hand while improving its ability to perform self-evaluation. We evaluate our method on a variety of question-answering (QA) datasets and show that it outperforms state-of-the-art selective prediction methods. For example, on the CoQA benchmark, our method improves the AUACC from 91.23% to 92.63% and improves the AUROC from 74.61% to 80.25%.
+
+### The Impact of Reasoning Step Length on Large Language Models
+- https://arxiv.org/abs/2401.04925
+- https://github.com/jmyissb/The-Impact-of-Reasoning-Step-Length-on-Large-Language-Models
+
+Chain of Thought (CoT) is significant in improving the reasoning abilities of large language models (LLMs). However, the correlation between the effectiveness of CoT and the length of reasoning steps in prompts remains largely unknown. To shed light on this, we have conducted several empirical experiments to explore the relations. Specifically, we design experiments that expand and compress the rationale reasoning steps within CoT demonstrations, while keeping all other factors constant. We have the following key findings. First, the results indicate that lengthening the reasoning steps in prompts, even without adding new information into the prompt, considerably enhances LLMs' reasoning abilities across multiple datasets. Alternatively, shortening the reasoning steps, even while preserving the key information, significantly diminishes the reasoning abilities of models. This finding highlights the importance of the number of steps in CoT prompts and provides practical guidance to make better use of LLMs' potential in complex problem-solving scenarios. Second, we also investigated the relationship between the performance of CoT and the rationales used in demonstrations. Surprisingly, the result shows that even incorrect rationales can yield favorable outcomes if they maintain the requisite length of inference. Third, we observed that the advantages of increasing reasoning steps are task-dependent: simpler tasks require fewer steps, whereas complex tasks gain significantly from longer inference sequences.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -2400,6 +2452,17 @@ In the era of large language models (LLMs), hallucination (i.e., the tendency to
 
 Large Language Models (LLMs) have demonstrated exceptional coding capability. However, as another critical component of programming proficiency, the debugging capability of LLMs remains relatively unexplored. Previous evaluations of LLMs' debugging ability are significantly limited by the risk of data leakage, the scale of the dataset, and the variety of tested bugs. To overcome these deficiencies, we introduce `DebugBench', an LLM debugging benchmark consisting of 4,253 instances. It covers four major bug categories and 18 minor types in C++, Java, and Python. To construct DebugBench, we collect code snippets from the LeetCode community, implant bugs into source data with GPT-4, and assure rigorous quality checks. We evaluate two commercial and three open-source models in a zero-shot scenario. We find that (1) while closed-source models like GPT-4 exhibit inferior debugging performance compared to humans, open-source models such as Code Llama fail to attain any pass rate scores; (2) the complexity of debugging notably fluctuates depending on the bug category; (3) incorporating runtime feedback has a clear impact on debugging performance which is not always helpful. As an extension, we also compare LLM debugging and code generation, revealing a strong correlation between them for closed-source models. These findings will benefit the development of LLMs in debugging.
 
+### GenMedicalEval
+- https://github.com/MediaBrain-SJTU/GenMedicalEval
+
+一个医疗大语言模型的综合评测框架。
+
+### R-Judge
+- https://github.com/Lordog/R-Judge
+- https://arxiv.org/abs/2401.10019
+
+Large language models (LLMs) have exhibited great potential in autonomously completing tasks across real-world applications. Despite this, these LLM agents introduce unexpected safety risks when operating in interactive environments. Instead of centering on LLM-generated content safety in most prior studies, this work addresses the imperative need for benchmarking the behavioral safety of LLM agents within diverse environments. We introduce R-Judge, a benchmark crafted to evaluate the proficiency of LLMs in judging safety risks given agent interaction records. R-Judge comprises 162 agent interaction records, encompassing 27 key risk scenarios among 7 application categories and 10 risk types. It incorporates human consensus on safety with annotated safety risk labels and high-quality risk descriptions. Utilizing R-Judge, we conduct a comprehensive evaluation of 8 prominent LLMs commonly employed as the backbone for agents. The best-performing model, GPT-4, achieves 72.29% in contrast to the human score of 89.38%, showing considerable room for enhancing the risk awareness of LLMs. Notably, leveraging risk descriptions as environment feedback significantly improves model performance, revealing the importance of salient safety risk feedback. Furthermore, we design an effective chain of safety analysis technique to help the judgment of safety risks and conduct an in-depth case study to facilitate future research.
+
 ## 5 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -2584,5 +2647,26 @@ High-quality, large-scale corpora are the cornerstone of building powerful found
 - https://arxiv.org/pdf/2401.02994.pdf
 
 In conversational AI research, there's a noticeable trend towards developing models with a larger number of parameters, exemplified by models like ChatGPT. While these expansive models tend to generate increasingly better chat responses, they demand significant computational resources and memory. This study explores a pertinent question: Can a combination of smaller models collaboratively achieve comparable or enhanced performance relative to a singular large model? We introduce an approach termed "blending", a straightforward yet effective method of integrating multiple chat AIs. Our empirical evidence suggests that when specific smaller models are synergistically blended, they can potentially outperform or match the capabilities of much larger counterparts. For instance, integrating just three models of moderate size (6B/13B paramaeters) can rival or even surpass the performance metrics of a substantially larger model like ChatGPT (175B+ paramaters). This hypothesis is rigorously tested using A/B testing methodologies with a large user base on the Chai research platform over a span of thirty days. The findings underscore the potential of the "blending" strategy as a viable approach for enhancing chat AI efficacy without a corresponding surge in computational demands.
+
+### Personal LLM Agents - Survey
+- https://github.com/MobileLLM/Personal_LLM_Agents_Survey
+- https://arxiv.org/abs/2401.05459
+
+Personal LLM Agents are defined as a special type of LLM-based agents that are deeply integrated with personal data, personal devices, and personal services. They are perferably deployed to resource-constrained mobile/edge devices and/or powered by lightweight AI models. The main purpose of personal LLM agents is to assist end-users and augment their abilities, helping them to focus more and do better on interesting and important affairs.
+
+### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
+- https://github.com/hemingkx/SpeculativeDecodingPapers
+- https://arxiv.org/abs/2401.07851
+
+To mitigate the high inference latency stemming from autoregressive decoding in Large Language Models (LLMs), Speculative Decoding has emerged as a novel decoding paradigm for LLM inference. In each decoding step, this method first efficiently drafts several future tokens and then verifies them in parallel. Unlike autoregressive decoding, Speculative Decoding facilitates the simultaneous decoding of multiple tokens per step, thereby accelerating inference. This paper presents a comprehensive overview and analysis of this promising decoding paradigm. We begin by providing a formal definition and formulation of Speculative Decoding. Then, we organize in-depth discussions on its key facets, including current leading techniques, the challenges faced, and potential future directions in this field. We aim for this work to serve as a catalyst for further research on Speculative Decoding, ultimately contributing to more efficient LLM inference.
+
+### QAnything
+- https://github.com/netease-youdao/QAnything
+
+QAnything(Question and Answer based on Anything) is a local knowledge base question-answering system designed to support a wide range of file formats and databases, allowing for offline installation and use.
+
+With QAnything, you can simply drop any locally stored file of any format and receive accurate, fast, and reliable answers.
+
+Currently supported formats include: PDF, Word (doc/docx), PPT, Markdown, Eml, TXT, Images (jpg, png, etc.), Web links and more formats coming soon…
 
 > 持续更新中 (Continuously Updated)... 
