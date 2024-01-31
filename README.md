@@ -194,6 +194,8 @@ Open-Source Language Model Pocket
 |*【SPIN（Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models）】|*【Self-Rewarding Language Models】|
 |*【OPO（On-the-fly Preference Optimization）】|*【ASPIRE】|
 |*【The Impact of Reasoning Step Length on Large Language Models】|*【SliceGPT】|
+|*【FuseLLM】|*【Tree of Thoughts】|
+|*【CogGPT】||
 
 *评价*
 |  |
@@ -229,25 +231,30 @@ Open-Source Language Model Pocket
 | *【Matryoshka Representation Learning】 |*【Jina Embeddings】|
 |*【BGE-M3】||
 
+*Agent*
+|  |  |
+|---|---|
+| Auto-GPT | ToolBench&ToolLLM |
+|HuggingGPT |CAMEL:Communicative Agents for “Mind” Exploration of Large Scale Language Model Society|
+|AgentLM (AgentTuning, AgentInstruct) |XAgent|
+|OpenAgents|*【Personal LLM Agents - Survey】|
+|*【AUTOACT】||
+
 *其它*
 |  |  |
 |---|---|
 | Alpaca-CoT | Self-Instruct |
-| Auto-GPT | ToolBench&ToolLLM |
 | ChatPiXiu | Wanda (Pruning by Weights and activations) |
 | Gorilla | Streaming LLM |
-| HuggingGPT | Sheared LLAMA (Structured Pruning) |
+| Sheared LLAMA (Structured Pruning) |gpu_poor|
 | LLMPruner：大语言模型裁剪工具 | QA-LoRA |
-| LLM-Pruner: On the Structural Pruning of Large Language Models | AgentLM (AgentTuning, AgentInstruct) |
-| LLM for Recommendation Systems | XAgent |
-|OpenAgents|gpu_poor|
-|CAMEL:Communicative Agents for “Mind” Exploration of Large Scale Language Model Society|Transformer Index for GEnerative Recommenders (TIGER)|
-|KnowPAT|AuthentiGPT: Detecting Machine-Generated Text|
-|Curiosity-driven Red-teaming for Large Language Models|Language Models are Super Mario（DARE, Drop And REscale）|
+| LLM-Pruner: On the Structural Pruning of Large Language Models | LLM for Recommendation Systems |
+|Transformer Index for GEnerative Recommenders (TIGER)|KnowPAT|
+|AuthentiGPT: Detecting Machine-Generated Text|Curiosity-driven Red-teaming for Large Language Models|Language Models are Super Mario（DARE, Drop And REscale）|
 |*【TinyGSM】|*【MathPile】|
-|*【Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM】|*【Personal LLM Agents - Survey】|
-|*【Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding】|*【QAnything】|
-|*【Meta-Prompting】|*【Lepton Search】|
+|*【Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM】|*【Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding】|
+|*【QAnything】|*【Meta-Prompting】|
+|*【Lepton Search】||
 
 ---
 
@@ -1745,6 +1752,24 @@ Chain of Thought (CoT) is significant in improving the reasoning abilities of la
 
 SliceGPT is a new post-training sparsification scheme that makes transformer networks (including LLMs) smaller by first applying orthogonal transformations to each transformer layer that leave the model unchanged, and then slicing off the least-significant rows and columns (chosen by the eigenvalue decay) of the weight matrices. The model structure is left unchanged, but each weight matrix is replaced by a smaller (dense) weight matrix, reducing the embedding dimension of the model. This results in speedups (without any additional code optimization) and a reduced memory footprint.
 
+### FuseLLM
+- https://github.com/fanqiwan/FuseLLM
+- https://arxiv.org/abs/2401.10491
+
+While training large language models (LLMs) from scratch can generate models with distinct functionalities and strengths, it comes at significant costs and may result in redundant capabilities. Alternatively, a cost-effective and compelling approach is to merge existing pre-trained LLMs into a more potent model. However, due to the varying architectures of these LLMs, directly blending their weights is impractical. In this paper, we introduce the notion of knowledge fusion for LLMs, aimed at combining the capabilities of existing LLMs and transferring them into a single LLM. By leveraging the generative distributions of source LLMs, we externalize their collective knowledge and unique strengths, thereby potentially elevating the capabilities of the target model beyond those of any individual source LLM. We validate our approach using three popular LLMs with different architectures--Llama-2, MPT, and OpenLLaMA--across various benchmarks and tasks. Our findings confirm that the fusion of LLMs can improve the performance of the target model across a range of capabilities such as reasoning, commonsense, and code generation.
+
+### Tree of Thoughts
+- https://arxiv.org/abs/2305.10601
+- https://github.com/princeton-nlp/tree-of-thought-llm
+
+Language models are increasingly being deployed for general problem solving across a wide range of tasks, but are still confined to token-level, left-to-right decision-making processes during inference. This means they can fall short in tasks that require exploration, strategic lookahead, or where initial decisions play a pivotal role. To surmount these challenges, we introduce a new framework for language model inference, Tree of Thoughts (ToT), which generalizes over the popular Chain of Thought approach to prompting language models, and enables exploration over coherent units of text (thoughts) that serve as intermediate steps toward problem solving. ToT allows LMs to perform deliberate decision making by considering multiple different reasoning paths and self-evaluating choices to decide the next course of action, as well as looking ahead or backtracking when necessary to make global choices. Our experiments show that ToT significantly enhances language models' problem-solving abilities on three novel tasks requiring non-trivial planning or search: Game of 24, Creative Writing, and Mini Crosswords. For instance, in Game of 24, while GPT-4 with chain-of-thought prompting only solved 4% of tasks, our method achieved a success rate of 74%.
+
+### CogGPT
+- https://github.com/KwaiKEG/CogGPT
+- https://arxiv.org/abs/2401.08438
+
+Cognitive dynamics are pivotal to advance human understanding of the world. Recent advancements in large language models (LLMs) reveal their potential for cognitive simulation. However, these LLM-based cognitive studies primarily focus on static modeling, overlooking the dynamic nature of cognition. To bridge this gap, we propose the concept of the cognitive dynamics of LLMs and present a corresponding task with the inspiration of longitudinal studies. Towards the task, we develop CogBench, a novel benchmark to assess the cognitive dynamics of LLMs and validate it through participant surveys. We also design two evaluation metrics for CogBench, including Authenticity and Rationality. Recognizing the inherent static nature of LLMs, we introduce CogGPT for the task, which features an innovative iterative cognitive mechanism aimed at enhancing lifelong cognitive dynamics. Empirical results demonstrate the superiority of CogGPT over existing methods, particularly in its ability to facilitate role-specific cognitive dynamics under continuous information flows.
+
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
 - https://github.com/tairov/llama2.mojo
@@ -2713,6 +2738,12 @@ In conversational AI research, there's a noticeable trend towards developing mod
 - https://arxiv.org/abs/2401.05459
 
 Personal LLM Agents are defined as a special type of LLM-based agents that are deeply integrated with personal data, personal devices, and personal services. They are perferably deployed to resource-constrained mobile/edge devices and/or powered by lightweight AI models. The main purpose of personal LLM agents is to assist end-users and augment their abilities, helping them to focus more and do better on interesting and important affairs.
+
+### AUTOACT
+- https://arxiv.org/abs/2401.05268
+- https://github.com/zjunlp/AutoAct
+
+Language agents have achieved considerable performance on various complex tasks. Despite the incessant exploration in this field, existing language agent systems still struggle with costly, non-reproducible data reliance and face the challenge of compelling a single model for multiple functions. To this end, we introduce AutoAct, an automatic agent learning framework that does not rely on large-scale annotated data and synthetic trajectories from closed-source models (e.g., GPT-4). Given limited data with a tool library, AutoAct first automatically synthesizes planning trajectories without any assistance from humans or strong closed-source models. Then, AutoAct leverages a division-of-labor strategy to automatically differentiate based on the target task information and synthesized trajectories, producing a sub-agent group to complete the task. We conduct comprehensive experiments with different LLMs, which demonstrates that AutoAct yields better or parallel performance compared to various strong baselines. We even notice that AutoAct, when using the Llama-2-13b model, can achieve performance comparable to that of the zero-shot GPT-3.5-Turbo agent.
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
