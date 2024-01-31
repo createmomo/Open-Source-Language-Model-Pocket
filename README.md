@@ -1,6 +1,12 @@
 # 开源语言模型百宝袋 (Ver. 3.3)
 Open-Source Language Model Pocket
 
+🎇春节安好，所想皆如愿🎇
+
+🎇All the best for the Spring Festival🎇
+
+🎇May all your wishes come true🎇
+
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
 **相关文章**：
@@ -19,7 +25,7 @@ Open-Source Language Model Pocket
   - 自动评估模型
     - 【不限领域】[用语言模型评估语言模型（1）导语](https://mp.weixin.qq.com/s/SUN_ywkI8ld1edXY7uq_1Q)
     - 【不限领域】[用语言模型评估语言模型（2）PandaLM](https://mp.weixin.qq.com/s/NTFu53MdVD9NusFJaORHcw)
-    - 【不限领域】用语言模型评估语言模型（3）Shepherd（[1](https://mp.weixin.qq.com/s/pbK1Zsv9j_DVtOJaTm_tPw) [2](https://mp.weixin.qq.com/s/n4_kVw8j42ZQv6VjQ_P-Dw) [3](https://mp.weixin.qq.com/s/PeGJOmQPyAhwl7czJgKnQQ)）
+    - 【不限领域】用语言模型评估语言模型（3）Shepherd（[1](https://mp.weixin.qq.com/s/pbK1Zsv9j_DVtOJaTm_tPw) [2](https://mp.weixin.qq.com/s/n4_kVw8j42ZQv6VjQ_P-Dw) [3](https://mp.weixin.qq.com/s/PeGJOmQPyAhwl7czJgKnQQ) [4](https://mp.weixin.qq.com/s/7_NX7S2AHabX-xU254sq5g)）
     - 【医疗/健康】[使用BERT-Score比较ChatDoctor与ChatGPT3.5](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg)
 
 **开源模型一览** (Table of Contents)：
@@ -49,7 +55,8 @@ Open-Source Language Model Pocket
 |Alaya 元识|OpenBuddy|*【MiniGPT4Qwen】|
 |*【ChatLM-Chinese-0.2B】|*【YAYI 2】|*【DeepSeek LLM&MoE】|
 |*【MachineMindset(MBTI)】|*【星辰语义（电信）】|*【Chinese-Mixtral-8x7B】|
-|*【Baby-Llama2-Chinese】|*【XVERSE-13B-256K】||
+|*【Baby-Llama2-Chinese】|*【XVERSE-13B-256K】|*【Eagle 7B（RWKV-v5）】|
+|*【iFlytekSpark-13B】|||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -84,6 +91,7 @@ Open-Source Language Model Pocket
 |---|---|
 |桃李|EduChat|
 |chatglm-maths|Abel|
+|*【InternLM-Math】||
 
 |表格/数据分析||
 |---|---|
@@ -185,7 +193,7 @@ Open-Source Language Model Pocket
 |*【StripedHyena-7B】|*【SwiftInfer】|
 |*【SPIN（Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models）】|*【Self-Rewarding Language Models】|
 |*【OPO（On-the-fly Preference Optimization）】|*【ASPIRE】|
-|*【The Impact of Reasoning Step Length on Large Language Models】||
+|*【The Impact of Reasoning Step Length on Large Language Models】|*【SliceGPT】|
 
 *评价*
 |  |
@@ -215,6 +223,12 @@ Open-Source Language Model Pocket
 |*【GenMedicalEval】|
 |*【R-Judge】|
 
+*文本向量*
+|  |  |
+|---|---|
+| *【Matryoshka Representation Learning】 |*【Jina Embeddings】|
+|*【BGE-M3】||
+
 *其它*
 |  |  |
 |---|---|
@@ -233,6 +247,7 @@ Open-Source Language Model Pocket
 |*【TinyGSM】|*【MathPile】|
 |*【Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM】|*【Personal LLM Agents - Survey】|
 |*【Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding】|*【QAnything】|
+|*【Meta-Prompting】|*【Lepton Search】|
 
 ---
 
@@ -572,6 +587,11 @@ We show that:
 - ONLY using SFT
 
 We have established a new state-of-the-art performance across open-source LLMs (that do not use external tools) on the GSM8k (83.62) and MATH (28.26) benchmarks. Specifically
+
+### InternLM-Math
+- https://github.com/InternLM/InternLM-Math
+
+State-of-the-art bilingual open-sourced Math reasoning LLMs. A solver, prover, verifier, augmentor.
 
 ### ChatRWKV
 - https://github.com/BlinkDL/ChatRWKV
@@ -1332,6 +1352,18 @@ Due to resource constraints, we are initially releasing 16 Chinese models based 
 
 XVERSE-13B-256K是XVERSE-13B-2模型经过ABF+继续预训练、NTK+SFT 微调后的版本。
 
+### Eagle 7B（RWKV-v5）
+- https://blog.rwkv.com/p/eagle-7b-soaring-past-transformers
+
+A brand new era for the RWKV-v5 architecture and linear transformer's has arrived - with the strongest multi-lingual model in open source today.
+
+### iFlytekSpark-13B
+- https://gitee.com/iflytekopensource/iFlytekSpark-13B
+- https://openi.pcl.ac.cn/iflytek/iFlytekSpark-13B
+- https://xihe.mindspore.cn/modelzoo/iflytek/introduce
+
+此次开源不仅包括基础模型iFlytekSpark-13B-base、精调模型iFlytekSpark-13B-chat，还有微调工具iFlytekSpark-13B-Lora，以及人设定制工具iFlytekSpark-13B-Charater。
+
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
 - https://github.com/OptimalScale/LMFlow
@@ -1706,6 +1738,12 @@ Large language models (LLMs) have recently shown great advances in a variety of 
 - https://github.com/jmyissb/The-Impact-of-Reasoning-Step-Length-on-Large-Language-Models
 
 Chain of Thought (CoT) is significant in improving the reasoning abilities of large language models (LLMs). However, the correlation between the effectiveness of CoT and the length of reasoning steps in prompts remains largely unknown. To shed light on this, we have conducted several empirical experiments to explore the relations. Specifically, we design experiments that expand and compress the rationale reasoning steps within CoT demonstrations, while keeping all other factors constant. We have the following key findings. First, the results indicate that lengthening the reasoning steps in prompts, even without adding new information into the prompt, considerably enhances LLMs' reasoning abilities across multiple datasets. Alternatively, shortening the reasoning steps, even while preserving the key information, significantly diminishes the reasoning abilities of models. This finding highlights the importance of the number of steps in CoT prompts and provides practical guidance to make better use of LLMs' potential in complex problem-solving scenarios. Second, we also investigated the relationship between the performance of CoT and the rationales used in demonstrations. Surprisingly, the result shows that even incorrect rationales can yield favorable outcomes if they maintain the requisite length of inference. Third, we observed that the advantages of increasing reasoning steps are task-dependent: simpler tasks require fewer steps, whereas complex tasks gain significantly from longer inference sequences.
+
+### SliceGPT
+- https://arxiv.org/abs/2401.15024
+- https://github.com/microsoft/TransformerCompression
+
+SliceGPT is a new post-training sparsification scheme that makes transformer networks (including LLMs) smaller by first applying orthogonal transformations to each transformer layer that leave the model unchanged, and then slicing off the least-significant rows and columns (chosen by the eigenvalue decay) of the weight matrices. The model structure is left unchanged, but each weight matrix is replaced by a smaller (dense) weight matrix, reducing the embedding dimension of the model. This results in speedups (without any additional code optimization) and a reduced memory footprint.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -2463,7 +2501,29 @@ Large Language Models (LLMs) have demonstrated exceptional coding capability. Ho
 
 Large language models (LLMs) have exhibited great potential in autonomously completing tasks across real-world applications. Despite this, these LLM agents introduce unexpected safety risks when operating in interactive environments. Instead of centering on LLM-generated content safety in most prior studies, this work addresses the imperative need for benchmarking the behavioral safety of LLM agents within diverse environments. We introduce R-Judge, a benchmark crafted to evaluate the proficiency of LLMs in judging safety risks given agent interaction records. R-Judge comprises 162 agent interaction records, encompassing 27 key risk scenarios among 7 application categories and 10 risk types. It incorporates human consensus on safety with annotated safety risk labels and high-quality risk descriptions. Utilizing R-Judge, we conduct a comprehensive evaluation of 8 prominent LLMs commonly employed as the backbone for agents. The best-performing model, GPT-4, achieves 72.29% in contrast to the human score of 89.38%, showing considerable room for enhancing the risk awareness of LLMs. Notably, leveraging risk descriptions as environment feedback significantly improves model performance, revealing the importance of salient safety risk feedback. Furthermore, we design an effective chain of safety analysis technique to help the judgment of safety risks and conduct an in-depth case study to facilitate future research.
 
-## 5 其它
+## 5 文本向量
+### Matryoshka Representation Learning
+- https://arxiv.org/abs/2205.13147
+- https://github.com/RAIVNLab/MRL
+
+Learned representations are a central component in modern ML systems, serving a multitude of downstream tasks. When training such representations, it is often the case that computational and statistical constraints for each downstream task are unknown. In this context rigid, fixed capacity representations can be either over or under-accommodating to the task at hand. This leads us to ask: can we design a flexible representation that can adapt to multiple downstream tasks with varying computational resources? Our main contribution is Matryoshka Representation Learning (MRL) which encodes information at different granularities and allows a single embedding to adapt to the computational constraints of downstream tasks. MRL minimally modifies existing representation learning pipelines and imposes no additional cost during inference and deployment. MRL learns coarse-to-fine representations that are at least as accurate and rich as independently trained low-dimensional representations. The flexibility within the learned Matryoshka Representations offer: (a) up to 14x smaller embedding size for ImageNet-1K classification at the same level of accuracy; (b) up to 14x real-world speed-ups for large-scale retrieval on ImageNet-1K and 4K; and (c) up to 2% accuracy improvements for long-tail few-shot classification, all while being as robust as the original representations. Finally, we show that MRL extends seamlessly to web-scale datasets (ImageNet, JFT) across various modalities -- vision (ViT, ResNet), vision + language (ALIGN) and language (BERT).
+
+### Jina Embeddings
+- https://huggingface.co/jinaai
+
+正式开源了两款双语向量模型：中英双语（Chinese-English）和英德双语（English-German）向量模型，这也是全球首次推出支持 8K 双语文本的开源向量模型。
+
+### BGE-M3
+- https://github.com/FlagOpen/FlagEmbedding
+- https://huggingface.co/BAAI/bge-m3
+
+In this project, we introduce BGE-M3, which is distinguished for its versatility in Multi-Functionality, Multi-Linguality, and Multi-Granularity.
+
+- Multi-Functionality: It can simultaneously perform the three common retrieval functionalities of embedding model: dense retrieval, multi-vector retrieval, and sparse retrieval.
+- Multi-Linguality: It can support more than 100 working languages.
+- Multi-Granularity: It is able to process inputs of different granularities, spanning from short sentences to long documents of up to 8192 tokens.
+
+## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
 - https://mp.weixin.qq.com/s/Q5Q3RpQ80XmpbfhSxq2R1Q
@@ -2668,5 +2728,16 @@ QAnything(Question and Answer based on Anything) is a local knowledge base quest
 With QAnything, you can simply drop any locally stored file of any format and receive accurate, fast, and reliable answers.
 
 Currently supported formats include: PDF, Word (doc/docx), PPT, Markdown, Eml, TXT, Images (jpg, png, etc.), Web links and more formats coming soon…
+
+### Meta-Prompting
+- https://arxiv.org/abs/2401.12954
+- https://github.com/suzgunmirac/meta-prompting
+
+We introduce meta-prompting, an effective scaffolding technique designed to enhance the functionality of language models (LMs). This approach transforms a single LM into a multi-faceted conductor, adept at managing and integrating multiple independent LM queries. By employing high-level instructions, meta-prompting guides the LM to break down complex tasks into smaller, more manageable subtasks. These subtasks are then handled by distinct "expert" instances of the same LM, each operating under specific, tailored instructions. Central to this process is the LM itself, in its role as the conductor, which ensures seamless communication and effective integration of the outputs from these expert models. It additionally employs its inherent critical thinking and robust verification processes to refine and authenticate the end result. This collaborative prompting approach empowers a single LM to simultaneously act as a comprehensive orchestrator and a panel of diverse experts, significantly enhancing its performance across a wide array of tasks. The zero-shot, task-agnostic nature of meta-prompting greatly simplifies user interaction by obviating the need for detailed, task-specific instructions. Furthermore, our research demonstrates the seamless integration of external tools, such as a Python interpreter, into the meta-prompting framework, thereby broadening its applicability and utility. Through rigorous experimentation with GPT-4, we establish the superiority of meta-prompting over conventional scaffolding methods: When averaged across all tasks, including the Game of 24, Checkmate-in-One, and Python Programming Puzzles, meta-prompting, augmented with a Python interpreter functionality, surpasses standard prompting by 17.1%, expert (dynamic) prompting by 17.3%, and multipersona prompting by 15.2%.
+
+### Lepton Search
+- https://github.com/leptonai/search_with_lepton
+
+Build your own conversational search engine using less than 500 lines of code.
 
 > 持续更新中 (Continuously Updated)... 
