@@ -56,7 +56,7 @@ Open-Source Language Model Pocket
 |*【ChatLM-Chinese-0.2B】|*【YAYI 2】|*【DeepSeek LLM&MoE】|
 |*【MachineMindset(MBTI)】|*【星辰语义（电信）】|*【Chinese-Mixtral-8x7B】|
 |*【Baby-Llama2-Chinese】|*【XVERSE-13B-256K】|*【Eagle 7B（RWKV-v5）】|
-|*【iFlytekSpark-13B】|||
+|*【iFlytekSpark-13B】|*【MiniCPM】||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -158,6 +158,7 @@ Open-Source Language Model Pocket
 |NexusRaven（function calling LLM）|LLaMA-MoE|
 |*【TinyLlama】|*【Nous-Hermes-2 Mixtral 8x7B】|
 |*【AlphaGeometry】|*【MoE-Mamba】|
+|*【StarCoder】|*【OLMo】|
 
 *训练/推理*
 |  |  |
@@ -195,7 +196,7 @@ Open-Source Language Model Pocket
 |*【OPO（On-the-fly Preference Optimization）】|*【ASPIRE】|
 |*【The Impact of Reasoning Step Length on Large Language Models】|*【SliceGPT】|
 |*【FuseLLM】|*【Tree of Thoughts】|
-|*【CogGPT】||
+|*【CogGPT】|*【KTO（Kahneman-Tversky Optimisation）】|
 
 *评价*
 |  |
@@ -238,7 +239,7 @@ Open-Source Language Model Pocket
 |HuggingGPT |CAMEL:Communicative Agents for “Mind” Exploration of Large Scale Language Model Society|
 |AgentLM (AgentTuning, AgentInstruct) |XAgent|
 |OpenAgents|*【Personal LLM Agents - Survey】|
-|*【AUTOACT】||
+|*【AUTOACT】|*【MetaGPT】|
 
 *其它*
 |  |  |
@@ -1084,6 +1085,22 @@ Proving mathematical theorems at the olympiad level represents a notable milesto
 
 State Space Models (SSMs) have become serious contenders in the field of sequential modeling, challenging the dominance of Transformers. At the same time, Mixture of Experts (MoE) has significantly improved Transformer-based LLMs, including recent state-of-the-art open-source models. We propose that to unlock the potential of SSMs for scaling, they should be combined with MoE. We showcase this on Mamba, a recent SSM-based model that achieves remarkable, Transformer-like performance. Our model, MoE-Mamba, outperforms both Mamba and Transformer-MoE. In particular, MoE-Mamba reaches the same performance as Mamba in 2.2x less training steps while preserving the inference performance gains of Mamba against the Transformer.
 
+### StarCoder
+- https://huggingface.co/bigcode/starcoder
+- https://github.com/bigcode-project/starcoder/tree/main
+- https://arxiv.org/abs/2305.06161
+
+The BigCode community, an open-scientific collaboration working on the responsible development of Large Language Models for Code (Code LLMs), introduces StarCoder and StarCoderBase: 15.5B parameter models with 8K context length, infilling capabilities and fast large-batch inference enabled by multi-query attention. StarCoderBase is trained on 1 trillion tokens sourced from The Stack, a large collection of permissively licensed GitHub repositories with inspection tools and an opt-out process. We fine-tuned StarCoderBase on 35B Python tokens, resulting in the creation of StarCoder. We perform the most comprehensive evaluation of Code LLMs to date and show that StarCoderBase outperforms every open Code LLM that supports multiple programming languages and matches or outperforms the OpenAI code-cushman-001 model. Furthermore, StarCoder outperforms every model that is fine-tuned on Python, can be prompted to achieve 40\% pass@1 on HumanEval, and still retains its performance on other programming languages. We take several important steps towards a safe open-access model release, including an improved PII redaction pipeline and a novel attribution tracing tool, and make the StarCoder models publicly available under a more commercially viable version of the Open Responsible AI Model license.
+
+### OLMo
+- https://allenai.org/olmo/olmo-paper.pdf
+- https://huggingface.co/allenai/OLMo-7B
+- https://github.com/allenai/OLMo
+- https://github.com/allenai/OLMo-Eval
+- https://github.com/allenai/open-instruct
+
+OLMo is a repository for training and using AI2's state-of-the-art open language models. It is built by scientists, for scientists.
+
 ### Colossal-LLaMA-2
 - https://github.com/hpcaitech/ColossalAI/tree/main/applications/Colossal-LLaMA-2
 
@@ -1370,6 +1387,11 @@ A brand new era for the RWKV-v5 architecture and linear transformer's has arrive
 - https://xihe.mindspore.cn/modelzoo/iflytek/introduce
 
 此次开源不仅包括基础模型iFlytekSpark-13B-base、精调模型iFlytekSpark-13B-chat，还有微调工具iFlytekSpark-13B-Lora，以及人设定制工具iFlytekSpark-13B-Charater。
+
+### MiniCPM
+- https://github.com/OpenBMB/MiniCPM
+
+MiniCPM 是面壁智能与清华大学自然语言处理实验室共同开源的系列端侧大模型，主体语言模型 MiniCPM-2B 仅有 24亿（2.4B）的非词嵌入参数量。
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
@@ -1769,6 +1791,17 @@ Language models are increasingly being deployed for general problem solving acro
 - https://arxiv.org/abs/2401.08438
 
 Cognitive dynamics are pivotal to advance human understanding of the world. Recent advancements in large language models (LLMs) reveal their potential for cognitive simulation. However, these LLM-based cognitive studies primarily focus on static modeling, overlooking the dynamic nature of cognition. To bridge this gap, we propose the concept of the cognitive dynamics of LLMs and present a corresponding task with the inspiration of longitudinal studies. Towards the task, we develop CogBench, a novel benchmark to assess the cognitive dynamics of LLMs and validate it through participant surveys. We also design two evaluation metrics for CogBench, including Authenticity and Rationality. Recognizing the inherent static nature of LLMs, we introduce CogGPT for the task, which features an innovative iterative cognitive mechanism aimed at enhancing lifelong cognitive dynamics. Empirical results demonstrate the superiority of CogGPT over existing methods, particularly in its ability to facilitate role-specific cognitive dynamics under continuous information flows.
+
+### KTO（Kahneman-Tversky Optimisation）
+- https://github.com/ContextualAI/HALOs/blob/main/assets/report.pdf
+- https://github.com/ContextualAI/HALOs
+
+This repo draws from the excellently written DPO repo and has preserved many design choices from the original. Some of the key changes we introduced are:
+
+- making data loading more modular, so that you can easily write your own dataloader
+- making trainers more modular, so that each HALO has its own trainer subclass
+- adding code for doing open-ended evaluation with GPT-4 as a judge
+- supporting losses beyond SFT and DPO (including KTO, PPO (offline, off-policy variant), and SLiC)
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -2744,6 +2777,12 @@ Personal LLM Agents are defined as a special type of LLM-based agents that are d
 - https://github.com/zjunlp/AutoAct
 
 Language agents have achieved considerable performance on various complex tasks. Despite the incessant exploration in this field, existing language agent systems still struggle with costly, non-reproducible data reliance and face the challenge of compelling a single model for multiple functions. To this end, we introduce AutoAct, an automatic agent learning framework that does not rely on large-scale annotated data and synthetic trajectories from closed-source models (e.g., GPT-4). Given limited data with a tool library, AutoAct first automatically synthesizes planning trajectories without any assistance from humans or strong closed-source models. Then, AutoAct leverages a division-of-labor strategy to automatically differentiate based on the target task information and synthesized trajectories, producing a sub-agent group to complete the task. We conduct comprehensive experiments with different LLMs, which demonstrates that AutoAct yields better or parallel performance compared to various strong baselines. We even notice that AutoAct, when using the Llama-2-13b model, can achieve performance comparable to that of the zero-shot GPT-3.5-Turbo agent.
+
+### MetaGPT
+- https://arxiv.org/abs/2308.00352
+- https://github.com/geekan/MetaGPT
+
+Remarkable progress has been made on automated problem solving through societies of agents based on large language models (LLMs). Existing LLM-based multi-agent systems can already solve simple dialogue tasks. Solutions to more complex tasks, however, are complicated through logic inconsistencies due to cascading hallucinations caused by naively chaining LLMs. Here we introduce MetaGPT, an innovative meta-programming framework incorporating efficient human workflows into LLM-based multi-agent collaborations. MetaGPT encodes Standardized Operating Procedures (SOPs) into prompt sequences for more streamlined workflows, thus allowing agents with human-like domain expertise to verify intermediate results and reduce errors. MetaGPT utilizes an assembly line paradigm to assign diverse roles to various agents, efficiently breaking down complex tasks into subtasks involving many agents working together. On collaborative software engineering benchmarks, MetaGPT generates more coherent solutions than previous chat-based multi-agent systems. 
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
