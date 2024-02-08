@@ -234,6 +234,7 @@ Open-Source Language Model Pocket
 |*【R-Judge】|
 |*【TravelPlanner】|
 |*【EasyJailbreak】|
+|*【AgentBench】|
 
 *文本向量*
 |  |  |
@@ -250,7 +251,7 @@ Open-Source Language Model Pocket
 |AgentLM (AgentTuning, AgentInstruct) |XAgent|
 |OpenAgents|*【Personal LLM Agents - Survey】|
 |*【AUTOACT】|*【MetaGPT】|
-|*【Multi-LLM-Agent】|*【AgentBench】|
+|*【Multi-LLM-Agent】||
 
 *其它*
 |  |  |
