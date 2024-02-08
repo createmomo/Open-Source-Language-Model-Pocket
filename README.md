@@ -1,7 +1,7 @@
 # 开源语言模型百宝袋 (Ver. 3.3)
 Open-Source Language Model Pocket
 
-🎇春节安好，所想皆如愿🎇
+🎇春节都安好，所想皆如愿🎇
 
 🎇All the best for the Spring Festival🎇
 
