@@ -56,7 +56,7 @@ Open-Source Language Model Pocket
 |*【ChatLM-Chinese-0.2B】|*【YAYI 2】|*【DeepSeek LLM&MoE】|
 |*【MachineMindset(MBTI)】|*【星辰语义（电信）】|*【Chinese-Mixtral-8x7B】|
 |*【Baby-Llama2-Chinese】|*【XVERSE-13B-256K】|*【Eagle 7B（RWKV-v5）】|
-|*【iFlytekSpark-13B】|*【MiniCPM】||
+|*【iFlytekSpark-13B】|*【MiniCPM】|*【通义千问Qwen1.5】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -91,16 +91,18 @@ Open-Source Language Model Pocket
 |---|---|
 |桃李|EduChat|
 |chatglm-maths|Abel|
-|*【InternLM-Math】||
+|*【InternLM-Math】|*【DeepSeekMath】|
 
 |表格/数据分析||
 |---|---|
 |TableGPT|Data-Copilot|
+|*【Tabular LLM】||
 
 |自媒体&角色扮演|
 |---|
 |MediaGPT|
 |CharacterGLM-6B|
+|*【Haruhi-Zero】|
 
 |古汉语|
 |---|
@@ -116,6 +118,7 @@ Open-Source Language Model Pocket
 |Magicoder|
 |KwaiAgents|
 |*【LLaMA-Pro】|
+|*【HuixiangDou】|
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -159,6 +162,7 @@ Open-Source Language Model Pocket
 |*【TinyLlama】|*【Nous-Hermes-2 Mixtral 8x7B】|
 |*【AlphaGeometry】|*【MoE-Mamba】|
 |*【StarCoder】|*【OLMo】|
+|*【H2O-Danube-1.8B】||
 
 *训练/推理*
 |  |  |
@@ -197,6 +201,9 @@ Open-Source Language Model Pocket
 |*【The Impact of Reasoning Step Length on Large Language Models】|*【SliceGPT】|
 |*【FuseLLM】|*【Tree of Thoughts】|
 |*【CogGPT】|*【KTO（Kahneman-Tversky Optimisation）】|
+|*【Aligner】|*【RPO（Robust Prompt Optimization）】|
+|*【Inference-Time Training Helps Long Text Generation】|*【LiPO】|
+|*【ChatLLM.cpp】|*【Self-Discover】|
 
 *评价*
 |  |
@@ -225,12 +232,15 @@ Open-Source Language Model Pocket
 |*【DebugBench: Evaluating Debugging Capability of Large Language Models】|
 |*【GenMedicalEval】|
 |*【R-Judge】|
+|*【TravelPlanner】|
+|*【EasyJailbreak】|
 
 *文本向量*
 |  |  |
 |---|---|
 | *【Matryoshka Representation Learning】 |*【Jina Embeddings】|
-|*【BGE-M3】||
+|*【BGE-M3】|*【Nomic Embed】|
+|*【Moka Massive Mixed Embedding（M3E）】||
 
 *Agent*
 |  |  |
@@ -240,6 +250,7 @@ Open-Source Language Model Pocket
 |AgentLM (AgentTuning, AgentInstruct) |XAgent|
 |OpenAgents|*【Personal LLM Agents - Survey】|
 |*【AUTOACT】|*【MetaGPT】|
+|*【Multi-LLM-Agent】|*【AgentBench】|
 
 *其它*
 |  |  |
@@ -255,7 +266,7 @@ Open-Source Language Model Pocket
 |*【TinyGSM】|*【MathPile】|
 |*【Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM】|*【Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding】|
 |*【QAnything】|*【Meta-Prompting】|
-|*【Lepton Search】||
+|*【Lepton Search】|*【RLMRec】|
 
 ---
 
@@ -601,6 +612,12 @@ We have established a new state-of-the-art performance across open-source LLMs (
 
 State-of-the-art bilingual open-sourced Math reasoning LLMs. A solver, prover, verifier, augmentor.
 
+### DeepSeekMath
+- https://arxiv.org/abs/2402.03300
+- https://github.com/deepseek-ai/DeepSeek-Math
+
+Mathematical reasoning poses a significant challenge for language models due to its complex and structured nature. In this paper, we introduce DeepSeekMath 7B, which continues pre-training DeepSeek-Coder-Base-v1.5 7B with 120B math-related tokens sourced from Common Crawl, together with natural language and code data. DeepSeekMath 7B has achieved an impressive score of 51.7% on the competition-level MATH benchmark without relying on external toolkits and voting techniques, approaching the performance level of Gemini-Ultra and GPT-4. Self-consistency over 64 samples from DeepSeekMath 7B achieves 60.9% on MATH. The mathematical reasoning capability of DeepSeekMath is attributed to two key factors: First, we harness the significant potential of publicly available web data through a meticulously engineered data selection pipeline. Second, we introduce Group Relative Policy Optimization (GRPO), a variant of Proximal Policy Optimization (PPO), that enhances mathematical reasoning abilities while concurrently optimizing the memory usage of PPO.
+
 ### ChatRWKV
 - https://github.com/BlinkDL/ChatRWKV
 
@@ -683,6 +700,15 @@ DISC-MedLLM 具有三个关键特点：
 - https://huggingface.co/spaces/zwq2018/Data-Copilot
 
 Data-Copilot 是一个基于 LLM 的系统，用于处理与数据相关的任务，连接了数十亿条数据和多样化的用户需求。它独立设计接口工具，以高效地管理、调用、处理和可视化数据。在接收到复杂请求时，Data-Copilot 会自主调用这些自设计的接口，构建一个工作流程来满足用户的意图。在没有人类协助的情况下，它能够熟练地将来自不同来源、不同格式的原始数据转化为人性化的输出，如图形、表格和文本。
+
+### Tabular LLM
+- https://github.com/SpursGoZmy/Tabular-LLM
+
+我们提出Tabular-LLM项目，项目的核心计划如下：
+
+- 探索不同类型表格的表示方法：训练LLM势必需要将表格转化为一个文本序列，ChatGPT等LLM使用Markdown格式来表示简单表格，但这种方法无法很好地表示更复杂的表格，比如包含合并单元格的层级表格，因此我们需要探索如何（统一）表示不同类型的表格，更多讨论见下一节。
+- 收集并整理涵盖多种类型表格、多种表格智能任务的数据：考虑学界目前研究较多的表格智能任务，收集开源的数据集并将其转化为指令微调格式的数据，以便用户按需选择。
+- 开源表格智能LLM并进行测试分析：利用收集到的数据去微调Alpaca-CoT等模型，构建首批面向表格智能任务的开源LLM，在此基础上对训练好的模型进行测试分析，比如测试训练后的模型在学界测试数据集上的表现，后续将相关实验结果整理为文档，希望能为大家提供一些有用的经验。
 
 ### DoctorGLM
 - https://github.com/xionghonglin/DoctorGLM
@@ -842,6 +868,12 @@ MediaGPT（曾用名Media LLaMA）首先在大规模自媒体语料上进行连�
 - https://arxiv.org/pdf/2311.16832.pdf
 
 In this paper, we present CharacterGLM, a series of models built upon ChatGLM, with model sizes ranging from 6B to 66B parameters. Our CharacterGLM is designed for generating Character-based Dialogues (CharacterDial), which aims to equip a conversational AI system with character customization for satisfying people's inherent social desires and emotional needs. On top of CharacterGLM, we can customize various AI characters or social agents by configuring their attributes (identities, interests, viewpoints, experiences, achievements, social relationships, etc.) and behaviors (linguistic features, emotional expressions, interaction patterns, etc.). Our model outperforms most mainstream close-source large langauge models, including the GPT series, especially in terms of consistency, human-likeness, and engagement according to manual evaluations. We will release our 6B version of CharacterGLM and a subset of training data to facilitate further research development in the direction of character-based dialogue generation.
+
+### Haruhi-Zero
+- https://github.com/LC1332/Zero-Haruhi
+- https://huggingface.co/silk-road/Haruhi-Zero-7B-0_3
+
+凉宫春日-Zero是一个同时支持Zero-Shot角色构造和RAG角色构造(原ChatHaruhi)的角色扮演模型。
 
 ### MeChat (Mental Health Support Chatbot)
 - https://github.com/qiuhuachuan/smile
@@ -1101,6 +1133,11 @@ The BigCode community, an open-scientific collaboration working on the responsib
 
 OLMo is a repository for training and using AI2's state-of-the-art open language models. It is built by scientists, for scientists.
 
+### H2O-Danube-1.8B
+- https://arxiv.org/abs/2401.16818
+
+We present H2O-Danube-1.8B, a 1.8B language model trained on 1T tokens following the core principles of LLama 2 and Mistral. We leverage and refine various techniques for pre-training large language models. Although our model is trained on significantly fewer total tokens compared to reference models of similar size, it exhibits highly competitive metrics across a multitude of benchmarks. We additionally release a chat model trained with supervised fine-tuning followed by direct preference optimization. We make H2O-Danube-1.8B openly available under Apache 2.0 license further democratizing LLMs to a wider audience economically.
+
 ### Colossal-LLaMA-2
 - https://github.com/hpcaitech/ColossalAI/tree/main/applications/Colossal-LLaMA-2
 
@@ -1176,6 +1213,12 @@ KwaiAgents is a series of Agent-related works open-sourced by the KwaiKEG from K
 - https://huggingface.co/TencentARC/LLaMA-Pro-8B
 
 LLaMA-Pro is a progressive version of the original LLaMA model, enhanced by the addition of Transformer blocks. It specializes in integrating both general language understanding and domain-specific knowledge, particularly in programming and mathematics.
+
+### HuixiangDou
+- https://github.com/InternLM/HuixiangDou
+- https://arxiv.org/abs/2401.08772 
+
+In this work, we present HuixiangDou, a technical assistant powered by Large Language Models (LLM). This system is designed to assist algorithm developers by providing insightful responses to questions related to open-source algorithm projects, such as computer vision and deep learning projects from OpenMMLab. We further explore the integration of this assistant into the group chats of instant messaging (IM) tools such as WeChat and Lark. Through several iterative improvements and trials, we have developed a sophisticated technical chat assistant capable of effectively answering users' technical questions without causing message flooding. This paper's contributions include: 1) Designing an algorithm pipeline specifically for group chat scenarios; 2) Verifying the reliable performance of text2vec in task rejection; 3) Identifying three critical requirements for LLMs in technical-assistant-like products, namely scoring ability, In-Context Learning (ICL), and Long Context.
 
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
@@ -1392,6 +1435,12 @@ A brand new era for the RWKV-v5 architecture and linear transformer's has arrive
 - https://github.com/OpenBMB/MiniCPM
 
 MiniCPM 是面壁智能与清华大学自然语言处理实验室共同开源的系列端侧大模型，主体语言模型 MiniCPM-2B 仅有 24亿（2.4B）的非词嵌入参数量。
+
+### 通义千问Qwen1.5
+- https://github.com/QwenLM/Qwen1.5
+- https://huggingface.co/spaces/Qwen/Qwen1.5-72B-Chat
+
+With Qwen1.5, we are open-sourcing base and chat models across six sizes: 0.5B, 1.8B, 4B, 7B, 14B, and 72B. In line with tradition, we’re also providing quantized models, including Int4 and Int8 GPTQ models, as well as AWQ and GGUF quantized models. 
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
@@ -1802,6 +1851,38 @@ This repo draws from the excellently written DPO repo and has preserved many des
 - making trainers more modular, so that each HALO has its own trainer subclass
 - adding code for doing open-ended evaluation with GPT-4 as a judge
 - supporting losses beyond SFT and DPO (including KTO, PPO (offline, off-policy variant), and SLiC)
+
+### Aligner
+- https://aligner2024.github.io
+- https://arxiv.org/abs/2402.02416
+
+Efforts to align Large Language Models (LLMs) are mainly conducted via Reinforcement Learning from Human Feedback (RLHF) methods. However, RLHF encounters major challenges including training reward models, actor-critic engineering, and importantly, it requires access to LLM parameters. Here we introduce Aligner, a new efficient alignment paradigm that bypasses the whole RLHF process by learning the correctional residuals between the aligned and the unaligned answers. Our Aligner offers several key advantages. Firstly, it is an autoregressive seq2seq model that is trained on the query-answer-correction dataset via supervised learning; this offers a parameter-efficient alignment solution with minimal resources. Secondly, the Aligner facilitates weak-to-strong generalization; finetuning large pretrained models by Aligner's supervisory signals demonstrates strong performance boost. Thirdly, Aligner functions as a model-agnostic plug-and-play module, allowing for its direct application on different open-source and API-based models. Remarkably, Aligner-7B improves 11 different LLMs by 21.9% in helpfulness and 23.8% in harmlessness on average (GPT-4 by 17.5% and 26.9%). When finetuning (strong) Llama2-70B with (weak) Aligner-13B's supervision, we can improve Llama2 by 8.2% in helpfulness and 61.6% in harmlessness. 
+
+### RPO（Robust Prompt Optimization）
+- https://arxiv.org/abs/2401.17263
+
+Despite advances in AI alignment, language models (LM) remain vulnerable to adversarial attacks or jailbreaking, in which adversaries modify input prompts to induce harmful behavior. While some defenses have been proposed, they focus on narrow threat models and fall short of a strong defense, which we posit should be effective, universal, and practical. To achieve this, we propose the first adversarial objective for defending LMs against jailbreaking attacks and an algorithm, robust prompt optimization (RPO), that uses gradient-based token optimization to enforce harmless outputs. This results in an easily accessible suffix that significantly improves robustness to both jailbreaks seen during optimization and unknown, held-out jailbreaks, reducing the attack success rate on Starling-7B from 84% to 8.66% across 20 jailbreaks. In addition, we find that RPO has a minor effect on benign use, is successful under adaptive attacks, and can transfer to black-box models, reducing the success rate of the strongest attack on GPT-4, GUARD, from 92% to 6%.
+
+### Inference-Time Training Helps Long Text Generation
+- https://arxiv.org/abs/2401.11504
+- https://github.com/TemporaryLoRA/Temp-LoRA/tree/main
+
+Long text generation, such as novel writing or discourse-level translation with extremely long contexts, presents significant challenges to current language models. Existing methods mainly focus on extending the model's context window through strategies like length extrapolation. However, these approaches demand substantial hardware resources during the training and/or inference phases. Our proposed method, Temp-Lora, introduces an alternative concept. Instead of relying on the KV cache to store all context information, Temp-Lora embeds this information directly into the model's parameters. In the process of long text generation, we use a temporary Lora module, progressively trained with text generated previously. This approach not only efficiently preserves contextual knowledge but also prevents any permanent alteration to the model's parameters given that the module is discarded post-generation. Extensive experiments on the PG19 language modeling benchmark and the GuoFeng discourse-level translation benchmark validate the effectiveness of Temp-Lora. Our results show that: 1) Temp-Lora substantially enhances generation quality for long texts, as indicated by a 13.2% decrease in perplexity on a subset of PG19, and a 29.6% decrease in perplexity along with a 53.2% increase in BLEU score on GuoFeng, 2) Temp-Lora is compatible with and enhances most existing long text generation methods, and 3) Temp-Lora can greatly reduce computational costs by shortening the context window. While ensuring a slight improvement in generation quality (a decrease of 3.8% in PPL), it enables a reduction of 70.5% in the FLOPs required for inference and a 51.5% decrease in latency.
+
+### LiPO
+- https://arxiv.org/abs/2402.01878
+
+Aligning language models (LMs) with curated human feedback is critical to control their behaviors in real-world applications. Several recent policy optimization methods, such as DPO and SLiC, serve as promising alternatives to the traditional Reinforcement Learning from Human Feedback (RLHF) approach. In practice, human feedback often comes in a format of a ranked list over multiple responses to amortize the cost of reading prompt. Multiple responses can also be ranked by reward models or AI feedback. There lacks such a study on directly fitting upon a list of responses. In this work, we formulate the LM alignment as a listwise ranking problem and describe the Listwise Preference Optimization (LiPO) framework, where the policy can potentially learn more effectively from a ranked list of plausible responses given the prompt. This view draws an explicit connection to Learning-to-Rank (LTR), where most existing preference optimization work can be mapped to existing ranking objectives, especially pairwise ones. Following this connection, we provide an examination of ranking objectives that are not well studied for LM alignment withDPO and SLiC as special cases when list size is two. In particular, we highlight a specific method, LiPO-{\lambda}, which leverages a state-of-the-art listwise ranking objective and weights each preference pair in a more advanced manner. We show that LiPO-{\lambda} can outperform DPO and SLiC by a clear margin on two preference alignment tasks.
+
+### ChatLLM.cpp
+- https://github.com/foldl/chatllm.cpp
+
+Inference of a bunch of models from less than 3B to more than 45B, for real-time chatting on your computer (CPU), pure C++ implementation based on @ggerganov's ggml.
+
+### Self-Discover
+- https://arxiv.org/abs/2402.03620
+
+We introduce SELF-DISCOVER, a general framework for LLMs to self-discover the task-intrinsic reasoning structures to tackle complex reasoning problems that are challenging for typical prompting methods. Core to the framework is a self-discovery process where LLMs select multiple atomic reasoning modules such as critical thinking and step-by-step thinking, and compose them into an explicit reasoning structure for LLMs to follow during decoding. SELF-DISCOVER substantially improves GPT-4 and PaLM 2's performance on challenging reasoning benchmarks such as BigBench-Hard, grounded agent reasoning, and MATH, by as much as 32% compared to Chain of Thought (CoT). Furthermore, SELF-DISCOVER outperforms inference-intensive methods such as CoT-Self-Consistency by more than 20%, while requiring 10-40x fewer inference compute. Finally, we show that the self-discovered reasoning structures are universally applicable across model families: from PaLM 2-L to GPT-4, and from GPT-4 to Llama2, and share commonalities with human reasoning patterns.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -2559,6 +2640,18 @@ Large Language Models (LLMs) have demonstrated exceptional coding capability. Ho
 
 Large language models (LLMs) have exhibited great potential in autonomously completing tasks across real-world applications. Despite this, these LLM agents introduce unexpected safety risks when operating in interactive environments. Instead of centering on LLM-generated content safety in most prior studies, this work addresses the imperative need for benchmarking the behavioral safety of LLM agents within diverse environments. We introduce R-Judge, a benchmark crafted to evaluate the proficiency of LLMs in judging safety risks given agent interaction records. R-Judge comprises 162 agent interaction records, encompassing 27 key risk scenarios among 7 application categories and 10 risk types. It incorporates human consensus on safety with annotated safety risk labels and high-quality risk descriptions. Utilizing R-Judge, we conduct a comprehensive evaluation of 8 prominent LLMs commonly employed as the backbone for agents. The best-performing model, GPT-4, achieves 72.29% in contrast to the human score of 89.38%, showing considerable room for enhancing the risk awareness of LLMs. Notably, leveraging risk descriptions as environment feedback significantly improves model performance, revealing the importance of salient safety risk feedback. Furthermore, we design an effective chain of safety analysis technique to help the judgment of safety risks and conduct an in-depth case study to facilitate future research.
 
+### TravelPlanner
+- https://osu-nlp-group.github.io/TravelPlanner/
+
+We introduce TravelPlanner: a comprehensive benchmark designed to evaluate the planning abilities of language agents in real-world scenarios across multiple dimensions. Without losing generality, TravelPlanner casts travel planning as its test environment, with all relevant information meticulously crafted to minimize data contamination. TravelPlanner does not have a singular ground truth for each query. Instead, the benchmark employs several pre-defined evaluation scripts to assess each tested plan, determining whether the language agent can effectively use tools to create a plan that aligns with both the implicit commonsense and explicit user needs outlined in the query (i.e., commonsense constraint and hard constraint). Every query in TravelPlanner has undergone thorough human verification to guarantee that feasible solutions exist. Additionally, TravelPlanner evaluates the language agent's capability by varying the breadth and depth of planning, controlled through the number of travel days and the quantity of hard constraints.
+
+### EasyJailbreak
+- https://github.com/EasyJailbreak/EasyJailbreak
+- http://easyjailbreak.cn/
+- https://easyjailbreak.github.io/EasyJailbreakDoc.github.io/
+
+EasyJailbreak is an easy-to-use Python framework designed for researchers and developers focusing on LLM security. Specifically, EasyJailbreak decomposes the mainstream jailbreaking process into several iterable steps: initialize mutation seeds, select suitable seeds, add constraint, mutate, attack, and evaluate. On this basis, EasyJailbreak provides a component for each step, constructing a playground for further research and attempts. More details can be found in our paper.
+
 ## 5 文本向量
 ### Matryoshka Representation Learning
 - https://arxiv.org/abs/2205.13147
@@ -2580,6 +2673,21 @@ In this project, we introduce BGE-M3, which is distinguished for its versatility
 - Multi-Functionality: It can simultaneously perform the three common retrieval functionalities of embedding model: dense retrieval, multi-vector retrieval, and sparse retrieval.
 - Multi-Linguality: It can support more than 100 working languages.
 - Multi-Granularity: It is able to process inputs of different granularities, spanning from short sentences to long documents of up to 8192 tokens.
+
+### Nomic Embed
+- https://github.com/nomic-ai/contrastors
+- https://static.nomic.ai/reports/2024_Nomic_Embed_Text_Technical_Report.pdf
+- https://arxiv.org/abs/2402.01613
+
+This technical report describes the training of nomic-embed-text-v1, the first fully reproducible, open-source, open-weights, open-data, 8192 context length English text embedding model that outperforms both OpenAI Ada-002 and OpenAI text-embedding-3-small on short and long-context tasks. We release the training code and model weights under an Apache 2 license. In contrast with other open-source models, we release a training data loader with 235 million curated text pairs that allows for the full replication of nomic-embed-text-v1.
+
+### Moka Massive Mixed Embedding（M3E）
+- https://huggingface.co/moka-ai/m3e-small
+
+- Moka，此模型由 MokaAI 训练，开源和评测，训练脚本使用 uniem ，评测 BenchMark 使用 MTEB-zh
+- Massive，此模型通过千万级 (2200w+) 的中文句对数据集进行训练
+- Mixed，此模型支持中英双语的同质文本相似度计算，异质文本检索等功能，未来还会支持代码检索
+- Embedding，此模型是文本嵌入模型，可以将自然语言转换成稠密的向量
 
 ## 6 其它
 ### Alpaca-CoT
@@ -2784,6 +2892,18 @@ Language agents have achieved considerable performance on various complex tasks.
 
 Remarkable progress has been made on automated problem solving through societies of agents based on large language models (LLMs). Existing LLM-based multi-agent systems can already solve simple dialogue tasks. Solutions to more complex tasks, however, are complicated through logic inconsistencies due to cascading hallucinations caused by naively chaining LLMs. Here we introduce MetaGPT, an innovative meta-programming framework incorporating efficient human workflows into LLM-based multi-agent collaborations. MetaGPT encodes Standardized Operating Procedures (SOPs) into prompt sequences for more streamlined workflows, thus allowing agents with human-like domain expertise to verify intermediate results and reduce errors. MetaGPT utilizes an assembly line paradigm to assign diverse roles to various agents, efficiently breaking down complex tasks into subtasks involving many agents working together. On collaborative software engineering benchmarks, MetaGPT generates more coherent solutions than previous chat-based multi-agent systems. 
 
+### Multi-LLM-Agent
+- https://github.com/X-PLUG/Multi-LLM-Agent
+- https://arxiv.org/abs/2401.07324
+
+Large Language Model (LLM) agents significantly extend the capabilities of standalone LLMs, empowering them to interact with external tools (e.g., APIs, functions) and complete complex tasks in a self-directed fashion. The challenge of tool use demands that LLMs not only understand user queries and generate answers but also excel in task planning, memory management, tool invocation, and result summarization. While traditional approaches focus on training a single LLM with all these capabilities, performance limitations become apparent, particularly with smaller models. Moreover, the entire LLM may require retraining when tools are updated. To overcome these challenges, we propose a novel strategy that decomposes the aforementioned capabilities into a planner, caller, and summarizer. Each component is implemented by a single LLM that focuses on a specific capability and collaborates with other components to accomplish the task. This modular framework facilitates individual updates and the potential use of smaller LLMs for building each capability. To effectively train this framework, we introduce a two-stage training paradigm. First, we fine-tune a backbone LLM on the entire dataset without discriminating sub-tasks, providing the model with a comprehensive understanding of the task. Second, the fine-tuned LLM is used to instantiate the planner, caller, and summarizer respectively, which are continually fine-tuned on respective sub-tasks. Evaluation across various tool-use benchmarks illustrates that our proposed multi-LLM framework surpasses the traditional single-LLM approach, highlighting its efficacy and advantages in tool learning.
+
+### AgentBench
+- https://llmbench.ai/agent
+- https://github.com/THUDM/AgentBench
+
+我们提出了AgentBench，这是一个多维演进基准测试，包括8个不同环境，用于评估大型语言模型（LLMs）在多回合开放式生成环境中的推理和决策能力。通过对25个语言模型的广泛测试，我们发现顶级商业语言模型在复杂环境中表现出色，且与开源模型之间存在显著差距。
+
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
 - https://arxiv.org/abs/2401.07851
@@ -2809,5 +2929,11 @@ We introduce meta-prompting, an effective scaffolding technique designed to enha
 - https://github.com/leptonai/search_with_lepton
 
 Build your own conversational search engine using less than 500 lines of code.
+
+### RLMRec
+- https://github.com/HKUDS/RLMRec
+- https://arxiv.org/abs/2310.15950
+
+Recommender systems have seen significant advancements with the influence of deep learning and graph neural networks, particularly in capturing complex user-item relationships. However, these graph-based recommenders heavily depend on ID-based data, potentially disregarding valuable textual information associated with users and items, resulting in less informative learned representations. Moreover, the utilization of implicit feedback data introduces potential noise and bias, posing challenges for the effectiveness of user preference learning. While the integration of large language models (LLMs) into traditional ID-based recommenders has gained attention, challenges such as scalability issues, limitations in text-only reliance, and prompt input constraints need to be addressed for effective implementation in practical recommender systems. To address these challenges, we propose a model-agnostic framework RLMRec that aims to enhance existing recommenders with LLM-empowered representation learning. It proposes a recommendation paradigm that integrates representation learning with LLMs to capture intricate semantic aspects of user behaviors and preferences. RLMRec incorporates auxiliary textual signals, develops a user/item profiling paradigm empowered by LLMs, and aligns the semantic space of LLMs with the representation space of collaborative relational signals through a cross-view alignment framework. This work further establish a theoretical foundation demonstrating that incorporating textual signals through mutual information maximization enhances the quality of representations. In our evaluation, we integrate RLMRec with state-of-the-art recommender models, while also analyzing its efficiency and robustness to noise data.
 
 > 持续更新中 (Continuously Updated)... 
