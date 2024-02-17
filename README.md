@@ -1,4 +1,4 @@
-# 开源语言模型百宝袋 (Ver. 3.3)
+# 开源语言模型百宝袋 (Ver. 3.4)
 Open-Source Language Model Pocket
 
 🎇春节都安好，所想皆如愿🎇
@@ -9,25 +9,6 @@ Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
-**相关文章**：
-- 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
-- [通俗理解文本生成的常用解码策略](https://mp.weixin.qq.com/s/sVZuEkYXQ9ZZYXJCQz7F4A)
-- [通俗理解P-tuning (GPT Understands)](https://mp.weixin.qq.com/s/EvD9OW115XMnrxOcC2BKDA)
-- [通俗理解Gradient Checkpoint（附代码）](https://mp.weixin.qq.com/s/IwcfUP_j6JYFXH_xhnWWJQ)
-- 千“垂”百炼：垂直领域与语言模型
-  - [导语](https://mp.weixin.qq.com/s/G24skuUbyrSatxWczVxEAg)
-  - 获得可用的垂直领域数据
-    - 【不限领域】[利用未标注文本改进遵循指令的语言模型 (1) Instruction Backtranslation 简介](https://mp.weixin.qq.com/s/50wtP--W_cy-682g8cOYww)
-    - 【医疗/健康】ChatDoctor （解读 [上](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg) [中](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw) [下](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg) / PDF版PPT [上](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf) [中](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%AD%EF%BC%89.pdf) [下](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8B%EF%BC%89.pdf)）
-    - 【医疗/健康】MedicalGPT-zh ([解读](https://mp.weixin.qq.com/s/QJKZYKh16fqLTC367WhzdA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MedicalGPT-zh.pdf))
-    - 【医疗/健康】明医(MING) ([解读](https://mp.weixin.qq.com/s/uM4FZeDhAc6JuMlW7NCvUA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MING.pdf))
-    - 【医疗/健康】灵心(SoulChat) ([解读](https://mp.weixin.qq.com/s/0HOYSr-zQsGLFL_H9UZ2HA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20SoulChat.pdf))
-  - 自动评估模型
-    - 【不限领域】[用语言模型评估语言模型（1）导语](https://mp.weixin.qq.com/s/SUN_ywkI8ld1edXY7uq_1Q)
-    - 【不限领域】[用语言模型评估语言模型（2）PandaLM](https://mp.weixin.qq.com/s/NTFu53MdVD9NusFJaORHcw)
-    - 【不限领域】用语言模型评估语言模型（3）Shepherd（[1](https://mp.weixin.qq.com/s/pbK1Zsv9j_DVtOJaTm_tPw) [2](https://mp.weixin.qq.com/s/n4_kVw8j42ZQv6VjQ_P-Dw) [3](https://mp.weixin.qq.com/s/PeGJOmQPyAhwl7czJgKnQQ) [4](https://mp.weixin.qq.com/s/7_NX7S2AHabX-xU254sq5g)）
-    - 【医疗/健康】[使用BERT-Score比较ChatDoctor与ChatGPT3.5](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg)
-
 **开源模型一览** (Table of Contents)：
 
 *中文友好或国内主创的开源模型（Chinese Open Source Language Models）*
@@ -37,7 +18,7 @@ Open-Source Language Model Pocket
 |百川|中文Alpaca Luotuo|中文LLaMA&Alpaca大模型|
 |中文LLaMA&Alpaca大模型2|流萤Firefly|凤凰|
 |复旦MOSS|复旦MOSS-RLHF|悟道·天鹰Aquila&Aquila2|
-|雅意大模型| 通义千问Qwen| 活字|
+|雅意大模型| 通义千问Qwen| *【活字3.0】|
 | Anima |BayLing|BELLE|
 |Bloom|BiLLa |BLOOMChat176B|
 |Chinese-Llama-2-7b (LinkSoul-AI) |GPT2 for Multiple Language |InternLM 书生・浦语|
@@ -52,11 +33,12 @@ Open-Source Language Model Pocket
 |MindLLM|ChatGLM3|Skywork大模型|
 |Yi-6B/34B（零一万物）|Nanbeige-16B（南北阁-16B）|OrionStar-Yi-34B-Chat|
 |源2.0|TechGPT2.0|SUS-Chat-34B|
-|Alaya 元识|OpenBuddy|*【MiniGPT4Qwen】|
-|*【ChatLM-Chinese-0.2B】|*【YAYI 2】|*【DeepSeek LLM&MoE】|
-|*【MachineMindset(MBTI)】|*【星辰语义（电信）】|*【Chinese-Mixtral-8x7B】|
-|*【Baby-Llama2-Chinese】|*【XVERSE-13B-256K】|*【Eagle 7B（RWKV-v5）】|
-|*【iFlytekSpark-13B】|*【MiniCPM】|*【通义千问Qwen1.5】|
+|Alaya 元识|OpenBuddy|MiniGPT4Qwen|
+|ChatLM-Chinese-0.2B|YAYI 2|DeepSeek LLM&MoE|
+|MachineMindset(MBTI)|星辰语义（电信）|Chinese-Mixtral-8x7B|
+|Baby-Llama2-Chinese|XVERSE-13B-256K|Eagle 7B（RWKV-v5）|
+|iFlytekSpark-13B|MiniCPM|通义千问Qwen1.5|
+|*【RethinkTinyLM】|||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -67,8 +49,8 @@ Open-Source Language Model Pocket
 |DoctorGLM|ChatMed-TCM&ChatMed-Consult|ChatGLM-Med|
 |MeChat|ShenNong-TCM-LLM|MindChat(漫谈): 心理大模型|
 |WiNGPT|CareGPT|孙思邈|
-|MolGen（药物研发）|Taiyi（太一）|*【MedAgents】|
-|*【Molecule Optimization】|||
+|MolGen（药物研发）|Taiyi（太一）|MedAgents|
+|Molecule Optimization|||
 
 |经济/金融|||
 |---|---|---|
@@ -91,23 +73,23 @@ Open-Source Language Model Pocket
 |---|---|
 |桃李|EduChat|
 |chatglm-maths|Abel|
-|*【InternLM-Math】|*【DeepSeekMath】|
+|InternLM-Math|DeepSeekMath|
 
 |表格/数据分析||
 |---|---|
 |TableGPT|Data-Copilot|
-|*【Tabular LLM】||
+|Tabular LLM||
 
 |自媒体&角色扮演|
 |---|
 |MediaGPT|
 |CharacterGLM-6B|
-|*【Haruhi-Zero】|
+|Haruhi-Zero|
 
 |古汉语|
 |---|
 |尔雅 Erya|
-|*【荀子】|
+|荀子|
 
 |编程/代码/Agent|
 |---|
@@ -117,15 +99,16 @@ Open-Source Language Model Pocket
 |DevOps-Model（运维）|
 |Magicoder|
 |KwaiAgents|
-|*【LLaMA-Pro】|
-|*【HuixiangDou】|
+|LLaMA-Pro|
+|HuixiangDou|
+|*【CodeAct】|
 
 |天文/海洋/地球科学/科学|
 |---|
 |星语StarWhisper|
 |OceanGPT|
-|*【K2&GeoGalactica】|
-|*【SciGLM】|
+|K2&GeoGalactica|
+|SciGLM|
 
 *可参考的其它开源模型*
 |  |  |
@@ -159,10 +142,11 @@ Open-Source Language Model Pocket
 |Phi|LLM360（Amber,CrystalCoder,Diamond）|
 |Mamba|SOLAR|
 |NexusRaven（function calling LLM）|LLaMA-MoE|
-|*【TinyLlama】|*【Nous-Hermes-2 Mixtral 8x7B】|
-|*【AlphaGeometry】|*【MoE-Mamba】|
-|*【StarCoder】|*【OLMo】|
-|*【H2O-Danube-1.8B】||
+|TinyLlama|Nous-Hermes-2 Mixtral 8x7B|
+|AlphaGeometry|MoE-Mamba|
+|StarCoder|OLMo|
+|H2O-Danube-1.8B|*【OpenMathInstruct-1】|
+|*【Smaug-72B】||
 
 *训练/推理*
 |  |  |
@@ -194,16 +178,16 @@ Open-Source Language Model Pocket
 |OpenRLHF|CoLLiE: Collaborative Training of Large Language Models in an Efficient Way|
 |Superalignment|LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models|
 |Large Language Model Unlearning|PowerInfer|
-|m-LoRA|*【LASER】|
-|*【StripedHyena-7B】|*【SwiftInfer】|
-|*【SPIN（Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models）】|*【Self-Rewarding Language Models】|
-|*【OPO（On-the-fly Preference Optimization）】|*【ASPIRE】|
-|*【The Impact of Reasoning Step Length on Large Language Models】|*【SliceGPT】|
-|*【FuseLLM】|*【Tree of Thoughts】|
-|*【CogGPT】|*【KTO（Kahneman-Tversky Optimisation）】|
-|*【Aligner】|*【RPO（Robust Prompt Optimization）】|
-|*【Inference-Time Training Helps Long Text Generation】|*【LiPO】|
-|*【ChatLLM.cpp】|*【Self-Discover】|
+|m-LoRA|LASER|
+|StripedHyena-7B|SwiftInfer|
+|SPIN（Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models）|Self-Rewarding Language Models|
+|OPO（On-the-fly Preference Optimization）|ASPIRE|
+|The Impact of Reasoning Step Length on Large Language Models|SliceGPT|
+|FuseLLM|Tree of Thoughts|
+|CogGPT|KTO（Kahneman-Tversky Optimisation）|
+|Aligner|RPO（Robust Prompt Optimization）|
+|Inference-Time Training Helps Long Text Generation|LiPO|
+|ChatLLM.cpp|Self-Discover|
 
 *评价*
 |  |
@@ -228,20 +212,21 @@ Open-Source Language Model Pocket
 |Purple Llama (Meta)|
 |OMGEval|
 |SciGuard&SciMT-Safety|
-|*【HaluEval 2.0, The Dawn After the Dark: An Empirical Study on Factuality Hallucination in Large Language Models】|
-|*【DebugBench: Evaluating Debugging Capability of Large Language Models】|
-|*【GenMedicalEval】|
-|*【R-Judge】|
-|*【TravelPlanner】|
-|*【EasyJailbreak】|
-|*【AgentBench】|
+|HaluEval 2.0, The Dawn After the Dark: An Empirical Study on Factuality Hallucination in Large Language Models|
+|DebugBench: Evaluating Debugging Capability of Large Language Models|
+|GenMedicalEval|
+|R-Judge|
+|TravelPlanner|
+|EasyJailbreak|
+|AgentBench|
+|*【中文MT-Bench】|
 
 *文本向量*
 |  |  |
 |---|---|
-| *【Matryoshka Representation Learning】 |*【Jina Embeddings】|
-|*【BGE-M3】|*【Nomic Embed】|
-|*【Moka Massive Mixed Embedding（M3E）】||
+| Matryoshka Representation Learning |Jina Embeddings|
+|BGE-M3|Nomic Embed|
+|Moka Massive Mixed Embedding（M3E）||
 
 *Agent*
 |  |  |
@@ -249,9 +234,9 @@ Open-Source Language Model Pocket
 | Auto-GPT | ToolBench&ToolLLM |
 |HuggingGPT |CAMEL:Communicative Agents for “Mind” Exploration of Large Scale Language Model Society|
 |AgentLM (AgentTuning, AgentInstruct) |XAgent|
-|OpenAgents|*【Personal LLM Agents - Survey】|
-|*【AUTOACT】|*【MetaGPT】|
-|*【Multi-LLM-Agent】||
+|OpenAgents|Personal LLM Agents - Survey|
+|AUTOACT|MetaGPT|
+|Multi-LLM-Agent|*【More Agents Is All You Need】|
 
 *其它*
 |  |  |
@@ -264,10 +249,32 @@ Open-Source Language Model Pocket
 | LLM-Pruner: On the Structural Pruning of Large Language Models | LLM for Recommendation Systems |
 |Transformer Index for GEnerative Recommenders (TIGER)|KnowPAT|
 |AuthentiGPT: Detecting Machine-Generated Text|Curiosity-driven Red-teaming for Large Language Models|Language Models are Super Mario（DARE, Drop And REscale）|
-|*【TinyGSM】|*【MathPile】|
-|*【Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM】|*【Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding】|
-|*【QAnything】|*【Meta-Prompting】|
-|*【Lepton Search】|*【RLMRec】|
+|TinyGSM|MathPile|
+|Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM|Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding|
+|QAnything|Meta-Prompting|
+|Lepton Search|RLMRec|
+|*【Open-Source AI Cookbook】|*【MaLA-500】|
+|*【NVIDIA Chat with RTX】|*【RAG vs Fine-tuning】|
+|*【Chain of Abstraction】||
+
+**相关文章**：
+- 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
+- [通俗理解文本生成的常用解码策略](https://mp.weixin.qq.com/s/sVZuEkYXQ9ZZYXJCQz7F4A)
+- [通俗理解P-tuning (GPT Understands)](https://mp.weixin.qq.com/s/EvD9OW115XMnrxOcC2BKDA)
+- [通俗理解Gradient Checkpoint（附代码）](https://mp.weixin.qq.com/s/IwcfUP_j6JYFXH_xhnWWJQ)
+- 千“垂”百炼：垂直领域与语言模型
+  - [导语](https://mp.weixin.qq.com/s/G24skuUbyrSatxWczVxEAg)
+  - 获得可用的垂直领域数据
+    - 【不限领域】[利用未标注文本改进遵循指令的语言模型 (1) Instruction Backtranslation 简介](https://mp.weixin.qq.com/s/50wtP--W_cy-682g8cOYww)
+    - 【医疗/健康】ChatDoctor （解读 [上](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg) [中](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw) [下](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg) / PDF版PPT [上](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf) [中](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%AD%EF%BC%89.pdf) [下](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8B%EF%BC%89.pdf)）
+    - 【医疗/健康】MedicalGPT-zh ([解读](https://mp.weixin.qq.com/s/QJKZYKh16fqLTC367WhzdA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MedicalGPT-zh.pdf))
+    - 【医疗/健康】明医(MING) ([解读](https://mp.weixin.qq.com/s/uM4FZeDhAc6JuMlW7NCvUA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MING.pdf))
+    - 【医疗/健康】灵心(SoulChat) ([解读](https://mp.weixin.qq.com/s/0HOYSr-zQsGLFL_H9UZ2HA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20SoulChat.pdf))
+  - 自动评估模型
+    - 【不限领域】[用语言模型评估语言模型（1）导语](https://mp.weixin.qq.com/s/SUN_ywkI8ld1edXY7uq_1Q)
+    - 【不限领域】[用语言模型评估语言模型（2）PandaLM](https://mp.weixin.qq.com/s/NTFu53MdVD9NusFJaORHcw)
+    - 【不限领域】用语言模型评估语言模型（3）Shepherd（[1](https://mp.weixin.qq.com/s/pbK1Zsv9j_DVtOJaTm_tPw) [2](https://mp.weixin.qq.com/s/n4_kVw8j42ZQv6VjQ_P-Dw) [3](https://mp.weixin.qq.com/s/PeGJOmQPyAhwl7czJgKnQQ) [4](https://mp.weixin.qq.com/s/7_NX7S2AHabX-xU254sq5g)）
+    - 【医疗/健康】[使用BERT-Score比较ChatDoctor与ChatGPT3.5](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg)
 
 ---
 
@@ -468,6 +475,8 @@ PICA 以清华大学开源的ChatGLM2-6B为基础，采用Prompt tuning技术在
 - https://github.com/HIT-SCIR/huozi
 
 大规模语言模型（LLM）在自然语言处理的通用领域已取得了令人瞩目的成功。对于广泛的应用场景，这种技术展示了强大的潜力，学术界和工业界的兴趣也持续升温。哈工大自然语言处理研究所30余位老师和学生参与开发了通用对话大模型活字1.0，哈工大社会计算与信息检索研究中心(哈工大-SCIR)研发了活字2.0，致力于为自然语言处理的研究和实际应用提供更多可能性和选择。
+
+活字3.0是基于Chinese-Mixtral-8x7B，在大约30万行指令数据上微调得到的模型。该模型支持32K上下文，能够有效处理长文本。活字3.0继承了基座模型丰富的中英文知识，并在数学推理、代码生成等任务上具有强大性能。经过指令微调，活字3.0还在指令遵循能力和安全性方面实现了显著提升。
 
 ### 韩非 HanFei
 - https://github.com/siat-nlp/HanFei
@@ -1139,6 +1148,19 @@ OLMo is a repository for training and using AI2's state-of-the-art open language
 
 We present H2O-Danube-1.8B, a 1.8B language model trained on 1T tokens following the core principles of LLama 2 and Mistral. We leverage and refine various techniques for pre-training large language models. Although our model is trained on significantly fewer total tokens compared to reference models of similar size, it exhibits highly competitive metrics across a multitude of benchmarks. We additionally release a chat model trained with supervised fine-tuning followed by direct preference optimization. We make H2O-Danube-1.8B openly available under Apache 2.0 license further democratizing LLMs to a wider audience economically.
 
+### OpenMathInstruct-1
+- https://arxiv.org/abs/2402.10176
+- https://huggingface.co/collections/nvidia/openmath-65c5619de2ba059be0775014
+
+Recent work has shown the immense potential of synthetically generated datasets for training large language models (LLMs), especially for acquiring targeted skills. Current large-scale math instruction tuning datasets such as MetaMathQA (Yu et al., 2024) and MAmmoTH (Yue et al., 2024) are constructed using outputs from closed-source LLMs with commercially restrictive licenses. A key reason limiting the use of open-source LLMs in these data generation pipelines has been the wide gap between the mathematical skills of the best closed-source LLMs, such as GPT-4, and the best open-source LLMs. Building on the recent progress in open-source LLMs, our proposed prompting novelty, and some brute-force scaling, we construct OpenMathInstruct-1, a math instruction tuning dataset with 1.8M problem-solution pairs. The dataset is constructed by synthesizing code-interpreter solutions for GSM8K and MATH, two popular math reasoning benchmarks, using the recently released and permissively licensed Mixtral model. Our best model, OpenMath-CodeLlama-70B, trained on a subset of OpenMathInstruct-1, achieves a score of 84.6% on GSM8K and 50.7% on MATH, which is competitive with the best gpt-distilled models. We release our code, models, and the OpenMathInstruct-1 dataset under a commercially permissive license.
+
+### Smaug-72B
+- https://huggingface.co/abacusai/Smaug-72B-v0.1
+
+We recently released Smaug-72B-v0.1 which has taken first place on the Open LLM Leaderboard by HuggingFace. It is the first open-source model to have an average score more than 80.
+
+Smaug-72B is finetuned directly from moreh/MoMo-72B-lora-1.8.7-DPO and is ultimately based on Qwen-72B.
+
 ### Colossal-LLaMA-2
 - https://github.com/hpcaitech/ColossalAI/tree/main/applications/Colossal-LLaMA-2
 
@@ -1220,6 +1242,12 @@ LLaMA-Pro is a progressive version of the original LLaMA model, enhanced by the 
 - https://arxiv.org/abs/2401.08772 
 
 In this work, we present HuixiangDou, a technical assistant powered by Large Language Models (LLM). This system is designed to assist algorithm developers by providing insightful responses to questions related to open-source algorithm projects, such as computer vision and deep learning projects from OpenMMLab. We further explore the integration of this assistant into the group chats of instant messaging (IM) tools such as WeChat and Lark. Through several iterative improvements and trials, we have developed a sophisticated technical chat assistant capable of effectively answering users' technical questions without causing message flooding. This paper's contributions include: 1) Designing an algorithm pipeline specifically for group chat scenarios; 2) Verifying the reliable performance of text2vec in task rejection; 3) Identifying three critical requirements for LLMs in technical-assistant-like products, namely scoring ability, In-Context Learning (ICL), and Long Context.
+
+### CodeAct
+- https://arxiv.org/pdf/2402.01030.pdf
+- https://github.com/xingyaoww/code-act
+
+Large Language Model (LLM) agents, capable of performing a broad range of actions, such as invoking tools and controlling robots, show great potential in tackling real-world challenges. LLM agents are typically prompted to produce actions by generating JSON or text in a pre-defined format, which is usually limited by constrained action space (e.g., the scope of pre-defined tools) and restricted flexibility (e.g., inability to compose multiple tools). This work proposes to use executable Python code to consolidate LLM agents' actions into a unified action space (CodeAct). Integrated with a Python interpreter, CodeAct can execute code actions and dynamically revise prior actions or emit new actions upon new observations through multi-turn interactions. Our extensive analysis of 17 LLMs on API-Bank and a newly curated benchmark shows that CodeAct outperforms widely used alternatives (up to 20% higher success rate). The encouraging performance of CodeAct motivates us to build an open-source LLM agent that interacts with environments by executing interpretable code and collaborates with users using natural language. To this end, we collect an instruction-tuning dataset CodeActInstruct that consists of 7k multi-turn interactions using CodeAct. We show that it can be used with existing data to improve models in agent-oriented tasks without compromising their general capability. CodeActAgent, finetuned from Llama2 and Mistral, is integrated with Python interpreter and uniquely tailored to perform sophisticated tasks (e.g., model training) using existing libraries and autonomously self-debug.
 
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
@@ -1442,6 +1470,13 @@ MiniCPM 是面壁智能与清华大学自然语言处理实验室共同开源的
 - https://huggingface.co/spaces/Qwen/Qwen1.5-72B-Chat
 
 With Qwen1.5, we are open-sourcing base and chat models across six sizes: 0.5B, 1.8B, 4B, 7B, 14B, and 72B. In line with tradition, we’re also providing quantized models, including Int4 and Int8 GPTQ models, as well as AWQ and GGUF quantized models. 
+
+### RethinkTinyLM
+- https://github.com/YuchuanTian/RethinkTinyLM
+- https://arxiv.org/pdf/2312.17276.pdf
+- https://arxiv.org/pdf/2402.02791.pdf
+
+The power of large language models (LLMs) has been demonstrated through numerous data and computing resources. However, the application of language models on mobile devices is facing huge challenge on the computation and memory costs, that is, tiny language models with high performance are urgently required. Limited by the highly complex training process, there are many details for optimizing language models that are seldom studied carefully. In this study, based on a tiny language model with 1B parameters, we carefully design a series of empirical study to analyze the effect of each component. Three perspectives are mainly discussed, \ie, neural architecture, parameter initialization, and optimization strategy. Several design formulas are empirically proved especially effective for tiny language models, including tokenizer compression, architecture tweaking, parameter inheritance and multiple-round training. Then we train PanGu-\pi-1B Pro and PanGu-\pi-1.5B Pro on 1.6T multilingual corpora, following the established formulas. Experimental results demonstrate the improved optimization and architecture yield a notable average improvement of 8.87 on benchmark evaluation sets for PanGu-\pi-1B Pro. Besides, PanGu-\pi-1.5B Pro surpasses a range of SOTA models with larger model sizes, validating its superior performance. 
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
@@ -2899,11 +2934,22 @@ Remarkable progress has been made on automated problem solving through societies
 
 Large Language Model (LLM) agents significantly extend the capabilities of standalone LLMs, empowering them to interact with external tools (e.g., APIs, functions) and complete complex tasks in a self-directed fashion. The challenge of tool use demands that LLMs not only understand user queries and generate answers but also excel in task planning, memory management, tool invocation, and result summarization. While traditional approaches focus on training a single LLM with all these capabilities, performance limitations become apparent, particularly with smaller models. Moreover, the entire LLM may require retraining when tools are updated. To overcome these challenges, we propose a novel strategy that decomposes the aforementioned capabilities into a planner, caller, and summarizer. Each component is implemented by a single LLM that focuses on a specific capability and collaborates with other components to accomplish the task. This modular framework facilitates individual updates and the potential use of smaller LLMs for building each capability. To effectively train this framework, we introduce a two-stage training paradigm. First, we fine-tune a backbone LLM on the entire dataset without discriminating sub-tasks, providing the model with a comprehensive understanding of the task. Second, the fine-tuned LLM is used to instantiate the planner, caller, and summarizer respectively, which are continually fine-tuned on respective sub-tasks. Evaluation across various tool-use benchmarks illustrates that our proposed multi-LLM framework surpasses the traditional single-LLM approach, highlighting its efficacy and advantages in tool learning.
 
+### More Agents Is All You Need
+- https://arxiv.org/abs/2402.05120
+- https://anonymous.4open.science/r/more_agent_is_all_you_need
+
+We find that, simply via a sampling-and-voting method, the performance of large language models (LLMs) scales with the number of agents instantiated. Also, this method is orthogonal to existing complicated methods to further enhance LLMs, while the degree of enhancement is correlated to the task difficulty. We conduct comprehensive experiments on a wide range of LLM benchmarks to verify the presence of our finding, and to study the properties that can facilitate its occurrence.
+
 ### AgentBench
 - https://llmbench.ai/agent
 - https://github.com/THUDM/AgentBench
 
 我们提出了AgentBench，这是一个多维演进基准测试，包括8个不同环境，用于评估大型语言模型（LLMs）在多回合开放式生成环境中的推理和决策能力。通过对25个语言模型的广泛测试，我们发现顶级商业语言模型在复杂环境中表现出色，且与开源模型之间存在显著差距。
+
+### 中文MT-Bench
+- https://github.com/HIT-SCIR/huozi
+
+本数据集是英文MT-Bench对话能力评测数据集的中文版。它包含了一系列多轮对话问题，每一组问题都经过了精心的人工校对，并为适应中文语境进行了必要的调整。
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
@@ -2936,5 +2982,32 @@ Build your own conversational search engine using less than 500 lines of code.
 - https://arxiv.org/abs/2310.15950
 
 Recommender systems have seen significant advancements with the influence of deep learning and graph neural networks, particularly in capturing complex user-item relationships. However, these graph-based recommenders heavily depend on ID-based data, potentially disregarding valuable textual information associated with users and items, resulting in less informative learned representations. Moreover, the utilization of implicit feedback data introduces potential noise and bias, posing challenges for the effectiveness of user preference learning. While the integration of large language models (LLMs) into traditional ID-based recommenders has gained attention, challenges such as scalability issues, limitations in text-only reliance, and prompt input constraints need to be addressed for effective implementation in practical recommender systems. To address these challenges, we propose a model-agnostic framework RLMRec that aims to enhance existing recommenders with LLM-empowered representation learning. It proposes a recommendation paradigm that integrates representation learning with LLMs to capture intricate semantic aspects of user behaviors and preferences. RLMRec incorporates auxiliary textual signals, develops a user/item profiling paradigm empowered by LLMs, and aligns the semantic space of LLMs with the representation space of collaborative relational signals through a cross-view alignment framework. This work further establish a theoretical foundation demonstrating that incorporating textual signals through mutual information maximization enhances the quality of representations. In our evaluation, we integrate RLMRec with state-of-the-art recommender models, while also analyzing its efficiency and robustness to noise data.
+
+### Open-Source AI Cookbook
+- https://huggingface.co/learn/cookbook/
+
+The Open-Source AI Cookbook is a collection of notebooks illustrating practical aspects of building AI applications and solving various machine learning tasks using open-source tools and models.
+
+### MaLA-500
+- https://huggingface.co/MaLA-LM/mala-500
+- https://arxiv.org/abs/2401.13303
+
+Large language models have advanced the state of the art in natural language processing. However, their predominant design for English or a limited set of languages creates a substantial gap in their effectiveness for low-resource languages. To bridge this gap, we introduce MaLA-500, a novel large language model designed to cover an extensive range of 534 languages. To train MaLA-500, we employ vocabulary extension and continued pretraining on LLaMA 2 with Glot500-c. Our experiments on SIB-200 show that MaLA-500 achieves state-of-the-art in-context learning results.
+
+### NVIDIA Chat with RTX
+- https://www.nvidia.com/en-us/ai-on-rtx/chat-with-rtx-generative-ai/
+
+Chat With RTX is a demo app that lets you personalize a GPT large language model (LLM) connected to your own content—docs, notes, videos, or other data. Leveraging retrieval-augmented generation (RAG), TensorRT-LLM, and RTX acceleration, you can query a custom chatbot to quickly get contextually relevant answers. And because it all runs locally on your Windows RTX PC or workstation, you’ll get fast and secure results.
+
+### RAG vs Fine-tuning
+- https://arxiv.org/pdf/2401.08406.pdf
+
+There are two common ways in which developers are incorporating proprietary and domain-specific data when building applications of Large Language Models (LLMs): Retrieval-Augmented Generation (RAG) and Fine-Tuning. RAG augments the prompt with the external data, while fine-Tuning incorporates the additional knowledge into the model itself. However, the pros and cons of both approaches are not well understood. In this paper, we propose a pipeline for fine-tuning and RAG, and present the tradeoffs of both for multiple popular LLMs, including Llama2-13B, GPT-3.5, and GPT-4. Our pipeline consists of multiple stages, including extracting information from PDFs, generating questions and answers, using them for fine-tuning, and leveraging GPT-4 for evaluating the results. We propose metrics to assess the performance of different stages of the RAG and fine-Tuning pipeline. We conduct an in-depth study on an agricultural dataset. Agriculture as an industry has not seen much penetration of AI, and we study a potentially disruptive application - what if we could provide location-specific insights to a farmer? Our results show the effectiveness of our dataset generation pipeline in capturing geographic-specific knowledge, and the quantitative and qualitative benefits of RAG and fine-tuning. We see an accuracy increase of over 6 p.p. when fine-tuning the model and this is cumulative with RAG, which increases accuracy by 5 p.p. further. In one particular experiment, we also demonstrate that the fine-tuned model leverages information from across geographies to answer specific questions, increasing answer similarity from 47% to 72%. Overall, the results point to how systems built using LLMs can be adapted to respond and incorporate knowledge across a dimension that is critical for a specific industry, paving the way for further applications of LLMs in other industrial domains.
+
+### Chain of Abstraction
+- https://arxiv.org/pdf/2401.17464.pdf
+
+To achieve faithful reasoning that aligns with human expectations, large language models (LLMs) need to ground their reasoning to real-world knowledge (e.g., web facts, math and physical rules). Tools help LLMs access this external knowledge, but there remains challenges for fine-tuning LLM agents (e.g., Toolformer) to invoke tools in multi-step reasoning problems, where inter-connected tool calls require holistic and efficient tool usage planning.
+In this work, we propose a new method for LLMs to better leverage tools in multi-step reasoning. Our method, Chain-of-Abstraction (CoA), trains LLMs to first decode reasoning chains with abstract placeholders, and then call domain tools to reify each reasoning chain by filling in specific knowledge. This planning with abstract chains enables LLMs to learn more general reasoning strategies, which are robust to shifts of domain knowledge (e.g., math results) relevant to different reasoning questions. It also allows LLMs to perform decoding and calling of external tools in parallel, which avoids the inference delay caused by waiting for tool responses. In mathematical reasoning and Wiki QA domains, we show that our method consistently outperforms previous chain-of-thought and tool-augmented baselines on both in-distribution and out-of-distribution test sets, with an average ~6% absolute QA accuracy improvement. LLM agents trained with our method also show more efficient tool use, with inference speed being on average ~1.4x faster than baseline tool-augmented LLMs.
 
 > 持续更新中 (Continuously Updated)... 
