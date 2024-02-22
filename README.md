@@ -146,7 +146,8 @@ Open-Source Language Model Pocket
 |AlphaGeometry|MoE-Mamba|
 |StarCoder|OLMo|
 |H2O-Danube-1.8B|*【OpenMathInstruct-1】|
-|*【Smaug-72B】||
+|*【Smaug-72B】|*【Gemma】|
+|*【Aya Model】||
 
 *训练/推理*
 |  |  |
@@ -188,38 +189,26 @@ Open-Source Language Model Pocket
 |Aligner|RPO（Robust Prompt Optimization）|
 |Inference-Time Training Helps Long Text Generation|LiPO|
 |ChatLLM.cpp|Self-Discover|
+|*【DoRA】|*【GPO（Generalized Preference Optimization）】|
 
 *评价*
-|  |
-|---|
-| 天秤（FlagEval） |
-| 獬豸（Xiezhi）Benchmark |
-| C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models |
-| HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models|
-| KoLA: Carefully Benchmarking World Knowledge of Large Language Models |
-|LucyEval—中文大语言模型成熟度评测|
-|CMB: A Comprehensive Medical Benchmark in Chinese|
-| Multiscale Positive-Unlabeled Detection of AI-Generated Texts |
-| PandaLM |
-|Auto-J|
-|CLEVA: Chinese Language Models EVAluation Platform|
-|ALCUNA: Large Language Models Meet New Knowledge|
-|HalluQA：Evaluating Hallucinations in Chinese Large Language Models|
-|GLoRE: Evaluating Logical Reasoning of Large Language Models|
-|HelpSteer|
-|AlignBench: 多维度中文对齐评测基准|
-|UHGEval|
-|Purple Llama (Meta)|
-|OMGEval|
-|SciGuard&SciMT-Safety|
-|HaluEval 2.0, The Dawn After the Dark: An Empirical Study on Factuality Hallucination in Large Language Models|
-|DebugBench: Evaluating Debugging Capability of Large Language Models|
-|GenMedicalEval|
-|R-Judge|
-|TravelPlanner|
-|EasyJailbreak|
-|AgentBench|
-|*【中文MT-Bench】|
+|  ||
+|---|---|
+| 天秤（FlagEval） |獬豸（Xiezhi）Benchmark |
+| C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models | HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models|
+| KoLA: Carefully Benchmarking World Knowledge of Large Language Models |LucyEval—中文大语言模型成熟度评测|
+|CMB: A Comprehensive Medical Benchmark in Chinese|Multiscale Positive-Unlabeled Detection of AI-Generated Texts |
+| PandaLM |Auto-J|
+|CLEVA: Chinese Language Models EVAluation Platform|ALCUNA: Large Language Models Meet New Knowledge|
+|HalluQA：Evaluating Hallucinations in Chinese Large Language Models|GLoRE: Evaluating Logical Reasoning of Large Language Models|
+|HelpSteer|AlignBench: 多维度中文对齐评测基准|
+|UHGEval|Purple Llama (Meta)|
+|OMGEval|SciGuard&SciMT-Safety|
+|HaluEval 2.0, The Dawn After the Dark: An Empirical Study on Factuality Hallucination in Large Language Models|DebugBench: Evaluating Debugging Capability of Large Language Models|GenMedicalEval|
+|R-Judge|TravelPlanner|
+|EasyJailbreak|AgentBench|
+|*【中文MT-Bench】|*【E-EVAL】|
+|*【ConflictingQA】|*【Medical Information Retrieval-Augmented Generation Evaluation （MIRAGE）】|
 
 *文本向量*
 |  |  |
@@ -237,6 +226,7 @@ Open-Source Language Model Pocket
 |OpenAgents|Personal LLM Agents - Survey|
 |AUTOACT|MetaGPT|
 |Multi-LLM-Agent|*【More Agents Is All You Need】|
+|*【Mistral-Interact】||
 
 *其它*
 |  |  |
@@ -1161,6 +1151,17 @@ We recently released Smaug-72B-v0.1 which has taken first place on the Open LLM 
 
 Smaug-72B is finetuned directly from moreh/MoMo-72B-lora-1.8.7-DPO and is ultimately based on Qwen-72B.
 
+### Gemma
+- https://ai.google.dev/gemma/
+
+A family of lightweight, state-of-the art open models built from the same research and technology used to create the Gemini models.
+
+### Aya Model
+- https://arxiv.org/abs/2402.07827
+- https://hf.co/CohereForAI/aya-101
+
+Recent breakthroughs in large language models (LLMs) have centered around a handful of data-rich languages. What does it take to broaden access to breakthroughs beyond first-class citizen languages? Our work introduces Aya, a massively multilingual generative language model that follows instructions in 101 languages of which over 50% are considered as lower-resourced. Aya outperforms mT0 and BLOOMZ on the majority of tasks while covering double the number of languages. We introduce extensive new evaluation suites that broaden the state-of-art for multilingual eval across 99 languages -- including discriminative and generative tasks, human evaluation, and simulated win rates that cover both held-out tasks and in-distribution performance. Furthermore, we conduct detailed investigations on the optimal finetuning mixture composition, data pruning, as well as the toxicity, bias, and safety of our models.
+
 ### Colossal-LLaMA-2
 - https://github.com/hpcaitech/ColossalAI/tree/main/applications/Colossal-LLaMA-2
 
@@ -1919,6 +1920,17 @@ Inference of a bunch of models from less than 3B to more than 45B, for real-time
 - https://arxiv.org/abs/2402.03620
 
 We introduce SELF-DISCOVER, a general framework for LLMs to self-discover the task-intrinsic reasoning structures to tackle complex reasoning problems that are challenging for typical prompting methods. Core to the framework is a self-discovery process where LLMs select multiple atomic reasoning modules such as critical thinking and step-by-step thinking, and compose them into an explicit reasoning structure for LLMs to follow during decoding. SELF-DISCOVER substantially improves GPT-4 and PaLM 2's performance on challenging reasoning benchmarks such as BigBench-Hard, grounded agent reasoning, and MATH, by as much as 32% compared to Chain of Thought (CoT). Furthermore, SELF-DISCOVER outperforms inference-intensive methods such as CoT-Self-Consistency by more than 20%, while requiring 10-40x fewer inference compute. Finally, we show that the self-discovered reasoning structures are universally applicable across model families: from PaLM 2-L to GPT-4, and from GPT-4 to Llama2, and share commonalities with human reasoning patterns.
+
+### DoRA
+- https://arxiv.org/abs/2402.09353
+- https://github.com/catid/dora
+
+Among the widely used parameter-efficient finetuning (PEFT) methods, LoRA and its variants have gained considerable popularity because of avoiding additional inference costs. However, there still often exists an accuracy gap between these methods and full fine-tuning (FT). In this work, we first introduce a novel weight decomposition analysis to investigate the inherent differences between FT and LoRA. Aiming to resemble the learning capacity of FT from the findings, we propose Weight-Decomposed LowRank Adaptation (DoRA). DoRA decomposes the pre-trained weight into two components, magnitude and direction, for fine-tuning, specifically employing LoRA for directional updates to efficiently minimize the number of trainable parameters. By employing DoRA, we enhance both the learning capacity and training stability of LoRA while avoiding any additional inference overhead. DoRA consistently outperforms LoRA on fine-tuning LLaMA, LLaVA, and VL-BART on various downstream tasks, such as commonsense reasoning, visual instruction tuning, and image/video-text understanding.
+
+### GPO（Generalized Preference Optimization）
+- https://arxiv.org/abs/2402.05749
+
+Offline preference optimization allows fine-tuning large models directly from offline data, and has proved effective in recent alignment practices. We propose generalized preference optimization (GPO), a family of offline losses parameterized by a general class of convex functions. GPO enables a unified view over preference optimization, encompassing existing algorithms such as DPO, IPO and SLiC as special cases, while naturally introducing new variants. The GPO framework also sheds light on how offline algorithms enforce regularization, through the design of the convex function that defines the loss. Our analysis and experiments reveal the connections and subtle differences between the offline regularization and the KL divergence regularization intended by the canonical RLHF formulation. In all, our results present new algorithmic toolkits and empirical insights to alignment practitioners.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -2714,6 +2726,7 @@ In this project, we introduce BGE-M3, which is distinguished for its versatility
 - https://github.com/nomic-ai/contrastors
 - https://static.nomic.ai/reports/2024_Nomic_Embed_Text_Technical_Report.pdf
 - https://arxiv.org/abs/2402.01613
+- https://huggingface.co/nomic-ai/nomic-embed-text-v1.5
 
 This technical report describes the training of nomic-embed-text-v1, the first fully reproducible, open-source, open-weights, open-data, 8192 context length English text embedding model that outperforms both OpenAI Ada-002 and OpenAI text-embedding-3-small on short and long-context tasks. We release the training code and model weights under an Apache 2 license. In contrast with other open-source models, we release a training data loader with 235 million curated text pairs that allows for the full replication of nomic-embed-text-v1.
 
@@ -2940,6 +2953,12 @@ Large Language Model (LLM) agents significantly extend the capabilities of stand
 
 We find that, simply via a sampling-and-voting method, the performance of large language models (LLMs) scales with the number of agents instantiated. Also, this method is orthogonal to existing complicated methods to further enhance LLMs, while the degree of enhancement is correlated to the task difficulty. We conduct comprehensive experiments on a wide range of LLM benchmarks to verify the presence of our finding, and to study the properties that can facilitate its occurrence.
 
+### Mistral-Interact
+- https://github.com/HBX-hbx/Mistral-Interact
+- https://arxiv.org/abs/2402.09205
+
+Current language model-driven agents often lack mechanisms for effective user participation, which is crucial given the vagueness commonly found in user instructions. Although adept at devising strategies and performing tasks, these agents struggle with seeking clarification and grasping precise user intentions. To bridge this gap, we introduce Intention-in-Interaction (IN3), a novel benchmark designed to inspect users' implicit intentions through explicit queries. Next, we propose the incorporation of model experts as the upstream in agent designs to enhance user-agent interaction. Employing IN3, we empirically train Mistral-Interact, a powerful model that proactively assesses task vagueness, inquires user intentions, and refines them into actionable goals before starting downstream agent task execution. Integrating it into the XAgent framework, we comprehensively evaluate the enhanced agent system regarding user instruction understanding and execution, revealing that our approach notably excels at identifying vague user tasks, recovering and summarizing critical missing information, setting precise and necessary agent execution goals, and minimizing redundant tool usage, thus boosting overall efficiency. All the data and codes are released.
+
 ### AgentBench
 - https://llmbench.ai/agent
 - https://github.com/THUDM/AgentBench
@@ -2950,6 +2969,25 @@ We find that, simply via a sampling-and-voting method, the performance of large 
 - https://github.com/HIT-SCIR/huozi
 
 本数据集是英文MT-Bench对话能力评测数据集的中文版。它包含了一系列多轮对话问题，每一组问题都经过了精心的人工校对，并为适应中文语境进行了必要的调整。
+
+### E-EVAL
+- https://eevalbenchmark.com
+- https://github.com/AI-EDU-LAB/E-EVAL
+- https://arxiv.org/abs/2401.15927
+
+E-EVAL is a comprehensive Chinese K12 education evaluation benchmark that contains 4,352 multiple-choice questions across three difficulty levels, primary, middle and high school, for a total of 23 subjects.
+
+### ConflictingQA
+- https://arxiv.org/abs/2402.11782
+- https://github.com/AlexWan0/rag-convincingness
+
+Retrieval-augmented language models are being increasingly tasked with subjective, contentious, and conflicting queries such as "is aspartame linked to cancer". To resolve these ambiguous queries, one must search through a large range of websites and consider "which, if any, of this evidence do I find convincing?". In this work, we study how LLMs answer this question. In particular, we construct ConflictingQA, a dataset that pairs controversial queries with a series of real-world evidence documents that contain different facts (e.g., quantitative results), argument styles (e.g., appeals to authority), and answers (Yes or No). We use this dataset to perform sensitivity and counterfactual analyses to explore which text features most affect LLM predictions. Overall, we find that current models rely heavily on the relevance of a website to the query, while largely ignoring stylistic features that humans find important such as whether a text contains scientific references or is written with a neutral tone. Taken together, these results highlight the importance of RAG corpus quality (e.g., the need to filter misinformation), and possibly even a shift in how LLMs are trained to better align with human judgements.
+
+### Medical Information Retrieval-Augmented Generation Evaluation （MIRAGE）
+- https://arxiv.org/abs/2402.13178
+- https://teddy-xionggz.github.io/benchmark-medical-rag/
+
+While large language models (LLMs) have achieved state-of-the-art performance on a wide range of medical question answering (QA) tasks, they still face challenges with hallucinations and outdated knowledge. Retrieval-augmented generation (RAG) is a promising solution and has been widely adopted. However, a RAG system can involve multiple flexible components, and there is a lack of best practices regarding the optimal RAG setting for various medical purposes. To systematically evaluate such systems, we propose the Medical Information Retrieval-Augmented Generation Evaluation (MIRAGE), a first-of-its-kind benchmark including 7,663 questions from five medical QA datasets. Using MIRAGE, we conducted large-scale experiments with over 1.8 trillion prompt tokens on 41 combinations of different corpora, retrievers, and backbone LLMs through the MedRAG toolkit introduced in this work. Overall, MedRAG improves the accuracy of six different LLMs by up to 18% over chain-of-thought prompting, elevating the performance of GPT-3.5 and Mixtral to GPT-4-level. Our results show that the combination of various medical corpora and retrievers achieves the best performance. In addition, we discovered a log-linear scaling property and the "lost-in-the-middle" effects in medical RAG. We believe our comprehensive evaluations can serve as practical guidelines for implementing RAG systems for medicine.
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
