@@ -50,13 +50,13 @@ Open-Source Language Model Pocket
 |MeChat|ShenNong-TCM-LLM|MindChat(漫谈): 心理大模型|
 |WiNGPT|CareGPT|孙思邈|
 |MolGen（药物研发）|Taiyi（太一）|MedAgents|
-|Molecule Optimization|||
+|Molecule Optimization|*【MolTC】|*【Mol-Instructions】|
 
 |经济/金融|||
 |---|---|---|
 |貔貅FinMA & PIXIU: A Large Language Model, Instruction Data and Evaluation Benchmark for Finance|轩辕|BBT-FinCUGE-Applications|
 |Cornucopia-LLaMA-Fin-Chinese|EcomGPT|FinGLM|
-|DISC-FinLLM|||
+|DISC-FinLLM|*【Deepmoney】||
 
 |法律|||
 |---|---|---|
@@ -147,7 +147,8 @@ Open-Source Language Model Pocket
 |StarCoder|OLMo|
 |H2O-Danube-1.8B|*【OpenMathInstruct-1】|
 |*【Smaug-72B】|*【Gemma】|
-|*【Aya Model】||
+|*【Aya Model】|*【MobiLlama】|
+|*【StarCoder2】||
 
 *训练/推理*
 |  |  |
@@ -190,6 +191,7 @@ Open-Source Language Model Pocket
 |Inference-Time Training Helps Long Text Generation|LiPO|
 |ChatLLM.cpp|Self-Discover|
 |*【DoRA】|*【GPO（Generalized Preference Optimization）】|
+|*【CoT-decoding】||
 
 *评价*
 |  ||
@@ -209,13 +211,14 @@ Open-Source Language Model Pocket
 |EasyJailbreak|AgentBench|
 |*【中文MT-Bench】|*【E-EVAL】|
 |*【ConflictingQA】|*【Medical Information Retrieval-Augmented Generation Evaluation （MIRAGE）】|
+|*【∞Bench】|*【Red Teaming Resistance Benchmark】|
 
 *文本向量*
 |  |  |
 |---|---|
 | Matryoshka Representation Learning |Jina Embeddings|
 |BGE-M3|Nomic Embed|
-|Moka Massive Mixed Embedding（M3E）||
+|Moka Massive Mixed Embedding（M3E）|*【GRIT】|
 
 *Agent*
 |  |  |
@@ -245,7 +248,7 @@ Open-Source Language Model Pocket
 |Lepton Search|RLMRec|
 |*【Open-Source AI Cookbook】|*【MaLA-500】|
 |*【NVIDIA Chat with RTX】|*【RAG vs Fine-tuning】|
-|*【Chain of Abstraction】||
+|*【Chain of Abstraction】|*【序列猴子开源数据集】|
 
 **相关文章**：
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -748,6 +751,12 @@ EVA 是目前最大的开源中文预训练对话模型，拥有28亿参数，�
 
 DISC-FinLLM 是一个专门针对金融场景下为用户提供专业、智能、全面的金融咨询服务的金融领域大模型，由复旦大学数据智能与社会计算实验室 (Fudan-DISC) 开发并开源。
 
+### Deepmoney
+- https://sota.jiqizhixin.com/project/deepmoney
+- https://huggingface.co/TriadParty
+
+DeepMoney是一个专注于金融领域投资的大型语言模型项目。该模型基于Yi-34B、DeepSeek 67B、miqu-70b构建，当前作者微调了三个模型版本：base和sft (基于yi-34B)、deepmoney-67b-chat (DeepSeek) ，和deepmoney-miqu-70b(migu-70b)。基础模型采用了全参数训练。其训练数据包括高质量的研究报告，覆盖2019年至2023年12月的数据，这些报告主要来自传统券商和专业研究机构，大多数为有偿且仅对机构开放。与大多数基于公共知识训练的金融模型不同，deepmoney能够提供深入的市场解释，弥补公共知识在实际金融领域中的不足。该项目还集成了多模态模型，以提取关键信息。
+
 ### GPT2 for Multiple Language
 - https://github.com/imcaspar/gpt2-ml
 
@@ -1088,6 +1097,18 @@ We propose a Multi-disciplinary Collaboration (MC) framework. The framework work
 
 Recently, the impressive performance of large language models (LLMs) on a wide range of tasks has attracted an increasing number of attempts to apply LLMs in drug discovery. However, molecule optimization, a critical task in the drug discovery pipeline, is currently an area that has seen little involvement from LLMs. Most of existing approaches focus solely on capturing the underlying patterns in chemical structures provided by the data, without taking advantage of expert feedback. These non-interactive approaches overlook the fact that the drug discovery process is actually one that requires the integration of expert experience and iterative refinement. To address this gap, we propose DrugAssist, an interactive molecule optimization model which performs optimization through human-machine dialogue by leveraging LLM's strong interactivity and generalizability. DrugAssist has achieved leading results in both single and multiple property optimization, simultaneously showcasing immense potential in transferability and iterative optimization. In addition, we publicly release a large instruction-based dataset called MolOpt-Instructions for fine-tuning language models on molecule optimization tasks. 
 
+### MolTC
+- https://github.com/MangoKiller/MolTC
+- https://arxiv.org/abs/2402.03781
+
+Molecular Relational Learning (MRL), aiming to understand interactions between molecular pairs, plays a pivotal role in advancing biochemical research. Recently, the adoption of large language models (LLMs), known for their vast knowledge repositories and advanced logical inference capabilities, has emerged as a promising way for efficient and effective MRL. Despite their potential, these methods predominantly rely on the textual data, thus not fully harnessing the wealth of structural information inherent in molecular graphs. Moreover, the absence of a unified framework exacerbates the issue of information underutilization, as it hinders the sharing of interaction mechanism learned across diverse datasets. To address these challenges, this work proposes a novel LLM-based multi-modal framework for Molecular inTeraction prediction following Chain-of-Thought (CoT) theory, termed MolTC, which effectively integrate graphical information of two molecules in pair. For achieving a unified MRL, MolTC innovatively develops a dynamic parameter-sharing strategy for cross-dataset information sharing. Moreover, to train MolTC efficiently, we introduce a Multi-hierarchical CoT concept to refine its training paradigm, and conduct a comprehensive Molecular Interactive Instructions dataset for the development of biochemical LLMs involving MRL. Our experiments, conducted across various datasets involving over 4,000,000 molecular pairs, exhibit the superiority of our method over current GNN and LLM-based baselines.
+
+### Mol-Instructions
+- https://arxiv.org/pdf/2306.08018.pdf
+- https://github.com/zjunlp/Mol-Instructions
+
+Large Language Models (LLMs), with their remarkable task-handling capabilities and innovative outputs, have catalyzed significant advancements across a spectrum of fields. However, their proficiency within specialized domains such as biomolecular studies remains limited. To address this challenge, we introduce Mol-Instructions, a comprehensive instruction dataset designed for the biomolecular domain. Mol-Instructions encompasses three key components: molecule-oriented instructions, protein-oriented instructions, and biomolecular text instructions. Each component aims to improve the understanding and prediction capabilities of LLMs concerning biomolecular features and behaviors. Through extensive instruction tuning experiments on LLMs, we demonstrate the effectiveness of Mol-Instructions in enhancing large models' performance in the intricate realm of biomolecular studies, thus fostering progress in the biomolecular research community. Mol-Instructions is publicly available for ongoing research and will undergo regular updates to enhance its applicability.
+
 ### TinyLlama
 - https://github.com/jzhang38/TinyLlama
 
@@ -1161,6 +1182,17 @@ A family of lightweight, state-of-the art open models built from the same resear
 - https://hf.co/CohereForAI/aya-101
 
 Recent breakthroughs in large language models (LLMs) have centered around a handful of data-rich languages. What does it take to broaden access to breakthroughs beyond first-class citizen languages? Our work introduces Aya, a massively multilingual generative language model that follows instructions in 101 languages of which over 50% are considered as lower-resourced. Aya outperforms mT0 and BLOOMZ on the majority of tasks while covering double the number of languages. We introduce extensive new evaluation suites that broaden the state-of-art for multilingual eval across 99 languages -- including discriminative and generative tasks, human evaluation, and simulated win rates that cover both held-out tasks and in-distribution performance. Furthermore, we conduct detailed investigations on the optimal finetuning mixture composition, data pruning, as well as the toxicity, bias, and safety of our models.
+
+### MobiLlama
+- https://github.com/mbzuai-oryx/MobiLlama
+- https://arxiv.org/abs/2402.16840
+
+"Bigger the better" has been the predominant trend in recent Large Language Models (LLMs) development. However, LLMs do not suit well for scenarios that require on-device processing, energy efficiency, low memory footprint, and response efficiency. These requisites are crucial for privacy, security, and sustainable deployment. This paper explores the "less is more" paradigm by addressing the challenge of designing accurate yet efficient Small Language Models (SLMs) for resource constrained devices. Our primary contribution is the introduction of an accurate and fully transparent open-source 0.5 billion (0.5B) parameter SLM, named MobiLlama, catering to the specific needs of resource-constrained computing with an emphasis on enhanced performance with reduced resource demands. MobiLlama is a SLM design that initiates from a larger model and applies a careful parameter sharing scheme to reduce both the pre-training and the deployment cost.
+
+### StarCoder2
+- https://huggingface.co/blog/starcoder2
+
+StarCoder2 is a family of open LLMs for code and comes in 3 different sizes with 3B, 7B and 15B parameters. The flagship StarCoder2-15B model is trained on over 4 trillion tokens and 600+ programming languages from The Stack v2. All models use Grouped Query Attention, a context window of 16,384 tokens with a sliding window attention of 4,096 tokens, and were trained using the Fill-in-the-Middle objective.
 
 ### Colossal-LLaMA-2
 - https://github.com/hpcaitech/ColossalAI/tree/main/applications/Colossal-LLaMA-2
@@ -1931,6 +1963,11 @@ Among the widely used parameter-efficient finetuning (PEFT) methods, LoRA and it
 - https://arxiv.org/abs/2402.05749
 
 Offline preference optimization allows fine-tuning large models directly from offline data, and has proved effective in recent alignment practices. We propose generalized preference optimization (GPO), a family of offline losses parameterized by a general class of convex functions. GPO enables a unified view over preference optimization, encompassing existing algorithms such as DPO, IPO and SLiC as special cases, while naturally introducing new variants. The GPO framework also sheds light on how offline algorithms enforce regularization, through the design of the convex function that defines the loss. Our analysis and experiments reveal the connections and subtle differences between the offline regularization and the KL divergence regularization intended by the canonical RLHF formulation. In all, our results present new algorithmic toolkits and empirical insights to alignment practitioners.
+
+### CoT-decoding
+- https://arxiv.org/abs/2402.10200
+
+In enhancing the reasoning capabilities of large language models (LLMs), prior research primarily focuses on specific prompting techniques such as few-shot or zero-shot chain-of-thought (CoT) prompting. These methods, while effective, often involve manually intensive prompt engineering. Our study takes a novel approach by asking: Can LLMs reason effectively without prompting? Our findings reveal that, intriguingly, CoT reasoning paths can be elicited from pre-trained LLMs by simply altering the \textit{decoding} process. Rather than conventional greedy decoding, we investigate the top-k alternative tokens, uncovering that CoT paths are frequently inherent in these sequences. This approach not only bypasses the confounders of prompting but also allows us to assess the LLMs' \textit{intrinsic} reasoning abilities. Moreover, we observe that the presence of a CoT in the decoding path correlates with a higher confidence in the model's decoded answer. This confidence metric effectively differentiates between CoT and non-CoT paths. Extensive empirical studies on various reasoning benchmarks show that the proposed CoT-decoding substantially outperforms the standard greedy decoding.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -2738,6 +2775,12 @@ This technical report describes the training of nomic-embed-text-v1, the first f
 - Mixed，此模型支持中英双语的同质文本相似度计算，异质文本检索等功能，未来还会支持代码检索
 - Embedding，此模型是文本嵌入模型，可以将自然语言转换成稠密的向量
 
+### GRIT
+- https://arxiv.org/abs/2402.09906
+- https://github.com/ContextualAI/gritlm
+
+All text-based language problems can be reduced to either generation or embedding. Current models only perform well at one or the other. We introduce generative representational instruction tuning (GRIT) whereby a large language model is trained to handle both generative and embedding tasks by distinguishing between them through instructions. Compared to other open models, our resulting GritLM 7B sets a new state of the art on the Massive Text Embedding Benchmark (MTEB) and outperforms all models up to its size on a range of generative tasks. By scaling up further, GritLM 8x7B outperforms all open generative language models that we tried while still being among the best embedding models. Notably, we find that GRIT matches training on only generative or embedding data, thus we can unify both at no performance loss. Among other benefits, the unification via GRIT speeds up Retrieval-Augmented Generation (RAG) by > 60% for long documents, by no longer requiring separate retrieval and generation models.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -2989,6 +3032,19 @@ Retrieval-augmented language models are being increasingly tasked with subjectiv
 
 While large language models (LLMs) have achieved state-of-the-art performance on a wide range of medical question answering (QA) tasks, they still face challenges with hallucinations and outdated knowledge. Retrieval-augmented generation (RAG) is a promising solution and has been widely adopted. However, a RAG system can involve multiple flexible components, and there is a lack of best practices regarding the optimal RAG setting for various medical purposes. To systematically evaluate such systems, we propose the Medical Information Retrieval-Augmented Generation Evaluation (MIRAGE), a first-of-its-kind benchmark including 7,663 questions from five medical QA datasets. Using MIRAGE, we conducted large-scale experiments with over 1.8 trillion prompt tokens on 41 combinations of different corpora, retrievers, and backbone LLMs through the MedRAG toolkit introduced in this work. Overall, MedRAG improves the accuracy of six different LLMs by up to 18% over chain-of-thought prompting, elevating the performance of GPT-3.5 and Mixtral to GPT-4-level. Our results show that the combination of various medical corpora and retrievers achieves the best performance. In addition, we discovered a log-linear scaling property and the "lost-in-the-middle" effects in medical RAG. We believe our comprehensive evaluations can serve as practical guidelines for implementing RAG systems for medicine.
 
+### ∞Bench
+- https://arxiv.org/abs/2402.13718
+- https://github.com/OpenBMB/InfiniteBench
+
+Processing and reasoning over long contexts is crucial for many practical applications of Large Language Models (LLMs), such as document comprehension and agent construction. Despite recent strides in making LLMs process contexts with more than 100K tokens, there is currently a lack of a standardized benchmark to evaluate this long-context capability. Existing public benchmarks typically focus on contexts around 10K tokens, limiting the assessment and comparison of LLMs in processing longer contexts. In this paper, we propose ∞Bench, the first LLM benchmark featuring an average data length surpassing 100K tokens. ∞Bench comprises synthetic and realistic tasks spanning diverse domains, presented in both English and Chinese. The tasks in ∞Bench are designed to require well understanding of long dependencies in contexts, and make simply retrieving a limited number of passages from contexts not sufficient for these tasks. In our experiments, based on ∞Bench, we evaluate the state-of-the-art proprietary and open-source LLMs tailored for processing long contexts. The results indicate that existing long context LLMs still require significant advancements to effectively process 100K+ context. We further present three intriguing analyses regarding the behavior of LLMs processing long context.
+
+### Red Teaming Resistance Benchmark
+- https://huggingface.co/spaces/HaizeLabs/red-teaming-resistance-benchmark
+- https://github.com/haizelabs/redteaming-resistance-benchmark
+
+Hello! This repository contains the code and data used to benchmark redteaming prompts against various models as seen in our Huggingface Leaderboard. This project is aimed to reveal weaknesses in both open-sourced and blackbox language models through redteaming attacks covering a diverse range of behaviors and topics.
+
+
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
 - https://arxiv.org/abs/2401.07851
@@ -3047,5 +3103,12 @@ There are two common ways in which developers are incorporating proprietary and 
 
 To achieve faithful reasoning that aligns with human expectations, large language models (LLMs) need to ground their reasoning to real-world knowledge (e.g., web facts, math and physical rules). Tools help LLMs access this external knowledge, but there remains challenges for fine-tuning LLM agents (e.g., Toolformer) to invoke tools in multi-step reasoning problems, where inter-connected tool calls require holistic and efficient tool usage planning.
 In this work, we propose a new method for LLMs to better leverage tools in multi-step reasoning. Our method, Chain-of-Abstraction (CoA), trains LLMs to first decode reasoning chains with abstract placeholders, and then call domain tools to reify each reasoning chain by filling in specific knowledge. This planning with abstract chains enables LLMs to learn more general reasoning strategies, which are robust to shifts of domain knowledge (e.g., math results) relevant to different reasoning questions. It also allows LLMs to perform decoding and calling of external tools in parallel, which avoids the inference delay caused by waiting for tool responses. In mathematical reasoning and Wiki QA domains, we show that our method consistently outperforms previous chain-of-thought and tool-augmented baselines on both in-distribution and out-of-distribution test sets, with an average ~6% absolute QA accuracy improvement. LLM agents trained with our method also show more efficient tool use, with inference speed being on average ~1.4x faster than baseline tool-augmented LLMs.
+
+### 序列猴子开源数据集
+- https://github.com/mobvoi/seq-monkey-data
+
+序列猴子是出门问问提供的超大规模语言模型，基于其通用的表示与推理能力，支持多轮交互，能够大幅度提高生产效率和数据处理能力，被广泛应用于问答系统、自然语言处理、机器翻译、文本摘要等领域。
+
+序列猴子数据集是用于训练序列猴子模型的数据集合，现选择部分数据集向公众开放。
 
 > 持续更新中 (Continuously Updated)... 
