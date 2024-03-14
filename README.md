@@ -9,7 +9,7 @@ Open-Source Language Model Pocket
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
-**开源模型一览** (Table of Contents)：
+## 开源模型一览 (Table of Contents)
 
 *中文友好或国内主创的开源模型（Chinese Open Source Language Models）*
 
@@ -38,7 +38,7 @@ Open-Source Language Model Pocket
 |MachineMindset(MBTI)|星辰语义（电信）|Chinese-Mixtral-8x7B|
 |Baby-Llama2-Chinese|XVERSE-13B-256K|Eagle 7B（RWKV-v5）|
 |iFlytekSpark-13B|MiniCPM|通义千问Qwen1.5|
-|*【RethinkTinyLM】|||
+|*【RethinkTinyLM】|*【Chinese-Mixtral】||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -51,6 +51,7 @@ Open-Source Language Model Pocket
 |WiNGPT|CareGPT|孙思邈|
 |MolGen（药物研发）|Taiyi（太一）|MedAgents|
 |Molecule Optimization|*【MolTC】|*【Mol-Instructions】|
+|*【Multilingual Medicine】|||
 
 |经济/金融|||
 |---|---|---|
@@ -148,7 +149,8 @@ Open-Source Language Model Pocket
 |H2O-Danube-1.8B|*【OpenMathInstruct-1】|
 |*【Smaug-72B】|*【Gemma】|
 |*【Aya Model】|*【MobiLlama】|
-|*【StarCoder2】||
+|*【StarCoder2】|*【SmallLanguageModel-project】|
+|*【Command-R】||
 
 *训练/推理*
 |  |  |
@@ -229,7 +231,9 @@ Open-Source Language Model Pocket
 |OpenAgents|Personal LLM Agents - Survey|
 |AUTOACT|MetaGPT|
 |Multi-LLM-Agent|*【More Agents Is All You Need】|
-|*【Mistral-Interact】||
+|*【Mistral-Interact】|*【AgentLite】|
+|*【KnowAgent】|*【LlamaGym】|
+|*【WorkArena】||
 
 *其它*
 |  |  |
@@ -249,8 +253,9 @@ Open-Source Language Model Pocket
 |*【Open-Source AI Cookbook】|*【MaLA-500】|
 |*【NVIDIA Chat with RTX】|*【RAG vs Fine-tuning】|
 |*【Chain of Abstraction】|*【序列猴子开源数据集】|
+|*【Transformer Debugger】|*【RecAI】|
 
-**相关文章**：
+## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
 - [通俗理解文本生成的常用解码策略](https://mp.weixin.qq.com/s/sVZuEkYXQ9ZZYXJCQz7F4A)
 - [通俗理解P-tuning (GPT Understands)](https://mp.weixin.qq.com/s/EvD9OW115XMnrxOcC2BKDA)
@@ -1079,6 +1084,11 @@ Mol-Instructions comprises three cardinal components:
 
 🥼 Biomolecular text instructions: Predominantly designed to cater to NLP tasks within the fields of bioinformatics and chemoinformatics, this part encapsulates six information extraction and Q&A tasks represented through 53K instructions.
 
+### Multilingual Medicine
+- https://github.com/FreedomIntelligence/Apollo/tree/main
+
+Despite the vast repository of global medical knowledge predominantly being in English, local languages are crucial for delivering tailored healthcare services, particularly in areas with limited medical resources. To extend the reach of medical AI advancements to a broader population, we aim to develop medical LLMs across the six most widely spoken languages, encompassing a global population of 6.1 billion. This effort culminates in the creation of the ApolloCorpora multilingual medical dataset and the XMedBench benchmark. In the multilingual medical benchmark, the released Apollo models, at various relatively-small sizes (i.e., 0.5B, 1.8B, 2B, 6B, and 7B), achieve the best performance among models of equivalent size. Especially, Apollo-7B is the state-of-the-art multilingual medical LLMs up to 70B. Additionally, these lite models could be used to improve the multi-lingual medical capabilities of larger models without fine-tuning in a proxy-tuning fashion. We will open-source training corpora, code, model weights and evaluation benchmark.
+
 ### Taiyi（太一）
 - https://github.com/DUTIR-BioNLP/Taiyi-LLM
 - https://arxiv.org/abs/2311.11608
@@ -1194,6 +1204,22 @@ Recent breakthroughs in large language models (LLMs) have centered around a hand
 
 StarCoder2 is a family of open LLMs for code and comes in 3 different sizes with 3B, 7B and 15B parameters. The flagship StarCoder2-15B model is trained on over 4 trillion tokens and 600+ programming languages from The Stack v2. All models use Grouped Query Attention, a context window of 16,384 tokens with a sliding window attention of 4,096 tokens, and were trained using the Fill-in-the-Middle objective.
 
+### SmallLanguageModel-project
+- https://github.com/shivendrra/SmallLanguageModel-project
+
+This repository contains all the necessary items needed to build your own LLM from scratch. Just follow the instructions. Inspired from Karpathy's nanoGPT and Shakespeare generator, I made this repository to build my own LLM. It has everything from data collection for the Model to architecture file, tokenizer and train file.
+
+### Command-R
+- https://txt.cohere.com/command-r/
+- https://huggingface.co/CohereForAI/c4ai-command-r-v01
+
+Command-R is a generative model optimized for long context tasks such as retrieval augmented generation (RAG) and using external APIs and tools. It is designed to work in concert with our industry-leading Embed and Rerank models to provide best-in-class integration for RAG applications and excel at enterprise use cases. As a model built for companies to implement at scale, Command-R boasts: 
+- Strong accuracy on RAG and Tool Use
+- Low latency, and high throughput
+- Longer 128k context and lower pricing
+- Strong capabilities across 10 key languages
+- Model weights available on HuggingFace for research and evaluation
+
 ### Colossal-LLaMA-2
 - https://github.com/hpcaitech/ColossalAI/tree/main/applications/Colossal-LLaMA-2
 
@@ -1223,7 +1249,7 @@ We are excited to unveil two distinguished versions of our model, with another o
 
 本次荀子系列模型开源包括两个部分：基座模型XunziALLM，作为本次模型开源的重点，本项目推出了完全开放使用的古籍领域大模型，与此同时，为方便非人工智能领域人员更好地了解本次开源模型，我们使用一部分数据构建了对话模型XunziChat，模型的调用方式与阿里云的Qwen系列大模型一致。
 
-## CodeShell
+### CodeShell
 - https://github.com/WisdomShell/codeshell
 
 CodeShell是北京大学知识计算实验室联合四川天府银行AI团队研发的多语言代码大模型基座。CodeShell具有70亿参数，在五千亿Tokens进行了训练，上下文窗口长度为8192。在权威的代码评估Benchmark（HumanEval与MBPP）上，CodeShell取得同等规模最好的性能。与此同时，我们提供了与CodeShell配套的部署方案与IDE插件，请参考代码库CodeShell。
@@ -1355,6 +1381,7 @@ Skywork是由昆仑万维集团·天工团队开发的一系列大型模型，�
 
 ### Yi-6B/34B（零一万物）
 - https://github.com/01-ai/Yi
+- https://arxiv.org/abs/2403.04652
 
 The Yi series models are large language models trained from scratch by developers at 01.AI. The first public release contains two bilingual (English/Chinese) base models with the parameter sizes of 6B and 34B. Both of them are trained with 4K sequence length and can be extended to 32K during inference time.
 
@@ -1510,6 +1537,11 @@ With Qwen1.5, we are open-sourcing base and chat models across six sizes: 0.5B, 
 - https://arxiv.org/pdf/2402.02791.pdf
 
 The power of large language models (LLMs) has been demonstrated through numerous data and computing resources. However, the application of language models on mobile devices is facing huge challenge on the computation and memory costs, that is, tiny language models with high performance are urgently required. Limited by the highly complex training process, there are many details for optimizing language models that are seldom studied carefully. In this study, based on a tiny language model with 1B parameters, we carefully design a series of empirical study to analyze the effect of each component. Three perspectives are mainly discussed, \ie, neural architecture, parameter initialization, and optimization strategy. Several design formulas are empirically proved especially effective for tiny language models, including tokenizer compression, architecture tweaking, parameter inheritance and multiple-round training. Then we train PanGu-\pi-1B Pro and PanGu-\pi-1.5B Pro on 1.6T multilingual corpora, following the established formulas. Experimental results demonstrate the improved optimization and architecture yield a notable average improvement of 8.87 on benchmark evaluation sets for PanGu-\pi-1B Pro. Besides, PanGu-\pi-1.5B Pro surpasses a range of SOTA models with larger model sizes, validating its superior performance. 
+
+### Chinese-Mixtral
+- https://github.com/ymcui/Chinese-Mixtral
+
+本项目基于Mistral.ai发布的Mixtral模型进行开发，该模型使用了稀疏混合专家模型（Sparse MoE）架构。本项目利用大规模中文无标注数据进行了中文增量训练，得到了中文Mixtral基础模型，并且进一步通过指令精调，得到了中文Mixtral-Instruct指令模型。该模型原生支持32K上下文（实测可达128K），能够有效地处理长文本，同时在数学推理、代码生成等方面获得了显著性能提升。使用llama.cpp进行量化推理时，最低只需16G内存（或显存）。
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
@@ -3002,6 +3034,35 @@ We find that, simply via a sampling-and-voting method, the performance of large 
 
 Current language model-driven agents often lack mechanisms for effective user participation, which is crucial given the vagueness commonly found in user instructions. Although adept at devising strategies and performing tasks, these agents struggle with seeking clarification and grasping precise user intentions. To bridge this gap, we introduce Intention-in-Interaction (IN3), a novel benchmark designed to inspect users' implicit intentions through explicit queries. Next, we propose the incorporation of model experts as the upstream in agent designs to enhance user-agent interaction. Employing IN3, we empirically train Mistral-Interact, a powerful model that proactively assesses task vagueness, inquires user intentions, and refines them into actionable goals before starting downstream agent task execution. Integrating it into the XAgent framework, we comprehensively evaluate the enhanced agent system regarding user instruction understanding and execution, revealing that our approach notably excels at identifying vague user tasks, recovering and summarizing critical missing information, setting precise and necessary agent execution goals, and minimizing redundant tool usage, thus boosting overall efficiency. All the data and codes are released.
 
+### AgentLite
+- https://github.com/SalesforceAIResearch/AgentLite
+- https://arxiv.org/abs/2402.15538
+
+AgentLite is a research-oriented library designed for building and advancing LLM-based task-oriented agent systems. It simplifies the implementation of new agent/multi-agent architectures, enabling easy orchestration of multiple agents through a manager agent. Whether you're building individual agents or complex multi-agent systems, AgentLite provides a straightforward and lightweight foundation for your research and development.
+
+### KnowAgent
+- https://www.zjukg.org/project/KnowAgent/
+- https://arxiv.org/abs/2403.03101
+- https://github.com/zjunlp/KnowAgent
+
+Our development is grounded on several key steps: Initially, we create an extensive action knowledge base, which amalgamates action planning knowledge pertinent to specific tasks. This database acts as an external reservoir of information, steering the model's action generation process. Subsequently, by converting action knowledge into text, we enable the model to deeply understand and utilize this knowledge in creating action trajectories. Finally, through a knowledgeable self-learning phase, we use trajectories developed from the model's iterative processes to continually improve its understanding and application of action knowledge. This process not only strengthens the agents' planning abilities but also enhances their potential for application in complex situations.
+
+### LlamaGym
+- https://github.com/KhoomeiK/LlamaGym
+
+"Agents" originated in reinforcement learning, where they learn by interacting with an environment and receiving a reward signal. However, LLM-based agents today do not learn online (i.e. continuously in real time) via reinforcement.
+
+OpenAI created Gym to standardize and simplify RL environments, but if you try dropping an LLM-based agent into a Gym environment for training, you'd find it's still quite a bit of code to handle LLM conversation context, episode batches, reward assignment, PPO setup, and more.
+
+LlamaGym seeks to simplify fine-tuning LLM agents with RL. Right now, it's a single Agent abstract class that handles all the issues mentioned above, letting you quickly iterate and experiment with agent prompting & hyperparameters across any Gym environment.
+
+### WorkArena
+- https://arxiv.org/abs/2403.07718
+- https://github.com/ServiceNow/WorkArena
+- https://github.com/ServiceNow/BrowserGym
+
+We study the use of large language model-based agents for interacting with software via web browsers. Unlike prior work, we focus on measuring the agents' ability to perform tasks that span the typical daily work of knowledge workers utilizing enterprise software systems. To this end, we propose WorkArena, a remote-hosted benchmark of 29 tasks based on the widely-used ServiceNow platform. We also introduce BrowserGym, an environment for the design and evaluation of such agents, offering a rich set of actions as well as multimodal observations. Our empirical evaluation reveals that while current agents show promise on WorkArena, there remains a considerable gap towards achieving full task automation. Notably, our analysis uncovers a significant performance disparity between open and closed-source LLMs, highlighting a critical area for future exploration and development in the field.
+
 ### AgentBench
 - https://llmbench.ai/agent
 - https://github.com/THUDM/AgentBench
@@ -3110,5 +3171,18 @@ In this work, we propose a new method for LLMs to better leverage tools in multi
 序列猴子是出门问问提供的超大规模语言模型，基于其通用的表示与推理能力，支持多轮交互，能够大幅度提高生产效率和数据处理能力，被广泛应用于问答系统、自然语言处理、机器翻译、文本摘要等领域。
 
 序列猴子数据集是用于训练序列猴子模型的数据集合，现选择部分数据集向公众开放。
+
+### Transformer Debugger
+- https://github.com/openai/transformer-debugger
+
+Transformer Debugger (TDB) is a tool developed by OpenAI's Superalignment team with the goal of supporting investigations into specific behaviors of small language models. The tool combines automated interpretability techniques with sparse autoencoders.
+
+TDB enables rapid exploration before needing to write code, with the ability to intervene in the forward pass and see how it affects a particular behavior. It can be used to answer questions like, "Why does the model output token A instead of token B for this prompt?" or "Why does attention head H attend to token T for this prompt?" It does so by identifying specific components (neurons, attention heads, autoencoder latents) that contribute to the behavior, showing automatically generated explanations of what causes those components to activate most strongly, and tracing connections between components to help discover circuits.
+
+### RecAI
+- https://arxiv.org/abs/2403.06465
+- https://github.com/microsoft/RecAI
+
+This paper introduces RecAI, a practical toolkit designed to augment or even revolutionize recommender systems with the advanced capabilities of Large Language Models (LLMs). RecAI provides a suite of tools, including Recommender AI Agent, Recommendation-oriented Language Models, Knowledge Plugin, RecExplainer, and Evaluator, to facilitate the integration of LLMs into recommender systems from multifaceted perspectives. The new generation of recommender systems, empowered by LLMs, are expected to be more versatile, explainable, conversational, and controllable, paving the way for more intelligent and user-centric recommendation experiences. We hope the open-source of RecAI can help accelerate evolution of new advanced recommender systems. 
 
 > 持续更新中 (Continuously Updated)... 
