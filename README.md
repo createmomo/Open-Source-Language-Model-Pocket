@@ -66,9 +66,9 @@ Open-Source Language Model Pocket
 |LawGPT_zh|夫子•明察司法大模型|DISC-LawLLM|
 |LawBench|||
 
-|交通|
-|---|
-|TransGPT · 致远|
+|交通|城市|
+|---|---|
+|TransGPT · 致远|*【UrbanGPT】|
 
 |教育&数学||
 |---|---|
@@ -79,7 +79,8 @@ Open-Source Language Model Pocket
 |表格/数据分析||
 |---|---|
 |TableGPT|Data-Copilot|
-|Tabular LLM||
+|Tabular LLM|*【Chain-of-table】|
+|*【Data Interpreter】||
 
 |自媒体&角色扮演|
 |---|
@@ -92,17 +93,13 @@ Open-Source Language Model Pocket
 |尔雅 Erya|
 |荀子|
 
-|编程/代码/Agent|
-|---|
-|CodeShell|
-|CODEFUSION-75M|
-|DeepSeek Coder|
-|DevOps-Model（运维）|
-|Magicoder|
-|KwaiAgents|
-|LLaMA-Pro|
-|HuixiangDou|
-|*【CodeAct】|
+|编程/代码||
+|---|---|
+|CodeShell|CODEFUSION-75M|
+|DeepSeek Coder|DevOps-Model（运维）|
+|Magicoder|LLaMA-Pro|
+|HuixiangDou|*【CodeAct】|
+|*【Design2Code】||
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -110,6 +107,28 @@ Open-Source Language Model Pocket
 |OceanGPT|
 |K2&GeoGalactica|
 |SciGLM|
+
+*文本向量*
+|  |  |
+|---|---|
+| Matryoshka Representation Learning |Jina Embeddings|
+|BGE-M3|Nomic Embed|
+|Moka Massive Mixed Embedding（M3E）|*【GRIT】|
+|*【TinyRAG】||
+
+*Agent*
+|  |  |
+|---|---|
+| Auto-GPT | ToolBench&ToolLLM |
+|HuggingGPT |CAMEL:Communicative Agents for “Mind” Exploration of Large Scale Language Model Society|
+|AgentLM (AgentTuning, AgentInstruct) |XAgent|
+|OpenAgents|Personal LLM Agents - Survey|
+|AUTOACT|MetaGPT|
+|Multi-LLM-Agent|*【More Agents Is All You Need】|
+|*【Mistral-Interact】|*【AgentLite】|
+|*【KnowAgent】|*【LlamaGym】|
+|*【WorkArena】|*【STE（Simulated Trial and Error）】|
+|KwaiAgents||
 
 *可参考的其它开源模型*
 |  |  |
@@ -193,7 +212,11 @@ Open-Source Language Model Pocket
 |Inference-Time Training Helps Long Text Generation|LiPO|
 |ChatLLM.cpp|Self-Discover|
 |*【DoRA】|*【GPO（Generalized Preference Optimization）】|
-|*【CoT-decoding】||
+|*【CoT-decoding】|*【FSDP&QLoRA（Answer）】|
+|*【MindNLP】|*【GaLore】|
+|*【Mixture-of-LoRAs】|*【LLaMA Factory】|
+|*【InfLLM】|*【MediaPipe】|
+|*【OneBit】||
 
 *评价*
 |  ||
@@ -215,26 +238,6 @@ Open-Source Language Model Pocket
 |*【ConflictingQA】|*【Medical Information Retrieval-Augmented Generation Evaluation （MIRAGE）】|
 |*【∞Bench】|*【Red Teaming Resistance Benchmark】|
 
-*文本向量*
-|  |  |
-|---|---|
-| Matryoshka Representation Learning |Jina Embeddings|
-|BGE-M3|Nomic Embed|
-|Moka Massive Mixed Embedding（M3E）|*【GRIT】|
-
-*Agent*
-|  |  |
-|---|---|
-| Auto-GPT | ToolBench&ToolLLM |
-|HuggingGPT |CAMEL:Communicative Agents for “Mind” Exploration of Large Scale Language Model Society|
-|AgentLM (AgentTuning, AgentInstruct) |XAgent|
-|OpenAgents|Personal LLM Agents - Survey|
-|AUTOACT|MetaGPT|
-|Multi-LLM-Agent|*【More Agents Is All You Need】|
-|*【Mistral-Interact】|*【AgentLite】|
-|*【KnowAgent】|*【LlamaGym】|
-|*【WorkArena】||
-
 *其它*
 |  |  |
 |---|---|
@@ -254,6 +257,7 @@ Open-Source Language Model Pocket
 |*【NVIDIA Chat with RTX】|*【RAG vs Fine-tuning】|
 |*【Chain of Abstraction】|*【序列猴子开源数据集】|
 |*【Transformer Debugger】|*【RecAI】|
+|*【synthetic-data-save-costs】||
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -718,6 +722,18 @@ Data-Copilot 是一个基于 LLM 的系统，用于处理与数据相关的任�
 - 收集并整理涵盖多种类型表格、多种表格智能任务的数据：考虑学界目前研究较多的表格智能任务，收集开源的数据集并将其转化为指令微调格式的数据，以便用户按需选择。
 - 开源表格智能LLM并进行测试分析：利用收集到的数据去微调Alpaca-CoT等模型，构建首批面向表格智能任务的开源LLM，在此基础上对训练好的模型进行测试分析，比如测试训练后的模型在学界测试数据集上的表现，后续将相关实验结果整理为文档，希望能为大家提供一些有用的经验。
 
+### Chain-of-table
+- https://blog.research.google/2024/03/chain-of-table-evolving-tables-in.html
+- https://arxiv.org/abs/2401.04398
+
+Table-based reasoning with large language models (LLMs) is a promising direction to tackle many table understanding tasks, such as table-based question answering and fact verification. Compared with generic reasoning, table-based reasoning requires the extraction of underlying semantics from both free-form questions and semi-structured tabular data. Chain-of-Thought and its similar approaches incorporate the reasoning chain in the form of textual context, but it is still an open question how to effectively leverage tabular data in the reasoning chain. We propose the Chain-of-Table framework, where tabular data is explicitly used in the reasoning chain as a proxy for intermediate thoughts. Specifically, we guide LLMs using in-context learning to iteratively generate operations and update the table to represent a tabular reasoning chain. LLMs can therefore dynamically plan the next operation based on the results of the previous ones. This continuous evolution of the table forms a chain, showing the reasoning process for a given tabular problem. The chain carries structured information of the intermediate results, enabling more accurate and reliable predictions. Chain-of-Table achieves new state-of-the-art performance on WikiTQ, FeTaQA, and TabFact benchmarks across multiple LLM choices.
+
+### Data Interpreter
+- https://arxiv.org/abs/2402.18679
+- https://github.com/geekan/MetaGPT
+
+Large Language Model (LLM)-based agents have demonstrated remarkable effectiveness. However, their performance can be compromised in data science scenarios that require real-time data adjustment, expertise in optimization due to complex dependencies among various tasks, and the ability to identify logical errors for precise reasoning. In this study, we introduce the Data Interpreter, a solution designed to solve with code that emphasizes three pivotal techniques to augment problem-solving in data science: 1) dynamic planning with hierarchical graph structures for real-time data adaptability;2) tool integration dynamically to enhance code proficiency during execution, enriching the requisite expertise;3) logical inconsistency identification in feedback, and efficiency enhancement through experience recording. We evaluate the Data Interpreter on various data science and real-world tasks. Compared to open-source baselines, it demonstrated superior performance, exhibiting significant improvements in machine learning tasks, increasing from 0.86 to 0.95. Additionally, it showed a 26% increase in the MATH dataset and a remarkable 112% improvement in open-ended tasks.
+
 ### DoctorGLM
 - https://github.com/xionghonglin/DoctorGLM
 
@@ -978,6 +994,14 @@ TableGPT is a specifically designed for table analysis. By unifying tables, natu
 TransGPT・致远的训练基于约 34.6 万条交通领域文本数据（用于领域内预训练）和 5.8 万条交通领域对话数据（用于微调），可支持实时类 APP 接入（地图、公交等应用）。目前，TransGPT・致远已开源，相关资源不仅对学术研究完全开放，仅需邮件申请并获得官方商用许可后，即可以免费商用。
 
 与通用型的多模态交通大模型产品不同，TransGPT 主要致力于在真实交通场景中发挥实际价值，包括交通情况预测、智能咨询助手、公共交通服务、交通规划设计、交通安全教育、协助管理、交通事故报告和分析、自动驾驶辅助系统等能力。
+
+### UrbanGPT
+- https://urban-gpt.github.io/
+- https://github.com/HKUDS/UrbanGPT
+- https://arxiv.org/abs/2403.00813
+- https://sites.google.com/view/chaoh/home
+
+In this work, we present a spatio-temporal large language model that can exhibit exceptional generalization capabilities across a wide range of downstream urban tasks. To achieve this objective, we present the UrbanGPT, which seamlessly integrates a spatio-temporal dependency encoder with the instruction-tuning paradigm. This integration enables large language models (LLMs) to comprehend the complex inter-dependencies across time and space, facilitating more comprehensive and accurate predictions under data scarcity. Extensive experimental findings highlight the potential of building LLMs for spatio-temporal learning, particularly in zero-shot scenarios.
 
 ### TechGPT
 - https://mp.weixin.qq.com/s/nF1He7jhAHfh7PzhjqHoZg
@@ -1307,6 +1331,15 @@ In this work, we present HuixiangDou, a technical assistant powered by Large Lan
 - https://github.com/xingyaoww/code-act
 
 Large Language Model (LLM) agents, capable of performing a broad range of actions, such as invoking tools and controlling robots, show great potential in tackling real-world challenges. LLM agents are typically prompted to produce actions by generating JSON or text in a pre-defined format, which is usually limited by constrained action space (e.g., the scope of pre-defined tools) and restricted flexibility (e.g., inability to compose multiple tools). This work proposes to use executable Python code to consolidate LLM agents' actions into a unified action space (CodeAct). Integrated with a Python interpreter, CodeAct can execute code actions and dynamically revise prior actions or emit new actions upon new observations through multi-turn interactions. Our extensive analysis of 17 LLMs on API-Bank and a newly curated benchmark shows that CodeAct outperforms widely used alternatives (up to 20% higher success rate). The encouraging performance of CodeAct motivates us to build an open-source LLM agent that interacts with environments by executing interpretable code and collaborates with users using natural language. To this end, we collect an instruction-tuning dataset CodeActInstruct that consists of 7k multi-turn interactions using CodeAct. We show that it can be used with existing data to improve models in agent-oriented tasks without compromising their general capability. CodeActAgent, finetuned from Llama2 and Mistral, is integrated with Python interpreter and uniquely tailored to perform sophisticated tasks (e.g., model training) using existing libraries and autonomously self-debug.
+
+### Design2Code
+- https://arxiv.org/abs/2403.03163
+- https://github.com/NoviScl/Design2Code
+- https://salt-nlp.github.io/Design2Code/
+
+Generative AI has made rapid advancements in recent years, achieving unprecedented capabilities in multimodal understanding and code generation. This can enable a new paradigm of front-end development, in which multimodal LLMs might directly convert visual designs into code implementations. In this work, we formalize this as a Design2Code task and conduct comprehensive benchmarking. Specifically, we manually curate a benchmark of 484 diverse real-world webpages as test cases and develop a set of automatic evaluation metrics to assess how well current multimodal LLMs can generate the code implementations that directly render into the given reference webpages, given the screenshots as input. We also complement automatic metrics with comprehensive human evaluations. We develop a suite of multimodal prompting methods and show their effectiveness on GPT-4V and Gemini Pro Vision. We further finetune an open-source Design2Code-18B model that successfully matches the performance of Gemini Pro Vision. Both human evaluation and automatic metrics show that GPT-4V performs the best on this task compared to other models. Moreover, annotators think GPT-4V generated webpages can replace the original reference webpages in 49% of cases in terms of visual appearance and content; and perhaps surprisingly, in 64% of cases GPT-4V generated webpages are considered better than the original reference webpages. Our fine-grained break-down metrics indicate that open-source models mostly lag in recalling visual elements from the input webpages and in generating correct layout designs, while aspects like text content and coloring can be drastically improved with proper finetuning.
+
+
 
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
@@ -2000,6 +2033,49 @@ Offline preference optimization allows fine-tuning large models directly from of
 - https://arxiv.org/abs/2402.10200
 
 In enhancing the reasoning capabilities of large language models (LLMs), prior research primarily focuses on specific prompting techniques such as few-shot or zero-shot chain-of-thought (CoT) prompting. These methods, while effective, often involve manually intensive prompt engineering. Our study takes a novel approach by asking: Can LLMs reason effectively without prompting? Our findings reveal that, intriguingly, CoT reasoning paths can be elicited from pre-trained LLMs by simply altering the \textit{decoding} process. Rather than conventional greedy decoding, we investigate the top-k alternative tokens, uncovering that CoT paths are frequently inherent in these sequences. This approach not only bypasses the confounders of prompting but also allows us to assess the LLMs' \textit{intrinsic} reasoning abilities. Moreover, we observe that the presence of a CoT in the decoding path correlates with a higher confidence in the model's decoded answer. This confidence metric effectively differentiates between CoT and non-CoT paths. Extensive empirical studies on various reasoning benchmarks show that the proposed CoT-decoding substantially outperforms the standard greedy decoding.
+
+### FSDP&QLoRA（Answer）
+- https://www.answer.ai/posts/2024-03-06-fsdp-qlora.html
+- https://github.com/AnswerDotAI/fsdp_qlora/tree/main
+
+we’re releasing Answer.AI’s first project: a fully open source system that, for the first time, can efficiently train a 70b large language model on a regular desktop computer with two or more standard gaming GPUs (RTX 3090 or 4090). This system, which combines FSDP and QLoRA, is the result of a collaboration between Answer.AI, Tim Dettmers (U Washington), and Hugging Face’s Titus von Koeller and Sourab Mangrulkar.
+
+### MindNLP
+- https://github.com/mindspore-lab/mindnlp
+
+MindNLP is an open source NLP library based on MindSpore. It supports a platform for solving natural language processing tasks, containing many common approaches in NLP. It can help researchers and developers to construct and train models more conveniently and rapidly.
+
+### GaLore
+- https://arxiv.org/abs/2403.03507
+- https://github.com/jiaweizzhao/GaLore
+
+Training Large Language Models (LLMs) presents significant memory challenges, predominantly due to the growing size of weights and optimizer states. Common memory-reduction approaches, such as low-rank adaptation (LoRA), add a trainable low-rank matrix to the frozen pre-trained weight in each layer, reducing trainable parameters and optimizer states. However, such approaches typically underperform training with full-rank weights in both pre-training and fine-tuning stages since they limit the parameter search to a low-rank subspace and alter the training dynamics, and further, may require full-rank warm start. In this work, we propose Gradient Low-Rank Projection (GaLore), a training strategy that allows full-parameter learning but is more memory-efficient than common low-rank adaptation methods such as LoRA. Our approach reduces memory usage by up to 65.5% in optimizer states while maintaining both efficiency and performance for pre-training on LLaMA 1B and 7B architectures with C4 dataset with up to 19.7B tokens, and on fine-tuning RoBERTa on GLUE tasks. Our 8-bit GaLore further reduces optimizer memory by up to 82.5% and total training memory by 63.3%, compared to a BF16 baseline. Notably, we demonstrate, for the first time, the feasibility of pre-training a 7B model on consumer GPUs with 24GB memory (e.g., NVIDIA RTX 4090) without model parallel, checkpointing, or offloading strategies.
+
+### Mixture-of-LoRAs
+- https://arxiv.org/abs/2403.03432
+
+Instruction Tuning has the potential to stimulate or enhance specific capabilities of large language models (LLMs). However, achieving the right balance of data is crucial to prevent catastrophic forgetting and interference between tasks. To address these limitations and enhance training flexibility, we propose the Mixture-of-LoRAs (MoA) architecture which is a novel and parameter-efficient tuning method designed for multi-task learning with LLMs. In this paper, we start by individually training multiple domain-specific LoRA modules using corresponding supervised corpus data. These LoRA modules can be aligned with the expert design principles observed in Mixture-of-Experts (MoE). Subsequently, we combine the multiple LoRAs using an explicit routing strategy and introduce domain labels to facilitate multi-task learning, which help prevent interference between tasks and ultimately enhances the performance of each individual task. Furthermore, each LoRA model can be iteratively adapted to a new domain, allowing for quick domain-specific adaptation. Experiments on diverse tasks demonstrate superior and robust performance, which can further promote the wide application of domain-specific LLMs.
+
+### LLaMA Factory
+- https://github.com/hiyouga/LLaMA-Factory
+
+LLaMA Factory是一个高效、易用、可扩展的开源全栈大模型微调框架，半年内在GitHub开源社区获得10000关注，并得到Hugging Face、Avalon Labs、美团等多家国内外企业的关注或落地应用。本次分享将从大模型高效训练的角度详细剖析LLaMA Factory的构建动机与组成模块，包括上百种大模型的全栈微调适配原理，LoRA算子优化加速方法，多种微调Trick集成思路等等。
+
+### InfLLM
+- https://arxiv.org/abs/2402.04617
+- https://github.com/thunlp/InfLLM
+
+Large language models (LLMs) have emerged as a cornerstone in real-world applications with lengthy streaming inputs, such as LLM-driven agents. However, existing LLMs, pre-trained on sequences with restricted maximum length, cannot generalize to longer sequences due to the out-of-domain and distraction issues. To alleviate these issues, existing efforts employ sliding attention windows and discard distant tokens to achieve the processing of extremely long sequences. Unfortunately, these approaches inevitably fail to capture long-distance dependencies within sequences to deeply understand semantics. This paper introduces a training-free memory-based method, InfLLM, to unveil the intrinsic ability of LLMs to process streaming long sequences. Specifically, InfLLM stores distant contexts into additional memory units and employs an efficient mechanism to lookup token-relevant units for attention computation. Thereby, InfLLM allows LLMs to efficiently process long sequences while maintaining the ability to capture long-distance dependencies. Without any training, InfLLM enables LLMs pre-trained on sequences of a few thousand tokens to achieve superior performance than competitive baselines continually training these LLMs on long sequences. Even when the sequence length is scaled to 1, 024K, InfLLM still effectively captures long-distance dependencies.
+
+### MediaPipe
+- https://github.com/googlesamples/mediapipe/tree/main
+
+MediaPipe Solutions streamlines on-device ML development and deployment with flexible low-code / no-code tools that provide the modular building blocks for creating custom high-performance solutions for cross-platform deployment.
+
+### OneBit
+- https://arxiv.org/abs/2402.11295
+
+Model quantification uses low bit-width values to represent the weight matrices of models, which is a promising approach to reduce both storage and computational overheads of deploying highly anticipated LLMs. However, existing quantization methods suffer severe performance degradation when the bit-width is extremely reduced, and thus focus on utilizing 4-bit or 8-bit values to quantize models. This paper boldly quantizes the weight matrices of LLMs to 1-bit, paving the way for the extremely low bit-width deployment of LLMs. For this target, we introduce a 1-bit quantization-aware training (QAT) framework named OneBit, including a novel 1-bit parameter representation method to better quantize LLMs as well as an effective parameter initialization method based on matrix decomposition to improve the convergence speed of the QAT framework. Sufficient experimental results indicate that OneBit achieves good performance (at least 83% of the non-quantized performance) with robust training processes when only using 1-bit weight matrices.
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -2813,6 +2889,11 @@ This technical report describes the training of nomic-embed-text-v1, the first f
 
 All text-based language problems can be reduced to either generation or embedding. Current models only perform well at one or the other. We introduce generative representational instruction tuning (GRIT) whereby a large language model is trained to handle both generative and embedding tasks by distinguishing between them through instructions. Compared to other open models, our resulting GritLM 7B sets a new state of the art on the Massive Text Embedding Benchmark (MTEB) and outperforms all models up to its size on a range of generative tasks. By scaling up further, GritLM 8x7B outperforms all open generative language models that we tried while still being among the best embedding models. Notably, we find that GRIT matches training on only generative or embedding data, thus we can unify both at no performance loss. Among other benefits, the unification via GRIT speeds up Retrieval-Augmented Generation (RAG) by > 60% for long documents, by no longer requiring separate retrieval and generation models.
 
+### TinyRAG
+- https://github.com/KMnO4-zx/TinyRAG
+
+此仓库用于学习大模型RAG的相关内容，目前为手搓实现，主要是llama-index和langchain不太好魔改。此仓库可以方便看论文的时候，实现一些小的实验。
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -3063,6 +3144,12 @@ LlamaGym seeks to simplify fine-tuning LLM agents with RL. Right now, it's a sin
 
 We study the use of large language model-based agents for interacting with software via web browsers. Unlike prior work, we focus on measuring the agents' ability to perform tasks that span the typical daily work of knowledge workers utilizing enterprise software systems. To this end, we propose WorkArena, a remote-hosted benchmark of 29 tasks based on the widely-used ServiceNow platform. We also introduce BrowserGym, an environment for the design and evaluation of such agents, offering a rich set of actions as well as multimodal observations. Our empirical evaluation reveals that while current agents show promise on WorkArena, there remains a considerable gap towards achieving full task automation. Notably, our analysis uncovers a significant performance disparity between open and closed-source LLMs, highlighting a critical area for future exploration and development in the field.
 
+### STE（Simulated Trial and Error）
+- https://arxiv.org/abs/2403.04746
+- https://github.com/microsoft/simulated-trial-and-error
+
+Tools are essential for large language models (LLMs) to acquire up-to-date information and take consequential actions in external environments. Existing work on tool-augmented LLMs primarily focuses on the broad coverage of tools and the flexibility of adding new tools. However, a critical aspect that has surprisingly been understudied is simply how accurately an LLM uses tools for which it has been trained. We find that existing LLMs, including GPT-4 and open-source LLMs specifically fine-tuned for tool use, only reach a correctness rate in the range of 30% to 60%, far from reliable use in practice. We propose a biologically inspired method for tool-augmented LLMs, simulated trial and error (STE), that orchestrates three key mechanisms for successful tool use behaviors in the biological system: trial and error, imagination, and memory. Specifically, STE leverages an LLM's 'imagination' to simulate plausible scenarios for using a tool, after which the LLM interacts with the tool to learn from its execution feedback. Both short-term and long-term memory are employed to improve the depth and breadth of the exploration, respectively. Comprehensive experiments on ToolBench show that STE substantially improves tool learning for LLMs under both in-context learning and fine-tuning settings, bringing a boost of 46.7% to Mistral-Instruct-7B and enabling it to outperform GPT-4. We also show effective continual learning of tools via a simple experience replay strategy.
+
 ### AgentBench
 - https://llmbench.ai/agent
 - https://github.com/THUDM/AgentBench
@@ -3184,5 +3271,11 @@ TDB enables rapid exploration before needing to write code, with the ability to 
 - https://github.com/microsoft/RecAI
 
 This paper introduces RecAI, a practical toolkit designed to augment or even revolutionize recommender systems with the advanced capabilities of Large Language Models (LLMs). RecAI provides a suite of tools, including Recommender AI Agent, Recommendation-oriented Language Models, Knowledge Plugin, RecExplainer, and Evaluator, to facilitate the integration of LLMs into recommender systems from multifaceted perspectives. The new generation of recommender systems, empowered by LLMs, are expected to be more versatile, explainable, conversational, and controllable, paving the way for more intelligent and user-centric recommendation experiences. We hope the open-source of RecAI can help accelerate evolution of new advanced recommender systems. 
+
+### synthetic-data-save-costs
+- https://huggingface.co/blog/synthetic-data-save-costs
+- https://github.com/MoritzLaurer/synthetic-data-blog/tree/main
+
+In a case study on identifying investor sentiment in the news, we show how to use an open-source LLM to create synthetic data to train your customized model in a few steps. Our resulting custom RoBERTa model can analyze a large news corpus for around $2.7 compared to $3061 with GPT4; emits around 0.12 kg CO2 compared to very roughly 735 to 1100 kg CO2 with GPT4; with a latency of 0.13 seconds compared to often multiple seconds with GPT4; while performing on par with GPT4 at identifying investor sentiment (both 94% accuracy and 0.94 F1 macro).
 
 > 持续更新中 (Continuously Updated)... 
