@@ -93,13 +93,14 @@ Open-Source Language Model Pocket
 |尔雅 Erya|
 |荀子|
 
-|编程/代码||
+|编程/代码/系统/设备||
 |---|---|
 |CodeShell|CODEFUSION-75M|
 |DeepSeek Coder|DevOps-Model（运维）|
 |Magicoder|LLaMA-Pro|
 |HuixiangDou|*【CodeAct】|
-|*【Design2Code】||
+|*【Design2Code】|*【bGPT】|
+|*【MobileLLM】||
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -108,13 +109,13 @@ Open-Source Language Model Pocket
 |K2&GeoGalactica|
 |SciGLM|
 
-*文本向量*
+*文本向量/RAG*
 |  |  |
 |---|---|
 | Matryoshka Representation Learning |Jina Embeddings|
 |BGE-M3|Nomic Embed|
 |Moka Massive Mixed Embedding（M3E）|*【GRIT】|
-|*【TinyRAG】||
+|*【TinyRAG】|*【RAFT】|
 
 *Agent*
 |  |  |
@@ -130,7 +131,7 @@ Open-Source Language Model Pocket
 |*【WorkArena】|*【STE（Simulated Trial and Error）】|
 |KwaiAgents||
 
-*可参考的其它开源模型*
+*可参考的其它开源模型（国外为主）*
 |  |  |
 |---|---|
 | Cerebras | MPT-7B |
@@ -169,7 +170,7 @@ Open-Source Language Model Pocket
 |*【Smaug-72B】|*【Gemma】|
 |*【Aya Model】|*【MobiLlama】|
 |*【StarCoder2】|*【SmallLanguageModel-project】|
-|*【Command-R】||
+|*【Command-R】|*【Grok】|
 
 *训练/推理*
 |  |  |
@@ -237,6 +238,8 @@ Open-Source Language Model Pocket
 |*【中文MT-Bench】|*【E-EVAL】|
 |*【ConflictingQA】|*【Medical Information Retrieval-Augmented Generation Evaluation （MIRAGE）】|
 |*【∞Bench】|*【Red Teaming Resistance Benchmark】|
+|*【Fin-Eva】|*【Cappy】|
+|*【BAMBOO】|*【Fast-DetectGPT】|
 
 *其它*
 |  |  |
@@ -257,7 +260,9 @@ Open-Source Language Model Pocket
 |*【NVIDIA Chat with RTX】|*【RAG vs Fine-tuning】|
 |*【Chain of Abstraction】|*【序列猴子开源数据集】|
 |*【Transformer Debugger】|*【RecAI】|
-|*【synthetic-data-save-costs】||
+|*【synthetic-data-save-costs】|*【Data is Better Together】|
+|*【Large Language Models in Finance】|*【WanJuan-CC】|
+|*【Actions Speak Louder than Words】||
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -1244,6 +1249,11 @@ Command-R is a generative model optimized for long context tasks such as retriev
 - Strong capabilities across 10 key languages
 - Model weights available on HuggingFace for research and evaluation
 
+### Grok
+- https://github.com/xai-org/grok-1
+
+This repository contains JAX example code for loading and running the Grok-1 open-weights model.
+
 ### Colossal-LLaMA-2
 - https://github.com/hpcaitech/ColossalAI/tree/main/applications/Colossal-LLaMA-2
 
@@ -1339,7 +1349,18 @@ Large Language Model (LLM) agents, capable of performing a broad range of action
 
 Generative AI has made rapid advancements in recent years, achieving unprecedented capabilities in multimodal understanding and code generation. This can enable a new paradigm of front-end development, in which multimodal LLMs might directly convert visual designs into code implementations. In this work, we formalize this as a Design2Code task and conduct comprehensive benchmarking. Specifically, we manually curate a benchmark of 484 diverse real-world webpages as test cases and develop a set of automatic evaluation metrics to assess how well current multimodal LLMs can generate the code implementations that directly render into the given reference webpages, given the screenshots as input. We also complement automatic metrics with comprehensive human evaluations. We develop a suite of multimodal prompting methods and show their effectiveness on GPT-4V and Gemini Pro Vision. We further finetune an open-source Design2Code-18B model that successfully matches the performance of Gemini Pro Vision. Both human evaluation and automatic metrics show that GPT-4V performs the best on this task compared to other models. Moreover, annotators think GPT-4V generated webpages can replace the original reference webpages in 49% of cases in terms of visual appearance and content; and perhaps surprisingly, in 64% of cases GPT-4V generated webpages are considered better than the original reference webpages. Our fine-grained break-down metrics indicate that open-source models mostly lag in recalling visual elements from the input webpages and in generating correct layout designs, while aspects like text content and coloring can be drastically improved with proper finetuning.
 
+### bGPT
+- https://byte-gpt.github.io/
+- https://huggingface.co/sander-wood/bgpt
+- https://github.com/sanderwood/bgpt
+- https://arxiv.org/abs/2402.19155
 
+In this paper, we introduce bGPT, a model designed for binary data processing and digital world modelling by next byte prediction. The digital world includes not only digital media files, traditionally the focus of deep learning models, but also extends to the intricate realm of digital systems, ranging from hardware architectures to complex algorithms. bGPT transcends traditional deep learning boundaries by directly interpreting and manipulating binary data, enabling a more intrinsic and holistic understanding of the digital world. Its advantages are two-fold: 1) Interpreting Digital System: By training on byte sequences, bGPT can learn the patterns of digital systems, enabling it to predict, simulate, and diagnose algorithm or hardware behaviour. This ability allows for the reconstruction of complex systems from binary data. 2) Unified Modelling: bGPT integrates various data types into a single framework, treating everything as a byte sequence. This simplifies modelling and allows for easy integration of various data sources.
+
+### MobileLLM
+- https://arxiv.org/abs/2402.14905
+
+This paper addresses the growing need for efficient large language models (LLMs) on mobile devices, driven by increasing cloud costs and latency concerns. We focus on designing top-quality LLMs with fewer than a billion parameters, a practical choice for mobile deployment. Contrary to prevailing belief emphasizing the pivotal role of data and parameter quantity in determining model quality, our investigation underscores the significance of model architecture for sub-billion scale LLMs. Leveraging deep and thin architectures, coupled with embedding sharing and grouped-query attention mechanisms, we establish a strong baseline network denoted as MobileLLM, which attains a remarkable 2.7%/4.3% accuracy boost over preceding 125M/350M state-of-the-art models. Additionally, we propose an immediate block-wise weight sharing approach with no increase in model size and only marginal latency overhead. The resultant models, denoted as MobileLLM-LS, demonstrate a further accuracy enhancement of 0.7%/0.8% than MobileLLM 125M/350M. Moreover, MobileLLM model family shows significant improvements compared to previous sub-billion models on chat benchmarks, and demonstrates close correctness to LLaMA-v2 7B in API calling tasks, highlighting the capability of small models for common on-device use cases.
 
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
@@ -2894,6 +2915,12 @@ All text-based language problems can be reduced to either generation or embeddin
 
 此仓库用于学习大模型RAG的相关内容，目前为手搓实现，主要是llama-index和langchain不太好魔改。此仓库可以方便看论文的时候，实现一些小的实验。
 
+### RAFT
+- https://arxiv.org/abs/2403.10131
+- http://github.com/ShishirPatil/gorilla
+
+Pretraining Large Language Models (LLMs) on large corpora of textual data is now a standard paradigm. When using these LLMs for many downstream applications, it is common to additionally bake in new knowledge (e.g., time-critical news, or private domain knowledge) into the pretrained model either through RAG-based-prompting, or fine-tuning. However, the optimal methodology for the model to gain such new knowledge remains an open question. In this paper, we present Retrieval Augmented FineTuning (RAFT), a training recipe that improves the model's ability to answer questions in a "open-book" in-domain settings. In RAFT, given a question, and a set of retrieved documents, we train the model to ignore those documents that don't help in answering the question, which we call, distractor documents. RAFT accomplishes this by citing verbatim the right sequence from the relevant document that would help answer the question. This coupled with RAFT's chain-of-thought-style response helps improve the model's ability to reason. In domain-specific RAG, RAFT consistently improves the model's performance across PubMed, HotpotQA, and Gorilla datasets, presenting a post-training recipe to improve pre-trained LLMs to in-domain RAG.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -3192,6 +3219,33 @@ Processing and reasoning over long contexts is crucial for many practical applic
 
 Hello! This repository contains the code and data used to benchmark redteaming prompts against various models as seen in our Huggingface Leaderboard. This project is aimed to reveal weaknesses in both open-sourced and blackbox language models through redteaming attacks covering a diverse range of behaviors and topics.
 
+### Fin-Eva
+- https://github.com/alipay/financial_evaluation_dataset
+
+蚂蚁集团、上海财经大学联合推出金融评测集Fin-Eva Version 1.0，覆盖财富管理、保险、投资研究等多个金融场景以及金融专业主题学科，总评测题数目达到1.3w+。
+
+蚂蚁数据源包括各业务领域数据、互联网公开数据，经过数据脱敏、文本聚类、语料精筛、数据改写等处理过程后，结合金融领域专家的评审构建而成。 上海财经大学数据源主要基于相关领域权威性考试的各类真题和模拟题对知识大纲的要求，由上海财经大学统计与管理学院张立文副教授课题组牵头，金融学院闵敏副教授及其他各学院老师协助完成，所有数据均为原创，这保证了数据源的准确性和权威性。
+
+蚂蚁部分涵盖金融认知、金融知识、金融逻辑、内容生成以及安全合规五大类能力33个子维度共8445个测评题； 上财部分涵盖金融，经济，会计和证书等四大领域，包括4661个问题，涵盖34个不同的学科。
+
+### Cappy
+- https://blog.research.google/2024/03/cappy-outperforming-and-boosting-large.html
+- https://arxiv.org/abs/2311.06720
+
+In “Cappy: Outperforming and Boosting Large Multi-Task LMs with a Small Scorer”, presented at NeurIPS 2023, we propose a novel approach that enhances the performance and efficiency of multi-task LLMs. We introduce a lightweight pre-trained scorer, Cappy, based on continual pre-training on top of RoBERTa with merely 360 million parameters. Cappy takes in an instruction and a candidate response as input, and produces a score between 0 and 1, indicating an estimated correctness of the response with respect to the instruction. Cappy functions either independently on classification tasks or serves as an auxiliary component for LLMs, boosting their performance. Moreover, Cappy efficiently enables downstream supervision without requiring any finetuning, which avoids the need for back-propagation through LLM parameters and reduces memory requirements. Finally, adaptation with Cappy doesn’t require access to LLM parameters as it is compatible with closed-source multi-task LLMs, such as those only accessible via WebAPIs.
+
+### BAMBOO
+- https://arxiv.org/abs/2309.13345
+- https://github.com/RUCAIBox/BAMBOO
+
+Large language models (LLMs) have achieved dramatic proficiency over NLP tasks with normal length. Recently, multiple studies have committed to extending the context length and enhancing the long text modeling capabilities of LLMs. To comprehensively evaluate the long context ability of LLMs, we propose BAMBOO, a multi-task long context benchmark. BAMBOO has been designed with four principles: comprehensive capacity evaluation, avoidance of data contamination, accurate automatic evaluation, and different length levels. It consists of 10 datasets from 5 different long text understanding tasks, i.e. question answering, hallucination detection, text sorting, language modeling, and code completion, to cover core capacities and various domains of LLMs. We conduct experiments with five long context models on BAMBOO and further discuss four key research questions of long text. We also qualitatively analyze current long context models and point out future directions for enhancing long text modeling capacities.
+
+### Fast-DetectGPT
+- https://openreview.net/forum?id=Bpcgcr8E8Z
+- https://github.com/baoguangsheng/fast-detect-gpt
+- https://arxiv.org/abs/2310.05130
+
+Large language models (LLMs) have shown the ability to produce fluent and cogent content, presenting both productivity opportunities and societal risks. To build trustworthy AI systems, it is imperative to distinguish between machine-generated and human-authored content. The leading zero-shot detector, DetectGPT, showcases commendable performance but is marred by its intensive computational costs. In this paper, we introduce the concept of conditional probability curvature to elucidate discrepancies in word choices between LLMs and humans within a given context. Utilizing this curvature as a foundational metric, we present **Fast-DetectGPT**, an optimized zero-shot detector, which substitutes DetectGPT's perturbation step with a more efficient sampling step. Our evaluations on various datasets, source models, and test conditions indicate that Fast-DetectGPT not only surpasses DetectGPT by a relative around 75% in both the white-box and black-box settings but also accelerates the detection process by a factor of 340, as detailed in Table 1.
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
@@ -3277,5 +3331,29 @@ This paper introduces RecAI, a practical toolkit designed to augment or even rev
 - https://github.com/MoritzLaurer/synthetic-data-blog/tree/main
 
 In a case study on identifying investor sentiment in the news, we show how to use an open-source LLM to create synthetic data to train your customized model in a few steps. Our resulting custom RoBERTa model can analyze a large news corpus for around $2.7 compared to $3061 with GPT4; emits around 0.12 kg CO2 compared to very roughly 735 to 1100 kg CO2 with GPT4; with a latency of 0.13 seconds compared to often multiple seconds with GPT4; while performing on par with GPT4 at identifying investor sentiment (both 94% accuracy and 0.94 F1 macro).
+
+### Data is Better Together
+- https://github.com/huggingface/data-is-better-together
+
+Data is Better Together is a collab between 🤗 Hugging Face, 🏓 Argilla, and the Open Source ML community. Our goal is to empower the open source community to collectively build impactful datasets.
+
+### Large Language Models in Finance
+- https://github.com/adlnlp/finllms
+- https://arxiv.org/abs/2402.02315
+
+A curated list of resources of LLMs in Finance (FinLLMs) including their history, techniques, evaluation, and opportunities and challenges. It's based on our survey paper: A Survey of Large Language Models in Finance (FinLLMs). This survey will be actively updated including further evaluation of advanced Financial NLP tasks, a collection of financial datasets, and sharing FinLLM use-cases. Please stay tuned!🔥
+
+### WanJuan-CC
+- https://opendatalab.com/OpenDataLab/WanJuanCC
+- https://arxiv.org/abs/2402.19282
+
+This paper presents WanJuan-CC, a safe and high-quality open-sourced English webtext dataset derived from Common Crawl data. The study addresses the challenges of constructing large-scale pre-training datasets for language models, which require vast amounts of high-quality data. A comprehensive process was designed to handle Common Crawl data, including extraction, heuristic rule filtering, fuzzy deduplication, content safety filtering, and data quality filtering. From approximately 68 billion original English documents, we obtained 2.22T Tokens of safe data and selected 1.0T Tokens of high-quality data as part of WanJuan-CC. We have open-sourced 100B Tokens from this dataset. The paper also provides statistical information related to data quality, enabling users to select appropriate data according to their needs. To evaluate the quality and utility of the dataset, we trained 1B-parameter and 3B-parameter models using WanJuan-CC and another dataset, RefinedWeb. Results show that WanJuan-CC performs better on validation datasets and downstream tasks.
+
+### Actions Speak Louder than Words
+- https://arxiv.org/abs/2402.17152
+
+Large-scale recommendation systems are characterized by their reliance on high cardinality, heterogeneous features and the need to handle tens of billions of user actions on a daily basis. Despite being trained on huge volume of data with thousands of features, most Deep Learning Recommendation Models (DLRMs) in industry fail to scale with compute.
+Inspired by success achieved by Transformers in language and vision domains, we revisit fundamental design choices in recommendation systems. We reformulate recommendation problems as sequential transduction tasks within a generative modeling framework (``Generative Recommenders''), and propose a new architecture, HSTU, designed for high cardinality, non-stationary streaming recommendation data.
+HSTU outperforms baselines over synthetic and public datasets by up to 65.8\% in NDCG, and is 5.3x to 15.2x faster than FlashAttention2-based Transformers on 8192 length sequences. HSTU-based Generative Recommenders, with 1.5 trillion parameters, improve metrics in online A/B tests by 12.4\% and have been deployed on multiple surfaces of a large internet platform with billions of users. More importantly, the model quality of Generative Recommenders empirically scales as a power-law of training compute across three orders of magnitude, up to GPT-3/LLaMa-2 scale, which reduces carbon footprint needed for future model developments, and further paves the way for the first foundational models in recommendations.
 
 > 持续更新中 (Continuously Updated)... 
