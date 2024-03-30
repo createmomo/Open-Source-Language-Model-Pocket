@@ -38,7 +38,8 @@ Open-Source Language Model Pocket
 |MachineMindset(MBTI)|星辰语义（电信）|Chinese-Mixtral-8x7B|
 |Baby-Llama2-Chinese|XVERSE-13B-256K|Eagle 7B（RWKV-v5）|
 |iFlytekSpark-13B|MiniCPM|通义千问Qwen1.5|
-|*【RethinkTinyLM】|*【Chinese-Mixtral】||
+|*【RethinkTinyLM】|*【Chinese-Mixtral】|*【RWKV_Pytorch】|
+|*【Qwen1.5-MoE-A2.7B】|||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -100,7 +101,7 @@ Open-Source Language Model Pocket
 |Magicoder|LLaMA-Pro|
 |HuixiangDou|*【CodeAct】|
 |*【Design2Code】|*【bGPT】|
-|*【MobileLLM】||
+|*【MobileLLM】|*【Stable Code Instruct 3B】|
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -116,6 +117,7 @@ Open-Source Language Model Pocket
 |BGE-M3|Nomic Embed|
 |Moka Massive Mixed Embedding（M3E）|*【GRIT】|
 |*【TinyRAG】|*【RAFT】|
+|*【Chat with MLX】||
 
 *Agent*
 |  |  |
@@ -125,11 +127,12 @@ Open-Source Language Model Pocket
 |AgentLM (AgentTuning, AgentInstruct) |XAgent|
 |OpenAgents|Personal LLM Agents - Survey|
 |AUTOACT|MetaGPT|
-|Multi-LLM-Agent|*【More Agents Is All You Need】|
+|Multi-LLM-Agent|KwaiAgents|
 |*【Mistral-Interact】|*【AgentLite】|
 |*【KnowAgent】|*【LlamaGym】|
 |*【WorkArena】|*【STE（Simulated Trial and Error）】|
-|KwaiAgents||
+|*【More Agents Is All You Need】|*【AIOS】|
+|*【TwoStep】|*【Agent-FLAN】|
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -171,6 +174,7 @@ Open-Source Language Model Pocket
 |*【Aya Model】|*【MobiLlama】|
 |*【StarCoder2】|*【SmallLanguageModel-project】|
 |*【Command-R】|*【Grok】|
+|*【DBRX】|*【Jamba】|
 
 *训练/推理*
 |  |  |
@@ -217,7 +221,10 @@ Open-Source Language Model Pocket
 |*【MindNLP】|*【GaLore】|
 |*【Mixture-of-LoRAs】|*【LLaMA Factory】|
 |*【InfLLM】|*【MediaPipe】|
-|*【OneBit】||
+|*【OneBit】|*【RWKV_Pytorch】|
+|*【HQQ】|*【Uni-RLHF】|
+|*【LLMLingua-2】|*【REST】|
+|*【MetaAligner】||
 
 *评价*
 |  ||
@@ -240,6 +247,7 @@ Open-Source Language Model Pocket
 |*【∞Bench】|*【Red Teaming Resistance Benchmark】|
 |*【Fin-Eva】|*【Cappy】|
 |*【BAMBOO】|*【Fast-DetectGPT】|
+|*【GAMA-Bench】|*【FineMath】|
 
 *其它*
 |  |  |
@@ -262,7 +270,8 @@ Open-Source Language Model Pocket
 |*【Transformer Debugger】|*【RecAI】|
 |*【synthetic-data-save-costs】|*【Data is Better Together】|
 |*【Large Language Models in Finance】|*【WanJuan-CC】|
-|*【Actions Speak Louder than Words】||
+|*【Actions Speak Louder than Words】|*【LLM-UM-Reading】|
+|*【Larimar】|*【PPM】|
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -1254,6 +1263,18 @@ Command-R is a generative model optimized for long context tasks such as retriev
 
 This repository contains JAX example code for loading and running the Grok-1 open-weights model.
 
+### DBRX
+- https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm
+- https://huggingface.co/databricks/dbrx-base
+- https://huggingface.co/databricks/dbrx-instruct
+
+an open, general-purpose LLM created by Databricks. Across a range of standard benchmarks, DBRX sets a new state-of-the-art for established open LLMs. Moreover, it provides the open community and enterprises building their own LLMs with capabilities that were previously limited to closed model APIs; according to our measurements, it surpasses GPT-3.5, and it is competitive with Gemini 1.0 Pro. It is an especially capable code model, surpassing specialized models like CodeLLaMA-70B on programming, in addition to its strength as a general-purpose LLM.
+
+### Jamba
+- https://huggingface.co/ai21labs/Jamba-v0.1
+
+Jamba is a state-of-the-art, hybrid SSM-Transformer LLM. It delivers throughput gains over traditional Transformer-based models, while outperforming or matching the leading models of its size class on most common benchmarks.
+
 ### Colossal-LLaMA-2
 - https://github.com/hpcaitech/ColossalAI/tree/main/applications/Colossal-LLaMA-2
 
@@ -1361,6 +1382,13 @@ In this paper, we introduce bGPT, a model designed for binary data processing an
 - https://arxiv.org/abs/2402.14905
 
 This paper addresses the growing need for efficient large language models (LLMs) on mobile devices, driven by increasing cloud costs and latency concerns. We focus on designing top-quality LLMs with fewer than a billion parameters, a practical choice for mobile deployment. Contrary to prevailing belief emphasizing the pivotal role of data and parameter quantity in determining model quality, our investigation underscores the significance of model architecture for sub-billion scale LLMs. Leveraging deep and thin architectures, coupled with embedding sharing and grouped-query attention mechanisms, we establish a strong baseline network denoted as MobileLLM, which attains a remarkable 2.7%/4.3% accuracy boost over preceding 125M/350M state-of-the-art models. Additionally, we propose an immediate block-wise weight sharing approach with no increase in model size and only marginal latency overhead. The resultant models, denoted as MobileLLM-LS, demonstrate a further accuracy enhancement of 0.7%/0.8% than MobileLLM 125M/350M. Moreover, MobileLLM model family shows significant improvements compared to previous sub-billion models on chat benchmarks, and demonstrates close correctness to LLaMA-v2 7B in API calling tasks, highlighting the capability of small models for common on-device use cases.
+
+### Stable Code Instruct 3B
+- https://huggingface.co/stabilityai/stable-code-instruct-3b
+- https://huggingface.co/spaces/stabilityai/stable-code-instruct-3b
+- https://static1.squarespace.com/static/6213c340453c3f502425776e/t/6601c5713150412edcd56f8e/1711392114564/Stable_Code_TechReport_release.pdf
+
+stable-code-3b is a 2.7B billion parameter decoder-only language model pre-trained on 1.3 trillion tokens of diverse textual and code datasets. stable-code-3b is trained on 18 programming languages (selected based on the 2023 StackOverflow Developer Survey) and demonstrates state-of-the-art performance (compared to models of similar size) on the MultiPL-E metrics across multiple programming languages tested using BigCode's Evaluation Harness.
 
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
@@ -1596,6 +1624,45 @@ The power of large language models (LLMs) has been demonstrated through numerous
 - https://github.com/ymcui/Chinese-Mixtral
 
 本项目基于Mistral.ai发布的Mixtral模型进行开发，该模型使用了稀疏混合专家模型（Sparse MoE）架构。本项目利用大规模中文无标注数据进行了中文增量训练，得到了中文Mixtral基础模型，并且进一步通过指令精调，得到了中文Mixtral-Instruct指令模型。该模型原生支持32K上下文（实测可达128K），能够有效地处理长文本，同时在数学推理、代码生成等方面获得了显著性能提升。使用llama.cpp进行量化推理时，最低只需16G内存（或显存）。
+
+### RWKV_Pytorch
+- https://github.com/yuunnn-w/RWKV_Pytorch
+
+This is an inference framework for the RWKV large language model implemented purely in native PyTorch. The official native implementation is overly complex and lacks extensibility. Let's join the flexible PyTorch ecosystem and open-source it together!
+
+这是一个用纯Pytorch原生实现的RWKV大语言模型的推理框架，官方的原生实现过于复杂且无法拓展生态，让我们加入灵活的Pytorch阵营，一起开源起来吧！
+
+### Qwen1.5-MoE-A2.7B
+- https://qwenlm.github.io/blog/qwen-moe/
+- https://github.com/QwenLM/Qwen1.5
+- https://huggingface.co/Qwen
+
+Compared to Qwen1.5-7B, which contains 6.5 billion non-embedding parameters, Qwen1.5-MoE-A2.7B contains only 2.0 billion non-embedding parameters, approximately one-third of Qwen1.5-7B’s size. Notably, it achieves a 75% decrease in training expenses and accelerates inference speed by a factor of 1.74, offering substantial improvements in resource utilization without compromising performance.
+
+### HQQ
+- https://mobiusml.github.io/hqq_blog/
+- https://github.com/mobiusml/hqq
+- https://mobiusml.github.io/1bit_blog
+
+Half-Quadratic Quantization
+
+Basic quantization often results in a loss of model accuracy. This is because the weights in these models can have a wide range of values that can be significantly altered after the quantization process. Weights that deviate from the distribution, notably known as outliers, pose a particular challenge. Group-wise Precision Tuning Quantization (GPTQ) and Activation-Aware Layer Quantization (AWQ) are algorithms that try to overcome this issue by relying on calibration data to minimize the error on layer outputs.
+
+### Uni-RLHF
+- https://uni-rlhf.github.io/
+- https://github.com/pickxiguapi/Uni-RLHF-Platform
+- https://github.com/pickxiguapi/Clean-Offline-RLHF
+- https://arxiv.org/abs/2402.02423
+
+Reinforcement Learning with Human Feedback (RLHF) has received significant attention for performing tasks without the need for costly manual reward design by aligning human preferences. It is crucial to consider diverse human feedback types and various learning methods in different environments. However, quantifying progress in RLHF with diverse feedback is challenging due to the lack of standardized annotation platforms and widely used unified benchmarks. To bridge this gap, we introduce Uni-RLHF, a comprehensive system implementation tailored for RLHF. It aims to provide a complete workflow from real human feedback, fostering progress in the development of practical problems. Uni-RLHF contains three packages: 1) a universal multi-feedback annotation platform, 2) large-scale crowdsourced feedback datasets, and 3) modular offline RLHF baseline implementations. Uni-RLHF develops a user-friendly annotation interface tailored to various feedback types, compatible with a wide range of mainstream RL environments. We then establish a systematic pipeline of crowdsourced annotations, resulting in large-scale annotated datasets comprising more than 15 million steps across 30+ popular tasks. Through extensive experiments, the results in the collected datasets demonstrate competitive performance compared to those from well-designed manual rewards. We evaluate various design choices and offer insights into their strengths and potential areas of improvement. We wish to build valuable open-source platforms, datasets, and baselines to facilitate the development of more robust and reliable RLHF solutions based on realistic human feedback.
+
+### LLMLingua-2
+- https://arxiv.org/abs/2403.12968
+
+This paper focuses on task-agnostic prompt compression for better generalizability and efficiency. Considering the redundancy in natural language, existing approaches compress prompts by removing tokens or lexical units according to their information entropy obtained from a causal language model such as LLaMa-7B. The challenge is that information entropy may be a suboptimal compression metric: (i) it only leverages unidirectional context and may fail to capture all essential information needed for prompt compression; (ii) it is not aligned with the prompt compression objective.
+To address these issues, we propose a data distillation procedure to derive knowledge from an LLM to compress prompts without losing crucial information, and meantime, introduce an extractive text compression dataset. We formulate prompt compression as a token classification problem to guarantee the faithfulness of the compressed prompt to the original one, and use a Transformer encoder as the base architecture to capture all essential information for prompt compression from the full bidirectional context. Our approach leads to lower latency by explicitly learning the compression objective with smaller models such as XLM-RoBERTa-large and mBERT.
+
+We evaluate our method on both in-domain and out-of-domain datasets, including MeetingBank, LongBench, ZeroScrolls, GSM8K, and BBH. Despite its small size, our model shows significant performance gains over strong baselines and demonstrates robust generalization ability across different LLMs. Additionally, our model is 3x-6x faster than existing prompt compression methods, while accelerating the end-to-end latency by 1.6x-2.9x with compression ratios of 2x-5x.
 
 ## 2 训练/推理
 ### 高效对齐算法RAFT「木筏」
@@ -1896,6 +1963,18 @@ A core challenge for aligning future superhuman AI systems (superalignment) is t
 
 Large language models (LLMs) have been applied in various applications due to their astonishing capabilities. With advancements in technologies such as chain-of-thought (CoT) prompting and in-context learning (ICL), the prompts fed to LLMs are becoming increasingly lengthy, even exceeding tens of thousands of tokens. To accelerate model inference and reduce cost, this paper presents LLMLingua, a coarse-to-fine prompt compression method that involves a budget controller to maintain semantic integrity under high compression ratios, a token-level iterative compression algorithm to better model the interdependence between compressed contents, and an instruction tuning based method for distribution alignment between language models. We conduct experiments and analysis over four datasets from different scenarios, i.e., GSM8K, BBH, ShareGPT, and Arxiv-March23; showing that the proposed approach yields state-of-the-art performance and allows for up to 20x compression with little performance loss. 
 
+### REST
+- https://arxiv.org/pdf/2311.08252.pdf
+- https://sites.google.com/view/rest-llm
+- https://github.com/FasterDecoding/REST
+
+REST is a retrieval-based speculative decoding method designed to boost generation speed of LLMs. Instead of relying on a draft language model like speculative decoding, REST utilizes a datastore to retrieve and employ draft tokens. Moreover, REST differs from blockwise parallel decoding and Medusa in that it doesn't require extra training steps. It functions as a plug-and-play solution capable of accelerating any pre-existing language model.
+
+### MetaAligner
+- https://arxiv.org/abs/2403.17141
+
+Recent advancements in large language models (LLMs) aim to tackle heterogeneous human expectations and values via multi-objective preference alignment. However, existing methods are parameter-adherent to the policy model, leading to two key limitations: (1) the high-cost repetition of their alignment algorithms for each new target model; (2) they cannot expand to unseen objectives due to their static alignment objectives. In this work, we propose Meta-Objective Aligner (MetaAligner), a model that performs conditional weak-to-strong correction for weak responses to approach strong responses. MetaAligner is the first policy-agnostic and generalizable method for multi-objective preference alignment, which enables plug-and-play alignment by decoupling parameter updates from the policy models and facilitates zero-shot preference alignment for unseen objectives via in-context learning. Experimental results show that MetaAligner achieves significant and balanced improvements in multi-objective alignments on 11 policy models with up to 63x more parameters, and outperforms previous alignment methods with down to 22.27x less computational resources. The model also accurately aligns with unseen objectives, marking the first step towards generalizable multi-objective preference alignment.
+
 ### Large Language Model Unlearning
 - https://arxiv.org/abs/2310.10683
 - https://github.com/kevinyaobytedance/llm_unlearn
@@ -2097,6 +2176,13 @@ MediaPipe Solutions streamlines on-device ML development and deployment with fle
 - https://arxiv.org/abs/2402.11295
 
 Model quantification uses low bit-width values to represent the weight matrices of models, which is a promising approach to reduce both storage and computational overheads of deploying highly anticipated LLMs. However, existing quantization methods suffer severe performance degradation when the bit-width is extremely reduced, and thus focus on utilizing 4-bit or 8-bit values to quantize models. This paper boldly quantizes the weight matrices of LLMs to 1-bit, paving the way for the extremely low bit-width deployment of LLMs. For this target, we introduce a 1-bit quantization-aware training (QAT) framework named OneBit, including a novel 1-bit parameter representation method to better quantize LLMs as well as an effective parameter initialization method based on matrix decomposition to improve the convergence speed of the QAT framework. Sufficient experimental results indicate that OneBit achieves good performance (at least 83% of the non-quantized performance) with robust training processes when only using 1-bit weight matrices.
+
+### RWKV_Pytorch
+- https://github.com/yuunnn-w/RWKV_Pytorch
+
+这是一个用纯Pytorch原生实现的RWKV大语言模型的推理框架，官方的原生实现过于复杂且无法拓展生态，让我们加入灵活的Pytorch阵营，一起开源起来吧！
+
+This is an inference framework for the RWKV large language model implemented purely in native PyTorch. The official native implementation is overly complex and lacks extensibility. Let's join the flexible PyTorch ecosystem and open-source it together!
 
 ### llama2.mojo
 - https://mp.weixin.qq.com/s/NpIUReKV-9hb05HXzu7Pdg
@@ -2921,6 +3007,11 @@ All text-based language problems can be reduced to either generation or embeddin
 
 Pretraining Large Language Models (LLMs) on large corpora of textual data is now a standard paradigm. When using these LLMs for many downstream applications, it is common to additionally bake in new knowledge (e.g., time-critical news, or private domain knowledge) into the pretrained model either through RAG-based-prompting, or fine-tuning. However, the optimal methodology for the model to gain such new knowledge remains an open question. In this paper, we present Retrieval Augmented FineTuning (RAFT), a training recipe that improves the model's ability to answer questions in a "open-book" in-domain settings. In RAFT, given a question, and a set of retrieved documents, we train the model to ignore those documents that don't help in answering the question, which we call, distractor documents. RAFT accomplishes this by citing verbatim the right sequence from the relevant document that would help answer the question. This coupled with RAFT's chain-of-thought-style response helps improve the model's ability to reason. In domain-specific RAG, RAFT consistently improves the model's performance across PubMed, HotpotQA, and Gorilla datasets, presenting a post-training recipe to improve pre-trained LLMs to in-domain RAG.
 
+### Chat with MLX
+- https://github.com/mlx-chat/mlx-chat-app
+
+Chat with MLX is a high-performance macOS application that connects your local documents to a personalized large language model (LLM). By leveraging retrieval-augmented generation (RAG), open source LLMs, and MLX for accelerated machine learning on Apple silicon, you can efficently search, query, and interact with your documents without information ever leaving your device.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -3136,6 +3227,23 @@ Large Language Model (LLM) agents significantly extend the capabilities of stand
 
 We find that, simply via a sampling-and-voting method, the performance of large language models (LLMs) scales with the number of agents instantiated. Also, this method is orthogonal to existing complicated methods to further enhance LLMs, while the degree of enhancement is correlated to the task difficulty. We conduct comprehensive experiments on a wide range of LLM benchmarks to verify the presence of our finding, and to study the properties that can facilitate its occurrence.
 
+### AIOS
+- https://github.com/agiresearch/AIOS
+
+AIOS, a Large Language Model (LLM) Agent operating system, embeds large language model into Operating Systems (OS) as the brain of the OS, enabling an operating system "with soul" -- an important step towards AGI. AIOS is designed to optimize resource allocation, facilitate context switch across agents, enable concurrent execution of agents, provide tool service for agents, maintain access control for agents, and provide a rich set of toolkits for LLM Agent developers.
+
+### TwoStep
+- https://arxiv.org/abs/2403.17246
+- https://glamor-usc.github.io/twostep
+
+Classical planning formulations like the Planning Domain Definition Language (PDDL) admit action sequences guaranteed to achieve a goal state given an initial state if any are possible. However, reasoning problems defined in PDDL do not capture temporal aspects of action taking, for example that two agents in the domain can execute an action simultaneously if postconditions of each do not interfere with preconditions of the other. A human expert can decompose a goal into largely independent constituent parts and assign each agent to one of these subgoals to take advantage of simultaneous actions for faster execution of plan steps, each using only single agent planning. By contrast, large language models (LLMs) used for directly inferring plan steps do not guarantee execution success, but do leverage commonsense reasoning to assemble action sequences. We combine the strengths of classical planning and LLMs by approximating human intuitions for two-agent planning goal decomposition. We demonstrate that LLM-based goal decomposition leads to faster planning times than solving multi-agent PDDL problems directly while simultaneously achieving fewer plan execution steps than a single agent plan alone and preserving execution success. Additionally, we find that LLM-based approximations of subgoals can achieve similar multi-agent execution steps than those specified by human experts.
+
+### Agent-FLAN
+- https://arxiv.org/abs/2403.12881
+- https://github.com/InternLM/Agent-FLAN
+
+Open-sourced Large Language Models (LLMs) have achieved great success in various NLP tasks, however, they are still far inferior to API-based models when acting as agents. How to integrate agent ability into general LLMs becomes a crucial and urgent problem. This paper first delivers three key observations: (1) the current agent training corpus is entangled with both formats following and agent reasoning, which significantly shifts from the distribution of its pre-training data; (2) LLMs exhibit different learning speeds on the capabilities required by agent tasks; and (3) current approaches have side-effects when improving agent abilities by introducing hallucinations. Based on the above findings, we propose Agent-FLAN to effectively Fine-tune LANguage models for Agents. Through careful decomposition and redesign of the training corpus, Agent-FLAN enables Llama2-7B to outperform prior best works by 3.5\% across various agent evaluation datasets. With comprehensively constructed negative samples, Agent-FLAN greatly alleviates the hallucination issues based on our established evaluation benchmark. Besides, it consistently improves the agent capability of LLMs when scaling model sizes while slightly enhancing the general capability of LLMs.
+
 ### Mistral-Interact
 - https://github.com/HBX-hbx/Mistral-Interact
 - https://arxiv.org/abs/2402.09205
@@ -3247,6 +3355,17 @@ Large language models (LLMs) have achieved dramatic proficiency over NLP tasks w
 
 Large language models (LLMs) have shown the ability to produce fluent and cogent content, presenting both productivity opportunities and societal risks. To build trustworthy AI systems, it is imperative to distinguish between machine-generated and human-authored content. The leading zero-shot detector, DetectGPT, showcases commendable performance but is marred by its intensive computational costs. In this paper, we introduce the concept of conditional probability curvature to elucidate discrepancies in word choices between LLMs and humans within a given context. Utilizing this curvature as a foundational metric, we present **Fast-DetectGPT**, an optimized zero-shot detector, which substitutes DetectGPT's perturbation step with a more efficient sampling step. Our evaluations on various datasets, source models, and test conditions indicate that Fast-DetectGPT not only surpasses DetectGPT by a relative around 75% in both the white-box and black-box settings but also accelerates the detection process by a factor of 340, as detailed in Table 1.
 
+### GAMA-Bench
+- https://github.com/CUHK-ARISE/GAMABench
+- https://arxiv.org/abs/2403.11807
+
+Decision-making, a complicated task requiring various types of abilities, presents an excellent framework for assessing Large Language Models (LLMs). Our research investigates LLMs' decision-making capabilities through the lens of a well-established field, Game Theory. We focus specifically on games that support the participation of more than two agents simultaneously. Subsequently, we introduce our framework, GAMA-Bench, including eight classical multi-agent games. We design a scoring scheme to assess a model's performance in these games quantitatively. Through GAMA-Bench, we investigate LLMs' robustness, generalizability, and enhancement strategies. Results reveal that while GPT-3.5 shows satisfying robustness, its generalizability is relatively limited. However, its performance can be improved through approaches such as Chain-of-Thought. Additionally, we conduct evaluations across various LLMs and find that GPT-4 outperforms other models on GAMA-Bench, achieving a score of 72.5. Moreover, the increasingly higher scores across the three iterations of GPT-3.5 (0613, 1106, 0125) demonstrate marked advancements in the model's intelligence with each update.
+
+### FineMath
+- https://arxiv.org/pdf/2403.07747.pdf
+
+To thoroughly assess the mathematical reasoning abilities of Large Language Models (LLMs), we need to carefully curate evaluation datasets covering diverse mathematical concepts and mathematical problems at different difficulty levels. In pursuit of this objective, we propose FineMath in this paper, a fine-grained mathematical evaluation benchmark dataset for assessing Chinese LLMs. FineMath is created to cover the major key mathematical concepts taught in elementary school math, which are further divided into 17 categories of math word problems, enabling in-depth analysis of mathematical reasoning abilities of LLMs. All the 17 categories of math word problems are manually annotated with their difficulty levels according to the number of reasoning steps required to solve these problems. We conduct extensive experiments on a wide range of LLMs on FineMath and find that there is still considerable room for improvements in terms of mathematical reasoning capability of Chinese LLMs. We also carry out an in-depth analysis on the evaluation process and methods that have been overlooked previously. These two factors significantly influence the model results and our understanding of their mathematical reasoning capabilities.
+
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
 - https://arxiv.org/abs/2401.07851
@@ -3355,5 +3474,20 @@ This paper presents WanJuan-CC, a safe and high-quality open-sourced English web
 Large-scale recommendation systems are characterized by their reliance on high cardinality, heterogeneous features and the need to handle tens of billions of user actions on a daily basis. Despite being trained on huge volume of data with thousands of features, most Deep Learning Recommendation Models (DLRMs) in industry fail to scale with compute.
 Inspired by success achieved by Transformers in language and vision domains, we revisit fundamental design choices in recommendation systems. We reformulate recommendation problems as sequential transduction tasks within a generative modeling framework (``Generative Recommenders''), and propose a new architecture, HSTU, designed for high cardinality, non-stationary streaming recommendation data.
 HSTU outperforms baselines over synthetic and public datasets by up to 65.8\% in NDCG, and is 5.3x to 15.2x faster than FlashAttention2-based Transformers on 8192 length sequences. HSTU-based Generative Recommenders, with 1.5 trillion parameters, improve metrics in online A/B tests by 12.4\% and have been deployed on multiple surfaces of a large internet platform with billions of users. More importantly, the model quality of Generative Recommenders empirically scales as a power-law of training compute across three orders of magnitude, up to GPT-3/LLaMa-2 scale, which reduces carbon footprint needed for future model developments, and further paves the way for the first foundational models in recommendations.
+
+### LLM-UM-Reading
+- https://github.com/TamSiuhin/LLM-UM-Reading
+
+This repository contains a list of papers on large language models for user modeling (LLM-UM) based on our survey paper: User Modeling in the Era of Large Language Models: Current Research and Future Directions (Zhaoxuan Tan and Meng Jiang). We categorize existing works based on their approaches and applications.
+
+### Larimar
+- https://arxiv.org/abs/2403.11901
+
+Efficient and accurate updating of knowledge stored in Large Language Models (LLMs) is one of the most pressing research challenges today. This paper presents Larimar - a novel, brain-inspired architecture for enhancing LLMs with a distributed episodic memory. Larimar's memory allows for dynamic, one-shot updates of knowledge without the need for computationally expensive re-training or fine-tuning. Experimental results on multiple fact editing benchmarks demonstrate that Larimar attains accuracy comparable to most competitive baselines, even in the challenging sequential editing setup, but also excels in speed - yielding speed-ups of 4-10x depending on the base LLM - as well as flexibility due to the proposed architecture being simple, LLM-agnostic, and hence general. We further provide mechanisms for selective fact forgetting and input context length generalization with Larimar and show their effectiveness.
+
+### PPM
+- https://arxiv.org/pdf/2403.10049.pdf
+
+Click-through rate (CTR) prediction is a core task in recommender systems. Existing methods (IDRec for short) rely on unique identities to represent distinct users and items that have prevailed for decades. On one hand, IDRec often faces significant performance degradation on cold-start problem; on the other hand, IDRec cannot use longer training data due to constraints imposed by iteration efficiency. Most prior studies alleviate the above problems by introducing pre-trained knowledge(e.g. pre-trained user model or multi-modal embeddings). However, the explosive growth of online latency can be attributed to the huge parameters in the pre-trained model. Therefore, most of them cannot employ the unified model of end-to-end training with IDRec in industrial recommender systems, thus limiting the potential of the pre-trained model. To this end, we propose a Pre-trained Plug-in CTR Model, namely PPM. PPM employs multi-modal features as input and utilizes large-scale data for pre-training. Then, PPM is plugged in IDRec model to enhance unified model's performance and iteration efficiency. Upon incorporating IDRec model, certain intermediate results within the network are cached, with only a subset of the parameters participating in training and serving. Hence, our approach can successfully deploy an end-to-end model without causing huge latency increases. Comprehensive offline experiments and online A/B testing at JD E-commerce demonstrate the efficiency and effectiveness of PPM.
 
 > 持续更新中 (Continuously Updated)... 
