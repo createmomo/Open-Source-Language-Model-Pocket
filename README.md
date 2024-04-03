@@ -39,7 +39,7 @@ Open-Source Language Model Pocket
 |Baby-Llama2-Chinese|XVERSE-13B-256K|Eagle 7B（RWKV-v5）|
 |iFlytekSpark-13B|MiniCPM|通义千问Qwen1.5|
 |*【RethinkTinyLM】|*【Chinese-Mixtral】|*【RWKV_Pytorch】|
-|*【Qwen1.5-MoE-A2.7B】|||
+|*【Qwen1.5-MoE-A2.7B】|*【Symbol-LLM】||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -88,6 +88,7 @@ Open-Source Language Model Pocket
 |MediaGPT|
 |CharacterGLM-6B|
 |Haruhi-Zero|
+|*【Translational-Style-ChatLLM西式翻译腔】|
 
 |古汉语|
 |---|
@@ -102,6 +103,7 @@ Open-Source Language Model Pocket
 |HuixiangDou|*【CodeAct】|
 |*【Design2Code】|*【bGPT】|
 |*【MobileLLM】|*【Stable Code Instruct 3B】|
+|*【ReALM】||
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -117,7 +119,8 @@ Open-Source Language Model Pocket
 |BGE-M3|Nomic Embed|
 |Moka Massive Mixed Embedding（M3E）|*【GRIT】|
 |*【TinyRAG】|*【RAFT】|
-|*【Chat with MLX】||
+|*【Chat with MLX】|*【LLocalSearch】|
+|*【RAGFlow】||
 
 *Agent*
 |  |  |
@@ -133,6 +136,8 @@ Open-Source Language Model Pocket
 |*【WorkArena】|*【STE（Simulated Trial and Error）】|
 |*【More Agents Is All You Need】|*【AIOS】|
 |*【TwoStep】|*【Agent-FLAN】|
+|*【EasyRL4Rec】|*【Jan】|
+|*【AgentStudio】|*【AnyTool】|
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -175,6 +180,7 @@ Open-Source Language Model Pocket
 |*【StarCoder2】|*【SmallLanguageModel-project】|
 |*【Command-R】|*【Grok】|
 |*【DBRX】|*【Jamba】|
+|*【BioMedLM】||
 
 *训练/推理*
 |  |  |
@@ -224,7 +230,8 @@ Open-Source Language Model Pocket
 |*【OneBit】|*【RWKV_Pytorch】|
 |*【HQQ】|*【Uni-RLHF】|
 |*【LLMLingua-2】|*【REST】|
-|*【MetaAligner】||
+|*【MetaAligner】|*【DiJiang】|
+|*【LISA（Layerwise Importance Sampled AdamW）】|*【edge-infer】|
 
 *评价*
 |  ||
@@ -248,6 +255,7 @@ Open-Source Language Model Pocket
 |*【Fin-Eva】|*【Cappy】|
 |*【BAMBOO】|*【Fast-DetectGPT】|
 |*【GAMA-Bench】|*【FineMath】|
+|*【ToolEmu】|*【ClongEval】|
 
 *其它*
 |  |  |
@@ -291,6 +299,11 @@ Open-Source Language Model Pocket
     - 【不限领域】[用语言模型评估语言模型（2）PandaLM](https://mp.weixin.qq.com/s/NTFu53MdVD9NusFJaORHcw)
     - 【不限领域】用语言模型评估语言模型（3）Shepherd（[1](https://mp.weixin.qq.com/s/pbK1Zsv9j_DVtOJaTm_tPw) [2](https://mp.weixin.qq.com/s/n4_kVw8j42ZQv6VjQ_P-Dw) [3](https://mp.weixin.qq.com/s/PeGJOmQPyAhwl7czJgKnQQ) [4](https://mp.weixin.qq.com/s/7_NX7S2AHabX-xU254sq5g)）
     - 【医疗/健康】[使用BERT-Score比较ChatDoctor与ChatGPT3.5](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg)
+
+## 所有文章 (ALL Articles)
+- 中文：[https://mp.weixin.qq.com/s/ixocTAVrTXhonDBOu-m68w](https://mp.weixin.qq.com/s/ixocTAVrTXhonDBOu-m68w
+)
+- English: [https://createmomo.github.io/](https://createmomo.github.io/)
 
 ---
 
@@ -919,6 +932,13 @@ In this paper, we present CharacterGLM, a series of models built upon ChatGLM, w
 
 凉宫春日-Zero是一个同时支持Zero-Shot角色构造和RAG角色构造(原ChatHaruhi)的角色扮演模型。
 
+### Translational-Style-ChatLLM西式翻译腔
+- https://github.com/Benson114/Translational-Style-ChatLLM
+
+本项目是一个小型的个人微调实验项目，其中全程纯使用Prompt工程和调用OpenAI的API构造指令微调数据集，微调基座模型选用Qwen1.5-7B-Chat，微调步骤使用的是开源框架LLaMA-Factory
+
+项目中包含构造数据集的全流程代码和微调部分的脚本
+
 ### MeChat (Mental Health Support Chatbot)
 - https://github.com/qiuhuachuan/smile
 - https://huggingface.co/qiuhuachuan/MeChat
@@ -1275,6 +1295,12 @@ an open, general-purpose LLM created by Databricks. Across a range of standard b
 
 Jamba is a state-of-the-art, hybrid SSM-Transformer LLM. It delivers throughput gains over traditional Transformer-based models, while outperforming or matching the leading models of its size class on most common benchmarks.
 
+### BioMedLM
+- https://arxiv.org/abs/2403.18421
+- https://huggingface.co/stanford-crfm/BioMedLM
+
+Models such as GPT-4 and Med-PaLM 2 have demonstrated impressive performance on a wide variety of biomedical NLP tasks. However, these models have hundreds of billions of parameters, are computationally expensive to run, require users to send their input data over the internet, and are trained on unknown data sources. Can smaller, more targeted models compete? To address this question, we build and release BioMedLM, a 2.7 billion parameter GPT-style autoregressive model trained exclusively on PubMed abstracts and full articles. When fine-tuned, BioMedLM can produce strong multiple-choice biomedical question-answering results competitive with much larger models, such as achieving a score of 57.3% on MedMCQA (dev) and 69.0% on the MMLU Medical Genetics exam. BioMedLM can also be fine-tuned to produce useful answers to patient questions on medical topics. This demonstrates that smaller models can potentially serve as transparent, privacy-preserving, economical and environmentally friendly foundations for particular NLP applications, such as in biomedicine.
+
 ### Colossal-LLaMA-2
 - https://github.com/hpcaitech/ColossalAI/tree/main/applications/Colossal-LLaMA-2
 
@@ -1389,6 +1415,11 @@ This paper addresses the growing need for efficient large language models (LLMs)
 - https://static1.squarespace.com/static/6213c340453c3f502425776e/t/6601c5713150412edcd56f8e/1711392114564/Stable_Code_TechReport_release.pdf
 
 stable-code-3b is a 2.7B billion parameter decoder-only language model pre-trained on 1.3 trillion tokens of diverse textual and code datasets. stable-code-3b is trained on 18 programming languages (selected based on the 2023 StackOverflow Developer Survey) and demonstrates state-of-the-art performance (compared to models of similar size) on the MultiPL-E metrics across multiple programming languages tested using BigCode's Evaluation Harness.
+
+### ReALM
+- https://arxiv.org/abs/2403.20329
+
+Reference resolution is an important problem, one that is essential to understand and successfully handle context of different kinds. This context includes both previous turns and context that pertains to non-conversational entities, such as entities on the user's screen or those running in the background. While LLMs have been shown to be extremely powerful for a variety of tasks, their use in reference resolution, particularly for non-conversational entities, remains underutilized. This paper demonstrates how LLMs can be used to create an extremely effective system to resolve references of various types, by showing how reference resolution can be converted into a language modeling problem, despite involving forms of entities like those on screen that are not traditionally conducive to being reduced to a text-only modality. We demonstrate large improvements over an existing system with similar functionality across different types of references, with our smallest model obtaining absolute gains of over 5% for on-screen references. We also benchmark against GPT-3.5 and GPT-4, with our smallest model achieving performance comparable to that of GPT-4, and our larger models substantially outperforming it.
 
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
@@ -1638,6 +1669,13 @@ This is an inference framework for the RWKV large language model implemented pur
 - https://huggingface.co/Qwen
 
 Compared to Qwen1.5-7B, which contains 6.5 billion non-embedding parameters, Qwen1.5-MoE-A2.7B contains only 2.0 billion non-embedding parameters, approximately one-third of Qwen1.5-7B’s size. Notably, it achieves a 75% decrease in training expenses and accelerates inference speed by a factor of 1.74, offering substantial improvements in resource utilization without compromising performance.
+
+### Symbol-LLM
+- https://arxiv.org/abs/2311.09278
+- https://huggingface.co/Symbol-LLM/Symbol-LLM-7B-Instruct
+- https://xufangzhi.github.io/symbol-llm-page/
+
+Although Large Language Models (LLMs) demonstrate remarkable ability in processing and generating human-like text, they do have limitations when it comes to comprehending and expressing world knowledge that extends beyond the boundaries of natural language(e.g., chemical molecular formula). Injecting a collection of symbolic data directly into the training of LLMs can be problematic, as it disregards the synergies among different symbolic families and overlooks the need for a balanced mixture of natural and symbolic data. In this work, we tackle these challenges from both a data and framework perspective and introduce Symbol-LLM series models. First, we curated a data collection consisting of 34 tasks and incorporating approximately 20 distinct symbolic families, intending to capture the interrelations and foster synergies between symbols. Then, a two-stage tuning framework succeeds in injecting symbolic knowledge without loss of the generality ability. Extensive experiments on both symbol- and NL-centric tasks demonstrate the balanced and superior performances of Symbol-LLM series models. 
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -1974,6 +2012,23 @@ REST is a retrieval-based speculative decoding method designed to boost generati
 - https://arxiv.org/abs/2403.17141
 
 Recent advancements in large language models (LLMs) aim to tackle heterogeneous human expectations and values via multi-objective preference alignment. However, existing methods are parameter-adherent to the policy model, leading to two key limitations: (1) the high-cost repetition of their alignment algorithms for each new target model; (2) they cannot expand to unseen objectives due to their static alignment objectives. In this work, we propose Meta-Objective Aligner (MetaAligner), a model that performs conditional weak-to-strong correction for weak responses to approach strong responses. MetaAligner is the first policy-agnostic and generalizable method for multi-objective preference alignment, which enables plug-and-play alignment by decoupling parameter updates from the policy models and facilitates zero-shot preference alignment for unseen objectives via in-context learning. Experimental results show that MetaAligner achieves significant and balanced improvements in multi-objective alignments on 11 policy models with up to 63x more parameters, and outperforms previous alignment methods with down to 22.27x less computational resources. The model also accurately aligns with unseen objectives, marking the first step towards generalizable multi-objective preference alignment.
+
+### DiJiang
+- https://arxiv.org/abs/2403.19928
+- https://github.com/YuchuanTian/DiJiang
+
+In an effort to reduce the computational load of Transformers, research on linear attention has gained significant momentum. However, the improvement strategies for attention mechanisms typically necessitate extensive retraining, which is impractical for large language models with a vast array of parameters. In this paper, we present DiJiang, a novel Frequency Domain Kernelization approach that enables the transformation of a pre-trained vanilla Transformer into a linear complexity model with little training costs. By employing a weighted Quasi-Monte Carlo method for sampling, the proposed approach theoretically offers superior approximation efficiency. To further reduce the training computational complexity, our kernelization is based on Discrete Cosine Transform (DCT) operations. Extensive experiments demonstrate that the proposed method achieves comparable performance to the original Transformer, but with significantly reduced training costs and much faster inference speeds. Our DiJiang-7B achieves comparable performance with LLaMA2-7B on various benchmark while requires only about 1/50 training cost. 
+
+### LISA（Layerwise Importance Sampled AdamW）
+- https://arxiv.org/abs/2403.17919
+- https://github.com/OptimalScale/LMFlow
+
+The machine learning community has witnessed impressive advancements since the first appearance of large language models (LLMs), yet their huge memory consumption has become a major roadblock to large-scale training. Parameter Efficient Fine-Tuning techniques such as Low-Rank Adaptation (LoRA) have been proposed to alleviate this problem, but their performance still fails to match full parameter training in most large-scale fine-tuning settings. Attempting to complement this deficiency, we investigate layerwise properties of LoRA on fine-tuning tasks and observe an uncommon skewness of weight norms across different layers. Utilizing this key observation, a surprisingly simple training strategy is discovered, which outperforms both LoRA and full parameter training in a wide range of settings with memory costs as low as LoRA. We name it Layerwise Importance Sampled AdamW (LISA), a promising alternative for LoRA, which applies the idea of importance sampling to different layers in LLMs and randomly freeze most middle layers during optimization. Experimental results show that with similar or less GPU memory consumption, LISA surpasses LoRA or even full parameter tuning in downstream fine-tuning tasks, where LISA consistently outperforms LoRA by over 11%-37% in terms of MT-Bench scores. On large models, specifically LLaMA-2-70B, LISA achieves on-par or better performance than LoRA on MT-Bench, GSM8K, and PubMedQA, demonstrating its effectiveness across different domains.
+
+### edge-infer
+- https://github.com/unit-mesh/edge-infer
+
+EdgeInfer enables efficient edge intelligence by running small AI models, including embeddings and OnnxModels, on resource-constrained devices like Android, iOS, or MCUs for real-time decision-making.
 
 ### Large Language Model Unlearning
 - https://arxiv.org/abs/2310.10683
@@ -3012,6 +3067,18 @@ Pretraining Large Language Models (LLMs) on large corpora of textual data is now
 
 Chat with MLX is a high-performance macOS application that connects your local documents to a personalized large language model (LLM). By leveraging retrieval-augmented generation (RAG), open source LLMs, and MLX for accelerated machine learning on Apple silicon, you can efficently search, query, and interact with your documents without information ever leaving your device.
 
+### LLocalSearch
+- https://github.com/nilsherzig/LLocalSearch
+
+This is a completely locally running meta search engine using LLM Agents. The user can ask a question and the system will use a chain of LLMs to find the answer. The user can see the progress of the agents and the final answer. No OpenAI or Google API keys are needed.
+
+Here is a video of it in action, running completel
+
+### RAGFlow
+- https://github.com/infiniflow/ragflow/tree/main
+
+RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine based on deep document understanding. It offers a streamlined RAG workflow for businesses of any scale, combining LLM (Large Language Models) to provide truthful question-answering capabilities, backed by well-founded citations from various complex fomatted data.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -3244,6 +3311,28 @@ Classical planning formulations like the Planning Domain Definition Language (PD
 
 Open-sourced Large Language Models (LLMs) have achieved great success in various NLP tasks, however, they are still far inferior to API-based models when acting as agents. How to integrate agent ability into general LLMs becomes a crucial and urgent problem. This paper first delivers three key observations: (1) the current agent training corpus is entangled with both formats following and agent reasoning, which significantly shifts from the distribution of its pre-training data; (2) LLMs exhibit different learning speeds on the capabilities required by agent tasks; and (3) current approaches have side-effects when improving agent abilities by introducing hallucinations. Based on the above findings, we propose Agent-FLAN to effectively Fine-tune LANguage models for Agents. Through careful decomposition and redesign of the training corpus, Agent-FLAN enables Llama2-7B to outperform prior best works by 3.5\% across various agent evaluation datasets. With comprehensively constructed negative samples, Agent-FLAN greatly alleviates the hallucination issues based on our established evaluation benchmark. Besides, it consistently improves the agent capability of LLMs when scaling model sizes while slightly enhancing the general capability of LLMs.
 
+### EasyRL4Rec
+- https://github.com/chongminggao/EasyRL4Rec
+
+EasyRL4Rec is a comprehensive and easy-to-use library designed specifically for Reinforcement Learning (RL)-based Recommender Systems (RSs). This library provides lightweight and diverse RL environments based on five public datasets and includes core modules with rich options, simplifying model development. It provides unified evaluation standards focusing on long-term outcomes and offers tailored designs for state modeling and action representation for recommendation scenarios. 
+
+### Jan
+- https://github.com/janhq/jan
+
+Jan is an open-source ChatGPT alternative that runs 100% offline on your computer.
+
+### AgentStudio
+- https://skyworkai.github.io/agent-studio/
+- https://arxiv.org/abs/2403.17918
+
+AgentStudio is an open toolkit covering the entire lifespan of building virtual agents that can interact with everything on digital worlds. Here, we open-source the beta of environment implementations, benchmark suite, data collection pipeline, and graphical interfaces to promote research towards generalist virtual agents of the future.
+
+### AnyTool
+- https://arxiv.org/abs/2402.04253
+- https://github.com/dyabel/AnyTool
+
+We introduce AnyTool, a large language model agent designed to revolutionize the utilization of a vast array of tools in addressing user queries. We utilize over 16,000 APIs from Rapid API, operating under the assumption that a subset of these APIs could potentially resolve the queries. AnyTool primarily incorporates three elements: an API retriever with a hierarchical structure, a solver aimed at resolving user queries using a selected set of API candidates, and a self-reflection mechanism, which re-activates AnyTool if the initial solution proves impracticable. AnyTool is powered by the function calling feature of GPT-4, eliminating the need for training external modules. We also revisit the evaluation protocol introduced by previous works and identify a limitation in this protocol that leads to an artificially high pass rate. By revising the evaluation protocol to better reflect practical application scenarios, we introduce an additional benchmark, termed AnyToolBench. Experiments across various datasets demonstrate the superiority of our AnyTool over strong baselines such as ToolLLM and a GPT-4 variant tailored for tool utilization. For instance, AnyTool outperforms ToolLLM by +35.4% in terms of average pass rate on ToolBench. 
+
 ### Mistral-Interact
 - https://github.com/HBX-hbx/Mistral-Interact
 - https://arxiv.org/abs/2402.09205
@@ -3365,6 +3454,18 @@ Decision-making, a complicated task requiring various types of abilities, presen
 - https://arxiv.org/pdf/2403.07747.pdf
 
 To thoroughly assess the mathematical reasoning abilities of Large Language Models (LLMs), we need to carefully curate evaluation datasets covering diverse mathematical concepts and mathematical problems at different difficulty levels. In pursuit of this objective, we propose FineMath in this paper, a fine-grained mathematical evaluation benchmark dataset for assessing Chinese LLMs. FineMath is created to cover the major key mathematical concepts taught in elementary school math, which are further divided into 17 categories of math word problems, enabling in-depth analysis of mathematical reasoning abilities of LLMs. All the 17 categories of math word problems are manually annotated with their difficulty levels according to the number of reasoning steps required to solve these problems. We conduct extensive experiments on a wide range of LLMs on FineMath and find that there is still considerable room for improvements in terms of mathematical reasoning capability of Chinese LLMs. We also carry out an in-depth analysis on the evaluation process and methods that have been overlooked previously. These two factors significantly influence the model results and our understanding of their mathematical reasoning capabilities.
+
+### ToolEmu
+- http://toolemu.com/
+- https://arxiv.org/pdf/2309.15817.pdf
+
+Recent advances in Language Model (LM) agents and tool use, exemplified by applications like ChatGPT Plugins, enable a rich set of capabilities but also amplify potential risks - such as leaking private data or causing financial losses. Identifying these risks is labor-intensive, necessitating implementing the tools, manually setting up the environment for each test scenario, and finding risky cases. As tools and agents become more complex, the high cost of testing these agents will make it increasingly difficult to find high-stakes, long-tailed risks. To address these challenges, we introduce ToolEmu: a framework that uses an LM to emulate tool execution and enables the testing of LM agents against a diverse range of tools and scenarios, without manual instantiation. Alongside the emulator, we develop an LM-based automatic safety evaluator that examines agent failures and quantifies associated risks. We test both the tool emulator and evaluator through human evaluation and find that 68.8% of failures identified with ToolEmu would be valid real-world agent failures. Using our curated initial benchmark consisting of 36 high-stakes tools and 144 test cases, we provide a quantitative risk analysis of current LM agents and identify numerous failures with potentially severe outcomes. Notably, even the safest LM agent exhibits such failures 23.9% of the time according to our evaluator, underscoring the need to develop safer LM agents for real-world deployment.
+
+### ClongEval
+- https://arxiv.org/abs/2403.03514
+- https://github.com/zexuanqiu/CLongEval
+
+Developing Large Language Models (LLMs) with robust long-context capabilities has been the recent research focus, resulting in the emergence of long-context LLMs proficient in Chinese. However, the evaluation of these models remains underdeveloped due to a lack of benchmarks. To address this gap, we present CLongEval, a comprehensive Chinese benchmark for evaluating long-context LLMs. CLongEval is characterized by three key features: (1) Sufficient data volume, comprising 7 distinct tasks and 7,267 examples; (2) Broad applicability, accommodating to models with context windows size from 1K to 100K; (3) High quality, with over 2,000 manually annotated question-answer pairs in addition to the automatically constructed labels. With CLongEval, we undertake a comprehensive assessment of 6 open-source long-context LLMs and 2 leading commercial counterparts that feature both long-context abilities and proficiency in Chinese. We also provide in-depth analysis based on the empirical results, trying to shed light on the critical capabilities that present challenges in long-context settings. The dataset, evaluation scripts, and model outputs will be released.
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
