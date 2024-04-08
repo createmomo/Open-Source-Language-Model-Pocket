@@ -39,7 +39,8 @@ Open-Source Language Model Pocket
 |Baby-Llama2-Chinese|XVERSE-13B-256K|Eagle 7B（RWKV-v5）|
 |iFlytekSpark-13B|MiniCPM|通义千问Qwen1.5|
 |*【RethinkTinyLM】|*【Chinese-Mixtral】|*【RWKV_Pytorch】|
-|*【Qwen1.5-MoE-A2.7B】|*【Symbol-LLM】||
+|*【Qwen1.5-MoE-A2.7B】|*【Symbol-LLM】|*【Qwen1.5-32b】|
+|*【build_MiniLLM_from_scratch】|*【RWKV-6 World】|*【Mengzi3】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -76,19 +77,22 @@ Open-Source Language Model Pocket
 |桃李|EduChat|
 |chatglm-maths|Abel|
 |InternLM-Math|DeepSeekMath|
+|*【LeerooDedicated-Math-7b】||
 
 |表格/数据分析||
 |---|---|
 |TableGPT|Data-Copilot|
 |Tabular LLM|*【Chain-of-table】|
-|*【Data Interpreter】||
+|*【Data Interpreter】|*【TableLLM】|
+|*【Lag-Llama】||
 
-|自媒体&角色扮演|
+|自媒体&角色扮演&风格|
 |---|
 |MediaGPT|
 |CharacterGLM-6B|
 |Haruhi-Zero|
 |*【Translational-Style-ChatLLM西式翻译腔】|
+|*【StyleLLM】|
 
 |古汉语|
 |---|
@@ -120,7 +124,7 @@ Open-Source Language Model Pocket
 |Moka Massive Mixed Embedding（M3E）|*【GRIT】|
 |*【TinyRAG】|*【RAFT】|
 |*【Chat with MLX】|*【LLocalSearch】|
-|*【RAGFlow】||
+|*【RAGFlow】|*【Dot】|
 
 *Agent*
 |  |  |
@@ -138,6 +142,8 @@ Open-Source Language Model Pocket
 |*【TwoStep】|*【Agent-FLAN】|
 |*【EasyRL4Rec】|*【Jan】|
 |*【AgentStudio】|*【AnyTool】|
+|*【TinyAgent】|*【Octopus v2】|
+|*【ReadAgent】||
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -180,7 +186,7 @@ Open-Source Language Model Pocket
 |*【StarCoder2】|*【SmallLanguageModel-project】|
 |*【Command-R】|*【Grok】|
 |*【DBRX】|*【Jamba】|
-|*【BioMedLM】||
+|*【BioMedLM】|*【JetMoE】|
 
 *训练/推理*
 |  |  |
@@ -232,6 +238,8 @@ Open-Source Language Model Pocket
 |*【LLMLingua-2】|*【REST】|
 |*【MetaAligner】|*【DiJiang】|
 |*【LISA（Layerwise Importance Sampled AdamW）】|*【edge-infer】|
+|*【NeFT】|*【Aligning Large Language Models with Recommendation Knowledge】|
+|*【llamafile】|*【summarize_from_feedback_details】|
 
 *评价*
 |  ||
@@ -256,6 +264,7 @@ Open-Source Language Model Pocket
 |*【BAMBOO】|*【Fast-DetectGPT】|
 |*【GAMA-Bench】|*【FineMath】|
 |*【ToolEmu】|*【ClongEval】|
+|*【Counting-Stars】||
 
 *其它*
 |  |  |
@@ -280,6 +289,7 @@ Open-Source Language Model Pocket
 |*【Large Language Models in Finance】|*【WanJuan-CC】|
 |*【Actions Speak Louder than Words】|*【LLM-UM-Reading】|
 |*【Larimar】|*【PPM】|
+|*【MicroLlama-300M】||
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -657,6 +667,12 @@ State-of-the-art bilingual open-sourced Math reasoning LLMs. A solver, prover, v
 
 Mathematical reasoning poses a significant challenge for language models due to its complex and structured nature. In this paper, we introduce DeepSeekMath 7B, which continues pre-training DeepSeek-Coder-Base-v1.5 7B with 120B math-related tokens sourced from Common Crawl, together with natural language and code data. DeepSeekMath 7B has achieved an impressive score of 51.7% on the competition-level MATH benchmark without relying on external toolkits and voting techniques, approaching the performance level of Gemini-Ultra and GPT-4. Self-consistency over 64 samples from DeepSeekMath 7B achieves 60.9% on MATH. The mathematical reasoning capability of DeepSeekMath is attributed to two key factors: First, we harness the significant potential of publicly available web data through a meticulously engineered data selection pipeline. Second, we introduce Group Relative Policy Optimization (GRPO), a variant of Proximal Policy Optimization (PPO), that enhances mathematical reasoning abilities while concurrently optimizing the memory usage of PPO.
 
+### LeerooDedicated-Math-7b
+- https://huggingface.co/leeroo/LeerooDedicated-Math-7b
+- https://arxiv.org/abs/2401.13979
+
+In this paper, we propose an architecture to harness the collective knowledge of multiple trained LLMs to create a new state-of-the-art. At the core of this framework is a LLM-based orchestrator that is adept at picking the right underlying LLM experts for optimal task execution. Inspired by self-play in reinforcement learning, we created a loop of query generation, orchestration, and evaluation to generate training data for the orchestrator. Our evaluation focused on the MMLU benchmark, employing models with 7B, 13B, and 34B parameters available on Hugging Face. The results demonstrate new state-of-the-art open-source models: Our Leeroo orchestrator achieves performance on par with the Mixtral model while incurring only two-thirds of its cost. Moreover, increasing the allowed cost surpasses Mixtral's accuracy by over 5% at the same cost level, reaching an accuracy of 75.9%. Further enhancements were observed when integrating GPT4 into the underlying model pool. The Leeroo orchestrator nearly matches GPT4's performance at half the cost and even exceeds GPT4's results with a 25% cost reduction. These findings illustrate the potential of our architecture in creating state-of-the-art and cost-effective LLMs by optimizing the synergy between multiple LLMs to achieve superior performance outcomes.
+
 ### ChatRWKV
 - https://github.com/BlinkDL/ChatRWKV
 
@@ -760,6 +776,18 @@ Table-based reasoning with large language models (LLMs) is a promising direction
 - https://github.com/geekan/MetaGPT
 
 Large Language Model (LLM)-based agents have demonstrated remarkable effectiveness. However, their performance can be compromised in data science scenarios that require real-time data adjustment, expertise in optimization due to complex dependencies among various tasks, and the ability to identify logical errors for precise reasoning. In this study, we introduce the Data Interpreter, a solution designed to solve with code that emphasizes three pivotal techniques to augment problem-solving in data science: 1) dynamic planning with hierarchical graph structures for real-time data adaptability;2) tool integration dynamically to enhance code proficiency during execution, enriching the requisite expertise;3) logical inconsistency identification in feedback, and efficiency enhancement through experience recording. We evaluate the Data Interpreter on various data science and real-world tasks. Compared to open-source baselines, it demonstrated superior performance, exhibiting significant improvements in machine learning tasks, increasing from 0.86 to 0.95. Additionally, it showed a 26% increase in the MATH dataset and a remarkable 112% improvement in open-ended tasks.
+
+### TableLLM
+- https://arxiv.org/abs/2403.19318
+- https://github.com/TableLLM/TableLLM
+
+We introduce TableLLM, a robust large language model (LLM) with 13 billion parameters, purpose-built for proficiently handling tabular data manipulation tasks, whether they are embedded within documents or spreadsheets, catering to real-world office scenarios. We propose a distant supervision method for training, which comprises a reasoning process extension strategy, aiding in training LLMs to understand reasoning patterns more effectively as well as a cross-way validation strategy, ensuring the quality of the automatically generated data. To evaluate the performance of TableLLM, we have crafted a benchmark tailored to address both document and spreadsheet formats as well as constructed a well-organized evaluation pipeline capable of handling both scenarios. Thorough evaluations underscore the advantages of TableLLM when compared to various existing general-purpose and tabular data-focused LLMs. We have publicly released the model checkpoint, source code, benchmarks, and a web application for user interaction.
+
+### Lag-Llama
+- https://github.com/time-series-foundation-models/lag-llama
+- https://arxiv.org/abs/2310.08278
+
+Lag-Llama is the first open-source foundation model for time series forecasting!
 
 ### DoctorGLM
 - https://github.com/xionghonglin/DoctorGLM
@@ -938,6 +966,13 @@ In this paper, we present CharacterGLM, a series of models built upon ChatGLM, w
 本项目是一个小型的个人微调实验项目，其中全程纯使用Prompt工程和调用OpenAI的API构造指令微调数据集，微调基座模型选用Qwen1.5-7B-Chat，微调步骤使用的是开源框架LLaMA-Factory
 
 项目中包含构造数据集的全流程代码和微调部分的脚本
+
+### StyleLLM
+- https://github.com/stylellm/stylellm_models
+
+stylellm 是一个基于大语言模型（llm）的文本风格迁移（text style transfer）项目。项目利用大语言模型来学习指定文学作品的写作风格（惯用词汇、句式结构、修辞手法、人物对话等），形成了一系列特定风格的模型。
+
+利用stylellm模型可将学习到的风格移植至其他通用文本上，即：输入一段原始文本，模型可对其改写，输出带有该风格特色的文本，达到文字修饰、润色或风格模仿的效果。
 
 ### MeChat (Mental Health Support Chatbot)
 - https://github.com/qiuhuachuan/smile
@@ -1300,6 +1335,20 @@ Jamba is a state-of-the-art, hybrid SSM-Transformer LLM. It delivers throughput 
 - https://huggingface.co/stanford-crfm/BioMedLM
 
 Models such as GPT-4 and Med-PaLM 2 have demonstrated impressive performance on a wide variety of biomedical NLP tasks. However, these models have hundreds of billions of parameters, are computationally expensive to run, require users to send their input data over the internet, and are trained on unknown data sources. Can smaller, more targeted models compete? To address this question, we build and release BioMedLM, a 2.7 billion parameter GPT-style autoregressive model trained exclusively on PubMed abstracts and full articles. When fine-tuned, BioMedLM can produce strong multiple-choice biomedical question-answering results competitive with much larger models, such as achieving a score of 57.3% on MedMCQA (dev) and 69.0% on the MMLU Medical Genetics exam. BioMedLM can also be fine-tuned to produce useful answers to patient questions on medical topics. This demonstrates that smaller models can potentially serve as transparent, privacy-preserving, economical and environmentally friendly foundations for particular NLP applications, such as in biomedicine.
+
+### JetMoE
+- https://github.com/myshell-ai/JetMoE
+- https://research.myshell.ai/jetmoe
+- https://huggingface.co/jetmoe/jetmoe-8b
+- https://www.lepton.ai/playground/chat?model=jetmoe-8b-chat
+
+JetMoE-8B is trained with less than $ 0.1 million1 cost but outperforms LLaMA2-7B from Meta AI, who has multi-billion-dollar training resources. LLM training can be much cheaper than people generally thought.
+
+JetMoE-8B is very open and academia-friendly because:
+- It only uses public datasets for training, and the code is open-sourced. No proprietary resource is needed.
+- It can be finetuned with very limited compute budget (e.g., consumer-grade GPU) that most labs can afford.
+
+JetMoE-8B only has 2.2B active parameters during inference, which drastically lowers the computational cost. Compared to a model with similar inference computation, like Gemma-2B, JetMoE-8B achieves constantly better performance.
 
 ### Colossal-LLaMA-2
 - https://github.com/hpcaitech/ColossalAI/tree/main/applications/Colossal-LLaMA-2
@@ -1677,6 +1726,31 @@ Compared to Qwen1.5-7B, which contains 6.5 billion non-embedding parameters, Qwe
 
 Although Large Language Models (LLMs) demonstrate remarkable ability in processing and generating human-like text, they do have limitations when it comes to comprehending and expressing world knowledge that extends beyond the boundaries of natural language(e.g., chemical molecular formula). Injecting a collection of symbolic data directly into the training of LLMs can be problematic, as it disregards the synergies among different symbolic families and overlooks the need for a balanced mixture of natural and symbolic data. In this work, we tackle these challenges from both a data and framework perspective and introduce Symbol-LLM series models. First, we curated a data collection consisting of 34 tasks and incorporating approximately 20 distinct symbolic families, intending to capture the interrelations and foster synergies between symbols. Then, a two-stage tuning framework succeeds in injecting symbolic knowledge without loss of the generality ability. Extensive experiments on both symbol- and NL-centric tasks demonstrate the balanced and superior performances of Symbol-LLM series models. 
 
+### Qwen1.5-32b
+- https://qwenlm.github.io/zh/blog/qwen1.5-32b/
+- https://huggingface.co/spaces/Qwen/Qwen1.5-32B-Chat-demo
+
+开源社区长期以来一直在寻求一种能在性能、效率和内存占用之间达到理想平衡的模型。尽管出现了诸如Qwen1.5-72B和DBRX这样的SOTA模型，但这些模型持续面临诸如内存消耗巨大、推理速度缓慢以及显著的微调成本等问题。当前，参数量约30B的模型往往在这方面被看好，得到很多用户的青睐。顺应这一趋势，我们推出Qwen1.5语言模型系列的最新成员：Qwen1.5-32B和Qwen1.5-32B-Chat。
+
+过去数月中，我们精心研发了Qwen1.5-32B基础模型，旨在对标甚至超越当前最先进的30B模型所设定的性能基准。同时，我们在对齐方面取得了进展，特别是在RLHF方面，以提升Qwen1.5-32B-Chat的对话能力。
+
+### build_MiniLLM_from_scratch
+- https://github.com/Tongjilibo/build_MiniLLM_from_scratch
+
+本项目旨在构建一个小参数量的llm，走完预训练 -> 指令微调 -> 奖励模型 -> 强化学习 四个阶段，以可控的成本完成一个可以完成简单聊天任务的chat模型，目前完成前两个阶段
+
+### RWKV-6 World
+- https://huggingface.co/BlinkDL/rwkv-6-world
+
+RWKV-6 trained on 100+ world languages (70% English, 15% multilang, 15% code).
+
+World = Some_Pile + Some_SlimPajama + Some_StarCoder + Some_OSCAR + All_Wikipedia + All_ChatGPT_Data_I_can_find
+
+### Mengzi3
+- https://github.com/Langboat/Mengzi3
+
+Mengzi3-13B模型基于Llama架构，语料精选自网页、百科、社交、媒体、新闻，以及高质量的开源数据集。通过在万亿tokens上进行多语言语料的继续训练，模型的中文能力突出并且兼顾多语言能力。
+
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
 - https://github.com/mobiusml/hqq
@@ -2029,6 +2103,27 @@ The machine learning community has witnessed impressive advancements since the f
 - https://github.com/unit-mesh/edge-infer
 
 EdgeInfer enables efficient edge intelligence by running small AI models, including embeddings and OnnxModels, on resource-constrained devices like Android, iOS, or MCUs for real-time decision-making.
+
+### NeFT
+- https://arxiv.org/abs/2403.11621
+
+Large Language Models (LLMs) are composed of neurons that exhibit various behaviors and roles, which become increasingly diversified as models scale. Recent studies have revealed that not all neurons are active across different datasets, and this sparsity correlates positively with the task-specific ability, leading to advancements in model pruning and training efficiency. Traditional fine-tuning methods engage all parameters of LLMs, which is computationally expensive and may not be necessary. In contrast, Parameter-Efficient Fine-Tuning (PEFT) approaches aim to minimize the number of trainable parameters, yet they still operate at a relatively macro scale (e.g., layer-level). We introduce Neuron-Level Fine-Tuning (NeFT), a novel approach that refines the granularity of parameter training down to the individual neuron, enabling more precise and computationally efficient model updates. The experimental results show that NeFT not only exceeded the performance of full-parameter fine-tuning and PEFT but also provided insights into the analysis of neurons.
+
+### Aligning Large Language Models with Recommendation Knowledge
+- https://arxiv.org/abs/2404.00245
+
+Large language models (LLMs) have recently been used as backbones for recommender systems. However, their performance often lags behind conventional methods in standard tasks like retrieval. We attribute this to a mismatch between LLMs' knowledge and the knowledge crucial for effective recommendations. While LLMs excel at natural language reasoning, they cannot model complex user-item interactions inherent in recommendation tasks. We propose bridging the knowledge gap and equipping LLMs with recommendation-specific knowledge to address this. Operations such as Masked Item Modeling (MIM) and Bayesian Personalized Ranking (BPR) have found success in conventional recommender systems. Inspired by this, we simulate these operations through natural language to generate auxiliary-task data samples that encode item correlations and user preferences. Fine-tuning LLMs on such auxiliary-task data samples and incorporating more informative recommendation-task data samples facilitates the injection of recommendation-specific knowledge into LLMs. Extensive experiments across retrieval, ranking, and rating prediction tasks on LLMs such as FLAN-T5-Base and FLAN-T5-XL show the effectiveness of our technique in domains such as Amazon Toys & Games, Beauty, and Sports & Outdoors. Notably, our method outperforms conventional and LLM-based baselines, including the current SOTA, by significant margins in retrieval, showcasing its potential for enhancing recommendation quality.
+
+### llamafile
+- https://github.com/Mozilla-Ocho/llamafile/releases
+
+llamafile lets you distribute and run LLMs with a single file
+
+### summarize_from_feedback_details
+- https://github.com/vwxyzjn/summarize_from_feedback_details
+- https://arxiv.org/abs/2403.17031
+
+This work is the first to openly reproduce the Reinforcement Learning from Human Feedback (RLHF) scaling behaviors reported in OpenAI's seminal TL;DR summarization work. We create an RLHF pipeline from scratch, enumerate over 20 key implementation details, and share key insights during the reproduction. Our RLHF-trained Pythia models demonstrate significant gains in response quality that scale with model size, with our 2.8B, 6.9B models outperforming OpenAI's released 1.3B checkpoint.
 
 ### Large Language Model Unlearning
 - https://arxiv.org/abs/2310.10683
@@ -3079,6 +3174,11 @@ Here is a video of it in action, running completel
 
 RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine based on deep document understanding. It offers a streamlined RAG workflow for businesses of any scale, combining LLM (Large Language Models) to provide truthful question-answering capabilities, backed by well-founded citations from various complex fomatted data.
 
+### Dot
+- https://github.com/alexpinel/Dot
+
+This is Dot, a standalone open source app meant for easy use of local LLMs and RAG in particular to interact with documents and files similarly to Nvidia's Chat with RTX. Dot itself is completely standalone and is packaged with all dependencies including a copy of Mistral 7B, this is to ensure the app is as accessible as possible and no prior knowledge of programming or local LLMs is required to use it.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -3333,6 +3433,29 @@ AgentStudio is an open toolkit covering the entire lifespan of building virtual 
 
 We introduce AnyTool, a large language model agent designed to revolutionize the utilization of a vast array of tools in addressing user queries. We utilize over 16,000 APIs from Rapid API, operating under the assumption that a subset of these APIs could potentially resolve the queries. AnyTool primarily incorporates three elements: an API retriever with a hierarchical structure, a solver aimed at resolving user queries using a selected set of API candidates, and a self-reflection mechanism, which re-activates AnyTool if the initial solution proves impracticable. AnyTool is powered by the function calling feature of GPT-4, eliminating the need for training external modules. We also revisit the evaluation protocol introduced by previous works and identify a limitation in this protocol that leads to an artificially high pass rate. By revising the evaluation protocol to better reflect practical application scenarios, we introduce an additional benchmark, termed AnyToolBench. Experiments across various datasets demonstrate the superiority of our AnyTool over strong baselines such as ToolLLM and a GPT-4 variant tailored for tool utilization. For instance, AnyTool outperforms ToolLLM by +35.4% in terms of average pass rate on ToolBench. 
 
+### TinyAgent
+- https://github.com/KMnO4-zx/TinyAgent
+
+在ChatGPT横空出世，夺走Bert的桂冠之后，大模型愈发的火热，国内各种模型层出不穷，史称“百模大战”。大模型的能力是毋庸置疑的，但大模型在一些实时的问题上，或是某些专有领域的问题上，可能会显得有些力不从心。因此，我们需要一些工具来为大模型赋能，给大模型一个抓手，让大模型和现实世界发生的事情对齐颗粒度，这样我们就获得了一个更好的用的大模型。
+
+这里基于React的方式，制作了一个最小的Agent结构（其实更多的是调用工具），暑假的时候会尝试将React结构修改为SOP结构。
+
+### Octopus v2
+- https://arxiv.org/abs/2404.01744
+- https://huggingface.co/NexaAIDev/Octopus-v2
+
+Language models have shown effectiveness in a variety of software applications, particularly in tasks related to automatic workflow. These models possess the crucial ability to call functions, which is essential in creating AI agents. Despite the high performance of large-scale language models in cloud environments, they are often associated with concerns over privacy and cost. Current on-device models for function calling face issues with latency and accuracy. Our research presents a new method that empowers an on-device model with 2 billion parameters to surpass the performance of GPT-4 in both accuracy and latency, and decrease the context length by 95\%. When compared to Llama-7B with a RAG-based function calling mechanism, our method enhances latency by 35-fold. This method reduces the latency to levels deemed suitable for deployment across a variety of edge devices in production environments, aligning with the performance requisites for real-world applications.
+
+### ReadAgent
+- https://arxiv.org/abs/2402.09727
+- https://read-agent.github.io/
+- https://github.com/read-agent/read-agent.github.io/blob/main/assets/read_agent_demo.ipynb
+
+Inspired by how humans interactively read long documents, we implement ReadAgent as a simple prompting system that uses the advanced language capabilities of LLMs to (1) decide what content to store together in a memory episode, (2) compress those memory episodes into short episodic memories called gist memories, and (3) take actions to look up passages in the original text if ReadAgent needs to remind itself of relevant details to complete a task. We evaluate ReadAgent against baselines using retrieval methods, using the original long contexts, and using the gist memories. These evaluations are performed on three long-document reading comprehension tasks: QuALITY (max 6,000 words), NarrativeQA (max 343,000 words), and QMSum (max 26,300 words). ReadAgent outperforms the baselines on all three tasks while extending the effective context window by 3-20x.
+
+In addition, we adapt ReadAgent to web navigation, which is a fundamentally very-long context agent setting. We find that ReadAgent is simple to adapt to this setting and shows promising performance.
+
+
 ### Mistral-Interact
 - https://github.com/HBX-hbx/Mistral-Interact
 - https://arxiv.org/abs/2402.09205
@@ -3467,6 +3590,12 @@ Recent advances in Language Model (LM) agents and tool use, exemplified by appli
 
 Developing Large Language Models (LLMs) with robust long-context capabilities has been the recent research focus, resulting in the emergence of long-context LLMs proficient in Chinese. However, the evaluation of these models remains underdeveloped due to a lack of benchmarks. To address this gap, we present CLongEval, a comprehensive Chinese benchmark for evaluating long-context LLMs. CLongEval is characterized by three key features: (1) Sufficient data volume, comprising 7 distinct tasks and 7,267 examples; (2) Broad applicability, accommodating to models with context windows size from 1K to 100K; (3) High quality, with over 2,000 manually annotated question-answer pairs in addition to the automatically constructed labels. With CLongEval, we undertake a comprehensive assessment of 6 open-source long-context LLMs and 2 leading commercial counterparts that feature both long-context abilities and proficiency in Chinese. We also provide in-depth analysis based on the empirical results, trying to shed light on the critical capabilities that present challenges in long-context settings. The dataset, evaluation scripts, and model outputs will be released.
 
+### Counting-Stars
+- https://arxiv.org/abs/2403.11802
+- https://github.com/nick7nlp/Counting-Stars
+
+While recent research endeavors have concentrated on developing Large Language Models (LLMs) with robust long-context capabilities, due to the lack of appropriate evaluation strategies, relatively little is known about how well the long-context capability and performance of leading LLMs (e.g., GPT-4 Turbo and Kimi Chat). To address this gap, we propose a simple, efficient, and reasonable strategy for evaluating long-context LLMs as a new benchmark, named Counting-Stars. The Counting-Stars is designed to require LLMs to fully understand and capture long dependencies in long contexts, further being able to collect inter-dependency across multiple pieces of evidence spanning the entire context to finish the task. Based on the Counting-Stars, we conduct experiments to evaluate the two leading long-context LLMs, i.e., GPT-4 Turbo and Kimi Chat. The experimental results indicate that GPT-4 Turbo and Kimi Chat achieve significant performance in the long context from 4K to 128K. We further present several intriguing analyses regarding the behavior of LLMs processing long context.
+
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
 - https://arxiv.org/abs/2401.07851
@@ -3590,5 +3719,10 @@ Efficient and accurate updating of knowledge stored in Large Language Models (LL
 - https://arxiv.org/pdf/2403.10049.pdf
 
 Click-through rate (CTR) prediction is a core task in recommender systems. Existing methods (IDRec for short) rely on unique identities to represent distinct users and items that have prevailed for decades. On one hand, IDRec often faces significant performance degradation on cold-start problem; on the other hand, IDRec cannot use longer training data due to constraints imposed by iteration efficiency. Most prior studies alleviate the above problems by introducing pre-trained knowledge(e.g. pre-trained user model or multi-modal embeddings). However, the explosive growth of online latency can be attributed to the huge parameters in the pre-trained model. Therefore, most of them cannot employ the unified model of end-to-end training with IDRec in industrial recommender systems, thus limiting the potential of the pre-trained model. To this end, we propose a Pre-trained Plug-in CTR Model, namely PPM. PPM employs multi-modal features as input and utilizes large-scale data for pre-training. Then, PPM is plugged in IDRec model to enhance unified model's performance and iteration efficiency. Upon incorporating IDRec model, certain intermediate results within the network are cached, with only a subset of the parameters participating in training and serving. Hence, our approach can successfully deploy an end-to-end model without causing huge latency increases. Comprehensive offline experiments and online A/B testing at JD E-commerce demonstrate the efficiency and effectiveness of PPM.
+
+### MicroLlama-300M
+- https://github.com/keeeeenw/MicroLlama
+
+As an individual with limited access and compute, I have been wondering if I could build a decent large-language model for a while. As the big mega corporations are focused on getting bigger and bigger models, I am going small!
 
 > 持续更新中 (Continuously Updated)... 
