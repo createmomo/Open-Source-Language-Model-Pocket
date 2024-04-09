@@ -41,6 +41,7 @@ Open-Source Language Model Pocket
 |*【RethinkTinyLM】|*【Chinese-Mixtral】|*【RWKV_Pytorch】|
 |*【Qwen1.5-MoE-A2.7B】|*【Symbol-LLM】|*【Qwen1.5-32b】|
 |*【build_MiniLLM_from_scratch】|*【RWKV-6 World】|*【Mengzi3】|
+|*【Eurus】|*【Chinese Tiny LLM】||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -187,6 +188,7 @@ Open-Source Language Model Pocket
 |*【Command-R】|*【Grok】|
 |*【DBRX】|*【Jamba】|
 |*【BioMedLM】|*【JetMoE】|
+|*【MicroLlama-300M】||
 
 *训练/推理*
 |  |  |
@@ -240,6 +242,7 @@ Open-Source Language Model Pocket
 |*【LISA（Layerwise Importance Sampled AdamW）】|*【edge-infer】|
 |*【NeFT】|*【Aligning Large Language Models with Recommendation Knowledge】|
 |*【llamafile】|*【summarize_from_feedback_details】|
+|*【EvoLLM】||
 
 *评价*
 |  ||
@@ -289,7 +292,6 @@ Open-Source Language Model Pocket
 |*【Large Language Models in Finance】|*【WanJuan-CC】|
 |*【Actions Speak Louder than Words】|*【LLM-UM-Reading】|
 |*【Larimar】|*【PPM】|
-|*【MicroLlama-300M】||
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -299,7 +301,7 @@ Open-Source Language Model Pocket
 - 千“垂”百炼：垂直领域与语言模型
   - [导语](https://mp.weixin.qq.com/s/G24skuUbyrSatxWczVxEAg)
   - 获得可用的垂直领域数据
-    - 【不限领域】[利用未标注文本改进遵循指令的语言模型 (1) Instruction Backtranslation 简介](https://mp.weixin.qq.com/s/50wtP--W_cy-682g8cOYww)
+    - 【不限领域】利用未标注文本改进遵循指令的语言模型（[1](https://mp.weixin.qq.com/s/50wtP--W_cy-682g8cOYww) [2](https://mp.weixin.qq.com/s/q7nKnwtEKPahABiLFLWuSw)）
     - 【医疗/健康】ChatDoctor （解读 [上](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg) [中](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw) [下](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg) / PDF版PPT [上](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf) [中](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%AD%EF%BC%89.pdf) [下](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8B%EF%BC%89.pdf)）
     - 【医疗/健康】MedicalGPT-zh ([解读](https://mp.weixin.qq.com/s/QJKZYKh16fqLTC367WhzdA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MedicalGPT-zh.pdf))
     - 【医疗/健康】明医(MING) ([解读](https://mp.weixin.qq.com/s/uM4FZeDhAc6JuMlW7NCvUA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MING.pdf))
@@ -1751,6 +1753,18 @@ World = Some_Pile + Some_SlimPajama + Some_StarCoder + Some_OSCAR + All_Wikipedi
 
 Mengzi3-13B模型基于Llama架构，语料精选自网页、百科、社交、媒体、新闻，以及高质量的开源数据集。通过在万亿tokens上进行多语言语料的继续训练，模型的中文能力突出并且兼顾多语言能力。
 
+### Eurus
+- https://arxiv.org/abs/2404.02078
+- https://github.com/OpenBMB/Eurus
+
+We introduce Eurus, a suite of large language models (LLMs) optimized for reasoning. Finetuned from Mistral-7B and CodeLlama-70B, Eurus models achieve state-of-the-art results among open-source models on a diverse set of benchmarks covering mathematics, code generation, and logical reasoning problems. Notably, Eurus-70B beats GPT-3.5 Turbo in reasoning through a comprehensive benchmarking across 12 tests covering five tasks, and achieves a 33.3% pass@1 accuracy on LeetCode and 32.6% on TheoremQA, two challenging benchmarks, substantially outperforming existing open-source models by margins more than 13.3%. The strong performance of Eurus can be primarily attributed to UltraInteract, our newly-curated large-scale, high-quality alignment dataset specifically designed for complex reasoning tasks. UltraInteract can be used in both supervised fine-tuning and preference learning. For each instruction, it includes a preference tree consisting of (1) reasoning chains with diverse planning strategies in a unified format, (2) multi-turn interaction trajectories with the environment and the critique, and (3) pairwise data to facilitate preference learning. UltraInteract allows us to conduct an in-depth exploration of preference learning for reasoning tasks. Our investigation reveals that some well-established preference learning algorithms may be less suitable for reasoning tasks compared to their effectiveness in general conversations. Inspired by this, we derive a novel reward modeling objective which, together with UltraInteract, leads to a strong reward model.
+
+### Chinese Tiny LLM
+- https://huggingface.co/collections/m-a-p/chinese-tiny-llm-660d0133dff6856f94ce0fc6
+- https://arxiv.org/abs/2404.04167
+
+In this study, we introduce CT-LLM, a 2B large language model (LLM) that illustrates a pivotal shift towards prioritizing the Chinese language in developing LLMs. Uniquely initiated from scratch, CT-LLM diverges from the conventional methodology by primarily incorporating Chinese textual data, utilizing an extensive corpus of 1,200 billion tokens, including 800 billion Chinese tokens, 300 billion English tokens, and 100 billion code tokens. This strategic composition facilitates the model's exceptional proficiency in understanding and processing Chinese, a capability further enhanced through alignment techniques. Demonstrating remarkable performance on the CHC-Bench, CT-LLM excels in Chinese language tasks, and showcases its adeptness in English through SFT. This research challenges the prevailing paradigm of training LLMs predominantly on English corpora and then adapting them to other languages, broadening the horizons for LLM training methodologies. By open-sourcing the full process of training a Chinese LLM, including a detailed data processing procedure with the obtained Massive Appropriate Pretraining Chinese Corpus (MAP-CC), a well-chosen multidisciplinary Chinese Hard Case Benchmark (CHC-Bench), and the 2B-size Chinese Tiny LLM (CT-LLM), we aim to foster further exploration and innovation in both academia and industry, paving the way for more inclusive and versatile language models.
+
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
 - https://github.com/mobiusml/hqq
@@ -2124,6 +2138,11 @@ llamafile lets you distribute and run LLMs with a single file
 - https://arxiv.org/abs/2403.17031
 
 This work is the first to openly reproduce the Reinforcement Learning from Human Feedback (RLHF) scaling behaviors reported in OpenAI's seminal TL;DR summarization work. We create an RLHF pipeline from scratch, enumerate over 20 key implementation details, and share key insights during the reproduction. Our RLHF-trained Pythia models demonstrate significant gains in response quality that scale with model size, with our 2.8B, 6.9B models outperforming OpenAI's released 1.3B checkpoint.
+
+### EvoLLM
+- https://arxiv.org/abs/2403.13187
+
+We present a novel application of evolutionary algorithms to automate the creation of powerful foundation models. While model merging has emerged as a promising approach for LLM development due to its cost-effectiveness, it currently relies on human intuition and domain knowledge, limiting its potential. Here, we propose an evolutionary approach that overcomes this limitation by automatically discovering effective combinations of diverse open-source models, harnessing their collective intelligence without requiring extensive additional training data or compute. Our approach operates in both parameter space and data flow space, allowing for optimization beyond just the weights of the individual models. This approach even facilitates cross-domain merging, generating models like a Japanese LLM with Math reasoning capabilities. Surprisingly, our Japanese Math LLM achieved state-of-the-art performance on a variety of established Japanese LLM benchmarks, even surpassing models with significantly more parameters, despite not being explicitly trained for such tasks. Furthermore, a culturally-aware Japanese VLM generated through our approach demonstrates its effectiveness in describing Japanese culture-specific content, outperforming previous Japanese VLMs. This work not only contributes new state-of-the-art models back to the open-source community, but also introduces a new paradigm for automated model composition, paving the way for exploring alternative, efficient approaches to foundation model development.
 
 ### Large Language Model Unlearning
 - https://arxiv.org/abs/2310.10683
