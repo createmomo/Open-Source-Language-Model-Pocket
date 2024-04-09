@@ -41,7 +41,7 @@ Open-Source Language Model Pocket
 |*【RethinkTinyLM】|*【Chinese-Mixtral】|*【RWKV_Pytorch】|
 |*【Qwen1.5-MoE-A2.7B】|*【Symbol-LLM】|*【Qwen1.5-32b】|
 |*【build_MiniLLM_from_scratch】|*【RWKV-6 World】|*【Mengzi3】|
-|*【Eurus】|*【Chinese Tiny LLM】||
+|*【Eurus】|*【Chinese Tiny LLM】|*【HammerLLM】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -108,7 +108,7 @@ Open-Source Language Model Pocket
 |HuixiangDou|*【CodeAct】|
 |*【Design2Code】|*【bGPT】|
 |*【MobileLLM】|*【Stable Code Instruct 3B】|
-|*【ReALM】||
+|*【ReALM】|*【aiXcoder】|
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -126,6 +126,7 @@ Open-Source Language Model Pocket
 |*【TinyRAG】|*【RAFT】|
 |*【Chat with MLX】|*【LLocalSearch】|
 |*【RAGFlow】|*【Dot】|
+|*【Ollama Embedding Models】||
 
 *Agent*
 |  |  |
@@ -188,7 +189,8 @@ Open-Source Language Model Pocket
 |*【Command-R】|*【Grok】|
 |*【DBRX】|*【Jamba】|
 |*【BioMedLM】|*【JetMoE】|
-|*【MicroLlama-300M】||
+|*【MicroLlama-300M】|*【Mistral 7B v0.2 JAX】|
+|*【gemma-1.1-7b-it】||
 
 *训练/推理*
 |  |  |
@@ -242,7 +244,7 @@ Open-Source Language Model Pocket
 |*【LISA（Layerwise Importance Sampled AdamW）】|*【edge-infer】|
 |*【NeFT】|*【Aligning Large Language Models with Recommendation Knowledge】|
 |*【llamafile】|*【summarize_from_feedback_details】|
-|*【EvoLLM】||
+|*【EvoLLM】|*【llm.c】|
 
 *评价*
 |  ||
@@ -292,6 +294,7 @@ Open-Source Language Model Pocket
 |*【Large Language Models in Finance】|*【WanJuan-CC】|
 |*【Actions Speak Louder than Words】|*【LLM-UM-Reading】|
 |*【Larimar】|*【PPM】|
+|*【Financial Datasets】||
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -1472,6 +1475,13 @@ stable-code-3b is a 2.7B billion parameter decoder-only language model pre-train
 
 Reference resolution is an important problem, one that is essential to understand and successfully handle context of different kinds. This context includes both previous turns and context that pertains to non-conversational entities, such as entities on the user's screen or those running in the background. While LLMs have been shown to be extremely powerful for a variety of tasks, their use in reference resolution, particularly for non-conversational entities, remains underutilized. This paper demonstrates how LLMs can be used to create an extremely effective system to resolve references of various types, by showing how reference resolution can be converted into a language modeling problem, despite involving forms of entities like those on screen that are not traditionally conducive to being reduced to a text-only modality. We demonstrate large improvements over an existing system with similar functionality across different types of references, with our smallest model obtaining absolute gains of over 5% for on-screen references. We also benchmark against GPT-3.5 and GPT-4, with our smallest model achieving performance comparable to that of GPT-4, and our larger models substantially outperforming it.
 
+### aiXcoder
+- https://github.com/aixcoder-plugin/aiXcoder-7B
+- https://gitee.com/aixcoder-model/aixcoder-7b
+- https://www.gitlink.org.cn/aixcoder/aixcoder-7b-model
+
+Welcome to the official repository of aiXcoder-7B Code Large Language Model. This model is designed to understand and generate code across multiple programming languages, offering state-of-the-art performance in code completion, comprehension, generation, and more tasks about programming languages.
+
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
 
@@ -1764,6 +1774,11 @@ We introduce Eurus, a suite of large language models (LLMs) optimized for reason
 - https://arxiv.org/abs/2404.04167
 
 In this study, we introduce CT-LLM, a 2B large language model (LLM) that illustrates a pivotal shift towards prioritizing the Chinese language in developing LLMs. Uniquely initiated from scratch, CT-LLM diverges from the conventional methodology by primarily incorporating Chinese textual data, utilizing an extensive corpus of 1,200 billion tokens, including 800 billion Chinese tokens, 300 billion English tokens, and 100 billion code tokens. This strategic composition facilitates the model's exceptional proficiency in understanding and processing Chinese, a capability further enhanced through alignment techniques. Demonstrating remarkable performance on the CHC-Bench, CT-LLM excels in Chinese language tasks, and showcases its adeptness in English through SFT. This research challenges the prevailing paradigm of training LLMs predominantly on English corpora and then adapting them to other languages, broadening the horizons for LLM training methodologies. By open-sourcing the full process of training a Chinese LLM, including a detailed data processing procedure with the obtained Massive Appropriate Pretraining Chinese Corpus (MAP-CC), a well-chosen multidisciplinary Chinese Hard Case Benchmark (CHC-Bench), and the 2B-size Chinese Tiny LLM (CT-LLM), we aim to foster further exploration and innovation in both academia and industry, paving the way for more inclusive and versatile language models.
+
+### HammerLLM
+- https://github.com/Academic-Hammer/HammerLLM
+
+Welcome to the pre-training repository for our small-size Large Language Model (sLLM) with 1.4 billion parameters, leveraged on the Llama 2 architecture. 
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -2143,6 +2158,11 @@ This work is the first to openly reproduce the Reinforcement Learning from Human
 - https://arxiv.org/abs/2403.13187
 
 We present a novel application of evolutionary algorithms to automate the creation of powerful foundation models. While model merging has emerged as a promising approach for LLM development due to its cost-effectiveness, it currently relies on human intuition and domain knowledge, limiting its potential. Here, we propose an evolutionary approach that overcomes this limitation by automatically discovering effective combinations of diverse open-source models, harnessing their collective intelligence without requiring extensive additional training data or compute. Our approach operates in both parameter space and data flow space, allowing for optimization beyond just the weights of the individual models. This approach even facilitates cross-domain merging, generating models like a Japanese LLM with Math reasoning capabilities. Surprisingly, our Japanese Math LLM achieved state-of-the-art performance on a variety of established Japanese LLM benchmarks, even surpassing models with significantly more parameters, despite not being explicitly trained for such tasks. Furthermore, a culturally-aware Japanese VLM generated through our approach demonstrates its effectiveness in describing Japanese culture-specific content, outperforming previous Japanese VLMs. This work not only contributes new state-of-the-art models back to the open-source community, but also introduces a new paradigm for automated model composition, paving the way for exploring alternative, efficient approaches to foundation model development.
+
+### llm.c
+- https://github.com/karpathy/llm.c
+
+LLM training in simple, pure C/CUDA. There is no need for 245MB of PyTorch or 107MB of cPython. For example, training GPT-2 (CPU, fp32) is ~1,000 lines of clean code in a single file. It compiles and runs instantly, and exactly matches the PyTorch reference implementation. I chose GPT-2 as the first working example because it is the grand-daddy of LLMs, the first time the modern stack was put together.
 
 ### Large Language Model Unlearning
 - https://arxiv.org/abs/2310.10683
@@ -3198,6 +3218,11 @@ RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine based on d
 
 This is Dot, a standalone open source app meant for easy use of local LLMs and RAG in particular to interact with documents and files similarly to Nvidia's Chat with RTX. Dot itself is completely standalone and is packaged with all dependencies including a copy of Mistral 7B, this is to ensure the app is as accessible as possible and no prior knowledge of programming or local LLMs is required to use it.
 
+### Ollama Embedding Models
+- https://ollama.com/blog/embedding-models
+
+Ollama supports embedding models, making it possible to build retrieval augmented generation (RAG) applications that combine text prompts with existing documents or other data.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -3739,9 +3764,26 @@ Efficient and accurate updating of knowledge stored in Large Language Models (LL
 
 Click-through rate (CTR) prediction is a core task in recommender systems. Existing methods (IDRec for short) rely on unique identities to represent distinct users and items that have prevailed for decades. On one hand, IDRec often faces significant performance degradation on cold-start problem; on the other hand, IDRec cannot use longer training data due to constraints imposed by iteration efficiency. Most prior studies alleviate the above problems by introducing pre-trained knowledge(e.g. pre-trained user model or multi-modal embeddings). However, the explosive growth of online latency can be attributed to the huge parameters in the pre-trained model. Therefore, most of them cannot employ the unified model of end-to-end training with IDRec in industrial recommender systems, thus limiting the potential of the pre-trained model. To this end, we propose a Pre-trained Plug-in CTR Model, namely PPM. PPM employs multi-modal features as input and utilizes large-scale data for pre-training. Then, PPM is plugged in IDRec model to enhance unified model's performance and iteration efficiency. Upon incorporating IDRec model, certain intermediate results within the network are cached, with only a subset of the parameters participating in training and serving. Hence, our approach can successfully deploy an end-to-end model without causing huge latency increases. Comprehensive offline experiments and online A/B testing at JD E-commerce demonstrate the efficiency and effectiveness of PPM.
 
+### Financial Datasets
+- https://github.com/virattt/financial-datasets
+
+Financial Datasets is an open-source Python library that allows developers to create synthetic financial datasets using Large Language Models (LLMs). With this library, you can generate realistic financial datasets based on SEC filings such as 10-Ks, 10-Qs, and other financial reports.
+
 ### MicroLlama-300M
 - https://github.com/keeeeenw/MicroLlama
 
 As an individual with limited access and compute, I have been wondering if I could build a decent large-language model for a while. As the big mega corporations are focused on getting bigger and bigger models, I am going small!
+
+### Mistral 7B v0.2 JAX
+- https://github.com/yixiaoer/mistral-v0.2-jax
+
+This project is the JAX implementation of Mistral 7B v0.2 Base, advancing the work of my earlier repository mistral 7B JAX.
+
+It is supported by Cloud TPUs from Google's TPU Research Cloud (TRC).
+
+### gemma-1.1-7b-it
+- https://huggingface.co/google/gemma-1.1-7b-it
+
+This is Gemma 1.1 7B (IT), an update over the original instruction-tuned Gemma release.
 
 > 持续更新中 (Continuously Updated)... 
