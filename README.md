@@ -42,6 +42,7 @@ Open-Source Language Model Pocket
 |*【Qwen1.5-MoE-A2.7B】|*【Symbol-LLM】|*【Qwen1.5-32b】|
 |*【build_MiniLLM_from_scratch】|*【RWKV-6 World】|*【Mengzi3】|
 |*【Eurus】|*【Chinese Tiny LLM】|*【HammerLLM】|
+|*【360智脑】|*【Steel-LLM】|*【XVERSE-MoE-A4.2B】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -54,7 +55,7 @@ Open-Source Language Model Pocket
 |WiNGPT|CareGPT|孙思邈|
 |MolGen（药物研发）|Taiyi（太一）|MedAgents|
 |Molecule Optimization|*【MolTC】|*【Mol-Instructions】|
-|*【Multilingual Medicine】|||
+|*【Multilingual Medicine】|*【Sequel】||
 
 |经济/金融|||
 |---|---|---|
@@ -78,7 +79,8 @@ Open-Source Language Model Pocket
 |桃李|EduChat|
 |chatglm-maths|Abel|
 |InternLM-Math|DeepSeekMath|
-|*【LeerooDedicated-Math-7b】||
+|*【LeerooDedicated-Math-7b】|*【SimpleGeometry】|
+|*【Rho-1】||
 
 |表格/数据分析||
 |---|---|
@@ -109,6 +111,8 @@ Open-Source Language Model Pocket
 |*【Design2Code】|*【bGPT】|
 |*【MobileLLM】|*【Stable Code Instruct 3B】|
 |*【ReALM】|*【aiXcoder】|
+|*【CodeQwen1.5】|*【AutoCodeRover】|
+|*【CodeGemma】||
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -126,7 +130,7 @@ Open-Source Language Model Pocket
 |*【TinyRAG】|*【RAFT】|
 |*【Chat with MLX】|*【LLocalSearch】|
 |*【RAGFlow】|*【Dot】|
-|*【Ollama Embedding Models】||
+|*【Ollama Embedding Models】|*【LLM2Vec】|
 
 *Agent*
 |  |  |
@@ -145,7 +149,8 @@ Open-Source Language Model Pocket
 |*【EasyRL4Rec】|*【Jan】|
 |*【AgentStudio】|*【AnyTool】|
 |*【TinyAgent】|*【Octopus v2】|
-|*【ReadAgent】||
+|*【ReadAgent】|*【STORM】|
+|*【APAM】||
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -190,7 +195,10 @@ Open-Source Language Model Pocket
 |*【DBRX】|*【Jamba】|
 |*【BioMedLM】|*【JetMoE】|
 |*【MicroLlama-300M】|*【Mistral 7B v0.2 JAX】|
-|*【gemma-1.1-7b-it】||
+|*【gemma-1.1-7b-it】|*【h2o-danube2-1.8b-chat】|
+|*【WizardLM-2】|*【RecurrentGemma】|
+|*【CodecLM】|*【MEGALODON】|
+|*【Stable LM 2 12B】|*【Mixtral 8x22B】|
 
 *训练/推理*
 |  |  |
@@ -245,6 +253,10 @@ Open-Source Language Model Pocket
 |*【NeFT】|*【Aligning Large Language Models with Recommendation Knowledge】|
 |*【llamafile】|*【summarize_from_feedback_details】|
 |*【EvoLLM】|*【llm.c】|
+|*【Mergoo】|*【qwen-vllm】|
+|*【SiLLM】|*【How to Train Data-Efficient LLMs】|
+|*【sDPO】|*【PiSSA】|
+|*【LongRoPE】||
 
 *评价*
 |  ||
@@ -269,7 +281,7 @@ Open-Source Language Model Pocket
 |*【BAMBOO】|*【Fast-DetectGPT】|
 |*【GAMA-Bench】|*【FineMath】|
 |*【ToolEmu】|*【ClongEval】|
-|*【Counting-Stars】||
+|*【Counting-Stars】|*【InfiCoder-Eval】|
 
 *其它*
 |  |  |
@@ -304,7 +316,7 @@ Open-Source Language Model Pocket
 - 千“垂”百炼：垂直领域与语言模型
   - [导语](https://mp.weixin.qq.com/s/G24skuUbyrSatxWczVxEAg)
   - 获得可用的垂直领域数据
-    - 【不限领域】利用未标注文本改进遵循指令的语言模型（[1](https://mp.weixin.qq.com/s/50wtP--W_cy-682g8cOYww) [2](https://mp.weixin.qq.com/s/q7nKnwtEKPahABiLFLWuSw)）
+    - 【不限领域】利用未标注文本改进遵循指令的语言模型（[1](https://mp.weixin.qq.com/s/50wtP--W_cy-682g8cOYww) [2](https://mp.weixin.qq.com/s/q7nKnwtEKPahABiLFLWuSw) [3](https://mp.weixin.qq.com/s/CE8YNx19dc0EyNfTK_HYHQ) [4](https://mp.weixin.qq.com/s/yj4gnoymNLFuLE1v94VJ9A)）
     - 【医疗/健康】ChatDoctor （解读 [上](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg) [中](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw) [下](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg) / PDF版PPT [上](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf) [中](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%AD%EF%BC%89.pdf) [下](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8B%EF%BC%89.pdf)）
     - 【医疗/健康】MedicalGPT-zh ([解读](https://mp.weixin.qq.com/s/QJKZYKh16fqLTC367WhzdA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MedicalGPT-zh.pdf))
     - 【医疗/健康】明医(MING) ([解读](https://mp.weixin.qq.com/s/uM4FZeDhAc6JuMlW7NCvUA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MING.pdf))
@@ -677,6 +689,17 @@ Mathematical reasoning poses a significant challenge for language models due to 
 - https://arxiv.org/abs/2401.13979
 
 In this paper, we propose an architecture to harness the collective knowledge of multiple trained LLMs to create a new state-of-the-art. At the core of this framework is a LLM-based orchestrator that is adept at picking the right underlying LLM experts for optimal task execution. Inspired by self-play in reinforcement learning, we created a loop of query generation, orchestration, and evaluation to generate training data for the orchestrator. Our evaluation focused on the MMLU benchmark, employing models with 7B, 13B, and 34B parameters available on Hugging Face. The results demonstrate new state-of-the-art open-source models: Our Leeroo orchestrator achieves performance on par with the Mixtral model while incurring only two-thirds of its cost. Moreover, increasing the allowed cost surpasses Mixtral's accuracy by over 5% at the same cost level, reaching an accuracy of 75.9%. Further enhancements were observed when integrating GPT4 into the underlying model pool. The Leeroo orchestrator nearly matches GPT4's performance at half the cost and even exceeds GPT4's results with a 25% cost reduction. These findings illustrate the potential of our architecture in creating state-of-the-art and cost-effective LLMs by optimizing the synergy between multiple LLMs to achieve superior performance outcomes.
+
+### SimpleGeometry
+- https://huggingface.co/datasets/bethgelab/simplegeometry
+- https://arxiv.org/abs/2404.06405
+
+Proving geometric theorems constitutes a hallmark of visual reasoning combining both intuitive and logical skills. Therefore, automated theorem proving of Olympiad-level geometry problems is considered a notable milestone in human-level automated reasoning. The introduction of AlphaGeometry, a neuro-symbolic model trained with 100 million synthetic samples, marked a major breakthrough. It solved 25 of 30 International Mathematical Olympiad (IMO) problems whereas the reported baseline based on Wu's method solved only ten. In this note, we revisit the IMO-AG-30 Challenge introduced with AlphaGeometry, and find that Wu's method is surprisingly strong. Wu's method alone can solve 15 problems, and some of them are not solved by any of the other methods. This leads to two key findings: (i) Combining Wu's method with the classic synthetic methods of deductive databases and angle, ratio, and distance chasing solves 21 out of 30 methods by just using a CPU-only laptop with a time limit of 5 minutes per problem. Essentially, this classic method solves just 4 problems less than AlphaGeometry and establishes the first fully symbolic baseline strong enough to rival the performance of an IMO silver medalist. (ii) Wu's method even solves 2 of the 5 problems that AlphaGeometry failed to solve. Thus, by combining AlphaGeometry with Wu's method we set a new state-of-the-art for automated theorem proving on IMO-AG-30, solving 27 out of 30 problems, the first AI method which outperforms an IMO gold medalist.
+
+### Rho-1
+- https://arxiv.org/abs/2404.07965
+
+Previous language model pre-training methods have uniformly applied a next-token prediction loss to all training tokens. Challenging this norm, we posit that "Not all tokens in a corpus are equally important for language model training". Our initial analysis delves into token-level training dynamics of language model, revealing distinct loss patterns for different tokens. Leveraging these insights, we introduce a new language model called Rho-1. Unlike traditional LMs that learn to predict every next token in a corpus, Rho-1 employs Selective Language Modeling (SLM), which selectively trains on useful tokens that aligned with the desired distribution. This approach involves scoring pretraining tokens using a reference model, and then training the language model with a focused loss on tokens with higher excess loss. When continual pretraining on 15B OpenWebMath corpus, Rho-1 yields an absolute improvement in few-shot accuracy of up to 30% in 9 math tasks. After fine-tuning, Rho-1-1B and 7B achieved state-of-the-art results of 40.6% and 51.8% on MATH dataset, respectively - matching DeepSeekMath with only 3% of the pretraining tokens. Furthermore, when pretraining on 80B general tokens, Rho-1 achieves 6.8% average enhancement across 15 diverse tasks, increasing both efficiency and performance of the language model pre-training.
 
 ### ChatRWKV
 - https://github.com/BlinkDL/ChatRWKV
@@ -1187,6 +1210,11 @@ Mol-Instructions comprises three cardinal components:
 
 Despite the vast repository of global medical knowledge predominantly being in English, local languages are crucial for delivering tailored healthcare services, particularly in areas with limited medical resources. To extend the reach of medical AI advancements to a broader population, we aim to develop medical LLMs across the six most widely spoken languages, encompassing a global population of 6.1 billion. This effort culminates in the creation of the ApolloCorpora multilingual medical dataset and the XMedBench benchmark. In the multilingual medical benchmark, the released Apollo models, at various relatively-small sizes (i.e., 0.5B, 1.8B, 2B, 6B, and 7B), achieve the best performance among models of equivalent size. Especially, Apollo-7B is the state-of-the-art multilingual medical LLMs up to 70B. Additionally, these lite models could be used to improve the multi-lingual medical capabilities of larger models without fine-tuning in a proxy-tuning fashion. We will open-source training corpora, code, model weights and evaluation benchmark.
 
+### Sequel
+- https://github.com/SequelHQ/Sequel
+
+Sequel is an open-source software application meticulously designed to be your ultimate companion in taking control of your health through personalized nutrition. By leveraging our cutting-edge platform, users can effortlessly analyze lab reports, track supplement and nutrient intake, and access a comprehensive library of evidence-based information. Our mission is to empower you with the tools and knowledge necessary to make informed decisions about your well-being, guiding you towards a healthier, longer life.
+
 ### Taiyi（太一）
 - https://github.com/DUTIR-BioNLP/Taiyi-LLM
 - https://arxiv.org/abs/2311.11608
@@ -1481,6 +1509,27 @@ Reference resolution is an important problem, one that is essential to understan
 - https://www.gitlink.org.cn/aixcoder/aixcoder-7b-model
 
 Welcome to the official repository of aiXcoder-7B Code Large Language Model. This model is designed to understand and generate code across multiple programming languages, offering state-of-the-art performance in code completion, comprehension, generation, and more tasks about programming languages.
+
+### CodeQwen1.5
+- https://github.com/QwenLM/CodeQwen1.5
+
+CodeQwen1.5 is the Code-Specific version of Qwen1.5. It is a transformer-based decoder-only language model pretrained on a large amount of data of codes.
+
+### AutoCodeRover
+- https://github.com/nus-apr/auto-code-rover
+- https://arxiv.org/abs/2404.05427
+
+AutoCodeRover is a fully automated approach for resolving GitHub issues (bug fixing and feature addition) where LLMs are combined with analysis and debugging capabilities to prioritize patch locations ultimately leading to a patch.
+
+AutoCodeRover resolves ~16% of issues of SWE-bench (total 2294 GitHub issues) and ~22% issues of SWE-bench lite (total 300 GitHub issues), improving over the current state-of-the-art efficacy of AI software engineers.
+
+### CodeGemma
+- https://developers.googleblog.com/2024/04/gemma-family-expands.html
+- https://www.kaggle.com/models/google/codegemma
+
+CodeGemma: Code completion, generation, and chat for developers and businesses
+
+Harnessing the foundation of our Gemma models, CodeGemma brings powerful yet lightweight coding capabilities to the community. CodeGemma models are available as a 7B pretrained variant that specializes in code completion and code generation tasks, a 7B instruction-tuned variant for code chat and instruction-following, and a 2B pretrained variant for fast code completion that fits on your local computer.
 
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
@@ -1779,6 +1828,24 @@ In this study, we introduce CT-LLM, a 2B large language model (LLM) that illustr
 - https://github.com/Academic-Hammer/HammerLLM
 
 Welcome to the pre-training repository for our small-size Large Language Model (sLLM) with 1.4 billion parameters, leveraged on the Llama 2 architecture. 
+
+### 360智脑
+- https://github.com/Qihoo360/360zhinao
+- https://ai.360.com/
+
+We released 360Zhinao-7B v1.0, including the base model and three chat models with context lengths 4K, 32K and 360K.
+
+### Steel-LLM
+- https://github.com/zhanshijinwat/Steel-LLM/tree/main
+
+Steel-LLM是一个从零开始预训练中文大模型的项目。我们的目标是使用1T+的数据预训练一个1B左右参数量的中文LLM，对标TinyLlama。项目持续更新，维持3个月+。我们会分享数据收集、数据处理、预训练框架选择、模型设计等全过程，并开源全部代码。让每个人在有8~几十张卡的情况下都能复现我们的工作。
+
+### XVERSE-MoE-A4.2B
+- https://hf.co/xverse/XVERSE-MoE-A4.2B
+- https://modelscope.cn/models/xverse/XVERSE-MoE-A4.2B
+- https://github.com/xverse-ai/XVERSE-MoE-A4.2B
+
+XVERSE-MoE-A4.2B 是由深圳元象科技自主研发的支持多语言的大语言模型（Large Language Model），使用混合专家模型（MoE，Mixture-of-experts）架构，模型的总参数规模为 258 亿，实际激活的参数量为 42 亿，本次开源的模型为底座模型 XVERSE-MoE-A4.2B
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -2163,6 +2230,42 @@ We present a novel application of evolutionary algorithms to automate the creati
 - https://github.com/karpathy/llm.c
 
 LLM training in simple, pure C/CUDA. There is no need for 245MB of PyTorch or 107MB of cPython. For example, training GPT-2 (CPU, fp32) is ~1,000 lines of clean code in a single file. It compiles and runs instantly, and exactly matches the PyTorch reference implementation. I chose GPT-2 as the first working example because it is the grand-daddy of LLMs, the first time the modern stack was put together.
+
+### Mergoo
+- https://github.com/Leeroo-AI/mergoo
+
+mergoo is a library for easily merging multiple LLM experts, and efficiently train the merged LLM. With mergoo, you can efficiently integrate the knowledge of different generic or domain-based LLM experts.
+
+### qwen-vllm
+- https://github.com/owenliang/qwen-vllm
+
+本项目旨在探索生产环境下的高并发推理服务端搭建方法，核心工作非常清晰，边角细节没有投入太多精力，希望对大家有帮助.
+
+### SiLLM
+- https://github.com/armbues/SiLLM
+
+SiLLM simplifies the process of training and running Large Language Models (LLMs) on Apple Silicon by leveraging the MLX framework. Building upon the foundation provided by MLX Examples, this project introduces additional features specifically designed to enhance LLM operations with MLX in a streamlined package.
+
+### How to Train Data-Efficient LLMs
+- https://arxiv.org/abs/2402.09668
+
+The training of large language models (LLMs) is expensive. In this paper, we study data-efficient approaches for pre-training LLMs, i.e., techniques that aim to optimize the Pareto frontier of model quality and training resource/data consumption. We seek to understand the tradeoffs associated with data selection routines based on (i) expensive-to-compute data-quality estimates, and (ii) maximization of coverage and diversity-based measures in the feature space. Our first technique, Ask-LLM, leverages the zero-shot reasoning capabilities of instruction-tuned LLMs to directly assess the quality of a training example. To target coverage, we propose Density sampling, which models the data distribution to select a diverse sample. In our comparison of 19 samplers, involving hundreds of evaluation tasks and pre-training runs, we find that Ask-LLM and Density are the best methods in their respective categories. Coverage sampling can recover the performance of the full data, while models trained on Ask-LLM data consistently outperform full-data training -- even when we reject 90% of the original dataset, while converging up to 70% faster.
+
+### sDPO
+- https://arxiv.org/abs/2403.19270
+
+As development of large language models (LLM) progresses, aligning them with human preferences has become increasingly important. We propose stepwise DPO (sDPO), an extension of the recently popularized direct preference optimization (DPO) for alignment tuning. This approach involves dividing the available preference datasets and utilizing them in a stepwise manner, rather than employing it all at once. We demonstrate that this method facilitates the use of more precisely aligned reference models within the DPO training framework. Furthermore, sDPO trains the final model to be more performant, even outperforming other popular LLMs with more parameters.
+
+### PiSSA
+- https://github.com/GraphPKU/PiSSA
+- https://arxiv.org/abs/2404.02948
+
+As the parameters of LLMs expand, the computational cost of fine-tuning the entire model becomes prohibitive. To address this challenge, we introduce a PEFT method, Principal Singular values and Singular vectors Adaptation (PiSSA), which optimizes a significantly reduced parameter space while achieving or surpassing the performance of full-parameter fine-tuning. PiSSA is inspired by Intrinsic SAID, which suggests that pre-trained, over-parametrized models inhabit a space of low intrinsic dimension. Consequently, PiSSA represents a matrix W within the model by the product of two trainable matrices A and B, plus a residual matrix Wres for error correction. SVD is employed to factorize W, and the principal singular values and vectors of W are utilized to initialize A and B. The residual singular values and vectors initialize the residual matrix Wres, which keeps frozen during fine-tuning. Notably, PiSSA shares the same architecture with LoRA. However, LoRA approximates Delta W through the product of two matrices, A, initialized with Gaussian noise, and B, initialized with zeros, while PiSSA initializes A and B with principal singular values and vectors of the original matrix W. PiSSA can better approximate the outcomes of full-parameter fine-tuning at the beginning by changing the essential parts while freezing the "noisy" parts. In comparison, LoRA freezes the original matrix and updates the "noise". This distinction enables PiSSA to convergence much faster than LoRA and also achieve better performance in the end. Due to the same architecture, PiSSA inherits many of LoRA's advantages, such as parameter efficiency and compatibility with quantization. Leveraging a fast SVD method, the initialization of PiSSA takes only a few seconds, inducing negligible cost of switching LoRA to PiSSA.
+
+### LongRoPE
+- https://arxiv.org/abs/2402.13753
+
+Large context window is a desirable feature in large language models (LLMs). However, due to high fine-tuning costs, scarcity of long texts, and catastrophic values introduced by new token positions, current extended context windows are limited to around 128k tokens. This paper introduces LongRoPE that, for the first time, extends the context window of pre-trained LLMs to an impressive 2048k tokens, with up to only 1k fine-tuning steps at within 256k training lengths, while maintaining performance at the original short context window. This is achieved by three key innovations: (i) we identify and exploit two forms of non-uniformities in positional interpolation through an efficient search, providing a better initialization for fine-tuning and enabling an 8x extension in non-fine-tuning scenarios; (ii) we introduce a progressive extension strategy that first fine-tunes a 256k length LLM and then conducts a second positional interpolation on the fine-tuned extended LLM to achieve a 2048k context window; (iii) we readjust LongRoPE on 8k length to recover the short context window performance. Extensive experiments on LLaMA2 and Mistral across various tasks demonstrate the effectiveness of our method. Models extended via LongRoPE retain the original architecture with minor modifications to the positional embedding, and can reuse most pre-existing optimizations.
 
 ### Large Language Model Unlearning
 - https://arxiv.org/abs/2310.10683
@@ -3223,6 +3326,11 @@ This is Dot, a standalone open source app meant for easy use of local LLMs and R
 
 Ollama supports embedding models, making it possible to build retrieval augmented generation (RAG) applications that combine text prompts with existing documents or other data.
 
+### LLM2Vec
+- https://arxiv.org/abs/2404.05961
+
+Large decoder-only language models (LLMs) are the state-of-the-art models on most of today's NLP tasks and benchmarks. Yet, the community is only slowly adopting these models for text embedding tasks, which require rich contextualized representations. In this work, we introduce LLM2Vec, a simple unsupervised approach that can transform any decoder-only LLM into a strong text encoder. LLM2Vec consists of three simple steps: 1) enabling bidirectional attention, 2) masked next token prediction, and 3) unsupervised contrastive learning. We demonstrate the effectiveness of LLM2Vec by applying it to 3 popular LLMs ranging from 1.3B to 7B parameters and evaluate the transformed models on English word- and sequence-level tasks. We outperform encoder-only models by a large margin on word-level tasks and reach a new unsupervised state-of-the-art performance on the Massive Text Embeddings Benchmark (MTEB). Moreover, when combining LLM2Vec with supervised contrastive learning, we achieve state-of-the-art performance on MTEB among models that train only on publicly available data. Our strong empirical results and extensive analysis demonstrate that LLMs can be effectively transformed into universal text encoders in a parameter-efficient manner without the need for expensive adaptation or synthetic GPT-4 generated data.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -3499,6 +3607,17 @@ Inspired by how humans interactively read long documents, we implement ReadAgent
 
 In addition, we adapt ReadAgent to web navigation, which is a fundamentally very-long context agent setting. We find that ReadAgent is simple to adapt to this setting and shows promising performance.
 
+### STORM
+- https://github.com/stanford-oval/storm
+- https://arxiv.org/abs/2402.14207
+
+STORM is a LLM system that writes Wikipedia-like articles from scratch based on Internet search.
+While the system cannot produce publication-ready articles that often require a significant number of edits, experienced Wikipedia editors have found it helpful in their pre-writing stage.
+
+### APAM
+- https://arxiv.org/abs/2404.04204
+
+People rely on social skills like conflict resolution to communicate effectively and to thrive in both work and personal life. However, practice environments for social skills are typically out of reach for most people. How can we make social skill training more available, accessible, and inviting? Drawing upon interdisciplinary research from communication and psychology, this perspective paper identifies social skill barriers to enter specialized fields. Then we present a solution that leverages large language models for social skill training via a generic framework. Our AI Partner, AI Mentor framework merges experiential learning with realistic practice and tailored feedback. This work ultimately calls for cross-disciplinary innovation to address the broader implications for workforce development and social equality.
 
 ### Mistral-Interact
 - https://github.com/HBX-hbx/Mistral-Interact
@@ -3639,6 +3758,12 @@ Developing Large Language Models (LLMs) with robust long-context capabilities ha
 - https://github.com/nick7nlp/Counting-Stars
 
 While recent research endeavors have concentrated on developing Large Language Models (LLMs) with robust long-context capabilities, due to the lack of appropriate evaluation strategies, relatively little is known about how well the long-context capability and performance of leading LLMs (e.g., GPT-4 Turbo and Kimi Chat). To address this gap, we propose a simple, efficient, and reasonable strategy for evaluating long-context LLMs as a new benchmark, named Counting-Stars. The Counting-Stars is designed to require LLMs to fully understand and capture long dependencies in long contexts, further being able to collect inter-dependency across multiple pieces of evidence spanning the entire context to finish the task. Based on the Counting-Stars, we conduct experiments to evaluate the two leading long-context LLMs, i.e., GPT-4 Turbo and Kimi Chat. The experimental results indicate that GPT-4 Turbo and Kimi Chat achieve significant performance in the long context from 4K to 128K. We further present several intriguing analyses regarding the behavior of LLMs processing long context.
+
+### InfiCoder-Eval
+- https://arxiv.org/abs/2404.07940
+- https://infi-coder.github.io/inficoder-eval/
+
+Large Language Models for understanding and generating code (code LLMs) have witnessed tremendous progress in recent years. With the rapid development of code LLMs, many popular evaluation benchmarks, such as HumanEval, DS-1000, and MBPP, have emerged to measure the performance of code LLMs with a particular focus on code generation tasks. However, they are insufficient to cover the full range of expected capabilities of code LLMs, which span beyond code generation to answering diverse coding-related questions. To fill this gap, we propose InfiCoder-Eval, a large-scale freeform question-answering (QA) benchmark for code, comprising 234 carefully selected high-quality Stack Overflow questions that span across 15 programming languages. To evaluate the response correctness, InfiCoder-Eval supports four types of model-free metrics and domain experts carefully choose and concretize the criterion for each question. We conduct a systematic evaluation for more than 80 code LLMs on InfiCoder-Eval, leading to a series of insightful findings. Furthermore, our detailed analyses showcase possible directions for further improvement of code LLMs.
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
@@ -3785,5 +3910,45 @@ It is supported by Cloud TPUs from Google's TPU Research Cloud (TRC).
 - https://huggingface.co/google/gemma-1.1-7b-it
 
 This is Gemma 1.1 7B (IT), an update over the original instruction-tuned Gemma release.
+
+### h2o-danube2-1.8b-chat
+- https://huggingface.co/h2oai/h2o-danube2-1.8b-chat
+
+h2o-danube2-1.8b-chat is a chat fine-tuned model by H2O.ai with 1.8 billion parameters. 
+
+### WizardLM-2
+- https://huggingface.co/posts/WizardLM/329547800484476
+- https://wizardlm.github.io/WizardLM2
+- https://huggingface.co/collections/microsoft/wizardlm-661d403f71e6c8257dbd598a
+
+We introduce and opensource WizardLM-2, our next generation state-of-the-art large language models, which have improved performance on complex chat, multilingual, reasoning and agent. New family includes three cutting-edge models: WizardLM-2 8x22B, WizardLM-2 70B, and WizardLM-2 7B.
+
+### RecurrentGemma
+- https://developers.googleblog.com/2024/04/gemma-family-expands.html
+- https://arxiv.org/abs/2402.19427
+- https://github.com/google-deepmind/recurrentgemma/blob/main/colabs/fine_tuning_tutorial_jax.ipynb
+
+RecurrentGemma is a technically distinct model that leverages recurrent neural networks and local attention to improve memory efficiency. 
+
+### CodecLM
+- https://arxiv.org/abs/2404.05875
+
+Instruction tuning has emerged as the key in aligning large language models (LLMs) with specific task instructions, thereby mitigating the discrepancy between the next-token prediction objective and users' actual goals. To reduce the labor and time cost to collect or annotate data by humans, researchers start to explore the use of LLMs to generate instruction-aligned synthetic data. Recent works focus on generating diverse instructions and applying LLM to increase instruction complexity, often neglecting downstream use cases. It remains unclear how to tailor high-quality data to elicit better instruction-following abilities in different target instruction distributions and LLMs. To this end, we introduce CodecLM, a general framework for adaptively generating high-quality synthetic data for LLM alignment with different downstream instruction distributions and LLMs. Drawing on the Encode-Decode principles, we use LLMs as codecs to guide the data generation process. We first encode seed instructions into metadata, which are concise keywords generated on-the-fly to capture the target instruction distribution, and then decode metadata to create tailored instructions. We also introduce Self-Rubrics and Contrastive Filtering during decoding to tailor data-efficient samples. Extensive experiments on four open-domain instruction following benchmarks validate the effectiveness of CodecLM over the current state-of-the-arts.
+
+### MEGALODON
+- https://arxiv.org/pdf/2404.08801.pdf
+- https://github.com/XuezheMax/megalodon
+
+The quadratic complexity and weak length extrapolation of Transformers limits their ability to scale to long sequences, and while sub-quadratic solutions like linear attention and state space models exist, they empirically underperform Transformers in pretraining efficiency and downstream task accuracy. We introduce Megalodon, a neural architecture for efficient sequence modeling with unlimited context length. Megalodon inherits the architecture of Mega (exponential moving average with gated attention), and further introduces multiple technical components to improve its capability and stability, including complex exponential moving average (CEMA), timestep normalization layer, normalized attention mechanism and pre-norm with two-hop residual configuration. In a controlled head-to-head comparison with Llama2, Megalodon achieves better efficiency than Transformer in the scale of 7 billion parameters and 2 trillion training tokens. Megalodon reaches a training loss of 1.70, landing mid-way between Llama2-7B (1.75) and 13B (1.67).
+
+### Stable LM 2 12B
+- https://huggingface.co/stabilityai/stablelm-2-12b
+
+Stable LM 2 12B is a 12.1 billion parameter decoder-only language model pre-trained on 2 trillion tokens of diverse multilingual and code datasets for two epochs.
+
+### Mixtral 8x22B
+- https://twitter.com/mistralai/status/1777869263778291896
+
+New MoE model by MistralAI
 
 > 持续更新中 (Continuously Updated)... 
