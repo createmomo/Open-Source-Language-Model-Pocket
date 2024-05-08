@@ -37,7 +37,7 @@ Open-Source Language Model Pocket
 |build_MiniLLM_from_scratch|RWKV-6 World|Mengzi3|
 |Eurus|Chinese Tiny LLM|HammerLLM|
 |360智脑|Steel-LLM|XVERSE-MoE-A4.2B|
-|*【llama3-Chinese-chat】|*【Llama3-Chinese-Chat（ORPO）】||
+|*【llama3-Chinese-chat】|*【Llama3-Chinese-Chat（ORPO）】|*【DeepSeek-V2】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -91,6 +91,7 @@ Open-Source Language Model Pocket
 |Haruhi-Zero|
 |Translational-Style-ChatLLM西式翻译腔|
 |StyleLLM|
+|*【Tianji来事儿AI】|
 
 |古汉语|
 |---|
@@ -107,7 +108,8 @@ Open-Source Language Model Pocket
 |MobileLLM|Stable Code Instruct 3B|
 |ReALM|aiXcoder|
 |CodeQwen1.5|AutoCodeRover|
-|CodeGemma||
+|CodeGemma|*【Snowflake Arctic】|
+|*【dolphin-2.9-llama3-70b】||
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -116,13 +118,15 @@ Open-Source Language Model Pocket
 |K2&GeoGalactica|
 |SciGLM|
 
-*Recommendation*
+*Recommendation/IR*
 |||
 |---|---|
 |LLM for Recommendation Systems|Transformer Index for GEnerative Recommenders (TIGER)|
 |EasyRL4Rec|RLMRec|
 |RecAI|Actions Speak Louder than Words|
 |PPM|*【LLaRA】|
+|*【Awesome Information Retrieval in the Age of Large Language Model】|*【LLMs heart MIR】|
+|*【When to Retrieve】||
 
 *文本向量/RAG*
 |  |  |
@@ -134,7 +138,7 @@ Open-Source Language Model Pocket
 |Chat with MLX|LLocalSearch|
 |RAGFlow|Dot|
 |Ollama Embedding Models|LLM2Vec|
-|*【gecko】||
+|*【gecko】|*【Cognita】|
 
 *Agent*
 |  |  |
@@ -205,7 +209,7 @@ Open-Source Language Model Pocket
 |CodecLM|MEGALODON|
 |Stable LM 2 12B|Mixtral 8x22B|
 |*【Phi-3】|*【Llama 3】|
-|*【OpenELM】||
+|*【OpenELM】|*【base-7b-v0.2】|
 
 *训练/推理*
 |  |  |
@@ -264,7 +268,8 @@ Open-Source Language Model Pocket
 |SiLLM|How to Train Data-Efficient LLMs|
 |sDPO|PiSSA|
 |LongRoPE|*【ORPO】|
-|*【How to Train Data-Efficient LLMs】||
+|*【How to Train Data-Efficient LLMs】|*【Better & Faster Large Language Models via Multi-token Prediction】|
+|*【Llama-3 70B Gradient Adapter】||
 
 *评价*
 |  ||
@@ -313,7 +318,8 @@ Open-Source Language Model Pocket
 |Large Language Models in Finance|WanJuan-CC|
 |Larimar|Financial Datasets|
 |LLM-UM-Reading|*【so-large-lm】|
-|*【Fine-tune Llama 3 with ORPO】||
+|*【Fine-tune Llama 3 with ORPO】|*【COIG-CQIA】|
+|*【tiny-universe】|*【llmc】|
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -323,7 +329,7 @@ Open-Source Language Model Pocket
 - 千“垂”百炼：垂直领域与语言模型
   - [导语](https://mp.weixin.qq.com/s/G24skuUbyrSatxWczVxEAg)
   - 获得可用的垂直领域数据
-    - 【不限领域】利用未标注文本改进遵循指令的语言模型（[1](https://mp.weixin.qq.com/s/50wtP--W_cy-682g8cOYww) [2](https://mp.weixin.qq.com/s/q7nKnwtEKPahABiLFLWuSw) [3](https://mp.weixin.qq.com/s/CE8YNx19dc0EyNfTK_HYHQ) [4](https://mp.weixin.qq.com/s/yj4gnoymNLFuLE1v94VJ9A)）
+    - 【不限领域】利用未标注文本改进遵循指令的语言模型（[1](https://mp.weixin.qq.com/s/50wtP--W_cy-682g8cOYww) [2](https://mp.weixin.qq.com/s/q7nKnwtEKPahABiLFLWuSw) [3](https://mp.weixin.qq.com/s/CE8YNx19dc0EyNfTK_HYHQ) [4](https://mp.weixin.qq.com/s/yj4gnoymNLFuLE1v94VJ9A) [5](https://mp.weixin.qq.com/s/N4mUe7hrvXGFArl20kKRCA)）
     - 【医疗/健康】ChatDoctor （解读 [上](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg) [中](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw) [下](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg) / PDF版PPT [上](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf) [中](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%AD%EF%BC%89.pdf) [下](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8B%EF%BC%89.pdf)）
     - 【医疗/健康】MedicalGPT-zh ([解读](https://mp.weixin.qq.com/s/QJKZYKh16fqLTC367WhzdA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MedicalGPT-zh.pdf))
     - 【医疗/健康】明医(MING) ([解读](https://mp.weixin.qq.com/s/uM4FZeDhAc6JuMlW7NCvUA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MING.pdf))
@@ -1010,6 +1016,11 @@ stylellm 是一个基于大语言模型（llm）的文本风格迁移（text sty
 
 利用stylellm模型可将学习到的风格移植至其他通用文本上，即：输入一段原始文本，模型可对其改写，输出带有该风格特色的文本，达到文字修饰、润色或风格模仿的效果。
 
+### Tianji来事儿AI
+- https://github.com/SocialAI-tianji/Tianji
+
+天机是 SocialAI（来事儿AI）制作的一款免费使用、非商业用途的人工智能系统。您可以利用它进行涉及传统人情世故的任务，如如何敬酒、如何说好话、如何会来事儿等，以提升您的情商和核心竞争能力。我们坚信，只有人情世故才是未来AI的核心技术，只有会来事儿的AI才有机会走向AGI，让我们携手见证通用人工智能的来临。 —— "天机不可泄漏。"
+
 ### MeChat (Mental Health Support Chatbot)
 - https://github.com/qiuhuachuan/smile
 - https://huggingface.co/qiuhuachuan/MeChat
@@ -1544,6 +1555,14 @@ CodeGemma: Code completion, generation, and chat for developers and businesses
 
 Harnessing the foundation of our Gemma models, CodeGemma brings powerful yet lightweight coding capabilities to the community. CodeGemma models are available as a 7B pretrained variant that specializes in code completion and code generation tasks, a 7B instruction-tuned variant for code chat and instruction-following, and a 2B pretrained variant for fast code completion that fits on your local computer.
 
+### Snowflake Arctic
+- https://github.com/Snowflake-Labs/snowflake-arctic
+
+At Snowflake, we see a consistent pattern in AI needs and use cases from our enterprise customers. Enterprises want to use LLMs to build conversational SQL data copilots, code copilots and RAG chat bots. From a metrics perspective, this translates to LLMs that excel at SQL, code, complex instruction following and the ability to produce grounded answers. We capture these abilities into a single metric we call enterprise intelligence by taking an average of Coding (HumanEval+ and MBPP+), SQL Generation (Spider), and Instruction following (IFEval).
+
+### dolphin-2.9-llama3-70b
+- https://huggingface.co/cognitivecomputations/dolphin-2.9-llama3-70b
+
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
 
@@ -1869,6 +1888,11 @@ first version of llama3 in Chinese (首个llama3 中文版)
 - https://github.com/Shenzhi-Wang/Llama3-Chinese-Chat
 
 We introduce the first Chinese chat model specifically fine-tuned for Chinese through ORPO based on the Meta-Llama-3-8B-Instruct model.
+
+### DeepSeek-V2
+- https://github.com/deepseek-ai/DeepSeek-V2/tree/main
+
+we’re introducing DeepSeek-V2, a strong Mixture-of-Experts (MoE) language model characterized by economical training and efficient inference. It comprises 236B total parameters, of which 21B are activated for each token. Compared with DeepSeek 67B, DeepSeek-V2 achieves stronger performance, and meanwhile saves 42.5% of training costs, reduces the KV cache by 93.3%, and boosts the maximum generation throughput to 5.76 times.
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -2273,6 +2297,15 @@ SiLLM simplifies the process of training and running Large Language Models (LLMs
 - https://arxiv.org/abs/2402.09668
 
 The training of large language models (LLMs) is expensive. In this paper, we study data-efficient approaches for pre-training LLMs, i.e., techniques that aim to optimize the Pareto frontier of model quality and training resource/data consumption. We seek to understand the tradeoffs associated with data selection routines based on (i) expensive-to-compute data-quality estimates, and (ii) maximization of coverage and diversity-based measures in the feature space. Our first technique, Ask-LLM, leverages the zero-shot reasoning capabilities of instruction-tuned LLMs to directly assess the quality of a training example. To target coverage, we propose Density sampling, which models the data distribution to select a diverse sample. In our comparison of 19 samplers, involving hundreds of evaluation tasks and pre-training runs, we find that Ask-LLM and Density are the best methods in their respective categories. Coverage sampling can recover the performance of the full data, while models trained on Ask-LLM data consistently outperform full-data training -- even when we reject 90% of the original dataset, while converging up to 70% faster.
+
+### Better & Faster Large Language Models via Multi-token Prediction
+- https://arxiv.org/abs/2404.19737
+
+Large language models such as GPT and Llama are trained with a next-token prediction loss. In this work, we suggest that training language models to predict multiple future tokens at once results in higher sample efficiency. More specifically, at each position in the training corpus, we ask the model to predict the following n tokens using n independent output heads, operating on top of a shared model trunk. Considering multi-token prediction as an auxiliary training task, we measure improved downstream capabilities with no overhead in training time for both code and natural language models. The method is increasingly useful for larger model sizes, and keeps its appeal when training for multiple epochs. Gains are especially pronounced on generative benchmarks like coding, where our models consistently outperform strong baselines by several percentage points. Our 13B parameter models solves 12 % more problems on HumanEval and 17 % more on MBPP than comparable next-token models. Experiments on small algorithmic tasks demonstrate that multi-token prediction is favorable for the development of induction heads and algorithmic reasoning capabilities. As an additional benefit, models trained with 4-token prediction are up to 3 times faster at inference, even with large batch sizes.
+
+### Llama-3 70B Gradient Adapter
+- https://huggingface.co/cognitivecomputations/Llama-3-70B-Gradient-524k-adapter
+- https://huggingface.co/cognitivecomputations/Llama-3-70B-Gradient-1048k-adapter
 
 ### sDPO
 - https://arxiv.org/abs/2403.19270
@@ -3370,6 +3403,11 @@ Large decoder-only language models (LLMs) are the state-of-the-art models on mos
 
 We present Gecko, a compact and versatile text embedding model. Gecko achieves strong retrieval performance by leveraging a key idea: distilling knowledge from large language models (LLMs) into a retriever. Our two-step distillation process begins with generating diverse, synthetic paired data using an LLM. Next, we further refine the data quality by retrieving a set of candidate passages for each query, and relabeling the positive and hard negative passages using the same LLM. The effectiveness of our approach is demonstrated by the compactness of the Gecko. On the Massive Text Embedding Benchmark (MTEB), Gecko with 256 embedding dimensions outperforms all existing entries with 768 embedding size. Gecko with 768 embedding dimensions achieves an average score of 66.31, competing with 7x larger models and 5x higher dimensional embeddings.
 
+### Cognita 
+- https://github.com/truefoundry/cognita
+
+Langchain/LlamaIndex provide easy to use abstractions that can be used for quick experimentation and prototyping on jupyter notebooks. But, when things move to production, there are constraints like the components should be modular, easily scalable and extendable. This is where Cognita comes in action. Cognita uses Langchain/Llamaindex under the hood and provides an organisation to your codebase, where each of the RAG component is modular, API driven and easily extendible. Cognita can be used easily in a local setup, at the same time, offers you a production ready environment along with no-code UI support. Cognita also supports incremental indexing by default.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -3966,6 +4004,24 @@ ORPO is a new exciting fine-tuning technique that combines the traditional super
 
 In this article, we will fine-tune the new Llama 3 8B model using ORPO with the TRL library. The code is available on Google Colab and in the LLM Course on GitHub.
 
+### COIG-CQIA
+- https://arxiv.org/pdf/2403.18058
+- https://huggingface.co/datasets/m-a-p/COIG-CQIA
+
+COIG-CQIA全称为Chinese Open Instruction Generalist - Quality is All You Need， 是一个开源的高质量指令微调数据集，旨在为中文NLP社区提供高质量且符合人类交互行为的指令微调数据。COIG-CQIA以中文互联网获取到的问答及文章作为原始数据，经过深度清洗、重构及人工审核构建而成。本项目受LIMA: Less Is More for Alignment等研究启发，使用少量高质量的数据即可让大语言模型学习到人类交互行为，因此在数据构建中我们十分注重数据的来源、质量与多样性，数据集详情请见数据介绍以及我们接下来的论文。
+
+### tiny-universe
+- https://github.com/datawhalechina/tiny-universe
+
+本项目是一个从原理出发、以“白盒”为导向、围绕大模型全链路的“手搓”大模型指南，旨在帮助有传统深度学习基础的读者从底层原理出发，“纯手搓”搭建一个清晰、可用的大模型系统，包括大模型本身、RAG 框架、Agent 系统及大模型评估体系。本项目将从基础原理出发，深入剖析每一个技术点并附以完整的代码实现，以细致讲解和代码注释帮助读者独立复现大模型核心部分，并在复现中实现对大模型的深入理解与掌握。
+
+  本项目旨在为广大学习者搭建一个清晰的、可用的、可复现的大模型世界，帮助每一位有兴趣的学习者纯手工独立搭建自己的 Tiny LLM Universe。
+
+### llmc
+- https://github.com/ModelTC/llmc
+
+llmc is an off-the-shell tool designed for compressing LLM, leveraging state-of-the-art compression algorithms to enhance efficiency and reduce model size without compromising performance.
+
 ### Larimar
 - https://arxiv.org/abs/2403.11901
 
@@ -3981,6 +4037,21 @@ Click-through rate (CTR) prediction is a core task in recommender systems. Exist
 - https://github.com/ljy0ustc/LLaRA
 
 Sequential recommendation aims to predict users' next interaction with items based on their past engagement sequence. Recently, the advent of Large Language Models (LLMs) has sparked interest in leveraging them for sequential recommendation, viewing it as language modeling. Previous studies represent items within LLMs' input prompts as either ID indices or textual metadata. However, these approaches often fail to either encapsulate comprehensive world knowledge or exhibit sufficient behavioral understanding. To combine the complementary strengths of conventional recommenders in capturing behavioral patterns of users and LLMs in encoding world knowledge about items, we introduce Large Language-Recommendation Assistant (LLaRA). Specifically, it uses a novel hybrid prompting method that integrates ID-based item embeddings learned by traditional recommendation models with textual item features. Treating the "sequential behaviors of users" as a distinct modality beyond texts, we employ a projector to align the traditional recommender's ID embeddings with the LLM's input space. Moreover, rather than directly exposing the hybrid prompt to LLMs, a curriculum learning strategy is adopted to gradually ramp up training complexity. Initially, we warm up the LLM using text-only prompts, which better suit its inherent language modeling ability. Subsequently, we progressively transition to the hybrid prompts, training the model to seamlessly incorporate the behavioral knowledge from the traditional sequential recommender into the LLM. Empirical results validate the effectiveness of our proposed framework.
+
+### Awesome Information Retrieval in the Age of Large Language Model
+- https://github.com/IR-LLM/Awesome-Information-Retrieval-in-the-Age-of-Large-Language-Model
+
+A curated list of awesome papers about information retrieval (IR) in the age of large language model (LLM). These include retrieval augmented large language model, large language model for information retrieval, and so on. 
+
+### LLMs heart MIR
+- https://github.com/llms-heart-mir/tutorial
+
+A tutorial on Large Language Models for Music Information Retrieval.
+
+### When to Retrieve
+- https://arxiv.org/abs/2404.19705
+
+In this paper, we demonstrate how Large Language Models (LLMs) can effectively learn to use an off-the-shelf information retrieval (IR) system specifically when additional context is required to answer a given question. Given the performance of IR systems, the optimal strategy for question answering does not always entail external information retrieval; rather, it often involves leveraging the parametric memory of the LLM itself. Prior research has identified this phenomenon in the PopQA dataset, wherein the most popular questions are effectively addressed using the LLM's parametric memory, while less popular ones require IR system usage. Following this, we propose a tailored training approach for LLMs, leveraging existing open-domain question answering datasets. Here, LLMs are trained to generate a special token, <RET>, when they do not know the answer to a question. Our evaluation of the Adaptive Retrieval LLM (Adapt-LLM) on the PopQA dataset showcases improvements over the same LLM under three configurations: (i) retrieving information for all the questions, (ii) using always the parametric memory of the LLM, and (iii) using a popularity threshold to decide when to use a retriever. Through our analysis, we demonstrate that Adapt-LLM is able to generate the <RET> token when it determines that it does not know how to answer a question, indicating the need for IR, while it achieves notably high accuracy levels when it chooses to rely only on its parametric memory.
 
 ### Financial Datasets
 - https://github.com/virattt/financial-datasets
@@ -4062,7 +4133,13 @@ Today, we’re excited to share the first two models of the next generation of L
 ### OpenELM
 - https://github.com/apple/corenet
 - https://arxiv.org/pdf/2404.14619.pdf
+- https://huggingface.co/apple
 
 CoreNet is a deep neural network toolkit that allows researchers and engineers to train standard and novel small and large-scale models for variety of tasks, including foundation models (e.g., CLIP and LLM), object classification, object detection, and semantic segmentation.
+
+### base-7b-v0.2
+- https://huggingface.co/internistai/base-7b-v0.2
+
+Internist.ai 7b is a medical domain large language model trained by medical doctors to demonstrate the benefits of a physician-in-the-loop approach. The training data was carefully curated by medical doctors to ensure clinical relevance and required quality for clinical practice.
 
 > 持续更新中 (Continuously Updated)... 
