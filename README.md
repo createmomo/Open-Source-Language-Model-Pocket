@@ -38,6 +38,7 @@ Open-Source Language Model Pocket
 |Eurus|Chinese Tiny LLM|HammerLLM|
 |360智脑|Steel-LLM|XVERSE-MoE-A4.2B|
 |*【llama3-Chinese-chat】|*【Llama3-Chinese-Chat（ORPO）】|*【DeepSeek-V2】|
+|*【PanGu-π】|*【Eurux-8x22B】|*【Chinese-LLaMA-Alpaca-3】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -51,6 +52,7 @@ Open-Source Language Model Pocket
 |MolGen（药物研发）|Taiyi（太一）|MedAgents|
 |Molecule Optimization|MolTC|Mol-Instructions|
 |Multilingual Medicine|Sequel|*【Gene editing】|
+|*【Llama-3-8B-UltraMedical】|||
 
 |经济/金融|||
 |---|---|---|
@@ -75,7 +77,7 @@ Open-Source Language Model Pocket
 |chatglm-maths|Abel|
 |InternLM-Math|DeepSeekMath|
 |LeerooDedicated-Math-7b|SimpleGeometry|
-|Rho-1||
+|Rho-1|*【ChatGLM-Math】|
 
 |表格/数据分析||
 |---|---|
@@ -109,7 +111,7 @@ Open-Source Language Model Pocket
 |ReALM|aiXcoder|
 |CodeQwen1.5|AutoCodeRover|
 |CodeGemma|*【Snowflake Arctic】|
-|*【dolphin-2.9-llama3-70b】||
+|*【dolphin-2.9-llama3-70b】|*【Granite】|
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -126,7 +128,8 @@ Open-Source Language Model Pocket
 |RecAI|Actions Speak Louder than Words|
 |PPM|*【LLaRA】|
 |*【Awesome Information Retrieval in the Age of Large Language Model】|*【LLMs heart MIR】|
-|*【When to Retrieve】||
+|*【When to Retrieve】|*【Lite-LLM4Rec】|
+|*【A Comprehensive Survey on Self-Supervised Learning for Recommendation】||
 
 *文本向量/RAG*
 |  |  |
@@ -159,7 +162,7 @@ Open-Source Language Model Pocket
 |TinyAgent|Octopus v2|
 |ReadAgent|STORM|
 |*【AgentRun】|*【OS-Copilot】|
-|*【AutoWebGLM】||
+|*【AutoWebGLM】|*【Agent Hospital】|
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -210,6 +213,7 @@ Open-Source Language Model Pocket
 |Stable LM 2 12B|Mixtral 8x22B|
 |*【Phi-3】|*【Llama 3】|
 |*【OpenELM】|*【base-7b-v0.2】|
+|*【FILM-7B】||
 
 *训练/推理*
 |  |  |
@@ -269,7 +273,7 @@ Open-Source Language Model Pocket
 |sDPO|PiSSA|
 |LongRoPE|*【ORPO】|
 |*【How to Train Data-Efficient LLMs】|*【Better & Faster Large Language Models via Multi-token Prediction】|
-|*【Llama-3 70B Gradient Adapter】||
+|*【Llama-3 70B Gradient Adapter】|*【Unsloth】|
 
 *评价*
 |  ||
@@ -320,6 +324,7 @@ Open-Source Language Model Pocket
 |LLM-UM-Reading|*【so-large-lm】|
 |*【Fine-tune Llama 3 with ORPO】|*【COIG-CQIA】|
 |*【tiny-universe】|*【llmc】|
+|*【LLMBox】||
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -714,6 +719,12 @@ Proving geometric theorems constitutes a hallmark of visual reasoning combining 
 - https://arxiv.org/abs/2404.07965
 
 Previous language model pre-training methods have uniformly applied a next-token prediction loss to all training tokens. Challenging this norm, we posit that "Not all tokens in a corpus are equally important for language model training". Our initial analysis delves into token-level training dynamics of language model, revealing distinct loss patterns for different tokens. Leveraging these insights, we introduce a new language model called Rho-1. Unlike traditional LMs that learn to predict every next token in a corpus, Rho-1 employs Selective Language Modeling (SLM), which selectively trains on useful tokens that aligned with the desired distribution. This approach involves scoring pretraining tokens using a reference model, and then training the language model with a focused loss on tokens with higher excess loss. When continual pretraining on 15B OpenWebMath corpus, Rho-1 yields an absolute improvement in few-shot accuracy of up to 30% in 9 math tasks. After fine-tuning, Rho-1-1B and 7B achieved state-of-the-art results of 40.6% and 51.8% on MATH dataset, respectively - matching DeepSeekMath with only 3% of the pretraining tokens. Furthermore, when pretraining on 80B general tokens, Rho-1 achieves 6.8% average enhancement across 15 diverse tasks, increasing both efficiency and performance of the language model pre-training.
+
+### ChatGLM-Math
+- https://github.com/THUDM/ChatGLM-Math
+- https://arxiv.org/pdf/2404.02893.pdf
+
+Large language models (LLMs) have shown excellent mastering of human language, but still struggle in real-world applications that require mathematical problem-solving. While many strategies and datasets to enhance LLMs' mathematics are developed, it remains a challenge to simultaneously maintain and improve both language and mathematical capabilities in deployed LLM systems. In this work, we tailor the Self-Critique pipeline, which addresses the challenge in the feedback learning stage of LLM alignment. We first train a general Math-Critique model from the LLM itself to provide feedback signals. Then, we sequentially employ rejective fine-tuning and direct preference optimization over the LLM's own generations for data collection. Based on ChatGLM3-32B, we conduct a series of experiments on both academic and our newly created challenging dataset, \textsc{MathUserEval}. Results show that our pipeline significantly enhances the LLM's mathematical problem-solving while still improving its language ability, outperforming LLMs that could be two times larger.
 
 ### ChatRWKV
 - https://github.com/BlinkDL/ChatRWKV
@@ -1239,6 +1250,11 @@ Sequel is an open-source software application meticulously designed to be your u
 
 Gene editing has the potential to solve fundamental challenges in agriculture, biotechnology, and human health. CRISPR-based gene editors derived from microbes, while powerful, often show significant functional tradeoffs when ported into non-native environments, such as human cells. Artificial intelligence (AI) enabled design provides a powerful alternative with potential to bypass evolutionary constraints and generate editors with optimal properties. Here, using large language models (LLMs) trained on biological diversity at scale, we demonstrate the first successful precision editing of the human genome with a programmable gene editor designed with AI. To achieve this goal, we curated a dataset of over one million CRISPR operons through systematic mining of 26 terabases of assembled genomes and meta-genomes. We demonstrate the capacity of our models by generating 4.8x the number of protein clusters across CRISPR-Cas families found in nature and tailoring single-guide RNA sequences for Cas9-like effector proteins. Several of the generated gene editors show comparable or improved activity and specificity relative to SpCas9, the prototypical gene editing effector, while being 400 mutations away in sequence. Finally, we demonstrate an AI-generated gene editor, denoted as OpenCRISPR-1, exhibits compatibility with base editing. We release OpenCRISPR-1 publicly to facilitate broad, ethical usage across research and commercial applications.
 
+### Llama-3-8B-UltraMedical
+- https://huggingface.co/TsinghuaC3I/Llama-3-8B-UltraMedical
+
+Llama-3-8B-UltraMedical is an open-access large language model (LLM) specialized in biomedicine. Developed by the Tsinghua C3I Lab, this model aims to enhance medical examination access, literature comprehension, and clinical knowledge.
+
 ### Taiyi（太一）
 - https://github.com/DUTIR-BioNLP/Taiyi-LLM
 - https://arxiv.org/abs/2311.11608
@@ -1562,6 +1578,12 @@ At Snowflake, we see a consistent pattern in AI needs and use cases from our ent
 
 ### dolphin-2.9-llama3-70b
 - https://huggingface.co/cognitivecomputations/dolphin-2.9-llama3-70b
+
+### Granite
+- https://arxiv.org/abs/2405.04324
+- https://github.com/ibm-granite/granite-code-models
+
+Large Language Models (LLMs) trained on code are revolutionizing the software development process. Increasingly, code LLMs are being integrated into software development environments to improve the productivity of human programmers, and LLM-based agents are beginning to show promise for handling complex tasks autonomously. Realizing the full potential of code LLMs requires a wide range of capabilities, including code generation, fixing bugs, explaining and documenting code, maintaining repositories, and more. In this work, we introduce the Granite series of decoder-only code models for code generative tasks, trained with code written in 116 programming languages. The Granite Code models family consists of models ranging in size from 3 to 34 billion parameters, suitable for applications ranging from complex application modernization tasks to on-device memory-constrained use cases. Evaluation on a comprehensive set of tasks demonstrates that Granite Code models consistently reaches state-of-the-art performance among available open-source code LLMs. The Granite Code model family was optimized for enterprise software development workflows and performs well across a range of coding tasks (e.g. code generation, fixing and explanation), making it a versatile all around code model. We release all our Granite Code models under an Apache 2.0 license for both research and commercial use.
 
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
@@ -1893,6 +1915,23 @@ We introduce the first Chinese chat model specifically fine-tuned for Chinese th
 - https://github.com/deepseek-ai/DeepSeek-V2/tree/main
 
 we’re introducing DeepSeek-V2, a strong Mixture-of-Experts (MoE) language model characterized by economical training and efficient inference. It comprises 236B total parameters, of which 21B are activated for each token. Compared with DeepSeek 67B, DeepSeek-V2 achieves stronger performance, and meanwhile saves 42.5% of training costs, reduces the KV cache by 93.3%, and boosts the maximum generation throughput to 5.76 times.
+
+### PanGu-π
+- https://arxiv.org/abs/2402.02791
+- https://github.com/YuchuanTian/RethinkTinyLM
+
+The power of large language models (LLMs) has been demonstrated through numerous data and computing resources. However, the application of language models on mobile devices is facing huge challenge on the computation and memory costs, that is, tiny language models with high performance are urgently required. Limited by the highly complex training process, there are many details for optimizing language models that are seldom studied carefully. In this study, based on a tiny language model with 1B parameters, we carefully design a series of empirical study to analyze the effect of each component. Three perspectives are mainly discussed, \ie, neural architecture, parameter initialization, and optimization strategy. Several design formulas are empirically proved especially effective for tiny language models, including tokenizer compression, architecture tweaking, parameter inheritance and multiple-round training. Then we train PanGu-π-1B Pro and PanGu-π-1.5B Pro on 1.6T multilingual corpora, following the established formulas. Experimental results demonstrate the improved optimization and architecture yield a notable average improvement of 8.87 on benchmark evaluation sets for PanGu-π-1B Pro. Besides, PanGu-π-1.5B Pro surpasses a range of SOTA models with larger model sizes, validating its superior performance. 
+
+### Eurux-8x22B 
+- https://github.com/OpenBMB/Eurus
+- https://huggingface.co/openbmb/Eurux-8x22b-nca
+
+We release a suite of LLMs and a reward model. Eurus-70B beats GPT-3.5 Turbo in reasoning through a comprehensive benchmarking across 12 tests covering five tasks, and achieves a 33.3% pass@1 accuracy on LeetCode and 32.6% on TheoremQA, two challenging benchmarks, substantially outperforming existing open-source models by margins more than 13.3%. Besides, Eurux-8x22B's performance further improves and achieves superb reasoning performance as well as excellent chat & instruction-following capabilities. We also train a reward model that demonstrates especially strong preference modeling performance on reasoning tasks.
+
+### Chinese-LLaMA-Alpaca-3
+- https://github.com/ymcui/Chinese-LLaMA-Alpaca-3
+
+本项目基于Meta最新发布的新一代开源大模型Llama-3开发，是Chinese-LLaMA-Alpaca开源大模型相关系列项目（一期、二期）的第三期。本项目开源了中文Llama-3基座模型和中文Llama-3-Instruct指令精调大模型。这些模型在原版Llama-3的基础上使用了大规模中文数据进行增量预训练，并且使用精选指令数据进行精调，进一步提升了中文基础语义和指令理解能力，相比二代相关模型获得了显著性能提升。
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -2306,6 +2345,11 @@ Large language models such as GPT and Llama are trained with a next-token predic
 ### Llama-3 70B Gradient Adapter
 - https://huggingface.co/cognitivecomputations/Llama-3-70B-Gradient-524k-adapter
 - https://huggingface.co/cognitivecomputations/Llama-3-70B-Gradient-1048k-adapter
+
+### Unsloth
+- https://github.com/unslothai/unsloth
+
+Finetune Llama 3, Mistral & Gemma 2-5x faster with 80% less memory!
 
 ### sDPO
 - https://arxiv.org/abs/2403.19270
@@ -3709,6 +3753,11 @@ Autonomous interaction with the computer has been a longstanding challenge with 
 
 AutoWebGLM is a project aimed at building a more efficient language model-driven automated web navigation agent. This project is built on top of the ChatGLM3-6B model, extending its capabilities to navigate the web more effectively and tackle real-world browsing challenges better.
 
+### Agent Hospital
+- https://arxiv.org/pdf/2405.02957
+
+In this paper, we introduce a simulacrum of hospital called Agent Hospital that simulates the entire process of treating illness. All patients, nurses, and doctors are autonomous agents powered by large language models (LLMs). Our central goal is to enable a doctor agent to learn how to treat illness within the simulacrum. To do so, we propose a method called MedAgent-Zero. As the simulacrum can simulate disease onset and progression based on knowledge bases and LLMs, doctor agents can keep accumulating experience from both successful and unsuccessful cases. Simulation experiments show that the treatment performance of doctor agents consistently improves on various tasks. More interestingly, the knowledge the doctor agents have acquired in Agent Hospital is applicable to real-world medicare benchmarks. After treating around ten thousand patients (real-world doctors may take over two years), the evolved doctor agent achieves a state-of-the-art accuracy of 93.06% on a subset of the MedQA dataset that covers major respiratory diseases. This work paves the way for advancing the applications of LLM-powered agent techniques in medical scenarios.
+
 ### APAM
 - https://arxiv.org/abs/2404.04204
 
@@ -4022,6 +4071,12 @@ COIG-CQIA全称为Chinese Open Instruction Generalist - Quality is All You Need�
 
 llmc is an off-the-shell tool designed for compressing LLM, leveraging state-of-the-art compression algorithms to enhance efficiency and reduce model size without compromising performance.
 
+### LLMBox
+- https://arxiv.org/abs/2303.18223
+- https://llmbook-zh.github.io
+
+LLMBox is a comprehensive library for implementing LLMs, including a unified training pipeline and comprehensive model evaluation. LLMBox is designed to be a one-stop solution for training and utilizing LLMs. Through a pratical library design, we achieve a high-level of flexibility and efficiency in both training and utilization stages.
+
 ### Larimar
 - https://arxiv.org/abs/2403.11901
 
@@ -4052,6 +4107,20 @@ A tutorial on Large Language Models for Music Information Retrieval.
 - https://arxiv.org/abs/2404.19705
 
 In this paper, we demonstrate how Large Language Models (LLMs) can effectively learn to use an off-the-shelf information retrieval (IR) system specifically when additional context is required to answer a given question. Given the performance of IR systems, the optimal strategy for question answering does not always entail external information retrieval; rather, it often involves leveraging the parametric memory of the LLM itself. Prior research has identified this phenomenon in the PopQA dataset, wherein the most popular questions are effectively addressed using the LLM's parametric memory, while less popular ones require IR system usage. Following this, we propose a tailored training approach for LLMs, leveraging existing open-domain question answering datasets. Here, LLMs are trained to generate a special token, <RET>, when they do not know the answer to a question. Our evaluation of the Adaptive Retrieval LLM (Adapt-LLM) on the PopQA dataset showcases improvements over the same LLM under three configurations: (i) retrieving information for all the questions, (ii) using always the parametric memory of the LLM, and (iii) using a popularity threshold to decide when to use a retriever. Through our analysis, we demonstrate that Adapt-LLM is able to generate the <RET> token when it determines that it does not know how to answer a question, indicating the need for IR, while it achieves notably high accuracy levels when it chooses to rely only on its parametric memory.
+
+### Lite-LLM4Rec
+- https://arxiv.org/pdf/2402.09543
+
+Recently, sequential recommendation has been adapted to the LLM paradigm to enjoy the power of LLMs. LLM-based methods usually formulate recommendation information into natural language and the model is trained to predict the next item in an auto-regressive manner. Despite their notable success, the substantial computational overhead of inference poses a significant obstacle to their real-world applicability. In this work, we endeavor to streamline existing LLM-based recommendation models and propose a simple yet highly effective model Lite-LLM4Rec. The primary goal of Lite-LLM4Rec is to achieve efficient inference for the sequential recommendation task. Lite-LLM4Rec circumvents the beam search decoding by using a straight item projection head for ranking scores generation. This design stems from our empirical observation that beam search decoding is ultimately unnecessary for sequential recommendations. Additionally, Lite-LLM4Rec introduces a hierarchical LLM structure tailored to efficiently handle the extensive contextual information associated with items, thereby reducing computational overhead while enjoying the capabilities of LLMs. Experiments on three publicly available datasets corroborate the effectiveness of Lite-LLM4Rec in both performance and inference efficiency (notably 46.8% performance improvement and 97.28% efficiency improvement on ML-1m) over existing LLM-based methods. Our implementations will be open sourced.
+
+### A Comprehensive Survey on Self-Supervised Learning for Recommendation
+- https://arxiv.org/abs/2404.03354
+- https://github.com/HKUDS/Awesome-SSLRec-Papers
+- https://github.com/HKUDS/SSLRec
+
+A collection of papers and resources about self-supervised learning (SSL) for recommendation (Rec).
+
+Recommender systems personalize suggestions to combat information overload. Deep learning methods like RNNs, GNNs, and Transformers have improved these systems by understanding user behavior better. However, supervised learning struggles with data sparsity. Self-supervised learning (SSL) overcomes this by using inherent data structures for supervision, reducing dependence on labeled data. SSL-based recommender systems accurately predict and recommend, even with sparse data, by leveraging unlabeled data for meaningful representations.
 
 ### Financial Datasets
 - https://github.com/virattt/financial-datasets
@@ -4141,5 +4210,11 @@ CoreNet is a deep neural network toolkit that allows researchers and engineers t
 - https://huggingface.co/internistai/base-7b-v0.2
 
 Internist.ai 7b is a medical domain large language model trained by medical doctors to demonstrate the benefits of a physician-in-the-loop approach. The training data was carefully curated by medical doctors to ensure clinical relevance and required quality for clinical practice.
+
+### FILM-7B
+- https://github.com/microsoft/FILM
+- https://arxiv.org/pdf/2404.16811
+
+While many contemporary large language models (LLMs) can process lengthy input, they still struggle to fully utilize information within the long context, known as the lost-in-the-middle challenge. We hypothesize that it stems from insufficient explicit supervision during the long-context training, which fails to emphasize that any position in a long context can hold crucial information. Based on this intuition, our study presents information-intensive (IN2) training, a purely data-driven solution to overcome lost-in-the-middle. Specifically, IN2 training leverages a synthesized long-context question-answer dataset, where the answer requires (1) fine-grained information awareness on a short segment (~128 tokens) within a synthesized long context (4K-32K tokens), and (2) the integration and reasoning of information from two or more short segments. Through applying this information-intensive training on Mistral-7B, we present FILM-7B (FILl-in-the-Middle). To thoroughly assess the ability of FILM-7B for utilizing long contexts, we design three probing tasks that encompass various context styles (document, code, and structured-data context) and information retrieval patterns (forward, backward, and bi-directional retrieval). The probing results demonstrate that FILM-7B can robustly retrieve information from different positions in its 32K context window. Beyond these probing tasks, FILM-7B significantly improves the performance on real-world long-context tasks (e.g., 23.5->26.9 F1 score on NarrativeQA), while maintaining a comparable performance on short-context tasks (e.g., 59.3->59.2 accuracy on MMLU).
 
 > 持续更新中 (Continuously Updated)... 
