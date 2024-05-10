@@ -39,6 +39,7 @@ Open-Source Language Model Pocket
 |360智脑|Steel-LLM|XVERSE-MoE-A4.2B|
 |*【llama3-Chinese-chat】|*【Llama3-Chinese-Chat（ORPO）】|*【DeepSeek-V2】|
 |*【PanGu-π】|*【Eurux-8x22B】|*【Chinese-LLaMA-Alpaca-3】|
+|*【OpenBuddy-Llama3-70B-v21.1-8k】|||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -112,6 +113,7 @@ Open-Source Language Model Pocket
 |CodeQwen1.5|AutoCodeRover|
 |CodeGemma|*【Snowflake Arctic】|
 |*【dolphin-2.9-llama3-70b】|*【Granite】|
+|*【StarCoder2-15B-Instruct-v0.1】||
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -535,6 +537,7 @@ PICA 以清华大学开源的ChatGLM2-6B为基础，采用Prompt tuning技术在
 
 ### 通义千问Qwen
 - https://github.com/QwenLM/Qwen-7B
+- https://qwenlm.github.io/
 
 我们在🤖 ModelScope以及🤗 Hugging Face均开源了Qwen-7B系列模型。请在本文档顶部点击相关链接查看仓库信息。本仓库主要包括Qwen-7B的简介、使用指南、技术备忘等内容。想了解更多关于模型的信息，请点击链接查看我们的技术备忘录。
 
@@ -1585,6 +1588,14 @@ At Snowflake, we see a consistent pattern in AI needs and use cases from our ent
 
 Large Language Models (LLMs) trained on code are revolutionizing the software development process. Increasingly, code LLMs are being integrated into software development environments to improve the productivity of human programmers, and LLM-based agents are beginning to show promise for handling complex tasks autonomously. Realizing the full potential of code LLMs requires a wide range of capabilities, including code generation, fixing bugs, explaining and documenting code, maintaining repositories, and more. In this work, we introduce the Granite series of decoder-only code models for code generative tasks, trained with code written in 116 programming languages. The Granite Code models family consists of models ranging in size from 3 to 34 billion parameters, suitable for applications ranging from complex application modernization tasks to on-device memory-constrained use cases. Evaluation on a comprehensive set of tasks demonstrates that Granite Code models consistently reaches state-of-the-art performance among available open-source code LLMs. The Granite Code model family was optimized for enterprise software development workflows and performs well across a range of coding tasks (e.g. code generation, fixing and explanation), making it a versatile all around code model. We release all our Granite Code models under an Apache 2.0 license for both research and commercial use.
 
+### StarCoder2-15B-Instruct-v0.1
+- https://hf.co/bigcode/starcoder2-15b-instruct-v0.1
+- https://github.com/bigcode-project/starcoder2-self-align
+- https://hf.co/datasets/bigcode/self-oss-instruct-sc2-exec-filter-50k/
+- https://hf.co/blog/sc2-instruct
+
+We introduce StarCoder2-15B-Instruct-v0.1, the very first entirely self-aligned code LLM trained with a fully permissive and transparent pipeline. Our open-source pipeline uses StarCoder2-15B to generate thousands of instruction-response pairs, which are then used to fine-tune StarCoder-15B itself without any human annotations or distilled data from huge and proprietary LLMs.
+
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
 
@@ -1805,6 +1816,7 @@ MiniCPM 是面壁智能与清华大学自然语言处理实验室共同开源的
 ### 通义千问Qwen1.5
 - https://github.com/QwenLM/Qwen1.5
 - https://huggingface.co/spaces/Qwen/Qwen1.5-72B-Chat
+- https://qwenlm.github.io/
 
 With Qwen1.5, we are open-sourcing base and chat models across six sizes: 0.5B, 1.8B, 4B, 7B, 14B, and 72B. In line with tradition, we’re also providing quantized models, including Int4 and Int8 GPTQ models, as well as AWQ and GGUF quantized models. 
 
@@ -1932,6 +1944,11 @@ We release a suite of LLMs and a reward model. Eurus-70B beats GPT-3.5 Turbo in 
 - https://github.com/ymcui/Chinese-LLaMA-Alpaca-3
 
 本项目基于Meta最新发布的新一代开源大模型Llama-3开发，是Chinese-LLaMA-Alpaca开源大模型相关系列项目（一期、二期）的第三期。本项目开源了中文Llama-3基座模型和中文Llama-3-Instruct指令精调大模型。这些模型在原版Llama-3的基础上使用了大规模中文数据进行增量预训练，并且使用精选指令数据进行精调，进一步提升了中文基础语义和指令理解能力，相比二代相关模型获得了显著性能提升。
+
+### OpenBuddy-Llama3-70B-v21.1-8k
+- https://github.com/OpenBuddy/OpenBuddy
+
+OpenBuddy is a powerful open multilingual chatbot model aimed at global users, emphasizing conversational AI and seamless multilingual support for English, Chinese, and other languages.
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
