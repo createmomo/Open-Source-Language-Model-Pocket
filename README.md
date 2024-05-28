@@ -39,7 +39,7 @@ Open-Source Language Model Pocket
 |360智脑|Steel-LLM|XVERSE-MoE-A4.2B|
 |*【llama3-Chinese-chat】|*【Llama3-Chinese-Chat（ORPO）】|*【DeepSeek-V2】|
 |*【PanGu-π】|*【Eurux-8x22B】|*【Chinese-LLaMA-Alpaca-3】|
-|*【OpenBuddy-Llama3-70B-v21.1-8k】|||
+|*【OpenBuddy-Llama3-70B-v21.1-8k】|*【MAP-NEO】|*【llms-from-scratch-cn】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -215,7 +215,8 @@ Open-Source Language Model Pocket
 |Stable LM 2 12B|Mixtral 8x22B|
 |*【Phi-3】|*【Llama 3】|
 |*【OpenELM】|*【base-7b-v0.2】|
-|*【FILM-7B】||
+|*【FILM-7B】|*【llama3 implemented from scratch】|
+|*【2.3MParams-LLM-From-Scratch-Python】|*【KAN-GPT】|
 
 *训练/推理*
 |  |  |
@@ -1949,6 +1950,16 @@ We release a suite of LLMs and a reward model. Eurus-70B beats GPT-3.5 Turbo in 
 - https://github.com/OpenBuddy/OpenBuddy
 
 OpenBuddy is a powerful open multilingual chatbot model aimed at global users, emphasizing conversational AI and seamless multilingual support for English, Chinese, and other languages.
+
+### MAP-NEO
+- https://github.com/multimodal-art-projection/MAP-NEO
+
+MAP-NEO is a fully open-sourced Large Language Model that includes the pretraining data, a data processing pipeline (Matrix), pretraining scripts, and alignment code. It is trained from scratch on 4.5T English and Chinese tokens, exhibiting performance comparable to LLaMA2 7B. The MAP-Neo model delivers proprietary-model-like performance in challenging tasks such as reasoning, mathematics, and coding, outperforming its peers of similar size. For research purposes, we aim to achieve full transparency in the LLM training process. To this end, we have made a comprehensive release of MAP-Neo, including the final and intermediate checkpoints, a self-trained tokenizer, the pre-training corpus, and an efficient, stable optimized pre-training codebase.
+
+### llms-from-scratch-cn
+- https://github.com/datawhalechina/llms-from-scratch-cn
+
+提供了一个如何从头开始实现类似ChatGPT的大语言模型（LLM）的详细教程。
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -4233,5 +4244,21 @@ Internist.ai 7b is a medical domain large language model trained by medical doct
 - https://arxiv.org/pdf/2404.16811
 
 While many contemporary large language models (LLMs) can process lengthy input, they still struggle to fully utilize information within the long context, known as the lost-in-the-middle challenge. We hypothesize that it stems from insufficient explicit supervision during the long-context training, which fails to emphasize that any position in a long context can hold crucial information. Based on this intuition, our study presents information-intensive (IN2) training, a purely data-driven solution to overcome lost-in-the-middle. Specifically, IN2 training leverages a synthesized long-context question-answer dataset, where the answer requires (1) fine-grained information awareness on a short segment (~128 tokens) within a synthesized long context (4K-32K tokens), and (2) the integration and reasoning of information from two or more short segments. Through applying this information-intensive training on Mistral-7B, we present FILM-7B (FILl-in-the-Middle). To thoroughly assess the ability of FILM-7B for utilizing long contexts, we design three probing tasks that encompass various context styles (document, code, and structured-data context) and information retrieval patterns (forward, backward, and bi-directional retrieval). The probing results demonstrate that FILM-7B can robustly retrieve information from different positions in its 32K context window. Beyond these probing tasks, FILM-7B significantly improves the performance on real-world long-context tasks (e.g., 23.5->26.9 F1 score on NarrativeQA), while maintaining a comparable performance on short-context tasks (e.g., 59.3->59.2 accuracy on MMLU).
+
+### llama3 implemented from scratch
+- https://github.com/naklecha/llama3-from-scratch
+
+in this file, i implemented llama3 from scratch, one tensor and matrix multiplication at a time.
+also, im going to load tensors directly from the model file that meta provided for llama3, you need to download the weights before running this file.
+
+### 2.3MParams-LLM-From-Scratch-Python
+- https://github.com/FareedKhan-dev/create-million-parameter-llm-from-scratch
+
+Making your own Large Language Model (LLM) is a cool thing that many big companies like Google, Twitter, and Facebook are doing. They release different versions of these models, like 7 billion, 13 billion, or 70 billion. Even smaller communities are doing it too. You might have read blogs or watched videos on creating your own LLM, but they usually talk a lot about theory and not so much about the actual steps and code.
+
+### KAN-GPT
+- https://github.com/AdityaNG/kan-gpt
+
+The PyTorch implementation of Generative Pre-trained Transformers (GPTs) using Kolmogorov-Arnold Networks (KANs) for language modeling
 
 > 持续更新中 (Continuously Updated)... 
