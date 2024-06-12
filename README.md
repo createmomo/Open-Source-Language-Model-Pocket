@@ -40,6 +40,7 @@ Open-Source Language Model Pocket
 |*【llama3-Chinese-chat】|*【Llama3-Chinese-Chat（ORPO）】|*【DeepSeek-V2】|
 |*【PanGu-π】|*【Eurux-8x22B】|*【Chinese-LLaMA-Alpaca-3】|
 |*【OpenBuddy-Llama3-70B-v21.1-8k】|*【MAP-NEO】|*【llms-from-scratch-cn】|
+|*【Yi-1.5】|*【Yuan2.0-M32】|*【Skywork-MoE】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -79,6 +80,7 @@ Open-Source Language Model Pocket
 |InternLM-Math|DeepSeekMath|
 |LeerooDedicated-Math-7b|SimpleGeometry|
 |Rho-1|*【ChatGLM-Math】|
+|*【JiuZhang3.0】||
 
 |表格/数据分析||
 |---|---|
@@ -87,7 +89,7 @@ Open-Source Language Model Pocket
 |Data Interpreter|TableLLM|
 |Lag-Llama||
 
-|自媒体&角色扮演&风格|
+|自媒体/角色扮演/风格/故事|
 |---|
 |MediaGPT|
 |CharacterGLM-6B|
@@ -95,6 +97,8 @@ Open-Source Language Model Pocket
 |Translational-Style-ChatLLM西式翻译腔|
 |StyleLLM|
 |*【Tianji来事儿AI】|
+|*【TinyStories】|
+|*【Higgs-Llama-3-70B】|
 
 |古汉语|
 |---|
@@ -113,7 +117,7 @@ Open-Source Language Model Pocket
 |CodeQwen1.5|AutoCodeRover|
 |CodeGemma|*【Snowflake Arctic】|
 |*【dolphin-2.9-llama3-70b】|*【Granite】|
-|*【StarCoder2-15B-Instruct-v0.1】||
+|*【StarCoder2-15B-Instruct-v0.1】|*【AutoCoder】|
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -144,6 +148,7 @@ Open-Source Language Model Pocket
 |RAGFlow|Dot|
 |Ollama Embedding Models|LLM2Vec|
 |*【gecko】|*【Cognita】|
+|*【Piccolo2】|*【NV-Embed】|
 
 *Agent*
 |  |  |
@@ -217,6 +222,8 @@ Open-Source Language Model Pocket
 |*【OpenELM】|*【base-7b-v0.2】|
 |*【FILM-7B】|*【llama3 implemented from scratch】|
 |*【2.3MParams-LLM-From-Scratch-Python】|*【KAN-GPT】|
+|*【Aya-23】|*【Mamba-2】|
+|*【Recurrentgemma】||
 
 *训练/推理*
 |  |  |
@@ -277,6 +284,9 @@ Open-Source Language Model Pocket
 |LongRoPE|*【ORPO】|
 |*【How to Train Data-Efficient LLMs】|*【Better & Faster Large Language Models via Multi-token Prediction】|
 |*【Llama-3 70B Gradient Adapter】|*【Unsloth】|
+|*【RLHF Workflow】|*【SimPO】|
+|*【ODPO】|*【ΨPO】|
+|*【MoRA】|*【LOFIT】|
 
 *评价*
 |  ||
@@ -342,7 +352,7 @@ Open-Source Language Model Pocket
     - 【医疗/健康】MedicalGPT-zh ([解读](https://mp.weixin.qq.com/s/QJKZYKh16fqLTC367WhzdA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MedicalGPT-zh.pdf))
     - 【医疗/健康】明医(MING) ([解读](https://mp.weixin.qq.com/s/uM4FZeDhAc6JuMlW7NCvUA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MING.pdf))
     - 【医疗/健康】灵心(SoulChat) ([解读](https://mp.weixin.qq.com/s/0HOYSr-zQsGLFL_H9UZ2HA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20SoulChat.pdf))
-    - 【手机交互】ReALM ([1](https://mp.weixin.qq.com/s/gOmUi4_MGvU1Nx3KxXdxVQ))
+    - 【手机交互】ReALM ([1](https://mp.weixin.qq.com/s/gOmUi4_MGvU1Nx3KxXdxVQ) [2](https://mp.weixin.qq.com/s/wTPMwtRVWIrioile-rFzQA) [3](https://mp.weixin.qq.com/s/NgyZG0439UGFoVE7InrX9g))
   - 自动评估模型
     - 【不限领域】[用语言模型评估语言模型（1）导语](https://mp.weixin.qq.com/s/SUN_ywkI8ld1edXY7uq_1Q)
     - 【不限领域】[用语言模型评估语言模型（2）PandaLM](https://mp.weixin.qq.com/s/NTFu53MdVD9NusFJaORHcw)
@@ -730,6 +740,14 @@ Previous language model pre-training methods have uniformly applied a next-token
 
 Large language models (LLMs) have shown excellent mastering of human language, but still struggle in real-world applications that require mathematical problem-solving. While many strategies and datasets to enhance LLMs' mathematics are developed, it remains a challenge to simultaneously maintain and improve both language and mathematical capabilities in deployed LLM systems. In this work, we tailor the Self-Critique pipeline, which addresses the challenge in the feedback learning stage of LLM alignment. We first train a general Math-Critique model from the LLM itself to provide feedback signals. Then, we sequentially employ rejective fine-tuning and direct preference optimization over the LLM's own generations for data collection. Based on ChatGLM3-32B, we conduct a series of experiments on both academic and our newly created challenging dataset, \textsc{MathUserEval}. Results show that our pipeline significantly enhances the LLM's mathematical problem-solving while still improving its language ability, outperforming LLMs that could be two times larger.
 
+### JiuZhang3.0
+- https://arxiv.org/abs/2405.14365
+- https://github.com/RUCAIBox/JiuZhang3.0
+- https://huggingface.co/ToheartZhang/JiuZhang3.0-8B
+- https://huggingface.co/datasets/ToheartZhang/JiuZhang3.0-Corpus-PT-CoT
+
+JiuZhang3.0 is a series of fine-tuned models for math reasoning continually pre-trained on corpus synthesized by our carefully trained small LLM.
+
 ### ChatRWKV
 - https://github.com/BlinkDL/ChatRWKV
 
@@ -1035,6 +1053,19 @@ stylellm 是一个基于大语言模型（llm）的文本风格迁移（text sty
 - https://github.com/SocialAI-tianji/Tianji
 
 天机是 SocialAI（来事儿AI）制作的一款免费使用、非商业用途的人工智能系统。您可以利用它进行涉及传统人情世故的任务，如如何敬酒、如何说好话、如何会来事儿等，以提升您的情商和核心竞争能力。我们坚信，只有人情世故才是未来AI的核心技术，只有会来事儿的AI才有机会走向AGI，让我们携手见证通用人工智能的来临。 —— "天机不可泄漏。"
+
+### TinyStories
+- https://github.com/Mxoder/TinyStories
+
+这次打算用 Hugging Face 的 API 来写一份预训练大（小）模型的代码，也就是用 Trainer 来做预训练。由于只是想练习一下，因此打算选一个极小模型 + 小数据集。为了贴近主流，于是打算预训练一个 LLaMA 3——不过是超迷你版本，大小仅不到 20M。
+
+想起来曾经看到过的微软的工作 TinyStories，探索的是语言模型在多小的情况下还能流利地讲故事，工作非常直白、有趣，刚好也契合我的练习想法，于是这次来复现一下。
+
+### Higgs-Llama-3-70B
+- https://huggingface.co/bosonai/Higgs-Llama-3-70B
+- https://boson.ai/higgs-opensource/
+
+We perform supervised fine-tuning with our in-house instruction-following and chat datasets. Afterwards, we construct preference pairs with a semi-automated pipeline that relies on both human-labelers and our private LLMs. We conduct iterative preference optimization to align the model. During alignment, we adopted a special strategy to align the model’s behavior with the system message. Compared with other instruct models, Higgs models follow their roles more closely.
 
 ### MeChat (Mental Health Support Chatbot)
 - https://github.com/qiuhuachuan/smile
@@ -1597,6 +1628,14 @@ Large Language Models (LLMs) trained on code are revolutionizing the software de
 
 We introduce StarCoder2-15B-Instruct-v0.1, the very first entirely self-aligned code LLM trained with a fully permissive and transparent pipeline. Our open-source pipeline uses StarCoder2-15B to generate thousands of instruction-response pairs, which are then used to fine-tune StarCoder-15B itself without any human annotations or distilled data from huge and proprietary LLMs.
 
+### AutoCoder
+- https://arxiv.org/pdf/2405.14906
+- https://github.com/bin123apple/AutoCoder
+
+We introduced a new model designed for the Code generation task. Its test accuracy on the HumanEval base dataset surpasses that of GPT-4 Turbo (April 2024). (90.9% vs 90.2%).
+
+Additionally, compared to previous open-source models, AutoCoder offers a new feature: it can automatically install the required packages and attempt to run the code until it deems there are no issues, whenever the user wishes to execute the code.
+
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
 
@@ -1960,6 +1999,27 @@ MAP-NEO is a fully open-sourced Large Language Model that includes the pretraini
 - https://github.com/datawhalechina/llms-from-scratch-cn
 
 提供了一个如何从头开始实现类似ChatGPT的大语言模型（LLM）的详细教程。
+
+### Yi-1.5
+- https://github.com/01-ai/Yi-1.5
+
+Yi-1.5 is an upgraded version of Yi. It is continuously pre-trained on Yi with a high-quality corpus of 500B tokens and fine-tuned on 3M diverse fine-tuning samples.
+
+Compared with Yi, Yi-1.5 delivers stronger performance in coding, math, reasoning, and instruction-following capability, while still maintaining excellent capabilities in language understanding, commonsense reasoning, and reading comprehension.
+
+Yi-1.5 comes in 3 model sizes: 34B, 9B, and 6B.
+
+### Yuan2.0-M32
+- https://github.com/IEIT-Yuan/Yuan2.0-M32
+
+Yuan2.0-M32 is a Mixture-of-Experts (MoE) language model with 32 experts, of which 2 are active. A new router network, Attention Router, is proposed and has been adopted for more efficient expert selection, boosting accuracy by 3.8% over models using a classical router network. Yuan 2.0-M32 is trained from scratch with 2000B tokens, and its training computation is only 9.25% of that required by a dense model of the same parameter scale. Demonstrating competitive capabilities in coding, math, and various specialized fields, Yuan2.0-M32 operates with only 3.7B active parameters out of a total 40B, and a forward computation of 7.4 GFLOPS per token, which is just 1/19th of Llama3-70B's requirement. Yuan 2.0-M32 has surpassed Llama3-70B on the MATH and ARC-Challenge benchmarks, achieving accuracies of 55.9% and 95.8%, respectively. 
+
+### Skywork-MoE
+- https://huggingface.co/Skywork/Skywork-MoE-base
+- https://huggingface.co/Skywork/Skywork-MoE-Base-FP8
+- https://github.com/SkyworkAI/Skywork-MoE
+
+Skywork-MoE is a high-performance mixture-of-experts (MoE) model with 146 billion parameters, 16 experts, and 22 billion activated parameters. This model is initialized from the pre-existing dense checkpoints of our Skywork-13B model.
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -2378,6 +2438,43 @@ Large language models such as GPT and Llama are trained with a next-token predic
 - https://github.com/unslothai/unsloth
 
 Finetune Llama 3, Mistral & Gemma 2-5x faster with 80% less memory!
+
+### RLHF Workflow
+- https://arxiv.org/pdf/2405.07863
+- https://github.com/RLHFlow/RLHF-Reward-Modeling
+- https://github.com/RLHFlow/Online-RLHF
+- https://huggingface.co/RLHFlow
+
+We present the workflow of Online Iterative Reinforcement Learning from Human Feedback (RLHF) in this technical report, which is widely reported to outperform its offline counterpart by a large margin in the recent large language model (LLM) literature. However, existing open-source RLHF projects are still largely confined to the offline learning setting. In this technical report, we aim to fill in this gap and provide a detailed recipe that is easy to reproduce for online iterative RLHF. In particular, since online human feedback is usually infeasible for open-source communities with limited resources, we start by constructing preference models using a diverse set of open-source datasets and use the constructed proxy preference model to approximate human feedback. Then, we discuss the theoretical insights and algorithmic principles behind online iterative RLHF, followed by a detailed practical implementation. Our trained LLM, SFR-Iterative-DPO-LLaMA-3-8B-R, achieves impressive performance on LLM chatbot benchmarks, including AlpacaEval-2, Arena-Hard, and MT-Bench, as well as other academic benchmarks such as HumanEval and TruthfulQA. We have shown that supervised fine-tuning (SFT) and iterative RLHF can obtain state-of-the-art performance with fully open-source datasets. Further, we have made our models, curated datasets, and comprehensive step-by-step code guidebooks publicly available.
+
+### SimPO
+- https://arxiv.org/pdf/2405.14734
+- https://github.com/princeton-nlp/SimPO
+
+Direct Preference Optimization (DPO) is a widely used offline preference optimization algorithm that reparameterizes reward functions in reinforcement learning from human feedback (RLHF) to enhance simplicity and training stability. In this work, we propose SimPO, a simpler yet more effective approach. The effectiveness of SimPO is attributed to a key design: using the average log probability of a sequence as the implicit reward. This reward formulation better aligns with model generation and eliminates the need for a reference model, making it more compute and memory efficient. Additionally, we introduce a target reward margin to the Bradley-Terry objective to encourage a larger margin between the winning and losing responses, further enhancing the algorithm's performance. We compare SimPO to DPO and its latest variants across various state-of-the-art training setups, including both base and instruction-tuned models like Mistral and Llama3. We evaluated on extensive instruction-following benchmarks, including AlpacaEval 2, MT-Bench, and the recent challenging Arena-Hard benchmark. Our results demonstrate that SimPO consistently and significantly outperforms existing approaches without substantially increasing response length. Specifically, SimPO outperforms DPO by up to 6.4 points on AlpacaEval 2 and by up to 7.5 points on Arena-Hard. Our top-performing model, built on Llama3-8B-Instruct, achieves a remarkable 44.7 length-controlled win rate on AlpacaEval 2 -- surpassing Claude 3 Opus on the leaderboard, and a 33.8 win rate on Arena-Hard -- making it the strongest 8B open-source model.
+
+### ODPO
+- https://arxiv.org/abs/2402.10571
+- https://github.com/rycolab/odpo
+
+Direct preference optimization (DPO) is a successful fine-tuning strategy for aligning large language models with human preferences without the need to train a reward model or employ reinforcement learning. DPO, as originally formulated, relies on binary preference data and fine-tunes a language model to increase the likelihood of a preferred response over a dispreferred response. However, not all preference pairs are equal. Sometimes, the preferred response is only slightly better than the dispreferred one. In other cases, the preference is much stronger. For instance, if a response contains harmful or toxic content, the annotator will have a strong preference for that response. In this paper, we propose a generalization of DPO, termed DPO with an offset (ODPO), that does not treat every preference pair equally during fine-tuning. Intuitively, ODPO requires the difference between the likelihood of the preferred and dispreferred response to be greater than an offset value. The offset is determined based on the extent to which one response is preferred over another. Our experiments on various tasks suggest that ODPO significantly outperforms DPO in aligning language models, especially when the number of preference pairs is limited.
+
+### ΨPO
+- https://arxiv.org/abs/2310.12036
+
+The prevalent deployment of learning from human preferences through reinforcement learning (RLHF) relies on two important approximations: the first assumes that pairwise preferences can be substituted with pointwise rewards. The second assumes that a reward model trained on these pointwise rewards can generalize from collected data to out-of-distribution data sampled by the policy. Recently, Direct Preference Optimisation (DPO) has been proposed as an approach that bypasses the second approximation and learn directly a policy from collected data without the reward modelling stage. However, this method still heavily relies on the first approximation.
+In this paper we try to gain a deeper theoretical understanding of these practical algorithms. In particular we derive a new general objective called ΨPO for learning from human preferences that is expressed in terms of pairwise preferences and therefore bypasses both approximations. This new general objective allows us to perform an in-depth analysis of the behavior of RLHF and DPO (as special cases of ΨPO) and to identify their potential pitfalls. We then consider another special case for ΨPO by setting Ψ simply to Identity, for which we can derive an efficient optimisation procedure, prove performance guarantees and demonstrate its empirical superiority to DPO on some illustrative examples.
+
+### MoRA
+- https://arxiv.org/pdf/2405.12130
+
+Low-rank adaptation is a popular parameter-efficient fine-tuning method for large language models. In this paper, we analyze the impact of low-rank updating, as implemented in LoRA. Our findings suggest that the low-rank updating mechanism may limit the ability of LLMs to effectively learn and memorize new knowledge. Inspired by this observation, we propose a new method called MoRA, which employs a square matrix to achieve high-rank updating while maintaining the same number of trainable parameters. To achieve it, we introduce the corresponding non-parameter operators to reduce the input dimension and increase the output dimension for the square matrix. Furthermore, these operators ensure that the weight can be merged back into LLMs, which makes our method can be deployed like LoRA. We perform a comprehensive evaluation of our method across five tasks: instruction tuning, mathematical reasoning, continual pretraining, memory and pretraining. Our method outperforms LoRA on memory-intensive tasks and achieves comparable performance on other tasks.
+
+### LOFIT
+- https://arxiv.org/pdf/2406.01563
+- https://github.com/fc2869/lo-fit
+
+Recent work in interpretability shows that large language models (LLMs) can be adapted for new tasks in a learning-free way: it is possible to intervene on LLM representations to elicit desired behaviors for alignment. For instance, adding certain bias vectors to the outputs of certain attention heads is reported to boost the truthfulness of models. In this work, we show that localized fine-tuning serves as an effective alternative to such representation intervention methods. We introduce a framework called Localized Fine-Tuning on LLM Representations LoFiT, which identifies a subset of attention heads that are most important for learning a specific task, then trains offset vectors to add to the model's hidden representations at those selected heads. LoFiT localizes to a sparse set of heads (3%) and learns the offset vectors from limited training data, comparable to the settings used for representation intervention. For truthfulness and reasoning tasks, we find that LoFiT's intervention vectors are more effective for LLM adaptation than vectors from representation intervention methods such as Inference-time Intervention. We also find that the localization step is important: selecting a task-specific set of attention heads can lead to higher performance than intervening on heads selected for a different task. Finally, for the tasks we study, LoFiT achieves comparable performance to other parameter-efficient fine-tuning methods such as LoRA, despite modifying 20x-200x fewer parameters than these methods.
 
 ### sDPO
 - https://arxiv.org/abs/2403.19270
@@ -3480,6 +3577,20 @@ We present Gecko, a compact and versatile text embedding model. Gecko achieves s
 
 Langchain/LlamaIndex provide easy to use abstractions that can be used for quick experimentation and prototyping on jupyter notebooks. But, when things move to production, there are constraints like the components should be modular, easily scalable and extendable. This is where Cognita comes in action. Cognita uses Langchain/Llamaindex under the hood and provides an organisation to your codebase, where each of the RAG component is modular, API driven and easily extendible. Cognita can be used easily in a local setup, at the same time, offers you a production ready environment along with no-code UI support. Cognita also supports incremental indexing by default.
 
+### Piccolo2
+- https://arxiv.org/abs/2405.06932
+- https://huggingface.co/sensenova/piccolo-large-zh-v2
+
+In this report, we introduce Piccolo2, an embedding model that surpasses other models in the comprehensive evaluation over 6 tasks on CMTEB benchmark, setting a new state-of-the-art. Piccolo2 primarily leverages an efficient multi-task hybrid loss training approach, effectively harnessing textual data and labels from diverse downstream tasks. In addition, Piccolo2 scales up the embedding dimension and uses MRL training to support more flexible vector dimensions.
+
+### NV-Embed
+- https://huggingface.co/nvidia/NV-Embed-v1
+- https://arxiv.org/pdf/2405.17428
+
+We introduce NV-Embed, a generalist embedding model that ranks No. 1 on the Massive Text Embedding Benchmark (MTEB benchmark)(as of May 24, 2024), with 56 tasks, encompassing retrieval, reranking, classification, clustering, and semantic textual similarity tasks. Notably, our model also achieves the highest score of 59.36 on 15 retrieval tasks within this benchmark.
+
+NV-Embed presents several new designs, including having the LLM attend to latent vectors for better pooled embedding output, and demonstrating a two-stage instruction tuning method to enhance the accuracy of both retrieval and non-retrieval tasks.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -4260,5 +4371,25 @@ Making your own Large Language Model (LLM) is a cool thing that many big compani
 - https://github.com/AdityaNG/kan-gpt
 
 The PyTorch implementation of Generative Pre-trained Transformers (GPTs) using Kolmogorov-Arnold Networks (KANs) for language modeling
+
+### Aya-23
+- https://huggingface.co/CohereForAI/aya-23-8B
+- https://huggingface.co/CohereForAI/aya-23-35B
+- https://arxiv.org/abs/2405.15032
+
+This technical report introduces Aya 23, a family of multilingual language models. Aya 23 builds on the recent release of the Aya model (Üstün et al., 2024), focusing on pairing a highly performant pre-trained model with the recently released Aya collection (Singh et al., 2024). The result is a powerful multilingual large language model serving 23 languages, expanding state-of-art language modeling capabilities to approximately half of the world's population. The Aya model covered 101 languages whereas Aya 23 is an experiment in depth vs breadth, exploring the impact of allocating more capacity to fewer languages that are included during pre-training. Aya 23 outperforms both previous massively multilingual models like Aya 101 for the languages it covers, as well as widely used models like Gemma, Mistral and Mixtral on an extensive range of discriminative and generative tasks. We release the open weights for both the 8B and 35B models as part of our continued commitment for expanding access to multilingual progress.
+
+### Mamba-2
+- https://arxiv.org/abs/2405.21060
+
+While Transformers have been the main architecture behind deep learning's success in language modeling, state-space models (SSMs) such as Mamba have recently been shown to match or outperform Transformers at small to medium scale. We show that these families of models are actually quite closely related, and develop a rich framework of theoretical connections between SSMs and variants of attention, connected through various decompositions of a well-studied class of structured semiseparable matrices. Our state space duality (SSD) framework allows us to design a new architecture (Mamba-2) whose core layer is an a refinement of Mamba's selective SSM that is 2-8X faster, while continuing to be competitive with Transformers on language modeling.
+
+### Recurrentgemma
+- https://huggingface.co/google/recurrentgemma-9b
+- https://ai.google.dev/gemma/docs/recurrentgemma/model_card
+
+RecurrentGemma is a family of open language models built on a novel recurrent architecture developed at Google. Both pre-trained and instruction-tuned versions are available in English.
+
+Like Gemma, RecurrentGemma models are well-suited for a variety of text generation tasks, including question answering, summarization, and reasoning. Because of its novel architecture, RecurrentGemma requires less memory than Gemma and achieves faster inference when generating long sequences.
 
 > 持续更新中 (Continuously Updated)... 
