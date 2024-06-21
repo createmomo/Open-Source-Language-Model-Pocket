@@ -41,6 +41,7 @@ Open-Source Language Model Pocket
 |*【PanGu-π】|*【Eurux-8x22B】|*【Chinese-LLaMA-Alpaca-3】|
 |*【OpenBuddy-Llama3-70B-v21.1-8k】|*【MAP-NEO】|*【llms-from-scratch-cn】|
 |*【Yi-1.5】|*【Yuan2.0-M32】|*【Skywork-MoE】|
+|*【Index-1.9B】|||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -80,7 +81,7 @@ Open-Source Language Model Pocket
 |InternLM-Math|DeepSeekMath|
 |LeerooDedicated-Math-7b|SimpleGeometry|
 |Rho-1|*【ChatGLM-Math】|
-|*【JiuZhang3.0】||
+|*【JiuZhang3.0】|*【InternLM2-WQX】|
 
 |表格/数据分析||
 |---|---|
@@ -126,7 +127,7 @@ Open-Source Language Model Pocket
 |K2&GeoGalactica|
 |SciGLM|
 
-*Recommendation/IR*
+*Recommendation/IR/Information Extraction*
 |||
 |---|---|
 |LLM for Recommendation Systems|Transformer Index for GEnerative Recommenders (TIGER)|
@@ -135,7 +136,9 @@ Open-Source Language Model Pocket
 |PPM|*【LLaRA】|
 |*【Awesome Information Retrieval in the Age of Large Language Model】|*【LLMs heart MIR】|
 |*【When to Retrieve】|*【Lite-LLM4Rec】|
-|*【A Comprehensive Survey on Self-Supervised Learning for Recommendation】||
+|*【A Comprehensive Survey on Self-Supervised Learning for Recommendation】|*【NoteLLM】|
+|*【LEARN】|*【YAYI-UIE】|
+|*【XRec】||
 
 *文本向量/RAG*
 |  |  |
@@ -170,6 +173,7 @@ Open-Source Language Model Pocket
 |ReadAgent|STORM|
 |*【AgentRun】|*【OS-Copilot】|
 |*【AutoWebGLM】|*【Agent Hospital】|
+|*【CodeR】||
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -223,7 +227,7 @@ Open-Source Language Model Pocket
 |*【FILM-7B】|*【llama3 implemented from scratch】|
 |*【2.3MParams-LLM-From-Scratch-Python】|*【KAN-GPT】|
 |*【Aya-23】|*【Mamba-2】|
-|*【Recurrentgemma】||
+|*【Recurrentgemma】|*【Nemotron-4 340B】|
 
 *训练/推理*
 |  |  |
@@ -287,6 +291,7 @@ Open-Source Language Model Pocket
 |*【RLHF Workflow】|*【SimPO】|
 |*【ODPO】|*【ΨPO】|
 |*【MoRA】|*【LOFIT】|
+|*【MEFT】||
 
 *评价*
 |  ||
@@ -313,6 +318,8 @@ Open-Source Language Model Pocket
 |ToolEmu|ClongEval|
 |Counting-Stars|InfiCoder-Eval|
 |*【MathVerse】|*【CoderUJB】|
+|*【LooGLE】|*【McEval】|
+|*【CRAG】||
 
 *其它*
 |  |  |
@@ -337,7 +344,7 @@ Open-Source Language Model Pocket
 |LLM-UM-Reading|*【so-large-lm】|
 |*【Fine-tune Llama 3 with ORPO】|*【COIG-CQIA】|
 |*【tiny-universe】|*【llmc】|
-|*【LLMBox】||
+|*【LLMBox】|*【MarkLLM】|
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -346,7 +353,7 @@ Open-Source Language Model Pocket
 - [通俗理解Gradient Checkpoint（附代码）](https://mp.weixin.qq.com/s/IwcfUP_j6JYFXH_xhnWWJQ)
 - 千“垂”百炼：垂直领域与语言模型
   - [导语](https://mp.weixin.qq.com/s/G24skuUbyrSatxWczVxEAg)
-  - 获得可用的垂直领域数据
+  - 垂直领域应用
     - 【不限领域】利用未标注文本改进遵循指令的语言模型（[1](https://mp.weixin.qq.com/s/50wtP--W_cy-682g8cOYww) [2](https://mp.weixin.qq.com/s/q7nKnwtEKPahABiLFLWuSw) [3](https://mp.weixin.qq.com/s/CE8YNx19dc0EyNfTK_HYHQ) [4](https://mp.weixin.qq.com/s/yj4gnoymNLFuLE1v94VJ9A) [5](https://mp.weixin.qq.com/s/N4mUe7hrvXGFArl20kKRCA)）
     - 【医疗/健康】ChatDoctor （解读 [上](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg) [中](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw) [下](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg) / PDF版PPT [上](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf) [中](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%AD%EF%BC%89.pdf) [下](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8B%EF%BC%89.pdf)）
     - 【医疗/健康】MedicalGPT-zh ([解读](https://mp.weixin.qq.com/s/QJKZYKh16fqLTC367WhzdA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MedicalGPT-zh.pdf))
@@ -747,6 +754,13 @@ Large language models (LLMs) have shown excellent mastering of human language, b
 - https://huggingface.co/datasets/ToheartZhang/JiuZhang3.0-Corpus-PT-CoT
 
 JiuZhang3.0 is a series of fine-tuned models for math reasoning continually pre-trained on corpus synthesized by our carefully trained small LLM.
+
+### InternLM2-WQX
+- https://github.com/InternLM/InternLM-WQX
+
+InternLM2-WQX与InternLM2-WQX-VL是InternLM团队于2024年高考前夕最新推出的文曲星系列模型。
+
+高考覆盖各类学科及题型，同时因其开考前的“绝密性”，被视作中国最具权威的考试之一，成为评估考生综合能力的“试金石”。这一面向人类设计的高难度综合性测试，目前普遍被研究者用于考察大模型的智能水平。InternLM2-WQX系列模型在2024年高考评测集GAOKAO-Eval上取得了优异的成绩，综合表现与GPT-4o相当，且超越了国内外一系列开源大模型，体现了InternLM2-WQX系列模型优秀的性能。
 
 ### ChatRWKV
 - https://github.com/BlinkDL/ChatRWKV
@@ -2021,6 +2035,19 @@ Yuan2.0-M32 is a Mixture-of-Experts (MoE) language model with 32 experts, of whi
 
 Skywork-MoE is a high-performance mixture-of-experts (MoE) model with 146 billion parameters, 16 experts, and 22 billion activated parameters. This model is initialized from the pre-existing dense checkpoints of our Skywork-13B model.
 
+### Index-1.9B
+- https://github.com/bilibili/Index-1.9B
+
+Index-1.9B系列是Index系列模型中的轻量版本，包含以下模型：
+
+Index-1.9B base : 基座模型，具有 19亿 非词嵌入参数量，在2.8T 中英文为主的语料上预训练，多个评测基准上与同级别模型比处于领先.
+
+Index-1.9B pure : 基座模型的对照组，与base具有相同的参数和训练策略，不同之处在于我们严格过滤了该版本语料中所有指令相关的数据，以此来验证指令对benchmark的影响
+
+Index-1.9B chat : 基于index-1.9B base通过SFT和DPO对齐后的对话模型，我们发现由于我们预训练中引入了较多互联网社区语料，聊天的趣味性明显更强，并且拥有同级别模型中较强的多语种（尤其是东亚语种）互译能力
+
+Index-1.9B character : 在SFT和DPO的基础上引入了RAG来实现fewshots角色扮演定制
+
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
 - https://github.com/mobiusml/hqq
@@ -2475,6 +2502,12 @@ Low-rank adaptation is a popular parameter-efficient fine-tuning method for larg
 - https://github.com/fc2869/lo-fit
 
 Recent work in interpretability shows that large language models (LLMs) can be adapted for new tasks in a learning-free way: it is possible to intervene on LLM representations to elicit desired behaviors for alignment. For instance, adding certain bias vectors to the outputs of certain attention heads is reported to boost the truthfulness of models. In this work, we show that localized fine-tuning serves as an effective alternative to such representation intervention methods. We introduce a framework called Localized Fine-Tuning on LLM Representations LoFiT, which identifies a subset of attention heads that are most important for learning a specific task, then trains offset vectors to add to the model's hidden representations at those selected heads. LoFiT localizes to a sparse set of heads (3%) and learns the offset vectors from limited training data, comparable to the settings used for representation intervention. For truthfulness and reasoning tasks, we find that LoFiT's intervention vectors are more effective for LLM adaptation than vectors from representation intervention methods such as Inference-time Intervention. We also find that the localization step is important: selecting a task-specific set of attention heads can lead to higher performance than intervening on heads selected for a different task. Finally, for the tasks we study, LoFiT achieves comparable performance to other parameter-efficient fine-tuning methods such as LoRA, despite modifying 20x-200x fewer parameters than these methods.
+
+### MEFT
+- https://arxiv.org/pdf/2406.04984
+- https://github.com/CURRENTF/MEFT
+
+Parameter-Efficient Fine-tuning (PEFT) facilitates the fine-tuning of Large Language Models (LLMs) under limited resources. However, the fine-tuning performance with PEFT on complex, knowledge-intensive tasks is limited due to the constrained model capacity, which originates from the limited number of additional trainable parameters. To overcome this limitation, we introduce a novel mechanism that fine-tunes LLMs with adapters of larger size yet memory-efficient. This is achieved by leveraging the inherent activation sparsity in the Feed-Forward Networks (FFNs) of LLMs and utilizing the larger capacity of Central Processing Unit (CPU) memory compared to Graphics Processing Unit (GPU). We store and update the parameters of larger adapters on the CPU. Moreover, we employ a Mixture of Experts (MoE)-like architecture to mitigate unnecessary CPU computations and reduce the communication volume between the GPU and CPU. This is particularly beneficial over the limited bandwidth of PCI Express (PCIe). Our method can achieve fine-tuning results comparable to those obtained with larger memory capacities, even when operating under more limited resources such as a 24GB memory single GPU setup, with acceptable loss in training efficiency.
 
 ### sDPO
 - https://arxiv.org/abs/2403.19270
@@ -3897,6 +3930,13 @@ AutoWebGLM is a project aimed at building a more efficient language model-driven
 
 In this paper, we introduce a simulacrum of hospital called Agent Hospital that simulates the entire process of treating illness. All patients, nurses, and doctors are autonomous agents powered by large language models (LLMs). Our central goal is to enable a doctor agent to learn how to treat illness within the simulacrum. To do so, we propose a method called MedAgent-Zero. As the simulacrum can simulate disease onset and progression based on knowledge bases and LLMs, doctor agents can keep accumulating experience from both successful and unsuccessful cases. Simulation experiments show that the treatment performance of doctor agents consistently improves on various tasks. More interestingly, the knowledge the doctor agents have acquired in Agent Hospital is applicable to real-world medicare benchmarks. After treating around ten thousand patients (real-world doctors may take over two years), the evolved doctor agent achieves a state-of-the-art accuracy of 93.06% on a subset of the MedQA dataset that covers major respiratory diseases. This work paves the way for advancing the applications of LLM-powered agent techniques in medical scenarios.
 
+### CodeR
+- https://www.swebench.com
+- https://arxiv.org/pdf/2406.01304
+- https://github.com/NL2Code/CodeR
+
+GitHub issue resolving recently has attracted significant attention from academia and industry. SWE-bench is proposed to measure the performance in resolving issues. In this paper, we propose CodeR, which adopts a multi-agent framework and pre-defined task graphs to Repair & Resolve reported bugs and add new features within code Repository. On SWE-bench lite, CodeR is able to solve $28.33$% of issues, in the case of submitting only once for each issue. We examine the performance impact of each design of CodeR and offer insights to advance this research direction.
+
 ### APAM
 - https://arxiv.org/abs/2404.04204
 
@@ -4062,6 +4102,25 @@ We introduce Logo MathVerse, an all-around visual math benchmark designed for an
 
 CoderUJB (Unified Java Benchmark): A new benchmark designed to evaluate LLMs across diverse Java programming tasks that are executable and reflective of actual development scenarios, acknowledging Java’s prevalence in real-world software production.
 
+### LooGLE
+- https://arxiv.org/abs/2311.04939
+- https://huggingface.co/datasets/bigainlco/LooGLE
+- https://github.com/bigai-nlco/LooGLE
+
+LooGLE is a comprehensive evaluation benchmark for LLM long context understanding which contains up-to-date (all after 2022) and extremely long realistic documents (over 24k tokens per document, many of which exceed 100k words) and 6,000 newly generated questions spanning diverse domains and categories. 
+
+### McEval
+- https://github.com/MCEVAL/McEval
+- https://mceval.github.io/leaderboard.html
+- https://arxiv.org/abs/2406.07436 
+
+为了更加全面的探究大语言模型的代码能力，该工作提出了一个涵盖40种编程语言的大规模多语言多任务代码评测基准（McEval），包含了16000个测试样本。评测结果表明开源模型与GPT-4相比，在多语言的编程能力上仍然存在较大差距，绝大多数开源模型甚至无法超越GPT-3.5。此外测试也表明开源模型中如Codestral，DeepSeek-Coder, CodeQwen以及一些衍生模型也展现出优异的多语言能力。该基准的提出对推动多语言代码评测具有重要意义。
+
+### CRAG
+- https://arxiv.org/pdf/2406.04744
+
+Retrieval-Augmented Generation (RAG) has recently emerged as a promising solution to alleviate Large Language Model (LLM)'s deficiency in lack of knowledge. Existing RAG datasets, however, do not adequately represent the diverse and dynamic nature of real-world Question Answering (QA) tasks. To bridge this gap, we introduce the Comprehensive RAG Benchmark (CRAG), a factual question answering benchmark of 4,409 question-answer pairs and mock APIs to simulate web and Knowledge Graph (KG) search. CRAG is designed to encapsulate a diverse array of questions across five domains and eight question categories, reflecting varied entity popularity from popular to long-tail, and temporal dynamisms ranging from years to seconds. Our evaluation on this benchmark highlights the gap to fully trustworthy QA. Whereas most advanced LLMs achieve <=34% accuracy on CRAG, adding RAG in a straightforward manner improves the accuracy only to 44%. State-of-the-art industry RAG solutions only answer 63% questions without any hallucination. CRAG also reveals much lower accuracy in answering questions regarding facts with higher dynamism, lower popularity, or higher complexity, suggesting future research directions. The CRAG benchmark laid the groundwork for a KDD Cup 2024 challenge, attracting thousands of participants and submissions within the first 50 days of the competition. We commit to maintaining CRAG to serve research communities in advancing RAG solutions and general QA solutions.
+
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
 - https://arxiv.org/abs/2401.07851
@@ -4216,6 +4275,12 @@ llmc is an off-the-shell tool designed for compressing LLM, leveraging state-of-
 
 LLMBox is a comprehensive library for implementing LLMs, including a unified training pipeline and comprehensive model evaluation. LLMBox is designed to be a one-stop solution for training and utilizing LLMs. Through a pratical library design, we achieve a high-level of flexibility and efficiency in both training and utilization stages.
 
+### MarkLLM
+- https://arxiv.org/abs/2405.10051
+- https://github.com/THU-BPM/MarkLLM
+
+MarkLLM is an open-source toolkit developed to facilitate the research and application of watermarking technologies within large language models (LLMs). As the use of large language models (LLMs) expands, ensuring the authenticity and origin of machine-generated text becomes critical. MarkLLM simplifies the access, understanding, and assessment of watermarking technologies, making it accessible to both researchers and the broader community.
+
 ### Larimar
 - https://arxiv.org/abs/2403.11901
 
@@ -4261,6 +4326,28 @@ A collection of papers and resources about self-supervised learning (SSL) for re
 
 Recommender systems personalize suggestions to combat information overload. Deep learning methods like RNNs, GNNs, and Transformers have improved these systems by understanding user behavior better. However, supervised learning struggles with data sparsity. Self-supervised learning (SSL) overcomes this by using inherent data structures for supervision, reducing dependence on labeled data. SSL-based recommender systems accurately predict and recommend, even with sparse data, by leveraging unlabeled data for meaningful representations.
 
+### NoteLLM
+- https://arxiv.org/abs/2403.01744v2
+
+People enjoy sharing "notes" including their experiences within online communities. Therefore, recommending notes aligned with user interests has become a crucial task. Existing online methods only input notes into BERT-based models to generate note embeddings for assessing similarity. However, they may underutilize some important cues, e.g., hashtags or categories, which represent the key concepts of notes. Indeed, learning to generate hashtags/categories can potentially enhance note embeddings, both of which compress key note information into limited content. Besides, Large Language Models (LLMs) have significantly outperformed BERT in understanding natural languages. It is promising to introduce LLMs into note recommendation. In this paper, we propose a novel unified framework called NoteLLM, which leverages LLMs to address the item-to-item (I2I) note recommendation. Specifically, we utilize Note Compression Prompt to compress a note into a single special token, and further learn the potentially related notes' embeddings via a contrastive learning approach. Moreover, we use NoteLLM to summarize the note and generate the hashtag/category automatically through instruction tuning. Extensive validations on real scenarios demonstrate the effectiveness of our proposed method compared with the online baseline and show major improvements in the recommendation system of Xiaohongshu.
+
+### LEARN
+- https://arxiv.org/abs/2405.03988
+
+Contemporary recommender systems predominantly rely on collaborative filtering techniques, employing ID-embedding to capture latent associations among users and items. However, this approach overlooks the wealth of semantic information embedded within textual descriptions of items, leading to suboptimal performance in cold-start scenarios and long-tail user recommendations. Leveraging the capabilities of Large Language Models (LLMs) pretrained on massive text corpus presents a promising avenue for enhancing recommender systems by integrating open-world domain knowledge. In this paper, we propose an Llm-driven knowlEdge Adaptive RecommeNdation (LEARN) framework that synergizes open-world knowledge with collaborative knowledge. We address computational complexity concerns by utilizing pretrained LLMs as item encoders and freezing LLM parameters to avoid catastrophic forgetting and preserve open-world knowledge. To bridge the gap between the open-world and collaborative domains, we design a twin-tower structure supervised by the recommendation task and tailored for practical industrial application. Through offline experiments on the large-scale industrial dataset and online experiments on A/B tests, we demonstrate the efficacy of our approach.
+
+### YAYI-UIE
+- https://github.com/wenge-research/YAYI-UIE
+
+雅意信息抽取统一大模型 (YAYI-UIE)在百万级人工构造的高质量信息抽取数据上进行指令微调，统一训练信息抽取任务包括命名实体识别（NER），关系抽取（RE）和事件抽取（EE），实现通用、安全、金融、生物、医疗、商业、个人、车辆、电影、工业、餐厅、科学等场景下结构化抽取。
+
+### XRec
+- https://github.com/HKUDS/XRec
+- https://arxiv.org/pdf/2406.02377
+- https://sites.google.com/view/chaoh
+
+This paper presents a model-agnostic framework, XRec, that integrates the graph-based collaborative filtering framework with Large Language Models (LLMs) to generate comprehensive explanations for recommendations. By leveraging the inherent collaborative user-item relationships and harnessing the powerful textual generation capabilities of LLMs, XRec establishes a strong connection between collaborative signals and language semantics through the utilization of a Mixture of Experts (MoE) adapter.
+
 ### Financial Datasets
 - https://github.com/virattt/financial-datasets
 
@@ -4301,6 +4388,11 @@ We introduce and opensource WizardLM-2, our next generation state-of-the-art lar
 - https://github.com/google-deepmind/recurrentgemma/blob/main/colabs/fine_tuning_tutorial_jax.ipynb
 
 RecurrentGemma is a technically distinct model that leverages recurrent neural networks and local attention to improve memory efficiency. 
+
+### Nemotron-4 340B
+- https://research.nvidia.com/publication/2024-06_nemotron-4-340b
+
+We release the Nemotron-4 340B model family, including Nemotron-4-340B-Base, Nemotron-4-340B-Instruct, and Nemotron-4-340B-Reward. Our models are open access under the NVIDIA Open Model License Agreement, a permissive model license that allows the distribution, modification, and use of the models and their outputs. These models perform competitively to open access models on a wide range of evaluation benchmarks, and were sized to fit on a single DGX H100 with 8 GPUs when deployed in FP8 precision. We believe that the community can benefit from these models in various research studies and commercial applications, especially for generating synthetic data to train smaller language models. Notably, over 98% of data used in our model alignment process is synthetically generated, showcasing the effectiveness of these models in generating synthetic data. To further support open research and facilitate model development, we are also open-sourcing the synthetic data generation pipeline used in our model alignment process.
 
 ### CodecLM
 - https://arxiv.org/abs/2404.05875
