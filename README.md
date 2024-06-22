@@ -55,7 +55,7 @@ Open-Source Language Model Pocket
 |MolGen（药物研发）|Taiyi（太一）|MedAgents|
 |Molecule Optimization|MolTC|Mol-Instructions|
 |Multilingual Medicine|Sequel|*【Gene editing】|
-|*【Llama-3-8B-UltraMedical】|||
+|*【Llama-3-8B-UltraMedical】|*【PH-LLM】||
 
 |经济/金融|||
 |---|---|---|
@@ -173,7 +173,7 @@ Open-Source Language Model Pocket
 |ReadAgent|STORM|
 |*【AgentRun】|*【OS-Copilot】|
 |*【AutoWebGLM】|*【Agent Hospital】|
-|*【CodeR】||
+|*【CodeR】|*【Mobile-Agent-v2】|
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -291,7 +291,8 @@ Open-Source Language Model Pocket
 |*【RLHF Workflow】|*【SimPO】|
 |*【ODPO】|*【ΨPO】|
 |*【MoRA】|*【LOFIT】|
-|*【MEFT】||
+|*【MEFT】|*【PowerInfer-2】|
+|*【Emulated Disalignment】||
 
 *评价*
 |  ||
@@ -319,7 +320,8 @@ Open-Source Language Model Pocket
 |Counting-Stars|InfiCoder-Eval|
 |*【MathVerse】|*【CoderUJB】|
 |*【LooGLE】|*【McEval】|
-|*【CRAG】||
+|*【CRAG】|*【BigCodeBench】|
+|*【Prometheus 2】||
 
 *其它*
 |  |  |
@@ -1303,6 +1305,13 @@ Gene editing has the potential to solve fundamental challenges in agriculture, b
 - https://huggingface.co/TsinghuaC3I/Llama-3-8B-UltraMedical
 
 Llama-3-8B-UltraMedical is an open-access large language model (LLM) specialized in biomedicine. Developed by the Tsinghua C3I Lab, this model aims to enhance medical examination access, literature comprehension, and clinical knowledge.
+
+### PH-LLM
+- https://research.google/blog/advancing-personal-health-and-wellness-insights-with-ai/
+- https://arxiv.org/abs/2406.06474
+- https://arxiv.org/abs/2406.06464
+
+The Personal Health Large Language Model (PH-LLM) is a fine-tuned version of Gemini, designed to generate insights and recommendations to improve personal health behaviors related to sleep and fitness patterns. By using a multimodal encoder, PH-LLM is optimized for both textual understanding and reasoning as well as interpretation of raw time-series sensor data such as heart rate variability and respiratory rate from wearables.
 
 ### Taiyi（太一）
 - https://github.com/DUTIR-BioNLP/Taiyi-LLM
@@ -2508,6 +2517,18 @@ Recent work in interpretability shows that large language models (LLMs) can be a
 - https://github.com/CURRENTF/MEFT
 
 Parameter-Efficient Fine-tuning (PEFT) facilitates the fine-tuning of Large Language Models (LLMs) under limited resources. However, the fine-tuning performance with PEFT on complex, knowledge-intensive tasks is limited due to the constrained model capacity, which originates from the limited number of additional trainable parameters. To overcome this limitation, we introduce a novel mechanism that fine-tunes LLMs with adapters of larger size yet memory-efficient. This is achieved by leveraging the inherent activation sparsity in the Feed-Forward Networks (FFNs) of LLMs and utilizing the larger capacity of Central Processing Unit (CPU) memory compared to Graphics Processing Unit (GPU). We store and update the parameters of larger adapters on the CPU. Moreover, we employ a Mixture of Experts (MoE)-like architecture to mitigate unnecessary CPU computations and reduce the communication volume between the GPU and CPU. This is particularly beneficial over the limited bandwidth of PCI Express (PCIe). Our method can achieve fine-tuning results comparable to those obtained with larger memory capacities, even when operating under more limited resources such as a 24GB memory single GPU setup, with acceptable loss in training efficiency.
+
+### PowerInfer-2
+- https://arxiv.org/abs/2406.06282
+- http://www.powerinfer.ai/v2
+
+This paper introduces PowerInfer-2, a framework designed for high-speed inference of Large Language Models (LLMs) on smartphones, particularly effective for models whose sizes exceed the device's memory capacity. The key insight of PowerInfer-2 is to utilize the heterogeneous computation, memory, and I/O resources in smartphones by decomposing traditional matrix computations into fine-grained neuron cluster computations. Specifically, PowerInfer-2 features a polymorphic neuron engine that adapts computational strategies for various stages of LLM inference. Additionally, it introduces segmented neuron caching and fine-grained neuron-cluster-level pipelining, which effectively minimize and conceal the overhead caused by I/O operations. The implementation and evaluation of PowerInfer-2 demonstrate its capability to support a wide array of LLM models on two smartphones, achieving up to a 29.2x speed increase compared with state-of-the-art frameworks. Notably, PowerInfer-2 is the first system to serve the TurboSparse-Mixtral-47B model with a generation rate of 11.68 tokens per second on a smartphone. For models that fit entirely within the memory, PowerInfer-2 can achieve approximately a 40% reduction in memory usage while maintaining inference speeds comparable to llama.cpp and MLC-LLM.
+
+### Emulated Disalignment
+- https://arxiv.org/abs/2402.12343
+- https://github.com/ZHZisZZ/emulated-disalignment
+
+Large language models (LLMs) undergo safety alignment to ensure safe conversations with humans. However, this paper introduces a training-free attack method capable of reversing safety alignment, converting the outcomes of stronger alignment into greater potential for harm by accessing only LLM output token distributions. Specifically, our method achieves this reversal by contrasting the output token distribution of a safety-aligned language model (e.g., Llama-2-chat) against its pre-trained version (e.g., Llama-2), so that the token predictions are shifted towards the opposite direction of safety alignment. We name this method emulated disalignment (ED) because sampling from this contrastive distribution provably emulates the result of fine-tuning to minimize a safety reward. Our experiments with ED across three evaluation datasets and four model families (Llama-1, Llama-2, Mistral, and Alpaca) show that ED doubles the harmfulness of pre-trained models and outperforms strong baselines, achieving the highest harmful rates in 43 out of 48 evaluation subsets by a large margin. Eventually, given ED's reliance on language model output token distributions, which particularly compromises open-source models, our findings highlight the need to reassess the open accessibility of language models, even if they have been safety-aligned. 
 
 ### sDPO
 - https://arxiv.org/abs/2403.19270
@@ -3937,6 +3958,12 @@ In this paper, we introduce a simulacrum of hospital called Agent Hospital that 
 
 GitHub issue resolving recently has attracted significant attention from academia and industry. SWE-bench is proposed to measure the performance in resolving issues. In this paper, we propose CodeR, which adopts a multi-agent framework and pre-defined task graphs to Repair & Resolve reported bugs and add new features within code Repository. On SWE-bench lite, CodeR is able to solve $28.33$% of issues, in the case of submitting only once for each issue. We examine the performance impact of each design of CodeR and offer insights to advance this research direction.
 
+### Mobile-Agent-v2
+- https://arxiv.org/abs/2406.01014
+- https://github.com/X-PLUG/MobileAgent
+
+Mobile device operation tasks are increasingly becoming a popular multi-modal AI application scenario. Current Multi-modal Large Language Models (MLLMs), constrained by their training data, lack the capability to function effectively as operation assistants. Instead, MLLM-based agents, which enhance capabilities through tool invocation, are gradually being applied to this scenario. However, the two major navigation challenges in mobile device operation tasks, task progress navigation and focus content navigation, are significantly complicated under the single-agent architecture of existing work. This is due to the overly long token sequences and the interleaved text-image data format, which limit performance. To address these navigation challenges effectively, we propose Mobile-Agent-v2, a multi-agent architecture for mobile device operation assistance. The architecture comprises three agents: planning agent, decision agent, and reflection agent. The planning agent generates task progress, making the navigation of history operations more efficient. To retain focus content, we design a memory unit that updates with task progress. Additionally, to correct erroneous operations, the reflection agent observes the outcomes of each operation and handles any mistakes accordingly. Experimental results indicate that Mobile-Agent-v2 achieves over a 30% improvement in task completion compared to the single-agent architecture of Mobile-Agent. 
+
 ### APAM
 - https://arxiv.org/abs/2404.04204
 
@@ -4120,6 +4147,17 @@ LooGLE is a comprehensive evaluation benchmark for LLM long context understandin
 - https://arxiv.org/pdf/2406.04744
 
 Retrieval-Augmented Generation (RAG) has recently emerged as a promising solution to alleviate Large Language Model (LLM)'s deficiency in lack of knowledge. Existing RAG datasets, however, do not adequately represent the diverse and dynamic nature of real-world Question Answering (QA) tasks. To bridge this gap, we introduce the Comprehensive RAG Benchmark (CRAG), a factual question answering benchmark of 4,409 question-answer pairs and mock APIs to simulate web and Knowledge Graph (KG) search. CRAG is designed to encapsulate a diverse array of questions across five domains and eight question categories, reflecting varied entity popularity from popular to long-tail, and temporal dynamisms ranging from years to seconds. Our evaluation on this benchmark highlights the gap to fully trustworthy QA. Whereas most advanced LLMs achieve <=34% accuracy on CRAG, adding RAG in a straightforward manner improves the accuracy only to 44%. State-of-the-art industry RAG solutions only answer 63% questions without any hallucination. CRAG also reveals much lower accuracy in answering questions regarding facts with higher dynamism, lower popularity, or higher complexity, suggesting future research directions. The CRAG benchmark laid the groundwork for a KDD Cup 2024 challenge, attracting thousands of participants and submissions within the first 50 days of the competition. We commit to maintaining CRAG to serve research communities in advancing RAG solutions and general QA solutions.
+
+### BigCodeBench
+- https://github.com/bigcode-project/bigcodebench
+
+BigCodeBench is an easy-to-use benchmark for code generation with practical and challenging programming tasks. It aims to evaluate the true programming capabilities of large language models (LLMs) in a more realistic setting. The benchmark is designed for HumanEval-like function-level code generation tasks, but with much more complex instructions and diverse function calls. To facilitate the evaluation of LLMs on BigCodeBench, we provide this Python package bigcodebench that includes the dataset, generation scripts, and evaluation scripts. The package is built on top of the EvalPlus framework, which is a flexible and extensible evaluation framework for code generation tasks.
+
+### Prometheus 2
+- https://arxiv.org/abs/2405.01535
+- https://github.com/prometheus-eval/prometheus-eval
+
+Proprietary LMs such as GPT-4 are often employed to assess the quality of responses from various LMs. However, concerns including transparency, controllability, and affordability strongly motivate the development of open-source LMs specialized in evaluations. On the other hand, existing open evaluator LMs exhibit critical shortcomings: 1) they issue scores that significantly diverge from those assigned by humans, and 2) they lack the flexibility to perform both direct assessment and pairwise ranking, the two most prevalent forms of assessment. Additionally, they do not possess the ability to evaluate based on custom evaluation criteria, focusing instead on general attributes like helpfulness and harmlessness. To address these issues, we introduce Prometheus 2, a more powerful evaluator LM than its predecessor that closely mirrors human and GPT-4 judgements. Moreover, it is capable of processing both direct assessment and pair-wise ranking formats grouped with a user-defined evaluation criteria. On four direct assessment benchmarks and four pairwise ranking benchmarks, Prometheus 2 scores the highest correlation and agreement with humans and proprietary LM judges among all tested open evaluator LMs.
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
