@@ -55,7 +55,7 @@ Open-Source Language Model Pocket
 |MolGen（药物研发）|Taiyi（太一）|MedAgents|
 |Molecule Optimization|MolTC|Mol-Instructions|
 |Multilingual Medicine|Sequel|*【Gene editing】|
-|*【Llama-3-8B-UltraMedical】|*【PH-LLM】||
+|*【Llama-3-8B-UltraMedical】|*【PH-LLM】|*【ProLLM】|
 
 |经济/金融|||
 |---|---|---|
@@ -88,7 +88,7 @@ Open-Source Language Model Pocket
 |TableGPT|Data-Copilot|
 |Tabular LLM|Chain-of-table|
 |Data Interpreter|TableLLM|
-|Lag-Llama||
+|Lag-Llama|*【TabuLa-8B】|
 
 |自媒体/角色扮演/风格/故事|
 |---|
@@ -174,6 +174,7 @@ Open-Source Language Model Pocket
 |*【AgentRun】|*【OS-Copilot】|
 |*【AutoWebGLM】|*【Agent Hospital】|
 |*【CodeR】|*【Mobile-Agent-v2】|
+|*【Husky】||
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -228,6 +229,7 @@ Open-Source Language Model Pocket
 |*【2.3MParams-LLM-From-Scratch-Python】|*【KAN-GPT】|
 |*【Aya-23】|*【Mamba-2】|
 |*【Recurrentgemma】|*【Nemotron-4 340B】|
+|*【Gemma-2】|*【Gemini Nano】|
 
 *训练/推理*
 |  |  |
@@ -292,7 +294,8 @@ Open-Source Language Model Pocket
 |*【ODPO】|*【ΨPO】|
 |*【MoRA】|*【LOFIT】|
 |*【MEFT】|*【PowerInfer-2】|
-|*【Emulated Disalignment】||
+|*【Emulated Disalignment】|*【Aligning Large Language Models with Representation Editing: A Control Perspective】|
+|*【Q\*】||*【TDPO】
 
 *评价*
 |  ||
@@ -321,7 +324,8 @@ Open-Source Language Model Pocket
 |*【MathVerse】|*【CoderUJB】|
 |*【LooGLE】|*【McEval】|
 |*【CRAG】|*【BigCodeBench】|
-|*【Prometheus 2】||
+|*【Prometheus 2】|*【Open LLM Leaderboard】|
+|*【CriticGPT】||
 
 *其它*
 |  |  |
@@ -361,7 +365,7 @@ Open-Source Language Model Pocket
     - 【医疗/健康】MedicalGPT-zh ([解读](https://mp.weixin.qq.com/s/QJKZYKh16fqLTC367WhzdA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MedicalGPT-zh.pdf))
     - 【医疗/健康】明医(MING) ([解读](https://mp.weixin.qq.com/s/uM4FZeDhAc6JuMlW7NCvUA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MING.pdf))
     - 【医疗/健康】灵心(SoulChat) ([解读](https://mp.weixin.qq.com/s/0HOYSr-zQsGLFL_H9UZ2HA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20SoulChat.pdf))
-    - 【手机交互】ReALM ([1](https://mp.weixin.qq.com/s/gOmUi4_MGvU1Nx3KxXdxVQ) [2](https://mp.weixin.qq.com/s/wTPMwtRVWIrioile-rFzQA) [3](https://mp.weixin.qq.com/s/NgyZG0439UGFoVE7InrX9g))
+    - 【手机交互】ReALM ([1](https://mp.weixin.qq.com/s/gOmUi4_MGvU1Nx3KxXdxVQ) [2](https://mp.weixin.qq.com/s/wTPMwtRVWIrioile-rFzQA) [3](https://mp.weixin.qq.com/s/NgyZG0439UGFoVE7InrX9g) [4](https://mp.weixin.qq.com/s/v1NEovURZr4v8R4_v7TjdA))
   - 自动评估模型
     - 【不限领域】[用语言模型评估语言模型（1）导语](https://mp.weixin.qq.com/s/SUN_ywkI8ld1edXY7uq_1Q)
     - 【不限领域】[用语言模型评估语言模型（2）PandaLM](https://mp.weixin.qq.com/s/NTFu53MdVD9NusFJaORHcw)
@@ -369,8 +373,7 @@ Open-Source Language Model Pocket
     - 【医疗/健康】[使用BERT-Score比较ChatDoctor与ChatGPT3.5](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg)
 
 ## 所有文章 (ALL Articles)
-- 中文：[https://mp.weixin.qq.com/s/ixocTAVrTXhonDBOu-m68w](https://mp.weixin.qq.com/s/ixocTAVrTXhonDBOu-m68w
-)
+- 中文：[https://mp.weixin.qq.com/s/hAqDqqwIHrCVwz4PYSd72A](https://mp.weixin.qq.com/s/hAqDqqwIHrCVwz4PYSd72A)
 - English: [https://createmomo.github.io/](https://createmomo.github.io/)
 
 ---
@@ -880,6 +883,14 @@ We introduce TableLLM, a robust large language model (LLM) with 13 billion param
 
 Lag-Llama is the first open-source foundation model for time series forecasting!
 
+###  TabuLa-8B
+- https://github.com/mlfoundations/rtfm
+- https://arxiv.org/abs/2406.12031
+- https://huggingface.co/mlfoundations/tabula-8b
+
+
+Tabular data -- structured, heterogeneous, spreadsheet-style data with rows and columns -- is widely used in practice across many domains. However, while recent foundation models have reduced the need for developing task-specific datasets and predictors in domains such as language modeling and computer vision, this transfer learning paradigm has not had similar impact in the tabular domain. In this work, we seek to narrow this gap and present TabuLa-8B, a language model for tabular prediction. We define a process for extracting a large, high-quality training dataset from the TabLib corpus, proposing methods for tabular data filtering and quality control. Using the resulting dataset, which comprises over 1.6B rows from 3.1M unique tables, we fine-tune a Llama 3-8B large language model (LLM) for tabular data prediction (classification and binned regression) using a novel packing and attention scheme for tabular prediction. Through evaluation across a test suite of 329 datasets, we find that TabuLa-8B has zero-shot accuracy on unseen tables that is over 15 percentage points (pp) higher than random guessing, a feat that is not possible with existing state-of-the-art tabular prediction models (e.g. XGBoost, TabPFN). In the few-shot setting (1-32 shots), without any fine-tuning on the target datasets, TabuLa-8B is 5-15 pp more accurate than XGBoost and TabPFN models that are explicitly trained on equal, or even up to 16x more data. 
+
 ### DoctorGLM
 - https://github.com/xionghonglin/DoctorGLM
 
@@ -1312,6 +1323,12 @@ Llama-3-8B-UltraMedical is an open-access large language model (LLM) specialized
 - https://arxiv.org/abs/2406.06464
 
 The Personal Health Large Language Model (PH-LLM) is a fine-tuned version of Gemini, designed to generate insights and recommendations to improve personal health behaviors related to sleep and fitness patterns. By using a multimodal encoder, PH-LLM is optimized for both textual understanding and reasoning as well as interpretation of raw time-series sensor data such as heart rate variability and respiratory rate from wearables.
+
+### ProLLM
+- https://github.com/MingyuJ666/ProLLM
+- https://arxiv.org/html/2405.06649v1
+
+The prediction of protein-protein interactions (PPIs) is crucial for understanding biological functions and diseases. Previous machine learning approaches to PPI prediction mainly focus on direct physical interactions, ignoring the broader context of nonphysical connections through intermediate proteins, thus limiting their effectiveness. The emergence of Large Language Models (LLMs) provides a new opportunity for addressing this complex biological challenge. By transforming structured data into natural language prompts, we can map the relationships between proteins into texts. This approach allows LLMs to identify indirect connections between proteins, tracing the path from upstream to downstream. Therefore, we propose a novel framework ProLLM that employs an LLM tailored for PPI for the first time. Specifically, we propose Protein Chain of Thought (ProCoT), which replicates the biological mechanism of signaling pathways as natural language prompts. ProCoT considers a signaling pathway as a protein reasoning process, which starts from upstream proteins and passes through several intermediate proteins to transmit biological signals to downstream proteins. Thus, we can use ProCoT to predict the interaction between upstream proteins and downstream proteins. The training of ProLLM employs the ProCoT format, which enhances the model’s understanding of complex biological problems. In addition to ProCoT, this paper also contributes to the exploration of embedding replacement of protein sites in natural language prompts, and instruction fine-tuning in protein knowledge datasets. We demonstrate the efficacy of ProLLM through rigorous validation against benchmark datasets, showing significant improvement over existing methods in terms of prediction accuracy and generalizability. Our results highlight the potential of LLMs to transform the field of PPI, serving as a robust potential tool for various categories of biological and medical research. 
 
 ### Taiyi（太一）
 - https://github.com/DUTIR-BioNLP/Taiyi-LLM
@@ -2420,6 +2437,18 @@ Large Language Models (LLMs) are composed of neurons that exhibit various behavi
 
 Large language models (LLMs) have recently been used as backbones for recommender systems. However, their performance often lags behind conventional methods in standard tasks like retrieval. We attribute this to a mismatch between LLMs' knowledge and the knowledge crucial for effective recommendations. While LLMs excel at natural language reasoning, they cannot model complex user-item interactions inherent in recommendation tasks. We propose bridging the knowledge gap and equipping LLMs with recommendation-specific knowledge to address this. Operations such as Masked Item Modeling (MIM) and Bayesian Personalized Ranking (BPR) have found success in conventional recommender systems. Inspired by this, we simulate these operations through natural language to generate auxiliary-task data samples that encode item correlations and user preferences. Fine-tuning LLMs on such auxiliary-task data samples and incorporating more informative recommendation-task data samples facilitates the injection of recommendation-specific knowledge into LLMs. Extensive experiments across retrieval, ranking, and rating prediction tasks on LLMs such as FLAN-T5-Base and FLAN-T5-XL show the effectiveness of our technique in domains such as Amazon Toys & Games, Beauty, and Sports & Outdoors. Notably, our method outperforms conventional and LLM-based baselines, including the current SOTA, by significant margins in retrieval, showcasing its potential for enhancing recommendation quality.
 
+### Q\*
+- https://arxiv.org/abs/2406.14283
+
+Large Language Models (LLMs) have demonstrated impressive capability in many natural language tasks. However, the auto-regressive generation process makes LLMs prone to produce errors, hallucinations and inconsistent statements when performing multi-step reasoning. In this paper, by casting multi-step reasoning of LLMs as a heuristic search problem, we aim to alleviate the pathology by introducing Q*, a general, versatile and agile framework for guiding LLMs decoding process with deliberative planning. By learning a plug-and-play Q-value model as heuristic function for estimating expected future rewards, our Q* can effectively guide LLMs to select the most promising next reasoning step without fine-tuning LLMs for the current task, which avoids the significant computational overhead and potential risk of performance degeneration on other tasks. Extensive experiments on GSM8K, MATH and MBPP demonstrate the superiority of our method, contributing to improving the reasoning performance of existing open-source LLMs.
+
+### TDPO
+- https://arxiv.org/abs/2404.11999
+- https://github.com/Vance0124/Token-level-Direct-Preference-Optimization
+
+Fine-tuning pre-trained Large Language Models (LLMs) is essential to align them with human values and intentions. This process often utilizes methods like pairwise comparisons and KL divergence against a reference LLM, focusing on the evaluation of full answers generated by the models. However, the generation of these responses occurs in a token level, following a sequential, auto-regressive fashion. In this paper, we introduce Token-level Direct Preference Optimization (TDPO), a novel approach to align LLMs with human preferences by optimizing policy at the token level. Unlike previous methods, which face challenges in divergence efficiency, TDPO incorporates forward KL divergence constraints for each token, improving alignment and diversity. Utilizing the Bradley-Terry model for a token-based reward system, TDPO enhances the regulation of KL divergence, while preserving simplicity without the need for explicit reward modeling. Experimental results across various text tasks demonstrate TDPO's superior performance in balancing alignment with generation diversity. Notably, fine-tuning with TDPO strikes a better balance than DPO in the controlled sentiment generation and single-turn dialogue datasets, and significantly improves the quality of generated responses compared to both DPO and PPO-based RLHF methods. 
+
+
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
 
@@ -2529,6 +2558,11 @@ This paper introduces PowerInfer-2, a framework designed for high-speed inferenc
 - https://github.com/ZHZisZZ/emulated-disalignment
 
 Large language models (LLMs) undergo safety alignment to ensure safe conversations with humans. However, this paper introduces a training-free attack method capable of reversing safety alignment, converting the outcomes of stronger alignment into greater potential for harm by accessing only LLM output token distributions. Specifically, our method achieves this reversal by contrasting the output token distribution of a safety-aligned language model (e.g., Llama-2-chat) against its pre-trained version (e.g., Llama-2), so that the token predictions are shifted towards the opposite direction of safety alignment. We name this method emulated disalignment (ED) because sampling from this contrastive distribution provably emulates the result of fine-tuning to minimize a safety reward. Our experiments with ED across three evaluation datasets and four model families (Llama-1, Llama-2, Mistral, and Alpaca) show that ED doubles the harmfulness of pre-trained models and outperforms strong baselines, achieving the highest harmful rates in 43 out of 48 evaluation subsets by a large margin. Eventually, given ED's reliance on language model output token distributions, which particularly compromises open-source models, our findings highlight the need to reassess the open accessibility of language models, even if they have been safety-aligned. 
+
+### Aligning Large Language Models with Representation Editing: A Control Perspective
+- https://arxiv.org/abs/2406.05954
+
+Aligning large language models (LLMs) with human objectives is crucial for real-world applications. However, fine-tuning LLMs for alignment often suffers from unstable training and requires substantial computing resources. Test-time alignment techniques, such as prompting and guided decoding, do not modify the underlying model, and their performance remains dependent on the original model's capabilities. To address these challenges, we propose aligning LLMs through representation editing. The core of our method is to view a pre-trained autoregressive LLM as a discrete-time stochastic dynamical system. To achieve alignment for specific objectives, we introduce external control signals into the state space of this language dynamical system. We train a value function directly on the hidden states according to the Bellman equation, enabling gradient-based optimization to obtain the optimal control signals at test time. Our experiments demonstrate that our method outperforms existing test-time alignment techniques while requiring significantly fewer resources compared to fine-tuning methods.
 
 ### sDPO
 - https://arxiv.org/abs/2403.19270
@@ -3964,6 +3998,12 @@ GitHub issue resolving recently has attracted significant attention from academi
 
 Mobile device operation tasks are increasingly becoming a popular multi-modal AI application scenario. Current Multi-modal Large Language Models (MLLMs), constrained by their training data, lack the capability to function effectively as operation assistants. Instead, MLLM-based agents, which enhance capabilities through tool invocation, are gradually being applied to this scenario. However, the two major navigation challenges in mobile device operation tasks, task progress navigation and focus content navigation, are significantly complicated under the single-agent architecture of existing work. This is due to the overly long token sequences and the interleaved text-image data format, which limit performance. To address these navigation challenges effectively, we propose Mobile-Agent-v2, a multi-agent architecture for mobile device operation assistance. The architecture comprises three agents: planning agent, decision agent, and reflection agent. The planning agent generates task progress, making the navigation of history operations more efficient. To retain focus content, we design a memory unit that updates with task progress. Additionally, to correct erroneous operations, the reflection agent observes the outcomes of each operation and handles any mistakes accordingly. Experimental results indicate that Mobile-Agent-v2 achieves over a 30% improvement in task completion compared to the single-agent architecture of Mobile-Agent. 
 
+### Husky
+- https://arxiv.org/html/2406.06469v1
+- https://github.com/agent-husky/Husky-v1
+
+We introduce LogoHusky-v1, a holistic, open-source language agent that learns to reason over a unified action space to address a diverse set of complex tasks involving numerical, tabular, and knowledge-based reasoning. Husky iterates between two stages: 1) generating the next action to take towards solving a given task, and 2) executing the action using expert models and updating the current solution state. Husky-v1 uses a code generator, a query generator and a math reasoner as expert models.
+
 ### APAM
 - https://arxiv.org/abs/2404.04204
 
@@ -4158,6 +4198,17 @@ BigCodeBench is an easy-to-use benchmark for code generation with practical and 
 - https://github.com/prometheus-eval/prometheus-eval
 
 Proprietary LMs such as GPT-4 are often employed to assess the quality of responses from various LMs. However, concerns including transparency, controllability, and affordability strongly motivate the development of open-source LMs specialized in evaluations. On the other hand, existing open evaluator LMs exhibit critical shortcomings: 1) they issue scores that significantly diverge from those assigned by humans, and 2) they lack the flexibility to perform both direct assessment and pairwise ranking, the two most prevalent forms of assessment. Additionally, they do not possess the ability to evaluate based on custom evaluation criteria, focusing instead on general attributes like helpfulness and harmlessness. To address these issues, we introduce Prometheus 2, a more powerful evaluator LM than its predecessor that closely mirrors human and GPT-4 judgements. Moreover, it is capable of processing both direct assessment and pair-wise ranking formats grouped with a user-defined evaluation criteria. On four direct assessment benchmarks and four pairwise ranking benchmarks, Prometheus 2 scores the highest correlation and agreement with humans and proprietary LM judges among all tested open evaluator LMs.
+
+### Open LLM Leaderboard
+- https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard
+
+Evaluating open LLMs
+
+### CriticGPT
+- https://openai.com/index/finding-gpt4s-mistakes-with-gpt-4/
+- https://cdn.openai.com/llm-critics-help-catch-llm-bugs-paper.pdf
+
+CriticGPT, a model based on GPT-4, writes critiques of ChatGPT responses to help human trainers spot mistakes during RLHF
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
@@ -4431,6 +4482,18 @@ RecurrentGemma is a technically distinct model that leverages recurrent neural n
 - https://research.nvidia.com/publication/2024-06_nemotron-4-340b
 
 We release the Nemotron-4 340B model family, including Nemotron-4-340B-Base, Nemotron-4-340B-Instruct, and Nemotron-4-340B-Reward. Our models are open access under the NVIDIA Open Model License Agreement, a permissive model license that allows the distribution, modification, and use of the models and their outputs. These models perform competitively to open access models on a wide range of evaluation benchmarks, and were sized to fit on a single DGX H100 with 8 GPUs when deployed in FP8 precision. We believe that the community can benefit from these models in various research studies and commercial applications, especially for generating synthetic data to train smaller language models. Notably, over 98% of data used in our model alignment process is synthetically generated, showcasing the effectiveness of these models in generating synthetic data. To further support open research and facilitate model development, we are also open-sourcing the synthetic data generation pipeline used in our model alignment process.
+
+### Gemma-2
+- https://www.kaggle.com/models/google/gemma-2
+
+Gemma is a family of lightweight, state-of-the-art open models from Google, built from the same research and technology used to create the Gemini models.
+
+### Gemini Nano
+- https://deepmind.google/technologies/gemini/nano/
+- https://huggingface.co/wave-on-discord/gemini-nano
+- https://huggingface.co/wave-on-discord/gemini-nano-adapter/tree/main
+
+Our most efficient model for on-device tasks
 
 ### CodecLM
 - https://arxiv.org/abs/2404.05875
