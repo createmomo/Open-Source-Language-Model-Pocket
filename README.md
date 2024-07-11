@@ -41,7 +41,8 @@ Open-Source Language Model Pocket
 |*【PanGu-π】|*【Eurux-8x22B】|*【Chinese-LLaMA-Alpaca-3】|
 |*【OpenBuddy-Llama3-70B-v21.1-8k】|*【MAP-NEO】|*【llms-from-scratch-cn】|
 |*【Yi-1.5】|*【Yuan2.0-M32】|*【Skywork-MoE】|
-|*【Index-1.9B】|||
+|*【Index-1.9B】|*【Qwen2】|*【Gemma-2-9B-Chinese-Chat】|
+|*【Gemma-2-27B-Chinese-Chat】|||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -56,6 +57,7 @@ Open-Source Language Model Pocket
 |Molecule Optimization|MolTC|Mol-Instructions|
 |Multilingual Medicine|Sequel|*【Gene editing】|
 |*【Llama-3-8B-UltraMedical】|*【PH-LLM】|*【ProLLM】|
+|*【MolecularGPT】|||
 
 |经济/金融|||
 |---|---|---|
@@ -82,6 +84,7 @@ Open-Source Language Model Pocket
 |LeerooDedicated-Math-7b|SimpleGeometry|
 |Rho-1|*【ChatGLM-Math】|
 |*【JiuZhang3.0】|*【InternLM2-WQX】|
+|*【Math-Minos】||
 
 |表格/数据分析||
 |---|---|
@@ -100,6 +103,7 @@ Open-Source Language Model Pocket
 |*【Tianji来事儿AI】|
 |*【TinyStories】|
 |*【Higgs-Llama-3-70B】|
+|*【persona-hub】|
 
 |古汉语|
 |---|
@@ -119,6 +123,7 @@ Open-Source Language Model Pocket
 |CodeGemma|*【Snowflake Arctic】|
 |*【dolphin-2.9-llama3-70b】|*【Granite】|
 |*【StarCoder2-15B-Instruct-v0.1】|*【AutoCoder】|
+|*【CodeGeeX4】||
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -138,7 +143,7 @@ Open-Source Language Model Pocket
 |*【When to Retrieve】|*【Lite-LLM4Rec】|
 |*【A Comprehensive Survey on Self-Supervised Learning for Recommendation】|*【NoteLLM】|
 |*【LEARN】|*【YAYI-UIE】|
-|*【XRec】||
+|*【XRec】|*【Wukong】|
 
 *文本向量/RAG*
 |  |  |
@@ -152,6 +157,8 @@ Open-Source Language Model Pocket
 |Ollama Embedding Models|LLM2Vec|
 |*【gecko】|*【Cognita】|
 |*【Piccolo2】|*【NV-Embed】|
+|*【RankRAG】|*【LightRAG】|
+|*【GraphRAG】||
 
 *Agent*
 |  |  |
@@ -174,7 +181,8 @@ Open-Source Language Model Pocket
 |*【AgentRun】|*【OS-Copilot】|
 |*【AutoWebGLM】|*【Agent Hospital】|
 |*【CodeR】|*【Mobile-Agent-v2】|
-|*【Husky】||
+|*【Husky】|*【TinyAgent】|
+|*【Tree Search for Language Model Agents】||
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -230,6 +238,7 @@ Open-Source Language Model Pocket
 |*【Aya-23】|*【Mamba-2】|
 |*【Recurrentgemma】|*【Nemotron-4 340B】|
 |*【Gemma-2】|*【Gemini Nano】|
+|*【TTT】|*【Arcee-Spark】|
 
 *训练/推理*
 |  |  |
@@ -295,7 +304,11 @@ Open-Source Language Model Pocket
 |*【MoRA】|*【LOFIT】|
 |*【MEFT】|*【PowerInfer-2】|
 |*【Emulated Disalignment】|*【Aligning Large Language Models with Representation Editing: A Control Perspective】|
-|*【Q\*】||*【TDPO】
+|*【Q\*】|*【TDPO】|
+|*【ExCP】|*【MindStar】|
+|*【LaMDA】|*【MInference】|
+|*【Instruction Pre-Training】|*【PEER】|
+|*【Step-DPO】|*【Data, Data Everywhere】|
 
 *评价*
 |  ||
@@ -325,7 +338,7 @@ Open-Source Language Model Pocket
 |*【LooGLE】|*【McEval】|
 |*【CRAG】|*【BigCodeBench】|
 |*【Prometheus 2】|*【Open LLM Leaderboard】|
-|*【CriticGPT】||
+|*【CriticGPT】|*【Test of Time】|
 
 *其它*
 |  |  |
@@ -351,6 +364,7 @@ Open-Source Language Model Pocket
 |*【Fine-tune Llama 3 with ORPO】|*【COIG-CQIA】|
 |*【tiny-universe】|*【llmc】|
 |*【LLMBox】|*【MarkLLM】|
+|*【MobileCPM】|*【LLM-Select】|
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -767,6 +781,12 @@ InternLM2-WQX与InternLM2-WQX-VL是InternLM团队于2024年高考前夕最新推
 
 高考覆盖各类学科及题型，同时因其开考前的“绝密性”，被视作中国最具权威的考试之一，成为评估考生综合能力的“试金石”。这一面向人类设计的高难度综合性测试，目前普遍被研究者用于考察大模型的智能水平。InternLM2-WQX系列模型在2024年高考评测集GAOKAO-Eval上取得了优异的成绩，综合表现与GPT-4o相当，且超越了国内外一系列开源大模型，体现了InternLM2-WQX系列模型优秀的性能。
 
+### Math-Minos
+- https://arxiv.org/abs/2406.14024
+- https://github.com/KbsdJames/MATH-Minos
+
+Mathematical verfier achieves success in mathematical reasoning tasks by validating the correctness of solutions. However, existing verifiers are trained with binary classification labels, which are not informative enough for the model to accurately assess the solutions. To mitigate the aforementioned insufficiency of binary labels, we introduce step-wise natural language feedbacks as rationale labels (i.e., the correctness of the current step and the explanations). In this paper, we propose \textbf{Math-Minos}, a natural language feedback enhanced verifier by constructing automatically-generated training data and a two-stage training paradigm for effective training and efficient inference. Our experiments reveal that a small set (30k) of natural language feedbacks can significantly boost the performance of the verifier by the accuracy of 1.6\% (86.6\% → 88.2\%) on GSM8K and 0.8\% (37.8\% → 38.6\%) on MATH. 
+
 ### ChatRWKV
 - https://github.com/BlinkDL/ChatRWKV
 
@@ -1094,6 +1114,12 @@ stylellm 是一个基于大语言模型（llm）的文本风格迁移（text sty
 
 We perform supervised fine-tuning with our in-house instruction-following and chat datasets. Afterwards, we construct preference pairs with a semi-automated pipeline that relies on both human-labelers and our private LLMs. We conduct iterative preference optimization to align the model. During alignment, we adopted a special strategy to align the model’s behavior with the system message. Compared with other instruct models, Higgs models follow their roles more closely.
 
+### persona-hub
+- https://github.com/tencent-ailab/persona-hub
+- https://arxiv.org/pdf/2406.20094
+
+We propose a novel persona-driven data synthesis methodology that leverages various perspectives within a large language model (LLM) to create diverse synthetic data. To fully exploit this methodology at scale, we introduce Persona Hub -- a collection of 1 billion diverse personas automatically curated from web data. These 1 billion personas (~13% of the world's total population), acting as distributed carriers of world knowledge, can tap into almost every perspective encapsulated within the LLM, thereby facilitating the creation of diverse synthetic data at scale for various scenarios. By showcasing Persona Hub's use cases in synthesizing high-quality mathematical and logical reasoning problems, instructions (i.e., user prompts), knowledge-rich texts, game NPCs and tools (functions) at scale, we demonstrate persona-driven data synthesis is versatile, scalable, flexible, and easy to use, potentially driving a paradigm shift in synthetic data creation and applications in practice, which may have a profound impact on LLM research and development.
+
 ### MeChat (Mental Health Support Chatbot)
 - https://github.com/qiuhuachuan/smile
 - https://huggingface.co/qiuhuachuan/MeChat
@@ -1329,6 +1355,12 @@ The Personal Health Large Language Model (PH-LLM) is a fine-tuned version of Gem
 - https://arxiv.org/html/2405.06649v1
 
 The prediction of protein-protein interactions (PPIs) is crucial for understanding biological functions and diseases. Previous machine learning approaches to PPI prediction mainly focus on direct physical interactions, ignoring the broader context of nonphysical connections through intermediate proteins, thus limiting their effectiveness. The emergence of Large Language Models (LLMs) provides a new opportunity for addressing this complex biological challenge. By transforming structured data into natural language prompts, we can map the relationships between proteins into texts. This approach allows LLMs to identify indirect connections between proteins, tracing the path from upstream to downstream. Therefore, we propose a novel framework ProLLM that employs an LLM tailored for PPI for the first time. Specifically, we propose Protein Chain of Thought (ProCoT), which replicates the biological mechanism of signaling pathways as natural language prompts. ProCoT considers a signaling pathway as a protein reasoning process, which starts from upstream proteins and passes through several intermediate proteins to transmit biological signals to downstream proteins. Thus, we can use ProCoT to predict the interaction between upstream proteins and downstream proteins. The training of ProLLM employs the ProCoT format, which enhances the model’s understanding of complex biological problems. In addition to ProCoT, this paper also contributes to the exploration of embedding replacement of protein sites in natural language prompts, and instruction fine-tuning in protein knowledge datasets. We demonstrate the efficacy of ProLLM through rigorous validation against benchmark datasets, showing significant improvement over existing methods in terms of prediction accuracy and generalizability. Our results highlight the potential of LLMs to transform the field of PPI, serving as a robust potential tool for various categories of biological and medical research. 
+
+### MolecularGPT
+- https://arxiv.org/abs/2406.12950
+- https://github.com/NYUSHCS/MolecularGPT
+
+Molecular property prediction (MPP) is a fundamental and crucial task in drug discovery. However, prior methods are limited by the requirement for a large number of labeled molecules and their restricted ability to generalize for unseen and new tasks, both of which are essential for real-world applications. To address these challenges, we present MolecularGPT for few-shot MPP. From a perspective on instruction tuning, we fine-tune large language models (LLMs) based on curated molecular instructions spanning over 1000 property prediction tasks. This enables building a versatile and specialized LLM that can be adapted to novel MPP tasks without any fine-tuning through zero- and few-shot in-context learning (ICL). MolecularGPT exhibits competitive in-context reasoning capabilities across 10 downstream evaluation datasets, setting new benchmarks for few-shot molecular prediction tasks. More importantly, with just two-shot examples, MolecularGPT can outperform standard supervised graph neural network methods on 4 out of 7 datasets. It also excels state-of-the-art LLM baselines by up to 16.6% increase on classification accuracy and decrease of 199.17 on regression metrics (e.g., RMSE) under zero-shot. This study demonstrates the potential of LLMs as effective few-shot molecular property predictors. 
 
 ### Taiyi（太一）
 - https://github.com/DUTIR-BioNLP/Taiyi-LLM
@@ -1603,6 +1635,7 @@ In this paper, we introduce bGPT, a model designed for binary data processing an
 
 ### MobileLLM
 - https://arxiv.org/abs/2402.14905
+- https://github.com/facebookresearch/MobileLLM
 
 This paper addresses the growing need for efficient large language models (LLMs) on mobile devices, driven by increasing cloud costs and latency concerns. We focus on designing top-quality LLMs with fewer than a billion parameters, a practical choice for mobile deployment. Contrary to prevailing belief emphasizing the pivotal role of data and parameter quantity in determining model quality, our investigation underscores the significance of model architecture for sub-billion scale LLMs. Leveraging deep and thin architectures, coupled with embedding sharing and grouped-query attention mechanisms, we establish a strong baseline network denoted as MobileLLM, which attains a remarkable 2.7%/4.3% accuracy boost over preceding 125M/350M state-of-the-art models. Additionally, we propose an immediate block-wise weight sharing approach with no increase in model size and only marginal latency overhead. The resultant models, denoted as MobileLLM-LS, demonstrate a further accuracy enhancement of 0.7%/0.8% than MobileLLM 125M/350M. Moreover, MobileLLM model family shows significant improvements compared to previous sub-billion models on chat benchmarks, and demonstrates close correctness to LLaMA-v2 7B in API calling tasks, highlighting the capability of small models for common on-device use cases.
 
@@ -1676,6 +1709,14 @@ We introduced a new model designed for the Code generation task. Its test accura
 
 Additionally, compared to previous open-source models, AutoCoder offers a new feature: it can automatically install the required packages and attempt to run the code until it deems there are no issues, whenever the user wishes to execute the code.
 
+### CodeGeeX4
+- https://github.com/THUDM/CodeGeeX4
+- https://huggingface.co/THUDM/codegeex4-all-9b
+- https://modelscope.cn/models/ZhipuAI/codegeex4-all-9b
+- https://wisemodel.cn/models/ZhipuAI/codegeex4-all-9b
+
+We introduce CodeGeeX4-ALL-9B, the open-source version of the latest CodeGeeX4 model series. It is a multilingual code generation model continually trained on the GLM-4-9B, significantly enhancing its code generation capabilities. Using a single CodeGeeX4-ALL-9B model, it can support comprehensive functions such as code completion and generation, code interpreter, web search, function call, repository-level code Q&A, covering various scenarios of software development. CodeGeeX4-ALL-9B has achieved highly competitive performance on public benchmarks, such as BigCodeBench and NaturalCodeBench. It is currently the most powerful code generation model with less than 10B parameters, even surpassing much larger general-purpose models, achieving the best balance in terms of inference speed and model performance.
+
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
 
@@ -1686,6 +1727,10 @@ Additionally, compared to previous open-source models, AutoCoder offers a new fe
 ### OceanGPT
 - https://www.zjukg.org/project/OceanGPT
 - https://huggingface.co/zjunlp/oceangpt-7b
+- https://arxiv.org/abs/2310.02031
+- https://huggingface.co/zjunlp/OceanGPT-14B-v0.1
+- http://oceangpt.zjukg.cn/
+- https://huggingface.co/datasets/zjunlp/OceanInstruct
 
 (Warning: The model in this paper might produce hallucinations and reader discretion is recommended) Ocean science, which delves into the oceans that are reservoirs of life and biodiversity, is of great significance given that oceans cover over 70% of our planet's surface. Recently, advances in Large Language Models (LLMs) have transformed the paradigm in science. Despite the success in other domains, current LLMs often fall short in catering to the needs of domain experts like oceanographers, and the potential of LLMs for ocean science is under-explored. The intrinsic reason may be the immense and intricate nature of ocean data as well as the necessity for higher granularity and richness in knowledge. To alleviate these issues, we introduce OceanGPT, the first-ever LLM in the ocean domain, which is expert in various ocean science tasks. We propose DoInstruct, a novel framework to automatically obtain a large volume of ocean domain instruction data, which generates instructions based on multi-agent collaboration. Additionally, we construct the first oceanography benchmark, OceanBench, to evaluate the capabilities of LLMs in the ocean domain. Though comprehensive experiments, OceanGPT not only shows a higher level of knowledge expertise for oceans science tasks but also gains preliminary embodied intelligence capabilities in ocean technology.
 
@@ -2074,6 +2119,19 @@ Index-1.9B chat : 基于index-1.9B base通过SFT和DPO对齐后的对话模型�
 
 Index-1.9B character : 在SFT和DPO的基础上引入了RAG来实现fewshots角色扮演定制
 
+### Qwen2
+- https://github.com/QwenLM/Qwen2
+
+The Qwen2 series include base and instruction-tuned models of 5 sizes, including Qwen2-0.5B, Qwen2-1.5B, Qwen2-7B, Qwen2-57B-A14B, Qwen2-72B. 
+
+### Gemma-2-9B-Chinese-Chat
+- https://huggingface.co/shenzhi-wang/Gemma-2-9B-Chinese-Chat
+
+We now introduce Gemma-2-9B-Chinese-Chat, which is the first instruction-tuned language model built upon google/gemma-2-9b-it for Chinese & English users with various abilities such as roleplaying & tool-using.
+
+### Gemma-2-27B-Chinese-Chat
+- https://huggingface.co/shenzhi-wang/Gemma-2-27B-Chinese-Chat
+
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
 - https://github.com/mobiusml/hqq
@@ -2448,6 +2506,49 @@ Large Language Models (LLMs) have demonstrated impressive capability in many nat
 
 Fine-tuning pre-trained Large Language Models (LLMs) is essential to align them with human values and intentions. This process often utilizes methods like pairwise comparisons and KL divergence against a reference LLM, focusing on the evaluation of full answers generated by the models. However, the generation of these responses occurs in a token level, following a sequential, auto-regressive fashion. In this paper, we introduce Token-level Direct Preference Optimization (TDPO), a novel approach to align LLMs with human preferences by optimizing policy at the token level. Unlike previous methods, which face challenges in divergence efficiency, TDPO incorporates forward KL divergence constraints for each token, improving alignment and diversity. Utilizing the Bradley-Terry model for a token-based reward system, TDPO enhances the regulation of KL divergence, while preserving simplicity without the need for explicit reward modeling. Experimental results across various text tasks demonstrate TDPO's superior performance in balancing alignment with generation diversity. Notably, fine-tuning with TDPO strikes a better balance than DPO in the controlled sentiment generation and single-turn dialogue datasets, and significantly improves the quality of generated responses compared to both DPO and PPO-based RLHF methods. 
 
+### ExCP
+- https://arxiv.org/abs/2406.11257
+- https://github.com/Gaffey/ExCP
+
+We propose a novel Extreme Checkpoint Compression (ExCP) framework, which significantly reduces the required storage of training checkpoints while achieving nearly lossless performance. We first calculate the residuals of adjacent checkpoints to obtain the essential but sparse information for higher compression ratio. To further excavate the redundancy parameters in checkpoints, we then propose a weight-momentum joint shrinking method to utilize another important information during the model optimization, i.e., momentum. In particular, we exploit the information of both model and optimizer to discard as many parameters as possible while preserving critical information to ensure optimal performance. Furthermore, we utilize non-uniform quantization to further compress the storage of checkpoints.
+
+### MindStar
+- https://arxiv.org/pdf/2405.16265v4
+
+Although Large Language Models (LLMs) achieve remarkable performance across various tasks, they often struggle with complex reasoning tasks, such as answering mathematical questions. Recent efforts to address this issue have primarily focused on leveraging mathematical datasets through supervised fine-tuning or self-improvement techniques. However, these methods often depend on high-quality datasets that are difficult to prepare, or they require substantial computational resources for fine-tuning. Inspired by findings that LLMs know how to produce the right answer but struggle to select the correct reasoning path, we propose a purely inference-based searching method -- MindStar (M*). This method formulates reasoning tasks as searching problems and proposes two search ideas to identify the optimal reasoning paths. We evaluate the M* framework on both the GSM8K and MATH datasets, comparing its performance with existing open and closed-source LLMs. Our results demonstrate that M* significantly enhances the reasoning abilities of open-source models, such as Llama-2-13B and Mistral-7B, and achieves comparable performance to GPT-3.5 and Grok-1, but with substantially reduced model size and computational costs.
+
+### LaMDA
+- https://arxiv.org/abs/2406.12832
+
+Low-rank adaptation (LoRA) has become the default approach to fine-tune large language models (LLMs) due to its significant reduction in trainable parameters. However, trainable parameter demand for LoRA increases with increasing model embedding dimensions, leading to high compute costs. Additionally, its backward updates require storing high-dimensional intermediate activations and optimizer states, demanding high peak GPU memory. In this paper, we introduce large model fine-tuning via spectrally decomposed low-dimensional adaptation (LaMDA), a novel approach to fine-tuning large language models, which leverages low-dimensional adaptation to achieve significant reductions in trainable parameters and peak GPU memory footprint. LaMDA freezes a first projection matrix (PMA) in the adaptation path while introducing a low-dimensional trainable square matrix, resulting in substantial reductions in trainable parameters and peak GPU memory usage. LaMDA gradually freezes a second projection matrix (PMB) during the early fine-tuning stages, reducing the compute cost associated with weight updates to enhance parameter efficiency further. We also present an enhancement, LaMDA++, incorporating a ``lite-weight" adaptive rank allocation for the LoRA path via normalized spectrum analysis of pre-trained model weights. We evaluate LaMDA/LaMDA++ across various tasks, including natural language understanding with the GLUE benchmark, text summarization, natural language generation, and complex reasoning on different LLMs. Results show that LaMDA matches or surpasses the performance of existing alternatives while requiring up to 17.7x fewer parameter updates and up to 1.32x lower peak GPU memory usage during fine-tuning. 
+
+### MInference
+- https://arxiv.org/pdf/2407.02490
+- https://hqjiang.com/minference.html
+
+The computational challenges of LLM inference remain a significant barrier to their widespread deployment, especially as prompt lengths continue to increase. Due to the quadratic complexity of the attention computation, it takes 30 minutes for an 8B LLM to process a prompt of 1M tokens (i.e., the pre-filling stage) on a single A100 GPU. Existing methods for speeding up prefilling often fail to maintain acceptable accuracy or efficiency when applied to long-context LLMs. To address this gap, we introduce MInference, a sparse calculation method designed to accelerate pre-filling of long-sequence processing. Specifically, we identify three unique patterns in long-context attention matricesthe A-shape, Vertical-Slash, and Block-Sparse—that can be leveraged for efficient sparse computation on GPUs. We determine the optimal pattern for each attention head offline and dynamically build sparse indices based on the assigned pattern during inference. With the pattern and sparse indices, we perform efficient sparse attention calculations via our optimized GPU kernels to significantly reduce the latency in the pre-filling stage of long-context LLMs. Our proposed technique can be directly applied to existing LLMs without any modifications to the pre-training setup or additional fine-tuning. By evaluating on a wide range of downstream tasks, including InfiniteBench, RULER, PG-19, and Needle In A Haystack, and models including LLaMA-3-1M, Yi-200K, GLM-4-1M, Phi-3-128K, and Qwen2-128K, we demonstrate that MInference effectively reduces inference latency by up to 10x for pre-filling on an A100, while maintaining accuracy.
+
+### Instruction Pre-Training
+- https://arxiv.org/pdf/2406.14491
+- https://github.com/microsoft/LMOps
+
+Unsupervised multitask pre-training has been the critical method behind the recent success of language models (LMs). However, supervised multitask learning still holds significant promise, as scaling it in the post-training stage trends towards better generalization. In this paper, we explore supervised multitask pre-training by proposing Instruction Pre-Training, a framework that scalably augments massive raw corpora with instruction-response pairs to pre-train LMs. The instruction-response pairs are generated by an efficient instruction synthesizer built on open-source models. In our experiments, we synthesize 200M instruction-response pairs covering 40+ task categories to verify the effectiveness of Instruction Pre-Training. In pre-training from scratch, Instruction Pre-Training not only consistently enhances pre-trained base models but also benefits more from further instruction tuning. In continual pre-training, Instruction Pre-Training enables Llama3-8B to be comparable to or even outperform Llama3-70B.
+
+### PEER
+- https://arxiv.org/abs/2407.04153
+
+The feedforward (FFW) layers in standard transformer architectures incur a linear increase in computational costs and activation memory as the hidden layer width grows. Sparse mixture-of-experts (MoE) architectures have emerged as a viable approach to address this issue by decoupling model size from computational cost. The recent discovery of the fine-grained MoE scaling law shows that higher granularity leads to better performance. However, existing MoE models are limited to a small number of experts due to computational and optimization challenges. This paper introduces PEER (parameter efficient expert retrieval), a novel layer design that utilizes the product key technique for sparse retrieval from a vast pool of tiny experts (over a million). Experiments on language modeling tasks demonstrate that PEER layers outperform dense FFWs and coarse-grained MoEs in terms of performance-compute trade-off. By enabling efficient utilization of a massive number of experts, PEER unlocks the potential for further scaling of transformer models while maintaining computational efficiency.
+
+### Step-DPO
+- https://arxiv.org/html/2406.18629v1
+- https://github.com/dvlab-research/Step-DPO
+
+Mathematical reasoning presents a significant challenge for Large Language Models (LLMs) due to the extensive and precise chain of reasoning required for accuracy. Ensuring the correctness of each reasoning step is critical. To address this, we aim to enhance the robustness and factuality of LLMs by learning from human feedback. However, Direct Preference Optimization (DPO) has shown limited benefits for long-chain mathematical reasoning, as models employing DPO struggle to identify detailed errors in incorrect answers. This limitation stems from a lack of fine-grained process supervision. We propose a simple, effective, and data-efficient method called Step-DPO, which treats individual reasoning steps as units for preference optimization rather than evaluating answers holistically. Additionally, we have developed a data construction pipeline for Step-DPO, enabling the creation of a high-quality dataset containing 10K step-wise preference pairs. We also observe that in DPO, self-generated data is more effective than data generated by humans or GPT-4, due to the latter’s out-of-distribution nature. Our findings demonstrate that as few as 10K preference data pairs and fewer than 500 Step-DPO training steps can yield a nearly 3% gain in accuracy on MATH for models with over 70B parameters. Notably, Step-DPO, when applied to Qwen2-72B-Instruct, achieves scores of 70.8% and 94.0% on the test sets of MATH and GSM8K, respectively, surpassing a series of closed-source models, including GPT-4-1106, Claude-3-Opus, and Gemini-1.5-Pro.
+
+### Data, Data Everywhere
+- https://arxiv.org/abs/2407.06380
+
+The impressive capabilities of recent language models can be largely attributed to the multi-trillion token pretraining datasets that they are trained on. However, model developers fail to disclose their construction methodology which has lead to a lack of open information on how to develop effective pretraining sets. To address this issue, we perform the first systematic study across the entire pipeline of pretraining set construction. First, we run ablations on existing techniques for pretraining set development to identify which methods translate to the largest gains in model accuracy on downstream evaluations. Then, we categorize the most widely used data source, web crawl snapshots, across the attributes of toxicity, quality, type of speech, and domain. Finally, we show how such attribute information can be used to further refine and improve the quality of a pretraining set. These findings constitute an actionable set of steps that practitioners can use to develop high quality pretraining sets.
 
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
@@ -3679,6 +3780,21 @@ We introduce NV-Embed, a generalist embedding model that ranks No. 1 on the Mass
 
 NV-Embed presents several new designs, including having the LLM attend to latent vectors for better pooled embedding output, and demonstrating a two-stage instruction tuning method to enhance the accuracy of both retrieval and non-retrieval tasks.
 
+### RankRAG
+- https://arxiv.org/abs/2407.02485
+
+Large language models (LLMs) typically utilize the top-k contexts from a retriever in retrieval-augmented generation (RAG). In this work, we propose a novel instruction fine-tuning framework RankRAG, which instruction-tunes a single LLM for the dual purpose of context ranking and answer generation in RAG. In particular, the instruction-tuned LLMs work surprisingly well by adding a small fraction of ranking data into the training blend, and outperform existing expert ranking models, including the same LLM exclusively fine-tuned on a large amount of ranking data. For generation, we compare our model with many strong baselines, including GPT-4-0613, GPT-4-turbo-2024-0409, and ChatQA-1.5, an open-sourced model with the state-of-the-art performance on RAG benchmarks. Specifically, our Llama3-RankRAG significantly outperforms Llama3-ChatQA-1.5 and GPT-4 models on nine knowledge-intensive benchmarks. In addition, it also performs comparably to GPT-4 on five RAG benchmarks in the biomedical domain without instruction fine-tuning on biomedical data, demonstrating its superb capability for generalization to new domains.
+
+### LightRAG
+- https://github.com/SylphAI-Inc/LightRAG
+
+LightRAG helps developers with both building and optimizing Retriever-Agent-Generator pipelines. It is light, modular, and robust, with a 100% readable codebase.
+
+### GraphRAG
+- https://github.com/microsoft/graphrag
+
+The GraphRAG project is a data pipeline and transformation suite that is designed to extract meaningful, structured data from unstructured text using the power of LLMs.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -3939,6 +4055,17 @@ We introduce AnyTool, a large language model agent designed to revolutionize the
 在ChatGPT横空出世，夺走Bert的桂冠之后，大模型愈发的火热，国内各种模型层出不穷，史称“百模大战”。大模型的能力是毋庸置疑的，但大模型在一些实时的问题上，或是某些专有领域的问题上，可能会显得有些力不从心。因此，我们需要一些工具来为大模型赋能，给大模型一个抓手，让大模型和现实世界发生的事情对齐颗粒度，这样我们就获得了一个更好的用的大模型。
 
 这里基于React的方式，制作了一个最小的Agent结构（其实更多的是调用工具），暑假的时候会尝试将React结构修改为SOP结构。
+
+### TinyAgent
+- https://github.com/SqueezeAILab/TinyAgent
+
+TinyAgent aims to enable complex reasoning and function calling capabilities in Small Language Models (SLMs) that can be deployed securely and privately at the edge. Traditional Large Language Models (LLMs) like GPT-4 and Gemini-1.5, while powerful, are often too large and resource-intensive for edge deployment, posing challenges in terms of privacy, connectivity, and latency. TinyAgent addresses these challenges by training specialized SLMs with high-quality, curated data, and focusing on function calling with LLMCompiler. As a driving application, TinyAgent can interact with various MacOS applications, assisting users with day-to-day tasks such as composing emails, managing contacts, scheduling calendar events, and organizing Zoom meetings.
+
+### Tree Search for Language Model Agents
+- https://arxiv.org/abs/2407.01476
+- https://jykoh.com/search-agents
+
+Autonomous agents powered by language models (LMs) have demonstrated promise in their ability to perform decision-making tasks such as web automation. However, a key limitation remains: LMs, primarily optimized for natural language understanding and generation, struggle with multi-step reasoning, planning, and using environmental feedback when attempting to solve realistic computer tasks. Towards addressing this, we propose an inference-time search algorithm for LM agents to explicitly perform exploration and multi-step planning in interactive web environments. Our approach is a form of best-first tree search that operates within the actual environment space, and is complementary with most existing state-of-the-art agents. It is the first tree search algorithm for LM agents that shows effectiveness on realistic web tasks. On the challenging VisualWebArena benchmark, applying our search algorithm on top of a GPT-4o agent yields a 39.7% relative increase in success rate compared to the same baseline without search, setting a state-of-the-art success rate of 26.4%. On WebArena, search also yields a 28.0% relative improvement over a baseline agent, setting a competitive success rate of 19.2%. Our experiments highlight the effectiveness of search for web agents, and we demonstrate that performance scales with increased test-time compute. We conduct a thorough analysis of our results to highlight improvements from search, limitations, and promising directions for future work. 
 
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
@@ -4210,6 +4337,12 @@ Evaluating open LLMs
 
 CriticGPT, a model based on GPT-4, writes critiques of ChatGPT responses to help human trainers spot mistakes during RLHF
 
+### Test of Time
+- https://arxiv.org/abs/2406.09170
+- https://huggingface.co/datasets/baharef/ToT
+
+Large language models (LLMs) have showcased remarkable reasoning capabilities, yet they remain susceptible to errors, particularly in temporal reasoning tasks involving complex temporal logic. Existing research has explored LLM performance on temporal reasoning using diverse datasets and benchmarks. However, these studies often rely on real-world data that LLMs may have encountered during pre-training or employ anonymization techniques that can inadvertently introduce factual inconsistencies. In this work, we address these limitations by introducing novel synthetic datasets specifically designed to assess LLM temporal reasoning abilities in various scenarios. The diversity of question types across these datasets enables systematic investigation into the impact of the problem structure, size, question type, fact order, and other factors on LLM performance. Our findings provide valuable insights into the strengths and weaknesses of current LLMs in temporal reasoning tasks. 
+
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
 - https://arxiv.org/abs/2401.07851
@@ -4370,6 +4503,16 @@ LLMBox is a comprehensive library for implementing LLMs, including a unified tra
 
 MarkLLM is an open-source toolkit developed to facilitate the research and application of watermarking technologies within large language models (LLMs). As the use of large language models (LLMs) expands, ensuring the authenticity and origin of machine-generated text becomes critical. MarkLLM simplifies the access, understanding, and assessment of watermarking technologies, making it accessible to both researchers and the broader community.
 
+### MobileCPM
+- https://github.com/OpenBMB/MobileCPM
+
+MobileCPM is the first open-source toolset for on-device large models, designed to help individual or enterprise developers seamlessly integrate on-device large models into their APP products. In the demo APP shown below, MiniCPM provides on-device model capabilities and comes with several example agents such as a translator, poet, storyteller, and motivational coach to cater to various use cases. Moreover, the types of on-device models and agents can be flexibly expanded. Developers can customize agents to meet business needs and scenarios by adding or modifying prompts and replacing on-device models. The image below demonstrates the conversation effect of the built-in "motivational coach" agent. Please note that in this example, the network connection has been disconnected, and the on-device model is used directly.
+
+### LLM-Select
+- https://arxiv.org/abs/2407.02694
+
+In this paper, we demonstrate a surprising capability of large language models (LLMs): given only input feature names and a description of a prediction task, they are capable of selecting the most predictive features, with performance rivaling the standard tools of data science. Remarkably, these models exhibit this capacity across various query mechanisms. For example, we zero-shot prompt an LLM to output a numerical importance score for a feature (e.g., "blood pressure") in predicting an outcome of interest (e.g., "heart failure"), with no additional context. In particular, we find that the latest models, such as GPT-4, can consistently identify the most predictive features regardless of the query mechanism and across various prompting strategies. We illustrate these findings through extensive experiments on real-world data, where we show that LLM-based feature selection consistently achieves strong performance competitive with data-driven methods such as the LASSO, despite never having looked at the downstream training data. Our findings suggest that LLMs may be useful not only for selecting the best features for training but also for deciding which features to collect in the first place. This could potentially benefit practitioners in domains like healthcare, where collecting high-quality data comes at a high cost.
+
 ### Larimar
 - https://arxiv.org/abs/2403.11901
 
@@ -4437,6 +4580,11 @@ Contemporary recommender systems predominantly rely on collaborative filtering t
 
 This paper presents a model-agnostic framework, XRec, that integrates the graph-based collaborative filtering framework with Large Language Models (LLMs) to generate comprehensive explanations for recommendations. By leveraging the inherent collaborative user-item relationships and harnessing the powerful textual generation capabilities of LLMs, XRec establishes a strong connection between collaborative signals and language semantics through the utilization of a Mixture of Experts (MoE) adapter.
 
+### Wukong
+- https://arxiv.org/abs/2403.02545
+
+Scaling laws play an instrumental role in the sustainable improvement in model quality. Unfortunately, recommendation models to date do not exhibit such laws similar to those observed in the domain of large language models, due to the inefficiencies of their upscaling mechanisms. This limitation poses significant challenges in adapting these models to increasingly more complex real-world datasets. In this paper, we propose an effective network architecture based purely on stacked factorization machines, and a synergistic upscaling strategy, collectively dubbed Wukong, to establish a scaling law in the domain of recommendation. Wukong's unique design makes it possible to capture diverse, any-order of interactions simply through taller and wider layers. We conducted extensive evaluations on six public datasets, and our results demonstrate that Wukong consistently outperforms state-of-the-art models quality-wise. Further, we assessed Wukong's scalability on an internal, large-scale dataset. The results show that Wukong retains its superiority in quality over state-of-the-art models, while holding the scaling law across two orders of magnitude in model complexity, extending beyond 100 GFLOP/example, where prior arts fall short.
+
 ### Financial Datasets
 - https://github.com/virattt/financial-datasets
 
@@ -4494,6 +4642,18 @@ Gemma is a family of lightweight, state-of-the-art open models from Google, buil
 - https://huggingface.co/wave-on-discord/gemini-nano-adapter/tree/main
 
 Our most efficient model for on-device tasks
+
+### TTT
+- https://arxiv.org/abs/2407.04620
+- https://github.com/test-time-training/ttt-lm-jax
+- https://github.com/test-time-training/ttt-lm-pytorch
+
+Self-attention performs well in long context but has quadratic complexity. Existing RNN layers have linear complexity, but their performance in long context is limited by the expressive power of their hidden state. We propose a new class of sequence modeling layers with linear complexity and an expressive hidden state. The key idea is to make the hidden state a machine learning model itself, and the update rule a step of self-supervised learning. Since the hidden state is updated by training even on test sequences, our layers are called Test-Time Training (TTT) layers. We consider two instantiations: TTT-Linear and TTT-MLP, whose hidden state is a linear model and a two-layer MLP respectively. We evaluate our instantiations at the scale of 125M to 1.3B parameters, comparing with a strong Transformer and Mamba, a modern RNN. Both TTT-Linear and TTT-MLP match or exceed the baselines. Similar to Transformer, they can keep reducing perplexity by conditioning on more tokens, while Mamba cannot after 16k context. With preliminary systems optimization, TTT-Linear is already faster than Transformer at 8k context and matches Mamba in wall-clock time. TTT-MLP still faces challenges in memory I/O, but shows larger potential in long context, pointing to a promising direction for future research.
+
+### Arcee-Spark
+- https://huggingface.co/arcee-ai/Arcee-Spark
+
+Arcee Spark is a powerful 7B parameter language model that punches well above its weight class. Initialized from Qwen2, this model underwent a sophisticated training process.
 
 ### CodecLM
 - https://arxiv.org/abs/2404.05875
