@@ -1,6 +1,8 @@
 # 开源语言模型百宝袋 (Ver. 3.5)
 Open-Source Language Model Pocket
 
+**注意**：由于此文本内容太多了，直接在Github网页阅览会出现内容不全（导致部分内容搜索不到）的问题。建议下载到本地查阅。
+
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
 ## 开源模型一览 (Table of Contents)
@@ -42,7 +44,8 @@ Open-Source Language Model Pocket
 |*【OpenBuddy-Llama3-70B-v21.1-8k】|*【MAP-NEO】|*【llms-from-scratch-cn】|
 |*【Yi-1.5】|*【Yuan2.0-M32】|*【Skywork-MoE】|
 |*【Index-1.9B】|*【Qwen2】|*【Gemma-2-9B-Chinese-Chat】|
-|*【Gemma-2-27B-Chinese-Chat】|||
+|*【Gemma-2-27B-Chinese-Chat】|*【RWKV-6-World 14B】|*【Tele-FLM-1T】|
+|*【Llama3.1-Chinese-Chat】|||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -84,7 +87,8 @@ Open-Source Language Model Pocket
 |LeerooDedicated-Math-7b|SimpleGeometry|
 |Rho-1|*【ChatGLM-Math】|
 |*【JiuZhang3.0】|*【InternLM2-WQX】|
-|*【Math-Minos】||
+|*【Math-Minos】|*【NuminaMath 7B TIR】|
+|*【MathΣtral】|*【LLaMAX】（翻译）|
 
 |表格/数据分析||
 |---|---|
@@ -123,7 +127,7 @@ Open-Source Language Model Pocket
 |CodeGemma|*【Snowflake Arctic】|
 |*【dolphin-2.9-llama3-70b】|*【Granite】|
 |*【StarCoder2-15B-Instruct-v0.1】|*【AutoCoder】|
-|*【CodeGeeX4】||
+|*【CodeGeeX4】|*【xLAM】|
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -182,7 +186,7 @@ Open-Source Language Model Pocket
 |*【AutoWebGLM】|*【Agent Hospital】|
 |*【CodeR】|*【Mobile-Agent-v2】|
 |*【Husky】|*【TinyAgent】|
-|*【Tree Search for Language Model Agents】||
+|*【Tree Search for Language Model Agents】|*【octo-planner】|
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -239,6 +243,9 @@ Open-Source Language Model Pocket
 |*【Recurrentgemma】|*【Nemotron-4 340B】|
 |*【Gemma-2】|*【Gemini Nano】|
 |*【TTT】|*【Arcee-Spark】|
+|*【Mistral NeMo】|*【Llama 3.1 405B】|
+|*【Mistral Large 2】|*【SmolLM】|
+|*【DCLM-7B】|*【Minitron】|
 
 *训练/推理*
 |  |  |
@@ -309,6 +316,8 @@ Open-Source Language Model Pocket
 |*【LaMDA】|*【MInference】|
 |*【Instruction Pre-Training】|*【PEER】|
 |*【Step-DPO】|*【Data, Data Everywhere】|
+|*【Prover-Verifier Games】|*【Mem0】|
+|*【EAGLE-2】||
 
 *评价*
 |  ||
@@ -338,7 +347,9 @@ Open-Source Language Model Pocket
 |*【LooGLE】|*【McEval】|
 |*【CRAG】|*【BigCodeBench】|
 |*【Prometheus 2】|*【Open LLM Leaderboard】|
-|*【CriticGPT】|*【Test of Time】|
+|*【CriticGPT】|*【Test  f Time】|
+|*【WebCanvas】|*【Lynx】|
+|*【ComplexBench】|*【Mr-Ben】|
 
 *其它*
 |  |  |
@@ -365,6 +376,7 @@ Open-Source Language Model Pocket
 |*【tiny-universe】|*【llmc】|
 |*【LLMBox】|*【MarkLLM】|
 |*【MobileCPM】|*【LLM-Select】|
+|*【Transformer Architecture (LLMs: Zero-to-Hero)】||
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -375,10 +387,10 @@ Open-Source Language Model Pocket
   - [导语](https://mp.weixin.qq.com/s/G24skuUbyrSatxWczVxEAg)
   - 垂直领域应用
     - 【不限领域】利用未标注文本改进遵循指令的语言模型（[1](https://mp.weixin.qq.com/s/50wtP--W_cy-682g8cOYww) [2](https://mp.weixin.qq.com/s/q7nKnwtEKPahABiLFLWuSw) [3](https://mp.weixin.qq.com/s/CE8YNx19dc0EyNfTK_HYHQ) [4](https://mp.weixin.qq.com/s/yj4gnoymNLFuLE1v94VJ9A) [5](https://mp.weixin.qq.com/s/N4mUe7hrvXGFArl20kKRCA)）
-    - 【医疗/健康】ChatDoctor （解读 [上](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg) [中](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw) [下](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg) / PDF版PPT [上](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf) [中](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%AD%EF%BC%89.pdf) [下](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8B%EF%BC%89.pdf)）
-    - 【医疗/健康】MedicalGPT-zh ([解读](https://mp.weixin.qq.com/s/QJKZYKh16fqLTC367WhzdA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MedicalGPT-zh.pdf))
-    - 【医疗/健康】明医(MING) ([解读](https://mp.weixin.qq.com/s/uM4FZeDhAc6JuMlW7NCvUA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MING.pdf))
-    - 【医疗/健康】灵心(SoulChat) ([解读](https://mp.weixin.qq.com/s/0HOYSr-zQsGLFL_H9UZ2HA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20SoulChat.pdf))
+    - 【医疗健康】ChatDoctor （解读 [上](https://mp.weixin.qq.com/s/zSeRKUZ2te1wxwpvByhcvg) [中](https://mp.weixin.qq.com/s/TcwiQoIex7SDY5Teri9xnw) [下](https://mp.weixin.qq.com/s/I1hXRS7gBMLUyOWMObfpBg) / PDF版PPT [上](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8A%EF%BC%89.pdf) [中](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%AD%EF%BC%89.pdf) [下](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20ChatDoctor%EF%BC%88%E4%B8%8B%EF%BC%89.pdf)）
+    - 【医疗健康】MedicalGPT-zh ([解读](https://mp.weixin.qq.com/s/QJKZYKh16fqLTC367WhzdA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MedicalGPT-zh.pdf))
+    - 【医疗健康】明医(MING) ([解读](https://mp.weixin.qq.com/s/uM4FZeDhAc6JuMlW7NCvUA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20MING.pdf))
+    - 【医疗健康】灵心(SoulChat) ([解读](https://mp.weixin.qq.com/s/0HOYSr-zQsGLFL_H9UZ2HA) / [PDF版PPT](https://github.com/createmomo/Open-Source-Language-Model-Pocket/blob/main/%E5%8D%83%E2%80%9C%E5%9E%82%E2%80%9D%E7%99%BE%E7%82%BC%20-%20%E3%80%90%E5%8C%BB%E7%96%97%26%E5%81%A5%E5%BA%B7%E3%80%91%20SoulChat.pdf))
     - 【手机交互】ReALM ([1](https://mp.weixin.qq.com/s/gOmUi4_MGvU1Nx3KxXdxVQ) [2](https://mp.weixin.qq.com/s/wTPMwtRVWIrioile-rFzQA) [3](https://mp.weixin.qq.com/s/NgyZG0439UGFoVE7InrX9g) [4](https://mp.weixin.qq.com/s/v1NEovURZr4v8R4_v7TjdA))
   - 自动评估模型
     - 【不限领域】[用语言模型评估语言模型（1）导语](https://mp.weixin.qq.com/s/SUN_ywkI8ld1edXY7uq_1Q)
@@ -786,6 +798,24 @@ InternLM2-WQX与InternLM2-WQX-VL是InternLM团队于2024年高考前夕最新推
 - https://github.com/KbsdJames/MATH-Minos
 
 Mathematical verfier achieves success in mathematical reasoning tasks by validating the correctness of solutions. However, existing verifiers are trained with binary classification labels, which are not informative enough for the model to accurately assess the solutions. To mitigate the aforementioned insufficiency of binary labels, we introduce step-wise natural language feedbacks as rationale labels (i.e., the correctness of the current step and the explanations). In this paper, we propose \textbf{Math-Minos}, a natural language feedback enhanced verifier by constructing automatically-generated training data and a two-stage training paradigm for effective training and efficient inference. Our experiments reveal that a small set (30k) of natural language feedbacks can significantly boost the performance of the verifier by the accuracy of 1.6\% (86.6\% → 88.2\%) on GSM8K and 0.8\% (37.8\% → 38.6\%) on MATH. 
+
+### NuminaMath 7B TIR
+- https://huggingface.co/AI-MO/NuminaMath-7B-TIR
+
+NuminaMath is a series of language models that are trained to solve math problems using tool-integrated reasoning (TIR). NuminaMath 7B TIR won the first progress prize of the AI Math Olympiad (AIMO), with a score of 29/50 on the public and private tests sets.
+
+### MathΣtral
+- https://mistral.ai/news/mathstral/
+
+Mathstral can achieve significantly better results with more inference-time computation: Mathstral 7B scores 68.37% on MATH with majority voting and 74.59% with a strong reward model among 64 candidates.
+
+Mathstral is an instructed model – use it or fine-tune it as such, referring to our documentation. Weights are hosted on HuggingFace. You can try Mathstral now with mistral-inference and adapt it with mistral-finetune.
+
+### LLaMAX
+- https://arxiv.org/pdf/2407.05975
+- https://github.com/CONE-MT/LLaMAX/
+
+Large Language Models~(LLMs) demonstrate remarkable translation capabilities in high-resource language tasks, yet their performance in low-resource languages is hindered by insufficient multilingual data during pre-training. To address this, we dedicate 35,000 A100-SXM4-80GB GPU hours in conducting extensive multilingual continual pre-training on the LLaMA series models, enabling translation support across more than 100 languages. Through a comprehensive analysis of training strategies, such as vocabulary expansion and data augmentation, we develop LLaMAX. Remarkably, without sacrificing its generalization ability, LLaMAX achieves significantly higher translation performance compared to existing open-source LLMs~(by more than 10 spBLEU points) and performs on-par with specialized translation model~(M2M-100-12B) on the Flores-101 benchmark. Extensive experiments indicate that LLaMAX can serve as a robust multilingual foundation model.
 
 ### ChatRWKV
 - https://github.com/BlinkDL/ChatRWKV
@@ -1717,6 +1747,11 @@ Additionally, compared to previous open-source models, AutoCoder offers a new fe
 
 We introduce CodeGeeX4-ALL-9B, the open-source version of the latest CodeGeeX4 model series. It is a multilingual code generation model continually trained on the GLM-4-9B, significantly enhancing its code generation capabilities. Using a single CodeGeeX4-ALL-9B model, it can support comprehensive functions such as code completion and generation, code interpreter, web search, function call, repository-level code Q&A, covering various scenarios of software development. CodeGeeX4-ALL-9B has achieved highly competitive performance on public benchmarks, such as BigCodeBench and NaturalCodeBench. It is currently the most powerful code generation model with less than 10B parameters, even surpassing much larger general-purpose models, achieving the best balance in terms of inference speed and model performance.
 
+### xLAM
+- https://github.com/SalesforceAIResearch/xLAM
+
+We are excited to announce the release of our two function-calling models: xLAM-1b-fc-r and xLAM-7b-fc-r. These models have achieved impressive rankings, placing #3 and #25 on the Berkeley Function-Calling Leaderboard, outperforming many significantly larger models. Stay tuned for more powerful models coming soon.
+
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
 
@@ -2131,6 +2166,26 @@ We now introduce Gemma-2-9B-Chinese-Chat, which is the first instruction-tuned l
 
 ### Gemma-2-27B-Chinese-Chat
 - https://huggingface.co/shenzhi-wang/Gemma-2-27B-Chinese-Chat
+
+### RWKV-6-World 14B
+- https://huggingface.co/BlinkDL/rwkv-6-world
+
+RWKV-6-World 14B is currently the most powerful dense RNN Large Language Model, with outstanding performance in multilingual tasks.
+
+### Tele-FLM-1T
+- https://huggingface.co/CofeAI/Tele-FLM-1T
+
+Tele-FLM-1T (aka FLM-2-1T) is a 1T open-sourced multilingual large language model that features a stable, efficient pre-training paradigm and enhanced factual judgement capabilities. Built upon the decoder-only transformer architecture, it has been trained on approximately 2T tokens. Tele-FLM series demonstrate superior performances at its scale, and sometimes surpass larger models. In addition to sharing the model weights, we provide the core designs, engineering practices, and training details, anticipating their benefits for both academic and industrial communities.
+
+### Llama3.1-Chinese-Chat
+- https://huggingface.co/collections/shenzhi-wang/llama31-chinese-chat-66a33d570b32f2cdb42512ac
+
+We now introduce shenzhi-wang/Llama3.1-8B-Chinese-Chat! Compared to the original Meta-Llama-3.1-8B-Instruct model, our llama3.1-8B-Chinese-Chat model significantly reduces the issues of "Chinese questions with English answers" and the mixing of Chinese and English in responses. The training dataset contains >100K preference pairs, and it exhibits significant enhancements, especially in roleplay, function calling, and math capabilities!
+
+### Transformer Architecture (LLMs: Zero-to-Hero)
+- https://medium.com/@waylandzhang/transformer-architecture-llms-zero-to-hero-98b1ee51a838
+
+This is the 3rd article in my Zero-to-Hero series. In this article we will walk through and explain each step of a Transformer based Large Language Model.
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -2549,6 +2604,24 @@ Mathematical reasoning presents a significant challenge for Large Language Model
 - https://arxiv.org/abs/2407.06380
 
 The impressive capabilities of recent language models can be largely attributed to the multi-trillion token pretraining datasets that they are trained on. However, model developers fail to disclose their construction methodology which has lead to a lack of open information on how to develop effective pretraining sets. To address this issue, we perform the first systematic study across the entire pipeline of pretraining set construction. First, we run ablations on existing techniques for pretraining set development to identify which methods translate to the largest gains in model accuracy on downstream evaluations. Then, we categorize the most widely used data source, web crawl snapshots, across the attributes of toxicity, quality, type of speech, and domain. Finally, we show how such attribute information can be used to further refine and improve the quality of a pretraining set. These findings constitute an actionable set of steps that practitioners can use to develop high quality pretraining sets.
+
+### Prover-Verifier Games
+- https://openai.com/index/prover-verifier-games-improve-legibility/
+- https://arxiv.org/abs/2407.13692
+
+One way to increase confidence in the outputs of Large Language Models (LLMs) is to support them with reasoning that is clear and easy to check -- a property we call legibility. We study legibility in the context of solving grade-school math problems and show that optimizing chain-of-thought solutions only for answer correctness can make them less legible. To mitigate the loss in legibility, we propose a training algorithm inspired by Prover-Verifier Game from Anil et al. (2021). Our algorithm iteratively trains small verifiers to predict solution correctness, "helpful" provers to produce correct solutions that the verifier accepts, and "sneaky" provers to produce incorrect solutions that fool the verifier. We find that the helpful prover's accuracy and the verifier's robustness to adversarial attacks increase over the course of training. Furthermore, we show that legibility training transfers to time-constrained humans tasked with verifying solution correctness. Over course of LLM training human accuracy increases when checking the helpful prover's solutions, and decreases when checking the sneaky prover's solutions. Hence, training for checkability by small verifiers is a plausible technique for increasing output legibility. Our results suggest legibility training against small verifiers as a practical avenue for increasing legibility of large LLMs to humans, and thus could help with alignment of superhuman models.
+
+### Mem0
+- https://github.com/mem0ai/mem0
+
+Mem0 provides an intelligent, adaptive memory layer for Large Language Models (LLMs), enhancing personalized AI experiences by retaining and utilizing contextual information across diverse applications. This enhanced memory capability is crucial for applications ranging from customer support and healthcare diagnostics to autonomous systems and personalized content recommendations, allowing AI to remember user preferences, adapt to individual needs, and continuously improve over time.
+
+### EAGLE-2
+- https://arxiv.org/pdf/2406.16858
+- https://github.com/SafeAILab/EAGLE
+- https://huggingface.co/spaces/yuhuili/EAGLE-2
+
+EAGLE (Extrapolation Algorithm for Greater Language-model Efficiency) is a new baseline for fast decoding of Large Language Models (LLMs) with provable performance maintenance. This approach involves extrapolating the second-top-layer contextual feature vectors of LLMs, enabling a significant boost in generation efficiency.
 
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
@@ -4067,6 +4140,13 @@ TinyAgent aims to enable complex reasoning and function calling capabilities in 
 
 Autonomous agents powered by language models (LMs) have demonstrated promise in their ability to perform decision-making tasks such as web automation. However, a key limitation remains: LMs, primarily optimized for natural language understanding and generation, struggle with multi-step reasoning, planning, and using environmental feedback when attempting to solve realistic computer tasks. Towards addressing this, we propose an inference-time search algorithm for LM agents to explicitly perform exploration and multi-step planning in interactive web environments. Our approach is a form of best-first tree search that operates within the actual environment space, and is complementary with most existing state-of-the-art agents. It is the first tree search algorithm for LM agents that shows effectiveness on realistic web tasks. On the challenging VisualWebArena benchmark, applying our search algorithm on top of a GPT-4o agent yields a 39.7% relative increase in success rate compared to the same baseline without search, setting a state-of-the-art success rate of 26.4%. On WebArena, search also yields a 28.0% relative improvement over a baseline agent, setting a competitive success rate of 19.2%. Our experiments highlight the effectiveness of search for web agents, and we demonstrate that performance scales with increased test-time compute. We conduct a thorough analysis of our results to highlight improvements from search, limitations, and promising directions for future work. 
 
+### octo-planner
+- https://www.nexa4ai.com/octo-planner#video
+- https://arxiv.org/pdf/2406.18082
+- https://huggingface.co/NexaAIDev/octopus-planning
+
+We're thrilled to introduce the Octo-planner, the latest breakthrough in on-device language models from Nexa AI. Developed for the Planner-Action Agents Framework, Octo-planner enables rapid and efficient planning without the need for cloud connectivity, this model together with Octopus-V2 can work on edge devices locally to support AI Agent usages.
+
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
 - https://huggingface.co/NexaAIDev/Octopus-v2
@@ -4342,6 +4422,32 @@ CriticGPT, a model based on GPT-4, writes critiques of ChatGPT responses to help
 - https://huggingface.co/datasets/baharef/ToT
 
 Large language models (LLMs) have showcased remarkable reasoning capabilities, yet they remain susceptible to errors, particularly in temporal reasoning tasks involving complex temporal logic. Existing research has explored LLM performance on temporal reasoning using diverse datasets and benchmarks. However, these studies often rely on real-world data that LLMs may have encountered during pre-training or employ anonymization techniques that can inadvertently introduce factual inconsistencies. In this work, we address these limitations by introducing novel synthetic datasets specifically designed to assess LLM temporal reasoning abilities in various scenarios. The diversity of question types across these datasets enables systematic investigation into the impact of the problem structure, size, question type, fact order, and other factors on LLM performance. Our findings provide valuable insights into the strengths and weaknesses of current LLMs in temporal reasoning tasks. 
+
+### WebCanvas
+- https://arxiv.org/pdf/2406.12373
+- https://imean.ai/web-canvas
+- https://github.com/iMeanAI/WebCanvas
+- https://huggingface.co/datasets/iMeanAI/Mind2Web-Live
+
+Existing benchmarks for web agent tasks are either offline and static, or operate within a fully reproducible environment with limited Internet dynamics. The WebCanvas project aims to pioneer the online evaluation of web agents. Additionally, we offer a suite of toolkits for scaling and maintaining web agent data to support this endeavor. We welcome any constructive feedback on the project and look forward to partnering with you in developing agents for web tasks!
+
+### Lynx
+- https://arxiv.org/abs/2407.08488
+
+Retrieval Augmented Generation (RAG) techniques aim to mitigate hallucinations in Large Language Models (LLMs). However, LLMs can still produce information that is unsupported or contradictory to the retrieved contexts. We introduce LYNX, a SOTA hallucination detection LLM that is capable of advanced reasoning on challenging real-world hallucination scenarios. To evaluate LYNX, we present HaluBench, a comprehensive hallucination evaluation benchmark, consisting of 15k samples sourced from various real-world domains. Our experiment results show that LYNX outperforms GPT-4o, Claude-3-Sonnet, and closed and open-source LLM-as-a-judge models on HaluBench. We release LYNX, HaluBench and our evaluation code for public access.
+
+### ComplexBench
+- https://arxiv.org/abs/2407.03978
+- https://github.com/thu-coai/ComplexBench
+
+Instruction following is one of the fundamental capabilities of large language models (LLMs). As the ability of LLMs is constantly improving, they have been increasingly applied to deal with complex human instructions in real-world scenarios. Therefore, how to evaluate the ability of complex instruction-following of LLMs has become a critical research problem. Existing benchmarks mainly focus on modeling different types of constraints in human instructions while neglecting the composition of different constraints, which is an indispensable constituent in complex instructions. To this end, we propose ComplexBench, a benchmark for comprehensively evaluating the ability of LLMs to follow complex instructions composed of multiple constraints. We propose a hierarchical taxonomy for complex instructions, including 4 constraint types, 19 constraint dimensions, and 4 composition types, and manually collect a high-quality dataset accordingly. To make the evaluation reliable, we augment LLM-based evaluators with rules to effectively verify whether generated texts can satisfy each constraint and composition. Furthermore, we obtain the final evaluation score based on the dependency structure determined by different composition types. ComplexBench identifies significant deficiencies in existing LLMs when dealing with complex instructions with multiple constraints composition.
+
+### Mr-Ben
+- https://github.com/dvlab-research/Mr-Ben
+- https://randolph-zeng.github.io/Mr-Ben.github.io/
+- https://arxiv.org/abs/2406.13975
+
+Large language models (LLMs) have shown increasing capability in problem-solving and decision-making, largely based on the step-by-step chain-of-thought reasoning processes. However, it has been increasingly challenging to evaluate the reasoning capability of LLMs. Concretely, existing outcome-based benchmarks begin to saturate and become less sufficient to monitor the progress. To this end, we present a process-based benchmark Mr.Ben that demands a meta reasoning skill, where LMs are asked to locate and analyse potential errors in automatically generated reasoning steps. Mr.Ben is a comprehensive benchmark comprising 5,975 questions collected from human experts, covering various subjects such as physics, chemistry, logic, coding, and more. By incorporating this approach, Mr.Ben facilitates a multidimensional evaluation of LLM reasoning abilities. We conducted an extensive assessment of open-source and closed-source LLMs using Mr.Ben, which revealed previously unidentified limitations and weaknesses in their meta-reasoning capabilities across different tasks.
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
@@ -4654,6 +4760,41 @@ Self-attention performs well in long context but has quadratic complexity. Exist
 - https://huggingface.co/arcee-ai/Arcee-Spark
 
 Arcee Spark is a powerful 7B parameter language model that punches well above its weight class. Initialized from Qwen2, this model underwent a sophisticated training process.
+
+### Mistral NeMo
+- https://huggingface.co/mistralai/Mistral-Nemo-Base-2407
+- https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407
+- https://mistral.ai/news/mistral-nemo/
+
+Mistral NeMo: our new best small model. A state-of-the-art 12B model with 128k context length, built in collaboration with NVIDIA, and released under the Apache 2.0 license.
+
+### Llama 3.1 405B
+- https://ai.meta.com/blog/meta-llama-3-1/
+
+Llama 3.1 405B is the first openly available model that rivals the top AI models when it comes to state-of-the-art capabilities in general knowledge, steerability, math, tool use, and multilingual translation. With the release of the 405B model, we’re poised to supercharge innovation—with unprecedented opportunities for growth and exploration. We believe the latest generation of Llama will ignite new applications and modeling paradigms, including synthetic data generation to enable the improvement and training of smaller models, as well as model distillation—a capability that has never been achieved at this scale in open source.
+
+### Mistral Large 2
+- https://huggingface.co/mistralai/Mistral-Large-Instruct-2407
+- https://mistral.ai/news/mistral-large-2407/
+
+Mistral Large 2 has a 128k context window and supports dozens of languages including French, German, Spanish, Italian, Portuguese, Arabic, Hindi, Russian, Chinese, Japanese, and Korean, along with 80+ coding languages including Python, Java, C, C++, JavaScript, and Bash.
+
+### SmolLM
+- https://huggingface.co/collections/HuggingFaceTB/smollm-6695016cad7167254ce15966
+
+A series of smol LLMs: 135M, 360M and 1.7B. We release base and Instruct models as well as the training corpus and some WebGPU demos.
+
+### DCLM-7B
+- https://huggingface.co/apple/DCLM-7B
+- https://github.com/mlfoundations/dclm
+- https://arxiv.org/abs/2406.11794
+
+DCLM-Baseline-7B is a 7 billion parameter language model trained on the DCLM-Baseline dataset, which was curated as part of the DataComp for Language Models (DCLM) benchmark. This model is designed to showcase the effectiveness of systematic data curation techniques for improving language model performance.
+
+### Minitron
+- https://github.com/NVlabs/Minitron
+
+Minitron is a family of small language models (SLMs) obtained by pruning NVIDIA's Nemotron-4 15B model. We prune model embedding size, attention heads, and MLP intermediate dimension, following which, we perform continued training with distillation to arrive at the final models.
 
 ### CodecLM
 - https://arxiv.org/abs/2404.05875
