@@ -45,7 +45,7 @@ Open-Source Language Model Pocket
 |*【Yi-1.5】|*【Yuan2.0-M32】|*【Skywork-MoE】|
 |*【Index-1.9B】|*【Qwen2】|*【Gemma-2-9B-Chinese-Chat】|
 |*【Gemma-2-27B-Chinese-Chat】|*【RWKV-6-World 14B】|*【Tele-FLM-1T】|
-|*【Llama3.1-Chinese-Chat】|||
+|*【Llama3.1-Chinese-Chat】|*【INF-34B】|*【InternLM2.5】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -89,6 +89,7 @@ Open-Source Language Model Pocket
 |*【JiuZhang3.0】|*【InternLM2-WQX】|
 |*【Math-Minos】|*【NuminaMath 7B TIR】|
 |*【MathΣtral】|*【LLaMAX】（翻译）|
+|*【Qwen2-Math】||
 
 |表格/数据分析||
 |---|---|
@@ -108,6 +109,7 @@ Open-Source Language Model Pocket
 |*【TinyStories】|
 |*【Higgs-Llama-3-70B】|
 |*【persona-hub】|
+|*【Peach-9B-8k-Roleplay】|
 
 |古汉语|
 |---|
@@ -148,6 +150,7 @@ Open-Source Language Model Pocket
 |*【A Comprehensive Survey on Self-Supervised Learning for Recommendation】|*【NoteLLM】|
 |*【LEARN】|*【YAYI-UIE】|
 |*【XRec】|*【Wukong】|
+|*【Leveraging LLM Reasoning Enhances Personalized Recommender Systems】||
 
 *文本向量/RAG*
 |  |  |
@@ -187,6 +190,7 @@ Open-Source Language Model Pocket
 |*【CodeR】|*【Mobile-Agent-v2】|
 |*【Husky】|*【TinyAgent】|
 |*【Tree Search for Language Model Agents】|*【octo-planner】|
+|*【MindSearch】||
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -246,6 +250,8 @@ Open-Source Language Model Pocket
 |*【Mistral NeMo】|*【Llama 3.1 405B】|
 |*【Mistral Large 2】|*【SmolLM】|
 |*【DCLM-7B】|*【Minitron】|
+|*【Gemma 2 2B/ShieldGemma/Gemma Scope】|*【SmolLM】|
+|*【nano-llama31】||
 
 *训练/推理*
 |  |  |
@@ -317,7 +323,8 @@ Open-Source Language Model Pocket
 |*【Instruction Pre-Training】|*【PEER】|
 |*【Step-DPO】|*【Data, Data Everywhere】|
 |*【Prover-Verifier Games】|*【Mem0】|
-|*【EAGLE-2】||
+|*【EAGLE-2】|*【LoRA-GA】|
+|*【Q-GaLore】||
 
 *评价*
 |  ||
@@ -376,7 +383,7 @@ Open-Source Language Model Pocket
 |*【tiny-universe】|*【llmc】|
 |*【LLMBox】|*【MarkLLM】|
 |*【MobileCPM】|*【LLM-Select】|
-|*【Transformer Architecture (LLMs: Zero-to-Hero)】||
+|*【Transformer Architecture (LLMs: Zero-to-Hero)】|*【Build a Large Language Model (From Scratch)】|
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -817,6 +824,12 @@ Mathstral is an instructed model – use it or fine-tune it as such, referring t
 
 Large Language Models~(LLMs) demonstrate remarkable translation capabilities in high-resource language tasks, yet their performance in low-resource languages is hindered by insufficient multilingual data during pre-training. To address this, we dedicate 35,000 A100-SXM4-80GB GPU hours in conducting extensive multilingual continual pre-training on the LLaMA series models, enabling translation support across more than 100 languages. Through a comprehensive analysis of training strategies, such as vocabulary expansion and data augmentation, we develop LLaMAX. Remarkably, without sacrificing its generalization ability, LLaMAX achieves significantly higher translation performance compared to existing open-source LLMs~(by more than 10 spBLEU points) and performs on-par with specialized translation model~(M2M-100-12B) on the Flores-101 benchmark. Extensive experiments indicate that LLaMAX can serve as a robust multilingual foundation model.
 
+### Qwen2-Math
+- https://huggingface.co/collections/Qwen/qwen2-math-66b4c9e072eda65b5ec7534d
+- https://github.com/QwenLM/Qwen2-Math
+
+Over the past year, we have dedicated significant effort to researching and enhancing the reasoning capabilities of large language models, with a particular focus on their ability to solve arithmetic and mathematical problems. Today, we are delighted to introduce a series of math-specific large language models of our Qwen2 series, Qwen2-Math, and Qwen2-Math-Instruct-1.5B/7B/72B. Qwen2-Math is a series of specialized math language models built upon the Qwen2 LLMs, which significantly outperforms the mathematical capabilities of open-source models and even closed-source models (e.g., GPT4o). We hope that Qwen2-Math can contribute to the scientific community by solving advanced mathematical problems that require complex, multi-step logical reasoning.
+
 ### ChatRWKV
 - https://github.com/BlinkDL/ChatRWKV
 
@@ -1149,6 +1162,11 @@ We perform supervised fine-tuning with our in-house instruction-following and ch
 - https://arxiv.org/pdf/2406.20094
 
 We propose a novel persona-driven data synthesis methodology that leverages various perspectives within a large language model (LLM) to create diverse synthetic data. To fully exploit this methodology at scale, we introduce Persona Hub -- a collection of 1 billion diverse personas automatically curated from web data. These 1 billion personas (~13% of the world's total population), acting as distributed carriers of world knowledge, can tap into almost every perspective encapsulated within the LLM, thereby facilitating the creation of diverse synthetic data at scale for various scenarios. By showcasing Persona Hub's use cases in synthesizing high-quality mathematical and logical reasoning problems, instructions (i.e., user prompts), knowledge-rich texts, game NPCs and tools (functions) at scale, we demonstrate persona-driven data synthesis is versatile, scalable, flexible, and easy to use, potentially driving a paradigm shift in synthetic data creation and applications in practice, which may have a profound impact on LLM research and development.
+
+### Peach-9B-8k-Roleplay
+- https://huggingface.co/ClosedCharacter/Peach-9B-8k-Roleplay
+
+Peach-9B-8k-Roleplay is a chat large language model obtained by finetuning 01-ai/Yi-1.5-9B model on more than 100K conversations created through our data synthesis approach.
 
 ### MeChat (Mental Health Support Chatbot)
 - https://github.com/qiuhuachuan/smile
@@ -2182,10 +2200,27 @@ Tele-FLM-1T (aka FLM-2-1T) is a 1T open-sourced multilingual large language mode
 
 We now introduce shenzhi-wang/Llama3.1-8B-Chinese-Chat! Compared to the original Meta-Llama-3.1-8B-Instruct model, our llama3.1-8B-Chinese-Chat model significantly reduces the issues of "Chinese questions with English answers" and the mixing of Chinese and English in responses. The training dataset contains >100K preference pairs, and it exhibits significant enhancements, especially in roleplay, function calling, and math capabilities!
 
+### INF-34B
+- https://github.com/infly-ai/INF-LLM/
+
+INF-34B has 34 billion parameters with a context window length of 32K, and is trained on about 3.5T well-processed tokens from English and Chinese bilingual corpus. Compared with open source models of the comparable size, INF-34B not only provides competitive performance in the OpenCompass evaluation, but also has impressive potential on both finance and healthcare domains. Besides, the quantized INF-34B runs on graphics cards of 24GB VRAM with negligible accuracy loss, which facilitates commercial applications, especially low-resource scenarios.
+
+### InternLM2.5
+- https://internlm.intern-ai.org.cn
+- https://hf.co/collections/internlm/internlm25-66853f32717072d17581bc13
+- https://github.com/InternLM/InternLM
+
+We release InternLM2.5-1.8B, InternLM2.5-1.8B-Chat, InternLM2.5-20B and InternLM2.5-20B-Chat. See model zoo below for download or model cards for more details.
+
 ### Transformer Architecture (LLMs: Zero-to-Hero)
 - https://medium.com/@waylandzhang/transformer-architecture-llms-zero-to-hero-98b1ee51a838
 
 This is the 3rd article in my Zero-to-Hero series. In this article we will walk through and explain each step of a Transformer based Large Language Model.
+
+### Build a Large Language Model (From Scratch)
+- https://github.com/rasbt/LLMs-from-scratch/tree/main
+
+In Build a Large Language Model (From Scratch), you'll learn and understand how large language models (LLMs) work from the inside out by coding them from the ground up, step by step. In this book, I'll guide you through creating your own LLM, explaining each stage with clear text, diagrams, and examples.
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -2622,6 +2657,18 @@ Mem0 provides an intelligent, adaptive memory layer for Large Language Models (L
 - https://huggingface.co/spaces/yuhuili/EAGLE-2
 
 EAGLE (Extrapolation Algorithm for Greater Language-model Efficiency) is a new baseline for fast decoding of Large Language Models (LLMs) with provable performance maintenance. This approach involves extrapolating the second-top-layer contextual feature vectors of LLMs, enabling a significant boost in generation efficiency.
+
+### LoRA-GA
+- https://arxiv.org/abs/2407.05000
+- https://github.com/Outsider565/LoRA-GA
+
+Fine-tuning large-scale pretrained models is prohibitively expensive in terms of computational and memory costs. LoRA, as one of the most popular Parameter-Efficient Fine-Tuning (PEFT) methods, offers a cost-effective alternative by fine-tuning an auxiliary low-rank model that has significantly fewer parameters. Although LoRA reduces the computational and memory requirements significantly at each iteration, extensive empirical evidence indicates that it converges at a considerably slower rate compared to full fine-tuning, ultimately leading to increased overall compute and often worse test performance. In our paper, we perform an in-depth investigation of the initialization method of LoRA and show that careful initialization (without any change of the architecture and the training algorithm) can significantly enhance both efficiency and performance. In particular, we introduce a novel initialization method, LoRA-GA (Low Rank Adaptation with Gradient Approximation), which aligns the gradients of low-rank matrix product with those of full fine-tuning at the first step. Our extensive experiments demonstrate that LoRA-GA achieves a convergence rate comparable to that of full fine-tuning (hence being significantly faster than vanilla LoRA as well as various recent improvements) while simultaneously attaining comparable or even better performance. For example, on the subset of the GLUE dataset with T5-Base, LoRA-GA outperforms LoRA by 5.69% on average. On larger models such as Llama 2-7B, LoRA-GA shows performance improvements of 0.34, 11.52%, and 5.05% on MT-bench, GSM8K, and Human-eval, respectively. Additionally, we observe up to 2-4 times convergence speed improvement compared to vanilla LoRA, validating its effectiveness in accelerating convergence and enhancing model performance. 
+
+### Q-GaLore
+- https://arxiv.org/pdf/2407.08296
+- https://github.com/VITA-Group/Q-GaLore
+
+Q-GaLore is a memory-efficient training methodology effective in both pre-training and fine-tuning scenarios. Q-GaLore incorporates two main components: (i) low precision training utilizing low-rank gradients, and (ii) lazy layer-wise subspace exploration. It enables full-parameter learning while requiring less memory, such as training a LLaMA-7B model from scratch on a single NVIDIA RTX 4060 Ti with only 16GB of memory.
 
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
@@ -4147,6 +4194,11 @@ Autonomous agents powered by language models (LMs) have demonstrated promise in 
 
 We're thrilled to introduce the Octo-planner, the latest breakthrough in on-device language models from Nexa AI. Developed for the Planner-Action Agents Framework, Octo-planner enables rapid and efficient planning without the need for cloud connectivity, this model together with Octopus-V2 can work on edge devices locally to support AI Agent usages.
 
+### MindSearch
+- https://github.com/InternLM/MindSearch
+
+MindSearch is an open-source AI Search Engine Framework with Perplexity.ai Pro performance. You can simply deploy it with your own perplexity.ai style search engine with either close-source LLMs (GPT, Claude) or open-source LLMs (InternLM2.5-7b-chat). 
+
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
 - https://huggingface.co/NexaAIDev/Octopus-v2
@@ -4691,6 +4743,11 @@ This paper presents a model-agnostic framework, XRec, that integrates the graph-
 
 Scaling laws play an instrumental role in the sustainable improvement in model quality. Unfortunately, recommendation models to date do not exhibit such laws similar to those observed in the domain of large language models, due to the inefficiencies of their upscaling mechanisms. This limitation poses significant challenges in adapting these models to increasingly more complex real-world datasets. In this paper, we propose an effective network architecture based purely on stacked factorization machines, and a synergistic upscaling strategy, collectively dubbed Wukong, to establish a scaling law in the domain of recommendation. Wukong's unique design makes it possible to capture diverse, any-order of interactions simply through taller and wider layers. We conducted extensive evaluations on six public datasets, and our results demonstrate that Wukong consistently outperforms state-of-the-art models quality-wise. Further, we assessed Wukong's scalability on an internal, large-scale dataset. The results show that Wukong retains its superiority in quality over state-of-the-art models, while holding the scaling law across two orders of magnitude in model complexity, extending beyond 100 GFLOP/example, where prior arts fall short.
 
+### Leveraging LLM Reasoning Enhances Personalized Recommender Systems
+- https://arxiv.org/abs/2408.00802
+
+Recent advancements have showcased the potential of Large Language Models (LLMs) in executing reasoning tasks, particularly facilitated by Chain-of-Thought (CoT) prompting. While tasks like arithmetic reasoning involve clear, definitive answers and logical chains of thought, the application of LLM reasoning in recommendation systems (RecSys) presents a distinct challenge. RecSys tasks revolve around subjectivity and personalized preferences, an under-explored domain in utilizing LLMs' reasoning capabilities. Our study explores several aspects to better understand reasoning for RecSys and demonstrate how task quality improves by utilizing LLM reasoning in both zero-shot and finetuning settings. Additionally, we propose RecSAVER (Recommender Systems Automatic Verification and Evaluation of Reasoning) to automatically assess the quality of LLM reasoning responses without the requirement of curated gold references or human raters. We show that our framework aligns with real human judgment on the coherence and faithfulness of reasoning responses. Overall, our work shows that incorporating reasoning into RecSys can improve personalized tasks, paving the way for further advancements in recommender system methodologies.
+
 ### Financial Datasets
 - https://github.com/virattt/financial-datasets
 
@@ -4795,6 +4852,26 @@ DCLM-Baseline-7B is a 7 billion parameter language model trained on the DCLM-Bas
 - https://github.com/NVlabs/Minitron
 
 Minitron is a family of small language models (SLMs) obtained by pruning NVIDIA's Nemotron-4 15B model. We prune model embedding size, attention heads, and MLP intermediate dimension, following which, we perform continued training with distillation to arrive at the final models.
+
+### Gemma 2 2B/ShieldGemma/Gemma Scope
+- https://developers.googleblog.com/en/smaller-safer-more-transparent-advancing-responsible-ai-with-gemma/
+- https://huggingface.co/collections/google/gemma-2-2b-release-66a20f3796a2ff2a7c76f98f
+
+In June, we released Gemma 2, our new best-in-class open models, in 27 billion (27B) and 9 billion (9B) parameter sizes. Since its debut, the 27B model quickly became one of the highest-ranking open models on the LMSYS Chatbot Arena leaderboard, even outperforming popular models more than twice its size in real conversations.
+
+But Gemma is about more than just performance. It's built on a foundation of responsible AI, prioritizing safety and accessibility. To support this commitment, we are excited to announce three new additions to the Gemma 2 family
+
+### SmolLM
+- https://huggingface.co/collections/HuggingFaceTB/smollm-6695016cad7167254ce15966
+
+A series of smol LLMs: 135M, 360M and 1.7B. We release base and Instruct models as well as the training corpus and some WebGPU demos
+
+### nano-llama31
+- https://github.com/karpathy/nano-llama31
+
+This repo is to Llama 3.1 what nanoGPT is to GPT-2. i.e. it is a minimal, dependency-free implementation of the Llama 3.1 architecture, and it can train, finetune, and inference it very simply. This is compared to the official code release from Meta and the huggingface implementation, which both feature heavier dependencies and a lot more code (e.g. fair).
+
+The code currently focuses on the 8B base model of Llama 3.1.
 
 ### CodecLM
 - https://arxiv.org/abs/2404.05875
