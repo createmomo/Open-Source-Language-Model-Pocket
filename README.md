@@ -1,4 +1,4 @@
-# 开源语言模型百宝袋 (Ver. 3.5)
+# 开源语言模型百宝袋 (Ver. 3.6)
 Open-Source Language Model Pocket
 
 **注意**：由于此文本内容太多了，直接在Github网页阅览会出现内容不全（导致部分内容搜索不到）的问题。建议下载到本地查阅。
@@ -39,13 +39,14 @@ Open-Source Language Model Pocket
 |build_MiniLLM_from_scratch|RWKV-6 World|Mengzi3|
 |Eurus|Chinese Tiny LLM|HammerLLM|
 |360智脑|Steel-LLM|XVERSE-MoE-A4.2B|
-|*【llama3-Chinese-chat】|*【Llama3-Chinese-Chat（ORPO）】|*【DeepSeek-V2】|
-|*【PanGu-π】|*【Eurux-8x22B】|*【Chinese-LLaMA-Alpaca-3】|
-|*【OpenBuddy-Llama3-70B-v21.1-8k】|*【MAP-NEO】|*【llms-from-scratch-cn】|
-|*【Yi-1.5】|*【Yuan2.0-M32】|*【Skywork-MoE】|
-|*【Index-1.9B】|*【Qwen2】|*【Gemma-2-9B-Chinese-Chat】|
-|*【Gemma-2-27B-Chinese-Chat】|*【RWKV-6-World 14B】|*【Tele-FLM-1T】|
-|*【Llama3.1-Chinese-Chat】|*【INF-34B】|*【InternLM2.5】|
+|llama3-Chinese-chat|Llama3-Chinese-Chat（ORPO）|DeepSeek-V2|
+|PanGu-π|Eurux-8x22B|Chinese-LLaMA-Alpaca-3|
+|OpenBuddy-Llama3-70B-v21.1-8k|MAP-NEO|llms-from-scratch-cn|
+|Yi-1.5|Yuan2.0-M32|Skywork-MoE|
+|Index-1.9B|Qwen2|Gemma-2-9B-Chinese-Chat|
+|Gemma-2-27B-Chinese-Chat|RWKV-6-World 14B|Tele-FLM-1T|
+|Llama3.1-Chinese-Chat|INF-34B|InternLM2.5|
+|*【LongWriter】|||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -58,9 +59,9 @@ Open-Source Language Model Pocket
 |WiNGPT|CareGPT|孙思邈|
 |MolGen（药物研发）|Taiyi（太一）|MedAgents|
 |Molecule Optimization|MolTC|Mol-Instructions|
-|Multilingual Medicine|Sequel|*【Gene editing】|
-|*【Llama-3-8B-UltraMedical】|*【PH-LLM】|*【ProLLM】|
-|*【MolecularGPT】|||
+|Multilingual Medicine|Sequel|Gene editing|
+|Llama-3-8B-UltraMedical|PH-LLM|ProLLM|
+|MolecularGPT|||
 
 |经济/金融|||
 |---|---|---|
@@ -85,18 +86,18 @@ Open-Source Language Model Pocket
 |chatglm-maths|Abel|
 |InternLM-Math|DeepSeekMath|
 |LeerooDedicated-Math-7b|SimpleGeometry|
-|Rho-1|*【ChatGLM-Math】|
-|*【JiuZhang3.0】|*【InternLM2-WQX】|
-|*【Math-Minos】|*【NuminaMath 7B TIR】|
-|*【MathΣtral】|*【LLaMAX】（翻译）|
-|*【Qwen2-Math】||
+|Rho-1|ChatGLM-Math|
+|JiuZhang3.0|InternLM2-WQX|
+|Math-Minos|NuminaMath 7B TIR|
+|MathΣtral|LLaMAX（翻译）|
+|Qwen2-Math||
 
 |表格/数据分析||
 |---|---|
 |TableGPT|Data-Copilot|
 |Tabular LLM|Chain-of-table|
 |Data Interpreter|TableLLM|
-|Lag-Llama|*【TabuLa-8B】|
+|Lag-Llama|TabuLa-8B|
 
 |自媒体/角色扮演/风格/故事|
 |---|
@@ -105,11 +106,13 @@ Open-Source Language Model Pocket
 |Haruhi-Zero|
 |Translational-Style-ChatLLM西式翻译腔|
 |StyleLLM|
-|*【Tianji来事儿AI】|
-|*【TinyStories】|
-|*【Higgs-Llama-3-70B】|
-|*【persona-hub】|
-|*【Peach-9B-8k-Roleplay】|
+|Tianji来事儿AI|
+|TinyStories|
+|Higgs-Llama-3-70B|
+|persona-hub|
+|Peach-9B-8k-Roleplay|
+|*【Hermes 3】|
+|*【SkyReels（短剧）】|
 
 |古汉语|
 |---|
@@ -126,10 +129,12 @@ Open-Source Language Model Pocket
 |MobileLLM|Stable Code Instruct 3B|
 |ReALM|aiXcoder|
 |CodeQwen1.5|AutoCodeRover|
-|CodeGemma|*【Snowflake Arctic】|
-|*【dolphin-2.9-llama3-70b】|*【Granite】|
-|*【StarCoder2-15B-Instruct-v0.1】|*【AutoCoder】|
-|*【CodeGeeX4】|*【xLAM】|
+|CodeGemma|Snowflake Arctic|
+|dolphin-2.9-llama3-70b|Granite|
+|StarCoder2-15B-Instruct-v0.1|AutoCoder|
+|CodeGeeX4|xLAM|
+|*【deepin V23】|*【WaveCoder】|
+|*【Llama-3.1-Storm-8B】||
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -137,6 +142,7 @@ Open-Source Language Model Pocket
 |OceanGPT|
 |K2&GeoGalactica|
 |SciGLM|
+|*【KAN 2.0】|
 
 *Recommendation/IR/Information Extraction*
 |||
@@ -144,13 +150,13 @@ Open-Source Language Model Pocket
 |LLM for Recommendation Systems|Transformer Index for GEnerative Recommenders (TIGER)|
 |EasyRL4Rec|RLMRec|
 |RecAI|Actions Speak Louder than Words|
-|PPM|*【LLaRA】|
-|*【Awesome Information Retrieval in the Age of Large Language Model】|*【LLMs heart MIR】|
-|*【When to Retrieve】|*【Lite-LLM4Rec】|
-|*【A Comprehensive Survey on Self-Supervised Learning for Recommendation】|*【NoteLLM】|
-|*【LEARN】|*【YAYI-UIE】|
-|*【XRec】|*【Wukong】|
-|*【Leveraging LLM Reasoning Enhances Personalized Recommender Systems】||
+|PPM|LLaRA|
+|Awesome Information Retrieval in the Age of Large Language Model|LLMs heart MIR|
+|When to Retrieve|Lite-LLM4Rec|
+|A Comprehensive Survey on Self-Supervised Learning for Recommendation|NoteLLM|
+|LEARN|YAYI-UIE|
+|XRec|Wukong|
+|Leveraging LLM Reasoning Enhances Personalized Recommender Systems||
 
 *文本向量/RAG*
 |  |  |
@@ -162,10 +168,10 @@ Open-Source Language Model Pocket
 |Chat with MLX|LLocalSearch|
 |RAGFlow|Dot|
 |Ollama Embedding Models|LLM2Vec|
-|*【gecko】|*【Cognita】|
-|*【Piccolo2】|*【NV-Embed】|
-|*【RankRAG】|*【LightRAG】|
-|*【GraphRAG】||
+|gecko|Cognita|
+|Piccolo2|NV-Embed|
+|RankRAG|LightRAG|
+|GraphRAG|*【gte-multilinguial】|
 
 *Agent*
 |  |  |
@@ -185,12 +191,13 @@ Open-Source Language Model Pocket
 |AgentStudio|AnyTool|
 |TinyAgent|Octopus v2|
 |ReadAgent|STORM|
-|*【AgentRun】|*【OS-Copilot】|
-|*【AutoWebGLM】|*【Agent Hospital】|
-|*【CodeR】|*【Mobile-Agent-v2】|
-|*【Husky】|*【TinyAgent】|
-|*【Tree Search for Language Model Agents】|*【octo-planner】|
-|*【MindSearch】||
+|AgentRun|OS-Copilot|
+|AutoWebGLM|Agent Hospital|
+|CodeR|Mobile-Agent-v2|
+|Husky|TinyAgent|
+|Tree Search for Language Model Agents|octo-planner|
+|MindSearch|*【AgentInstruct】|
+|*【AgentCourt】||
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -239,19 +246,21 @@ Open-Source Language Model Pocket
 |WizardLM-2|RecurrentGemma|
 |CodecLM|MEGALODON|
 |Stable LM 2 12B|Mixtral 8x22B|
-|*【Phi-3】|*【Llama 3】|
-|*【OpenELM】|*【base-7b-v0.2】|
-|*【FILM-7B】|*【llama3 implemented from scratch】|
-|*【2.3MParams-LLM-From-Scratch-Python】|*【KAN-GPT】|
-|*【Aya-23】|*【Mamba-2】|
-|*【Recurrentgemma】|*【Nemotron-4 340B】|
-|*【Gemma-2】|*【Gemini Nano】|
-|*【TTT】|*【Arcee-Spark】|
-|*【Mistral NeMo】|*【Llama 3.1 405B】|
-|*【Mistral Large 2】|*【SmolLM】|
-|*【DCLM-7B】|*【Minitron】|
-|*【Gemma 2 2B/ShieldGemma/Gemma Scope】|*【SmolLM】|
-|*【nano-llama31】||
+|Phi-3|Llama 3|
+|OpenELM|base-7b-v0.2|
+|FILM-7B|llama3 implemented from scratch|
+|2.3MParams-LLM-From-Scratch-Python|KAN-GPT|
+|Aya-23|Mamba-2|
+|Recurrentgemma|Nemotron-4 340B|
+|Gemma-2|Gemini Nano|
+|TTT|Arcee-Spark|
+|Mistral NeMo|Llama 3.1 405B|
+|Mistral Large 2|SmolLM|
+|DCLM-7B|Minitron|
+|Gemma 2 2B/ShieldGemma/Gemma Scope|SmolLM|
+|nano-llama31|*【instant-smollm】|
+|*【Jamba 1.5】|*【Phi-3.5】|
+|*【1.5-Pints】||
 
 *训练/推理*
 |  |  |
@@ -309,22 +318,23 @@ Open-Source Language Model Pocket
 |Mergoo|qwen-vllm|
 |SiLLM|How to Train Data-Efficient LLMs|
 |sDPO|PiSSA|
-|LongRoPE|*【ORPO】|
-|*【How to Train Data-Efficient LLMs】|*【Better & Faster Large Language Models via Multi-token Prediction】|
-|*【Llama-3 70B Gradient Adapter】|*【Unsloth】|
-|*【RLHF Workflow】|*【SimPO】|
-|*【ODPO】|*【ΨPO】|
-|*【MoRA】|*【LOFIT】|
-|*【MEFT】|*【PowerInfer-2】|
-|*【Emulated Disalignment】|*【Aligning Large Language Models with Representation Editing: A Control Perspective】|
-|*【Q\*】|*【TDPO】|
-|*【ExCP】|*【MindStar】|
-|*【LaMDA】|*【MInference】|
-|*【Instruction Pre-Training】|*【PEER】|
-|*【Step-DPO】|*【Data, Data Everywhere】|
-|*【Prover-Verifier Games】|*【Mem0】|
-|*【EAGLE-2】|*【LoRA-GA】|
-|*【Q-GaLore】||
+|LongRoPE|ORPO|
+|How to Train Data-Efficient LLMs|Better & Faster Large Language Models via Multi-token Prediction|
+|Llama-3 70B Gradient Adapter|Unsloth|
+|RLHF Workflow|SimPO|
+|ODPO|ΨPO|
+|MoRA|LOFIT|
+|MEFT|PowerInfer-2|
+|Emulated Disalignment|Aligning Large Language Models with Representation Editing: A Control Perspective|
+|Q\*|TDPO|
+|ExCP|MindStar|
+|LaMDA|MInference|
+|Instruction Pre-Training|PEER|
+|Step-DPO|Data, Data Everywhere|
+|Prover-Verifier Games|Mem0|
+|EAGLE-2|LoRA-GA|
+|Q-GaLore|*【rStar】|
+|*【T-MAC】||
 
 *评价*
 |  ||
@@ -350,13 +360,13 @@ Open-Source Language Model Pocket
 |GAMA-Bench|FineMath|
 |ToolEmu|ClongEval|
 |Counting-Stars|InfiCoder-Eval|
-|*【MathVerse】|*【CoderUJB】|
-|*【LooGLE】|*【McEval】|
-|*【CRAG】|*【BigCodeBench】|
-|*【Prometheus 2】|*【Open LLM Leaderboard】|
-|*【CriticGPT】|*【Test  f Time】|
-|*【WebCanvas】|*【Lynx】|
-|*【ComplexBench】|*【Mr-Ben】|
+|MathVerse|CoderUJB|
+|LooGLE|McEval|
+|CRAG|BigCodeBench|
+|Prometheus 2|Open LLM Leaderboard|
+|CriticGPT|Test  f Time|
+|WebCanvas|Lynx|
+|ComplexBench|Mr-Ben|
 
 *其它*
 |  |  |
@@ -378,12 +388,12 @@ Open-Source Language Model Pocket
 |synthetic-data-save-costs|Data is Better Together|
 |Large Language Models in Finance|WanJuan-CC|
 |Larimar|Financial Datasets|
-|LLM-UM-Reading|*【so-large-lm】|
-|*【Fine-tune Llama 3 with ORPO】|*【COIG-CQIA】|
-|*【tiny-universe】|*【llmc】|
-|*【LLMBox】|*【MarkLLM】|
-|*【MobileCPM】|*【LLM-Select】|
-|*【Transformer Architecture (LLMs: Zero-to-Hero)】|*【Build a Large Language Model (From Scratch)】|
+|LLM-UM-Reading|so-large-lm|
+|Fine-tune Llama 3 with ORPO|COIG-CQIA|
+|tiny-universe|llmc|
+|LLMBox|MarkLLM|
+|MobileCPM|LLM-Select|
+|Transformer Architecture (LLMs: Zero-to-Hero)|Build a Large Language Model (From Scratch)|
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -1168,6 +1178,18 @@ We propose a novel persona-driven data synthesis methodology that leverages vari
 
 Peach-9B-8k-Roleplay is a chat large language model obtained by finetuning 01-ai/Yi-1.5-9B model on more than 100K conversations created through our data synthesis approach.
 
+### Hermes 3
+- https://nousresearch.com/wp-content/uploads/2024/08/Hermes-3-Technical-Report.pdf
+- https://nousresearch.com/hermes3/
+
+Hermes 3 contains advanced long-term context retention and multi-turn conversation capability, complex roleplaying and internal monologue abilities, and enhanced agentic function-calling. Our training data aggressively encourages the model to follow the system and instruction prompts exactly and in an adaptive manner. Hermes 3 was created by fine-tuning Llama 3.1 8B, 70B and 405B, and training on a dataset of primarily synthetically generated responses. The model boasts comparable and superior performance to Llama 3.1 while unlocking deeper capabilities in reasoning and creativity.
+
+### SkyReels（短剧）
+- https://github.com/vaew/skyscript-100m
+- https://skyreels.ai/beta
+
+Generating high-quality shooting scripts containing information such as scene and shot language is essential for short drama script generation. We collect 6,660 popular short drama episodes from the Internet, each with an average of 100 short episodes, and the total number of short episodes is about 80,000, with a total duration of about 2,000 hours and totaling 10 terabytes (TB). We perform keyframe extraction and annotation on each episode to obtain about 10,000,000 shooting scripts. We perform 100 script restorations on the extracted shooting scripts based on our self-developed large short drama generation model SkyReels. This leads to a dataset containing 1,000,000,000 pairs of scripts and shooting scripts for short dramas, called SkyScript-100M. We compare SkyScript-100M with the existing dataset in detail and demonstrate some deeper insights that can be achieved based on SkyScript-100M. Based on SkyScript-100M, researchers can achieve several deeper and more far-reaching script optimization goals, which may drive a paradigm shift in the entire field of text-to-video and significantly advance the field of short drama video generation.
+
 ### MeChat (Mental Health Support Chatbot)
 - https://github.com/qiuhuachuan/smile
 - https://huggingface.co/qiuhuachuan/MeChat
@@ -1770,6 +1792,22 @@ We introduce CodeGeeX4-ALL-9B, the open-source version of the latest CodeGeeX4 m
 
 We are excited to announce the release of our two function-calling models: xLAM-1b-fc-r and xLAM-7b-fc-r. These models have achieved impressive rankings, placing #3 and #25 on the Berkeley Function-Calling Leaderboard, outperforming many significantly larger models. Stay tuned for more powerful models coming soon.
 
+### deepin V23
+- https://www.deepin.org/en/deepin-os-deepin-v23-beta-is-officially-released/
+
+deepin is an open-source desktop operating system based on Linux. As the first desktop operating system in China rooted in its community, the deepin community is thrilled to announce the official release of deepin V23 beta! Come and experience it, and contribute your thoughts and feedback.
+
+### WaveCoder
+- https://arxiv.org/pdf/2312.14187
+- https://github.com/microsoft/WaveCoder
+
+WaveCoder 🌊 is a series of large language models (LLMs) for the coding domain, designed to solve relevant problems in the field of code through instruction-following learning. Its training dataset was generated from a subset of code-search-net data using a generator-discriminator framework based on LLMs that we proposed, covering four general code-related tasks: code generation, code summary, code translation, and code repair.
+
+### Llama-3.1-Storm-8B
+- https://huggingface.co/akjindal53244/Llama-3.1-Storm-8B
+
+Llama-3.1-Storm-8B builds upon the foundation of Llama-3.1-8B-Instruct, aiming to enhance both conversational and function calling capabilities within the 8B parameter model class.
+
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
 
@@ -1801,6 +1839,11 @@ GeoGalactica: GeoGalactica is from further pre-training of Galactica -- a top-pe
 - https://github.com/THUDM/SciGLM
 
 Large Language Models (LLMs) have shown promise in assisting scientific discovery. However, such applications are currently limited by LLMs' deficiencies in understanding intricate scientific concepts, deriving symbolic equations, and solving advanced numerical calculations. To bridge these gaps, we introduce SciGLM, a suite of scientific language models able to conduct college-level scientific reasoning. Central to our approach is a novel self-reflective instruction annotation framework to address the data scarcity challenge in the science domain. This framework leverages existing LLMs to generate step-by-step reasoning for unlabelled scientific questions, followed by a process of self-reflective critic-and-revise. Applying this framework, we curated SciInstruct, a diverse and high-quality dataset encompassing mathematics, physics, chemistry, and formal proofs. We fine-tuned the ChatGLM family of language models with SciInstruct, enhancing their capabilities in scientific and mathematical reasoning. Remarkably, SciGLM consistently improves both the base model (ChatGLM3-6B-Base) and larger-scale models (12B and 32B), without sacrificing the language understanding capabilities of the base model. This makes SciGLM a suitable foundational model to facilitate diverse scientific discovery tasks.
+
+### KAN 2.0
+- https://arxiv.org/abs/2408.10205
+
+A major challenge of AI + Science lies in their inherent incompatibility: today's AI is primarily based on connectionism, while science depends on symbolism. To bridge the two worlds, we propose a framework to seamlessly synergize Kolmogorov-Arnold Networks (KANs) and science. The framework highlights KANs' usage for three aspects of scientific discovery: identifying relevant features, revealing modular structures, and discovering symbolic formulas. The synergy is bidirectional: science to KAN (incorporating scientific knowledge into KANs), and KAN to science (extracting scientific insights from KANs). We highlight major new functionalities in the pykan package: (1) MultKAN: KANs with multiplication nodes. (2) kanpiler: a KAN compiler that compiles symbolic formulas into KANs. (3) tree converter: convert KANs (or any neural networks) to tree graphs. Based on these tools, we demonstrate KANs' capability to discover various types of physical laws, including conserved quantities, Lagrangians, symmetries, and constitutive laws.
 
 ### Ziya-Reader-13B
 - https://huggingface.co/IDEA-CCNL/Ziya-Reader-13B-v1.0
@@ -2211,6 +2254,15 @@ INF-34B has 34 billion parameters with a context window length of 32K, and is tr
 - https://github.com/InternLM/InternLM
 
 We release InternLM2.5-1.8B, InternLM2.5-1.8B-Chat, InternLM2.5-20B and InternLM2.5-20B-Chat. See model zoo below for download or model cards for more details.
+
+### LongWriter
+- https://github.com/THUDM/LongWriter
+- https://huggingface.co/THUDM/LongWriter-glm4-9b
+- https://arxiv.org/abs/2408.07055
+
+We open-source two models: LongWriter-glm4-9b and LongWriter-llama3.1-8b, trained based on GLM-4-9B and Meta-Llama-3.1-8B, respectively. These two models point to the "LongWriter-9B-DPO" and "LongWriter-8B" models in our paper. 
+
+Current long context large language models (LLMs) can process inputs up to 100,000 tokens, yet struggle to generate outputs exceeding even a modest length of 2,000 words. Through controlled experiments, we find that the model's effective generation length is inherently bounded by the sample it has seen during supervised fine-tuning (SFT). In other words, their output limitation is due to the scarcity of long-output examples in existing SFT datasets. To address this, we introduce AgentWrite, an agent-based pipeline that decomposes ultra-long generation tasks into subtasks, enabling off-the-shelf LLMs to generate coherent outputs exceeding 20,000 words. Leveraging AgentWrite, we construct LongWriter-6k, a dataset containing 6,000 SFT data with output lengths ranging from 2k to 32k words. By incorporating this dataset into model training, we successfully scale the output length of existing models to over 10,000 words while maintaining output quality. We also develop LongBench-Write, a comprehensive benchmark for evaluating ultra-long generation capabilities. Our 9B parameter model, further improved through DPO, achieves state-of-the-art performance on this benchmark, surpassing even much larger proprietary models. In general, our work demonstrates that existing long context LLM already possesses the potential for a larger output window--all you need is data with extended output during model alignment to unlock this capability.
 
 ### Transformer Architecture (LLMs: Zero-to-Hero)
 - https://medium.com/@waylandzhang/transformer-architecture-llms-zero-to-hero-98b1ee51a838
@@ -2669,6 +2721,19 @@ Fine-tuning large-scale pretrained models is prohibitively expensive in terms of
 - https://github.com/VITA-Group/Q-GaLore
 
 Q-GaLore is a memory-efficient training methodology effective in both pre-training and fine-tuning scenarios. Q-GaLore incorporates two main components: (i) low precision training utilizing low-rank gradients, and (ii) lazy layer-wise subspace exploration. It enables full-parameter learning while requiring less memory, such as training a LLaMA-7B model from scratch on a single NVIDIA RTX 4060 Ti with only 16GB of memory.
+
+### rStar
+- Mutual Reasoning Makes Smaller LLMs Stronger Problem-Solvers
+- https://github.com/zhentingqi/rStar
+- https://arxiv.org/pdf/2408.06195
+
+This paper introduces rStar, a self-play mutual reasoning approach that significantly improves reasoning capabilities of small language models (SLMs) without fine-tuning or superior models. rStar decouples reasoning into a self-play mutual generation-discrimination process. First, a target SLM augments the Monte Carlo Tree Search (MCTS) with a rich set of human-like reasoning actions to construct higher quality reasoning trajectories. Next, another SLM, with capabilities similar to the target SLM, acts as a discriminator to verify each trajectory generated by the target SLM. The mutually agreed reasoning trajectories are considered mutual consistent, thus are more likely to be correct. Extensive experiments across five SLMs demonstrate rStar can effectively solve diverse reasoning problems, including GSM8K, GSM-Hard, MATH, SVAMP, and StrategyQA. Remarkably, rStar boosts GSM8K accuracy from 12.51% to 63.91% for LLaMA2-7B, from 36.46% to 81.88% for Mistral-7B, from 74.53% to 91.13% for LLaMA3-8B-Instruct. 
+
+### T-MAC
+- https://github.com/microsoft/T-MAC
+- https://www.arxiv.org/pdf/2407.00088
+
+T-MAC is a kernel library to directly support mixed-precision matrix multiplication (int1/2/3/4 x int8/fp16/fp32) without the need for dequantization by utilizing lookup tables. T-MAC aims to boost low-bit LLM inference on CPUs. T-MAC already offers support for various low-bit models, including W4A16 from GPTQ/gguf, W2A16 from BitDistiller/EfficientQAT and W1(.58)A8 from BitNet on OSX/Linux/Windows equipped with ARM/Intel CPUs.
 
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
@@ -3915,6 +3980,14 @@ LightRAG helps developers with both building and optimizing Retriever-Agent-Gene
 
 The GraphRAG project is a data pipeline and transformation suite that is designed to extract meaningful, structured data from unstructured text using the power of LLMs.
 
+### gte-multilinguial
+- https://huggingface.co/Alibaba-NLP
+- https://huggingface.co/collections/Alibaba-NLP/gte-models-6680f0b13f885cb431e6d469
+- https://arxiv.org/abs/2407.19669
+
+We present systematic efforts in building long-context multilingual text representation model (TRM) and reranker from scratch for text retrieval. We first introduce a text encoder (base size) enhanced with RoPE and unpadding, pre-trained in a native 8192-token context (longer than 512 of previous multilingual encoders). Then we construct a hybrid TRM and a cross-encoder reranker by contrastive learning. Evaluations show that our text encoder outperforms the same-sized previous state-of-the-art XLM-R. Meanwhile, our TRM and reranker match the performance of large-sized state-of-the-art BGE-M3 models and achieve better results on long-context retrieval benchmarks. Further analysis demonstrate that our proposed models exhibit higher efficiency during both training and inference. We believe their efficiency and effectiveness could benefit various researches and industrial applications.
+
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -4198,6 +4271,17 @@ We're thrilled to introduce the Octo-planner, the latest breakthrough in on-devi
 - https://github.com/InternLM/MindSearch
 
 MindSearch is an open-source AI Search Engine Framework with Perplexity.ai Pro performance. You can simply deploy it with your own perplexity.ai style search engine with either close-source LLMs (GPT, Claude) or open-source LLMs (InternLM2.5-7b-chat). 
+
+### AgentInstruct
+- https://arxiv.org/pdf/2407.03502
+
+Synthetic data is becoming increasingly important for accelerating the development of language models, both large and small. Despite several successful use cases, researchers also raised concerns around model collapse and drawbacks of imitating other models. This discrepancy can be attributed to the fact that synthetic data varies in quality and diversity. Effective use of synthetic data usually requires significant human effort in curating the data. We focus on using synthetic data for post-training, specifically creating data by powerful models to teach a new skill or behavior to another model, we refer to this setting as Generative Teaching. We introduce AgentInstruct, an extensible agentic framework for automatically creating large amounts of diverse and high-quality synthetic data. AgentInstruct can create both the prompts and responses, using only raw data sources like text documents and code files as seeds. We demonstrate the utility of AgentInstruct by creating a post training dataset of 25M pairs to teach language models different skills, such as text editing, creative writing, tool usage, coding, reading comprehension, etc. The dataset can be used for instruction tuning of any base model. We post-train Mistral-7b with the data. When comparing the resulting model Orca-3 to Mistral-7b-Instruct (which uses the same base model), we observe significant improvements across many benchmarks. For example, 40% improvement on AGIEval, 19% improvement on MMLU, 54% improvement on GSM8K, 38% improvement on BBH and 45% improvement on AlpacaEval. Additionally, it consistently outperforms other models such as LLAMA-8B-instruct and GPT-3.5-turbo.
+
+### AgentCourt
+- https://doi.org/10.48550/arXiv.2408.08089
+- https://github.com/relic-yuexi/AgentCourt
+
+In this paper, we present a simulation system called AgentCourt that simulates the entire courtroom process. The judge, plaintiff's lawyer, defense lawyer, and other participants are autonomous agents driven by large language models (LLMs). Our core goal is to enable lawyer agents to learn how to argue a case, as well as improving their overall legal skills, through courtroom process simulation. To achieve this goal, we propose an adversarial evolutionary approach for the lawyer-agent. Since AgentCourt can simulate the occurrence and development of court hearings based on a knowledge base and LLM, the lawyer agents can continuously learn and accumulate experience from real court cases. The simulation experiments show that after two lawyer-agents have engaged in a thousand adversarial legal cases in AgentCourt (which can take a decade for real-world lawyers), compared to their pre-evolutionary state, the evolved lawyer agents exhibit consistent improvement in their ability to handle legal tasks. To enhance the credibility of our experimental results, we enlisted a panel of professional lawyers to evaluate our simulations. The evaluation indicates that the evolved lawyer agents exhibit notable advancements in responsiveness, as well as expertise and logical rigor. This work paves the way for advancing LLM-driven agent technology in legal scenarios. 
 
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
@@ -4872,6 +4956,35 @@ A series of smol LLMs: 135M, 360M and 1.7B. We release base and Instruct models 
 This repo is to Llama 3.1 what nanoGPT is to GPT-2. i.e. it is a minimal, dependency-free implementation of the Llama 3.1 architecture, and it can train, finetune, and inference it very simply. This is compared to the official code release from Meta and the huggingface implementation, which both feature heavier dependencies and a lot more code (e.g. fair).
 
 The code currently focuses on the 8B base model of Llama 3.1.
+
+### instant-smollm
+- https://huggingface.co/spaces/HuggingFaceTB/instant-smollm
+- https://huggingface.co/blog/smollm
+- https://huggingface.co/spaces/HuggingFaceTB/instant-smol
+
+SmolLM is a series of language models available in three sizes: 135M, 360M, and 1.7B parameters.
+
+These models are trained on SmolLM-Corpus, a curated collection of high-quality educational and synthetic data designed for training LLMs. For further details, we refer to our blogpost.
+
+To build SmolLM-Instruct, we finetune the base models on publicly available datasets.
+
+### Jamba 1.5
+- https://www.ai21.com/blog/announcing-jamba-model-family
+- https://huggingface.co/ai21labs/AI21-Jamba-1.5-Mini
+
+we are debuting the Jamba 1.5 family of open models: Jamba 1.5 Mini and Jamba 1.5 Large. Built on our novel SSM-Transformer architecture, these models demonstrate superior long context handling, speed, and quality—outranking competitors in their size class and marking the first time a non-Transformer model has been successfully scaled to the quality and strength of the market’s leading models. 
+
+### Phi-3.5
+- https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/discover-the-new-multi-lingual-high-quality-phi-3-5-slms/ba-p/4225280
+- https://huggingface.co/microsoft/Phi-3.5-mini-instruct
+
+Phi-3.5-mini is a lightweight, state-of-the-art open model built upon datasets used for Phi-3 - synthetic data and filtered publicly available websites - with a focus on very high-quality, reasoning dense data. The model belongs to the Phi-3 model family and supports 128K token context length. The model underwent a rigorous enhancement process, incorporating both supervised fine-tuning, proximal policy optimization, and direct preference optimization to ensure precise instruction adherence and robust safety measures.
+
+### 1.5-Pints
+- https://github.com/pints-ai/1.5-Pints
+
+A recipe to pre-train models in 9 days, to become comparable AI assistants to the likes of Apple OpenELM and Microsoft Phi.
+This repo contains the model architecture, training scripts, and utilities of 1.5-Pints and 0.12-Pint, developed by Pints.AI. By providing access to the model's codebase and architecture, this initiative seeks to facilitate the replication, experimentation, and further open-source development of Pint.
 
 ### CodecLM
 - https://arxiv.org/abs/2404.05875
