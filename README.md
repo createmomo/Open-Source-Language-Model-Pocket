@@ -156,7 +156,7 @@ Open-Source Language Model Pocket
 |A Comprehensive Survey on Self-Supervised Learning for Recommendation|NoteLLM|
 |LEARN|YAYI-UIE|
 |XRec|Wukong|
-|Leveraging LLM Reasoning Enhances Personalized Recommender Systems||
+|Leveraging LLM Reasoning Enhances Personalized Recommender Systems|*【Transformers in music recommendation】|
 
 *文本向量/RAG*
 |  |  |
@@ -172,6 +172,7 @@ Open-Source Language Model Pocket
 |Piccolo2|NV-Embed|
 |RankRAG|LightRAG|
 |GraphRAG|*【gte-multilinguial】|
+|*【nano-graphrag】|*【MaxKB】|
 
 *Agent*
 |  |  |
@@ -197,7 +198,8 @@ Open-Source Language Model Pocket
 |Husky|TinyAgent|
 |Tree Search for Language Model Agents|octo-planner|
 |MindSearch|*【AgentInstruct】|
-|*【AgentCourt】||
+|*【AgentCourt】|*【AI-Scientist】|
+|*【RD-Agent】||
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -260,7 +262,7 @@ Open-Source Language Model Pocket
 |Gemma 2 2B/ShieldGemma/Gemma Scope|SmolLM|
 |nano-llama31|*【instant-smollm】|
 |*【Jamba 1.5】|*【Phi-3.5】|
-|*【1.5-Pints】||
+|*【1.5-Pints】|*【Llama-3.1-Minitron 4B】|
 
 *训练/推理*
 |  |  |
@@ -334,7 +336,8 @@ Open-Source Language Model Pocket
 |Prover-Verifier Games|Mem0|
 |EAGLE-2|LoRA-GA|
 |Q-GaLore|*【rStar】|
-|*【T-MAC】||
+|*【T-MAC】|*【LLM-zero2hero】|
+|*【MobileQuant】|*【min-p sampling】|
 
 *评价*
 |  ||
@@ -2735,6 +2738,24 @@ This paper introduces rStar, a self-play mutual reasoning approach that signific
 
 T-MAC is a kernel library to directly support mixed-precision matrix multiplication (int1/2/3/4 x int8/fp16/fp32) without the need for dequantization by utilizing lookup tables. T-MAC aims to boost low-bit LLM inference on CPUs. T-MAC already offers support for various low-bit models, including W4A16 from GPTQ/gguf, W2A16 from BitDistiller/EfficientQAT and W1(.58)A8 from BitNet on OSX/Linux/Windows equipped with ARM/Intel CPUs.
 
+### LLM-zero2hero
+- https://github.com/wjmZZZ/LLM-zero2hero
+
+LLM-zero2hero是一个高度解耦的大语言模型(LLM)微调项目，支持自定义训练、验证和推理过程，实现全量微调和LoRA微调。
+
+### MobileQuant
+- https://arxiv.org/abs/2408.13933
+- https://github.com/saic-fi/MobileQuant
+
+Large language models (LLMs) have revolutionized language processing, delivering outstanding results across multiple applications. However, deploying LLMs on edge devices poses several challenges with respect to memory, energy, and compute costs, limiting their widespread use in devices such as mobile phones. A promising solution is to reduce the number of bits used to represent weights and activations. While existing works have found partial success at quantizing LLMs to lower bitwidths, e.g. 4-bit weights, quantizing activations beyond 16 bits often leads to large computational overheads due to poor on-device quantization support, or a considerable accuracy drop. Yet, 8-bit activations are very attractive for on-device deployment as they would enable LLMs to fully exploit mobile-friendly hardware, e.g. Neural Processing Units (NPUs). In this work, we make a first attempt to facilitate the on-device deployment of LLMs using integer-only quantization. We first investigate the limitations of existing quantization methods for on-device deployment, with a special focus on activation quantization. We then address these limitations by introducing a simple post-training quantization method, named MobileQuant, that extends previous weight equivalent transformation works by jointly optimizing the weight transformation and activation range parameters in an end-to-end manner. MobileQuant demonstrates superior capabilities over existing methods by 1) achieving near-lossless quantization on a wide range of LLM benchmarks, 2) reducing latency and energy consumption by 20\%-50\% compared to current on-device quantization strategies, 3) requiring limited compute budget, 4) being compatible with mobile-friendly compute units, e.g. NPU.
+
+### min-p sampling
+- https://arxiv.org/abs/2407.01082
+- https://github.com/menhguin/minp_paper/
+- https://x.com/menhguin/status/1826132708508213629
+
+Large Language Models (LLMs) generate longform text by successively sampling the next token based on the probability distribution of the token vocabulary at each decoding step. Current popular truncation sampling methods such as top-p sampling, also known as nucleus sampling, often struggle to balance coherence and creativity in generating text, particularly when using higher temperatures. To address this issue, we propose min-p, a dynamic truncation sampling method, that establishes a minimum base percentage threshold for tokens, which the scales according to the probability of the top candidate token. Through experiments on several benchmarks, such as GPQA, GSM8K and AlpacaEval Creative Writing, we demonstrate that min-p improves the coherence and quality of generated text even at high temperatures, while also facilitating more creative and diverse outputs compared to top-p and other sampling methods. As of writing, min-p has been adopted by multiple open-source LLM implementations, and have been independently assessed by members of the open-source LLM community, further validating its practical utility and potential.
+
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
 
@@ -3987,6 +4008,21 @@ The GraphRAG project is a data pipeline and transformation suite that is designe
 
 We present systematic efforts in building long-context multilingual text representation model (TRM) and reranker from scratch for text retrieval. We first introduce a text encoder (base size) enhanced with RoPE and unpadding, pre-trained in a native 8192-token context (longer than 512 of previous multilingual encoders). Then we construct a hybrid TRM and a cross-encoder reranker by contrastive learning. Evaluations show that our text encoder outperforms the same-sized previous state-of-the-art XLM-R. Meanwhile, our TRM and reranker match the performance of large-sized state-of-the-art BGE-M3 models and achieve better results on long-context retrieval benchmarks. Further analysis demonstrate that our proposed models exhibit higher efficiency during both training and inference. We believe their efficiency and effectiveness could benefit various researches and industrial applications.
 
+### nano-graphrag
+- https://github.com/gusye1234/nano-graphrag
+
+😭 GraphRAG is good and powerful, but the official implementation is difficult/painful to read or hack.
+
+😊 This project provides a smaller, faster, cleaner GraphRAG, while remaining the core functionality(see benchmark and issues ).
+
+🎁 Excluding tests and prompts, nano-graphrag is about 800 lines of code.
+
+👌 Small yet portable, asynchronous and fully typed.
+
+### MaxKB
+- https://github.com/1Panel-dev/MaxKB
+
+MaxKB = Max Knowledge Base，是一款基于 LLM 大语言模型的开源知识库问答系统，广泛应用于企业内部知识库、客户服务、学术研究与教育等场景。
 
 ## 6 其它
 ### Alpaca-CoT
@@ -4282,6 +4318,18 @@ Synthetic data is becoming increasingly important for accelerating the developme
 - https://github.com/relic-yuexi/AgentCourt
 
 In this paper, we present a simulation system called AgentCourt that simulates the entire courtroom process. The judge, plaintiff's lawyer, defense lawyer, and other participants are autonomous agents driven by large language models (LLMs). Our core goal is to enable lawyer agents to learn how to argue a case, as well as improving their overall legal skills, through courtroom process simulation. To achieve this goal, we propose an adversarial evolutionary approach for the lawyer-agent. Since AgentCourt can simulate the occurrence and development of court hearings based on a knowledge base and LLM, the lawyer agents can continuously learn and accumulate experience from real court cases. The simulation experiments show that after two lawyer-agents have engaged in a thousand adversarial legal cases in AgentCourt (which can take a decade for real-world lawyers), compared to their pre-evolutionary state, the evolved lawyer agents exhibit consistent improvement in their ability to handle legal tasks. To enhance the credibility of our experimental results, we enlisted a panel of professional lawyers to evaluate our simulations. The evaluation indicates that the evolved lawyer agents exhibit notable advancements in responsiveness, as well as expertise and logical rigor. This work paves the way for advancing LLM-driven agent technology in legal scenarios. 
+
+### AI-Scientist
+- https://github.com/SakanaAI/AI-Scientist
+
+One of the grand challenges of artificial intelligence is developing agents capable of conducting scientific research and discovering new knowledge. While frontier models have already been used to aid human scientists, e.g. for brainstorming ideas or writing code, they still require extensive manual supervision or are heavily constrained to a specific task.
+
+We're excited to introduce The AI Scientist, the first comprehensive system for fully automatic scientific discovery, enabling Foundation Models such as Large Language Models (LLMs) to perform research independently.
+
+### RD-Agent
+- https://github.com/microsoft/RD-Agent
+
+RDAgent aims to automate the most critical and valuable aspects of the industrial R&D process, and we begin with focusing on the data-driven scenarios to streamline the development of models and data. Methodologically, we have identified a framework with two key components: 'R' for proposing new ideas and 'D' for implementing them. We believe that the automatic evolution of R&D will lead to solutions of significant industrial value.
 
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
@@ -4832,6 +4880,11 @@ Scaling laws play an instrumental role in the sustainable improvement in model q
 
 Recent advancements have showcased the potential of Large Language Models (LLMs) in executing reasoning tasks, particularly facilitated by Chain-of-Thought (CoT) prompting. While tasks like arithmetic reasoning involve clear, definitive answers and logical chains of thought, the application of LLM reasoning in recommendation systems (RecSys) presents a distinct challenge. RecSys tasks revolve around subjectivity and personalized preferences, an under-explored domain in utilizing LLMs' reasoning capabilities. Our study explores several aspects to better understand reasoning for RecSys and demonstrate how task quality improves by utilizing LLM reasoning in both zero-shot and finetuning settings. Additionally, we propose RecSAVER (Recommender Systems Automatic Verification and Evaluation of Reasoning) to automatically assess the quality of LLM reasoning responses without the requirement of curated gold references or human raters. We show that our framework aligns with real human judgment on the coherence and faithfulness of reasoning responses. Overall, our work shows that incorporating reasoning into RecSys can improve personalized tasks, paving the way for further advancements in recommender system methodologies.
 
+### Transformers in music recommendation
+- https://research.google/blog/transformers-in-music-recommendation/
+
+We present a music recommendation ranking system that uses Transformer models to better understand the sequential nature of user actions based on the current user context.
+
 ### Financial Datasets
 - https://github.com/virattt/financial-datasets
 
@@ -4985,6 +5038,11 @@ Phi-3.5-mini is a lightweight, state-of-the-art open model built upon datasets u
 
 A recipe to pre-train models in 9 days, to become comparable AI assistants to the likes of Apple OpenELM and Microsoft Phi.
 This repo contains the model architecture, training scripts, and utilities of 1.5-Pints and 0.12-Pint, developed by Pints.AI. By providing access to the model's codebase and architecture, this initiative seeks to facilitate the replication, experimentation, and further open-source development of Pint.
+
+### Llama-3.1-Minitron 4B
+- https://developer.nvidia.com/blog/how-to-prune-and-distill-llama-3-1-8b-to-an-nvidia-llama-3-1-minitron-4b-model/
+
+Large language models (LLM) are now a dominant force in natural language processing and understanding, thanks to their effectiveness and versatility. LLMs such as Llama 3.1 405B and NVIDIA Nemotron-4 340B excel in many challenging tasks, including coding, reasoning, and math. They are, however, resource-intensive to deploy. As such, there is another trend in the industry to develop small language models (SLMs), which are sufficiently proficient in many language tasks but much cheaper to deploy to the masses.
 
 ### CodecLM
 - https://arxiv.org/abs/2404.05875
