@@ -263,6 +263,7 @@ Open-Source Language Model Pocket
 |nano-llama31|*【instant-smollm】|
 |*【Jamba 1.5】|*【Phi-3.5】|
 |*【1.5-Pints】|*【Llama-3.1-Minitron 4B】|
+|*【SmolLm2】|*【Ministral 3B/8B】|
 
 *训练/推理*
 |  |  |
@@ -338,6 +339,7 @@ Open-Source Language Model Pocket
 |Q-GaLore|*【rStar】|
 |*【T-MAC】|*【LLM-zero2hero】|
 |*【MobileQuant】|*【min-p sampling】|
+|*【Fast Best-of-N Decoding】|*【UNA: Unifying Alignments of RLHF/PPO, DPO and KTO】|
 
 *评价*
 |  ||
@@ -370,6 +372,8 @@ Open-Source Language Model Pocket
 |CriticGPT|Test  f Time|
 |WebCanvas|Lynx|
 |ComplexBench|Mr-Ben|
+|*【SimpleQA】|*【AppBench】|
+|*【CompassJudger/JudgerBench】||
 
 *其它*
 |  |  |
@@ -2756,6 +2760,17 @@ Large language models (LLMs) have revolutionized language processing, delivering
 
 Large Language Models (LLMs) generate longform text by successively sampling the next token based on the probability distribution of the token vocabulary at each decoding step. Current popular truncation sampling methods such as top-p sampling, also known as nucleus sampling, often struggle to balance coherence and creativity in generating text, particularly when using higher temperatures. To address this issue, we propose min-p, a dynamic truncation sampling method, that establishes a minimum base percentage threshold for tokens, which the scales according to the probability of the top candidate token. Through experiments on several benchmarks, such as GPQA, GSM8K and AlpacaEval Creative Writing, we demonstrate that min-p improves the coherence and quality of generated text even at high temperatures, while also facilitating more creative and diverse outputs compared to top-p and other sampling methods. As of writing, min-p has been adopted by multiple open-source LLM implementations, and have been independently assessed by members of the open-source LLM community, further validating its practical utility and potential.
 
+### Fast Best-of-N Decoding
+- https://arxiv.org/abs/2410.20290
+
+The safe and effective deployment of Large Language Models (LLMs) involves a critical step called alignment, which ensures that the model's responses are in accordance with human preferences. Prevalent alignment techniques, such as DPO, PPO and their variants, align LLMs by changing the pre-trained model weights during a phase called post-training. While predominant, these post-training methods add substantial complexity before LLMs can be deployed. Inference-time alignment methods avoid the complex post-training step and instead bias the generation towards responses that are aligned with human preferences. The best-known inference-time alignment method, called Best-of-N, is as effective as the state-of-the-art post-training procedures. Unfortunately, Best-of-N requires vastly more resources at inference time than standard decoding strategies, which makes it computationally not viable. In this work, we introduce Speculative Rejection, a computationally-viable inference-time alignment algorithm. It generates high-scoring responses according to a given reward model, like Best-of-N does, while being between 16 to 32 times more computationally efficient.
+
+### UNA: Unifying Alignments of RLHF/PPO, DPO and KTO
+- https://arxiv.org/abs/2408.15339
+
+An LLM is pretrained on trillions of tokens, but the pretrained LLM may still generate undesired responses. To solve this problem, alignment techniques such as RLHF, DPO and KTO are proposed. However, these alignment techniques have limitations. For example, RLHF requires training the reward model and policy separately, which is complex, time-consuming, memory intensive and unstable during training processes. DPO proposes a mapping between an optimal policy and a reward, greatly simplifying the training process of RLHF. However, it can not take full advantages of a reward model and it is limited to pairwise preference data.
+In this paper, we propose \textbf{UN}ified \textbf{A}lignment (UNA) which unifies RLHF/PPO, DPO and KTO. Firstly, we mathematically prove that given the classical RLHF objective, the optimal policy is induced by a generalize implicit reward function. With this novel mapping between a reward model and an optimal policy, UNA can 1. unify RLHF/PPO, DPO and KTO into a supervised learning of minimizing the difference between an implicit reward and an explicit reward; 2. outperform RLHF/PPO while simplify, stabilize, speed up and reduce memory burden of RL fine-tuning process; 3. accommodate different feedback types including pairwise, binary and scalar feedback. Downstream experiments show UNA outperforms DPO, KTO and RLHF.
+
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
 
@@ -4633,6 +4648,26 @@ Instruction following is one of the fundamental capabilities of large language m
 
 Large language models (LLMs) have shown increasing capability in problem-solving and decision-making, largely based on the step-by-step chain-of-thought reasoning processes. However, it has been increasingly challenging to evaluate the reasoning capability of LLMs. Concretely, existing outcome-based benchmarks begin to saturate and become less sufficient to monitor the progress. To this end, we present a process-based benchmark Mr.Ben that demands a meta reasoning skill, where LMs are asked to locate and analyse potential errors in automatically generated reasoning steps. Mr.Ben is a comprehensive benchmark comprising 5,975 questions collected from human experts, covering various subjects such as physics, chemistry, logic, coding, and more. By incorporating this approach, Mr.Ben facilitates a multidimensional evaluation of LLM reasoning abilities. We conducted an extensive assessment of open-source and closed-source LLMs using Mr.Ben, which revealed previously unidentified limitations and weaknesses in their meta-reasoning capabilities across different tasks.
 
+### SimpleQA
+- https://openai.com/index/introducing-simpleqa/
+
+In SimpleQA, we will focus on short, fact-seeking queries, which reduces the scope of the benchmark but makes measuring factuality much more tractable.
+
+### AppBench
+- https://arxiv.org/pdf/2410.19743
+- https://rulegreen.github.io
+- https://github.com/ruleGreen/AppBench
+
+Large Language Models (LLMs) can interact with the real world by connecting with versatile external APIs, resulting in better problem-solving and task automation capabilities. Previous research primarily focuses on APIs with limited arguments from a single source or overlooks the complex dependency relationship between different APIs. However, it is essential to utilize multiple APIs collaboratively from various sources (e.g., different Apps in the iPhone), especially for complex user instructions. In this paper, we introduce \texttt{AppBench}, the first benchmark to evaluate LLMs' ability to plan and execute multiple APIs from various sources in order to complete the user's task. Specifically, we consider two significant challenges in multiple APIs: \textit{1) graph structures:} some APIs can be executed independently while others need to be executed one by one, resulting in graph-like execution order; and \textit{2) permission constraints:} which source is authorized to execute the API call. We have experimental results on 9 distinct LLMs; e.g., GPT-4o achieves only a 2.0\% success rate at the most complex instruction, revealing that the existing state-of-the-art LLMs still cannot perform well in this situation even with the help of in-context learning and finetuning. 
+
+### CompassJudger/JudgerBench
+- https://arxiv.org/abs/2410.16256
+- https://huggingface.co/opencompass
+- https://github.com/open-compass/CompassJudger
+- https://huggingface.co/spaces/opencompass/judgerbench_leaderboard
+
+The CompassJudger-1 series are an All-in-one Judge Models introduced by Opencompass. These models not only excel in various evaluation methods through scoring and comparison but also can output reviews with assessment details in a specified format, making them suitable for any evaluation dataset. Moreover, they can perform general tasks akin to a typical instruction model, thus serving as a versatile tool with strong generalization and judging capabilities.
+
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
 - https://arxiv.org/abs/2401.07851
@@ -5043,6 +5078,20 @@ This repo contains the model architecture, training scripts, and utilities of 1.
 - https://developer.nvidia.com/blog/how-to-prune-and-distill-llama-3-1-8b-to-an-nvidia-llama-3-1-minitron-4b-model/
 
 Large language models (LLM) are now a dominant force in natural language processing and understanding, thanks to their effectiveness and versatility. LLMs such as Llama 3.1 405B and NVIDIA Nemotron-4 340B excel in many challenging tasks, including coding, reasoning, and math. They are, however, resource-intensive to deploy. As such, there is another trend in the industry to develop small language models (SLMs), which are sufficiently proficient in many language tasks but much cheaper to deploy to the masses.
+
+### SmolLm2
+- https://github.com/SinatrasC/entropix-smollm
+- https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct
+- https://ollama.com/library/smollm2
+
+SmolLM2 is a family of compact language models available in three size: 135M, 360M, and 1.7B parameters.
+
+### Ministral 3B/8B
+- https://mistral.ai/news/ministraux/
+
+On the first anniversary of the release of Mistral 7B, the model that revolutionized independent frontier AI innovation for millions, we are proud to introduce two new state-of-the-art models for on-device computing and at-the-edge use cases. We call them les Ministraux: Ministral 3B and Ministral 8B.
+
+These models set a new frontier in knowledge, commonsense, reasoning, function-calling, and efficiency in the sub-10B category, and can be used or tuned to a variety of uses, from orchestrating agentic workflows to creating specialist task workers. Both models support up to 128k context length (currently 32k on vLLM) and Ministral 8B has a special interleaved sliding-window attention pattern for faster and memory-efficient inference.
 
 ### CodecLM
 - https://arxiv.org/abs/2404.05875
