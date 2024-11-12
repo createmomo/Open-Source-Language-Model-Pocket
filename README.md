@@ -74,7 +74,7 @@ Open-Source Language Model Pocket
 | 韩非 HanFei| 智海 录问|ChatLaw 法律大模型|
 |LaWGPT|Lawyer LLaMA|LexiLaw|
 |LawGPT_zh|夫子•明察司法大模型|DISC-LawLLM|
-|LawBench|||
+|LawBench|*【HK-O1aw】||
 
 |交通|城市|
 |---|---|
@@ -134,7 +134,8 @@ Open-Source Language Model Pocket
 |StarCoder2-15B-Instruct-v0.1|AutoCoder|
 |CodeGeeX4|xLAM|
 |*【deepin V23】|*【WaveCoder】|
-|*【Llama-3.1-Storm-8B】||
+|*【Llama-3.1-Storm-8B】|*【OpenCoder】|
+|*【Qwen2.5-Coder】||
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -340,6 +341,7 @@ Open-Source Language Model Pocket
 |*【T-MAC】|*【LLM-zero2hero】|
 |*【MobileQuant】|*【min-p sampling】|
 |*【Fast Best-of-N Decoding】|*【UNA: Unifying Alignments of RLHF/PPO, DPO and KTO】|
+|*【LongReward】||
 
 *评价*
 |  ||
@@ -1080,6 +1082,13 @@ LaWGPT 是一系列基于中文法律知识的开源大语言模型。
 
 LawBench经过精心设计，可对大语言模型的法律能力进行精确评估。 在设计测试任务时，我们模拟了司法认知的三个维度，并选择了20个任务来评估大模型的能力。与一些仅有多项选择题的现有基准相比，我们包含了更多与现实世界应用密切相关的任务类型，如法律实体识别、阅读理解、犯罪金额计算和咨询等。 我们认识到当前大模型的安全性策略可能会拒绝回应某些法律询问，或在理解指令方面遇到困难，从而导致缺乏回应。因此，我们开发了一个单独的评估指标 "弃权率"，以衡量模型拒绝提供答案或未能正确理解指令的频率。 我们汇报了51种大语言模型在LawBench上的表现，包括20种多语言模型、22种中文模型和9种法律专用大语言模型。
 
+### HK-O1aw
+- https://github.com/HKAIR-Lab/HK-O1aw
+
+HK-O1aw is a legal assistant designed to handle complex legal reasoning, specifically for the Hong Kong legal system. It is built using the Align-Anything framework and trained on the O1aw-Dataset., based on the LLaMA-3.1-8B model. The primary goal of HK-O1aw is to improve the reasoning and problem-solving abilities of large language models in the legal domain. Importantly, all training data, code, and prompts used for synthetic data generation have been open-sourced, facilitating research and collaboration within the community.
+
+This model addresses the need for intelligent legal assistance in Hong Kong, where legal issues require in-depth analysis and precise reasoning. HK-O1aw integrates advanced O1-style reasoning capabilities, allowing it to perform complex legal analysis, understand context, identify precedents, and interpret statutes. As the first complex reasoning model tailored for Hong Kong‘s common law system, it is particularly valuable for improving legal services and education.
+
 ### Lawyer LLaMA
 - https://github.com/AndrewZhe/lawyer-llama
 
@@ -1814,6 +1823,16 @@ WaveCoder 🌊 is a series of large language models (LLMs) for the coding domain
 - https://huggingface.co/akjindal53244/Llama-3.1-Storm-8B
 
 Llama-3.1-Storm-8B builds upon the foundation of Llama-3.1-8B-Instruct, aiming to enhance both conversational and function calling capabilities within the 8B parameter model class.
+
+### OpenCoder
+- https://opencoder-llm.github.io/
+
+OpenCoder is an open and reproducible code LLM family which matches the performance of Top-Tier Code LLM. We provide not just the final models, but also the reproducible training data, the complete data processing pipeline, rigorous experimental ablation results, and detailed training protocols for open scientific research.
+
+### Qwen2.5-Coder
+- https://github.com/QwenLM/Qwen2.5-Coder
+
+Open source the “Powerful”, “Diverse”, and “Practical” Qwen2.5-Coder series (formerly known as CodeQwen1.5), dedicated to continuously promoting the development of Open CodeLLMs.
 
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
@@ -2770,6 +2789,13 @@ The safe and effective deployment of Large Language Models (LLMs) involves a cri
 
 An LLM is pretrained on trillions of tokens, but the pretrained LLM may still generate undesired responses. To solve this problem, alignment techniques such as RLHF, DPO and KTO are proposed. However, these alignment techniques have limitations. For example, RLHF requires training the reward model and policy separately, which is complex, time-consuming, memory intensive and unstable during training processes. DPO proposes a mapping between an optimal policy and a reward, greatly simplifying the training process of RLHF. However, it can not take full advantages of a reward model and it is limited to pairwise preference data.
 In this paper, we propose \textbf{UN}ified \textbf{A}lignment (UNA) which unifies RLHF/PPO, DPO and KTO. Firstly, we mathematically prove that given the classical RLHF objective, the optimal policy is induced by a generalize implicit reward function. With this novel mapping between a reward model and an optimal policy, UNA can 1. unify RLHF/PPO, DPO and KTO into a supervised learning of minimizing the difference between an implicit reward and an explicit reward; 2. outperform RLHF/PPO while simplify, stabilize, speed up and reduce memory burden of RL fine-tuning process; 3. accommodate different feedback types including pairwise, binary and scalar feedback. Downstream experiments show UNA outperforms DPO, KTO and RLHF.
+
+### LongReward
+- https://arxiv.org/abs/2410.21252
+- https://github.com/THUDM/LongReward
+- https://huggingface.co/datasets/THUDM/LongReward-10k
+
+We open-source LongReward under long_reward/auto_scorer.py, a novel method that utilize an off-the-shelf LLM to automatically provide rewards for model responses in long-context scenarios, considering four human-valued dimensions: helpfulness, logicality, faithfulness, and completeness. Given a long-context-based model response, LongReward assigns a score ranging from 0 to 10 for each dimension, and takes their average as the final reward.
 
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
