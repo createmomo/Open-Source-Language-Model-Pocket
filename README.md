@@ -46,7 +46,7 @@ Open-Source Language Model Pocket
 |Index-1.9B|Qwen2|Gemma-2-9B-Chinese-Chat|
 |Gemma-2-27B-Chinese-Chat|RWKV-6-World 14B|Tele-FLM-1T|
 |Llama3.1-Chinese-Chat|INF-34B|InternLM2.5|
-|*【LongWriter】|||
+|*【LongWriter】|*【Hunyuan-Large】||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -376,7 +376,7 @@ Open-Source Language Model Pocket
 |ComplexBench|Mr-Ben|
 |*【SimpleQA】|*【AppBench】|
 |*【CompassJudger/JudgerBench】|*【CMCOQA】|
-|*【CodevBench】||
+|*【CodevBench】|*【FrontierMath】|
 
 *其它*
 |  |  |
@@ -404,6 +404,7 @@ Open-Source Language Model Pocket
 |LLMBox|MarkLLM|
 |MobileCPM|LLM-Select|
 |Transformer Architecture (LLMs: Zero-to-Hero)|Build a Large Language Model (From Scratch)|
+|*【SynthID Text】||
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -2298,6 +2299,13 @@ We open-source two models: LongWriter-glm4-9b and LongWriter-llama3.1-8b, traine
 
 Current long context large language models (LLMs) can process inputs up to 100,000 tokens, yet struggle to generate outputs exceeding even a modest length of 2,000 words. Through controlled experiments, we find that the model's effective generation length is inherently bounded by the sample it has seen during supervised fine-tuning (SFT). In other words, their output limitation is due to the scarcity of long-output examples in existing SFT datasets. To address this, we introduce AgentWrite, an agent-based pipeline that decomposes ultra-long generation tasks into subtasks, enabling off-the-shelf LLMs to generate coherent outputs exceeding 20,000 words. Leveraging AgentWrite, we construct LongWriter-6k, a dataset containing 6,000 SFT data with output lengths ranging from 2k to 32k words. By incorporating this dataset into model training, we successfully scale the output length of existing models to over 10,000 words while maintaining output quality. We also develop LongBench-Write, a comprehensive benchmark for evaluating ultra-long generation capabilities. Our 9B parameter model, further improved through DPO, achieves state-of-the-art performance on this benchmark, surpassing even much larger proprietary models. In general, our work demonstrates that existing long context LLM already possesses the potential for a larger output window--all you need is data with extended output during model alignment to unlock this capability.
 
+
+### Hunyuan-Large
+- https://llm.hunyuan.tencent.com/ 
+- https://github.com/Tencent/Hunyuan-Large 
+
+With the rapid development of artificial intelligence technology, large language models (LLMs) have made significant progress in fields such as natural language processing, computer vision, and scientific tasks. However, as the scale of these models increases, optimizing resource consumption while maintaining high performance has become a key challenge. To address this challenge, we have explored Mixture of Experts (MoE) models. The currently unveiled Hunyuan-Large (Hunyuan-MoE-A52B) model is the largest open-source Transformer-based MoE model in the industry, featuring a total of 389 billion parameters and 52 billion active parameters. This is currently the largest open-source Transformer-based MoE model in the industry, featuring a total of 389 billion parameters and 52 billion active parameters.
+
 ### Transformer Architecture (LLMs: Zero-to-Hero)
 - https://medium.com/@waylandzhang/transformer-architecture-llms-zero-to-hero-98b1ee51a838
 
@@ -2307,6 +2315,13 @@ This is the 3rd article in my Zero-to-Hero series. In this article we will walk 
 - https://github.com/rasbt/LLMs-from-scratch/tree/main
 
 In Build a Large Language Model (From Scratch), you'll learn and understand how large language models (LLMs) work from the inside out by coding them from the ground up, step by step. In this book, I'll guide you through creating your own LLM, explaining each stage with clear text, diagrams, and examples.
+
+### SynthID Text
+- https://deepmind.google/technologies/synthid/
+- https://www.nature.com/articles/s41586-024-08025-4
+- https://ai.google.dev/responsible/docs/safeguards/synthid
+
+Large language models (LLMs) have enabled the generation of high-quality synthetic text, often indistinguishable from human-written content, at a scale that can markedly affect the nature of the information ecosystem. Watermarking can help identify synthetic text and limit accidental or deliberate misuse, but has not been adopted in production systems owing to stringent quality, detectability and computational efficiency requirements. Here we describe SynthID-Text, a production-ready text watermarking scheme that preserves text quality and enables high detection accuracy, with minimal latency overhead. SynthID-Text does not affect LLM training and modifies only the sampling procedure; watermark detection is computationally efficient, without using the underlying LLM. To enable watermarking at scale, we develop an algorithm integrating watermarking with speculative sampling, an efficiency technique frequently used in production systems5. Evaluations across multiple LLMs empirically show that SynthID-Text provides improved detectability over comparable methods, and standard benchmarks and human side-by-side ratings indicate no change in LLM capabilities. To demonstrate the feasibility of watermarking in large-scale-production systems, we conducted a live experiment that assessed feedback from nearly 20 million Gemini6 responses, again confirming the preservation of text quality. We hope that the availability of SynthID-Text will facilitate further development of watermarking and responsible use of LLM systems.
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -4718,6 +4733,11 @@ IEEE BIBM 2024. [paper to be published]
 - https://huggingface.co/datasets/TongyiLingma/CodevBench
 
 Code completion, a key downstream task in code generation, is one of the most frequent and impactful methods for enhancing developer productivity in software development. As intelligent completion tools evolve, we need a robust evaluation benchmark that enables meaningful comparisons between products and guides future advancements. However, existing benchmarks focus more on coarse-grained tasks without industrial analysis resembling general code generation rather than the real-world scenarios developers encounter. Moreover, these benchmarks often rely on costly and time-consuming human annotation, and the standalone test cases fail to leverage minimal tests for maximum repository-level understanding and code coverage. To address these limitations, we first analyze business data from an industrial code completion tool and redefine the evaluation criteria to better align with the developer's intent and desired completion behavior throughout the coding process. Based on these insights, we introduce Codev-Agent, an agent-based system that automates repository crawling, constructs execution environments, extracts dynamic calling chains from existing unit tests, and generates new test samples to avoid data leakage, ensuring fair and effective comparisons. Using Codev-Agent, we present the Code-Development Benchmark (Codev-Bench), a fine-grained, real-world, repository-level, and developer-centric evaluation framework. Codev-Bench assesses whether a code completion tool can capture a developer's immediate intent and suggest appropriate code across diverse contexts, providing a more realistic benchmark for code completion in modern software development.
+
+### FrontierMath
+- https://epochai.org/frontiermath
+
+We introduce FrontierMath, a benchmark of hundreds of original, exceptionally challenging mathematics problems crafted and vetted by expert mathematicians. The questions cover most major branches of modern mathematics -- from computationally intensive problems in number theory and real analysis to abstract questions in algebraic geometry and category theory. Solving a typical problem requires multiple hours of effort from a researcher in the relevant branch of mathematics, and for the upper end questions, multiple days. FrontierMath uses new, unpublished problems and automated verification to reliably evaluate models while minimizing risk of data contamination. Current state-of-the-art AI models solve under 2% of problems, revealing a vast gap between AI capabilities and the prowess of the mathematical community. As AI systems advance toward expert-level mathematical abilities, FrontierMath offers a rigorous testbed that quantifies their progress.
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
