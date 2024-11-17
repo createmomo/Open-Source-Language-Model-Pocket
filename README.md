@@ -135,7 +135,7 @@ Open-Source Language Model Pocket
 |CodeGeeX4|xLAM|
 |*【deepin V23】|*【WaveCoder】|
 |*【Llama-3.1-Storm-8B】|*【OpenCoder】|
-|*【Qwen2.5-Coder】||
+|*【Qwen2.5-Coder】|*【Ministraux】|
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -201,6 +201,7 @@ Open-Source Language Model Pocket
 |MindSearch|*【AgentInstruct】|
 |*【AgentCourt】|*【AI-Scientist】|
 |*【RD-Agent】|*【AFlow: Automating Agentic Workflow Generation】|
+|*【swarm】||
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -341,7 +342,8 @@ Open-Source Language Model Pocket
 |*【T-MAC】|*【LLM-zero2hero】|
 |*【MobileQuant】|*【min-p sampling】|
 |*【Fast Best-of-N Decoding】|*【UNA: Unifying Alignments of RLHF/PPO, DPO and KTO】|
-|*【LongReward】||
+|*【LongReward】|*【HybridFlow】|
+|*【The Surprising Effectiveness of Test-Time Training for Abstract Reasoning】||
 
 *评价*
 |  ||
@@ -377,6 +379,7 @@ Open-Source Language Model Pocket
 |*【SimpleQA】|*【AppBench】|
 |*【CompassJudger/JudgerBench】|*【CMCOQA】|
 |*【CodevBench】|*【FrontierMath】|
+|*【GIFT-Eval】||
 
 *其它*
 |  |  |
@@ -404,7 +407,7 @@ Open-Source Language Model Pocket
 |LLMBox|MarkLLM|
 |MobileCPM|LLM-Select|
 |Transformer Architecture (LLMs: Zero-to-Hero)|Build a Large Language Model (From Scratch)|
-|*【SynthID Text】||
+|*【SynthID Text】|*【Small Language Models: Survey, Measurements, and Insights】|
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -1843,6 +1846,21 @@ OpenCoder is an open and reproducible code LLM family which matches the performa
 
 Open source the “Powerful”, “Diverse”, and “Practical” Qwen2.5-Coder series (formerly known as CodeQwen1.5), dedicated to continuously promoting the development of Open CodeLLMs.
 
+### Ministraux
+- https://mistral.ai/news/ministraux/
+- https://huggingface.co/mistralai/Ministral-8B-Instruct-2410
+
+Introducing the world’s best edge models
+On the first anniversary of the release of Mistral 7B, the model that revolutionized independent frontier AI innovation for millions, we are proud to introduce two new state-of-the-art models for on-device computing and at-the-edge use cases. We call them les Ministraux: Ministral 3B and Ministral 8B.
+
+These models set a new frontier in knowledge, commonsense, reasoning, function-calling, and efficiency in the sub-10B category, and can be used or tuned to a variety of uses, from orchestrating agentic workflows to creating specialist task workers. Both models support up to 128k context length (currently 32k on vLLM) and Ministral 8B has a special interleaved sliding-window attention pattern for faster and memory-efficient inference.
+
+Use cases
+Our most innovative customers and partners have increasingly been asking for local, privacy-first inference for critical applications such as on-device translation, internet-less smart assistants, local analytics, and autonomous robotics. Les Ministraux were built to provide a compute-efficient and low-latency solution for these scenarios. From independent hobbyists to global manufacturing teams, les Ministraux deliver for a wide variety of use cases.
+
+Used in conjunction with larger language models such as Mistral Large, les Ministraux are also efficient intermediaries for function-calling in multi-step agentic workflows. They can be tuned to handle input parsing, task routing, and calling APIs based on user intent across multiple contexts at extremely low latency and cost.
+
+
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
 
@@ -2322,6 +2340,11 @@ In Build a Large Language Model (From Scratch), you'll learn and understand how 
 - https://ai.google.dev/responsible/docs/safeguards/synthid
 
 Large language models (LLMs) have enabled the generation of high-quality synthetic text, often indistinguishable from human-written content, at a scale that can markedly affect the nature of the information ecosystem. Watermarking can help identify synthetic text and limit accidental or deliberate misuse, but has not been adopted in production systems owing to stringent quality, detectability and computational efficiency requirements. Here we describe SynthID-Text, a production-ready text watermarking scheme that preserves text quality and enables high detection accuracy, with minimal latency overhead. SynthID-Text does not affect LLM training and modifies only the sampling procedure; watermark detection is computationally efficient, without using the underlying LLM. To enable watermarking at scale, we develop an algorithm integrating watermarking with speculative sampling, an efficiency technique frequently used in production systems5. Evaluations across multiple LLMs empirically show that SynthID-Text provides improved detectability over comparable methods, and standard benchmarks and human side-by-side ratings indicate no change in LLM capabilities. To demonstrate the feasibility of watermarking in large-scale-production systems, we conducted a live experiment that assessed feedback from nearly 20 million Gemini6 responses, again confirming the preservation of text quality. We hope that the availability of SynthID-Text will facilitate further development of watermarking and responsible use of LLM systems.
+
+### Small Language Models: Survey, Measurements, and Insights
+- https://arxiv.org/abs/2409.15790
+
+Small language models (SLMs), despite their widespread adoption in modern smart devices, have received significantly less academic attention compared to their large language model (LLM) counterparts, which are predominantly deployed in data centers and cloud environments. While researchers continue to improve the capabilities of LLMs in the pursuit of artificial general intelligence, SLM research aims to make machine intelligence more accessible, affordable, and efficient for everyday tasks. Focusing on transformer-based, decoder-only language models with 100M-5B parameters, we survey 59 state-of-the-art open-source SLMs, analyzing their technical innovations across three axes: architectures, training datasets, and training algorithms. In addition, we evaluate their capabilities in various domains, including commonsense reasoning, in-context learning, mathematics, and coding. To gain further insight into their on-device runtime costs, we benchmark their inference latency and memory footprints. Through in-depth analysis of our benchmarking data, we offer valuable insights to advance research in this field.
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -2819,6 +2842,17 @@ In this paper, we propose \textbf{UN}ified \textbf{A}lignment (UNA) which unifie
 - https://huggingface.co/datasets/THUDM/LongReward-10k
 
 We open-source LongReward under long_reward/auto_scorer.py, a novel method that utilize an off-the-shelf LLM to automatically provide rewards for model responses in long-context scenarios, considering four human-valued dimensions: helpfulness, logicality, faithfulness, and completeness. Given a long-context-based model response, LongReward assigns a score ranging from 0 to 10 for each dimension, and takes their average as the final reward.
+
+### HybridFlow
+- https://team.doubao.com/zh/publication/hybridflow-a-flexible-and-efficient-rlhf-framework?view_from=research
+- https://github.com/volcengine/veRL
+
+veRL (HybridFlow) is a flexible, efficient and industrial-level RL(HF) training framework designed for large language models (LLMs). veRL is the open-source version of HybridFlow paper.
+
+### The Surprising Effectiveness of Test-Time Training for Abstract Reasoning
+- https://arxiv.org/abs/2411.07279
+
+Language models have shown impressive performance on tasks within their training distribution, but often struggle with novel problems requiring complex reasoning. We investigate the effectiveness of test-time training (TTT) -- updating model parameters temporarily during inference using a loss derived from input data -- as a mechanism for improving models' reasoning capabilities, using the Abstraction and Reasoning Corpus (ARC) as a benchmark. Through systematic experimentation, we identify three crucial components for successful TTT: (1) initial finetuning on similar tasks (2) auxiliary task format and augmentations (3) per-instance training. TTT significantly improves performance on ARC tasks, achieving up to 6x improvement in accuracy compared to base fine-tuned models; applying TTT to an 8B-parameter language model, we achieve 53% accuracy on the ARC's public validation set, improving the state-of-the-art by nearly 25% for public and purely neural approaches. By ensembling our method with recent program generation approaches, we get SoTA public validation accuracy of 61.9%, matching the average human score. Our findings suggest that explicit symbolic search is not the only path to improved abstract reasoning in neural language models; additional test-time applied to continued training on few-shot examples can also be extremely effective.
 
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
@@ -4401,6 +4435,11 @@ RDAgent aims to automate the most critical and valuable aspects of the industria
 
 Large language models (LLMs) have demonstrated remarkable potential in solving complex tasks across diverse domains, typically by employing agentic workflows that follow detailed instructions and operational sequences. However, constructing these workflows requires significant human effort, limiting scalability and generalizability. Recent research has sought to automate the generation and optimization of these workflows, but existing methods still rely on initial manual setup and fall short of achieving fully automated and effective workflow generation. To address this challenge, we reformulate workflow optimization as a search problem over code-represented workflows, where LLM-invoking nodes are connected by edges. We introduce AFlow, an automated framework that efficiently explores this space using Monte Carlo Tree Search, iteratively refining workflows through code modification, tree-structured experience, and execution feedback. Empirical evaluations across six benchmark datasets demonstrate AFlow's efficacy, yielding a 5.7% average improvement over state-of-the-art baselines. Furthermore, AFlow enables smaller models to outperform GPT-4o on specific tasks at 4.55% of its inference cost in dollars. 
 
+### swarm
+- https://github.com/openai/swarm
+
+An educational framework exploring ergonomic, lightweight multi-agent orchestration.
+
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
 - https://huggingface.co/NexaAIDev/Octopus-v2
@@ -4738,6 +4777,13 @@ Code completion, a key downstream task in code generation, is one of the most fr
 - https://epochai.org/frontiermath
 
 We introduce FrontierMath, a benchmark of hundreds of original, exceptionally challenging mathematics problems crafted and vetted by expert mathematicians. The questions cover most major branches of modern mathematics -- from computationally intensive problems in number theory and real analysis to abstract questions in algebraic geometry and category theory. Solving a typical problem requires multiple hours of effort from a researcher in the relevant branch of mathematics, and for the upper end questions, multiple days. FrontierMath uses new, unpublished problems and automated verification to reliably evaluate models while minimizing risk of data contamination. Current state-of-the-art AI models solve under 2% of problems, revealing a vast gap between AI capabilities and the prowess of the mathematical community. As AI systems advance toward expert-level mathematical abilities, FrontierMath offers a rigorous testbed that quantifies their progress.
+
+### GIFT-Eval
+- https://arxiv.org/abs/2410.10393
+- https://github.com/SalesforceAIResearch/gift-eval
+- https://www.salesforce.com/blog/gift-eval-time-series-benchmark/
+
+Time series foundation models excel in zero-shot forecasting, handling diverse tasks without explicit training. However, the advancement of these models has been hindered by the lack of comprehensive benchmarks. To address this gap, we introduce the General Time Series Forecasting Model Evaluation, GIFT-Eval, a pioneering benchmark aimed at promoting evaluation across diverse datasets. GIFT-Eval encompasses 23 datasets over 144,000 time series and 177 million data points, spanning seven domains, 10 frequencies, multivariate inputs, and prediction lengths ranging from short to long-term forecasts. To facilitate the effective pretraining and evaluation of foundation models, we also provide a non-leaking pretraining dataset containing approximately 230 billion data points. Additionally, we provide a comprehensive analysis of 17 baselines, which includes statistical models, deep learning models, and foundation models. We discuss each model in the context of various benchmark characteristics and offer a qualitative analysis that spans both deep learning and foundation models. We believe the insights from this analysis, along with access to this new standard zero-shot time series forecasting benchmark, will guide future developments in time series foundation models. 
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
