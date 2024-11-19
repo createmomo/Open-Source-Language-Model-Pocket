@@ -98,6 +98,7 @@ Open-Source Language Model Pocket
 |Tabular LLM|Chain-of-table|
 |Data Interpreter|TableLLM|
 |Lag-Llama|TabuLa-8B|
+|*【Time-MoE】||
 
 |自媒体/角色扮演/风格/故事|
 |---|
@@ -136,6 +137,8 @@ Open-Source Language Model Pocket
 |*【deepin V23】|*【WaveCoder】|
 |*【Llama-3.1-Storm-8B】|*【OpenCoder】|
 |*【Qwen2.5-Coder】|*【Ministraux】|
+|*【Reader-LM】|*【珠算】|
+|*【Lingma SWE-GPT】||
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -201,7 +204,7 @@ Open-Source Language Model Pocket
 |MindSearch|*【AgentInstruct】|
 |*【AgentCourt】|*【AI-Scientist】|
 |*【RD-Agent】|*【AFlow: Automating Agentic Workflow Generation】|
-|*【swarm】||
+|*【swarm】|*【FinVision】|
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -266,6 +269,7 @@ Open-Source Language Model Pocket
 |*【Jamba 1.5】|*【Phi-3.5】|
 |*【1.5-Pints】|*【Llama-3.1-Minitron 4B】|
 |*【SmolLm2】|*【Ministral 3B/8B】|
+|*【Zamba2-7B】||
 
 *训练/推理*
 |  |  |
@@ -343,7 +347,8 @@ Open-Source Language Model Pocket
 |*【MobileQuant】|*【min-p sampling】|
 |*【Fast Best-of-N Decoding】|*【UNA: Unifying Alignments of RLHF/PPO, DPO and KTO】|
 |*【LongReward】|*【HybridFlow】|
-|*【The Surprising Effectiveness of Test-Time Training for Abstract Reasoning】||
+|*【The Surprising Effectiveness of Test-Time Training for Abstract Reasoning】|*【OpenR】|
+|*【A Theoretical Understanding of Self-Correction through In-context Alignment】||
 
 *评价*
 |  ||
@@ -379,7 +384,7 @@ Open-Source Language Model Pocket
 |*【SimpleQA】|*【AppBench】|
 |*【CompassJudger/JudgerBench】|*【CMCOQA】|
 |*【CodevBench】|*【FrontierMath】|
-|*【GIFT-Eval】||
+|*【GIFT-Eval】|*【LightEval】|
 
 *其它*
 |  |  |
@@ -977,6 +982,14 @@ Lag-Llama is the first open-source foundation model for time series forecasting!
 
 
 Tabular data -- structured, heterogeneous, spreadsheet-style data with rows and columns -- is widely used in practice across many domains. However, while recent foundation models have reduced the need for developing task-specific datasets and predictors in domains such as language modeling and computer vision, this transfer learning paradigm has not had similar impact in the tabular domain. In this work, we seek to narrow this gap and present TabuLa-8B, a language model for tabular prediction. We define a process for extracting a large, high-quality training dataset from the TabLib corpus, proposing methods for tabular data filtering and quality control. Using the resulting dataset, which comprises over 1.6B rows from 3.1M unique tables, we fine-tune a Llama 3-8B large language model (LLM) for tabular data prediction (classification and binned regression) using a novel packing and attention scheme for tabular prediction. Through evaluation across a test suite of 329 datasets, we find that TabuLa-8B has zero-shot accuracy on unseen tables that is over 15 percentage points (pp) higher than random guessing, a feat that is not possible with existing state-of-the-art tabular prediction models (e.g. XGBoost, TabPFN). In the few-shot setting (1-32 shots), without any fine-tuning on the target datasets, TabuLa-8B is 5-15 pp more accurate than XGBoost and TabPFN models that are explicitly trained on equal, or even up to 16x more data. 
+
+### Time-MoE
+- https://arxiv.org/pdf/2409.16040
+- https://github.com/Time-MoE/Time-MoE
+
+1️⃣ Time-MoE is the first work to scale time series foundation models up to 2.4 billion parameters, trained from scratch.
+
+2️⃣ Time-300B is the largest open-access time series data collection comprising over 300 billion time points across more than 9 domains.
 
 ### DoctorGLM
 - https://github.com/xionghonglin/DoctorGLM
@@ -1860,6 +1873,24 @@ Our most innovative customers and partners have increasingly been asking for loc
 
 Used in conjunction with larger language models such as Mistral Large, les Ministraux are also efficient intermediaries for function-calling in multi-step agentic workflows. They can be tuned to handle input parsing, task routing, and calling APIs based on user intent across multiple contexts at extremely low latency and cost.
 
+### Reader-LM
+- https://huggingface.co/jinaai/reader-lm-0.5b
+- https://huggingface.co/jinaai/reader-lm-1.5b
+- https://colab.research.google.com/drive/1wXWyj5hOxEHY6WeHbOwEzYAC0WB1I5uA
+
+将原始HTML转换为干净Markdown的小型语言模型。
+
+### 珠算
+- https://github.com/HIT-SCIR/Abacus
+
+​从DeepMind发布的AlphaCode在竞赛级编程能力上超越人类平均水平之日起，代码大模型便广受关注。与此同时，OpenAI发布的CodeX更是展示出了代码大模型具有超越传统编程范畴的数值推理、逻辑推断、工具调用等高阶能力，进一步引爆了对该领域的研究与讨论。以BigCode StarCoder为代表的开源项目对完善该领域的研究生态做出了卓越的贡献。然而，目前开源代码大模型提升编程能力的同时会严重损害通用语言能力。为此，哈尔滨工业大学社会计算与信息检索研究中心（HIT-SCIR）推出了“珠算”代码大模型，其以2.7B参数在代码与通用语言平均性能上均超越了DeepSeek-Coder-1.3B、Yi-Coder-1.5B、Stable Code-3B、Granite-3B-Code等参数量3B及以下的代码大模型，希望通过开放权重、训练细节以及配套的微调适配平台与插件，助力开源社区的发展。
+
+### Lingma SWE-GPT:
+- https://arxiv.org/abs/2411.00622
+
+An Open Development-Process-Centric Language Model for Automated Software Improvement
+
+Recent advancements in LLM-based agents have led to significant progress in automatic software engineering, particularly in software maintenance and evolution. Despite these encouraging advances, current research faces two major challenges. First, SOTA performance primarily depends on closed-source models, which significantly limits the technology's accessibility, and potential for customization in diverse SE tasks. Second, these models are predominantly trained on static code data, lacking a deep understanding of the dynamic interactions, iterative problem-solving processes, and evolutionary characteristics inherent in software development. To address these challenges, our study adopts a software engineering perspective. We recognize that real-world software maintenance and evolution processes encompass not only static code data but also developers' thought processes, utilization of external tools, and the interaction between different functional personnel. Consequently, we introduce the Lingma SWE-GPT series, comprising Lingma SWE-GPT 7B and 72B. By learning from and simulating real-world code submission activities, Lingma SWE-GPT systematically incorporates the dynamic interactions and iterative problem-solving inherent in software development process, thereby achieving a more comprehensive understanding of software improvement processes. We conducted experimental evaluations using SWE-bench Verified benchmark. The results demonstrate that Lingma SWE-GPT 72B successfully resolves 30.20% of the GitHub issues, marking a significant improvement in automatic issue resolution (22.76% relative improvement compared to Llama 3.1 405B), approaching the performance of closed-source models (31.80\% issues of GPT-4o resolved). Notably, Lingma SWE-GPT 7B resolves 18.20% of the issues, highlighting the potential for applying smaller models to ASE tasks.
 
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
@@ -2853,6 +2884,17 @@ veRL (HybridFlow) is a flexible, efficient and industrial-level RL(HF) training 
 - https://arxiv.org/abs/2411.07279
 
 Language models have shown impressive performance on tasks within their training distribution, but often struggle with novel problems requiring complex reasoning. We investigate the effectiveness of test-time training (TTT) -- updating model parameters temporarily during inference using a loss derived from input data -- as a mechanism for improving models' reasoning capabilities, using the Abstraction and Reasoning Corpus (ARC) as a benchmark. Through systematic experimentation, we identify three crucial components for successful TTT: (1) initial finetuning on similar tasks (2) auxiliary task format and augmentations (3) per-instance training. TTT significantly improves performance on ARC tasks, achieving up to 6x improvement in accuracy compared to base fine-tuned models; applying TTT to an 8B-parameter language model, we achieve 53% accuracy on the ARC's public validation set, improving the state-of-the-art by nearly 25% for public and purely neural approaches. By ensembling our method with recent program generation approaches, we get SoTA public validation accuracy of 61.9%, matching the average human score. Our findings suggest that explicit symbolic search is not the only path to improved abstract reasoning in neural language models; additional test-time applied to continued training on few-shot examples can also be extremely effective.
+
+### OpenR
+- https://github.com/openreasoner/openr
+
+An Open Source Framework for Advanced Reasoning with Large Language Models
+
+### A Theoretical Understanding of Self-Correction through In-context Alignment
+- https://arxiv.org/abs/2405.18634
+- https://github.com/yifeiwang77/Self-Correction
+
+Going beyond mimicking limited human experiences, recent studies show initial evidence that, like humans, large language models (LLMs) are capable of improving their abilities purely by self-correction, i.e., correcting previous responses through self-examination, in certain circumstances. Nevertheless, little is known about how such capabilities arise. In this work, based on a simplified setup akin to an alignment task, we theoretically analyze self-correction from an in-context learning perspective, showing that when LLMs give relatively accurate self-examinations as rewards, they are capable of refining responses in an in-context way. Notably, going beyond previous theories on over-simplified linear transformers, our theoretical construction underpins the roles of several key designs of realistic transformers for self-correction: softmax attention, multi-head attention, and the MLP block. We validate these findings extensively on synthetic datasets. Inspired by these findings, we also illustrate novel applications of self-correction, such as defending against LLM jailbreaks, where a simple self-correction step does make a large difference. We believe that these findings will inspire further research on understanding, exploiting, and enhancing self-correction for building better foundation models.
 
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
@@ -4440,6 +4482,11 @@ Large language models (LLMs) have demonstrated remarkable potential in solving c
 
 An educational framework exploring ergonomic, lightweight multi-agent orchestration.
 
+### FinVision
+- https://arxiv.org/abs/2411.08899
+
+Financial trading has been a challenging task, as it requires the integration of vast amounts of data from various modalities. Traditional deep learning and reinforcement learning methods require large training data and often involve encoding various data types into numerical formats for model input, which limits the explainability of model behavior. Recently, LLM-based agents have demonstrated remarkable advancements in handling multi-modal data, enabling them to execute complex, multi-step decision-making tasks while providing insights into their thought processes. This research introduces a multi-modal multi-agent system designed specifically for financial trading tasks. Our framework employs a team of specialized LLM-based agents, each adept at processing and interpreting various forms of financial data, such as textual news reports, candlestick charts, and trading signal charts. A key feature of our approach is the integration of a reflection module, which conducts analyses of historical trading signals and their outcomes. This reflective process is instrumental in enhancing the decision-making capabilities of the system for future trading scenarios. Furthermore, the ablation studies indicate that the visual reflection module plays a crucial role in enhancing the decision-making capabilities of our framework.
+
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
 - https://huggingface.co/NexaAIDev/Octopus-v2
@@ -4784,6 +4831,15 @@ We introduce FrontierMath, a benchmark of hundreds of original, exceptionally ch
 - https://www.salesforce.com/blog/gift-eval-time-series-benchmark/
 
 Time series foundation models excel in zero-shot forecasting, handling diverse tasks without explicit training. However, the advancement of these models has been hindered by the lack of comprehensive benchmarks. To address this gap, we introduce the General Time Series Forecasting Model Evaluation, GIFT-Eval, a pioneering benchmark aimed at promoting evaluation across diverse datasets. GIFT-Eval encompasses 23 datasets over 144,000 time series and 177 million data points, spanning seven domains, 10 frequencies, multivariate inputs, and prediction lengths ranging from short to long-term forecasts. To facilitate the effective pretraining and evaluation of foundation models, we also provide a non-leaking pretraining dataset containing approximately 230 billion data points. Additionally, we provide a comprehensive analysis of 17 baselines, which includes statistical models, deep learning models, and foundation models. We discuss each model in the context of various benchmark characteristics and offer a qualitative analysis that spans both deep learning and foundation models. We believe the insights from this analysis, along with access to this new standard zero-shot time series forecasting benchmark, will guide future developments in time series foundation models. 
+
+### LightEval
+- https://github.com/huggingface/lighteval
+
+Lighteval is your all-in-one toolkit for evaluating LLMs across multiple backends—whether it's transformers, tgi, vllm, or nanotron—with ease. Dive deep into your model’s performance by saving and exploring detailed, sample-by-sample results to debug and see how your models stack-up.
+
+Customization at your fingertips: letting you either browse all our existing tasks and metrics or effortlessly create your own, tailored to your needs.
+
+Seamlessly experiment, benchmark, and store your results on the Hugging Face Hub, S3, or locally.
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
@@ -5209,6 +5265,13 @@ SmolLM2 is a family of compact language models available in three size: 135M, 36
 On the first anniversary of the release of Mistral 7B, the model that revolutionized independent frontier AI innovation for millions, we are proud to introduce two new state-of-the-art models for on-device computing and at-the-edge use cases. We call them les Ministraux: Ministral 3B and Ministral 8B.
 
 These models set a new frontier in knowledge, commonsense, reasoning, function-calling, and efficiency in the sub-10B category, and can be used or tuned to a variety of uses, from orchestrating agentic workflows to creating specialist task workers. Both models support up to 128k context length (currently 32k on vLLM) and Ministral 8B has a special interleaved sliding-window attention pattern for faster and memory-efficient inference.
+
+### Zamba2-7B
+- https://huggingface.co/Zyphra/Zamba2-7B
+
+Zamba2-7B achieves leading and state-of-the-art performance among models ≤8B parameters, outperforming several extremely strong baselines such as Meta's Llama3 series, Google's Gemma series and Mistral-7B. Moreover, due to its unique hybrid SSM architecture, Zamba2-7B achieves extremely low inference latency and rapid generation with a significantly smaller memory footprint than comparable transformer based models.
+
+We believe Zamba2-7B is an ideal generalist model which is cheap and fast to run and fits on the majority of consumer hardware but possesses a powerful intelligence.
 
 ### CodecLM
 - https://arxiv.org/abs/2404.05875
