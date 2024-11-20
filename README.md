@@ -46,7 +46,8 @@ Open-Source Language Model Pocket
 |Index-1.9B|Qwen2|Gemma-2-9B-Chinese-Chat|
 |Gemma-2-27B-Chinese-Chat|RWKV-6-World 14B|Tele-FLM-1T|
 |Llama3.1-Chinese-Chat|INF-34B|InternLM2.5|
-|*【LongWriter】|*【Hunyuan-Large】||
+|*【LongWriter】|*【Hunyuan-Large】|*【Qwen2.5】|
+|*【TeleChat2】|||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -177,6 +178,7 @@ Open-Source Language Model Pocket
 |RankRAG|LightRAG|
 |GraphRAG|*【gte-multilinguial】|
 |*【nano-graphrag】|*【MaxKB】|
+|*【Langchain-Chatchat】||
 
 *Agent*
 |  |  |
@@ -205,6 +207,7 @@ Open-Source Language Model Pocket
 |*【AgentCourt】|*【AI-Scientist】|
 |*【RD-Agent】|*【AFlow: Automating Agentic Workflow Generation】|
 |*【swarm】|*【FinVision】|
+|*【Agent Mental Clinic (AMC)】|*【MedAI】|
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -269,7 +272,7 @@ Open-Source Language Model Pocket
 |*【Jamba 1.5】|*【Phi-3.5】|
 |*【1.5-Pints】|*【Llama-3.1-Minitron 4B】|
 |*【SmolLm2】|*【Ministral 3B/8B】|
-|*【Zamba2-7B】||
+|*【Zamba2-7B】|*【IBM Granite 3.0】|
 
 *训练/推理*
 |  |  |
@@ -348,7 +351,7 @@ Open-Source Language Model Pocket
 |*【Fast Best-of-N Decoding】|*【UNA: Unifying Alignments of RLHF/PPO, DPO and KTO】|
 |*【LongReward】|*【HybridFlow】|
 |*【The Surprising Effectiveness of Test-Time Training for Abstract Reasoning】|*【OpenR】|
-|*【A Theoretical Understanding of Self-Correction through In-context Alignment】||
+|*【A Theoretical Understanding of Self-Correction through In-context Alignment】|*【EfficientQAT】|
 
 *评价*
 |  ||
@@ -385,6 +388,7 @@ Open-Source Language Model Pocket
 |*【CompassJudger/JudgerBench】|*【CMCOQA】|
 |*【CodevBench】|*【FrontierMath】|
 |*【GIFT-Eval】|*【LightEval】|
+|*【RMB-Reward-Model-Benchmark】|*【Chinese SimpleQA】|
 
 *其它*
 |  |  |
@@ -2355,6 +2359,18 @@ Current long context large language models (LLMs) can process inputs up to 100,0
 
 With the rapid development of artificial intelligence technology, large language models (LLMs) have made significant progress in fields such as natural language processing, computer vision, and scientific tasks. However, as the scale of these models increases, optimizing resource consumption while maintaining high performance has become a key challenge. To address this challenge, we have explored Mixture of Experts (MoE) models. The currently unveiled Hunyuan-Large (Hunyuan-MoE-A52B) model is the largest open-source Transformer-based MoE model in the industry, featuring a total of 389 billion parameters and 52 billion active parameters. This is currently the largest open-source Transformer-based MoE model in the industry, featuring a total of 389 billion parameters and 52 billion active parameters.
 
+### Qwen2.5
+- https://github.com/QwenLM/Qwen2.5
+
+In the past three months since Qwen2's release, numerous developers have built new models on the Qwen2 language models, providing us with valuable feedback. During this period, we have focused on creating smarter and more knowledgeable language models. Today, we are excited to introduce the latest addition to the Qwen family: Qwen2.5.
+
+### TeleChat2
+- https://github.com/Tele-AI/TeleChat2
+
+星辰语义大模型TeleChat2是由中国电信人工智能研究院研发训练的大语言模型，该系列模型完全基于国产算力训练。
+本次开源的 TeleChat2-3B、TeleChat2-7B、TeleChat2-35B 模型已支持工具调用功能。在 Function Call 方面，我们针对性进行了效果优化，在相关榜单评测上相比同尺寸模型均有较好表现。
+TeleChat2-115B模型采用10万亿 Tokens中英文高质量语料进行训练，同步开源对话模型TeleChat2-115B的多格式、多平台权重文件。
+
 ### Transformer Architecture (LLMs: Zero-to-Hero)
 - https://medium.com/@waylandzhang/transformer-architecture-llms-zero-to-hero-98b1ee51a838
 
@@ -2895,6 +2911,12 @@ An Open Source Framework for Advanced Reasoning with Large Language Models
 - https://github.com/yifeiwang77/Self-Correction
 
 Going beyond mimicking limited human experiences, recent studies show initial evidence that, like humans, large language models (LLMs) are capable of improving their abilities purely by self-correction, i.e., correcting previous responses through self-examination, in certain circumstances. Nevertheless, little is known about how such capabilities arise. In this work, based on a simplified setup akin to an alignment task, we theoretically analyze self-correction from an in-context learning perspective, showing that when LLMs give relatively accurate self-examinations as rewards, they are capable of refining responses in an in-context way. Notably, going beyond previous theories on over-simplified linear transformers, our theoretical construction underpins the roles of several key designs of realistic transformers for self-correction: softmax attention, multi-head attention, and the MLP block. We validate these findings extensively on synthetic datasets. Inspired by these findings, we also illustrate novel applications of self-correction, such as defending against LLM jailbreaks, where a simple self-correction step does make a large difference. We believe that these findings will inspire further research on understanding, exploiting, and enhancing self-correction for building better foundation models.
+
+### EfficientQAT
+- https://arxiv.org/abs/2407.11062
+- https://github.com/OpenGVLab/EfficientQAT
+
+Large language models (LLMs) are crucial in modern natural language processing and artificial intelligence. However, they face challenges in managing their significant memory requirements. Although quantization-aware training (QAT) offers a solution by reducing memory consumption through low-bit representations with minimal accuracy loss, it is impractical due to substantial training resources. To address this, we propose Efficient Quantization-Aware Training (EfficientQAT), a more feasible QAT algorithm. EfficientQAT involves two consecutive phases: Block-wise training of all parameters (Block-AP) and end-to-end training of quantization parameters (E2E-QP). To the best of our knowledge, Block-AP is the first method to enable direct training of all parameters in a block-wise manner, reducing accuracy loss in low-bit scenarios by enhancing the solution space during optimization. E2E-QP then trains only the quantization parameters (step sizes) end-to-end, further improving the performance of quantized models by considering interactions among all sub-modules. Extensive experiments demonstrate that EfficientQAT outperforms previous quantization methods across a range of models, including base LLMs, instruction-tuned LLMs, and multimodal LLMs, with scales from 7B to 70B parameters at various quantization bits. For instance, EfficientQAT obtains a 2-bit Llama-2-70B model on a single A100-80GB GPU in 41 hours, with less than 3 points accuracy degradation compared to the full precision (69.48 vs. 72.41).
 
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
@@ -4164,6 +4186,11 @@ We present systematic efforts in building long-context multilingual text represe
 
 MaxKB = Max Knowledge Base，是一款基于 LLM 大语言模型的开源知识库问答系统，广泛应用于企业内部知识库、客户服务、学术研究与教育等场景。
 
+### Langchain-Chatchat
+- https://github.com/chatchat-space/Langchain-Chatchat
+
+🤖️ 一种利用 langchain 思想实现的基于本地知识库的问答应用，目标期望建立一套对中文场景与开源模型支持友好、可离线运行的知识库问答解决方案。
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -4486,6 +4513,16 @@ An educational framework exploring ergonomic, lightweight multi-agent orchestrat
 - https://arxiv.org/abs/2411.08899
 
 Financial trading has been a challenging task, as it requires the integration of vast amounts of data from various modalities. Traditional deep learning and reinforcement learning methods require large training data and often involve encoding various data types into numerical formats for model input, which limits the explainability of model behavior. Recently, LLM-based agents have demonstrated remarkable advancements in handling multi-modal data, enabling them to execute complex, multi-step decision-making tasks while providing insights into their thought processes. This research introduces a multi-modal multi-agent system designed specifically for financial trading tasks. Our framework employs a team of specialized LLM-based agents, each adept at processing and interpreting various forms of financial data, such as textual news reports, candlestick charts, and trading signal charts. A key feature of our approach is the integration of a reflection module, which conducts analyses of historical trading signals and their outcomes. This reflective process is instrumental in enhancing the decision-making capabilities of the system for future trading scenarios. Furthermore, the ablation studies indicate that the visual reflection module plays a crucial role in enhancing the decision-making capabilities of our framework.
+
+### Agent Mental Clinic (AMC)
+- https://arxiv.org/abs/2409.15084
+
+Mental health issues, particularly depressive disorders, present significant challenges in contemporary society, necessitating the development of effective automated diagnostic methods. This paper introduces the Agent Mental Clinic (AMC), a self-improving conversational agent system designed to enhance depression diagnosis through simulated dialogues between patient and psychiatrist agents. To enhance the dialogue quality and diagnosis accuracy, we design a psychiatrist agent consisting of a tertiary memory structure, a dialogue control and reflect plugin that acts as ``supervisor'' and a memory sampling module, fully leveraging the skills reflected by the psychiatrist agent, achieving great accuracy on depression risk and suicide risk diagnosis via conversation. Experiment results on datasets collected in real-life scenarios demonstrate that the system, simulating the procedure of training psychiatrists, can be a promising optimization method for aligning LLMs with real-life distribution in specific domains without modifying the weights of LLMs, even when only a few representative labeled cases are available.
+
+### MedAI
+- https://arxiv.org/abs/2410.04660
+
+Biomedical knowledge is uniquely complex and structured, requiring distinct reasoning strategies compared to other scientific disciplines like physics or chemistry. Biomedical scientists do not rely on a single approach to reasoning; instead, they use various strategies, including rule-based, prototype-based, and case-based reasoning. This diversity calls for flexible approaches that accommodate multiple reasoning strategies while leveraging in-domain knowledge. We introduce KGARevion, a knowledge graph (KG) based agent designed to address the complexity of knowledge-intensive medical queries. Upon receiving a query, KGARevion generates relevant triplets by using the knowledge base of the LLM. These triplets are then verified against a grounded KG to filter out erroneous information and ensure that only accurate, relevant data contribute to the final answer. Unlike RAG-based models, this multi-step process ensures robustness in reasoning while adapting to different models of medical reasoning. Evaluations on four gold-standard medical QA datasets show that KGARevion improves accuracy by over 5.2%, outperforming 15 models in handling complex medical questions. To test its capabilities, we curated three new medical QA datasets with varying levels of semantic complexity, where KGARevion achieved a 10.4% improvement in accuracy.
 
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
@@ -4840,6 +4877,20 @@ Lighteval is your all-in-one toolkit for evaluating LLMs across multiple backend
 Customization at your fingertips: letting you either browse all our existing tasks and metrics or effortlessly create your own, tailored to your needs.
 
 Seamlessly experiment, benchmark, and store your results on the Hugging Face Hub, S3, or locally.
+
+### RMB-Reward-Model-Benchmark
+- https://github.com/Zhou-Zoey/RMB-Reward-Model-Benchmark
+- https://arxiv.org/abs/2410.09893
+
+RMB is a comprehensive RM benchmark that covers over 49 real-world scenarios and includes both pairwise and Best-of-N (BoN) evaluations to better reflect the effectiveness of RMs in guiding alignment optimization.
+
+### Chinese SimpleQA
+- https://arxiv.org/abs/2411.07140
+- https://openstellarteam.github.io/ChineseSimpleQA
+- https://huggingface.co/datasets/OpenStellarTeam/Chinese-SimpleQA
+- https://github.com/OpenStellarTeam/ChineseSimpleQA
+
+Chinese SimpleQA is the first comprehensive Chinese benchmark to evaluate the factuality ability of language models to answer short questions, and Chinese SimpleQA mainly has five properties (i.e., Chinese, Diverse, High-quality, Static, Easy-to-evaluate). Specifically, our benchmark covers 6 major topics with 99 diverse subtopics.
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
@@ -5272,6 +5323,12 @@ These models set a new frontier in knowledge, commonsense, reasoning, function-c
 Zamba2-7B achieves leading and state-of-the-art performance among models ≤8B parameters, outperforming several extremely strong baselines such as Meta's Llama3 series, Google's Gemma series and Mistral-7B. Moreover, due to its unique hybrid SSM architecture, Zamba2-7B achieves extremely low inference latency and rapid generation with a significantly smaller memory footprint than comparable transformer based models.
 
 We believe Zamba2-7B is an ideal generalist model which is cheap and fast to run and fits on the majority of consumer hardware but possesses a powerful intelligence.
+
+### IBM Granite 3.0
+- https://www.ibm.com/new/ibm-granite-3-0-open-state-of-the-art-enterprise-models
+- https://github.com/ibm-granite/granite-3.0-language-models
+
+Granite 3.0 language models are a new set of lightweight state-of-the-art, open foundation models that natively support multilinguality, coding, reasoning, and tool usage, including the potential to be run on constrained compute resources. All the models are publicly released under an Apache 2.0 license for both research and commercial use. The models' data curation and training procedure were designed for enterprise usage and customization in mind, with a process that evaluates datasets for governance, risk and compliance (GRC) criteria, in addition to IBM's standard data clearance process and document quality checks.
 
 ### CodecLM
 - https://arxiv.org/abs/2404.05875
