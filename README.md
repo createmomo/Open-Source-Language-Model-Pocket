@@ -47,7 +47,7 @@ Open-Source Language Model Pocket
 |Gemma-2-27B-Chinese-Chat|RWKV-6-World 14B|Tele-FLM-1T|
 |Llama3.1-Chinese-Chat|INF-34B|InternLM2.5|
 |*【LongWriter】|*【Hunyuan-Large】|*【Qwen2.5】|
-|*【TeleChat2】|||
+|*【TeleChat2】|*【Marco-o1】||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -273,6 +273,7 @@ Open-Source Language Model Pocket
 |*【1.5-Pints】|*【Llama-3.1-Minitron 4B】|
 |*【SmolLm2】|*【Ministral 3B/8B】|
 |*【Zamba2-7B】|*【IBM Granite 3.0】|
+|*【Tülu3】||
 
 *训练/推理*
 |  |  |
@@ -417,6 +418,7 @@ Open-Source Language Model Pocket
 |MobileCPM|LLM-Select|
 |Transformer Architecture (LLMs: Zero-to-Hero)|Build a Large Language Model (From Scratch)|
 |*【SynthID Text】|*【Small Language Models: Survey, Measurements, and Insights】|
+|*【Multi-IF (Multi-turn and multilingual instruction following)】||
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -2371,6 +2373,13 @@ In the past three months since Qwen2's release, numerous developers have built n
 本次开源的 TeleChat2-3B、TeleChat2-7B、TeleChat2-35B 模型已支持工具调用功能。在 Function Call 方面，我们针对性进行了效果优化，在相关榜单评测上相比同尺寸模型均有较好表现。
 TeleChat2-115B模型采用10万亿 Tokens中英文高质量语料进行训练，同步开源对话模型TeleChat2-115B的多格式、多平台权重文件。
 
+### Marco-o1
+- https://arxiv.org/abs/2411.14405
+- https://github.com/AIDC-AI/Marco-o1
+- https://huggingface.co/AIDC-AI/Marco-o1
+
+Marco-o1 not only focuses on disciplines with standard answers, such as mathematics, physics, and coding—which are well-suited for reinforcement learning (RL)—but also places greater emphasis on open-ended resolutions. We aim to address the question: "Can the o1 model effectively generalize to broader domains where clear standards are absent and rewards are challenging to quantify?"
+
 ### Transformer Architecture (LLMs: Zero-to-Hero)
 - https://medium.com/@waylandzhang/transformer-architecture-llms-zero-to-hero-98b1ee51a838
 
@@ -2392,6 +2401,13 @@ Large language models (LLMs) have enabled the generation of high-quality synthet
 - https://arxiv.org/abs/2409.15790
 
 Small language models (SLMs), despite their widespread adoption in modern smart devices, have received significantly less academic attention compared to their large language model (LLM) counterparts, which are predominantly deployed in data centers and cloud environments. While researchers continue to improve the capabilities of LLMs in the pursuit of artificial general intelligence, SLM research aims to make machine intelligence more accessible, affordable, and efficient for everyday tasks. Focusing on transformer-based, decoder-only language models with 100M-5B parameters, we survey 59 state-of-the-art open-source SLMs, analyzing their technical innovations across three axes: architectures, training datasets, and training algorithms. In addition, we evaluate their capabilities in various domains, including commonsense reasoning, in-context learning, mathematics, and coding. To gain further insight into their on-device runtime costs, we benchmark their inference latency and memory footprints. Through in-depth analysis of our benchmarking data, we offer valuable insights to advance research in this field.
+
+### Multi-IF (Multi-turn and multilingual instruction following)
+- https://huggingface.co/datasets/facebook/Multi-IF
+- https://arxiv.org/pdf/2410.15553v2
+- https://github.com/facebookresearch/Multi-IF
+
+Large Language Models (LLMs) have demonstrated impressive capabilities in various tasks, including instruction following, which is crucial for aligning model outputs with user expectations. However, evaluating LLMs' ability to follow instructions remains challenging due to the complexity and subjectivity of human language. Current benchmarks primarily focus on single-turn, monolingual instructions, which do not adequately reflect the complexities of real-world applications that require handling multi-turn and multilingual interactions. To address this gap, we introduce Multi-IF, a new benchmark designed to assess LLMs' proficiency in following multi-turn and multilingual instructions. Multi-IF, which utilizes a hybrid framework combining LLM and human annotators, expands upon the IFEval by incorporating multi-turn sequences and translating the English prompts into another 7 languages, resulting in a dataset of 4,501 multilingual conversations, where each has three turns. Our evaluation of 14 state-of-the-art LLMs on Multi-IF reveals that it presents a significantly more challenging task than existing benchmarks. All the models tested showed a higher rate of failure in executing instructions correctly with each additional turn. For example, o1-preview drops from 0.877 at the first turn to 0.707 at the third turn in terms of average accuracy over all languages. Moreover, languages with non-Latin scripts (Hindi, Russian, and Chinese) generally exhibit higher error rates, suggesting potential limitations in the models' multilingual capabilities. We release Multi-IF prompts and the evaluation code base to encourage further research in this critical area.
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -5329,6 +5345,12 @@ We believe Zamba2-7B is an ideal generalist model which is cheap and fast to run
 - https://github.com/ibm-granite/granite-3.0-language-models
 
 Granite 3.0 language models are a new set of lightweight state-of-the-art, open foundation models that natively support multilinguality, coding, reasoning, and tool usage, including the potential to be run on constrained compute resources. All the models are publicly released under an Apache 2.0 license for both research and commercial use. The models' data curation and training procedure were designed for enterprise usage and customization in mind, with a process that evaluates datasets for governance, risk and compliance (GRC) criteria, in addition to IBM's standard data clearance process and document quality checks.
+
+### Tülu3
+- https://huggingface.co/allenai/Llama-3.1-Tulu-3-8B
+- https://allenai.org/blog/tulu-3-technical
+
+Tülu3 is a leading instruction following model family, offering fully open-source data, code, and recipes designed to serve as a comprehensive guide for modern post-training techniques. Tülu3 is designed for state-of-the-art performance on a diversity of tasks in addition to chat, such as MATH, GSM8K, and IFEval.
 
 ### CodecLM
 - https://arxiv.org/abs/2404.05875
