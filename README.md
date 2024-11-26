@@ -91,7 +91,7 @@ Open-Source Language Model Pocket
 |JiuZhang3.0|InternLM2-WQX|
 |Math-Minos|NuminaMath 7B TIR|
 |MathΣtral|LLaMAX（翻译）|
-|Qwen2-Math||
+|Qwen2-Math|*【AIMO-CMU_MATH】|
 
 |表格/数据分析||
 |---|---|
@@ -178,7 +178,7 @@ Open-Source Language Model Pocket
 |RankRAG|LightRAG|
 |GraphRAG|*【gte-multilinguial】|
 |*【nano-graphrag】|*【MaxKB】|
-|*【Langchain-Chatchat】||
+|*【Langchain-Chatchat】|*【RAGLite】|
 
 *Agent*
 |  |  |
@@ -208,6 +208,7 @@ Open-Source Language Model Pocket
 |*【RD-Agent】|*【AFlow: Automating Agentic Workflow Generation】|
 |*【swarm】|*【FinVision】|
 |*【Agent Mental Clinic (AMC)】|*【MedAI】|
+|*【Agent-0】||
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -390,6 +391,7 @@ Open-Source Language Model Pocket
 |*【CodevBench】|*【FrontierMath】|
 |*【GIFT-Eval】|*【LightEval】|
 |*【RMB-Reward-Model-Benchmark】|*【Chinese SimpleQA】|
+|*【Evalchemy】||
 
 *其它*
 |  |  |
@@ -418,7 +420,8 @@ Open-Source Language Model Pocket
 |MobileCPM|LLM-Select|
 |Transformer Architecture (LLMs: Zero-to-Hero)|Build a Large Language Model (From Scratch)|
 |*【SynthID Text】|*【Small Language Models: Survey, Measurements, and Insights】|
-|*【Multi-IF (Multi-turn and multilingual instruction following)】||
+|*【Multi-IF (Multi-turn and multilingual instruction following)】|*【LLM from scratch with Pytorch】|
+|*【A Survey on Data Synthesis and Augmentation for Large Language Models】||
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -864,6 +867,13 @@ Large Language Models~(LLMs) demonstrate remarkable translation capabilities in 
 - https://github.com/QwenLM/Qwen2-Math
 
 Over the past year, we have dedicated significant effort to researching and enhancing the reasoning capabilities of large language models, with a particular focus on their ability to solve arithmetic and mathematical problems. Today, we are delighted to introduce a series of math-specific large language models of our Qwen2 series, Qwen2-Math, and Qwen2-Math-Instruct-1.5B/7B/72B. Qwen2-Math is a series of specialized math language models built upon the Qwen2 LLMs, which significantly outperforms the mathematical capabilities of open-source models and even closed-source models (e.g., GPT4o). We hope that Qwen2-Math can contribute to the scientific community by solving advanced mathematical problems that require complex, multi-step logical reasoning.
+
+### AIMO-CMU_MATH
+- https://github.com/AIMO-CMU-MATH/CMU_MATH-AIMO
+
+the proud winners of the 2nd place in the AI Mathematical Olympiad (AIMO).
+
+We are pleased to share all the datasets and code used in our competition. This repository contains the resources needed to reproduce our models and solutions.
 
 ### ChatRWKV
 - https://github.com/BlinkDL/ChatRWKV
@@ -2408,6 +2418,20 @@ Small language models (SLMs), despite their widespread adoption in modern smart 
 - https://github.com/facebookresearch/Multi-IF
 
 Large Language Models (LLMs) have demonstrated impressive capabilities in various tasks, including instruction following, which is crucial for aligning model outputs with user expectations. However, evaluating LLMs' ability to follow instructions remains challenging due to the complexity and subjectivity of human language. Current benchmarks primarily focus on single-turn, monolingual instructions, which do not adequately reflect the complexities of real-world applications that require handling multi-turn and multilingual interactions. To address this gap, we introduce Multi-IF, a new benchmark designed to assess LLMs' proficiency in following multi-turn and multilingual instructions. Multi-IF, which utilizes a hybrid framework combining LLM and human annotators, expands upon the IFEval by incorporating multi-turn sequences and translating the English prompts into another 7 languages, resulting in a dataset of 4,501 multilingual conversations, where each has three turns. Our evaluation of 14 state-of-the-art LLMs on Multi-IF reveals that it presents a significantly more challenging task than existing benchmarks. All the models tested showed a higher rate of failure in executing instructions correctly with each additional turn. For example, o1-preview drops from 0.877 at the first turn to 0.707 at the third turn in terms of average accuracy over all languages. Moreover, languages with non-Latin scripts (Hindi, Russian, and Chinese) generally exhibit higher error rates, suggesting potential limitations in the models' multilingual capabilities. We release Multi-IF prompts and the evaluation code base to encourage further research in this critical area.
+
+### LLM from scratch with Pytorch
+- https://medium.com/@msouza.os/llm-from-scratch-with-pytorch-9f21808c6319
+
+Generative models are currently one of the most intriguing fields in AI, more specifically, those text-to-text models that generate text based on an initial user prompt. One famous example is ChatGPT by OpenAI, which is an Assistant model capable to respond user questions about multiple topics.
+
+In this paper, we cover LLM, how it works and how to train it from scratch. I’ll try to be clear in all topics of this paper, and I hope most of you could understand and learn something from it 😁.
+
+If you are going to run all of the code examples, make sure that you have imported the libraries first.
+
+### A Survey on Data Synthesis and Augmentation for Large Language Models
+- https://arxiv.org/abs/2410.12896
+
+The success of Large Language Models (LLMs) is inherently linked to the availability of vast, diverse, and high-quality data for training and evaluation. However, the growth rate of high-quality data is significantly outpaced by the expansion of training datasets, leading to a looming data exhaustion crisis. This underscores the urgent need to enhance data efficiency and explore new data sources. In this context, synthetic data has emerged as a promising solution. Currently, data generation primarily consists of two major approaches: data augmentation and synthesis. This paper comprehensively reviews and summarizes data generation techniques throughout the lifecycle of LLMs, including data preparation, pre-training, fine-tuning, instruction-tuning, preference alignment, and applications. Furthermore, We discuss the current constraints faced by these methods and investigate potential pathways for future development and research. Our aspiration is to equip researchers with a clear understanding of these methodologies, enabling them to swiftly identify appropriate data generation strategies in the construction of LLMs, while providing valuable insights for future exploration.
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -4207,6 +4231,11 @@ MaxKB = Max Knowledge Base，是一款基于 LLM 大语言模型的开源知识�
 
 🤖️ 一种利用 langchain 思想实现的基于本地知识库的问答应用，目标期望建立一套对中文场景与开源模型支持友好、可离线运行的知识库问答解决方案。
 
+### RAGLite
+- https://github.com/superlinear-ai/raglite
+
+RAGLite is a Python toolkit for Retrieval-Augmented Generation (RAG) with PostgreSQL or SQLite.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -4539,6 +4568,15 @@ Mental health issues, particularly depressive disorders, present significant cha
 - https://arxiv.org/abs/2410.04660
 
 Biomedical knowledge is uniquely complex and structured, requiring distinct reasoning strategies compared to other scientific disciplines like physics or chemistry. Biomedical scientists do not rely on a single approach to reasoning; instead, they use various strategies, including rule-based, prototype-based, and case-based reasoning. This diversity calls for flexible approaches that accommodate multiple reasoning strategies while leveraging in-domain knowledge. We introduce KGARevion, a knowledge graph (KG) based agent designed to address the complexity of knowledge-intensive medical queries. Upon receiving a query, KGARevion generates relevant triplets by using the knowledge base of the LLM. These triplets are then verified against a grounded KG to filter out erroneous information and ensure that only accurate, relevant data contribute to the final answer. Unlike RAG-based models, this multi-step process ensures robustness in reasoning while adapting to different models of medical reasoning. Evaluations on four gold-standard medical QA datasets show that KGARevion improves accuracy by over 5.2%, outperforming 15 models in handling complex medical questions. To test its capabilities, we curated three new medical QA datasets with varying levels of semantic complexity, where KGARevion achieved a 10.4% improvement in accuracy.
+
+### Agent-0
+- https://github.com/PromtEngineer/Agent-0
+
+Agent-0: Replicating O1's Chain of Thought Reasoning
+
+This project is a proof of concept that aims to replicate the reasoning capabilities of OpenAI's newly released O1 model. O1 uses chain-of-thought prompting and reinforcement learning to reflect on its solutions, improving responses through iterative reasoning. Our goal is to mimic this behavior using alternative models.
+
+In this implementation, we use a sequential agent-based system powered by the Gemini API (or any model with function-calling capabilities). The system proposes solutions to coding-related problems and iteratively refines them using chain-of-thought and reflection techniques at each stage. The Gemini API, with its code execution abilities, is ideal for this project. While it works with Gemini Flash, we recommend using the Pro version to avoid issues with external package dependencies, as the Pro version generally sticks to Python's standard library.
 
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
@@ -4907,6 +4945,13 @@ RMB is a comprehensive RM benchmark that covers over 49 real-world scenarios and
 - https://github.com/OpenStellarTeam/ChineseSimpleQA
 
 Chinese SimpleQA is the first comprehensive Chinese benchmark to evaluate the factuality ability of language models to answer short questions, and Chinese SimpleQA mainly has five properties (i.e., Chinese, Diverse, High-quality, Static, Easy-to-evaluate). Specifically, our benchmark covers 6 major topics with 99 diverse subtopics.
+
+### Evalchemy
+- https://github.com/mlfoundations/evalchemy
+
+A framework for gold standard language model evaluations
+
+Evalchemy is a unified and easy-to-use toolkit for evaluating language models, focussing on post-trained models. Evalchemy is developed by the DataComp community and Bespoke Labs and builds on the LM-Eval-Harness to provide a unified, easy-to-use platform for language model evaluation. Evalchemy integrates multiple existing benchmarks, such as RepoBench, AlpacaEval, and ZeroEval.
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
