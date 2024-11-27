@@ -47,7 +47,7 @@ Open-Source Language Model Pocket
 |Gemma-2-27B-Chinese-Chat|RWKV-6-World 14B|Tele-FLM-1T|
 |Llama3.1-Chinese-Chat|INF-34B|InternLM2.5|
 |*【LongWriter】|*【Hunyuan-Large】|*【Qwen2.5】|
-|*【TeleChat2】|*【Marco-o1】||
+|*【TeleChat2】|*【Marco-o1】|*【Skywork-o1】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -179,6 +179,7 @@ Open-Source Language Model Pocket
 |GraphRAG|*【gte-multilinguial】|
 |*【nano-graphrag】|*【MaxKB】|
 |*【Langchain-Chatchat】|*【RAGLite】|
+|*【OpenScholar】||
 
 *Agent*
 |  |  |
@@ -274,7 +275,7 @@ Open-Source Language Model Pocket
 |*【1.5-Pints】|*【Llama-3.1-Minitron 4B】|
 |*【SmolLm2】|*【Ministral 3B/8B】|
 |*【Zamba2-7B】|*【IBM Granite 3.0】|
-|*【Tülu3】||
+|*【Tülu3】|*【Open-O1】|
 
 *训练/推理*
 |  |  |
@@ -421,7 +422,9 @@ Open-Source Language Model Pocket
 |Transformer Architecture (LLMs: Zero-to-Hero)|Build a Large Language Model (From Scratch)|
 |*【SynthID Text】|*【Small Language Models: Survey, Measurements, and Insights】|
 |*【Multi-IF (Multi-turn and multilingual instruction following)】|*【LLM from scratch with Pytorch】|
-|*【A Survey on Data Synthesis and Augmentation for Large Language Models】||
+|*【A Survey on Data Synthesis and Augmentation for Large Language Models】|*【A Survey of Small Language Models】|
+|*【LLMForEverybody】|*【Dialogue Action Tokens: Steering Language Models in Goal-Directed Dialogue with a Multi-Turn Planner】|
+|*【CCI3.0-HQ】||
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -2388,7 +2391,12 @@ TeleChat2-115B模型采用10万亿 Tokens中英文高质量语料进行训练，
 - https://github.com/AIDC-AI/Marco-o1
 - https://huggingface.co/AIDC-AI/Marco-o1
 
-Marco-o1 not only focuses on disciplines with standard answers, such as mathematics, physics, and coding—which are well-suited for reinforcement learning (RL)—but also places greater emphasis on open-ended resolutions. We aim to address the question: "Can the o1 model effectively generalize to broader domains where clear standards are absent and rewards are challenging to quantify?"
+Marco-o1 not only focuses on disciplines with standard answers, such as mathematics, physics, and coding—which are well-suited for reinforcement learning (RL)—but also places greater emphasis on open-ended resolutions. We aim to address the question: "Can the o1 model effectively generalize to broader domains where clear standards are absent and rewards are challenging to quantify?
+
+### Skywork-o1
+- https://tinyurl.com/skywork-o1
+
+Skywork o1 open model collections
 
 ### Transformer Architecture (LLMs: Zero-to-Hero)
 - https://medium.com/@waylandzhang/transformer-architecture-llms-zero-to-hero-98b1ee51a838
@@ -2432,6 +2440,33 @@ If you are going to run all of the code examples, make sure that you have import
 - https://arxiv.org/abs/2410.12896
 
 The success of Large Language Models (LLMs) is inherently linked to the availability of vast, diverse, and high-quality data for training and evaluation. However, the growth rate of high-quality data is significantly outpaced by the expansion of training datasets, leading to a looming data exhaustion crisis. This underscores the urgent need to enhance data efficiency and explore new data sources. In this context, synthetic data has emerged as a promising solution. Currently, data generation primarily consists of two major approaches: data augmentation and synthesis. This paper comprehensively reviews and summarizes data generation techniques throughout the lifecycle of LLMs, including data preparation, pre-training, fine-tuning, instruction-tuning, preference alignment, and applications. Furthermore, We discuss the current constraints faced by these methods and investigate potential pathways for future development and research. Our aspiration is to equip researchers with a clear understanding of these methodologies, enabling them to swiftly identify appropriate data generation strategies in the construction of LLMs, while providing valuable insights for future exploration.
+
+### A Survey of Small Language Models
+- https://arxiv.org/abs/2410.20011
+
+Small Language Models (SLMs) have become increasingly important due to their efficiency and performance to perform various language tasks with minimal computational resources, making them ideal for various settings including on-device, mobile, edge devices, among many others. In this article, we present a comprehensive survey on SLMs, focusing on their architectures, training techniques, and model compression techniques. We propose a novel taxonomy for categorizing the methods used to optimize SLMs, including model compression, pruning, and quantization techniques. We summarize the benchmark datasets that are useful for benchmarking SLMs along with the evaluation metrics commonly used. Additionally, we highlight key open challenges that remain to be addressed. Our survey aims to serve as a valuable resource for researchers and practitioners interested in developing and deploying small yet efficient language models.
+
+### LLMForEverybody
+- https://github.com/luhengshiwo/LLMForEverybody
+
+每个人都能看懂的大模型知识分享，LLMs秋招大模型面试前必看，让你和面试官侃侃而谈
+
+### Dialogue Action Tokens: Steering Language Models in Goal-Directed Dialogue with a Multi-Turn Planner
+- https://arxiv.org/abs/2406.11978
+- https://github.com/likenneth/dialogue_action_token
+- https://thegradient.pub/dialog/
+
+We present an approach called Dialogue Action Tokens (DAT) that adapts language model agents to plan goal-directed dialogues. The core idea is to treat each utterance as an action, thereby converting dialogues into games where existing approaches such as reinforcement learning can be applied. Specifically, we freeze a pretrained language model and train a small planner model that predicts a continuous action vector, used for controlled generation in each round. This design avoids the problem of language degradation under reward optimization. When evaluated on the Sotopia platform for social simulations, the DAT-steered LLaMA model surpasses GPT-4’s performance. We also apply DAT to steer an attacker language model in a novel multi-turn red-teaming setting, revealing a potential new attack surface.
+
+### CCI3.0-HQ
+- https://hf.co/datasets/BAAI/CCI3-HQ
+- http://open.flopsera.com/flopsera-open/data-details/BAAI-CCI3-HQ
+- https://data.baai.ac.cn/details/BAAI-CCI3-HQ
+- https://arxiv.org/abs/2410.18505
+
+近年来，自然语言基础模型（LLM）取得了显著进展，训练数据的规模扩展以及数据质量的提升是提升模型性能的关键因素。目前英文开源语料的质量过滤已经从基础的规则方法转向了模型驱动的方法。然而，中文开源语料相对稀缺，同时针对中文网络数据进行质量分类提升的研究较少，导致数据质量尚未达到理想水平，进而影响模型中文性能。
+
+为解决以上问题，进一步缓解中文预训练语料规模和质量上的差距，2024年9月20日，智源研究院发布并开源了中文预训练数据集CCI3.0和高质量子集CCI3.0-HQ。2024年10月25日，智源研究院发布中文高质量预训练数据集CCI3.0-HQ技术报告，全面解析数据集的构建过程。
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -4236,6 +4271,15 @@ MaxKB = Max Knowledge Base，是一款基于 LLM 大语言模型的开源知识�
 
 RAGLite is a Python toolkit for Retrieval-Augmented Generation (RAG) with PostgreSQL or SQLite.
 
+### OpenScholar
+- https://github.com/AkariAsai/OpenScholar
+- https://openscholar.allen.ai/paper
+- https://github.com/AkariAsai/ScholarQABench
+
+Scientific progress hinges on our ability to find, synthesize, and build on relevant knowledge from the scientific literature. However, the exponential growth of this literature—with millions of papers now published each year—has made it increasingly difficult for scientists to find the information they need or even stay abreast of the latest findings in a single subfield.
+
+To help scientists effectively navigate and synthesize scientific literature, we introduce OpenScholar, a retrieval-augmented language model (LM) designed to answer user queries by first searching for relevant papers in the literature and then generating responses grounded in those sources.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -5396,6 +5440,11 @@ Granite 3.0 language models are a new set of lightweight state-of-the-art, open 
 - https://allenai.org/blog/tulu-3-technical
 
 Tülu3 is a leading instruction following model family, offering fully open-source data, code, and recipes designed to serve as a comprehensive guide for modern post-training techniques. Tülu3 is designed for state-of-the-art performance on a diversity of tasks in addition to chat, such as MATH, GSM8K, and IFEval.
+
+### Open-O1
+- https://github.com/Open-Source-O1/Open-O1
+
+Our Open O1 aims to match the powerful capabilities of the proprietary OpenAI O1 model, empowering the community with advanced open-source alternatives. Our model has been developed by curating a set SFT data for CoT Activation, which was then used to train both LLaMA and Qwen models. This training approach has endowed the smaller models with enhanced long-reasoning and problem-solving capabilities.
 
 ### CodecLM
 - https://arxiv.org/abs/2404.05875
