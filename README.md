@@ -48,7 +48,8 @@ Open-Source Language Model Pocket
 |Llama3.1-Chinese-Chat|INF-34B|InternLM2.5|
 |*【LongWriter】|*【Hunyuan-Large】|*【Qwen2.5】|
 |*【TeleChat2】|*【Marco-o1】|*【Skywork-o1】|
-|*【YuLan-Mini】|||
+|*【YuLan-Mini】|*【DeepSeek-R1】|*【simpleRL-reason】|
+|*【TinyZero】|*【STILL-3-1.5B-Preview】||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -182,7 +183,7 @@ Open-Source Language Model Pocket
 |*【nano-graphrag】|*【MaxKB】|
 |*【Langchain-Chatchat】|*【RAGLite】|
 |*【OpenScholar】|*【MasteringRAG】|
-|*【FlashRAG-Paddle】||
+|*【FlashRAG-Paddle】|*【MiniRAG】|
 
 *Agent*
 |  |  |
@@ -213,7 +214,8 @@ Open-Source Language Model Pocket
 |*【swarm】|*【FinVision】|
 |*【Agent Mental Clinic (AMC)】|*【MedAI】|
 |*【Agent-0】|*【Large Language Model-Brained GUI Agents: A Survey】|
-|*【Building effective agents】||
+|*【Building effective agents】|*【UI-TARS】|
+|*【PaSa】||
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -280,6 +282,7 @@ Open-Source Language Model Pocket
 |*【SmolLm2】|*【Ministral 3B/8B】|
 |*【Zamba2-7B】|*【IBM Granite 3.0】|
 |*【Tülu3】|*【Open-O1】|
+|*【open-r1】||
 
 *训练/推理*
 |  |  |
@@ -2425,6 +2428,30 @@ Skywork o1 open model collections
 
 YuLan-Mini is a lightweight language model with 2.4 billion parameters. It achieves performance comparable to industry-leading models trained on significantly more data, despite being pre-trained on only 1.08T tokens. 
 
+### DeepSeek-R1
+- https://github.com/deepseek-ai/DeepSeek-R1
+
+We introduce our first-generation reasoning models, DeepSeek-R1-Zero and DeepSeek-R1. DeepSeek-R1-Zero, a model trained via large-scale reinforcement learning (RL) without supervised fine-tuning (SFT) as a preliminary step, demonstrated remarkable performance on reasoning.
+
+### simpleRL-reason
+- https://github.com/hkust-nlp/simpleRL-reason
+
+This repo contains a simple reinforcement learning recipe to improve models' reasoning abilities. It is simple because only rule-based reward is used, the recipe is almost the same as the one used in DeepSeek-R1, except that the code currently uses PPO rather than GRPO. We have used this code to train small models (7B) on limited data (8K examples), achieving surprisingly strong results -- for example, starting from Qwen2.5-Math-7B (base model), we perform RL on it directly. No SFT, no reward model, just 8K MATH examples for verification, the resultant model achieves (pass@1) 33.3% on AIME, 62.5% on AMC, and 77.2% on MATH, outperforming Qwen2.5-math-7B-instruct and being comparable to previous baselines that use >50x more data and more complicated components. You may check our Notion blog or the Introduction below for more details.
+
+### TinyZero
+- https://github.com/Jiayi-Pan/TinyZero
+
+TinyZero is a reproduction of DeepSeek R1 Zero in countdown and multiplication tasks. We built upon veRL.
+
+Through RL, the 3B base LM develops self-verification and search abilities all on its own
+
+### STILL-3-1.5B-Preview
+- https://github.com/RUCAIBox/Slow_Thinking_with_LLMs
+- https://huggingface.co/RUC-AIBOX/STILL-3-1.5B-preview
+- https://huggingface.co/datasets/RUC-AIBOX/STILL-3-Preview-RL-Data
+
+STILL-3-1.5B-preview: We release STILL-3-1.5B-preview, a 1.5B slow-thinking reasoning model achieves 39.33% accuracy on AIME benchmark! We utilize 30k queries to adapt reinforcement learning on 1.5B model (DeepSeek-R1-Distill-Qwen-1.5B) and observe the continuous performance improvement as the number of training steps increased. For better reproducing our work and advancing research progress, we open-source our code, model, and data.
+
 ### Transformer Architecture (LLMs: Zero-to-Hero)
 - https://medium.com/@waylandzhang/transformer-architecture-llms-zero-to-hero-98b1ee51a838
 
@@ -4325,6 +4352,12 @@ To help scientists effectively navigate and synthesize scientific literature, we
 
 PaddleNLP是一款基于飞桨深度学习框架的大语言模型(LLM)开发套件，支持在多种硬件上进行高效的大模型训练、无损压缩以及高性能推理。PaddleNLP 具备简单易用和性能极致的特点，致力于助力开发者实现高效的大模型产业级应用。
 
+### MiniRAG
+- https://github.com/HKUDS/MiniRAG
+- https://arxiv.org/abs/2501.06713
+
+MiniRAG is an extremely simple retrieval-augmented generation framework that enables small models to achieve good RAG performance through heterogeneous graph indexing and lightweight topology-enhanced retrieval.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -4680,6 +4713,16 @@ To provide a structured understanding of this trend, this paper presents a compr
 Over the past year, we've worked with dozens of teams building large language model (LLM) agents across industries. Consistently, the most successful implementations weren't using complex frameworks or specialized libraries. Instead, they were building with simple, composable patterns.
 
 In this post, we share what we’ve learned from working with our customers and building agents ourselves, and give practical advice for developers on building effective agents.
+
+### UI-TARS
+- https://github.com/bytedance/UI-TARS
+
+UI-TARS is a next-generation native GUI agent model designed to interact seamlessly with graphical user interfaces (GUIs) using human-like perception, reasoning, and action capabilities. Unlike traditional modular frameworks, UI-TARS integrates all key components—perception, reasoning, grounding, and memory—within a single vision-language model (VLM), enabling end-to-end task automation without predefined workflows or manual rules.
+
+### PaSa
+- https://github.com/bytedance/pasa
+
+PaSa -- an advanced paper search agent powered by large language models. It can autonomously make a series of decisions, including invoking search tools, reading papers, and selecting relevant references, to ultimately obtain comprehensive and accurate results for complex scholarly queries.
 
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
@@ -5504,6 +5547,11 @@ Tülu3 is a leading instruction following model family, offering fully open-sour
 - https://github.com/Open-Source-O1/Open-O1
 
 Our Open O1 aims to match the powerful capabilities of the proprietary OpenAI O1 model, empowering the community with advanced open-source alternatives. Our model has been developed by curating a set SFT data for CoT Activation, which was then used to train both LLaMA and Qwen models. This training approach has endowed the smaller models with enhanced long-reasoning and problem-solving capabilities.
+
+### open-r1
+- https://github.com/huggingface/open-r1
+
+A fully open reproduction of DeepSeek-R1. This repo is a work in progress, let's build it together!
 
 ### CodecLM
 - https://arxiv.org/abs/2404.05875
