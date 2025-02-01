@@ -65,6 +65,7 @@ Open-Source Language Model Pocket
 |Multilingual Medicine|Sequel|Gene editing|
 |Llama-3-8B-UltraMedical|PH-LLM|ProLLM|
 |MolecularGPT|*【CHIEF（Clinical Histopathology Imaging Evaluation Foundation）】|*【HuatuoGPT-o1】|
+|*【Baichuan-14B-M1】|||
 
 |经济/金融|||
 |---|---|---|
@@ -142,7 +143,7 @@ Open-Source Language Model Pocket
 |*【Qwen2.5-Coder】|*【Ministraux】|
 |*【Reader-LM】|*【珠算】|
 |*【Lingma SWE-GPT】|*【GLM-Edge】|
-|*【SEMIKONG（半导体）】||
+|*【SEMIKONG（半导体）】|*【ReaderLM-v2】|
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -184,6 +185,7 @@ Open-Source Language Model Pocket
 |*【Langchain-Chatchat】|*【RAGLite】|
 |*【OpenScholar】|*【MasteringRAG】|
 |*【FlashRAG-Paddle】|*【MiniRAG】|
+|*【XRAG】||
 
 *Agent*
 |  |  |
@@ -215,7 +217,7 @@ Open-Source Language Model Pocket
 |*【Agent Mental Clinic (AMC)】|*【MedAI】|
 |*【Agent-0】|*【Large Language Model-Brained GUI Agents: A Survey】|
 |*【Building effective agents】|*【UI-TARS】|
-|*【PaSa】||
+|*【PaSa】|*【Docling】|
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -362,7 +364,7 @@ Open-Source Language Model Pocket
 |*【LongReward】|*【HybridFlow】|
 |*【The Surprising Effectiveness of Test-Time Training for Abstract Reasoning】|*【OpenR】|
 |*【A Theoretical Understanding of Self-Correction through In-context Alignment】|*【EfficientQAT】|
-|*【Cautious Optimizers】||
+|*【Cautious Optimizers】|*【Optimizing Large Language Model Training Using FP4 Quantization】|
 
 *评价*
 |  ||
@@ -400,7 +402,7 @@ Open-Source Language Model Pocket
 |*【CodevBench】|*【FrontierMath】|
 |*【GIFT-Eval】|*【LightEval】|
 |*【RMB-Reward-Model-Benchmark】|*【Chinese SimpleQA】|
-|*【Evalchemy】||
+|*【Evalchemy】|*【WebWalker】|
 
 *其它*
 |  |  |
@@ -1505,6 +1507,11 @@ Histopathology image evaluation is indispensable for cancer diagnoses and subtyp
 
 HuatuoGPT-o1 is a medical LLM designed for advanced medical reasoning. It can identify mistakes, explore alternative strategies, and refine its answers. 
 
+### Baichuan-14B-M1
+- https://github.com/baichuan-inc/Baichuan-M1-14B
+
+Baichuan-14B-M1 是由百川智能开发的业界首款从零开始专为医疗场景优化的开源大语言模型。在拥有卓越通用能力的同时，在医疗领域方面有着强大的性能。在大部分通用榜单评测中达到了同尺寸模型的效果，而在医疗场景中达到了5倍甚至更大的模型的效果。
+
 ### Taiyi（太一）
 - https://github.com/DUTIR-BioNLP/Taiyi-LLM
 - https://arxiv.org/abs/2311.11608
@@ -1935,6 +1942,11 @@ GLM-Edge 系列是我们在面向端侧真实落地使用的场景下的一次�
 SEMIKONG is a collaborative open-source project born from the AI Alliance.
 
 Special THANKs to OUR SUPPORTERS FOR HELPING MAKE IT HAPPEN.
+
+### ReaderLM-v2
+- https://jina.ai/models/ReaderLM-v2/
+
+用于将原始 HTML 转换为 markdown 或 JSON 的小型语言模型
 
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
@@ -3052,6 +3064,11 @@ Large language models (LLMs) are crucial in modern natural language processing a
 - https://github.com/kyleliang919/C-Optim
 
 AdamW has been the default optimizer for transformer pretraining. For many years, our community searches for faster and more stable optimizers with only constraint positive outcomes. In this work, we propose a \textbf{single-line modification in Pytorch} to any momentum-based optimizer, which we rename Cautious Optimizer, e.g. C-AdamW and C-Lion. Our theoretical result shows that this modification preserves Adam's Hamiltonian function and it does not break the convergence guarantee under the Lyapunov analysis. In addition, a whole new family of optimizers is revealed by our theoretical insight. Among them, we pick the simplest one for empirical experiments, showing speed-up on Llama and MAE pretraining up to 1.47×.
+
+### Optimizing Large Language Model Training Using FP4 Quantization
+- https://arxiv.org/abs/2501.17116
+
+The growing computational demands of training large language models (LLMs) necessitate more efficient methods. Quantized training presents a promising solution by enabling low-bit arithmetic operations to reduce these costs. While FP8 precision has demonstrated feasibility, leveraging FP4 remains a challenge due to significant quantization errors and limited representational capacity. This work introduces the first FP4 training framework for LLMs, addressing these challenges with two key innovations: a differentiable quantization estimator for precise weight updates and an outlier clamping and compensation strategy to prevent activation collapse. To ensure stability, the framework integrates a mixed-precision training scheme and vector-wise quantization. Experimental results demonstrate that our FP4 framework achieves accuracy comparable to BF16 and FP8, with minimal degradation, scaling effectively to 13B-parameter LLMs trained on up to 100B tokens. With the emergence of next-generation hardware supporting FP4, our framework sets a foundation for efficient ultra-low precision training.
 
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
@@ -4358,6 +4375,11 @@ PaddleNLP是一款基于飞桨深度学习框架的大语言模型(LLM)开发套
 
 MiniRAG is an extremely simple retrieval-augmented generation framework that enables small models to achieve good RAG performance through heterogeneous graph indexing and lightweight topology-enhanced retrieval.
 
+### XRAG
+- https://github.com/DocAILab/XRAG
+
+XRAG is a benchmarking framework designed to evaluate the foundational components of advanced Retrieval-Augmented Generation (RAG) systems. By dissecting and analyzing each core module, XRAG provides insights into how different configurations and components impact the overall performance of RAG systems.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -4723,6 +4745,11 @@ UI-TARS is a next-generation native GUI agent model designed to interact seamles
 - https://github.com/bytedance/pasa
 
 PaSa -- an advanced paper search agent powered by large language models. It can autonomously make a series of decisions, including invoking search tools, reading papers, and selecting relevant references, to ultimately obtain comprehensive and accurate results for complex scholarly queries.
+
+### Docling
+- https://github.com/DS4SD/docling
+
+Docling simplifies document processing, parsing diverse formats — including advanced PDF understanding — and providing seamless integrations with the gen AI ecosystem.
 
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
@@ -5098,6 +5125,14 @@ Chinese SimpleQA is the first comprehensive Chinese benchmark to evaluate the fa
 A framework for gold standard language model evaluations
 
 Evalchemy is a unified and easy-to-use toolkit for evaluating language models, focussing on post-trained models. Evalchemy is developed by the DataComp community and Bespoke Labs and builds on the LM-Eval-Harness to provide a unified, easy-to-use platform for language model evaluation. Evalchemy integrates multiple existing benchmarks, such as RepoBench, AlpacaEval, and ZeroEval.
+
+### WebWalker
+- https://github.com/Alibaba-nlp/WebWalker
+- https://alibaba-nlp.github.io/WebWalker
+-https://arxiv.org/pdf/2501.07572
+
+Retrieval-augmented generation (RAG) demonstrates remarkable performance across tasks in open-domain question-answering. However, traditional search engines may retrieve shallow content, limiting the ability of LLMs to handle complex, multi-layered information. To address it, we introduce WebWalkerQA, a benchmark designed to assess the ability of LLMs to perform web traversal. It evaluates the capacity of LLMs to traverse a website's subpages to extract high-quality data systematically. We propose WebWalker, which is a multi-agent framework that mimics human-like web navigation through an explore-critic paradigm. Extensive experimental results show that WebWalkerQA is challenging and demonstrates the effectiveness of RAG combined with WebWalker, through the horizontal and vertical integration in real-world scenarios.
+
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
