@@ -49,7 +49,7 @@ Open-Source Language Model Pocket
 |*【LongWriter】|*【Hunyuan-Large】|*【Qwen2.5】|
 |*【TeleChat2】|*【Marco-o1】|*【Skywork-o1】|
 |*【YuLan-Mini】|*【DeepSeek-R1】|*【simpleRL-reason】|
-|*【TinyZero】|*【STILL-3-1.5B-Preview】||
+|*【TinyZero】|*【STILL-3-1.5B-Preview】|*【MiniMax-01】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -218,6 +218,7 @@ Open-Source Language Model Pocket
 |*【Agent-0】|*【Large Language Model-Brained GUI Agents: A Survey】|
 |*【Building effective agents】|*【UI-TARS】|
 |*【PaSa】|*【Docling】|
+|*【Eko】||
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -365,6 +366,8 @@ Open-Source Language Model Pocket
 |*【The Surprising Effectiveness of Test-Time Training for Abstract Reasoning】|*【OpenR】|
 |*【A Theoretical Understanding of Self-Correction through In-context Alignment】|*【EfficientQAT】|
 |*【Cautious Optimizers】|*【Optimizing Large Language Model Training Using FP4 Quantization】|
+|*【Evolving Deeper LLM Thinking】|*【rStar-Math】|
+|*【Transformer²: Self-Adaptive LLMs】||
 
 *评价*
 |  ||
@@ -2464,6 +2467,11 @@ Through RL, the 3B base LM develops self-verification and search abilities all o
 
 STILL-3-1.5B-preview: We release STILL-3-1.5B-preview, a 1.5B slow-thinking reasoning model achieves 39.33% accuracy on AIME benchmark! We utilize 30k queries to adapt reinforcement learning on 1.5B model (DeepSeek-R1-Distill-Qwen-1.5B) and observe the continuous performance improvement as the number of training steps increased. For better reproducing our work and advancing research progress, we open-source our code, model, and data.
 
+### MiniMax-01
+- https://github.com/MiniMax-AI/MiniMax-01
+
+We are delighted to introduce two remarkable models, MiniMax-Text-01 and MiniMax-VL-01. MiniMax-Text-01 is a powerful language model boasting 456 billion total parameters, with 45.9 billion activated per token. To unlock its long-context capabilities, it adopts a hybrid architecture integrating Lightning Attention, Softmax Attention, and Mixture-of-Experts (MoE). Leveraging advanced parallel strategies like Linear Attention Sequence Parallelism Plus (LASP+), varlen ring attention, and Expert Tensor Parallel (ETP), its training context length extends to 1 million tokens, and it can handle up to 4 million tokens during inference. Consequently, MiniMax-Text-01 showcases top-tier performance on various academic benchmarks. Building on MiniMax-Text-01's prowess, we developed MiniMax-VL-01 for enhanced visual capabilities. It uses the “ViT-MLP-LLM” framework common in multimodal LLMs. It is initialized and trained using three key components: a 303-million-parameter Vision Transformer (ViT) for visual encoding, a randomly initialized two-layer MLP projector for image adaptation, and MiniMax-Text-01 as the base LLM. This model features a dynamic resolution mechanism. Input images are resized according to a pre-set grid, with resolutions ranging from 336×336 to 2016×2016, while maintaining a 336×336 thumbnail. The resized images are split into non - overlapping patches of the same size. These patches and the thumbnail are encoded separately and then combined to form a full image representation. As a result, MiniMax-VL-01 has achieved top-level performance on multimodal leaderboards, demonstrating its edge in complex multimodal tasks.
+
 ### Transformer Architecture (LLMs: Zero-to-Hero)
 - https://medium.com/@waylandzhang/transformer-architecture-llms-zero-to-hero-98b1ee51a838
 
@@ -3069,6 +3077,22 @@ AdamW has been the default optimizer for transformer pretraining. For many years
 - https://arxiv.org/abs/2501.17116
 
 The growing computational demands of training large language models (LLMs) necessitate more efficient methods. Quantized training presents a promising solution by enabling low-bit arithmetic operations to reduce these costs. While FP8 precision has demonstrated feasibility, leveraging FP4 remains a challenge due to significant quantization errors and limited representational capacity. This work introduces the first FP4 training framework for LLMs, addressing these challenges with two key innovations: a differentiable quantization estimator for precise weight updates and an outlier clamping and compensation strategy to prevent activation collapse. To ensure stability, the framework integrates a mixed-precision training scheme and vector-wise quantization. Experimental results demonstrate that our FP4 framework achieves accuracy comparable to BF16 and FP8, with minimal degradation, scaling effectively to 13B-parameter LLMs trained on up to 100B tokens. With the emergence of next-generation hardware supporting FP4, our framework sets a foundation for efficient ultra-low precision training.
+
+### Evolving Deeper LLM Thinking
+- https://arxiv.org/abs/2501.09891
+
+We explore an evolutionary search strategy for scaling inference time compute in Large Language Models. The proposed approach, Mind Evolution, uses a language model to generate, recombine and refine candidate responses. The proposed approach avoids the need to formalize the underlying inference problem whenever a solution evaluator is available. Controlling for inference cost, we find that Mind Evolution significantly outperforms other inference strategies such as Best-of-N and Sequential Revision in natural language planning tasks. In the TravelPlanner and Natural Plan benchmarks, Mind Evolution solves more than 98% of the problem instances using Gemini 1.5 Pro without the use of a formal solver.
+
+### rStar-Math
+- https://arxiv.org/abs/2501.04519
+- https://github.com/ai-in-pm/rStar-Math
+
+An AI Agent that demonstrates the principles and performance of the rStar-Math framework, with capabilities to generate integration code for other chatbots and AI agents.
+
+### Transformer²: Self-Adaptive LLMs
+- https://sakana.ai/transformer-squared/
+
+Transformer² is a machine learning system that dynamically adjusts its weights for various tasks. Adaptation is a remarkable natural phenomenon, like how the octopus can blend its color in with its environment, or how the brain rewires itself after injury. We believe our new system paves the way for a new generation of adaptive AI models, modifying their own weights and architecture to adapt to the nature of the tasks they encounter, embodying living intelligence capable of continuous change and lifelong learning.
 
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
@@ -4750,6 +4774,13 @@ PaSa -- an advanced paper search agent powered by large language models. It can 
 - https://github.com/DS4SD/docling
 
 Docling simplifies document processing, parsing diverse formats — including advanced PDF understanding — and providing seamless integrations with the gen AI ecosystem.
+
+### Eko
+- https://eko.fellou.ai
+- https://github.com/FellouAI/eko
+- https://eko.fellou.ai/docs
+
+Eko (pronounced like ‘echo’) is a production-ready JavaScript framework that enables developers to create reliable agents, from simple commands to complex workflows. It provides a unified interface for running agents in both computer and browser environments.
 
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
