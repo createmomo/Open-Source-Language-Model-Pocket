@@ -50,6 +50,8 @@ Open-Source Language Model Pocket
 |*【TeleChat2】|*【Marco-o1】|*【Skywork-o1】|
 |*【YuLan-Mini】|*【DeepSeek-R1】|*【simpleRL-reason】|
 |*【TinyZero】|*【STILL-3-1.5B-Preview】|*【MiniMax-01】|
+|*【SmallThinker-3B-preview】|*【DeepSeek-V3】|*【RWKV-7】|
+|*【FOX-1】|||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -65,7 +67,7 @@ Open-Source Language Model Pocket
 |Multilingual Medicine|Sequel|Gene editing|
 |Llama-3-8B-UltraMedical|PH-LLM|ProLLM|
 |MolecularGPT|*【CHIEF（Clinical Histopathology Imaging Evaluation Foundation）】|*【HuatuoGPT-o1】|
-|*【Baichuan-14B-M1】|||
+|*【Baichuan-14B-M1】|*【MedFound】||
 
 |经济/金融|||
 |---|---|---|
@@ -95,6 +97,7 @@ Open-Source Language Model Pocket
 |Math-Minos|NuminaMath 7B TIR|
 |MathΣtral|LLaMAX（翻译）|
 |Qwen2-Math|*【AIMO-CMU_MATH】|
+|*【Qwen2.5-Math】|*【SocraticLM】|
 
 |表格/数据分析||
 |---|---|
@@ -144,6 +147,7 @@ Open-Source Language Model Pocket
 |*【Reader-LM】|*【珠算】|
 |*【Lingma SWE-GPT】|*【GLM-Edge】|
 |*【SEMIKONG（半导体）】|*【ReaderLM-v2】|
+|*【O1-CODER】||
 
 |天文/海洋/地球科学/科学|
 |---|
@@ -185,7 +189,7 @@ Open-Source Language Model Pocket
 |*【Langchain-Chatchat】|*【RAGLite】|
 |*【OpenScholar】|*【MasteringRAG】|
 |*【FlashRAG-Paddle】|*【MiniRAG】|
-|*【XRAG】||
+|*【XRAG】|*【Chronos】|
 
 *Agent*
 |  |  |
@@ -218,7 +222,8 @@ Open-Source Language Model Pocket
 |*【Agent-0】|*【Large Language Model-Brained GUI Agents: A Survey】|
 |*【Building effective agents】|*【UI-TARS】|
 |*【PaSa】|*【Docling】|
-|*【Eko】||
+|*【Eko】|*【Search-o1】|
+|*【CogAgent】||
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -285,7 +290,9 @@ Open-Source Language Model Pocket
 |*【SmolLm2】|*【Ministral 3B/8B】|
 |*【Zamba2-7B】|*【IBM Granite 3.0】|
 |*【Tülu3】|*【Open-O1】|
-|*【open-r1】||
+|*【open-r1】|*【sky-t1】|
+|*【Phi-4】|*【Dolphin 3.0】|
+|*【Falcon 3】|*【Bamba】|
 
 *训练/推理*
 |  |  |
@@ -367,7 +374,7 @@ Open-Source Language Model Pocket
 |*【A Theoretical Understanding of Self-Correction through In-context Alignment】|*【EfficientQAT】|
 |*【Cautious Optimizers】|*【Optimizing Large Language Model Training Using FP4 Quantization】|
 |*【Evolving Deeper LLM Thinking】|*【rStar-Math】|
-|*【Transformer²: Self-Adaptive LLMs】||
+|*【Transformer²: Self-Adaptive LLMs】|*【test-time compute scaling】|
 
 *评价*
 |  ||
@@ -406,6 +413,8 @@ Open-Source Language Model Pocket
 |*【GIFT-Eval】|*【LightEval】|
 |*【RMB-Reward-Model-Benchmark】|*【Chinese SimpleQA】|
 |*【Evalchemy】|*【WebWalker】|
+|*【Getting a Judge-LLM】|*【PRMBench】|
+|*【OmniDocBench】||
 
 *其它*
 |  |  |
@@ -890,6 +899,17 @@ Over the past year, we have dedicated significant effort to researching and enha
 the proud winners of the 2nd place in the AI Mathematical Olympiad (AIMO).
 
 We are pleased to share all the datasets and code used in our competition. This repository contains the resources needed to reproduce our models and solutions.
+
+### Qwen2.5-Math
+- https://qwenlm.github.io/zh/blog/qwen2.5-math/
+
+Qwen2.5-Math主要被设计用于通过CoT或TIR的方式解中英数学题，我们不推荐在其他任务上使用该系列模型。
+
+### SocraticLM
+- https://openreview.net/pdf?id=qkoZgJhxsA
+- https://github.com/Ljyustc/SocraticLM
+
+
 
 ### ChatRWKV
 - https://github.com/BlinkDL/ChatRWKV
@@ -1515,6 +1535,11 @@ HuatuoGPT-o1 is a medical LLM designed for advanced medical reasoning. It can id
 
 Baichuan-14B-M1 是由百川智能开发的业界首款从零开始专为医疗场景优化的开源大语言模型。在拥有卓越通用能力的同时，在医疗领域方面有着强大的性能。在大部分通用榜单评测中达到了同尺寸模型的效果，而在医疗场景中达到了5倍甚至更大的模型的效果。
 
+### MedFound
+- https://github.com/medfound/medfound
+
+The accurate diagnosis is crucial in healthcare. Here, we introduce MedFound, which is a medical large language model (Medical LLM) pretrained on medical text and real-world clinical records. We fine-tuned MedFound using a self-bootstrapping strategy to learn diagnostic reasoning and incorporated a preference alignment framework to align with standard clinical practice. Our approach results in MedFound-DX-PA, a LLM based diagnostic system that aligns with clinical requirements. This repository contains the code used for data preprocessing, model development, and evaluation in our study (A Generalist Medical Language Model for Disease Diagnosis Assistance).
+
 ### Taiyi（太一）
 - https://github.com/DUTIR-BioNLP/Taiyi-LLM
 - https://arxiv.org/abs/2311.11608
@@ -1950,6 +1975,11 @@ Special THANKs to OUR SUPPORTERS FOR HELPING MAKE IT HAPPEN.
 - https://jina.ai/models/ReaderLM-v2/
 
 用于将原始 HTML 转换为 markdown 或 JSON 的小型语言模型
+
+### O1-CODER
+- https://github.com/ADaM-BJTU/O1-CODER
+
+O1-CODER is an attempt to replicate OpenAI's O1 model, focused on coding tasks. The approach combines Reinforcement Learning (RL) and Monte Carlo Tree Search (MCTS) to enhance the model’s System-2 thinking capabilities, aiming to generate more efficient and logical code.
 
 ### 星语StarWhisper
 - https://github.com/Yu-Yang-Li/StarWhisper
@@ -2471,6 +2501,31 @@ STILL-3-1.5B-preview: We release STILL-3-1.5B-preview, a 1.5B slow-thinking reas
 - https://github.com/MiniMax-AI/MiniMax-01
 
 We are delighted to introduce two remarkable models, MiniMax-Text-01 and MiniMax-VL-01. MiniMax-Text-01 is a powerful language model boasting 456 billion total parameters, with 45.9 billion activated per token. To unlock its long-context capabilities, it adopts a hybrid architecture integrating Lightning Attention, Softmax Attention, and Mixture-of-Experts (MoE). Leveraging advanced parallel strategies like Linear Attention Sequence Parallelism Plus (LASP+), varlen ring attention, and Expert Tensor Parallel (ETP), its training context length extends to 1 million tokens, and it can handle up to 4 million tokens during inference. Consequently, MiniMax-Text-01 showcases top-tier performance on various academic benchmarks. Building on MiniMax-Text-01's prowess, we developed MiniMax-VL-01 for enhanced visual capabilities. It uses the “ViT-MLP-LLM” framework common in multimodal LLMs. It is initialized and trained using three key components: a 303-million-parameter Vision Transformer (ViT) for visual encoding, a randomly initialized two-layer MLP projector for image adaptation, and MiniMax-Text-01 as the base LLM. This model features a dynamic resolution mechanism. Input images are resized according to a pre-set grid, with resolutions ranging from 336×336 to 2016×2016, while maintaining a 336×336 thumbnail. The resized images are split into non - overlapping patches of the same size. These patches and the thumbnail are encoded separately and then combined to form a full image representation. As a result, MiniMax-VL-01 has achieved top-level performance on multimodal leaderboards, demonstrating its edge in complex multimodal tasks.
+
+### SmallThinker-3B-preview
+- https://huggingface.co/PowerInfer/SmallThinker-3B-Preview
+
+SmallThinker is designed for the following use cases:
+
+Edge Deployment: Its small size makes it ideal for deployment on resource-constrained devices.
+
+Draft Model for QwQ-32B-Preview: SmallThinker can serve as a fast and efficient draft model for the larger QwQ-32B-Preview model. From my test, in llama.cpp we can get 70% speedup (from 40 tokens/s to 70 tokens/s).
+
+### DeepSeek-V3
+- https://github.com/deepseek-ai/DeepSeek-V3
+
+We present DeepSeek-V3, a strong Mixture-of-Experts (MoE) language model with 671B total parameters with 37B activated for each token. To achieve efficient inference and cost-effective training, DeepSeek-V3 adopts Multi-head Latent Attention (MLA) and DeepSeekMoE architectures, which were thoroughly validated in DeepSeek-V2. Furthermore, DeepSeek-V3 pioneers an auxiliary-loss-free strategy for load balancing and sets a multi-token prediction training objective for stronger performance. We pre-train DeepSeek-V3 on 14.8 trillion diverse and high-quality tokens, followed by Supervised Fine-Tuning and Reinforcement Learning stages to fully harness its capabilities. Comprehensive evaluations reveal that DeepSeek-V3 outperforms other open-source models and achieves performance comparable to leading closed-source models. Despite its excellent performance, DeepSeek-V3 requires only 2.788M H800 GPU hours for its full training. In addition, its training process is remarkably stable. Throughout the entire training process, we did not experience any irrecoverable loss spikes or perform any rollbacks.
+
+### RWKV-7
+- https://github.com/BlinkDL/RWKV-LM
+- https://github.com/JL-er/RWKV-PEFT
+
+RWKV-7 is a meta-in-context learner, test-time-training its state on the context via in-context gradient descent at every token.
+
+### FOX-1
+- https://arxiv.org/abs/2411.05281
+
+We present Fox-1, a series of small language models (SLMs) consisting of Fox-1-1.6B and Fox-1-1.6B-Instruct-v0.1. These models are pre-trained on 3 trillion tokens of web-scraped document data and fine-tuned with 5 billion tokens of instruction-following and multi-turn conversation data. Aiming to improve the pre-training efficiency, Fox-1-1.6B model introduces a novel 3-stage data curriculum across all the training data with 2K-8K sequence length. In architecture design, Fox-1 features a deeper layer structure, an expanded vocabulary, and utilizes Grouped Query Attention (GQA), offering a performant and efficient architecture compared to other SLMs. Fox-1 achieves better or on-par performance in various benchmarks compared to StableLM-2-1.6B, Gemma-2B, Qwen1.5-1.8B, and OpenELM1.1B, with competitive inference speed and throughput. The model weights have been released under the Apache 2.0 license, where we aim to promote the democratization of LLMs and make them fully accessible to the whole open-source community.
 
 ### Transformer Architecture (LLMs: Zero-to-Hero)
 - https://medium.com/@waylandzhang/transformer-architecture-llms-zero-to-hero-98b1ee51a838
@@ -3093,6 +3148,11 @@ An AI Agent that demonstrates the principles and performance of the rStar-Math f
 - https://sakana.ai/transformer-squared/
 
 Transformer² is a machine learning system that dynamically adjusts its weights for various tasks. Adaptation is a remarkable natural phenomenon, like how the octopus can blend its color in with its environment, or how the brain rewires itself after injury. We believe our new system paves the way for a new generation of adaptive AI models, modifying their own weights and architecture to adapt to the nature of the tasks they encounter, embodying living intelligence capable of continuous change and lifelong learning.
+
+### test-time compute scaling
+- https://huggingface.co/spaces/HuggingFaceH4/blogpost-scaling-test-time-compute
+
+Over the last few years, the scaling of train-time compute has dominated the progress of large language models (LLMs). 1 Although this paradigm has proven to be remarkably effective, the resources needed to pretrain ever larger models are becoming prohibitively expensive, with billion-dollar clusters already on the horizon. 2 This trend has sparked significant interest in a complementary approach: test-time compute scaling. Rather than relying on ever-larger pretraining budgets, test-time methods use dynamic inference strategies that allow models to “think longer” on harder problems. 
 
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
@@ -4404,6 +4464,12 @@ MiniRAG is an extremely simple retrieval-augmented generation framework that ena
 
 XRAG is a benchmarking framework designed to evaluate the foundational components of advanced Retrieval-Augmented Generation (RAG) systems. By dissecting and analyzing each core module, XRAG provides insights into how different configurations and components impact the overall performance of RAG systems.
 
+### Chronos
+- https://arxiv.org/abs/2501.00888
+- https://github.com/Alibaba-NLP/CHRONOS
+
+We propose CHRONOS, a novel retrieval-based approach to Timeline Summarization (TLS) by iteratively posing questions about the topic and the retrieved documents to generate chronological summaries.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -4781,6 +4847,19 @@ Docling simplifies document processing, parsing diverse formats — including ad
 - https://eko.fellou.ai/docs
 
 Eko (pronounced like ‘echo’) is a production-ready JavaScript framework that enables developers to create reliable agents, from simple commands to complex workflows. It provides a unified interface for running agents in both computer and browser environments.
+
+### Search-o1
+- https://arxiv.org/abs/2501.05366
+- https://huggingface.co/papers/2501.05366
+- https://github.com/sunnynexus/Search-o1
+
+Large Reasoning Models (LRMs) like OpenAI's o1 have showcased remarkable long stepwise reasoning capabilities through large-scale reinforcement learning. Despite their strengths, these models often encounter knowledge insufficiencies during prolonged reasoning processes, resulting in frequent uncertainties and potential errors, as shown in the following figure.
+
+### CogAgent
+- https://arxiv.org/abs/2312.08914
+- https://github.com/THUDM/CogAgent
+
+CogAgent-9B-20241220 model is based on GLM-4V-9B, a bilingual open-source VLM base model. Through data collection and optimization, multi-stage training, and strategy improvements, CogAgent-9B-20241220 achieves significant advancements in GUI perception, inference prediction accuracy, action space completeness, and generalizability across tasks. The model supports bilingual (Chinese and English) interaction with both screenshots and language input. This version of the CogAgent model has already been applied in ZhipuAI's GLM-PC product. We hope the release of this model can assist researchers and developers in advancing the research and applications of GUI agents based on vision-language models.
 
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
@@ -5164,6 +5243,24 @@ Evalchemy is a unified and easy-to-use toolkit for evaluating language models, f
 
 Retrieval-augmented generation (RAG) demonstrates remarkable performance across tasks in open-domain question-answering. However, traditional search engines may retrieve shallow content, limiting the ability of LLMs to handle complex, multi-layered information. To address it, we introduce WebWalkerQA, a benchmark designed to assess the ability of LLMs to perform web traversal. It evaluates the capacity of LLMs to traverse a website's subpages to extract high-quality data systematically. We propose WebWalker, which is a multi-agent framework that mimics human-like web navigation through an explore-critic paradigm. Extensive experimental results show that WebWalkerQA is challenging and demonstrates the effectiveness of RAG combined with WebWalker, through the horizontal and vertical integration in real-world scenarios.
 
+
+### Getting a Judge-LLM
+- https://github.com/huggingface/evaluation-guidebook/blob/main/contents/model-as-a-judge/getting-a-judge-llm.md
+
+When using an existing LLM, you can go for generalist, high capability models, using small specialist models trained specifically to discriminate from preference data, or training your own.
+
+### PRMBench
+- https://arxiv.org/abs/2501.03124
+- https://prmbench.github.io/
+- https://github.com/ssmisya/PRMBench
+
+Process-level Reward Models (PRMs) are crucial for complex reasoning and decision-making tasks, where each intermediate step plays an important role in the reasoning process. Since language models are prone to various types of errors during the reasoning process, PRMs are required to possess nuanced capabilities for detecting various implicit error types in real-world scenarios. However, current benchmarks primarily focus on step correctness, failing to evaluate PRMs' performance systematically. To address this gap, we introduce PRMBench, a process-level benchmark specifically designed to assess the fine-grained error detection capabilities of PRMs. PRMBench comprises 6,216 carefully designed problems and 83,456 step-level labels, evaluating models across multiple dimensions, including simplicity, soundness, and sensitivity. In our experiments on 15 models, spanning both open-source PRMs and closed-source large language models prompted as critic models, we uncover significant weaknesses in current PRMs. These findings underscore the challenges inherent in process-level evaluation and highlight key directions for future research. We hope PRMBench can be a robust bench for advancing research on PRM evaluation and development.
+
+### OmniDocBench
+- https://arxiv.org/abs/2412.07626
+- https://github.com/opendatalab/OmniDocBench
+
+Document content extraction is crucial in computer vision, especially for meeting the high-quality data needs of large language models (LLMs) and retrieval-augmented generation (RAG) technologies. However, current document parsing methods suffer from significant limitations in terms of diversity and comprehensive evaluation. To address these challenges, we introduce OmniDocBench, a novel multi-source benchmark designed to advance automated document content extraction. OmniDocBench includes a meticulously curated and annotated high-quality evaluation dataset comprising nine diverse document types, such as academic papers, textbooks, slides, among others. Our benchmark provides a flexible and comprehensive evaluation framework with 19 layout category labels and 14 attribute labels, enabling multi-level assessments across entire datasets, individual modules, or specific data types. Using OmniDocBench, we perform an exhaustive comparative analysis of existing modular pipelines and multimodal end-to-end methods, highlighting their limitations in handling document diversity and ensuring fair evaluation. OmniDocBench establishes a robust, diverse, and fair evaluation standard for the document content extraction field, offering crucial insights for future advancements and fostering the development of document parsing technologies.
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
@@ -5618,6 +5715,35 @@ Our Open O1 aims to match the powerful capabilities of the proprietary OpenAI O1
 - https://github.com/huggingface/open-r1
 
 A fully open reproduction of DeepSeek-R1. This repo is a work in progress, let's build it together!
+
+### sky-t1
+- https://novasky-ai.github.io/posts/sky-t1/
+
+We introduce Sky-T1-32B-Preview, our reasoning model that performs on par with o1-preview on popular reasoning and coding benchmarks. Remarkably, Sky-T1-32B-Preview was trained for less than $450, demonstrating that it is possible to replicate high-level reasoning capabilities affordably and efficiently. 
+
+### Phi-4
+- https://techcommunity.microsoft.com/blog/aiplatformblog/introducing-phi-4-microsoft%E2%80%99s-newest-small-language-model-specializing-in-comple/4357090
+- https://huggingface.co/collections/microsoft/phi-4-677e9380e514feb5577a40e4
+
+14B parameter state-of-the-art small language model (SLM) that excels at complex reasoning in areas such as math, in addition to conventional language processing. Phi-4 is the latest member of our Phi family of small language models and demonstrates what’s possible as we continue to probe the boundaries of SLMs.
+
+### Dolphin 3.0
+- https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B
+
+Dolphin 3.0 is the next generation of the Dolphin series of instruct-tuned models. Designed to be the ultimate general purpose local model, enabling coding, math, agentic, function calling, and general use cases.
+
+### Falcon 3
+- https://falconllm.tii.ae/falcon3/index.html
+
+AI continues to redefine industries and transform our interactions with technology, but accessibility remains a critical challenge. Advanced AI models often require robust infrastructure, limiting their reach.
+Falcon 3 has been meticulously designed to address this gap.
+As an open-source large language model (LLM), Falcon 3 is designed to democratize advanced AI by combining outstanding performance with the ability to run on lightweight devices, including laptops.
+Released under TII’s Falcon License 2.0, Falcon 3 is a pioneering step toward making advanced AI tools available to all.
+
+### Bamba
+- https://huggingface.co/blog/bamba
+
+We introduce Bamba-9B, an inference-efficient Hybrid Mamba2 model trained by IBM, Princeton, CMU, and UIUC on completely open data. At inference time, the model demonstrates 2.5x throughput improvement and 2x latency speedup compared to standard transformers in vLLM. To foster community experimentation, the model is immediately available to use in transformers, vLLM, TRL, and llama.cpp. We also release tuning, training, and extended pretraining recipes with a stateful data loader, and invite the community to further improve this model. Let's overcome the KV-cache bottleneck together!
 
 ### CodecLM
 - https://arxiv.org/abs/2404.05875
