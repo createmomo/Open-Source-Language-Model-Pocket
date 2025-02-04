@@ -1,7 +1,7 @@
 # 开源语言模型百宝袋 (Ver. 3.6)
 Open-Source Language Model Pocket
 
-**注意**：由于此文本内容太多了，直接在Github网页阅览会出现内容不全（导致部分内容搜索不到）的问题。建议下载到本地查阅。
+**注意**：由于此文本内容太多了，直接在Github网页阅览会出现内容不全（导致部分内容搜索不到）的问题。建议下载到本地或直接上传给语言模型助手查阅。
 
 **Github**: https://github.com/createmomo/Open-Source-Language-Model-Pocket
 
@@ -51,7 +51,7 @@ Open-Source Language Model Pocket
 |*【YuLan-Mini】|*【DeepSeek-R1】|*【simpleRL-reason】|
 |*【TinyZero】|*【STILL-3-1.5B-Preview】|*【MiniMax-01】|
 |*【SmallThinker-3B-preview】|*【DeepSeek-V3】|*【RWKV-7】|
-|*【FOX-1】|||
+|*【FOX-1】|*【mini_qwen】||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -223,7 +223,7 @@ Open-Source Language Model Pocket
 |*【Building effective agents】|*【UI-TARS】|
 |*【PaSa】|*【Docling】|
 |*【Eko】|*【Search-o1】|
-|*【CogAgent】||
+|*【CogAgent】|*【Proactive Agent】|
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -293,6 +293,9 @@ Open-Source Language Model Pocket
 |*【open-r1】|*【sky-t1】|
 |*【Phi-4】|*【Dolphin 3.0】|
 |*【Falcon 3】|*【Bamba】|
+|*【Byte Latent Transformer】|*【Llama-3.3-70B-Instruct】|
+|*【Granite 3.1】|*【mini-deepseek-r1】|
+|*【RL, Reasoning & Writing: GRPO on Base model】|*【encoder-decoder-slm】|
 
 *训练/推理*
 |  |  |
@@ -375,6 +378,7 @@ Open-Source Language Model Pocket
 |*【Cautious Optimizers】|*【Optimizing Large Language Model Training Using FP4 Quantization】|
 |*【Evolving Deeper LLM Thinking】|*【rStar-Math】|
 |*【Transformer²: Self-Adaptive LLMs】|*【test-time compute scaling】|
+|*【XGrammar】|*【Reverse Thinking Makes LLMs Stronger Reasoners】|
 
 *评价*
 |  ||
@@ -414,7 +418,7 @@ Open-Source Language Model Pocket
 |*【RMB-Reward-Model-Benchmark】|*【Chinese SimpleQA】|
 |*【Evalchemy】|*【WebWalker】|
 |*【Getting a Judge-LLM】|*【PRMBench】|
-|*【OmniDocBench】||
+|*【OmniDocBench】|*【CodeArena】|
 
 *其它*
 |  |  |
@@ -446,7 +450,8 @@ Open-Source Language Model Pocket
 |*【Multi-IF (Multi-turn and multilingual instruction following)】|*【LLM from scratch with Pytorch】|
 |*【A Survey on Data Synthesis and Augmentation for Large Language Models】|*【A Survey of Small Language Models】|
 |*【LLMForEverybody】|*【Dialogue Action Tokens: Steering Language Models in Goal-Directed Dialogue with a Multi-Turn Planner】|
-|*【CCI3.0-HQ】||
+|*【CCI3.0-HQ】|*【rlhfbook】|
+|*【Deepseek R1可能找到了超越人类的办法】||
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -2527,6 +2532,11 @@ RWKV-7 is a meta-in-context learner, test-time-training its state on the context
 
 We present Fox-1, a series of small language models (SLMs) consisting of Fox-1-1.6B and Fox-1-1.6B-Instruct-v0.1. These models are pre-trained on 3 trillion tokens of web-scraped document data and fine-tuned with 5 billion tokens of instruction-following and multi-turn conversation data. Aiming to improve the pre-training efficiency, Fox-1-1.6B model introduces a novel 3-stage data curriculum across all the training data with 2K-8K sequence length. In architecture design, Fox-1 features a deeper layer structure, an expanded vocabulary, and utilizes Grouped Query Attention (GQA), offering a performant and efficient architecture compared to other SLMs. Fox-1 achieves better or on-par performance in various benchmarks compared to StableLM-2-1.6B, Gemma-2B, Qwen1.5-1.8B, and OpenELM1.1B, with competitive inference speed and throughput. The model weights have been released under the Apache 2.0 license, where we aim to promote the democratization of LLMs and make them fully accessible to the whole open-source community.
 
+### mini_qwen
+- github.com/qiufengqijun/mini_qwen
+
+A 1B parameter large language model (LLM) project that includes pre-training, fine-tuning, and direct preference optimization, supporting both Chinese and English.
+
 ### Transformer Architecture (LLMs: Zero-to-Hero)
 - https://medium.com/@waylandzhang/transformer-architecture-llms-zero-to-hero-98b1ee51a838
 
@@ -2596,6 +2606,16 @@ We present an approach called Dialogue Action Tokens (DAT) that adapts language 
 近年来，自然语言基础模型（LLM）取得了显著进展，训练数据的规模扩展以及数据质量的提升是提升模型性能的关键因素。目前英文开源语料的质量过滤已经从基础的规则方法转向了模型驱动的方法。然而，中文开源语料相对稀缺，同时针对中文网络数据进行质量分类提升的研究较少，导致数据质量尚未达到理想水平，进而影响模型中文性能。
 
 为解决以上问题，进一步缓解中文预训练语料规模和质量上的差距，2024年9月20日，智源研究院发布并开源了中文预训练数据集CCI3.0和高质量子集CCI3.0-HQ。2024年10月25日，智源研究院发布中文高质量预训练数据集CCI3.0-HQ技术报告，全面解析数据集的构建过程。
+
+### rlhfbook
+- https://rlhfbook.com/
+
+Reinforcement learning from human feedback (RLHF) has become an important technical and storytelling tool to deploy the latest machine learning systems. In this book, we hope to give a gentle introduction to the core methods for people with some level of quantitative background. The book starts with the origins of RLHF – both in recent literature and in a convergence of disparate fields of science in economics, philosophy, and optimal control. We then set the stage with definitions, problem formulation, data collection, and other common math used in the literature. We detail the popular algorithms and future frontiers of RLHF.
+
+### Deepseek R1可能找到了超越人类的办法
+- https://mazzzystar.com/2025/01/30/chatgpt-to-deepseek-r1-zh/?continueFlag=ed95b1adbe6ed21a4c466209fa20489d
+
+我本想写一篇关于 DeepSeek R1 的科普文，但发现很多人仅仅把它理解为 OpenAI 的复制品，而忽略了它在论文中揭示的“惊人一跃”，所以，我决定重新写一篇，讲讲从 AlphaGo 到 ChatGPT，再到最近的 DeepSeek R1 底层原理的突破，以及为什么它对所谓的 AGI/ASI 很重要。作为一名普通的 AI 算法工程师，我可能无法做到非常深入，如有错误欢迎指出。
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -3153,6 +3173,17 @@ Transformer² is a machine learning system that dynamically adjusts its weights 
 - https://huggingface.co/spaces/HuggingFaceH4/blogpost-scaling-test-time-compute
 
 Over the last few years, the scaling of train-time compute has dominated the progress of large language models (LLMs). 1 Although this paradigm has proven to be remarkably effective, the resources needed to pretrain ever larger models are becoming prohibitively expensive, with billion-dollar clusters already on the horizon. 2 This trend has sparked significant interest in a complementary approach: test-time compute scaling. Rather than relying on ever-larger pretraining budgets, test-time methods use dynamic inference strategies that allow models to “think longer” on harder problems. 
+
+### XGrammar
+- https://arxiv.org/pdf/2411.15100
+- https://github.com/mlc-ai/xgrammar
+
+XGrammar is an open-source library for efficient, flexible, and portable structured generation. It supports general context-free grammar to enable a broad range of structures while bringing careful system optimizations to enable fast executions. XGrammar features a minimal and portable C++ backend that can be easily integrated into multiple environments and frameworks, and is co-designed with the LLM inference engine and enables zero-overhead structured generation in LLM inference.
+
+### Reverse Thinking Makes LLMs Stronger Reasoners
+- https://arxiv.org/pdf/2411.19865v1
+
+Reverse thinking plays a crucial role in human reasoning. Humans can reason not only from a problem to a solution but also in reverse, i.e., start from the solution and reason towards the problem. This often enhances overall reasoning performance as it enables consistency checks between their forward and backward thinking. To enable Large Language Models (LLMs) to perform reverse thinking, we introduce Reverse-Enhanced Thinking (RevThink), a framework composed of data augmentation and learning objectives. In RevThink, we augment the dataset by collecting structured forward-backward reasoning from a teacher model, consisting of: (1) the original question, (2) forward reasoning, (3) backward question, and (4) backward reasoning. We then employ three objectives to train a smaller student model in a multi-task learning fashion: (a) generate forward reasoning from a question, (b) generate a backward question from a question, and (c) generate backward reasoning from the backward question. Experiments across 12 datasets covering commonsense, math, and logical reasoning show an average 13.53% improvement over the student model's zero-shot performance and a 6.84% improvement over the strongest knowledge distillation baselines. Moreover, our method demonstrates sample efficiency -- using only 10% of the correct forward reasoning from the training data, it outperforms a standard fine-tuning method trained on 10x more forward reasoning. RevThink also exhibits strong generalization to out-of-distribution held-out datasets.
 
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
@@ -4861,6 +4892,11 @@ Large Reasoning Models (LRMs) like OpenAI's o1 have showcased remarkable long st
 
 CogAgent-9B-20241220 model is based on GLM-4V-9B, a bilingual open-source VLM base model. Through data collection and optimization, multi-stage training, and strategy improvements, CogAgent-9B-20241220 achieves significant advancements in GUI perception, inference prediction accuracy, action space completeness, and generalizability across tasks. The model supports bilingual (Chinese and English) interaction with both screenshots and language input. This version of the CogAgent model has already been applied in ZhipuAI's GLM-PC product. We hope the release of this model can assist researchers and developers in advancing the research and applications of GUI agents based on vision-language models.
 
+### Proactive Agent
+- https://arxiv.org/abs/2410.12361
+
+Agents powered by large language models have shown remarkable abilities in solving complex tasks. However, most agent systems remain reactive, limiting their effectiveness in scenarios requiring foresight and autonomous decision-making. In this paper, we tackle the challenge of developing proactive agents capable of anticipating and initiating tasks without explicit human instructions. We propose a novel data-driven approach for this problem. Firstly, we collect real-world human activities to generate proactive task predictions. These predictions are then labeled by human annotators as either accepted or rejected. The labeled data is used to train a reward model that simulates human judgment and serves as an automatic evaluator of the proactiveness of LLM agents. Building on this, we develop a comprehensive data generation pipeline to create a diverse dataset, ProactiveBench, containing 6,790 events. Finally, we demonstrate that fine-tuning models with the proposed ProactiveBench can significantly elicit the proactiveness of LLM agents. Experimental results show that our fine-tuned model achieves an F1-Score of 66.47% in proactively offering assistance, outperforming all open-source and close-source models. These results highlight the potential of our method in creating more proactive and effective agent systems, paving the way for future advancements in human-agent collaboration.
+
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
 - https://huggingface.co/NexaAIDev/Octopus-v2
@@ -5261,6 +5297,13 @@ Process-level Reward Models (PRMs) are crucial for complex reasoning and decisio
 - https://github.com/opendatalab/OmniDocBench
 
 Document content extraction is crucial in computer vision, especially for meeting the high-quality data needs of large language models (LLMs) and retrieval-augmented generation (RAG) technologies. However, current document parsing methods suffer from significant limitations in terms of diversity and comprehensive evaluation. To address these challenges, we introduce OmniDocBench, a novel multi-source benchmark designed to advance automated document content extraction. OmniDocBench includes a meticulously curated and annotated high-quality evaluation dataset comprising nine diverse document types, such as academic papers, textbooks, slides, among others. Our benchmark provides a flexible and comprehensive evaluation framework with 19 layout category labels and 14 attribute labels, enabling multi-level assessments across entire datasets, individual modules, or specific data types. Using OmniDocBench, we perform an exhaustive comparative analysis of existing modular pipelines and multimodal end-to-end methods, highlighting their limitations in handling document diversity and ensuring fair evaluation. OmniDocBench establishes a robust, diverse, and fair evaluation standard for the document content extraction field, offering crucial insights for future advancements and fostering the development of document parsing technologies.
+
+### CodeArena
+- https://arxiv.org/abs/2412.05210v1
+- https://github.com/QwenLM/Qwen2.5-Coder/tree/main/qwencoder-eval/instruct/CodeArena
+- https://codearenaeval.github.io/leaderboard.html
+
+The current codeLLMs focus on synthesizing the correct code snippet, ignoring the alignment with human preferences, where the query should sampled from the practical application scenarios and the model-generated responses should satisfy the human preference. To bridge the gap between the modelgenerated response and human preference, we present a rigorous human-curated benchmark codearena to emulate the complexity and diversity of real-world coding tasks, where 397 high-quality samples spanning 40 categories, carefully curated from user queries. Further, we propose a diverse synthetic instruction corpus syncode-instruct (nearly 10B tokens) by scaling instructions from the website. The results find performance differences between code execution-based benchmarks and CodeArena. Our systematic experiments of CodeArena on 20+ LLMs reveal a notable performance gap between open codeLLMs (e.g. Qwen-Coder) and closed-source LLMs (e.g., o1 and Claude series), underscoring the importance of the alignment of the human preference.
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
@@ -5713,6 +5756,7 @@ Our Open O1 aims to match the powerful capabilities of the proprietary OpenAI O1
 
 ### open-r1
 - https://github.com/huggingface/open-r1
+- huggingface.co/blog/open-r1/update-1
 
 A fully open reproduction of DeepSeek-R1. This repo is a work in progress, let's build it together!
 
@@ -5744,6 +5788,40 @@ Released under TII’s Falcon License 2.0, Falcon 3 is a pioneering step toward 
 - https://huggingface.co/blog/bamba
 
 We introduce Bamba-9B, an inference-efficient Hybrid Mamba2 model trained by IBM, Princeton, CMU, and UIUC on completely open data. At inference time, the model demonstrates 2.5x throughput improvement and 2x latency speedup compared to standard transformers in vLLM. To foster community experimentation, the model is immediately available to use in transformers, vLLM, TRL, and llama.cpp. We also release tuning, training, and extended pretraining recipes with a stateful data loader, and invite the community to further improve this model. Let's overcome the KV-cache bottleneck together!
+
+### Byte Latent Transformer
+- https://arxiv.org/pdf/2412.09871
+- https://github.com/facebookresearch/blt
+
+We introduce the Byte Latent Transformer architecture (BLTs), a new byte-level LLM architecture that for the first time, matches tokenization-based LLM performance at scale, with significant improvements in inference efficiency and robustness. BLT encodes bytes into dynamically sized patches, which serve as the primary units of computation. Patches are segmented dynamically based on the entropy of the next byte, allocating more compute and model capacity where there is more data complexity. The BLT architecture includes new attention mechanisms to maximize the information flow between byte and patch hidden representations and a new type of byte-sequence memory. We present the first scaling study of byte-level models up to 8B parameters and 8T training bytes, showing for the first time that we can train a model end-to-end at scale from bytes with no tokenization or other preprocessing. Scaling trends reveal training and inference efficiency benefits from dynamically selecting very long patches on average, along with qualitative improvements with reasoning and long tail generalization from modeling byte-sequences.
+
+### Llama-3.3-70B-Instruct
+- https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct
+
+The Meta Llama 3.3 multilingual large language model (LLM) is an instruction tuned generative model in 70B (text in/text out). The Llama 3.3 instruction tuned text only model is optimized for multilingual dialogue use cases and outperforms many of the available open source and closed chat models on common industry benchmarks.
+
+### Granite 3.1
+- https://www.ibm.com/granite/docs/models/granite/
+
+Granite 3.1 models leverage new dense architecture. These models were trained with 12 trillion tokens across 12 languages and 116 programming languages. IBM is committed to open-source innovation, and these models are no exception. All Granite models are licensed under Apache 2.0.
+
+### mini-deepseek-r1
+- https://www.philschmid.de/mini-deepseek-r1
+- https://x.com/jiayi_pirate/status/1882839370505621655
+
+In this blog post we want to recreate the small "aha moment" of DeepSeek-R1 using Group Relative Policy Optimization (GRPO) and the Countdown Game. We will train an open model using reinforcement learning trying to teach it self-verification and search abilities all on its own to solve the Countdown Game. The Countdown game is a numbers puzzle where players use a set of randomly drawn numbers and basic arithmetic operations (+, -, ×, ÷) to reach or get as close as possible to a target number.
+
+### RL, Reasoning & Writing: GRPO on Base model
+- https://colab.research.google.com/drive/1Ty0ovsrpw8i-zJvDhlSAtBIVw3EZfHK5?usp=sharing
+
+This notebook introduces a series of experiment of RL training on a base model, rather than an instruct-model. It is obviously inspired by R0, the other DeepSeek model trained from DeepSeekv3: while R1 was more classically post-trained by a series of instruct finetuning and
+
+We reuse the same RL method as R0, GRPO. For a more straightforward way of testing on an instruct model, you can check Will Brown's script that I ported to Google Colab. Here instead we'll take up the opportunity to explore alternative forms of RL tuning that fits better with using a base model as a starting point: poetry writing. We're going to make an RL poet.
+
+### encoder-decoder-slm
+- https://github.com/microsoft/encoder-decoder-slm
+
+While large language models continue to grow in size, smaller models (≤1B parameters) require thoughtful architectural decisions. Our work demonstrates that encoder-decoder models inherently outperform decoder-only architectures before any optimizations.
 
 ### CodecLM
 - https://arxiv.org/abs/2404.05875
