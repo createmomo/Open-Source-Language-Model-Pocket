@@ -51,7 +51,8 @@ Open-Source Language Model Pocket
 |*【YuLan-Mini】|*【DeepSeek-R1】|*【simpleRL-reason】|
 |*【TinyZero】|*【STILL-3-1.5B-Preview】|*【MiniMax-01】|
 |*【SmallThinker-3B-preview】|*【DeepSeek-V3】|*【RWKV-7】|
-|*【FOX-1】|*【mini_qwen】||
+|*【FOX-1】|*【mini_qwen】|*【Qwen 0.5b on GRPO】|
+|*【Qwen2.5-Max】|||
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -224,6 +225,7 @@ Open-Source Language Model Pocket
 |*【PaSa】|*【Docling】|
 |*【Eko】|*【Search-o1】|
 |*【CogAgent】|*【Proactive Agent】|
+|*【Open-source DeepResearch】||
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -2536,6 +2538,17 @@ We present Fox-1, a series of small language models (SLMs) consisting of Fox-1-1
 - github.com/qiufengqijun/mini_qwen
 
 A 1B parameter large language model (LLM) project that includes pre-training, fine-tuning, and direct preference optimization, supporting both Chinese and English.
+
+### Qwen 0.5b on GRPO
+- https://colab.research.google.com/drive/1bfhs1FMLW3FGa8ydvkOZyBNxLYOu0Hev?usp=sharing
+
+This notebook is an alternate version of the GRPO demo by will brown, training llama-1b on the gsm8k math dataset.
+
+### Qwen2.5-Max
+- https://qwen2.org/qwen2-5-max/
+- https://qwenlm.github.io/blog/qwen2.5-max/
+
+Qwen2.5-Max is a large-scale MoE model, pretrained on more than 20 trillion tokens and further refined through curated Supervised Fine-Tuning (SFT) and Reinforcement Learning from Human Feedback (RLHF). 
 
 ### Transformer Architecture (LLMs: Zero-to-Hero)
 - https://medium.com/@waylandzhang/transformer-architecture-llms-zero-to-hero-98b1ee51a838
@@ -4896,6 +4909,11 @@ CogAgent-9B-20241220 model is based on GLM-4V-9B, a bilingual open-source VLM ba
 - https://arxiv.org/abs/2410.12361
 
 Agents powered by large language models have shown remarkable abilities in solving complex tasks. However, most agent systems remain reactive, limiting their effectiveness in scenarios requiring foresight and autonomous decision-making. In this paper, we tackle the challenge of developing proactive agents capable of anticipating and initiating tasks without explicit human instructions. We propose a novel data-driven approach for this problem. Firstly, we collect real-world human activities to generate proactive task predictions. These predictions are then labeled by human annotators as either accepted or rejected. The labeled data is used to train a reward model that simulates human judgment and serves as an automatic evaluator of the proactiveness of LLM agents. Building on this, we develop a comprehensive data generation pipeline to create a diverse dataset, ProactiveBench, containing 6,790 events. Finally, we demonstrate that fine-tuning models with the proposed ProactiveBench can significantly elicit the proactiveness of LLM agents. Experimental results show that our fine-tuned model achieves an F1-Score of 66.47% in proactively offering assistance, outperforming all open-source and close-source models. These results highlight the potential of our method in creating more proactive and effective agent systems, paving the way for future advancements in human-agent collaboration.
+
+### Open-source DeepResearch
+- https://huggingface.co/blog/open-deep-research
+
+we decided to embark on a 24-hour mission to reproduce their results and open-source the needed framework along the way!
 
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
