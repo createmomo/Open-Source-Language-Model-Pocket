@@ -52,7 +52,7 @@ Open-Source Language Model Pocket
 |*【TinyZero】|*【STILL-3-1.5B-Preview】|*【MiniMax-01】|
 |*【SmallThinker-3B-preview】|*【DeepSeek-V3】|*【RWKV-7】|
 |*【FOX-1】|*【mini_qwen】|*【Qwen 0.5b on GRPO】|
-|*【Qwen2.5-Max】|||
+|*【Qwen2.5-Max】|*【minimind】|*【Nano】|
 
 | 医疗健康 |  |  |
 |---|---|---|
@@ -99,6 +99,8 @@ Open-Source Language Model Pocket
 |MathΣtral|LLaMAX（翻译）|
 |Qwen2-Math|*【AIMO-CMU_MATH】|
 |*【Qwen2.5-Math】|*【SocraticLM】|
+|*【Open Thoughts】|*【simpleRL-reason】|
+|*【DRT-o1（翻译）】||
 
 |表格/数据分析||
 |---|---|
@@ -191,6 +193,8 @@ Open-Source Language Model Pocket
 |*【OpenScholar】|*【MasteringRAG】|
 |*【FlashRAG-Paddle】|*【MiniRAG】|
 |*【XRAG】|*【Chronos】|
+|*【DeepRAG】|*【UltraRAG】|
+|*【CAG】|*【FlexRAG】|
 
 *Agent*
 |  |  |
@@ -225,7 +229,8 @@ Open-Source Language Model Pocket
 |*【PaSa】|*【Docling】|
 |*【Eko】|*【Search-o1】|
 |*【CogAgent】|*【Proactive Agent】|
-|*【Open-source DeepResearch】||
+|*【Open-source DeepResearch】|*【RAGEN】|
+|*【smolagents】|*【Open Deep Research】|
 
 *可参考的其它开源模型（国外为主）*
 |  |  |
@@ -381,6 +386,7 @@ Open-Source Language Model Pocket
 |*【Evolving Deeper LLM Thinking】|*【rStar-Math】|
 |*【Transformer²: Self-Adaptive LLMs】|*【test-time compute scaling】|
 |*【XGrammar】|*【Reverse Thinking Makes LLMs Stronger Reasoners】|
+|*【noise_step】||
 
 *评价*
 |  ||
@@ -421,6 +427,7 @@ Open-Source Language Model Pocket
 |*【Evalchemy】|*【WebWalker】|
 |*【Getting a Judge-LLM】|*【PRMBench】|
 |*【OmniDocBench】|*【CodeArena】|
+|*【HALoGEN】||
 
 *其它*
 |  |  |
@@ -453,7 +460,16 @@ Open-Source Language Model Pocket
 |*【A Survey on Data Synthesis and Augmentation for Large Language Models】|*【A Survey of Small Language Models】|
 |*【LLMForEverybody】|*【Dialogue Action Tokens: Steering Language Models in Goal-Directed Dialogue with a Multi-Turn Planner】|
 |*【CCI3.0-HQ】|*【rlhfbook】|
-|*【Deepseek R1可能找到了超越人类的办法】||
+|*【Deepseek R1可能找到了超越人类的办法】|*【train-llm-from-scratch】|
+|*【The Big Book of LLMs】|*【Primers • DeepSeek-R1】|
+|*【A vision researcher’s guide to some RL stuff: PPO & GRPO】|*【group relative policy optimization (GRPO)】|
+|*【DeepSeek R1 and R1-Zero Explained】|*【DeepSeek R1 阅读清单】|
+|*【DeepSeek R1 Explained to your grandma】|*【Deepseek R1 for Everyone】|
+|*【llm-course】|*【O1-Journey】|
+|*【a reinforcement learning guide】|*【llm-universe】|
+|*【smol-course】|*【self-llm】|
+|*【Agents（Chip Huyen）】|*【Building effective agents】|
+|*【LLMInterviewQuestions】|*【Transformers Laid Out】|
 
 ## 相关文章
 - 穷穷穷孩子如何体验ColossalAI SFT（[Kaggle篇](https://mp.weixin.qq.com/s/Q29uSNxvPMy0rC-QxHiGZA)，[Colab篇](https://mp.weixin.qq.com/s/NS4yySeYd7QUYb7CB9V0lA)）
@@ -916,7 +932,20 @@ Qwen2.5-Math主要被设计用于通过CoT或TIR的方式解中英数学题，�
 - https://openreview.net/pdf?id=qkoZgJhxsA
 - https://github.com/Ljyustc/SocraticLM
 
+### Open Thoughts
+- github.com/open-thoughts/open-thoughts  
 
+Our first goal is to curate a reasoning dataset to train state-of-the-art small reasoning models that surpass DeepSeek-R1-Distill-Qwen-32B and DeepSeek-R1-Distill-Qwen-7B on math and code reasoning benchmarks.
+
+### simpleRL-reason
+- https://github.com/hkust-nlp/simpleRL-reason
+
+This repo contains a simple reinforcement learning recipe to improve models' reasoning abilities. It is simple because only rule-based reward is used, the recipe is almost the same as the one used in DeepSeek-R1, except that the code currently uses PPO rather than GRPO. We have used this code to train small models (7B) on limited data (8K examples), achieving surprisingly strong results -- for example, starting from Qwen2.5-Math-7B (base model), we perform RL on it directly. No SFT, no reward model, just 8K MATH examples for verification, the resultant model achieves (pass@1) 33.3% on AIME, 62.5% on AMC, and 77.2% on MATH, outperforming Qwen2.5-math-7B-instruct and being comparable to previous baselines that use >50x more data and more complicated components. You may check our Notion blog or the Introduction below for more details.
+
+### DRT-o1
+- https://github.com/krystalan/DRT-o1
+
+This repository contains the resources for our paper "DRT-o1: Optimized Deep Reasoning Translation via Long Chain-of-Thought"
 
 ### ChatRWKV
 - https://github.com/BlinkDL/ChatRWKV
@@ -2550,6 +2579,16 @@ This notebook is an alternate version of the GRPO demo by will brown, training l
 
 Qwen2.5-Max is a large-scale MoE model, pretrained on more than 20 trillion tokens and further refined through curated Supervised Fine-Tuning (SFT) and Reinforcement Learning from Human Feedback (RLHF). 
 
+### minimind
+- https://github.com/jingyaogong/minimind
+
+本开源项目旨在完全从0开始，最快仅用3小时！即可训练出仅为26.88M大小的微型语言模型MiniMind。
+
+### Nano
+- https://github.com/bd4sur/Nano
+
+Nano是Transformer结构的自回归语言模型，供个人赏玩、研究、魔改和炼丹炉煲机之用。
+
 ### Transformer Architecture (LLMs: Zero-to-Hero)
 - https://medium.com/@waylandzhang/transformer-architecture-llms-zero-to-hero-98b1ee51a838
 
@@ -2629,6 +2668,100 @@ Reinforcement learning from human feedback (RLHF) has become an important techni
 - https://mazzzystar.com/2025/01/30/chatgpt-to-deepseek-r1-zh/?continueFlag=ed95b1adbe6ed21a4c466209fa20489d
 
 我本想写一篇关于 DeepSeek R1 的科普文，但发现很多人仅仅把它理解为 OpenAI 的复制品，而忽略了它在论文中揭示的“惊人一跃”，所以，我决定重新写一篇，讲讲从 AlphaGo 到 ChatGPT，再到最近的 DeepSeek R1 底层原理的突破，以及为什么它对所谓的 AGI/ASI 很重要。作为一名普通的 AI 算法工程师，我可能无法做到非常深入，如有错误欢迎指出。
+
+### train-llm-from-scratch
+- github.com/FareedKhan-dev/train-llm-from-scratch
+
+I implemented a transformer model from scratch using PyTorch, based on the paper Attention is All You Need. You can use my scripts to train your own billion or million parameter LLM using a single GPU.
+
+### The Big Book of LLMs
+- https://book.theaiedge.io/?continueFlag=3b71e815bfd484170b234a52a15adc73
+
+### Primers • DeepSeek-R1
+- https://aman.ai/primers/ai/deepseek-R1/
+
+This primer explores its architecture, multi-stage training pipeline, GRPO mechanics, and emergent reasoning behaviors, alongside how distillation propagates reasoning capabilities to smaller models.
+
+### A vision researcher’s guide to some RL stuff: PPO & GRPO
+-  https://yugeten.github.io/posts/2025/01/ppogrpo/
+
+It has been a while since I last wrote a blog post. Life has been hectic since I started work, and the machine learning world is also not what it was since I graduated in early 2023. Your average parents having LLM apps installed on their phones is already yesterday’s news – I took two weeks off work to spend Lunar New Year in China, which only serves to give me plenty of time to scroll on twitter and witness DeepSeek’s (quite well-deserved) hype peak on Lunar New Year’s eve while getting completely overwhelmed.
+
+### DeepSeek R1 and R1-Zero Explained
+- https://thelmbook.com/articles/#!./DeepSeek-R1.md?continueFlag=3b71e815bfd484170b234a52a15adc73
+
+### DeepSeek R1 阅读清单
+- https://ninehills.tech/articles/121.html
+
+随着 DeepSeek R1 的发布，如果想复刻 R1 或者在某个领域实践 RFT（Reinforcement Fine-Tuning），可以看看我整理的清单，会持续更新。 同时我个人尝试的结果也会更新上。
+
+### DeepSeek R1 Explained to your grandma
+- https://www.youtube.com/watch?v=kv8frWeKoeo
+
+Describing the key insights from the DeepSeek R1 paper in a way even your grandma could understand. I focus on the key concepts of chain of thought reasoning, reinforcement learning, and model distillation.
+
+### Deepseek R1 for Everyone
+- https://trite-song-d6a.notion.site/Deepseek-R1-for-Everyone-1860af77bef3806c9db5e5c2a256577d
+
+We’re gonna discuss how the Deepseek R1 model actually works in detail but with very less math!
+
+### llm-course
+- https://github.com/mlabonne/llm-course
+
+### O1-Journey
+- https://github.com/GAIR-NLP/O1-Journey
+
+The core development team of this project mainly consists of third- and fourth-year undergraduate students, as well as first-year PhD students from the GAIR research group at Shanghai Jiao Tong University. The project has been guided by leading research scientists in the field of large language models, including those from NYU and MBZUAI.
+
+### a reinforcement learning guide
+- naklecha.notion.site/a-reinforcement-learning-guide
+
+Hi! I’m @naklecha & I love learning through examples and jumping right into things. It works well for me, it’s fun and imo it’s the best way to learn anything. So, that’s what I’m going to do. :) Fuck it! Let’s start by trying to solve chess.
+
+### llm-universe
+- datawhalechina.github.io/llm-universe/
+
+### smol-course
+- github.com/huggingface/smol-course
+
+This is a practical course on aligning language models for your specific use case. It's a handy way to get started with aligning language models, because everything runs on most local machines. There are minimal GPU requirements and no paid services. The course is based on the SmolLM2 series of models, but you can transfer the skills you learn here to larger models or other small language models.
+
+### self-llm
+- github.com/datawhalechina/self-llm
+
+本项目是一个围绕开源大模型、针对国内初学者、基于 Linux 平台的中国宝宝专属大模型教程，针对各类开源大模型提供包括环境配置、本地部署、高效微调等技能在内的全流程指导，简化开源大模型的部署、使用和应用流程，让更多的普通学生、研究者更好地使用开源大模型，帮助开源、自由的大模型更快融入到普通学习者的生活中。
+
+### Agents（Chip Huyen）
+- https://huyenchip.com//2025/01/07/agents.html
+
+This post is adapted from the Agents section of AI Engineering (2025) with minor edits to make it a standalone post.
+
+### Building effective agents
+- https://www.anthropic.com/research/building-effective-agents
+
+In this post, we share what we’ve learned from working with our customers and building agents ourselves, and give practical advice for developers on building effective agents.
+
+### LLMInterviewQuestions
+- https://github.com/llmgenai/LLMInterviewQuestions
+
+This repository contains over 100+ interview questions for Large Language Models (LLM) used by top companies like Google, NVIDIA, Meta, Microsoft, and Fortune 500 companies. Explore questions curated with insights from real-world scenarios, organized into 15 categories to facilitate learning and preparation.
+
+### Transformers Laid Out
+- https://goyalpramod.github.io/blogs/Transformers_laid_out/
+
+Here I aim to:
+
+Give an intuition of how transformers work
+
+Explain what each section of the paper means and how you can understand and implement it
+
+Code it down using PyTorch from a beginners perspective
+All in one place.
+
+### group relative policy optimization (GRPO)
+- https://superb-makemake-3a4.notion.site/group-relative-policy-optimization-GRPO-18c41736f0fd806eb39dc35031758885
+
+here, i will explain and implement GRPO in an intuitive way
 
 ### HQQ
 - https://mobiusml.github.io/hqq_blog/
@@ -3197,6 +3330,11 @@ XGrammar is an open-source library for efficient, flexible, and portable structu
 - https://arxiv.org/pdf/2411.19865v1
 
 Reverse thinking plays a crucial role in human reasoning. Humans can reason not only from a problem to a solution but also in reverse, i.e., start from the solution and reason towards the problem. This often enhances overall reasoning performance as it enables consistency checks between their forward and backward thinking. To enable Large Language Models (LLMs) to perform reverse thinking, we introduce Reverse-Enhanced Thinking (RevThink), a framework composed of data augmentation and learning objectives. In RevThink, we augment the dataset by collecting structured forward-backward reasoning from a teacher model, consisting of: (1) the original question, (2) forward reasoning, (3) backward question, and (4) backward reasoning. We then employ three objectives to train a smaller student model in a multi-task learning fashion: (a) generate forward reasoning from a question, (b) generate a backward question from a question, and (c) generate backward reasoning from the backward question. Experiments across 12 datasets covering commonsense, math, and logical reasoning show an average 13.53% improvement over the student model's zero-shot performance and a 6.84% improvement over the strongest knowledge distillation baselines. Moreover, our method demonstrates sample efficiency -- using only 10% of the correct forward reasoning from the training data, it outperforms a standard fine-tuning method trained on 10x more forward reasoning. RevThink also exhibits strong generalization to out-of-distribution held-out datasets.
+
+### noise_step
+- https://github.com/wbrickner/noise_step
+
+noise_step: Training in 1.58b With No Gradient Memory
 
 ### llamafile
 - https://github.com/Mozilla-Ocho/llamafile/releases
@@ -4514,6 +4652,27 @@ XRAG is a benchmarking framework designed to evaluate the foundational component
 
 We propose CHRONOS, a novel retrieval-based approach to Timeline Summarization (TLS) by iteratively posing questions about the topic and the retrieved documents to generate chronological summaries.
 
+### DeepRAG
+- https://arxiv.org/abs/2502.01142
+
+Large Language Models (LLMs) have shown remarkable potential in reasoning while they still suffer from severe factual hallucinations due to timeliness, accuracy, and coverage of parametric knowledge. Meanwhile, integrating reasoning with retrieval-augmented generation (RAG) remains challenging due to ineffective task decomposition and redundant retrieval, which can introduce noise and degrade response quality. In this paper, we propose DeepRAG, a framework that models retrieval-augmented reasoning as a Markov Decision Process (MDP), enabling strategic and adaptive retrieval. By iteratively decomposing queries, DeepRAG dynamically determines whether to retrieve external knowledge or rely on parametric reasoning at each step. Experiments show that DeepRAG improves retrieval efficiency while improving answer accuracy by 21.99%, demonstrating its effectiveness in optimizing retrieval-augmented reasoning.
+
+### UltraRAG
+- https://github.com/OpenBMB/UltraRAG
+
+The UltraRAG framework was jointly proposed by the THUNLP group from Tsinghua University, the NEUIR group from Northeastern University, Modelbest.Inc, and the 9#AISoft team. It is based on agile deployment and modular construction, introducing an automated "data construction-model fine-tuning-inference evaluation" knowledge adaptation technology system. This provides a one-stop, researcher and developer-friendly RAG system solution. UltraRAG significantly simplifies the entire process from data construction to model fine-tuning in domain adaptation for RAG systems, assisting researchers and developers in efficiently tackling complex tasks.
+
+### CAG
+- arxiv.org/abs/2412.15605
+- github.com/hhhuang/CAG
+
+Retrieval-Augmented Generation (RAG) has emerged as a powerful approach for enhancing language models by integrating external knowledge sources.
+
+### FlexRAG
+- https://github.com/ictnlp/flexrag
+
+FlexRAG is a flexible and high-performance framework designed for Retrieval-Augmented Generation (RAG) tasks, offering support for multimodal data, seamless configuration management, and out-of-the-box performance for both research and prototyping.
+
 ## 6 其它
 ### Alpaca-CoT
 - https://github.com/PhoebusSi/Alpaca-CoT
@@ -4914,6 +5073,22 @@ Agents powered by large language models have shown remarkable abilities in solvi
 - https://huggingface.co/blog/open-deep-research
 
 we decided to embark on a 24-hour mission to reproduce their results and open-source the needed framework along the way!
+
+### RAGEN
+- github.com/ZihanWang314/ragen
+
+RAGEN is the first reproduction of the DeepSeek-R1(-Zero) methods for training agentic models.
+We strongly believe in the future of RL + LLM + Agents. The release is a minimally viable leap forward.
+
+### smolagents
+- https://huggingface.co/blog/smolagents
+
+🤗 smolagents: a barebones library for agents. Agents write python code to call tools and orchestrate other agents.
+
+### Open Deep Research
+- https://github.com/btahir/open-deep-research
+
+An open-source alternative to Gemini Deep Research, built to generate AI-powered reports from web search results with precision and efficiency. Supporting multiple AI platforms (Google, OpenAI, Anthropic) and models, it offers flexibility in choosing the right AI model for your research needs.
 
 ### Octopus v2
 - https://arxiv.org/abs/2404.01744
@@ -5322,6 +5497,11 @@ Document content extraction is crucial in computer vision, especially for meetin
 - https://codearenaeval.github.io/leaderboard.html
 
 The current codeLLMs focus on synthesizing the correct code snippet, ignoring the alignment with human preferences, where the query should sampled from the practical application scenarios and the model-generated responses should satisfy the human preference. To bridge the gap between the modelgenerated response and human preference, we present a rigorous human-curated benchmark codearena to emulate the complexity and diversity of real-world coding tasks, where 397 high-quality samples spanning 40 categories, carefully curated from user queries. Further, we propose a diverse synthetic instruction corpus syncode-instruct (nearly 10B tokens) by scaling instructions from the website. The results find performance differences between code execution-based benchmarks and CodeArena. Our systematic experiments of CodeArena on 20+ LLMs reveal a notable performance gap between open codeLLMs (e.g. Qwen-Coder) and closed-source LLMs (e.g., o1 and Claude series), underscoring the importance of the alignment of the human preference.
+
+### HALoGEN
+- https://arxiv.org/abs/2501.08292
+
+Despite their impressive ability to generate high-quality and fluent text, generative large language models (LLMs) also produce hallucinations: statements that are misaligned with established world knowledge or provided input context. However, measuring hallucination can be challenging, as having humans verify model generations on-the-fly is both expensive and time-consuming. In this work, we release HALoGEN, a comprehensive hallucination benchmark consisting of: (1) 10,923 prompts for generative models spanning nine domains including programming, scientific attribution, and summarization, and (2) automatic high-precision verifiers for each use case that decompose LLM generations into atomic units, and verify each unit against a high-quality knowledge source. We use this framework to evaluate ~150,000 generations from 14 language models, finding that even the best-performing models are riddled with hallucinations (sometimes up to 86% of generated atomic facts depending on the domain). We further define a novel error classification for LLM hallucinations based on whether they likely stem from incorrect recollection of training data (Type A errors), or incorrect knowledge in training data (Type B errors), or are fabrication (Type C errors). We hope our framework provides a foundation to enable the principled study of why generative models hallucinate, and advances the development of trustworthy large language models.
 
 ### Unlocking Efficiency in Large Language Model Inference: A Comprehensive Survey of Speculative Decoding
 - https://github.com/hemingkx/SpeculativeDecodingPapers
